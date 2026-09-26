@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 12 English - Unit 2: Artificial Intelligence & Robotics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --card-bg: #ffffff;
+            --accent-purple: #0284c7;
+            --accent-blue: #2563eb;
+            --accent-emerald: #059669;
+            --accent-amber: #d97706;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --border-color: #e2e8f0l;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', 'Padauk', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 14px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.2rem;
+            border-radius: 14px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-sub);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-purple);
+            color: white;
+            border-color: var(--accent-purple);
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 0 0.5rem;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .vocab-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--card-shadow);
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(2, 132, 199, 0.4);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .vocab-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-purple);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .word {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .pos {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            background: rgba(2, 132, 199, 0.1);
+            color: var(--accent-purple);
+            border: 1px solid rgba(2, 132, 199, 0.2);
+        }
+
+        .myanmar-meaning {
+            font-size: 1.15rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .definition {
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .example-box {
+            background: var(--bg-secondary);
+            padding: 0.85rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent-blue);
+            font-size: 0.88rem;
+            color: #334155;
+            font-style: italic;
+        }
+
+        .tag-phrasal::before { background: var(--accent-amber); }
+        .tag-phrasal .pos { background: rgba(217, 119, 6, 0.1); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.2); }
+
+        .tag-grammar::before { background: var(--accent-emerald); }
+        .tag-grammar .pos { background: rgba(5, 150, 105, 0.1); color: var(--accent-emerald); border-color: rgba(5, 150, 105, 0.2); }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .vocab-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Grade 12 English • Textbook</span>
+        <h1>Unit 2: Artificial Intelligence (AI) and Robotics</h1>
+        <p class="subtitle">ကျောင်းသား/သူများ မဖြစ်မနေ သိထားရမည့် Vocabulary & Key Expressions များ</p>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔎Search words" onkeyup="filterVocab()">
+            </div>
+            <button class="filter-btn active" onclick="filterCategory('all', this)">All Words</button>
+            <button class="filter-btn" onclick="filterCategory('phrasal', this)">Phrasal Verbs</button>
+            <button class="filter-btn" onclick="filterCategory('grammar', this)">Grammar Terms</button>
+            <button class="filter-btn" onclick="filterCategory('text', this)">Passage Vocab</button>
+        </div>
+    </header>
+
+    <div class="stats-bar">
+        <span id="cardCount">Showing 0 vocabulary words</span>
+    </div>
+
+    <div class="vocab-grid" id="vocabGrid">
+        <!-- Cards injected by JS -->
+    </div>
+
+    <footer>
+        <p>© Grade 12 English - Unit 2: AI and Robotics Study Material</p>
+    </footer>
+</div>
+
+<script>
+const vocabularyList = [
+    // Phrasal Verbs from Unit 2
+    { word: "keep in mind", pos: "Phrasal Verb", category: "phrasal", myanmar: "စိတ်ထဲတွင် သတိရအမြဲမှတ်ထားသည်", def: "to be careful to remember something important", example: "It is important to keep in mind the welfare of the attendees." },
+    { word: "proceed with", pos: "Phrasal Verb", category: "phrasal", myanmar: "ဆက်လက်လုပ်ဆောင်သည်", def: "to continue a particular action or process", example: "We need to proceed with caution when giving ownership to AI." },
+    { word: "sneer at", pos: "Phrasal Verb", category: "phrasal", myanmar: "လှောင်ပြုံး ပြုံးသည် / မထီမဲ့မြင် ပြုသည်", def: "to look at someone or something in an unkind way that shows disrespect", example: "Cheating in the exam is shameful and many sneer at the idea." },
+    { word: "result in", pos: "Phrasal Verb", category: "phrasal", myanmar: "အကျိုးဆက် ဖြစ်ပေါ်စေသည်", def: "to cause (something) to happen", example: "Failure to follow the traffic rules on the road can result in accidents." },
+    { word: "take charge of", pos: "Phrasal Verb", category: "phrasal", myanmar: "တာဝန်ယူအုပ်ချုပ်သည်", def: "to accept responsibility for something and have control over it", example: "She decided to take charge of the project to ensure its completion." },
+    { word: "turn into", pos: "Phrasal Verb", category: "phrasal", myanmar: "ပြောင်းလဲသွားသည်", def: "to become or change into something else", example: "Conversations usually turn into a heated debate when views differ." },
+    { word: "warn of", pos: "Phrasal Verb", category: "phrasal", myanmar: "သတိပေးသည်", def: "to inform someone in advance about a potential danger", example: "Stephen Hawking warns of the dangers of artificial intelligence." },
+    { word: "search for", pos: "Phrasal Verb", category: "phrasal", myanmar: "ရှာဖွေသည်", def: "to try to find something or someone", example: "I decided to search for a reliable source of information." },
+    { word: "wait for", pos: "Phrasal Verb", category: "phrasal", myanmar: "စောင့်ဆိုင်းသည်", def: "to stay until something happens or someone arrives", example: "Can you wait for me at the bus terminal?" },
+
+    // Passage Vocabulary & Collocations
+    { word: "metallic voice", pos: "noun phrase", category: "text", myanmar: "သတ္တုသံကဲ့သို့ တောင့်တင်းသောအသံ", def: "a harsh unpleasant sound like metal clicking", example: "The metallic voice of AI programmes sounds robotic." },
+    { word: "unwearyingly", pos: "adverb", category: "text", myanmar: "မမောမပန်း အားမလျော့ဘဲ", def: "perform tirelessly without getting fatigue", example: "A robot can work under any conditions, hot or cold, unwearyingly." },
+    { word: "technological revolution", pos: "noun phrase", category: "text", myanmar: "နည်းပညာဆိုင်ရာ တော်လှန်ပြောင်းလဲမှု", def: "a significant transformation in technology that changes society", example: "Many are optimistic about the technological revolution." },
+    { word: "create jobs", pos: "verb phrase", category: "text", myanmar: "အလုပ်အကိုင် အခွင့်အလမ်းများ ဖန်တီးပေးသည်", def: "provide work for people who are unemployed", example: "Automation can create new kinds of jobs." },
+    { word: "solar energy", pos: "noun phrase", category: "text", myanmar: "နေရောင်ခြည်စွမ်းအင်", def: "type of energy generated by the Sun", example: "Many families use solar energy to generate electricity." },
+    { word: "vulnerable", pos: "adjective", category: "text", myanmar: "ထိခိုက်လွယ်သော / အကာအကွယ်မဲ့သော", def: "defenseless; exposed to the possibility of being attacked or harmed", example: "You are all weak and vulnerable." },
+    { word: "durable", pos: "adjective", category: "text", myanmar: "ခိုင်ခံ့တောင့်တင်းသော / အနွံတာခံသော", def: "able to withstand wear, pressure, or damage; hard-wearing", example: "I am a perfect machine made of strong, durable metal." },
+    { word: "bated breath", pos: "idiomatic phrase", category: "text", myanmar: "ရင်တမမဖြင့် / စိတ်လှုပ်ရှားစွာ စောင့်ဆိုင်းခြင်း", def: "in anxiety or excitement", example: "We wait for his answer with bated breath." },
+    { word: "automation", pos: "noun", category: "text", myanmar: "စက်အလိုအလျောက် စနစ်", def: "the use of largely automatic equipment in a system or process", example: "Automation can lead to increased productivity." },
+    { word: "daunting", pos: "adjective", category: "text", myanmar: "စိတ်ဓာတ်ကျစရာ / ခြိမ်းခြောက်မှုဖြစ်စေသော", def: "intimidating or causing one to feel apprehensive", example: "The cost of creating these advanced technologies can be daunting." },
+    { word: "blurred", pos: "adjective", category: "text", myanmar: "ဝေဝါးသွားသော", def: "unclear or difficult to distinguish", example: "The line between human creativity and AI-generated products has blurred." },
+    { word: "subservient", pos: "adjective", category: "text", myanmar: "လက်အောက်ခံ / စေခိုင်းသမျှ ခံရသော", def: "prepared to obey others unquestioningly", example: "Humans will become subservient to their creation." },
+    { word: "relentless", pos: "adjective", category: "text", myanmar: "မညှာမတာ အဆက်မပြတ် ကြိုးစားသော", def: "unceasingly intense or merciless", example: "Humans are victims of their own relentless search for novel things." },
+    { word: "novel", pos: "adjective", category: "text", myanmar: "ဆန်းသစ်သော", def: "new or unusual in an interesting way", example: "They search for things new and novel." },
+
+    // Grammar (Reported Speech Terms & Practice)
+    { word: "Direct Speech", pos: "Grammar Term", category: "grammar", myanmar: "တိုက်ရိုက်ပြောစကား", def: "repeating the exact words spoken by a person inside quotation marks", example: "He said, 'Look at me.'" },
+    { word: "Indirect Speech", pos: "Grammar Term", category: "grammar", myanmar: "သွယ်ဝိုက်ပြောစကား (Reported Speech)", def: "reporting what someone said without using their exact words", example: "He told us to look at him." },
+    { word: "reporting verb", pos: "Grammar Term", category: "grammar", myanmar: "သတင်းပို့အသိပေးသော ကြိယာ", def: "verbs like said, told, asked, warned, inquired used in reported speech", example: "She warned us not to share the AI access code." },
+    { word: "inquire", pos: "verb", category: "grammar", myanmar: "စုံစမ်းမေးမြန်းသည်", def: "to ask for information from someone", example: "She inquired if I had made a cash transfer." },
+    { word: "salute", pos: "verb", category: "grammar", myanmar: "ဂုဏ်ပြုဦးညွှတ်သည်", def: "to show formal respect for someone", example: "She said that she saluted all the heroes." }
+];
+
+let fullVocabList = [...vocabularyList];
+
+function renderCards(data) {
+    const grid = document.getElementById("vocabGrid");
+    grid.innerHTML = "";
+    
+    data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = `vocab-card tag-${item.category}`;
+        card.innerHTML = `
+            <div>
+                <div class="card-header">
+                    <span class="word">${item.word}</span>
+                    <span class="pos">${item.pos}</span>
+                </div>
+                <div class="myanmar-meaning">${item.myanmar}</div>
+                <div class="definition">${item.def}</div>
+            </div>
+            ${item.example ? `<div class="example-box">"${item.example}"</div>` : ''}
+        `;
+        grid.appendChild(card);
+    });
+
+    document.getElementById("cardCount").innerText = `Showing ${data.length} vocabulary items`;
+}
+
+let currentCategory = 'all';
+
+function filterVocab() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = fullVocabList.filter(item => {
+        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchesSearch = item.word.toLowerCase().includes(query) || 
+                              item.myanmar.toLowerCase().includes(query) || 
+                              item.def.toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+    });
+    renderCards(filtered);
+}
+
+function filterCategory(cat, btn) {
+    currentCategory = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterVocab();
+}
+
+// Initial render
+renderCards(fullVocabList);
+</script>
+
+</body>
+</html>

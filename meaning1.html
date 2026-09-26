@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 12 English - Unit 1: Chasing Dreams Vocabulary & Idioms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --card-bg: #ffffff;
+            --accent-purple: #7c3aed;
+            --accent-blue: #2563eb;
+            --accent-emerald: #059669;
+            --accent-amber: #d97706;
+            --text-main: #0f172a;
+            --text-sub: #475569;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', 'Padauk', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 450px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 14px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--accent-purple);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.2rem;
+            border-radius: 14px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-sub);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-purple);
+            color: white;
+            border-color: var(--accent-purple);
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 0 0.5rem;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .vocab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .vocab-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--card-shadow);
+        }
+
+        .vocab-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(124, 58, 237, 0.4);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .vocab-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-purple);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .word {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .pos {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 8px;
+            text-transform: uppercase;
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--accent-purple);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+        }
+
+        .myanmar-meaning {
+            font-size: 1.15rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .definition {
+            font-size: 0.92rem;
+            color: var(--text-sub);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .example-box {
+            background: var(--bg-secondary);
+            padding: 0.85rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent-blue);
+            font-size: 0.88rem;
+            color: #334155;
+            font-style: italic;
+        }
+
+        .tag-idiom::before { background: var(--accent-amber); }
+        .tag-idiom .pos { background: rgba(217, 119, 6, 0.1); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.2); }
+
+        .tag-grammar::before { background: var(--accent-emerald); }
+        .tag-grammar .pos { background: rgba(5, 150, 105, 0.1); color: var(--accent-emerald); border-color: rgba(5, 150, 105, 0.2); }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-sub);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            .vocab-grid { grid-template-columns: 1fr; }
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <span class="badge">Grade 12 English • Textbook</span>
+        <h1>Unit 1: Chasing Dreams</h1>
+        <p class="subtitle">လေ့လာထားရမည့် Vocabulary & Key Expressions များ</p>
+          <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔎Search words" onkeyup="filterVocab()">
+            </div><br> <space>
+            <button class="filter-btn active" onclick="filterCategory('all', this)">All Words</button>  
+           <button class="filter-btn" onclick="filterCategory('idiom', this)">Idioms</button> 
+            <button class="filter-btn" onclick="filterCategory('grammar', this)">Grammar & Structures</button> 
+            <button class="filter-btn" onclick="filterCategory('text', this)">Passage Vocab</button>
+        </div>
+    </header>
+ 
+    <div class="stats-bar">
+        <span id="cardCount">Showing 0 vocabulary words</span>
+       </div>
+
+    <div class="vocab-grid" id="vocabGrid">
+        <!-- Cards injected by JS -->
+    </div>
+
+    <footer>
+        <p>© Grade 12 English - Unit 1: Chasing Dreams Study Material</p>
+    </footer>
+</div>
+
+<script>
+const vocabularyList = [
+    // Highlighted Idioms from Unit 1
+    { word: "think outside the box", pos: "Idiom", category: "idiom", myanmar: "ဆန်းသစ်တီထွင်၍ ပုံစံခွက်ပြင်ပမှ စဉ်းစားသည်", def: "to think of creative or unconventional solutions, instead of common ones", example: "The young fashion designer thought outside the box to come up with fresh new ideas." },
+    { word: "go out on a limb", pos: "Idiom", category: "idiom", myanmar: "စွန့်စား၍ ပြုလုပ်သည် / စွန့်စားပြောဆိုသည်", def: "to do or say something risky", example: "The journalist went out on a limb to express his views that were exactly opposite to others." },
+    { word: "no-holds-barred", pos: "Idiom", category: "idiom", myanmar: "မည်သည့် ကန့်သတ်ချုပ်ချယ်မှုမျှ မရှိသော", def: "without limits or controls", example: "During the war, both sides acted with no-holds-barred, including the threat of heavy weapons." },
+    { word: "ahead of the pack", pos: "Idiom", category: "idiom", myanmar: "ပြိုင်ဘက်များထက် သာလွန်ကောင်းမွန်နေသည်", def: "to be more successful than one's competitors", example: "The new management system has kept the company far ahead of the pack in terms of product development." },
+    { word: "bottom line", pos: "Idiom", category: "idiom", myanmar: "အဓိက အကျဉ်းချုပ် အချက်/နိဂုံး", def: "the most important point or conclusion", example: "The bottom line is that you should consult your doctor before taking new supplements." },
+    { word: "not rocket science", pos: "Idiom", category: "idiom", myanmar: "နားလည်ရ မခက်ခဲသော/လွယ်ကူသော ကိစ္စ", def: "something that isn't complicated to understand", example: "My coach always said, 'Basketball is not rocket science. It's about putting the ball in the basket.'" },
+
+    // Core Passage Vocabularies
+    { word: "entrepreneur", pos: "noun", category: "text", myanmar: "စီးပွားရေး လုပ်ငန်းရှင်", def: "a person who sets up a business or businesses, taking on financial risks in the hope of profit", example: "Elon Musk is an American entrepreneur who founded SpaceX." },
+    { word: "advantage", pos: "noun", category: "text", myanmar: "အခွင့်အလမ်း / သာလွန်မှု", def: "a condition or circumstance that puts one in a favorable position", example: "Older people have a greater advantage of possessing much experience." },
+    { word: "possess", pos: "verb", category: "text", myanmar: "ပိုင်ဆိုင်သည်", def: "have as belonging to one; have or own", example: "They possess a great deal of business experience." },
+    { word: "characteristic", pos: "noun", category: "text", myanmar: "ပင်ကိုယ် စရိုက်လက္ခဏာ", def: "a feature or quality belonging typically to a person, place, or thing", example: "Young people have unique characteristics in many aspects." },
+    { word: "motivated", pos: "adjective", category: "text", myanmar: "တက်ကြွသော / စိတ်အားထက်သန်သော", def: "provided with a motive or given incentive for action", example: "They are highly motivated to achieve success." },
+    { word: "courageous", pos: "adjective", category: "text", myanmar: "သတ္တိရှိသော", def: "not deterred by danger or pain; brave", example: "Courageous entrepreneurs are willing to take bold risks." },
+    { word: "imaginative", pos: "adjective", category: "text", myanmar: "စိတ်ကူးဉာဏ် ကွန့်မြူးသော", def: "having or showing creativity or inventiveness", example: "Creative and imaginative founders build thriving companies." },
+    { word: "adventurous", pos: "adjective", category: "text", myanmar: "စွန့်စားလိုသော", def: "willing to take risks or to try out new methods, ideas, or experiences", example: "An adventurous spirit is essential for starting new ventures." },
+    { word: "statistics", pos: "noun", category: "text", myanmar: "ကိန်းဂဏန်း အချက်အလက်များ", def: "the practice or science of collecting and analyzing numerical data", example: "Statistics shows that 48 percent of firms were founded by older people." },
+    { word: "thriving", pos: "adjective", category: "text", myanmar: "အောင်မြင်ဖြစ်ထွန်းနေသော", def: "prospering; flourishing", example: "64 percent of successful thriving companies were headed by young entrepreneurs." },
+    { word: "glimpse", pos: "noun", category: "text", myanmar: "တစ်စိတ်တစ်ဒေသ တွေ့မြင်ရခြင်း", def: "a momentary or partial view", example: "Here is a glimpse of some successful entrepreneurs." },
+    { word: "cofound", pos: "verb", category: "text", myanmar: "ပူးတွဲ တည်ထောင်သည်", def: "found (an institution or business) jointly with someone else", example: "He cofounded PayPal, an electronic payment firm." },
+    { word: "satellite", pos: "noun", category: "text", myanmar: "ဂြိုဟ်တု", def: "an artificial body placed in orbit round the earth or moon", example: "Starlink is a satellite internet constellation." },
+    { word: "constellation", pos: "noun", category: "text", myanmar: "အစုအဝေး (ဂြိုဟ်တုအစုအဝေး)", def: "a group or cluster of related things", example: "A satellite constellation provides internet coverage worldwide." },
+    { word: "geographical", pos: "adjective", category: "text", myanmar: "ပထဝီဝင်ဆိုင်ရာ", def: "based on or derived from the physical features of the earth", example: "Access internet regardless of geographical location." },
+    { word: "acquire", pos: "verb", category: "text", myanmar: "ဝယ်ယူသိမ်းပိုက်သည်", def: "buy or obtain (an asset or object) for oneself", example: "In 2022, Musk acquired Twitter and changed its logo." },
+    { word: "invention", pos: "noun", category: "text", myanmar: "တီထွင်ဆန်းသစ်မှု", def: "the action of inventing something, typically a process or device", example: "Jobs was only 19 when he started his invention." },
+    { word: "programmable", pos: "adjective", category: "text", myanmar: "ပရိုဂရမ် ရေးဆွဲနိုင်သော", def: "able to be provided with coded instructions for automatic execution", example: "They sold Wozniak's programmable calculator to raise funds." },
+    { word: "appeal", pos: "verb", category: "text", myanmar: "ဆွဲဆောင်မှုရှိသည် / သဘောကျစေသည်", def: "be attractive or interesting", example: "The personal computer appealed to a broad audience." },
+    { word: "gradually", pos: "adverb", category: "text", myanmar: "တဖြည်းဖြည်းချင်း", def: "in a gradual way; slowly; by degrees", example: "Gradually, Jobs became one of the first successful tech entrepreneurs." },
+    { word: "sleek", pos: "adjective", category: "text", myanmar: "ပြောင်လက်ချောမွေ့သော", def: "smooth and glossy; streamlined", example: "They designed a sleek, molded plastic case for the computer." },
+    { word: "enclose", pos: "verb", category: "text", myanmar: "ငုံပေးထားသည် / ထည့်သွင်းထားသည်", def: "surround or close off on all sides", example: "A plastic case was manufactured to enclose the unit." },
+    { word: "familiar", pos: "adjective", category: "text", myanmar: "ရင်းနှီးကျွမ်းဝင်သော", def: "well known from long or close association", example: "Most people are familiar with the name Amazon.com." },
+    { word: "guidance", pos: "noun", category: "text", myanmar: "လမ်းညွှန်မှု", def: "advice or information aimed at resolving a problem or difficulty", example: "Under his guidance, Amazon became the largest retailer." },
+    { word: "retailer", pos: "noun", category: "text", myanmar: "လက်လီ ရောင်းချသူ", def: "a person or business that sells goods to the public in relatively small quantities", example: "Amazon is a major online retailer worldwide." },
+    { word: "merchant", pos: "noun", category: "text", myanmar: "ကုန်သည် / ရောင်းဝယ်သူ", def: "a person or company involved in wholesale trade or retailing", example: "Amazon.com is an online merchant of books and goods." },
+    { word: "motto", pos: "noun", category: "text", myanmar: "ဆောင်ပုဒ် / လမ်းညွှန်ချက်", def: "a short sentence or phrase chosen as encapsulating the beliefs or ideals", example: "With the attractive motto: Spend less, Smile more!" },
+    { word: "innovate", pos: "verb", category: "text", myanmar: "ဆန်းသစ်တီထွင်သည်", def: "make changes in something established, especially by introducing new methods", example: "Innovating new ideas is crucial for entrepreneurs." },
+    { word: "persevere", pos: "verb", category: "text", myanmar: "ဇွဲနပဲဖြင့် ကြိုးစားသည်", def: "continue in a course of action even in the face of difficulty", example: "Persevering through challenges leads to eventual success." },
+    { word: "strive", pos: "verb", category: "text", myanmar: "အပြင်းအထန် ကြိုးပမ်းသည်", def: "make great efforts to achieve or obtain something", example: "Set a goal to focus on and strive for excellence." },
+    { word: "pursue", pos: "verb", category: "text", myanmar: "လိုက်လံ အကောင်အထည်ဖော်သည်", def: "follow or chase (a goal or dream)", example: "If you have the courage to pursue your dream, it will come true." },
+    { word: "enterprise", pos: "noun", category: "text", myanmar: "စီးပွားရေး လုပ်ငန်းကြီး", def: "a business or company", example: "It is a vast Internet-based enterprise selling various products." },
+    { word: "cultivate", pos: "verb", category: "text", myanmar: "ပျိုးထောင်ယူသည် / လေ့ကျင့်ယူသည်", def: "try to acquire or develop (a quality, sentiment, or skill)", example: "Skills and characteristics can be cultivated through learning." },
+
+    // Grammar & Structures (Used to / Be used to / Get used to)
+    { word: "used to + infinitive", pos: "Grammar Structure", category: "grammar", myanmar: "အတိတ်က အလေ့အထ (ယခု မလုပ်တော့ပါ)", def: "talks about a past situation, habit, or state that is no longer true today", example: "She used to be a quiet person when she was younger." },
+    { word: "be used to + V-ing/noun", pos: "Grammar Structure", category: "grammar", myanmar: "ကျင့်သားရနေပြီးဖြစ်သည် / ရင်းနှီးနေသည်", def: "means 'be familiar with' or 'be accustomed to'", example: "My sister is used to doing challenging tasks." },
+    { word: "get used to + V-ing/noun", pos: "Grammar Structure", category: "grammar", myanmar: "ကျင့်သားရအောင် ပြုမူနေသည် (အလေ့အထဖြစ်အောင် လုပ်ဆောင်ဆဲ)", def: "talks about the process of becoming familiar with something", example: "I am getting used to the noise in the new city." },
+
+    // Additional Listening & Descriptive Essay Vocabularies
+    { word: "stationery", pos: "noun", category: "text", myanmar: "စာရေးကိရိယာများ", def: "writing materials such as paper, pens, and envelopes", example: "Brown and Black Girls manufactures stationery and accessories." },
+    { word: "accessories", pos: "noun", category: "text", myanmar: "အဆင်တန်ဆာ ပစ္စည်းများ", def: "things that can be added to something else to make it more useful or attractive", example: "Hair clips, earrings, and brooches are fashion accessories." },
+    { word: "brooch", pos: "noun", category: "text", myanmar: "ရင်ထိုးတံဆိပ်", def: "an ornament fastened to clothing with a hinged pin and catch", example: "She designs colorful brooches for young girls." },
+    { word: "volunteer", pos: "noun", category: "text", myanmar: "စေတနာ့ဝန်ထမ်း", def: "a person who freely offers to take part in an enterprise or undertake a task", example: "The company has 5 employees and several volunteers." },
+    { word: "capital", pos: "noun", category: "text", myanmar: "ရင်းနှီးမတည်ငွေ", def: "wealth in the form of money or other assets owned by a person or organization", example: "Ensure you have the necessary capital set aside before starting." },
+    { word: "descriptive essay", pos: "Writing Term", category: "text", myanmar: "ဖော်ပြချက် စာစီစာကုံး", def: "an essay that describes a person, place, or thing in detail", example: "A descriptive essay makes readers see, feel, hear, taste, and smell." },
+    { word: "artistic", pos: "adjective",category: "text", myanmar: "အနုပညာ စိတ်ကူးရှိသော", def: "having or showing natural creative skill", example: "An artistic person enjoys creating visually appealing artwork." },
+    { word: "willing to take risks", pos: "phrase", category: "text", myanmar: "စွန့်စားမှုများ ပြုလုပ်ရန် ဆန္ဒရှိသော", def: "ready to take action even when outcome is uncertain", example: "Successful tech founders are always willing to take risks." }
+];
+
+let fullVocabList = [...vocabularyList];
+
+function renderCards(data) {
+    const grid = document.getElementById("vocabGrid");
+    grid.innerHTML = "";
+    
+    data.forEach(item => {
+        const card = document.createElement("div");
+        card.className = `vocab-card tag-${item.category}`;
+        card.innerHTML = `
+            <div>
+                <div class="card-header">
+                    <span class="word">${item.word}</span>
+                    <span class="pos">${item.pos}</span>
+                </div>
+                <div class="myanmar-meaning">${item.myanmar}</div>
+                <div class="definition">${item.def}</div>
+            </div>
+            ${item.example ? `<div class="example-box">"${item.example}"</div>` : ''}
+        `;
+        grid.appendChild(card);
+    });
+
+    document.getElementById("cardCount").innerText = `Showing ${data.length} vocabulary items`;
+}
+
+let currentCategory = 'all';
+
+function filterVocab() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = fullVocabList.filter(item => {
+        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchesSearch = item.word.toLowerCase().includes(query) || 
+                              item.myanmar.toLowerCase().includes(query) || 
+                              item.def.toLowerCase().includes(query);
+        return matchesCategory && matchesSearch;
+    });
+    renderCards(filtered);
+}
+
+function filterCategory(cat, btn) {
+    currentCategory = cat;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterVocab();
+}
+
+// Initial render
+renderCards(fullVocabList);
+</script>
+
+</body>
+</html>

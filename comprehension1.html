@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 - Comprehension & Grammar | Grade-12 English Learning Hub</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary-slate:#0f172a;
+  --secondary-slate:#1e293b;
+  --accent-blue:#2563eb;
+  --accent-indigo:#4f46e5;
+  --accent-cyan:#06b6d4;
+  --accent-purple:#7c3aed;
+  --accent-green:#16a34a;
+  --bg-page:#f8fafc;
+  --surface-card:#ffffff;
+  --surface-soft:#f1f5f9;
+  --text-primary:#0f172a;
+  --text-secondary:#475569;
+  --text-muted:#64748b;
+  --border-subtle:#e2e8f0;
+  --answer-bg:#f0fdf4;
+  --answer-border:#16a34a;
+  --answer-text:#14532d;
+  --shadow-sm:0 4px 14px rgba(15,23,42,.06);
+  --shadow-md:0 14px 35px rgba(15,23,42,.10);
+  --shadow-lg:0 25px 60px rgba(15,23,42,.16);
+  --radius-main:18px;
+  --radius-item:13px;
+  --header-bg:rgba(15,23,42,.94);
+  --hero-bg:linear-gradient(135deg,#0f172a 0%,#1e3a8a 52%,#2563eb 100%);
+}
+
+html[data-theme="dark"]{
+  --bg-page:#080d18;
+  --surface-card:#101827;
+  --surface-soft:#172235;
+  --text-primary:#f8fafc;
+  --text-secondary:#cbd5e1;
+  --text-muted:#94a3b8;
+  --border-subtle:#263449;
+  --answer-bg:#0d2418;
+  --answer-border:#22c55e;
+  --answer-text:#bbf7d0;
+  --shadow-sm:0 4px 18px rgba(0,0,0,.22);
+  --shadow-md:0 16px 40px rgba(0,0,0,.30);
+  --shadow-lg:0 28px 70px rgba(0,0,0,.42);
+  --header-bg:rgba(8,13,24,.94);
+  --hero-bg:linear-gradient(135deg,#070b14 0%,#172554 52%,#1d4ed8 100%);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg-page);
+  color:var(--text-primary);
+  font-family:"Plus Jakarta Sans","Padauk",sans-serif;
+  line-height:1.6;
+  transition:background .3s ease,color .3s ease;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+
+.burmese,.option-mm,.question-text-mm,.answer-mm,.footer,
+.menu-label,.menu-small,.menu-section-label,.premium-note p{
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+}
+
+/* HEADER */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--header-bg);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(148,163,184,.16);
+}
+.header-inner{
+  max-width:1180px;
+  min-height:68px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.logo{
+  color:#fff;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:-.4px;
+}
+.logo span{color:#38bdf8}
+.header-actions{display:flex;gap:9px;align-items:center}
+.header-btn{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:12px;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  cursor:pointer;
+  transition:.28s ease;
+}
+.header-btn:hover{background:rgba(255,255,255,.14)}
+.back-btn{
+  width:auto;
+  padding:0 14px;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:52px 20px 66px;
+  color:#fff;
+  background:var(--hero-bg);
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  opacity:.14;
+  pointer-events:none;
+}
+.hero:before{
+  width:310px;height:310px;
+  right:-110px;top:-150px;
+  background:#38bdf8;
+}
+.hero:after{
+  width:250px;height:250px;
+  left:-110px;bottom:-160px;
+  background:#a78bfa;
+}
+.hero-content{
+  max-width:860px;
+  margin:auto;
+  position:relative;
+  z-index:1;
+}
+.badge{
+  display:inline-flex;
+  padding:7px 12px;
+  border:1px solid rgba(255,255,255,.20);
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.6px;
+}
+.hero h1{
+  margin:16px 0 8px;
+  font-size:clamp(30px,6vw,50px);
+  line-height:1.08;
+  letter-spacing:-1.5px;
+}
+.hero-subtitle{
+  margin:0;
+  color:#dbeafe;
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:15px;
+}
+
+/* CONTENT */
+.page-wrap{
+  max-width:900px;
+  margin:-26px auto 55px;
+  padding:0 18px;
+  position:relative;
+  z-index:2;
+}
+.content-card{
+  padding:28px;
+  margin-bottom:22px;
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-main);
+  box-shadow:var(--shadow-sm);
+  transition:.28s ease;
+}
+.content-card:hover{box-shadow:var(--shadow-md)}
+
+.section-header{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  margin-bottom:22px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border-subtle);
+}
+.section-badge{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  color:#fff;
+  font-weight:800;
+  font-size:14px;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  box-shadow:0 8px 20px rgba(37,99,235,.22);
+}
+.section-title{
+  margin:0;
+  font-size:20px;
+  line-height:1.55;
+  letter-spacing:-.3px;
+}
+.section-description{
+  margin:5px 0 0;
+  color:var(--text-muted);
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+}
+
+/* OPTIONS */
+.options-grid{
+  display:grid;
+  gap:10px;
+  margin-bottom:22px;
+}
+.options-box{
+  padding:16px 17px;
+  border:1px solid var(--border-subtle);
+  border-radius:13px;
+  background:var(--surface-soft);
+  transition:.25s ease;
+}
+.options-box:hover{
+  border-color:rgba(37,99,235,.28);
+  transform:translateY(-1px);
+}
+.option-item{
+  color:var(--text-primary);
+  font-size:14px;
+  line-height:1.8;
+}
+.option-item strong{color:var(--accent-blue)}
+.option-mm{
+  margin-top:5px;
+  color:var(--text-secondary);
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* QUESTIONS */
+.question-card{
+  margin-bottom:14px;
+  padding:17px;
+  border:1px solid var(--border-subtle);
+  border-radius:13px;
+  background:var(--surface-card);
+}
+.question-number{
+  display:inline-flex;
+  width:27px;height:27px;
+  margin-right:7px;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  color:var(--accent-blue);
+  background:rgba(37,99,235,.10);
+  font-size:12px;
+  font-weight:800;
+}
+.question-text{
+  color:var(--text-primary);
+  font-size:14px;
+  font-weight:700;
+  line-height:1.8;
+}
+.question-text-mm{
+  margin-top:5px;
+  color:var(--text-secondary);
+  font-size:13px;
+  line-height:1.85;
+}
+
+/* REVEAL */
+.btn-reveal{
+  margin-top:13px;
+  padding:10px 17px;
+  border:0;
+  border-radius:10px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),#1d4ed8);
+  box-shadow:0 7px 16px rgba(37,99,235,.20);
+  cursor:pointer;
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  font-weight:700;
+  transition:.22s ease;
+}
+.btn-reveal:hover{transform:translateY(-1px)}
+.btn-reveal.active{
+  background:linear-gradient(135deg,#475569,#334155);
+}
+.answer-drawer{
+  display:none;
+  margin-top:13px;
+  padding:15px;
+  border:1px solid rgba(22,163,74,.20);
+  border-left:4px solid var(--answer-border);
+  border-radius:10px;
+  color:var(--answer-text);
+  background:var(--answer-bg);
+  font-size:13px;
+  line-height:1.85;
+  animation:fadeIn .25s ease;
+}
+.answer-drawer.show{display:block}
+.answer-label{
+  margin-bottom:4px;
+  font-weight:800;
+}
+.answer-mm{margin-top:5px}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(-5px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* VOCAB */
+.intro-note{
+  margin-bottom:18px;
+  color:var(--text-secondary);
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  line-height:1.85;
+}
+.vocab-answer{font-weight:800;color:var(--accent-blue)}
+
+/* NEXT */
+.next-card{
+  color:#fff;
+  border:0;
+  background:linear-gradient(135deg,#0f172a,#1e3a8a 55%,#2563eb);
+}
+.next-card h2{
+  margin:0 0 6px;
+  font-size:22px;
+}
+.next-card p{
+  margin:0;
+  color:#dbeafe;
+  font-family:"Padauk";
+  font-size:13px;
+  line-height:1.8;
+}
+.next-btn{
+  display:inline-flex;
+  margin-top:17px;
+  padding:11px 16px;
+  border-radius:11px;
+  color:#0f172a;
+  background:#fff;
+  font-size:13px;
+  font-weight:800;
+  transition:.25s ease;
+}
+.next-btn:hover{transform:translateY(-2px)}
+
+.footer{
+  max-width:900px;
+  margin:auto;
+  padding:0 18px 35px;
+  color:var(--text-muted);
+  text-align:center;
+  font-size:12px;
+}
+
+/* SIDE MENU */
+.menu-trigger{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:1100;
+  width:52px;height:52px;
+  border:0;
+  border-radius:16px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  box-shadow:0 12px 30px rgba(37,99,235,.32);
+  cursor:pointer;
+  font-size:21px;
+  transition:.28s ease;
+}
+.menu-trigger:hover{transform:translateY(-50%) scale(1.05)}
+
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  z-index:1200;
+  opacity:0;
+  visibility:hidden;
+  background:rgba(2,6,23,.52);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  transition:.3s ease;
+}
+.menu-overlay.open{opacity:1;visibility:visible}
+
+.side-menu{
+  position:fixed;
+  top:0;right:0;
+  width:min(380px,92vw);
+  height:100dvh;
+  z-index:1300;
+  padding:24px 18px;
+  overflow-y:auto;
+  background:var(--surface-card);
+  border-left:1px solid var(--border-subtle);
+  box-shadow:-20px 0 60px rgba(0,0,0,.18);
+  transform:translateX(105%);
+  transition:transform .34s cubic-bezier(.2,.8,.2,1);
+}
+.side-menu.open{transform:translateX(0)}
+.menu-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:2px 4px 18px;
+  border-bottom:1px solid var(--border-subtle);
+}
+.menu-eyebrow{
+  color:var(--accent-blue);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.menu-title{margin-top:3px;font-size:21px;font-weight:800}
+.close-menu{
+  width:40px;height:40px;
+  border:1px solid var(--border-subtle);
+  border-radius:11px;
+  background:var(--surface-soft);
+  color:var(--text-primary);
+  cursor:pointer;
+  font-size:19px;
+}
+.menu-section{margin-top:19px}
+.menu-section-label{
+  margin:0 5px 9px;
+  color:var(--text-muted);
+  font-size:12px;
+  font-weight:700;
+}
+.menu-list{display:flex;flex-direction:column;gap:7px}
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 12px;
+  border:1px solid transparent;
+  border-radius:13px;
+  color:var(--text-primary);
+  transition:.25s ease;
+}
+.menu-item:hover{
+  background:var(--surface-soft);
+  border-color:var(--border-subtle);
+  transform:translateX(-2px);
+}
+.menu-item.active{
+  background:linear-gradient(135deg,rgba(37,99,235,.11),rgba(79,70,229,.09));
+  border-color:rgba(37,99,235,.22);
+}
+.menu-icon{
+  width:39px;height:39px;
+  flex:0 0 39px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:var(--surface-soft);
+  font-size:16px;
+  font-weight:800;
+}
+.menu-item.active .menu-icon{
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+}
+.menu-label{display:block;font-size:14px;font-weight:700}
+.menu-small{display:block;margin-top:1px;color:var(--text-muted);font-size:11px}
+.menu-arrow{margin-left:auto;color:var(--text-muted);font-size:17px}
+.premium-note{
+  margin-top:20px;
+  padding:15px;
+  border:1px solid rgba(124,58,237,.20);
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(124,58,237,.11),rgba(37,99,235,.09));
+}
+.premium-note strong{font-size:13px}
+.premium-note p{
+  margin:5px 0 0;
+  color:var(--text-secondary);
+  font-size:12px;
+  line-height:1.8;
+}
+
+@media(max-width:700px){
+  .header-inner{min-height:62px;padding:0 14px}
+  .logo{font-size:15px}
+  .back-btn{display:none}
+  .hero{padding:43px 18px 57px}
+  .page-wrap{padding:0 12px;margin-top:-21px}
+  .content-card{padding:20px;border-radius:15px}
+  .menu-trigger{
+    width:48px;height:48px;
+    right:14px;bottom:18px;top:auto;
+    transform:none;border-radius:15px;
+  }
+  .menu-trigger:hover{transform:scale(1.04)}
+}
+@media(max-width:430px){
+  .content-card{padding:16px}
+  .section-title{font-size:18px}
+  .option-item{font-size:13px}
+}
+
+/* ===== EXTENDED EXERCISES ===== */
+.exercise-intro{
+  margin:0 0 18px;
+  color:var(--text-secondary);
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  line-height:1.9;
+}
+.grammar-explain{
+  display:grid;
+  gap:14px;
+}
+.grammar-box{
+  padding:18px;
+  border:1px solid var(--border-subtle);
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--surface-soft),var(--surface-card));
+}
+.grammar-box h3{
+  margin:0 0 7px;
+  color:var(--accent-blue);
+  font-size:17px;
+}
+.grammar-box p{
+  margin:5px 0;
+  color:var(--text-primary);
+  font-size:14px;
+  line-height:1.85;
+}
+.grammar-box .burmese{
+  color:var(--text-secondary);
+  font-size:13px;
+}
+.example-line{
+  margin-top:9px!important;
+  padding:10px 12px;
+  border-left:3px solid var(--accent-cyan);
+  border-radius:8px;
+  background:rgba(6,182,212,.07);
+}
+.match-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:14px;
+}
+.match-column{
+  padding:15px;
+  border:1px solid var(--border-subtle);
+  border-radius:13px;
+  background:var(--surface-soft);
+}
+.match-column h4{
+  margin:0 0 9px;
+  color:var(--accent-blue);
+  font-size:13px;
+}
+.match-item{
+  padding:7px 0;
+  color:var(--text-primary);
+  font-size:13px;
+  line-height:1.8;
+}
+.choice-list{
+  display:grid;
+  gap:6px;
+  margin-top:12px;
+}
+.choice{
+  padding:7px 10px;
+  border-radius:8px;
+  background:var(--surface-soft);
+  color:var(--text-secondary);
+  font-size:12.5px;
+  line-height:1.75;
+}
+.choice strong{color:var(--accent-blue)}
+@media(max-width:700px){
+  .match-grid{grid-template-columns:1fr}
+  .grammar-box{padding:15px}
+}
+
+</style>
+
+<script>
+/* Shared theme: reads the same keys used by Unit 1 */
+(function(){
+  const saved =
+    localStorage.getItem("theme") ||
+    localStorage.getItem("siteTheme") ||
+    localStorage.getItem("g12-theme") ||
+    "light";
+
+  document.documentElement.setAttribute(
+    "data-theme",
+    saved === "dark" ? "dark" : "light"
+  );
+})();
+</script>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">Grade-12 <span>English</span></a>
+
+    <div class="header-actions">
+      <a class="header-btn back-btn" href="unit1.html">← Reading Passage</a>
+      <button class="header-btn" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">UNIT 1 • COMPREHENSION</span>
+    <h1>COMPREHENSION</h1>
+    <p class="hero-subtitle">Reading Comprehension • Gap Fill • Questions • Vocabulary</p>
+  </div>
+</section>
+
+<!-- Professional Learning Menu -->
+<button class="menu-trigger" id="menuTrigger" aria-label="Open learning menu">☰</button>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<aside class="side-menu" id="sideMenu">
+  <div class="menu-top">
+    <div>
+      <div class="menu-eyebrow">UNIT 1 LEARNING HUB</div>
+      <div class="menu-title">Learning Menu</div>
+    </div>
+    <button class="close-menu" id="closeMenu" aria-label="Close menu">×</button>
+  </div>
+
+  <div class="menu-section">
+    <div class="menu-section-label">UNIT 1 LESSONS</div>
+
+    <nav class="menu-list">
+      <a class="menu-item" href="meaning1.html">
+        <span class="menu-icon">Aa</span>
+        <span><span class="menu-label">Meaning</span><span class="menu-small">Vocabulary & meanings</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+
+      <a class="menu-item" href="unit1.html">
+        <span class="menu-icon">📖</span>
+        <span><span class="menu-label">Reading Paragraph</span><span class="menu-small">Chasing Dreams</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+
+      <a class="menu-item active" href="comprehension1.html" aria-current="page">
+        <span class="menu-icon">✓</span>
+        <span><span class="menu-label">Comprehension</span><span class="menu-small">Reading questions</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+
+      <a class="menu-item" href="grammar1.html">
+        <span class="menu-icon">G</span>
+        <span><span class="menu-label">Grammar</span><span class="menu-small">Used to • Be used to • Get used to</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+
+      <a class="menu-item" href="listening-speaking1.html">
+        <span class="menu-icon">🎧</span>
+        <span><span class="menu-label">Listening & Speaking</span><span class="menu-small">Interview practice</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+
+      <a class="menu-item" href="writing1.html">
+        <span class="menu-icon">✎</span>
+        <span><span class="menu-label">Writing</span><span class="menu-small">Descriptive essay</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+
+      <a class="menu-item" href="beca1.html">
+        <span class="menu-icon">◆</span>
+        <span><span class="menu-label">BECA Practice</span><span class="menu-small">နမူနာမေးခွန်းများ လေ့ကျင့်ရန်</span></span>
+        <span class="menu-arrow">›</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="premium-note">
+    <strong>✦ Unit 1 Learning Collection</strong>
+    <p>Reading မှ Vocabulary နှင့် Comprehension အထိ Unit 1 သင်ခန်းစာများကို တစ်နေရာတည်းကနေ ဆက်လက်လေ့လာနိုင်ပါတယ်။</p>
+  </div>
+</aside>
+
+<main class="page-wrap">
+
+  <!-- SECTION A -->
+  <section class="content-card">
+    <div class="section-header">
+      <div class="section-badge">A</div>
+      <div>
+        <h2 class="section-title">Five sentences have been removed from the passage. Choose from the sentences (A–E) the one which best fits each gap (1–5).</h2>
+        <p class="section-description">Gap Fill — Choose the sentence that best fits each gap.</p>
+      </div>
+    </div>
+
+    <div class="options-grid">
+      <div class="options-box">
+        <div class="option-item"><strong>A.</strong> It is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods.</div>
+        <div class="option-mm">(၎င်းသည် စာအုပ်များ၊ ဂီတ၊ ရုပ်ရှင်များ၊ အိမ်သုံးပစ္စည်းများ၊ အီလက်ထရွန်နစ် ပစ္စည်းများ၊ အရုပ်များနှင့် အခြားကုန်ပစ္စည်းများစွာကို ရောင်းချသည့် အင်တာနက်အခြေပြု လုပ်ငန်းကြီးတစ်ခု ဖြစ်သည်။)</div>
+      </div>
+
+      <div class="options-box">
+        <div class="option-item"><strong>B.</strong> When do you think he started his business?</div>
+        <div class="option-mm">(သူ့ရဲ့ စီးပွားရေးလုပ်ငန်းကို ဘယ်အချိန်မှာ စတင်ခဲ့တယ်လို့ သင်ထင်ပါသလဲ။)</div>
+      </div>
+
+      <div class="options-box">
+        <div class="option-item"><strong>C.</strong> Some are natural personality traits, but many skills and characteristics can be cultivated through learning and practice.</div>
+        <div class="option-mm">(အချို့မှာ မွေးရာပါ စရိုက်လက္ခဏာများ ဖြစ်သော်လည်း ကျွမ်းကျင်မှုနှင့် အရည်အသွေး အများအပြားကို လေ့လာမှုနှင့် လေ့ကျင့်မှုတို့မှတစ်ဆင့် ပျိုးထောင်ယူနိုင်ပါသည်။)</div>
+      </div>
+
+      <div class="options-box">
+        <div class="option-item"><strong>D.</strong> In reality, many successful entrepreneurs started their businesses when they were quite young.</div>
+        <div class="option-mm">(လက်တွေ့တွင် အောင်မြင်သော စီးပွားရေးလုပ်ငန်းရှင် အများအပြားသည် အသက်ငယ်စဉ်အခါကပင် စီးပွားရေးလုပ်ငန်းများကို စတင်ခဲ့ကြခြင်းဖြစ်သည်။)</div>
+      </div>
+
+      <div class="options-box">
+        <div class="option-item"><strong>E.</strong> You might be amazed to know where and how he invented it.</div>
+        <div class="option-mm">(သူ ဘယ်နေရာမှာ၊ ဘယ်လို တီထွင်ခဲ့တယ်ဆိုတာ သိရင် သင် အံ့အားသင့်သွားပါလိမ့်မည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">Gap Fill Answers (1–5)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGap', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGap" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        <div>1. <strong>D</strong></div>
+        <div>2. <strong>B</strong></div>
+        <div>3. <strong>E</strong></div>
+        <div>4. <strong>A</strong></div>
+        <div>5. <strong>C</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION B -->
+  <section class="content-card">
+    <div class="section-header">
+      <div class="section-badge">B</div>
+      <div>
+        <h2 class="section-title">Give a full-sentence answer to each question.</h2>
+        <p class="section-description">Answer each question in a complete sentence.</p>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">1</span>According to the passage, why do most entrepreneurs achieve success?</div>
+      <div class="question-text-mm">(စာပိုဒ်အရ စီးပွားရေးလုပ်ငန်းရှင် အများစုသည် အဘယ်ကြောင့် အောင်မြင်မှု ရရှိကြသနည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ1', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ1" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        According to the passage, most entrepreneurs achieve success because they are creative, imaginative, and adventurous.
+        <div class="answer-mm">(စာပိုဒ်အရ စီးပွားရေးလုပ်ငန်းရှင် အများစုသည် တီထွင်ဖန်တီးနိုင်စွမ်းရှိခြင်း၊ စိတ်ကူးဉာဏ် ကွန့်မြူးနိုင်ခြင်းနှင့် စွန့်စားလိုစိတ်ရှိခြင်းတို့ကြောင့် အောင်မြင်မှု ရရှိကြခြင်းဖြစ်သည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">2</span>What is the significant benefit of using Starlink?</div>
+      <div class="question-text-mm">(Starlink ကို အသုံးပြုခြင်း၏ သိသာထင်ရှားသော အကျိုးကျေးဇူးမှာ အဘယ်နည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ2', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ2" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        The significant benefit of using Starlink is it enables users to access the Internet regardless of their geographical location.
+        <div class="answer-mm">(Starlink ကို အသုံးပြုခြင်း၏ သိသာထင်ရှားသော အကျိုးကျေးဇူးမှာ အသုံးပြုသူများ၏ ပထဝီဝင် အနေအထား တည်နေရာကို မမူတည်ဘဲ အင်တာနက် အသုံးပြုနိုင်စေခြင်းဖြစ်သည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">3</span>Where did Steve Jobs get the money to start his business?</div>
+      <div class="question-text-mm">(စတိဗ်ဂျော့ဘ်သည် သူ၏ စီးပွားရေးလုပ်ငန်းကို စတင်ရန် ငွေကြေးကို မည်သည့်နေရာမှ ရရှိခဲ့သနည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ3', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ3" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        Steve Jobs got the money to start his business by selling Jobs’s Volkswagen minibus and Wozniak’s programmable calculator.
+        <div class="answer-mm">(စတိဗ်ဂျော့ဘ်သည် သူ၏ Volkswagen မိုက်ခရိုဘတ်စ်ကားနှင့် Wozniak ၏ ပရိုဂရမ်ရိုက်ထည့်နိုင်သော ဂဏန်းတွက်စက်ကို ရောင်းချခြင်းဖြင့် စီးပွားရေးစတင်ရန် ငွေကြေးကို ရရှိခဲ့သည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">4</span>Why is Bezos’s online shopping website named Amazon.com.?</div>
+      <div class="question-text-mm">(ဘေးဇော့စ်၏ အွန်လိုင်းစျေးဝယ် ဝက်ဘ်ဆိုက်ကို Amazon.com ဟု အဘယ်ကြောင့် အမည်ပေးခဲ့သနည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ4', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ4" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        Bezos’s online shopping website is named Amazon.com., after the South American River ‘Amazon’.
+        <div class="answer-mm">(ဘေးဇော့စ်၏ အွန်လိုင်းစျေးဝယ် ဝက်ဘ်ဆိုက်ကို တောင်အမေရိကရှိ 'အမေဇုန်' မြစ်ကို အစွဲပြု၍ Amazon.com ဟု အမည်ပေးခဲ့ခြင်းဖြစ်သည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">5</span>What are the three requirements to achieve success in business?</div>
+      <div class="question-text-mm">(စီးပွားရေးနယ်ပယ်တွင် အောင်မြင်မှုရရှိရန် လိုအပ်ချက်သုံးခုမှာ အဘယ်နည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ5', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ5" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        The three requirements to achieve success in business field are to innovate new ideas, put them into action, and persevere through challenges.
+        <div class="answer-mm">(စီးပွားရေးနယ်ပယ်တွင် အောင်မြင်ရန် လိုအပ်ချက် သုံးခုမှာ အိုင်ဒီယာသစ်များ တီထွင်ခြင်း၊ ၎င်းတို့ကို လက်တွေ့အကောင်အထည်ဖော်ခြင်းနှင့် စိန်ခေါ်မှုများကို ဇွဲရှိရှိ ကျော်ဖြတ်ခြင်းတို့ ဖြစ်သည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">6</span>Why is it important to set a goal in life?</div>
+      <div class="question-text-mm">(ဘဝတွင် ရည်မှန်းချက်ပန်းတိုင် ထားရှိရန် အဘယ်ကြောင့် အရေးကြီးသနည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ6', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ6" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        It is important to set a goal in life because it gives us something to focus on and strive for.
+        <div class="answer-mm">(ဘဝတွင် ရည်မှန်းချက်ပန်းတိုင် ထားရှိရန် အရေးကြီးသည်မှာ ၎င်းသည် ကျွန်ုပ်တို့အား အာရုံစိုက်ရန်နှင့် ကြိုးစားအားထုတ်ရန် အရာတစ်ခုကို ပေးစွမ်းသောကြောင့် ဖြစ်သည်။)</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">7</span>What do the three persons mentioned in the passage have in common?</div>
+      <div class="question-text-mm">(စာပိုဒ်တွင် ဖော်ပြထားသော လူသုံးဦး၏ တူညီသော အချက်မှာ အဘယ်နည်း။)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansQ7', this)">အဖြေကြည့်မည်</button>
+      <div id="ansQ7" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        A common thing I find in the three persons mentioned in the passage is they are young / motivated / capable of thinking outside the box / courageous, etc.
+        <div class="answer-mm">(ဖော်ပြပါ လူသုံးဦးတွင် တွေ့ရှိရသည့် တူညီသော အချက်မှာ ၎င်းတို့သည် ငယ်ရွယ်ခြင်း / တက်ကြွလှုံ့ဆော်မှုရှိခြင်း / ဆန်းသစ်စွာ စိစစ်တွေးခေါ်နိုင်ခြင်း / သတ္တိရှိခြင်း စသည်တို့ ဖြစ်ကြသည်။)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOCABULARY -->
+  <section class="content-card">
+    <div class="section-header">
+      <div class="section-badge">1B</div>
+      <div>
+        <h2 class="section-title">Vocabulary (Idioms) — Matching</h2>
+        <p class="section-description">Find the bold-faced idioms in the text that have the same meaning with the following.</p>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">a. something that isn’t complicated to understand</div>
+      <div class="question-text-mm">(နားလည်ရ မရှုပ်ထွေးသော အရာ)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansVocA', this)">အဖြေကြည့်မည်</button>
+      <div id="ansVocA" class="answer-drawer"><div class="answer-label">Answer</div><span class="vocab-answer">not rocket science</span></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">b. the most important point or conclusion</div>
+      <div class="question-text-mm">(အရေးကြီးဆုံး အချက် သို့မဟုတ် အနှစ်ချုပ် အဖြေ)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansVocB', this)">အဖြေကြည့်မည်</button>
+      <div id="ansVocB" class="answer-drawer"><div class="answer-label">Answer</div><span class="vocab-answer">the bottom line</span></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">c. to be more successful than one’s competitors</div>
+      <div class="question-text-mm">(ပြိုင်ဘက်များထက် ပိုမိုအောင်မြင်မှု ရရှိစေရန်)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansVocC', this)">အဖြေကြည့်မည်</button>
+      <div id="ansVocC" class="answer-drawer"><div class="answer-label">Answer</div><span class="vocab-answer">ahead of the pack</span></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">d. to do or say something risky</div>
+      <div class="question-text-mm">(စွန့်စားရသောအရာကို ပြုလုပ်ခြင်း သို့မဟုတ် ပြောဆိုခြင်း)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansVocD', this)">အဖြေကြည့်မည်</button>
+      <div id="ansVocD" class="answer-drawer"><div class="answer-label">Answer</div><span class="vocab-answer">go out on a limb</span></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">e. to think of creative or unconventional solutions, instead of common ones; to go beyond a normal idea</div>
+      <div class="question-text-mm">(ဆန်းသစ်သော နည်းလမ်းများကို တွေးခေါ်ခြင်း)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansVocE', this)">အဖြေကြည့်မည်</button>
+      <div id="ansVocE" class="answer-drawer"><div class="answer-label">Answer</div><span class="vocab-answer">to think outside the box</span></div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 1B • IDIOM EXERCISE B -->
+  <section class="content-card">
+    <div class="section-header">
+      <div class="section-badge">B</div>
+      <div>
+        <h2 class="section-title">Complete the following sentences with the correct form of the idioms in Exercise A.</h2>
+        <p class="section-description">Idioms — Complete each sentence and reveal the answer when ready.</p>
+      </div>
+    </div>
+
+    <p class="exercise-intro">အောက်ပါဝါကျများကို Exercise A မှ သင့်လျော်သော idiom ပုံစံဖြင့် ဖြည့်စွက်ပါ။ မေးခွန်းတစ်ခုချင်းစီအောက်ရှိ “အဖြေကြည့်မည်” ခလုတ်ကိုနှိပ်၍ အဖြေကို စစ်ဆေးနိုင်ပါသည်။</p>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">1</span>My coach always said, “Basketball is ________. It’s about putting the ball in the basket.”</div>
+      <div class="question-text-mm">ကျွန်ုပ်၏ နည်းပြက အမြဲပြောလေ့ရှိသည်မှာ “ဘတ်စကက်ဘောဆိုတာ ________ ပါ။ ဘောလုံးကို ခြင်းထဲထည့်ရတာပဲ ဖြစ်ပါတယ်” ဟု ဆိုသည်။</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansIdiomB1', this)">အဖြေကြည့်မည်</button>
+      <div id="ansIdiomB1" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        1. <strong>not rocket science</strong>
+        <div class="answer-mm">အလွန်ရှုပ်ထွေးခက်ခဲသော အရာမဟုတ်ပါ။</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">2</span>The journalist ________ to express his views that were exactly opposite to others.</div>
+      <div class="question-text-mm">ထိုသတင်းစာဆရာသည် အခြားသူများ၏အမြင်နှင့် လုံးဝဆန့်ကျင်သော သူ၏အမြင်များကို ဖော်ပြရန် ________ ။</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansIdiomB2', this)">အဖြေကြည့်မည်</button>
+      <div id="ansIdiomB2" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        2. <strong>went out on a limb</strong>
+        <div class="answer-mm">စွန့်စား၍ မိမိ၏အမြင်ကို ထုတ်ဖော်ပြောဆိုခဲ့သည်။</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">3</span>The new management system has kept the company far ________ in terms of product development.</div>
+      <div class="question-text-mm">စီမံခန့်ခွဲမှုစနစ်အသစ်ကြောင့် ကုန်ပစ္စည်းဖွံ့ဖြိုးတိုးတက်မှုအရ ကုမ္ပဏီသည် အခြားသူများထက် များစွာ ________ ဖြစ်နေသည်။</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansIdiomB3', this)">အဖြေကြည့်မည်</button>
+      <div id="ansIdiomB3" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        3. <strong>ahead of the pack</strong>
+        <div class="answer-mm">ပြိုင်ဘက်များထက် ရှေ့တန်းရောက်နေသည်။</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">4</span>During the war, both sides acted with ________, including the use of nuclear weapons.</div>
+      <div class="question-text-mm">စစ်ပွဲအတွင်း နှစ်ဖက်စလုံးသည် နျူကလီးယားလက်နက်များ အသုံးပြုခြင်းအပါအဝင် ________ ဖြင့် လုပ်ဆောင်ခဲ့ကြသည်။</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansIdiomB4', this)">အဖြေကြည့်မည်</button>
+      <div id="ansIdiomB4" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        4. <strong>no holds barred</strong>
+        <div class="answer-mm">မည်သည့်ကန့်သတ်ချက်မျှ မထားဘဲ လုပ်ဆောင်ခြင်း။</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">5</span>The ________ is that you should consult your doctor or nutritionist before using acai pills as part of a diet.</div>
+      <div class="question-text-mm">အဓိကအချက်မှာ အစားအသောက်အစီအစဉ်၏ တစ်စိတ်တစ်ပိုင်းအဖြစ် acai ဆေးပြားများကို အသုံးမပြုမီ ဆရာဝန် သို့မဟုတ် အာဟာရပညာရှင်နှင့် တိုင်ပင်သင့်ခြင်း ဖြစ်သည်။</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansIdiomB5', this)">အဖြေကြည့်မည်</button>
+      <div id="ansIdiomB5" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        5. <strong>The bottom line</strong>
+        <div class="answer-mm">အဓိကအချက် / နောက်ဆုံးအနှစ်ချုပ်မှာ — ဆရာဝန် သို့မဟုတ် အာဟာရပညာရှင်နှင့် တိုင်ပင်သင့်သည်။</div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">6</span>The young fashion designer ________ to come up with fresh new ideas that will grab customers’ attention.</div>
+      <div class="question-text-mm">လူငယ်ဖက်ရှင်ဒီဇိုင်နာသည် ဖောက်သည်များ၏အာရုံကို ဆွဲဆောင်နိုင်မည့် စိတ်ကူးသစ်များကို ________ ။</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansIdiomB6', this)">အဖြေကြည့်မည်</button>
+      <div id="ansIdiomB6" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        6. <strong>thinks outside the box</strong>
+        <div class="answer-mm">ပုံမှန်နည်းလမ်းများထက် ကျော်လွန်၍ ဆန်းသစ်စွာ တွေးခေါ်သည်။</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1C • GRAMMAR -->
+  <section class="content-card">
+    <div class="section-header">
+      <div class="section-badge">1C</div>
+      <div>
+        <h2 class="section-title">Grammar — ‘Used to’, ‘Be used to’ and ‘Get used to’</h2>
+        <p class="section-description">Understand the three forms, compare their uses, and practise with answer reveal.</p>
+      </div>
+    </div>
+
+    <div class="grammar-box">
+      <p><strong>e.g.</strong> Nowadays, people all over the world are getting used to shopping online.</p>
+      <p class="burmese">ယနေ့ခေတ်တွင် ကမ္ဘာတစ်ဝန်းရှိ လူများသည် အွန်လိုင်းမှ ဈေးဝယ်ခြင်းကို တဖြည်းဖြည်း အသားကျလာကြသည်။</p>
+    </div>
+
+    <div class="grammar-box">
+      <h3>Used to</h3>
+      <p>We use <strong>‘used to + infinitive’</strong> to talk about a past situation that is no longer true.</p>
+      <p class="burmese">လက်ရှိတွင် မမှန်တော့သော အတိတ်က အခြေအနေ သို့မဟုတ် လုပ်ရိုးလုပ်စဉ်ကို ပြောရန် <strong>‘used to + infinitive’</strong> ကို အသုံးပြုသည်။</p>
+      <p>It tells us that there was a repeated action or state in the past which has now changed.</p>
+      <p class="burmese">အတိတ်က ထပ်ခါတလဲလဲ ဖြစ်ခဲ့သော လုပ်ဆောင်ချက် သို့မဟုတ် အခြေအနေတစ်ခုသည် ယခုအခါ ပြောင်းလဲသွားပြီဖြစ်ကြောင်း ဖော်ပြသည်။</p>
+      <p class="example-line"><strong>Example:</strong> She used to be a quiet person when she was younger.</p>
+      <p class="burmese example-line">သူမ ငယ်စဉ်က တိတ်ဆိတ်ငြိမ်သက်သောသူတစ်ယောက် ဖြစ်ခဲ့သည်။</p>
+      <p class="example-line">I didn’t use to eat vegetables, but now I know the benefits of eating vegetables.</p>
+      <p class="burmese example-line">အရင်က ကျွန်ုပ်သည် ဟင်းသီးဟင်းရွက်များကို မစားခဲ့ပါ၊ သို့သော် ယခုအခါ ဟင်းသီးဟင်းရွက်စားခြင်း၏ အကျိုးကျေးဇူးများကို သိရှိလာပြီ။</p>
+      <p class="example-line">Did you use to play here as a child?</p>
+      <p class="burmese example-line">သင်ကလေးဘဝတုန်းက ဒီမှာ ကစားလေ့ရှိပါသလား။</p>
+    </div>
+
+    <div class="grammar-box">
+      <h3>Be used to</h3>
+      <p><strong>‘Be used to’</strong> means ‘be familiar with’ or ‘be accustomed to’.</p>
+      <p class="burmese"><strong>‘Be used to’</strong> သည် တစ်စုံတစ်ရာနှင့် ရင်းနှီးကျွမ်းဝင်နေသည်၊ အသားကျနေသည်ဟု အဓိပ္ပာယ်ရသည်။</p>
+      <p class="example-line">My younger sister is used to doing challenging tasks and she doesn’t mind difficult math sums.</p>
+      <p class="burmese example-line">ကျွန်ုပ်၏ညီမငယ်သည် ခက်ခဲသောတာဝန်များကို လုပ်ဆောင်ရသည်မှာ အသားကျနေပြီး ခက်ခဲသော သင်္ချာတွက်ချက်မှုများကိုလည်း စိတ်မညစ်ပါ။</p>
+      <p class="example-line">He wasn’t used to walking so much and his legs hurt after the hike.</p>
+      <p class="burmese example-line">သူသည် ဤမျှလောက် လမ်းလျှောက်ရသည်မှာ အသားမကျသေးသောကြောင့် တောင်တက်ပြီးနောက် ခြေထောက်များ နာကျင်ခဲ့သည်။</p>
+      <p class="example-line">I live with my grandparents so I’m used to caring for older people.</p>
+      <p class="burmese example-line">ကျွန်ုပ်သည် အဘိုးအဘွားများနှင့် အတူနေသောကြောင့် အသက်ကြီးသူများကို ပြုစုစောင့်ရှောက်ရသည်မှာ အသားကျနေသည်။</p>
+    </div>
+
+    <div class="grammar-box">
+      <h3>Get used to</h3>
+      <p>We use <strong>‘get used to’</strong> to talk about the process of becoming familiar with something.</p>
+      <p class="burmese"><strong>‘Get used to’</strong> ကို တစ်စုံတစ်ရာနှင့် ရင်းနှီးကျွမ်းဝင်လာသည့် လုပ်ငန်းစဉ်ကို ဖော်ပြရန် အသုံးပြုသည်။</p>
+      <p class="example-line">I found learning French hard at first but now I’m getting used to it.</p>
+      <p class="burmese example-line">အစပိုင်းတွင် ပြင်သစ်ဘာသာစကားကို လေ့လာရသည်မှာ ခက်ခဲသည်ဟု ခံစားရသော်လည်း ယခုအခါ ၎င်းနှင့် တဖြည်းဖြည်း အသားကျလာပြီ။</p>
+      <p class="example-line">It took my mother years to get used to living in this city after moving from her native village.</p>
+      <p class="burmese example-line">ကျွန်ုပ်၏မိခင်သည် မိမိဇာတိကျေးရွာမှ ပြောင်းရွှေ့လာပြီးနောက် ဤမြို့တွင် နေထိုင်ရသည်နှင့် အသားကျရန် နှစ်များစွာ ကြာခဲ့သည်။</p>
+      <p class="example-line">I’m getting used to the noise now. I found it really stressful when I first moved in.</p>
+      <p class="burmese example-line">ယခုအခါ ထိုဆူညံသံနှင့် တဖြည်းဖြည်း အသားကျလာပြီ။ အစပိုင်းတွင် ဤနေရာသို့ စပြောင်းလာစဉ်က အလွန်စိတ်ဖိစီးစရာကောင်းသည်ဟု ခံစားခဲ့ရသည်။</p>
+    </div>
+
+    <div class="grammar-box">
+      <p><strong>‘Be used to’ and ‘get used to’ are followed by a noun, pronoun or the -ing form of a verb, and can be used about the past, present or future.</strong></p>
+      <p class="burmese"><strong>‘Be used to’ နှင့် ‘get used to’</strong> တို့၏နောက်တွင် noun၊ pronoun သို့မဟုတ် verb ၏ <strong>-ing form</strong> လိုက်ပြီး အတိတ်၊ ပစ္စုပ္ပန်နှင့် အနာဂတ်အခြေအနေများအတွက် အသုံးပြုနိုင်သည်။</p>
+    </div>
+
+    <!-- 1C A -->
+    <div class="section-header" style="margin-top:26px;">
+      <div class="section-badge">A</div>
+      <div>
+        <h2 class="section-title">Study the following sentences and match the sentences (1–3) with the meanings (a–c).</h2>
+        <p class="section-description">Used to • Be used to • Get used to</p>
+      </div>
+    </div>
+
+    <p class="exercise-intro">အောက်ပါဝါကျများကို လေ့လာပြီး ဝါကျ (1–3) များကို အဓိပ္ပာယ် (a–c) များနှင့် ကိုက်ညီအောင် တွဲပါ။</p>
+
+    <div class="match-grid">
+      <div class="match-column">
+        <h4>Sentences</h4>
+        <div class="match-item"><strong>1.</strong> She used to be a quiet person when she was younger.<br><span class="burmese">သူမ ငယ်စဉ်က တိတ်ဆိတ်ငြိမ်သက်သောသူတစ်ယောက် ဖြစ်ခဲ့သည်။</span></div>
+        <div class="match-item"><strong>2.</strong> My younger sister is used to doing challenging tasks.<br><span class="burmese">ကျွန်ုပ်၏ညီမငယ်သည် ခက်ခဲသောတာဝန်များကို လုပ်ဆောင်ရသည်မှာ အသားကျနေသည်။</span></div>
+        <div class="match-item"><strong>3.</strong> I’m getting used to the noise now.<br><span class="burmese">ယခုအခါ ဆူညံသံနှင့် တဖြည်းဖြည်း အသားကျလာပြီ။</span></div>
+      </div>
+      <div class="match-column">
+        <h4>Meanings</h4>
+        <div class="match-item"><strong>a.</strong> A past situation or habit that is no longer true.<br><span class="burmese">အတိတ်တွင် ရှိခဲ့သော်လည်း ယခု မရှိတော့သော အခြေအနေ သို့မဟုတ် လုပ်ရိုးလုပ်စဉ်။</span></div>
+        <div class="match-item"><strong>b.</strong> Being familiar or accustomed to something.<br><span class="burmese">တစ်စုံတစ်ရာနှင့် ရင်းနှီးကျွမ်းဝင်ခြင်း သို့မဟုတ် အသားကျခြင်း။</span></div>
+        <div class="match-item"><strong>c.</strong> The process of becoming familiar with something.<br><span class="burmese">တစ်စုံတစ်ရာနှင့် တဖြည်းဖြည်း ရင်းနှီးကျွမ်းဝင်လာသည့် လုပ်ငန်းစဉ်။</span></div>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text">Matching Answer (1–3)</div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarA', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarA" class="answer-drawer">
+        <div class="answer-label">Answer</div>
+        <strong>1. a &nbsp;&nbsp; 2. b &nbsp;&nbsp; 3. c</strong>
+        <div class="answer-mm">1 သည် အတိတ်က အခြေအနေ၊ 2 သည် အသားကျနေခြင်း၊ 3 သည် အသားကျလာနေသည့် လုပ်ငန်းစဉ်ကို ဖော်ပြသည်။</div>
+      </div>
+    </div>
+
+    <!-- 1C B -->
+    <div class="section-header" style="margin-top:26px;">
+      <div class="section-badge">B</div>
+      <div>
+        <h2 class="section-title">Choose the best answer to complete each sentence.</h2>
+        <p class="section-description">Choose a, b, c, or d — then reveal the correct answer.</p>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">1</span>I always hated the hot weather but I _____ it when I lived in Myingyan.</div>
+      <div class="question-text-mm">အပူပိုင်းရာသီဥတုကို အမြဲမုန်းခဲ့ပေမယ့် မြင်းခြံမှာ နေခဲ့တုန်းကတော့ အဲဒီရာသီဥတေနဲ့ _______ ။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> get used to — အသားကျလာသည်</div>
+        <div class="choice"><strong>b.</strong> got used to — အသားကျလာခဲ့သည်</div>
+        <div class="choice"><strong>c.</strong> used to — အရင်က လုပ်လေ့ရှိသည်</div>
+        <div class="choice"><strong>d.</strong> am used to — အသားကျနေသည်</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB1', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB1" class="answer-drawer"><div class="answer-label">Answer</div><strong>1. b — got used to</strong><div class="answer-mm">အတိတ်ကာလတွင် ဖြစ်ခဲ့သောကြောင့် “got used to” ကို သုံးသည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">2</span>Our group _____ much positive feedback from the teacher, but this time he is happy with our performance.</div>
+      <div class="question-text-mm">ကျွန်ုပ်တို့အဖွဲ့သည် ဆရာထံမှ အပြုသဘောဆောင်သော အကြံပြုချက်များစွာ _______ သော်လည်း ယခုတစ်ကြိမ်တွင် ကျွန်ုပ်တို့၏လုပ်ဆောင်မှုကို သူကျေနပ်သည်။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> didn’t use to get — အရင်က ရလေ့မရှိခဲ့</div>
+        <div class="choice"><strong>b.</strong> weren’t used to get — ရရန် အသားကျမနေခဲ့</div>
+        <div class="choice"><strong>c.</strong> didn’t use to getting — ရရှိခြင်းကို အရင်က မလုပ်ခဲ့</div>
+        <div class="choice"><strong>d.</strong> used to getting — ရရှိလေ့ရှိခဲ့</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB2', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB2" class="answer-drawer"><div class="answer-label">Answer</div><strong>2. a — didn’t use to get</strong><div class="answer-mm">အတိတ်က အလေ့အထကို ဖော်ပြသောကြောင့် “didn’t use to + infinitive” ဖြစ်သည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">3</span>I am a vegetarian so I _____ meat and fish.</div>
+      <div class="question-text-mm">ကျွန်ုပ်သည် သက်သတ်လွတ်စားသူဖြစ်သောကြောင့် အသားနှင့်ငါးကို _______ ။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> ’m not used to have — ရှိရန် အသားမကျ</div>
+        <div class="choice"><strong>b.</strong> ’m used to not having — မရှိခြင်းကို အသားကျနေသည်</div>
+        <div class="choice"><strong>c.</strong> used to having — ရှိလေ့ရှိခဲ့</div>
+        <div class="choice"><strong>d.</strong> used to have — ရှိလေ့ရှိခဲ့</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB3', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB3" class="answer-drawer"><div class="answer-label">Answer</div><strong>3. b — ’m used to not having</strong><div class="answer-mm">လက်ရှိအသားကျနေသော အခြေအနေဖြစ်ပြီး “be used to + -ing” ကို သုံးသည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">4</span>Your English is wonderful. _____ English lessons as a child?</div>
+      <div class="question-text-mm">သင်၏အင်္ဂလိပ်စာက အလွန်ကောင်းပါတယ်။ ကလေးဘဝတုန်းက အင်္ဂလိပ်စာသင်ခန်းစာတွေ _______ သလား။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> Are you used to having — သင်ယူရတာ အသားကျနေပါသလား</div>
+        <div class="choice"><strong>b.</strong> Did you used to have — အရင်က သင်ယူလေ့ရှိခဲ့သလား</div>
+        <div class="choice"><strong>c.</strong> Are you used to have — သင်ယူရန် အသားကျနေပါသလား</div>
+        <div class="choice"><strong>d.</strong> Did you get used to — အသားကျလာခဲ့သလား</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB4', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB4" class="answer-drawer"><div class="answer-label">Answer</div><strong>4. a — Are you used to having</strong><div class="answer-mm">ပေးထားသောရွေးချယ်စရာများအရ “be used to + -ing” ပုံစံကို အသုံးပြုသည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">5</span>You’ve stopped playing the guitar. But why? You _____ it all the time.</div>
+      <div class="question-text-mm">သင် ဂစ်တာတီးတာ ရပ်လိုက်ပြီ။ ဒါပေမယ့် ဘာကြောင့်လဲ။ သင်က အရင်က အချိန်တိုင်း _______ ။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> got used to play — တီးရန် အသားကျလာခဲ့</div>
+        <div class="choice"><strong>b.</strong> used to play — တီးလေ့ရှိခဲ့</div>
+        <div class="choice"><strong>c.</strong> used to playing — တီးခြင်းကို အသားကျခဲ့</div>
+        <div class="choice"><strong>d.</strong> was used to play — တီးရန် အသားကျခဲ့</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB5', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB5" class="answer-drawer"><div class="answer-label">Answer</div><strong>5. b — used to play</strong><div class="answer-mm">ယခင်က လုပ်လေ့ရှိပြီး ယခုမလုပ်တော့သော အလေ့အထဖြစ်သောကြောင့် “used to + infinitive” ဖြစ်သည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">6</span>I’ve joined face-to-face classes only so I don’t know if I _____ online.</div>
+      <div class="question-text-mm">ကျွန်ုပ်သည် မျက်နှာချင်းဆိုင်သင်တန်းများကိုသာ တက်ဖူးသောကြောင့် အွန်လိုင်းတွင် သင်ယူခြင်းနှင့် _______ မသိသေးပါ။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> ’ll ever used to learn — သင်ယူရန် အသားကျမည်</div>
+        <div class="choice"><strong>b.</strong> ’ll get used to learn — သင်ယူရန် အသားကျလာမည်</div>
+        <div class="choice"><strong>c.</strong> ’ll ever get used to learning — သင်ယူခြင်းနှင့် အသားကျလာမည်</div>
+        <div class="choice"><strong>d.</strong> ’ll ever be used to learn — သင်ယူရန် အသားကျနေမည်</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB6', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB6" class="answer-drawer"><div class="answer-label">Answer</div><strong>6. c — ’ll ever get used to learning</strong><div class="answer-mm">အနာဂတ်တွင် အသားကျလာမည့် လုပ်ငန်းစဉ်ဖြစ်သောကြောင့် “get used to + -ing” ဖြစ်သည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">7</span>Even though I liked my new house, I _____ the noisy neighbours.</div>
+      <div class="question-text-mm">အိမ်အသစ်ကို ကြိုက်ပေမယ့် ဆူညံသော အိမ်နီးချင်းများနှင့် _______ ။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> couldn’t be used to — အသားကျမနေနိုင်ခဲ့</div>
+        <div class="choice"><strong>b.</strong> couldn’t get use to — အသားကျလာမရခဲ့</div>
+        <div class="choice"><strong>c.</strong> couldn’t get using to — အသားကျလာမရခဲ့</div>
+        <div class="choice"><strong>d.</strong> couldn’t get used to — အသားကျလာမရခဲ့</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB7', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB7" class="answer-drawer"><div class="answer-label">Answer</div><strong>7. d — couldn’t get used to</strong><div class="answer-mm">“get used to + noun” ပုံစံဖြစ်သောကြောင့် d ကို ရွေးသည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">8</span>I _____ the kitchen but I don’t have time now.</div>
+      <div class="question-text-mm">ကျွန်ုပ်သည် မီးဖိုချောင်ကို _______ သော်လည်း ယခုအခါ အချိန်မရှိတော့ပါ။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> got used to cleaning — သန့်ရှင်းရေးလုပ်ရတာ အသားကျလာခဲ့</div>
+        <div class="choice"><strong>b.</strong> used to cleaning — သန့်ရှင်းရေးလုပ်ခြင်းကို အသားကျခဲ့</div>
+        <div class="choice"><strong>c.</strong> am used to clean — သန့်ရှင်းရေးလုပ်ရန် အသားကျနေ</div>
+        <div class="choice"><strong>d.</strong> used to clean — သန့်ရှင်းရေးလုပ်လေ့ရှိခဲ့</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB8', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB8" class="answer-drawer"><div class="answer-label">Answer</div><strong>8. d — used to clean</strong><div class="answer-mm">ယခင်က လုပ်လေ့ရှိပြီး ယခုအချိန်မရှိတော့သော အလေ့အထကို ဖော်ပြသည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">9</span>_____ watching cartoon series in your childhood?</div>
+      <div class="question-text-mm">သင့်ကလေးဘဝတုန်းက ကာတွန်းစီးရီးများကို _______ သလား။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> Did you use to enjoy — နှစ်သက်လေ့ရှိခဲ့သလား</div>
+        <div class="choice"><strong>b.</strong> Did you get used to enjoying — နှစ်သက်ခြင်းနှင့် အသားကျလာခဲ့သလား</div>
+        <div class="choice"><strong>c.</strong> Were you used to enjoy — နှစ်သက်ရန် အသားကျခဲ့သလား</div>
+        <div class="choice"><strong>d.</strong> Were you used to enjoying — နှစ်သက်ခြင်းနှင့် အသားကျခဲ့သလား</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB9', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB9" class="answer-drawer"><div class="answer-label">Answer</div><strong>9. a — Did you use to enjoy</strong><div class="answer-mm">ကလေးဘဝက အလေ့အထကို မေးသောကြောင့် “Did you use to + infinitive?” ဖြစ်သည်။</div></div>
+    </div>
+
+    <div class="question-card">
+      <div class="question-text"><span class="question-number">10</span>I’m attending a cookery course and I’ll _____ it soon.</div>
+      <div class="question-text-mm">ကျွန်ုပ်သည် ဟင်းချက်သင်တန်းတက်နေပြီး မကြာမီ ထိုသင်တန်းနှင့် _______ လိမ့်မည်။</div>
+      <div class="choice-list">
+        <div class="choice"><strong>a.</strong> used to — အရင်က လုပ်လေ့ရှိ</div>
+        <div class="choice"><strong>b.</strong> get used to — အသားကျလာ</div>
+        <div class="choice"><strong>c.</strong> be used to — အသားကျနေ</div>
+        <div class="choice"><strong>d.</strong> used to be — အရင်က ဖြစ်လေ့ရှိ</div>
+      </div>
+      <button class="btn-reveal" onclick="toggleAnswer('ansGrammarB10', this)">အဖြေကြည့်မည်</button>
+      <div id="ansGrammarB10" class="answer-drawer"><div class="answer-label">Answer</div><strong>10. b — get used to</strong><div class="answer-mm">အနာဂတ်တွင် တဖြည်းဖြည်း အသားကျလာမည့် လုပ်ငန်းစဉ်ဖြစ်သောကြောင့် “get used to” ဖြစ်သည်။</div></div>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section class="content-card next-card">
+    <h2>Comprehension ပြီးဆုံးပါပြီ ✦</h2>
+    <p>Unit 1 Learning Menu ကနေ Grammar, Listening & Speaking, Writing နဲ့ BECA Practice ကို ဆက်လက်ဝင်ရောက်နိုင်ပါတယ်။</p>
+    <a class="next-btn" href="grammar1.html">Grammar သို့ →</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  Grade-12 English Learning Hub • Unit 1 — Comprehension • Idioms • Grammar
+</footer>
+
+<script>
+/* THEME */
+(function(){
+  const root = document.documentElement;
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+
+  function getTheme(){
+    return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+
+  function updateIcon(){
+    const dark = getTheme() === "dark";
+    themeIcon.textContent = dark ? "🌙" : "☀️";
+    themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+  }
+
+  themeToggle.addEventListener("click",function(){
+    const next = getTheme() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme",next);
+    localStorage.setItem("theme",next);
+    localStorage.setItem("siteTheme",next);
+    localStorage.setItem("g12-theme",next);
+    updateIcon();
+  });
+
+  window.addEventListener("storage",function(e){
+    if(["theme","siteTheme","g12-theme"].includes(e.key) && e.newValue){
+      root.setAttribute("data-theme",e.newValue === "dark" ? "dark" : "light");
+      updateIcon();
+    }
+  });
+
+  updateIcon();
+})();
+
+/* SIDE MENU */
+(function(){
+  const trigger = document.getElementById("menuTrigger");
+  const menu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const close = document.getElementById("closeMenu");
+
+  function openMenu(){
+    menu.classList.add("open");
+    overlay.classList.add("open");
+    document.body.style.overflow="hidden";
+  }
+
+  function closeMenu(){
+    menu.classList.remove("open");
+    overlay.classList.remove("open");
+    document.body.style.overflow="";
+  }
+
+  trigger.addEventListener("click",openMenu);
+  close.addEventListener("click",closeMenu);
+  overlay.addEventListener("click",closeMenu);
+
+  document.addEventListener("keydown",function(e){
+    if(e.key==="Escape") closeMenu();
+  });
+
+  menu.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click",closeMenu);
+  });
+})();
+
+/* ANSWER REVEAL */
+function toggleAnswer(id,button){
+  const answer=document.getElementById(id);
+  if(!answer) return;
+
+  const isOpen=answer.classList.toggle("show");
+
+  if(button){
+    button.classList.toggle("active",isOpen);
+    button.textContent=isOpen ? "အဖြေဖျောက်မည်" : "အဖြေကြည့်မည်";
+  }
+}
+</script>
+
+</body>
+</html>

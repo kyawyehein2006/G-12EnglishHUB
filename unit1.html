@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+
+<html lang="my">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Unit 1 - CHASING DREAMS | Grade-12 English Learning Hub</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --primary-slate:#0f172a;
+  --secondary-slate:#1e293b;
+  --accent-blue:#2563eb;
+  --accent-indigo:#4f46e5;
+  --accent-cyan:#06b6d4;
+  --accent-purple:#7c3aed;
+  --accent-green:#16a34a;
+  --bg-page:#f8fafc;
+  --surface-card:#ffffff;
+  --surface-soft:#f1f5f9;
+  --text-primary:#0f172a;
+  --text-secondary:#475569;
+  --text-muted:#64748b;
+  --border-subtle:#e2e8f0;
+  --shadow-sm:0 4px 14px rgba(15,23,42,.06);
+  --shadow-md:0 14px 35px rgba(15,23,42,.10);
+  --shadow-lg:0 25px 60px rgba(15,23,42,.16);
+  --radius-main:18px;
+  --radius-item:13px;
+  --header-bg:rgba(15,23,42,.94);
+  --hero-bg:radial-gradient(circle at 82% 18%,rgba(56,189,248,.28),transparent 24%),radial-gradient(circle at 12% 82%,rgba(168,85,247,.24),transparent 26%),linear-gradient(135deg,#070b17 0%,#111b3b 42%,#1d4ed8 100%);
+  --transition:all .28s ease;
+}
+
+html[data-theme="dark"]{
+  --bg-page:#080d18;
+  --surface-card:#101827;
+  --surface-soft:#172235;
+  --text-primary:#f8fafc;
+  --text-secondary:#cbd5e1;
+  --text-muted:#94a3b8;
+  --border-subtle:#263449;
+  --shadow-sm:0 4px 18px rgba(0,0,0,.22);
+  --shadow-md:0 16px 40px rgba(0,0,0,.30);
+  --shadow-lg:0 28px 70px rgba(0,0,0,.42);
+  --header-bg:rgba(8,13,24,.94);
+  --hero-bg:radial-gradient(circle at 82% 18%,rgba(56,189,248,.18),transparent 24%),radial-gradient(circle at 12% 82%,rgba(168,85,247,.18),transparent 26%),linear-gradient(135deg,#030712 0%,#0f172a 45%,#172554 100%);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Plus Jakarta Sans","Padauk",sans-serif;
+  background:var(--bg-page);
+  color:var(--text-primary);
+  transition:background .3s ease,color .3s ease;
+}
+body,button,a{font-family:"Plus Jakarta Sans","Padauk",sans-serif}
+.burmese,.mm-line,.profile-caption,.profile-title,.section-subtitle,.hero-subtitle,.menu-label,.menu-small{
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+}
+a{text-decoration:none;color:inherit}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--header-bg);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(148,163,184,.16);
+}
+.header-inner{
+  max-width:1180px;
+  margin:auto;
+  min-height:68px;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.logo{
+  color:#fff;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:-.4px;
+}
+.logo span{color:#38bdf8}
+.header-actions{display:flex;align-items:center;gap:9px}
+.header-btn{
+  width:42px;height:42px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:12px;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  cursor:pointer;
+  display:grid;place-items:center;
+  font-size:18px;
+  transition:var(--transition);
+}
+.header-btn:hover{background:rgba(255,255,255,.14);transform:translateY(-1px)}
+.back-btn{
+  padding:10px 14px;
+  width:auto;
+  font-size:13px;
+  font-weight:700;
+}
+.theme-icon{line-height:1}
+
+.hero{
+  background:var(--hero-bg);
+  color:#fff;
+  padding:58px 20px 70px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  filter:blur(2px);
+  opacity:.15;
+  pointer-events:none;
+}
+.hero:before{
+  width:300px;height:300px;
+  background:#38bdf8;
+  right:-100px;top:-120px;
+}
+.hero:after{
+  width:240px;height:240px;
+  background:#a78bfa;
+  left:-100px;bottom:-150px;
+}
+.hero-content{max-width:860px;margin:auto;position:relative;z-index:1}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 12px;
+  border:1px solid rgba(255,255,255,.20);
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.4px;
+}
+.hero h1{
+  margin:17px 0 8px;
+  font-size:clamp(32px,6vw,58px);
+  line-height:1.05;
+  letter-spacing:-1.8px;
+}
+.hero-subtitle{
+  margin:0;
+  color:#dbeafe;
+  font-size:16px;
+  line-height:1.8;
+}
+
+.page-wrap{
+  max-width:900px;
+  margin:-28px auto 60px;
+  padding:0 18px;
+  position:relative;
+  z-index:2;
+}
+
+.content-card{
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-main);
+  box-shadow:var(--shadow-sm);
+  padding:28px;
+  margin-bottom:22px;
+  transition:var(--transition);
+}
+.content-card:hover{box-shadow:var(--shadow-md)}
+
+.section-header{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  margin-bottom:22px;
+}
+.section-icon{
+  width:44px;height:44px;
+  flex:0 0 44px;
+  display:grid;place-items:center;
+  border-radius:13px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  box-shadow:0 8px 20px rgba(37,99,235,.22);
+}
+.section-title{margin:0;font-size:22px;letter-spacing:-.5px}
+.section-subtitle{margin:5px 0 0;color:var(--text-muted);font-size:14px;line-height:1.8}
+
+.profile-container{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  padding:17px;
+  margin-bottom:23px;
+  background:var(--surface-soft);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-item);
+}
+.profile-image-wrapper{flex:0 0 105px}
+.profile-img{
+  width:105px;height:105px;
+  display:block;
+  object-fit:cover;
+  border-radius:17px;
+  border:3px solid var(--surface-card);
+  box-shadow:var(--shadow-sm);
+}
+.profile-caption{font-size:14px;color:var(--text-muted);margin-top:5px}
+.profile-name{font-size:20px;font-weight:800;margin-bottom:3px}
+.profile-title{font-size:13px;color:var(--accent-blue);font-weight:700}
+
+.reading-stream{display:flex;flex-direction:column;gap:12px}
+.sentence-pair{
+  padding:15px 17px;
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-item);
+  background:var(--surface-card);
+}
+.en-line{
+  font-size:15px;
+  line-height:1.85;
+  font-weight:600;
+}
+.mm-line{
+  margin-top:6px;
+  color:var(--text-secondary);
+  font-size:14px;
+  line-height:1.9;
+}
+.gap-highlight{
+  padding:16px;
+  border-radius:var(--radius-item);
+  background:linear-gradient(135deg,rgba(37,99,235,.09),rgba(124,58,237,.07));
+  border:1px dashed rgba(37,99,235,.35);
+}
+.gap-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  border-radius:999px;
+  background:rgba(37,99,235,.12);
+  color:var(--accent-blue);
+  font-size:11px;
+  font-weight:800;
+}
+
+.vocab-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.vocab-card{
+  padding:16px;
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-item);
+  background:var(--surface-card);
+  transition:var(--transition);
+}
+.vocab-card:hover{transform:translateY(-2px);border-color:rgba(37,99,235,.35)}
+.vocab-word{font-size:15px;font-weight:800;color:var(--accent-blue)}
+.vocab-en{margin-top:5px;font-size:13px;line-height:1.65;color:var(--text-secondary)}
+.vocab-mm{margin-top:3px;font-family:"Padauk";font-size:13px;line-height:1.75;color:var(--text-muted)}
+
+.question-card{
+  padding:17px;
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-item);
+  background:var(--surface-soft);
+  margin-top:15px;
+}
+.question-text{font-weight:700;line-height:1.8}
+.btn-reveal{
+  margin-top:12px;
+  border:0;
+  border-radius:10px;
+  padding:9px 13px;
+  background:var(--primary-slate);
+  color:#fff;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:700;
+  transition:var(--transition);
+}
+.btn-reveal:hover{background:var(--accent-blue)}
+.answer-drawer{
+  display:none;
+  margin-top:12px;
+  padding:13px 15px;
+  border-radius:10px;
+  background:var(--surface-card);
+  border-left:3px solid var(--accent-green);
+}
+.answer-drawer.show{display:block}
+.answer-en{font-size:13px;font-weight:700;line-height:1.75}
+.answer-mm{margin-top:4px;font-family:"Padauk";font-size:13px;line-height:1.8;color:var(--text-secondary)}
+
+.next-card{
+  background:linear-gradient(135deg,#0f172a,#1e3a8a 55%,#2563eb);
+  color:#fff;
+  border:0;
+  overflow:hidden;
+  position:relative;
+}
+.next-card h2{margin:0 0 7px;font-size:23px}
+.next-card p{margin:0;color:#dbeafe;font-family:"Padauk";line-height:1.8}
+.next-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  padding:11px 16px;
+  border-radius:11px;
+  background:#fff;
+  color:#0f172a;
+  font-size:13px;
+  font-weight:800;
+  transition:var(--transition);
+}
+.next-btn:hover{transform:translateY(-2px)}
+
+.footer{
+  max-width:900px;
+  margin:0 auto;
+  padding:0 18px 35px;
+  text-align:center;
+  color:var(--text-muted);
+  font-family:"Padauk";
+  font-size:13px;
+}
+
+/* Side menu */
+.menu-trigger{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:1100;
+  width:52px;height:52px;
+  border:0;
+  border-radius:16px;
+  cursor:pointer;
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  box-shadow:0 12px 30px rgba(37,99,235,.32);
+  font-size:21px;
+  transition:var(--transition);
+}
+.menu-trigger:hover{transform:translateY(-50%) scale(1.05)}
+
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(2,6,23,.52);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  z-index:1200;
+  opacity:0;
+  visibility:hidden;
+  transition:.3s ease;
+}
+.menu-overlay.open{opacity:1;visibility:visible}
+
+.side-menu{
+  position:fixed;
+  top:0;
+  right:0;
+  width:min(380px,92vw);
+  height:100dvh;
+  z-index:1300;
+  padding:24px 18px;
+  background:var(--surface-card);
+  border-left:1px solid var(--border-subtle);
+  box-shadow:-20px 0 60px rgba(0,0,0,.18);
+  transform:translateX(105%);
+  transition:transform .34s cubic-bezier(.2,.8,.2,1);
+  overflow-y:auto;
+}
+.side-menu.open{transform:translateX(0)}
+.menu-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:2px 4px 18px;
+  border-bottom:1px solid var(--border-subtle);
+}
+.menu-eyebrow{
+  color:var(--accent-blue);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.1px;
+}
+.menu-title{margin:3px 0 0;font-size:21px;font-weight:800}
+.close-menu{
+  width:40px;height:40px;
+  border:1px solid var(--border-subtle);
+  border-radius:11px;
+  background:var(--surface-soft);
+  color:var(--text-primary);
+  cursor:pointer;
+  font-size:19px;
+}
+.menu-section{margin-top:19px}
+.menu-section-label{
+  margin:0 5px 9px;
+  color:var(--text-muted);
+  font-family:"Padauk";
+  font-size:12px;
+  font-weight:700;
+}
+.menu-list{display:flex;flex-direction:column;gap:7px}
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 12px;
+  border:1px solid transparent;
+  border-radius:13px;
+  color:var(--text-primary);
+  transition:var(--transition);
+}
+.menu-item:hover{
+  background:var(--surface-soft);
+  border-color:var(--border-subtle);
+  transform:translateX(-2px);
+}
+.menu-item.active{
+  background:linear-gradient(135deg,rgba(37,99,235,.11),rgba(79,70,229,.09));
+  border-color:rgba(37,99,235,.22);
+}
+.menu-icon{
+  width:39px;height:39px;
+  flex:0 0 39px;
+  display:grid;place-items:center;
+  border-radius:11px;
+  background:var(--surface-soft);
+  font-size:17px;
+}
+.menu-item.active .menu-icon{
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  color:#fff;
+}
+.menu-label{font-size:14px;font-weight:700}
+.menu-small{display:block;color:var(--text-muted);font-size:11px;margin-top:1px}
+.menu-arrow{margin-left:auto;color:var(--text-muted);font-size:16px}
+.premium-note{
+  margin-top:20px;
+  padding:15px;
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(124,58,237,.11),rgba(37,99,235,.09));
+  border:1px solid rgba(124,58,237,.20);
+}
+.premium-note strong{font-size:13px}
+.premium-note p{
+  margin:5px 0 0;
+  color:var(--text-secondary);
+  font-family:"Padauk";
+  font-size:12px;
+  line-height:1.8;
+}
+
+@media(max-width:700px){
+  .header-inner{min-height:62px;padding:0 14px}
+  .logo{font-size:15px}
+  .back-btn{display:none}
+  .hero{padding:43px 18px 58px}
+  .page-wrap{padding:0 12px;margin-top:-22px}
+  .content-card{padding:20px;border-radius:15px}
+  .profile-container{align-items:flex-start}
+  .profile-image-wrapper{flex-basis:82px}
+  .profile-img{width:82px;height:82px}
+  .profile-name{font-size:17px}
+  .vocab-grid{grid-template-columns:1fr}
+  .menu-trigger{
+    width:48px;height:48px;
+    right:14px;
+    bottom:18px;
+    top:auto;
+    transform:none;
+    border-radius:15px;
+  }
+  .menu-trigger:hover{transform:scale(1.04)}
+}
+@media(max-width:430px){
+  .content-card{padding:16px}
+  .hero h1{font-size:35px}
+  .section-title{font-size:19px}
+  .profile-container{gap:13px}
+}
+
+.hero{min-height:360px;display:flex;align-items:center;padding:70px 20px 92px}
+.hero:before{width:420px;height:420px;right:-130px;top:-180px;background:#38bdf8;opacity:.13;box-shadow:0 0 100px rgba(56,189,248,.28)}
+.hero:after{width:320px;height:320px;left:-140px;bottom:-210px;background:#8b5cf6;opacity:.12;box-shadow:0 0 100px rgba(139,92,246,.24)}
+.hero-content{max-width:1050px;width:100%;text-align:left}
+.hero-kicker{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.hero h1{font-size:clamp(42px,8vw,78px);text-transform:uppercase;letter-spacing:-3px;text-shadow:0 12px 45px rgba(0,0,0,.25)}
+.hero-subtitle{max-width:720px;font-size:17px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero-pill{padding:8px 12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:999px;font-size:12px;font-weight:700;backdrop-filter:blur(8px)}
+.dream-orbit{position:absolute;right:8%;top:50%;width:250px;height:250px;border:1px solid rgba(255,255,255,.12);border-radius:50%;transform:translateY(-50%);box-shadow:0 0 80px rgba(56,189,248,.08)}
+.dream-orbit:before,.dream-orbit:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 18px rgba(255,255,255,.8)}
+.dream-orbit:before{width:7px;height:7px;right:20px;top:40px}.dream-orbit:after{width:5px;height:5px;left:35px;bottom:45px}
+.dream-core{position:absolute;inset:58px;border-radius:50%;display:grid;place-items:center;font-size:72px;background:radial-gradient(circle at 35% 30%,#fff7ed,#fbbf24 38%,#f97316 72%,#7c2d12);box-shadow:0 0 70px rgba(251,191,36,.35);animation:floatDream 5s ease-in-out infinite}
+@keyframes floatDream{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.sentence-pair,.gap-highlight{position:relative;overflow:hidden}
+.sentence-pair:before,.gap-highlight:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(#2563eb,#7c3aed);opacity:.65}
+.line-vocab{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px;padding-top:10px;border-top:1px dashed var(--border-subtle)}
+.line-vocab .vtag{font-size:11px;font-weight:800;padding:5px 8px;border-radius:999px;background:var(--surface-soft);color:var(--accent-blue);border:1px solid var(--border-subtle)}
+.line-vocab .vtag b{color:var(--text-primary)}
+.reading-stream{gap:14px}
+@media(max-width:850px){.dream-orbit{opacity:.28;right:-70px}.hero-content{max-width:760px}}
+@media(max-width:700px){.hero{min-height:320px;padding:50px 18px 72px}.hero h1{letter-spacing:-2px}.dream-orbit{width:190px;height:190px;right:-75px}.dream-core{inset:45px;font-size:55px}.hero-subtitle{font-size:15px}}
+</style>
+<script>
+/* -------------------------------------------------------
+   GLOBAL THEME SYNC
+   This page reads the same "theme" key used by the hub.
+   Light = light, Dark = dark.
+-------------------------------------------------------- */
+(function(){
+  const savedTheme = localStorage.getItem("theme") ||
+                     localStorage.getItem("siteTheme") ||
+                     localStorage.getItem("g12-theme") ||
+                     "light";
+
+  document.documentElement.setAttribute(
+    "data-theme",
+    savedTheme === "dark" ? "dark" : "light"
+  );
+})();
+</script>
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<a class="logo" href="index.html">Grade-12 <span>English</span></a>
+<div class="header-actions">
+<a class="header-btn back-btn" href="index.html">← ပင်မစာမျက်နှာ</a>
+<button aria-label="Toggle theme" class="header-btn" id="themeToggle">
+<span class="theme-icon" id="themeIcon">☀️</span>
+</button>
+</div>
+</div>
+</header>
+<section class="hero"><div class="hero-content"><div class="hero-kicker"><span class="badge">UNIT 1 • READING PASSAGE</span></div><h1>CHASING DREAMS</h1><p class="hero-subtitle">Successful Entrepreneurs • Turning Ideas into Action • Learning to Pursue Your Dreams</p><div class="hero-meta"><span class="hero-pill">Dreams</span><span class="hero-pill">Entrepreneurship</span><span class="hero-pill">Innovation</span><span class="hero-pill">Courage</span><span class="hero-pill">Perseverance</span></div></div><div aria-hidden="true" class="dream-orbit"><div class="dream-core">🚀</div></div></section>
+<button aria-label="Open learning menu" class="menu-trigger" id="menuTrigger">☰</button>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside aria-label="Unit 1 Learning Menu" class="side-menu" id="sideMenu">
+<div class="menu-top">
+<div>
+<div class="menu-eyebrow">UNIT 1 LEARNING HUB</div>
+<div class="menu-title">Learning Menu</div>
+</div>
+<button aria-label="Close menu" class="close-menu" id="closeMenu">×</button>
+</div>
+<div class="menu-section">
+<div class="menu-section-label">UNIT 1 LESSONS</div>
+<nav class="menu-list">
+<a class="menu-item" href="meaning1.html">
+<span class="menu-icon">Aa</span>
+<span>
+<span class="menu-label">Meaning</span>
+<span class="menu-small">Vocabulary &amp; meanings</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+<a class="menu-item active" href="unit1.html">
+<span class="menu-icon">📖</span>
+<span>
+<span class="menu-label">Reading Paragraph</span>
+<span class="menu-small">Chasing Dreams</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+<a class="menu-item" href="comprehension1.html">
+<span class="menu-icon">✓</span>
+<span>
+<span class="menu-label">Comprehension</span>
+<span class="menu-small">Reading questions</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+<a class="menu-item" href="grammar1.html">
+<span class="menu-icon">G</span>
+<span>
+<span class="menu-label">Additional Grammar Exercises</span>
+<span class="menu-small">Used to • Be used to • Get used to</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+<a class="menu-item" href="listening-speaking1.html">
+<span class="menu-icon">🎧</span>
+<span>
+<span class="menu-label">Listening &amp; Speaking</span>
+<span class="menu-small">Interview practice</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+<a class="menu-item" href="writing1.html">
+<span class="menu-icon">✎</span>
+<span>
+<span class="menu-label">Writing</span>
+<span class="menu-small">Descriptive essay</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+<a class="menu-item" href="beca1.html">
+<span class="menu-icon">◆</span>
+<span>
+<span class="menu-label">BECA Practice</span>
+<span class="menu-small">နမူနာမေးခွန်းများ လေ့ကျင့်ရန်</span>
+</span>
+<span class="menu-arrow">›</span>
+</a>
+</nav>
+</div>
+<div class="premium-note">
+<strong>✦ Unit Learning Collection</strong>
+<p>Unit 1 ရဲ့ Reading, Grammar, Speaking, Writing နဲ့ BECA Practice တွေကို တစ်နေရာတည်းကနေ အလွယ်တကူ ဝင်ရောက်လေ့လာနိုင်ပါတယ်။</p>
+</div>
+</aside>
+<main class="page-wrap">
+<!-- READING INTRO -->
+<section class="content-card study-guide"><div class="section-header"><div class="section-icon">✦</div><div><h2 class="section-title">How to Study This Unit</h2><p class="section-subtitle">English → Myanmar → Vocabulary — line by line</p></div></div><div class="profile-container"><div><div class="profile-name">Read • Understand • Remember</div><div class="profile-caption">
+ပုံများကိုနှိပ်ပြီး သက်ဆိုင်ရာဗဟုသုတများကိုလည်း လေ့လာဖတ်ရှုနိုင်ပါသည်</div></div></div></section><section class="content-card" id="reading">
+<div class="section-header">
+<div class="section-icon">📖</div>
+<div>
+<h2 class="section-title">Read the passage carefully.</h2>
+<p class="section-subtitle">Reading about successful entrepreneurs</p>
+</div>
+</div>
+<audio controls preload="metadata"><source src="1.m4a" type="audio/mpeg"></audio>
+</div>
+<div class="sentence-pair"><div class="en-line">At which age do you think the best time to start a business is – 25 or 52?
+</div><div class="mm-line">စီးပွားရေးလုပ်ငန်းတစ်ခု စတင်ရန် အကောင်းဆုံးအသက်အရွယ်မှာ မည်သည့်အသက်အရွယ်ဖြစ်မည်ဟု သင်ထင်သနည်း – ၂၅ နှစ် လား သို့မဟုတ် ၅၂ နှစ် လား။</div><div class="line-vocab"><span class="vtag"><b>Entrepreneurs</b> — စီးပွားရေးလုပ်ငန်းရှင်</span><span class="vtag"><b>start a business</b> — စီးပွားရေးလုပ်ငန်း စတင်သည်</span><span class="vtag"><b>best time</b> — အကောင်းဆုံးအချိန်</span></div></div>
+<div class="sentence-pair"><div class="en-line">You might think that most successful entrepreneurs are older people and only older people have a greater advantage of possessing much experience in business.
+</div><div class="mm-line">အောင်မြင်သော စီးပွားရေးလုပ်ငန်းရှင် အများစုမှာ အသက်ကြီးသူများဖြစ်ပြီး၊ ထိုအသက်ကြီးသူများသာ စီးပွားရေးလုပ်ငန်း အတွေ့အကြုံများစွာ ပိုင်ဆိုင်ထားသည့် အားသာချက်ရှိသည်ဟု သင် ထင်ကောင်းထင်ပါလိမ့်မည်။
+ </div><div class="line-vocab"> <span class="vtag"><b>successful</b> — အောင်မြင်သော </span> <span class="vtag"><b>advantage</b> — အားသာချက်</span><span class="vtag"><b>experience</b> — အတွေ့အကြုံ</span>
+</div>
+</div>
+<div class="gap-highlight missing-opening"><span class="gap-tag">GAP 1</span><div class="en-line">In reality, many successful entrepreneurs started their businesses when they were quite young.</div><div class="mm-line">လက်တွေ့တွင်မူ၊ အောင်မြင်သော စီးပွားရေးလုပ်ငန်းရှင် အများစုသည် ၎င်းတို့ အသက်ငယ်ရွယ်စဉ် ကတည်းက စီးပွားရေးလုပ်ငန်းများကို စတင်ခဲ့ကြခြင်း ဖြစ်ပါသည်။</div></div>
+<div class="sentence-pair missing-opening"><div class="en-line">The reason is simple – young people have unique characteristics in many aspects; they are highly motivated, capable of thinking outside the box, and courageous to go out on a limb.</div><div class="mm-line">အကြောင်းရင်းမှာ ရိုးရှင်းပါသည် - လူငယ်များသည် ကဏ္ဍအသီးသီးတွင် ထူးခြားသော အရည်အသွေးများ ရှိကြသည်၊ ၎င်းတို့သည် တက်ကြွသော စိတ်ထက်သန်မှုရှိကြသည်၊ ပုံစံခွက်ပြင်ပမှ ဆန်းသစ်စွာ တွေးခေါ်နိုင်ကြသည်၊စွန့်စားလုပ်ကိုင်ရန် ရဲရင့်ကြသည်။</div>
+<div class="line-vocab"> <span class="vtag"><b>think outside the box</b> — ပုံမှန်နည်းလမ်းထက် ကျော်လွန်၍ ဖန်တီးစဉ်းစားသည် </span> <span class="vtag"><b>go out on a limb</b> — အန္တရာယ်ရှိနိုင်သည့် ဆုံးဖြတ်ချက်ကို စွန့်စားလုပ်ဆောင်သည်</span>
+</div>
+</div>
+<div class="sentence-pair missing-opening"><div class="en-line">Most entrepreneurs achieve success not because they have a great deal of business experience but because they are creative, imaginative, and adventurous.</div><div class="mm-line">စီးပွားရေးလုပ်ငန်းရှင် အများစု အောင်မြင်မှုရရှိခြင်းမှာ စီးပွားရေးအတွေ့အကြုံများစွာ ရှိသောကြောင့် မဟုတ်ဘဲ၊ တီထွင်ဖန်တီးနိုင်စွမ်းရှိခြင်း၊ စိတ်ကူးဉာဏ် ကွန့်မြူးနိုင်ခြင်းနှင့် စွန့်စားလိုစိတ် ရှိကြသောကြောင့် ဖြစ်သည်။</div><div class="line-vocab"> <span class="vtag"><b>business experience</b> — စီးပွားရေးအတွေ့အကြုံ </span> <span class="vtag"><b>creative</b> — တီထွင်ဖန်တီးနိုင်သော</span><span class="vtag"><b>imaginative</b> — စိတ်ကူးဉာဏ်ကောင်းသော</span>
+<span class="vtag"><b>adventurous</b> — စွန့်စားလိုစိတ်ရှိသော</span>
+</div>
+</div>
+<div class="sentence-pair missing-opening"><div class="en-line">Statistics shows that 48 percent of the business firms were founded by older people whereas 64 percent of the successful thriving companies were headed by entrepreneurs in the 45-and-up group.</div><div class="mm-line">ကိန်းဂဏန်းအချက်အလက်များအရ စီးပွားရေးကုမ္ပဏီ ၄၈ ရာခိုင်နှုန်းကို အသက်ကြီးသူများက စတင်တည်ထောင်ခဲ့ကြသော်လည်း၊ အောင်မြင်ဖြစ်ထွန်းနေသော ကုမ္ပဏီများ၏ ၆၄ ရာခိုင်နှုန်းကိုမူ အသက် ၄၅ နှစ်နှင့်အထက် စီးပွားရေးလုပ်ငန်းရှင်များက ဦးဆောင်လျက်ရှိကြသည်။</div><div class="line-vocab"><span class="vtag"><b>statistics</b>— ကိန်းဂဏန်းအချက်အလက်များ</span> <span class="vtag"><b>founded</b> — တည်ထောင်ခဲ့သည်</span><span class="vtag"><b>thriving</b> — အောင်မြင်စွာ တိုးတက်နေသော</span></div></div><div class="sentence-pair missing-opening"><div class="en-line">The no-holds-barred kind of companies like Microsoft, Amazon, Google, Twitter, or Facebook were founded by entrepreneurs younger than 35.</div><div class="mm-line">Microsoft, Amazon, Google, Twitter သို့မဟုတ် Facebook ကဲ့သို့သော ကန့်သတ်ချက်မဲ့ ဆန်းသစ်တီထွင်သည့် ကုမ္ပဏီများကိုမူ အသက် ၃၅ နှစ်အောက် လူငယ်လုပ်ငန်းရှင်များက တည်ထောင်ခဲ့ကြခြင်း ဖြစ်သည်။</div><div class="line-vocab"> <span class="vtag"><b>no-holds-barred</b> — ကန့်သတ်ချက်မရှိသော</span> </div></div>
+<div class="sentence-pair missing-opening"><div class="en-line">Here is a glimpse of some successful entrepreneurs, when they started their careers, and how they achieved success in business.</div><div class="mm-line">ဒီနေရာတွင် အောင်မြင်သော စီးပွားရေးလုပ်ငန်းရှင်အချို့၊ ၎င်းတို့၏ သက်မွေးဝမ်းကျောင်း လုပ်ငန်းများကို မည်သည့်အချိန်တွင် စတင်ခဲ့ကြပုံနှင့် စီးပွားရေးတွင် အောင်မြင်မှု မည်သို့ရရှိခဲ့ကြပုံအကျဉ်းချုပ် ဖြစ်ပါသည်။</div><div class="line-vocab"><span class="vtag"><b>glimpse</b> — ခဏတာ မြင်တွေ့ခြင်း/အကျဉ်းချုပ်</span><span class="vtag"><b>careers</b> — သက်မွေးဝမ်းကျောင်းလုပ်ငန်းများ</span><span class="vtag"><b>achieve success</b> — အောင်မြင်မှုရရှိသည်</span></div></div>
+</div>
+</section>
+<!-- VOCAB 1 -->
+<section class="content-card">
+<div class="section-header">
+<div class="section-icon">Aa</div>
+<div>
+<h2 class="section-title">Vocabulary</h2>
+<p class="section-subtitle">Important words &amp; idioms</p>
+</div>
+</div>
+<div class="vocab-grid">
+<div class="vocab-card"><div class="vocab-word">Entrepreneur</div><div class="vocab-en">a person who starts and runs a business</div><div class="vocab-mm">စီးပွားရေးလုပ်ငန်းရှင်</div></div>
+<div class="vocab-card"><div class="vocab-word">Think outside the box</div><div class="vocab-en">to think creatively in a different way</div><div class="vocab-mm">ပုံမှန်နည်းလမ်းထက် ကျော်လွန်၍ ဖန်တီးစဉ်းစားသည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Go out on a limb</div><div class="vocab-en">to take a risk</div><div class="vocab-mm">အန္တရာယ်ရှိနိုင်သည့် ဆုံးဖြတ်ချက်ကို စွန့်စားလုပ်ဆောင်သည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Thriving</div><div class="vocab-en">growing or developing successfully</div><div class="vocab-mm">အောင်မြင်စွာ တိုးတက်နေသော</div></div>
+<div class="vocab-card"><div class="vocab-word">No-holds-barred</div><div class="vocab-en">without restrictions or limitations</div><div class="vocab-mm">ကန့်သတ်ချက်မရှိသော</div></div>
+<div class="vocab-card"><div class="vocab-word">Glimpse</div><div class="vocab-en">a quick or brief look</div><div class="vocab-mm">ခဏတာ မြင်တွေ့ခြင်း</div></div>
+</div>
+</section>
+<!-- ELON MUSK -->
+<section class="content-card">
+<div class="profile-container">
+<div class="profile-image-wrapper">
+<a href="elon_musk.html">
+<img alt="Elon Musk" class="profile-img" src="Images/Elon_Musk.jpg"/>
+</a>
+</div>
+<div>
+<div class="profile-name">Elon Musk</div>
+<div class="profile-title">CEO of Tesla, SpaceX &amp; Twitter</div>
+<div class="profile-caption">American entrepreneur<br>ပုံကိုနှိပ်ပြီးဖတ်ရှုပါ</b></div>
+</div>
+</div>
+<div class="reading-stream">
+<div class="sentence-pair">
+<div class="en-line">Elon Musk, an American entrepreneur, is now one of the richest persons in the world and the CEO or owner of multiple companies including Tesla, SpaceX, and Twitter.</div>
+<div class="mm-line">Elon Musk သည် အမေရိကန် စီးပွားရေးလုပ်ငန်းရှင်တစ်ဦးဖြစ်ပြီး ကမ္ဘာပေါ်ရှိ အချမ်းသာဆုံးသူများထဲမှ တစ်ဦးဖြစ်သကဲ့သို့ Tesla, SpaceX နှင့် Twitter အပါအဝင် ကုမ္ပဏီများစွာ၏ CEO သို့မဟုတ် ပိုင်ရှင်လည်း ဖြစ်သည်။</div>
+<div class="line-vocab"><span class="vtag"><b>CEO</b> — (Chief Executive Officer)အမှုဆောင်အရာရှိချုပ်</span><span class="vtag"><b>multiple</b> — များစွာ</span></div></div>
+<div class="sentence-pair">
+<div class="en-line">He was born in South Africa in 1971.</div>
+<div class="mm-line">သူသည် ၁၉၇၁ ခုနှစ်တွင် တောင်အာဖရိက၌ မွေးဖွားခဲ့သည်။</div>
+</div>
+<div class="gap-highlight">
+<span class="gap-tag">GAP 2</span>
+<div class="en-line">When do you think he started his business?</div>
+<div class="mm-line">မည်သည့်အချိန်တွင် သူ၏ စီးပွားရေးလုပ်ငန်းကို စတင်ခဲ့သည်ဟု သင်ထင်သနည်း။</div></div>
+<div class="sentence-pair"><div class="en-line">Musk was only 12 when he created a video game and sold it to a computer magazine.</div><div class="mm-line">Musk သည် အသက် ၁၂ နှစ်သာရှိစဉ် video game တစ်ခုကို ဖန်တီးပြီး computer magazine တစ်ခုသို့ ရောင်းချခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>created</b> — ဖန်တီးခဲ့သည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">He cofounded PayPal, an electronic payment firm in 1999.</div><div class="mm-line">သူသည် ၁၉၉၉ ခုနှစ်တွင် အီလက်ထရောနစ်ငွေပေးချေမှုလုပ်ငန်း PayPal ကို ပူးတွဲတည်ထောင်ခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Cofound</b> — ပူးတွဲတည်ထောင်သည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">In 2002, he founded SpaceX, an American spacecraft manufacturer, launch service provider, and satellite communications company.</div><div class="mm-line">၂၀၀၂ ခုနှစ်တွင် အမေရိကန် spacecraft ထုတ်လုပ်သူ၊ launch service provider နှင့် ဂြိုဟ်တုဆက်သွယ်ရေးကုမ္ပဏီ ဖြစ်သော SpaceX ကို တည်ထောင်ခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Spacecraft</b> — အာကာသယာဉ်</span></div></div>
+<div class="sentence-pair"><div class="en-line">He also operated Starlink, a satellite internet constellation that provides satellite Internet access coverage to over 60 countries.</div><div class="mm-line">သူသည် နိုင်ငံပေါင်း ၆၀ ကျော်သို့ satellite Internet access coverage ပေးသော satellite internet constellation ဖြစ်သည့် Starlink ကိုလည်း လုပ်ကိုင်ခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Constellation</b> — ဂြိုဟ်တုအစု / ကြယ်စု</span></div></div>
+<div class="sentence-pair"><div class="en-line">This technology enables users to access the Internet regardless of their geographical location.</div><div class="mm-line">ဤနည်းပညာသည် အသုံးပြုသူများ၏ ပထဝီဝင်တည်နေရာ မည်သို့ပင်ဖြစ်စေ Internet အသုံးပြုနိုင်စေသည်။</div><div class="line-vocab"><span class="vtag"><b>Regardless of</b> — မည်သို့ပင်ဖြစ်စေ</span></div></div>
+<div class="sentence-pair"><div class="en-line">In 2004, he became one of the first significant investors as well as the chief executive officer of Tesla, the electric car manufacturer.</div><div class="mm-line">၂၀၀၄ ခုနှစ်တွင် လျှပ်စစ်ကားထုတ်လုပ်သည့် Tesla ၏ အရေးပါသော ရင်းနှီးမြှုပ်နှံသူများထဲမှ တစ်ဦးဖြစ်လာပြီး CEO လည်း ဖြစ်လာခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Significant</b> — အရေးပါသော</span></div></div>
+<div class="sentence-pair"><div class="en-line">In 2022, Musk acquired Twitter and changed its logo from the blue bird to “X”.</div><div class="mm-line">၂၀၂၂ ခုနှစ်တွင် Musk သည် Twitter ကို ဝယ်ယူခဲ့ပြီး ၎င်း၏ logo ကို အပြာရောင်ငှက်မှ “X” သို့ ပြောင်းလဲခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Acquire</b> — ရယူသည် / ဝယ်ယူရရှိသည်</span></div></div>
+</div>
+<div class="vocab-grid" style="margin-top:20px">
+<div class="vocab-card"><div class="vocab-word">Cofound</div><div class="vocab-en">to establish a business together with another person</div><div class="vocab-mm">ပူးတွဲတည်ထောင်သည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Spacecraft</div><div class="vocab-en">a vehicle designed for travel in space</div><div class="vocab-mm">အာကာသယာဉ်</div></div>
+<div class="vocab-card"><div class="vocab-word">Constellation</div><div class="vocab-en">a group of satellites or stars</div><div class="vocab-mm">ဂြိုဟ်တုအစု / ကြယ်စု</div></div>
+<div class="vocab-card"><div class="vocab-word">Regardless of</div><div class="vocab-en">without being affected by something</div><div class="vocab-mm">မည်သို့ပင်ဖြစ်စေ</div></div>
+<div class="vocab-card"><div class="vocab-word">Significant</div><div class="vocab-en">important or noticeable</div><div class="vocab-mm">အရေးပါသော</div></div>
+<div class="vocab-card"><div class="vocab-word">Acquire</div><div class="vocab-en">to obtain or get something</div><div class="vocab-mm">ရယူသည် / ဝယ်ယူရရှိသည်</div></div>
+</div>
+</section>
+<!-- STEVE JOBS -->
+<section class="content-card">
+<div class="profile-container">
+<div class="profile-image-wrapper">
+<a href="steve_jobs.html">
+<img alt="Steve Jobs" class="profile-img" src="images/steve_jobs.jpg"/>
+</a>
+</div>
+<div>
+<div class="profile-name">Steve Jobs</div>
+<div class="profile-title">Cofounder of Apple Inc. &amp; NeXT Inc.</div>
+<div class="profile-caption">American businessman</div>
+</div>
+</div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">Steve Jobs, an American businessman who founded Apple Inc. and NeXT Inc., was born in San Francisco, California, U.S. in 1955.</div><div class="mm-line">Apple Inc. နှင့် NeXT Inc. ကို တည်ထောင်ခဲ့သော အမေရိကန် စီးပွားရေးသမား Steve Jobs သည် ၁၉၅၅ ခုနှစ်တွင် အမေရိကန်နိုင်ငံ၊ California ပြည်နယ်၊ San Francisco တွင် မွေးဖွားခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>businessman</b> — စီးပွားရေးသမား</span><span class="vtag"><b>founded</b> — တည်ထောင်ခဲ့သည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">Jobs was only 19 when he started his invention – the Apple I, which he called the logic board.</div><div class="mm-line">Jobs သည် သူက logic board ဟုခေါ်သော Apple I ကို တီထွင်စတင်စဉ် အသက် ၁၉ နှစ်သာရှိသေးသည်။</div><div class="line-vocab"><span class="vtag"><b>Invention</b> — တီထွင်မှု</span></div></div>
+<div class="gap-highlight">
+<span class="gap-tag">GAP 3</span>
+<div class="en-line">You might be amazed to know where and how he invented it.</div>
+<div class="mm-line">သူသည် ထိုအရာကို မည်သည့်နေရာတွင် မည်သို့ တီထွင်ခဲ့သည်ကို သိရှိပါက သင် အံ့အားသင့်သွားနိုင်ပါသည်။</div>
+<div class="line-vocab"><span class="vtag"><b>Invent</b> — တီထွင်သည်</span><span class="vtag"><b>amaze</b> — အံ့အားသင့်သည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">Jobs and his former high school friend Stephen Wozniak designed it in his family garage with the money obtained by selling Jobs’s Volkswagen minibus and Wozniak’s programmable calculator.</div><div class="mm-line">Jobs နှင့် သူ၏အထက်တန်းကျောင်းသူငယ်ချင်းဟောင်း Stephen Wozniak တို့သည် Jobs ၏ Volkswagen minibus နှင့် Wozniak ၏ programmable calculator ကို ရောင်းချ၍ ရရှိသောငွေဖြင့် မိသားစုကားဂိုဒေါင်တွင် ထိုအရာကို ဒီဇိုင်းဆွဲခဲ့ကြသည်။</div><div class="line-vocab"><span class="vtag"><b>Garage</b> — ကားဂိုဒေါင်</span><span class="vtag"><b>Programmable</b> — ပရိုဂရမ်ရေးသားထိန်းချုပ်နိုင်သော</span></div></div>
+<div class="sentence-pair"><div class="en-line">The personal computer, the Apple, appealed to a broad audience and gradually, Jobs became one of the first entrepreneurs.</div><div class="mm-line">Apple personal computer သည် လူအများအပြားကို ဆွဲဆောင်နိုင်ခဲ့ပြီး တဖြည်းဖြည်း Jobs သည် ပထမဆုံးသော စီးပွားရေးလုပ်ငန်းရှင်များထဲမှ တစ်ဦးဖြစ်လာခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>personal</b> — တစ်ကိုယ်ရေသုံး</span><span class="vtag"><b>appeal to</b> — ဆွဲဆောင်သည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">With Jobs’s encouragement, Wozniak designed an improved model, the Apple II, complete with a keyboard, and they arranged to have a sleek, molded plastic case manufactured to enclose the unit.</div><div class="mm-line">Jobs ၏ အားပေးမှုဖြင့် Wozniak သည် keyboard ပါဝင်သော ပိုမိုကောင်းမွန်သည့် Apple II model ကို ဒီဇိုင်းဆွဲခဲ့ပြီး unit ကို ဖုံးအုပ်ရန် sleek molded plastic case ကိုလည်း ထုတ်လုပ်စေခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Sleek</b> — ချောမွေ့လှပသော</span><span class="vtag"><b>Enclose</b> — ဖုံးအုပ်သည် / ဝန်းရံသည်</span></div></div>
+</div>
+<div class="vocab-grid" style="margin-top:20px">
+<div class="vocab-card"><div class="vocab-word">Invention</div><div class="vocab-en">something newly created</div><div class="vocab-mm">တီထွင်မှု</div></div>
+<div class="vocab-card"><div class="vocab-word">Garage</div><div class="vocab-en">a building or space for vehicles</div><div class="vocab-mm">ကားဂိုဒေါင်</div></div>
+<div class="vocab-card"><div class="vocab-word">Programmable</div><div class="vocab-en">able to be controlled by a program</div><div class="vocab-mm">ပရိုဂရမ်ရေးသားထိန်းချုပ်နိုင်သော</div></div>
+<div class="vocab-card"><div class="vocab-word">Appeal to</div><div class="vocab-en">to attract or interest someone</div><div class="vocab-mm">ဆွဲဆောင်သည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Sleek</div><div class="vocab-en">smooth, stylish and modern</div><div class="vocab-mm">ချောမွေ့လှပသော</div></div>
+<div class="vocab-card"><div class="vocab-word">Enclose</div><div class="vocab-en">to surround or cover something</div><div class="vocab-mm">ဖုံးအုပ်သည် / ဝန်းရံသည်</div></div>
+</div>
+</section>
+<!-- JEFF BEZOS -->
+<section class="content-card">
+<div class="profile-container">
+<div class="profile-image-wrapper">
+<a href="jeff_bezos.html">
+<img alt="Jeff Bezos" class="profile-img" src="images/jeff_bezos.jpg"/>
+</a>
+</div>
+<div>
+<div class="profile-name">Jeff Bezos</div>
+<div class="profile-title">Founder of Amazon</div>
+<div class="profile-caption">American entrepreneur<br></div>
+</div>
+</div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">Nowadays, people all over the world are getting used to shopping online and most of them are familiar with the name Amazon.com., an online shopping website.</div><div class="mm-line">ယနေ့ခေတ်တွင် ကမ္ဘာတစ်ဝှမ်းရှိ လူများသည် အွန်လိုင်းဈေးဝယ်ခြင်းနှင့် အသားကျလာကြပြီး အများစုသည် online shopping website ဖြစ်သော Amazon.com ၏အမည်နှင့် ရင်းနှီးကြသည်။</div><div class="line-vocab"><span class="vtag"><b>familiar</b> — ရင်းနှီးကျွမ်းဝင်သော</span></div></div>
+<div class="sentence-pair"><div class="en-line">Its founder is Jeff Bezos, an American entrepreneur, and he was born in New Mexico in 1964.</div><div class="mm-line">၎င်း၏တည်ထောင်သူမှာ အမေရိကန် စီးပွားရေးလုပ်ငန်းရှင် Jeff Bezos ဖြစ်ပြီး ၁၉၆၄ ခုနှစ်တွင် New Mexico ၌ မွေးဖွားခဲ့သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">In 1995, at the age of 31, Bezos began developing the software for the site, working out of his garage with a handful of employees.</div><div class="mm-line">၁၉၉၅ ခုနှစ်တွင် အသက် ၃၁ နှစ်အရွယ်၌ Bezos သည် ဝန်ထမ်းအနည်းငယ်နှင့် သူ၏ကားဂိုဒေါင်မှ အလုပ်လုပ်ရင်း website အတွက် software ကို စတင်တီထွင်ခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>handful</b> — အနည်းငယ်</span><span class="vtag"><b>employee</b> — ဝန်ထမ်း/အလုပ်သမား</span></div></div>
+<div class="sentence-pair"><div class="en-line">Under his guidance, Amazon became the largest retailer on the World Wide Web and the model for Internet sales.</div><div class="mm-line">သူ၏ဦးဆောင်မှုအောက်တွင် Amazon သည် World Wide Web ပေါ်ရှိ အကြီးမားဆုံး retailer ဖြစ်လာပြီး Internet sales အတွက် စံပြဖြစ်လာခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>guidance</b> — ဦးဆောင်မှု/လမ်းညွှန်မှု</span></div></div>
+<div class="sentence-pair"><div class="en-line">Named after the South American River, Amazon sold its first book.</div><div class="mm-line">တောင်အမေရိကရှိ မြစ်၏အမည်ကို ယူထားသော Amazon သည် ၎င်း၏ပထမဆုံးစာအုပ်ကို ရောင်းချခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>Named after</b> — အမည်ကိုအစွဲပြု၍</span> </div></div>
+<div class="sentence-pair"><div class="en-line">Amazon.com is an online merchant of books and later of a wide variety of products.</div><div class="mm-line">Amazon.com သည် စာအုပ်များကို online ရောင်းချသော merchant ဖြစ်ပြီး နောက်ပိုင်းတွင် ကုန်ပစ္စည်းအမျိုးမျိုးကိုလည်း ရောင်းချလာခဲ့သည်။</div><div class="line-vocab"><span class="vtag"><b>merchant</b> — ကုန်သည် / ကုန်သွယ်ရေးလုပ်ငန်း</span></div></div>
+<div class="gap-highlight">
+<span class="gap-tag">GAP 4</span>
+<div class="en-line">It is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods.</div>
+<div class="mm-line">ဒါဟာ စာအုပ်များ၊ ဂီတ၊ ရုပ်ရှင်များ၊ အိမ်သုံးကုန်ပစ္စည်းများ၊ လျှပ်စစ်ပစ္စည်းများ၊ အရုပ်များနှင့် အခြားကုန်ပစ္စည်းများစွာကို ရောင်းချပေးသည့် အင်တာနက်အခြေပြု အလွန်ကြီးမားသော စီးပွားရေးလုပ်ငန်းတစ်ခု ဖြစ်ပါသည်။</div>
+<div class="line-vocab"><span class="vtag"><b>Housewares</b> — အိမ်သုံးပစ္စည်းများ</span><span class="vtag"><b>Enterprise</b> — စီးပွားရေးလုပ်ငန်း</span></div></div>
+<div class="sentence-pair"><div class="en-line">With the attractive motto Spend less, Smile more! Amazon stays ahead of the pack and is one of the best online shopping websites.</div><div class="mm-line">ဆွဲဆောင်မှုရှိသော “Spend less, Smile more!” ဟူသော ဆောင်ပုဒ်ဖြင့် Amazon သည် အခြားသူများထက် ရှေ့ရောက်နေပြီး အကောင်းဆုံး online shopping websites များထဲမှ တစ်ခုဖြစ်သည်။</div><div class="line-vocab"><span class="vtag"><b>Ahead of the pack</b> — အခြားသူများ(ပြိုင်ဘက်များ)ထက် ရှေ့ရောက်နေသော</span><span class="vtag"><b>Motto</b> — ဆောင်ပုဒ်</span></div></div>
+</div>
+<div class="vocab-grid" style="margin-top:20px">
+<div class="vocab-card"><div class="vocab-word">Retailer</div><div class="vocab-en">a person or business that sells goods to customers</div><div class="vocab-mm">လက်လီရောင်းချသူ</div></div>
+<div class="vocab-card"><div class="vocab-word">Merchant</div><div class="vocab-en">a person or company involved in trade</div><div class="vocab-mm">ကုန်သည် / ကုန်သွယ်ရေးလုပ်ငန်း</div></div>
+<div class="vocab-card"><div class="vocab-word">Housewares</div><div class="vocab-en">goods used in a home</div><div class="vocab-mm">အိမ်သုံးပစ္စည်းများ</div></div>
+<div class="vocab-card"><div class="vocab-word">Enterprise</div><div class="vocab-en">a business or company</div><div class="vocab-mm">စီးပွားရေးလုပ်ငန်း</div></div>
+<div class="vocab-card"><div class="vocab-word">Ahead of the pack</div><div class="vocab-en">in a leading position</div><div class="vocab-mm">အခြားသူများထက် ရှေ့ရောက်နေသော</div></div>
+<div class="vocab-card"><div class="vocab-word">Motto</div><div class="vocab-en">a short phrase expressing a belief or purpose</div><div class="vocab-mm">ဆောင်ပုဒ်</div></div>
+</div>
+</section>
+<!-- CONCLUSION -->
+<section class="content-card">
+<div class="section-header">
+<div class="section-icon">✦</div>
+<div>
+<h2 class="section-title">Conclusion</h2>
+<p class="section-subtitle">Chasing dreams through learning and practice</p>
+</div>
+</div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">In every case, the significant characteristics of each entrepreneur mentioned above are obviously – innovating new ideas, putting them into action, and persevering through challenges.</div><div class="mm-line">အထက်တွင်ဖော်ပြခဲ့သော စီးပွားရေးလုပ်ငန်းရှင်တိုင်း၏ အရေးပါသော လက္ခဏာများမှာ အတွေးအခေါ်အသစ်များ ဖန်တီးခြင်း၊ လက်တွေ့အကောင်အထည်ဖော်ခြင်းနှင့် စိန်ခေါ်မှုများကြားတွင် ဇွဲရှိရှိ ဆက်လက်ကြိုးစားခြင်းတို့ ဖြစ်သည်။</div><div class="line-vocab"><span class="vtag"><b>innovate</b> — ဆန်းသစ်တီထွင်သည်/ဖန်တီးသည်</span><span class="vtag"><b>Persevere</b> — ဇွဲရှိရှိဆက်လက်ကြိုးစားသည်</span></div></div>
+<div class="gap-highlight">
+<span class="gap-tag">GAP 5</span>
+<div class="en-line">Some are natural personality traits, but many skills and characteristics can be cultivated through learning and practice.</div>
+<div class="mm-line">အချို့မှာ မွေးရာပါ စရိုက်လက္ခဏာများ ဖြစ်ကြသော်လည်း၊ ကျွမ်းကျင်မှုနှင့် အရည်အသွေးများစွာကိုမူ လေ့လာခြင်းနှင့် လေ့ကျင့်ခြင်းတို့ဖြင့် ပျိုးထောင်ယူနိုင်ပါသည်။</div>
+<div class="line-vocab"><span class="vtag"><b>Personality traits</b> — ကိုယ်ရည်ကိုယ်သွေး စရိုက်လက္ခဏာများ</span><span class="vtag"><b>Cultivate</b> — ပျိုးထောင်သည် / ဖွံ့ဖြိုးစေသည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">The bottom line is that you need to set a goal that gives you something to focus on and strive for.</div><div class="mm-line">အဓိကအချက်မှာ သင်အာရုံစိုက်ပြီး ကြိုးပမ်းနိုင်ရန် ရည်မှန်းချက်တစ်ခု သတ်မှတ်ရန် လိုအပ်ခြင်းဖြစ်သည်။</div><div class="line-vocab"><span class="vtag"><b>The bottom line</b> — အဓိကအချက်</span><span class="vtag"><b>Strive for</b> — အောင်မြင်ရရှိရန် အားထုတ်သည်</span></div></div>
+<div class="sentence-pair"><div class="en-line">Then chase the dream.</div><div class="mm-line">ထို့နောက် အိပ်မက်ကို လိုက်လံအကောင်အထည်ဖော်ပါ။</div></div>
+<div class="sentence-pair"><div class="en-line">Making the dream come true is not rocket science if you have the courage to pursue it.</div><div class="mm-line">အိပ်မက်ကို အကောင်အထည်ဖော်ခြင်းသည် ၎င်းကို ရဲရဲဝံ့ဝံ့ လိုက်လံဆောင်ရွက်ရန် သတ္တိရှိပါက အလွန်ခက်ခဲသောအရာ မဟုတ်ပါ။</div><div class="line-vocab"><span class="vtag"><b>Pursue</b> — လိုက်လံဆောင်ရွက်သည်</span><span class="vtag"><b>Not rocket science</b> — အလွန်ခက်ခဲရှုပ်ထွေးသော အရာမဟုတ်</span></div></div>
+</div>
+<div class="vocab-grid" style="margin-top:20px">
+<div class="vocab-card"><div class="vocab-word">Personality traits</div><div class="vocab-en">qualities that form a person's character</div><div class="vocab-mm">ကိုယ်ရည်ကိုယ်သွေး စရိုက်လက္ခဏာများ</div></div>
+<div class="vocab-card"><div class="vocab-word">Cultivate</div><div class="vocab-en">to develop or improve something</div><div class="vocab-mm">ပျိုးထောင်သည် / ဖွံ့ဖြိုးစေသည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Innovate</div><div class="vocab-en">to introduce new ideas or methods</div><div class="vocab-mm">ဆန်းသစ်တီထွင်သည်</div></div>
+<div class="vocab-card"><div class="vocab-word">The bottom line</div><div class="vocab-en">the most important point</div><div class="vocab-mm">အဓိကအချက်</div></div>
+<div class="vocab-card"><div class="vocab-word">Strive for</div><div class="vocab-en">to try very hard to achieve something</div><div class="vocab-mm">အောင်မြင်ရရှိရန် အားထုတ်သည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Pursue</div><div class="vocab-en">to follow or work toward something</div><div class="vocab-mm">လိုက်လံဆောင်ရွက်သည်</div></div>
+<div class="vocab-card"><div class="vocab-word">Not rocket science</div><div class="vocab-en">not extremely difficult to understand or do</div><div class="vocab-mm">အလွန်ခက်ခဲရှုပ်ထွေးသော အရာမဟုတ်</div></div>
+</div>
+</section>
+<!-- READING QUESTIONS -->
+<section class="content-card">
+<div class="section-header">
+<div class="section-icon">?</div>
+<div>
+<h2 class="section-title">Reading Check</h2>
+<p class="section-subtitle">Quick questions from the passage</p>
+</div>
+</div>
+<div class="question-card">
+<div class="question-text">1. When do you think Elon Musk started his business?</div>
+<button class="btn-reveal" onclick="toggleAnswer('a1')">Show Answer</button>
+<div class="answer-drawer" id="a1">
+<div class="answer-en">Musk was only 12 when he created a video game and sold it to a computer magazine.</div>
+<div class="answer-mm">Musk သည် အသက် ၁၂ နှစ်အရွယ်တွင် video game တစ်ခုဖန်တီးပြီး ရောင်းချခဲ့သည်။</div>
+</div>
+</div>
+<div class="question-card">
+<div class="question-text">2. Where did Steve Jobs and Stephen Wozniak design the Apple?</div>
+<button class="btn-reveal" onclick="toggleAnswer('a2')">Show Answer</button>
+<div class="answer-drawer" id="a2">
+<div class="answer-en">They designed it in his family garage.</div>
+<div class="answer-mm">သူတို့သည် မိသားစု၏ ကားဂိုဒေါင်တွင် ဒီဇိုင်းဆွဲခဲ့ကြသည်။</div>
+</div>
+</div>
+<div class="question-card">
+<div class="question-text">3. What kind of business is Amazon.com?</div>
+<button class="btn-reveal" onclick="toggleAnswer('a3')">Show Answer</button>
+<div class="answer-drawer" id="a3">
+<div class="answer-en">It is a vast Internet-based enterprise that sells many kinds of goods.</div>
+<div class="answer-mm">အမျိုးမျိုးသော ကုန်ပစ္စည်းများကို ရောင်းချသော အင်တာနက်အခြေပြု အလွန်ကြီးမားသည့် စီးပွားရေးလုပ်ငန်းတစ်ခု ဖြစ်သည်။</div>
+</div>
+</div>
+</section>
+<!-- NEXT -->
+<section class="content-card next-card">
+<h2>Keep Chasing Your Dreams ✦</h2>
+<p>Unit 1 ရဲ့ Reading Passage ကို line-by-line လေ့လာပြီးနောက် Comprehension မေးခွန်းများကို ဆက်လက်လေ့ကျင့်နိုင်ပါတယ်။</p>
+<a class="next-btn" href="comprehension1.html">Comprehension သို့ →</a>
+</section>
+</main>
+<footer class="footer">Grade-12 English Learning Hub • Unit 1 — CHASING DREAMS • Learn. Believe. Pursue.</footer>
+<script>
+/* Theme toggle + persistence */
+(function(){
+  const root = document.documentElement;
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+
+  function currentTheme(){
+    return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+
+  function updateIcon(){
+    themeIcon.textContent = currentTheme() === "dark" ? "🌙" : "☀️";
+    themeToggle.setAttribute(
+      "aria-label",
+      currentTheme() === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    );
+  }
+
+  themeToggle.addEventListener("click", function(){
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+
+    /* Write the same theme to several common keys so this page
+       can synchronize with the existing hub even if its current
+       index implementation uses one of these keys. */
+    localStorage.setItem("theme", next);
+    localStorage.setItem("siteTheme", next);
+    localStorage.setItem("g12-theme", next);
+
+    updateIcon();
+  });
+
+  updateIcon();
+
+  /* If another same-origin page/tab changes the shared theme,
+     update this page automatically. */
+  window.addEventListener("storage", function(e){
+    if(["theme","siteTheme","g12-theme"].includes(e.key) && e.newValue){
+      const next = e.newValue === "dark" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      updateIcon();
+    }
+  });
+})();
+
+/* Professional side menu */
+(function(){
+  const trigger = document.getElementById("menuTrigger");
+  const menu = document.getElementById("sideMenu");
+  const overlay = document.getElementById("menuOverlay");
+  const close = document.getElementById("closeMenu");
+
+  function openMenu(){
+    menu.classList.add("open");
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu(){
+    menu.classList.remove("open");
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  trigger.addEventListener("click", openMenu);
+  close.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape") closeMenu();
+  });
+
+  menu.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click", closeMenu);
+  });
+})();
+
+/* Answer reveal */
+function toggleAnswer(id){
+  const answer = document.getElementById(id);
+  if(answer) answer.classList.toggle("show");
+}
+</script>
+</body>
+</html>

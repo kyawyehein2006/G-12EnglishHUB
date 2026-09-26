@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html lang="my">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Unit 3 | Equal Access to Education</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#f5f8fc;--surface:#ffffff;--surface2:#eef4fa;--text:#162235;--muted:#64748b;
+  --primary:#1769aa;--primary2:#0b4f86;--accent:#14b8a6;--gold:#e6a72e;
+  --border:#dbe5ef;--shadow:0 16px 45px rgba(15,42,70,.10);
+}
+html[data-theme="dark"]{
+  --bg:#0b1220;--surface:#111c2d;--surface2:#17263a;--text:#e8f0f8;--muted:#9fb0c5;
+  --primary:#45a6e8;--primary2:#72c1f2;--accent:#32c8b7;--gold:#f0bd55;
+  --border:#263951;--shadow:0 18px 50px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Padauk",sans-serif;line-height:1.75}
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+.header{position:sticky;top:0;z-index:50;background:rgba(11,24,40,.94);backdrop-filter:blur(14px);color:#fff;border-bottom:1px solid rgba(255,255,255,.09)}
+.nav{max-width:1180px;margin:auto;height:72px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-weight:800;font-size:20px;letter-spacing:-.4px}
+.brand span{color:#55b9f2}
+.nav-actions{display:flex;align-items:center;gap:9px}
+.icon-btn{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#fff;width:42px;height:42px;border-radius:12px;cursor:pointer}
+.hero{position:relative;overflow:hidden;color:#fff;background:
+radial-gradient(circle at 80% 20%,rgba(54,180,235,.30),transparent 28%),
+radial-gradient(circle at 15% 90%,rgba(20,184,166,.24),transparent 30%),
+linear-gradient(135deg,#082b4a 0%,#0c5684 52%,#0e766f 100%);}
+.hero:before{content:"";position:absolute;inset:0;opacity:.12;background-image:linear-gradient(30deg,transparent 48%,#fff 49%,#fff 51%,transparent 52%),linear-gradient(150deg,transparent 48%,#fff 49%,#fff 51%,transparent 52%);background-size:80px 80px}
+.hero-inner{position:relative;max-width:1180px;margin:auto;padding:78px 20px 86px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);border-radius:999px;font-size:13px;font-weight:700}
+.hero h1{font-size:clamp(34px,6vw,68px);line-height:1.08;margin:20px 0 14px;letter-spacing:-2px;max-width:900px}
+.hero h1 span{color:#8de5da}
+.hero p{max-width:760px;margin:0;color:rgba(255,255,255,.88);font-size:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-meta span{padding:7px 12px;border-radius:9px;background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.14);font-size:13px}
+.layout{max-width:1180px;margin:0 auto;padding:32px 20px 70px;display:grid;grid-template-columns:245px 1fr;gap:26px}
+.sidebar{position:sticky;top:92px;height:max-content;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:15px;box-shadow:var(--shadow)}
+.side-title{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.7px;padding:7px 10px 12px}
+.side-link{display:flex;align-items:center;gap:10px;padding:10px 11px;border-radius:11px;color:var(--muted);font-size:14px;font-weight:600;margin:3px 0}
+.side-link:hover{background:var(--surface2);color:var(--text)}
+.side-link.active{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;box-shadow:0 8px 20px rgba(23,105,170,.20)}
+.main{min-width:0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden}
+.card-head{padding:24px 26px;border-bottom:1px solid var(--border);background:linear-gradient(180deg,var(--surface2),var(--surface))}
+.card-head h2{margin:0;font-size:23px;line-height:1.35}
+.card-head p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.card-body{padding:26px}
+.reading-intro{padding:18px 20px;border-left:4px solid var(--accent);background:var(--surface2);border-radius:0 13px 13px 0;margin-bottom:25px}
+.reading-intro strong{color:var(--primary)}
+.passage-block{margin:0 0 28px;padding:22px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}
+.passage-block:last-child{margin-bottom:0}
+.passage-label{display:inline-block;font-size:12px;font-weight:800;color:var(--primary);background:rgba(23,105,170,.10);padding:5px 9px;border-radius:7px;margin-bottom:12px}
+.en-line{font-family:"Plus Jakarta Sans",sans-serif;font-size:16px;line-height:1.9;margin:0 0 7px;font-weight:500}
+.mm-line{font-family:"Padauk",sans-serif;font-size:16px;line-height:1.95;color:var(--muted);margin:0 0 16px;padding-left:15px;border-left:2px solid var(--accent)}
+.mm-line:last-child{margin-bottom:0}
+.vocab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.vocab{padding:15px 16px;border:1px solid var(--border);border-radius:13px;background:var(--surface2)}
+.vocab b{color:var(--primary)}
+.vocab .meaning{display:block;color:var(--text);font-family:"Padauk";margin-top:3px}
+.vocab .example{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.points{display:grid;gap:12px}
+.point{display:flex;gap:12px;padding:15px;border:1px solid var(--border);border-radius:13px;background:var(--surface2)}
+.point-num{min-width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:800;font-size:13px}
+.point p{margin:0}
+.point .mm{display:block;color:var(--muted);font-family:"Padauk";margin-top:3px}
+.next{display:flex;justify-content:flex-end;margin-top:8px}
+.next a{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;background:var(--primary);color:#fff;font-weight:700}
+.footer{text-align:center;color:var(--muted);font-size:13px;padding:15px 20px 45px}
+.mobile-menu{display:none}
+@media(max-width:850px){
+ .layout{grid-template-columns:1fr}
+ .sidebar{position:fixed;left:-290px;top:0;bottom:0;width:275px;z-index:80;border-radius:0;overflow:auto;transition:.25s}
+ .sidebar.open{left:0}
+ .mobile-menu{display:block}
+ .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:70}
+ .overlay.show{display:block}
+ .vocab-grid{grid-template-columns:1fr}
+ .hero-inner{padding:58px 20px 65px}
+}
+@media(min-width:851px){.menu-btn{display:none}}
+
+/* === PREMIUM UNIT 3 HERO v2 — EQUAL ACCESS / EDUCATION NETWORK === */
+:root{
+  --hero-a:#041b35;--hero-b:#07577d;--hero-c:#079487;--hero-d:#18b6a4;
+  --hero-glow:#72fff0;--hero-gold:#ffd66e;--hero-blue:#67cfff;
+}
+html[data-theme="dark"]{
+  --hero-a:#010b1a;--hero-b:#063b59;--hero-c:#056b63;--hero-d:#079b8e;
+  --hero-glow:#55eadc;--hero-gold:#f7ca61;--hero-blue:#62c5ff;
+}
+.hero{
+  position:relative;min-height:560px;display:flex;align-items:center;isolation:isolate;
+  overflow:hidden;color:#fff;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(91,221,220,.18),transparent 24%),
+    radial-gradient(circle at 88% 18%,rgba(104,207,255,.22),transparent 25%),
+    radial-gradient(circle at 10% 82%,rgba(255,214,110,.13),transparent 24%),
+    linear-gradient(125deg,var(--hero-a) 0%,var(--hero-b) 46%,var(--hero-c) 100%);
+}
+.hero:before{
+  content:"";position:absolute;inset:-35%;z-index:-4;opacity:.55;
+  background:
+    conic-gradient(from 120deg at 50% 50%,transparent 0 18%,rgba(82,224,216,.10) 25%,transparent 34% 52%,rgba(104,207,255,.09) 61%,transparent 70% 100%);
+  filter:blur(18px);animation:heroSpin 22s linear infinite;
+}
+.hero:after{
+  content:"";position:absolute;inset:0;z-index:-3;opacity:.20;
+  background-image:
+    linear-gradient(120deg,transparent 0 47%,rgba(255,255,255,.30) 49%,transparent 51%),
+    linear-gradient(60deg,transparent 0 47%,rgba(255,255,255,.22) 49%,transparent 51%);
+  background-size:115px 115px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.45));
+  animation:gridDrift 18s linear infinite;
+}
+.hero-inner{position:relative;z-index:5;max-width:1180px;width:100%;margin:auto;padding:92px 20px 100px;}
+.hero-copy{position:relative;z-index:8;max-width:900px;transform:translate3d(var(--mx,0px),var(--my,0px),0);transition:transform .18s ease-out;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border:1px solid rgba(255,255,255,.26);
+  background:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.05));
+  border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;
+  box-shadow:0 10px 35px rgba(0,0,0,.16),inset 0 1px rgba(255,255,255,.12);backdrop-filter:blur(12px);
+}
+.eyebrow:before{content:"✦";color:var(--hero-gold);text-shadow:0 0 14px rgba(255,214,110,.8);animation:twinkle 2.2s ease-in-out infinite;}
+.hero h1{font-size:clamp(38px,7vw,78px);line-height:1.02;margin:22px 0 18px;letter-spacing:-3px;font-weight:800;max-width:930px;text-shadow:0 14px 42px rgba(0,0,0,.25);}
+.hero h1 span{background:linear-gradient(100deg,#8df4e8 0%,#e9fffc 48%,#69d4ff 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 18px rgba(114,255,240,.12));}
+.hero p{max-width:790px;margin:0;color:rgba(255,255,255,.90);font-family:"Padauk","Plus Jakarta Sans",sans-serif;font-size:17px;line-height:2.05;text-shadow:0 2px 18px rgba(0,0,0,.18);}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;max-width:760px;}
+.hero-meta span{position:relative;padding:8px 13px;border-radius:11px;background:rgba(3,20,37,.25);border:1px solid rgba(255,255,255,.16);font-size:12px;box-shadow:0 8px 22px rgba(0,0,0,.10);backdrop-filter:blur(10px);overflow:hidden;}
+.hero-meta span:before{content:"";position:absolute;left:-30%;top:0;width:28%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:skewX(-20deg);animation:chipShine 5s ease-in-out infinite;}
+.hero-visual{position:absolute;z-index:4;right:4%;top:50%;width:350px;height:350px;transform:translate3d(var(--vx,0px),calc(-50% + var(--vy,0px)),0);transition:transform .25s ease-out;pointer-events:none;}
+.hero-visual .ring{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.15);box-shadow:0 0 55px rgba(82,239,226,.10);}
+.hero-visual .ring.r1{inset:0;animation:orbitSpin 18s linear infinite;}
+.hero-visual .ring.r2{inset:34px;border-style:dashed;animation:orbitSpin 13s linear infinite reverse;}
+.hero-visual .ring.r3{inset:82px;background:radial-gradient(circle,rgba(255,255,255,.11),rgba(255,255,255,.025) 55%,transparent 70%);box-shadow:inset 0 0 55px rgba(96,235,223,.08),0 0 60px rgba(96,235,223,.10);animation:pulseCore 4s ease-in-out infinite;}
+.hero-visual .core{position:absolute;left:50%;top:50%;width:105px;height:105px;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.20),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.24);box-shadow:0 22px 55px rgba(0,0,0,.20),inset 0 1px rgba(255,255,255,.22);backdrop-filter:blur(16px);font-size:48px;animation:floatCore 4s ease-in-out infinite;}
+.hero-visual .node{position:absolute;display:flex;align-items:center;justify-content:center;gap:6px;min-width:86px;padding:7px 10px;border-radius:12px;background:rgba(3,26,47,.40);border:1px solid rgba(255,255,255,.16);font-size:10px;font-weight:800;letter-spacing:.4px;box-shadow:0 10px 25px rgba(0,0,0,.13);backdrop-filter:blur(10px);animation:nodeFloat 4s ease-in-out infinite;}
+.hero-visual .node:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--hero-glow);box-shadow:0 0 12px var(--hero-glow);}
+.node.n1{top:24px;left:50%;transform:translateX(-50%);animation-delay:-.8s}.node.n2{right:-5px;top:50%;transform:translateY(-50%);animation-delay:-1.7s}.node.n3{bottom:25px;left:50%;transform:translateX(-50%);animation-delay:-2.5s}.node.n4{left:-5px;top:50%;transform:translateY(-50%);animation-delay:-3.3s}
+.hero-visual .beam{position:absolute;left:50%;top:50%;width:1px;height:145px;background:linear-gradient(to bottom,rgba(114,255,240,.0),rgba(114,255,240,.55),rgba(114,255,240,0));transform-origin:0 0;opacity:.5;}
+.beam.b1{transform:rotate(0deg)}.beam.b2{transform:rotate(90deg)}.beam.b3{transform:rotate(180deg)}.beam.b4{transform:rotate(270deg)}
+.hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.hero-particles i{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--hero-glow);box-shadow:0 0 14px var(--hero-glow);opacity:.65;animation:particleRise linear infinite;}
+.hero-particles i:nth-child(1){left:8%;top:85%;animation-duration:9s}.hero-particles i:nth-child(2){left:18%;top:72%;animation-duration:12s;animation-delay:-4s}.hero-particles i:nth-child(3){left:32%;top:92%;animation-duration:10s;animation-delay:-7s}.hero-particles i:nth-child(4){left:47%;top:78%;animation-duration:13s;animation-delay:-2s}.hero-particles i:nth-child(5){left:62%;top:90%;animation-duration:11s;animation-delay:-5s}.hero-particles i:nth-child(6){left:74%;top:75%;animation-duration:14s;animation-delay:-8s}.hero-particles i:nth-child(7){left:88%;top:88%;animation-duration:10s;animation-delay:-3s}.hero-particles i:nth-child(8){left:94%;top:58%;animation-duration:12s;animation-delay:-6s}
+.hero-sweep{position:absolute;left:-20%;right:-20%;bottom:18px;height:90px;z-index:2;opacity:.22;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);filter:blur(12px);transform:rotate(-4deg);animation:sweep 8s ease-in-out infinite;}
+.hero-scroll{position:absolute;bottom:20px;left:50%;z-index:7;transform:translateX(-50%);display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.58);}
+.hero-scroll span{width:24px;height:38px;border:1px solid rgba(255,255,255,.28);border-radius:20px;position:relative;}
+.hero-scroll span:after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:4px;background:var(--hero-glow);transform:translateX(-50%);animation:scrollDot 1.8s ease-in-out infinite;}
+.line-vocab{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:2px 0 19px;padding:9px 10px;border:1px solid var(--border);border-radius:13px;background:linear-gradient(135deg,var(--surface2),var(--surface));box-shadow:0 7px 20px rgba(15,42,70,.055);}
+.line-vocab-label{font-size:10px;font-weight:800;letter-spacing:.8px;color:var(--primary);padding:5px 7px;border-radius:7px;background:rgba(23,105,170,.09);}
+.vocab-chip{display:inline-flex;align-items:center;gap:4px;padding:6px 9px;border-radius:9px;background:rgba(20,184,166,.08);border:1px solid rgba(20,184,166,.20);font-family:"Padauk","Plus Jakarta Sans",sans-serif;font-size:12px;color:var(--muted);}
+.vocab-chip b{font-family:"Plus Jakarta Sans",sans-serif;color:var(--primary);font-size:11px;}
+.passage-block{box-shadow:0 10px 30px rgba(15,42,70,.045);transition:transform .2s ease,box-shadow .2s ease;}
+.passage-block:hover{transform:translateY(-2px);box-shadow:0 15px 36px rgba(15,42,70,.075)}
+@keyframes heroSpin{to{transform:rotate(360deg)}}
+@keyframes gridDrift{to{background-position:115px 115px}}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+@keyframes pulseCore{0%,100%{transform:scale(.96);opacity:.78}50%{transform:scale(1.04);opacity:1}}
+@keyframes floatCore{0%,100%{transform:translate(-50%,-52%)}50%{transform:translate(-50%,-47%)}}
+@keyframes nodeFloat{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@keyframes particleRise{0%{translate:0 30px;opacity:0}15%{opacity:.65}85%{opacity:.35}100%{translate:55px -520px;opacity:0}}
+@keyframes sweep{0%,100%{translate:-8% 0;opacity:.08}50%{translate:8% 0;opacity:.28}}
+@keyframes chipShine{0%,70%,100%{left:-35%}85%{left:110%}}
+@keyframes twinkle{0%,100%{transform:scale(.8) rotate(0deg);opacity:.65}50%{transform:scale(1.15) rotate(12deg);opacity:1}}
+@keyframes scrollDot{0%,100%{transform:translate(-50%,0);opacity:.45}50%{transform:translate(-50%,10px);opacity:1}}
+@media(max-width:850px){
+ .hero{min-height:620px;align-items:flex-start}
+ .hero-inner{padding:64px 20px 100px}
+ .hero-copy{max-width:100%}
+ .hero h1{font-size:clamp(39px,12vw,62px);letter-spacing:-2px;max-width:680px}
+ .hero p{font-size:16px;line-height:1.95;max-width:680px}
+ .hero-visual{width:230px;height:230px;right:-50px;top:75%;opacity:.78}
+ .hero-visual .core{width:78px;height:78px;border-radius:24px;font-size:34px}
+ .hero-visual .node{min-width:72px;font-size:8px;padding:6px 7px}
+ .hero-scroll{bottom:12px}
+}
+@media(max-width:520px){
+ .hero{min-height:665px}
+ .hero-inner{padding-top:55px}
+ .hero h1{font-size:42px;line-height:1.02}
+ .hero p{font-size:15px}
+ .hero-meta{gap:7px}.hero-meta span{font-size:11px;padding:7px 10px}
+ .hero-visual{width:190px;height:190px;right:-0px;top:78%;opacity:.55}
+ .hero-visual .core{width:66px;height:66px;font-size:29px}
+ .hero-visual .ring.r2{inset:24px}.hero-visual .ring.r3{inset:55px}
+ .hero-visual .node{min-width:62px;font-size:7px;padding:5px 6px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero:before,.hero:after,.hero-visual .ring,.hero-visual .core,.hero-visual .node,.hero-particles i,.hero-sweep,.hero-scroll span:after,.eyebrow:before,.hero-meta span:before{animation:none!important}
+ .hero-copy,.hero-visual{transform:none!important}
+}
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<a class="brand" href="index.html">Grade-12 <span>English</span></a>
+<div class="nav-actions">
+<button aria-label="Menu" class="icon-btn menu-btn" id="menuBtn">☰</button>
+<button aria-label="Toggle theme" class="icon-btn" id="themeBtn">☀️</button>
+</div>
+</nav>
+</header>
+<section class="hero" id="top">
+  <div class="hero-particles" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+  <div class="hero-sweep" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy" id="heroCopy">
+      <div class="eyebrow">UNIT 3 • READING</div></div>
+      <h1><span>EQUAL ACCESS</span><br>TO EDUCATION</h1>
+      <p>ပညာရေးကို လူတိုင်းတန်းတူညီမျှ ရရှိခွင့်၊ မညီမျှမှု၏ အကြောင်းရင်းများနှင့် သက်ရောက်မှုများကို လေ့လာပြီး ပိုမိုမျှတသော ပညာရေးအခွင့်အလမ်းများအတွက် အဓိကအချက်များကို နားလည်ရန် Reading Lesson</p>
+      <div class="hero-meta">
+     <span>Quality Education</span>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual" aria-hidden="true">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="beam b1"></div><div class="beam b2"></div><div class="beam b3"></div><div class="beam b4"></div>
+      <div class="core">🎓</div>
+      <div class="node n1">ACCESS</div>
+      <div class="node n2">INCLUSION</div>
+      <div class="node n3">OPPORTUNITY</div>
+      <div class="node n4">EDUCATION</div>
+    </div>  
+  </div>
+</section>
+<div class="overlay" id="overlay"></div>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+<div class="side-title">UNIT 3 • LESSON MENU</div>
+<a class="side-link" href="meaning3.html">📘 Meaning</a>
+<a class="side-link active" href="unit3.html">📖 Reading Paragraph</a>
+<a class="side-link" href="comprehension3.html">📝 Comprehension</a>
+<a class="side-link" href="grammar3.html">🔤 Additional Grammar</a>
+<a class="side-link" href="listening-speaking3.html">🎧 Listening &amp; Speaking</a>
+<a class="side-link" href="writing3.html">✍️ Writing</a>
+<a class="side-link" href="beca3.html">🎯 BECA Practice</a>
+</aside>
+<main class="main">
+<section class="card">
+<div class="card-head">
+<h2>📖 Read the passage carefully</h2>
+<br>
+<div class="reading-intro">
+<strong>လေ့လာနည်း —</strong>English စာကြောင်းတစ်ကြောင်းချင်းစီကို ဖတ်ပြီး အောက်က မြန်မာဘာသာပြန်နှင့် Key Vocabulary ကို တစ်ဆင့်ချင်း လေ့လာနိုင်ပါသည်။
+</div> </div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 1 — Importance of Equal Access</span>
+<p class="en-line">Equal access to education is vital for the development of any modern society.</p>
+<p class="mm-line">ပညာရေးကို တန်းတူညီမျှ ရရှိခွင့်ရှိခြင်းသည် ခေတ်မီလူ့အဖွဲ့အစည်း မည်သည့်အဖွဲ့အစည်းမဆို ဖွံ့ဖြိုးတိုးတက်ရန်အတွက် အလွန်အရေးကြီးပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>equal access</b> — တန်းတူညီမျှ ရရှိခွင့်</span><span class="vocab-chip"><b>vital</b> — အလွန်အရေးကြီးသော / မရှိမဖြစ်လိုအပ်သော</span><span class="vocab-chip"><b>development</b> — ဖွံ့ဖြိုးတိုးတက်မှု</span></div>
+<p class="en-line">The higher the portion of the educated population, the greater the number of productive members in the community.</p>
+<p class="mm-line">ပညာတတ်လူဦးရေ၏ အချိုးအစား ပိုမိုမြင့်မားလေလေ၊ လူမှုအသိုင်းအဝိုင်းအတွင်း အကျိုးရှိရှိ ထုတ်လုပ်ပေးနိုင်သော အဖွဲ့ဝင်ဦးရေ ပိုမိုများပြားလေလေ ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>productive</b> — အကျိုးရှိစွာ ထုတ်လုပ်ပေးနိုင်သော</span><span class="vocab-chip"><b>development</b> — ဖွံ့ဖြိုးတိုးတက်မှု</span></div>
+<p class="en-line">These people, with the high level of knowledge and skills, will eventually become the general workforce – comprising intellectuals and technicians, among others – of the nation.</p>
+<p class="mm-line">အသိပညာနှင့် ကျွမ်းကျင်မှုအဆင့် မြင့်မားသော ထိုသူများသည် နောက်ဆုံးတွင် နိုင်ငံ၏ အထွေထွေအလုပ်သမားအင်အားစု ဖြစ်လာကြပြီး၊ ၎င်းတွင် ပညာရှင်များ၊ နည်းပညာရှင်များနှင့် အခြားကျွမ်းကျင်သူများ ပါဝင်လာမည်ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>workforce</b> — အလုပ်သမားအင်အားစု</span><span class="vocab-chip"><b>intellectual</b> — ပညာရှင် / ဉာဏ်ပညာရှင်</span><span class="vocab-chip"><b>technician</b> — နည်းပညာရှင်</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 2 — What Is Educational Equality?</span>
+<p class="en-line">What is educational equality?</p>
+<p class="mm-line">ပညာရေးတန်းတူညီမျှမှုဆိုသည်မှာ အဘယ်နည်း။</p><div class="line-vocab"><span class="vocab-chip"><b>educational equality</b> — ပညာရေးတန်းတူညီမျှမှု</span></div>
+<p class="en-line">To put it simply, it means providing children with the same resources.</p>
+<p class="mm-line">ရိုးရိုးရှင်းရှင်း ပြောရလျှင် ကလေးများအား တူညီသော အရင်းအမြစ်များ ပံ့ပိုးပေးခြင်းကို ဆိုလိုပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>equal access</b> — တန်းတူညီမျှ ရရှိခွင့်</span></div>
+<p class="en-line">Fair and equal access to education must be provided regardless of the socioeconomic status, geographic location, race, religion, cultural or political preferences of people, or any other factor that might deprive them of access to a high-quality learning experience.</p>
+<p class="mm-line">လူတစ်ဦး၏ လူမှုစီးပွားရေးအခြေအနေ၊ ပထဝီဝင်တည်နေရာ၊ လူမျိုး၊ ဘာသာရေး၊ ယဉ်ကျေးမှု သို့မဟုတ် နိုင်ငံရေးအကြိုက်များ မည်သို့ပင်ရှိစေကာမူ၊ အရည်အသွေးမြင့် သင်ယူမှုအတွေ့အကြုံကို ရရှိခွင့်မရအောင် တားဆီးနိုင်သည့် အခြားအကြောင်းရင်းများ ရှိနေစေကာမူ ပညာရေးကို တရားမျှတစွာ၊ တန်းတူညီမျှစွာ ရရှိခွင့် ပေးရမည်ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>socioeconomic status</b> — လူမှုစီးပွားရေးအခြေအနေ</span><span class="vocab-chip"><b>geographic location</b> — ပထဝီဝင်တည်နေရာ</span></div>
+<p class="en-line">In addition, they must be able to take advantage of that access.</p>
+<p class="mm-line">ထို့အပြင် ထိုရရှိခွင့်ကိုလည်း အမှန်တကယ် အသုံးချနိုင်ရမည်ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>disadvantaged</b> — အခွင့်အလမ်းနည်းပါးသော / အခက်အခဲရှိသော</span><span class="vocab-chip"><b>abandon</b> — စွန့်လွှတ်သည်</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 3 — Unequal Opportunities</span>
+<p class="en-line">However, not all children have an equal opportunity to reach their full potential, pursue their interests, and develop their talents and skills.</p>
+<p class="mm-line">သို့သော် ကလေးအားလုံးသည် မိမိတို့၏ အပြည့်အဝ အရည်အချင်းကို ဖော်ထုတ်နိုင်ရန်၊ မိမိတို့၏ စိတ်ဝင်စားရာများကို လိုက်စားနိုင်ရန်နှင့် ပါရမီနှင့် ကျွမ်းကျင်မှုများကို ဖွံ့ဖြိုးတိုးတက်စေရန် တန်းတူအခွင့်အရေး မရရှိကြပါ။</p><div class="line-vocab"><span class="vocab-chip"><b>productive</b> — အကျိုးရှိစွာ ထုတ်လုပ်ပေးနိုင်သော</span></div>
+<p class="en-line">We can frequently see in our surroundings that many children, especially those from disadvantaged backgrounds, abandon their education because they have more urgent things to do than seeking education.</p>
+<p class="mm-line">ကျွန်ုပ်တို့၏ ပတ်ဝန်းကျင်တွင် ကလေးများစွာ၊ အထူးသဖြင့် အခက်အခဲရှိသော နောက်ခံအခြေအနေမှ လာသော ကလေးများသည် ပညာသင်ယူခြင်းထက် ပိုမိုအရေးပေါ်လုပ်ဆောင်ရမည့် အရာများရှိသောကြောင့် ပညာရေးကို စွန့်လွှတ်ကြသည်ကို မကြာခဏ တွေ့မြင်နိုင်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>inequality</b> — မညီမျှမှု</span></div>
+<p class="en-line">Some children work to support their families; others can experience high-quality education.</p>
+<p class="mm-line">အချို့ကလေးများသည် မိသားစုကို ထောက်ပံ့ရန် အလုပ်လုပ်ကြရပြီး၊ အခြားကလေးများမှာ အရည်အသွေးမြင့် ပညာရေးကို ရရှိခံစားနိုင်ကြပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>poverty</b> — ဆင်းရဲနွမ်းပါးမှု</span><span class="vocab-chip"><b>unemployment</b> — အလုပ်လက်မဲ့ဖြစ်မှု</span><span class="vocab-chip"><b>illiteracy</b> — စာမတတ်မှု</span><span class="vocab-chip"><b>drop-out rate</b> — ကျောင်းထွက်နှုန်း</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 4 — First Cause: Socioeconomic Status</span>
+<p class="en-line">What causes educational inequality?</p>
+<p class="mm-line">ပညာရေးမညီမျှမှုကို မည်သည့်အရာများက ဖြစ်ပေါ်စေသနည်း။</p><div class="line-vocab"><span class="vocab-chip"><b>political instability</b> — နိုင်ငံရေးမတည်ငြိမ်မှု</span><span class="vocab-chip"><b>internal displacement</b> — ပြည်တွင်းနေရပ်စွန့်ခွာနေထိုင်ရမှု</span></div>
+<p class="en-line">The main cause of educational inequality is the poor socioeconomic status of the parents of many children.</p>
+<p class="mm-line">ပညာရေးမညီမျှမှု၏ အဓိကအကြောင်းရင်းမှာ ကလေးအများအပြား၏ မိဘများ၏ ဆင်းရဲနိမ့်ကျသော လူမှုစီးပွားရေးအခြေအနေ ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>insecurity</b> — လုံခြုံမှုမရှိခြင်း</span><span class="vocab-chip"><b>human rights violations</b> — လူ့အခွင့်အရေးချိုးဖောက်မှုများ</span></div>
+<p class="en-line">Such interrelated factors as poverty, unemployment, illness, and illiteracy of the parents can multiply the risk of non-schooling and the drop-out rate of a child by two.</p>
+<p class="mm-line">ဆင်းရဲနွမ်းပါးမှု၊ အလုပ်လက်မဲ့ဖြစ်မှု၊ နာမကျန်းမာမှုနှင့် မိဘများ၏ စာမတတ်မှုကဲ့သို့ အပြန်အလှန်ဆက်စပ်နေသော အကြောင်းရင်းများသည် ကလေးတစ်ဦး ကျောင်းမတက်နိုင်သည့် အန္တရာယ်နှင့် ကျောင်းထွက်နှုန်းကို နှစ်ဆအထိ မြင့်တက်စေနိုင်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>natural disaster</b> — သဘာဝဘေးအန္တရာယ်</span><span class="vocab-chip"><b>climate change</b> — ရာသီဥတုပြောင်းလဲမှု</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 5 — Second Cause: Political Instability</span>
+<p class="en-line">The second important factor that causes educational inequality is political instability in the areas where children live.</p>
+<p class="mm-line">ပညာရေးမညီမျှမှုကို ဖြစ်ပေါ်စေသော ဒုတိယအရေးကြီးသော အကြောင်းရင်းမှာ ကလေးများနေထိုင်ရာ ဒေသများတွင် နိုင်ငံရေးမတည်ငြိမ်မှု ရှိခြင်းဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>rely on</b> — အားကိုးသည် / မှီခိုသည်</span></div>
+<p class="en-line">Currently, in some parts of Myanmar, people have been living in internal displacement, and many schoolchildren do not get access to education; instead, they have been facing conflicts, violence, insecurity, and human rights violations.</p>
+<p class="mm-line">လက်ရှိတွင် မြန်မာနိုင်ငံ၏ အချို့ဒေသများ၌ လူများသည် ပြည်တွင်းနေရပ်စွန့်ခွာနေထိုင်ရသည့် အခြေအနေတွင် ရှိနေကြပြီး၊ ကျောင်းသားကျောင်းသူများစွာသည် ပညာရေးရရှိခွင့် မရကြဘဲ ပဋိပက္ခများ၊ အကြမ်းဖက်မှုများ၊ လုံခြုံမှုမရှိခြင်းနှင့် လူ့အခွင့်အရေးချိုးဖောက်မှုများကို ရင်ဆိုင်နေကြရပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>discrimination</b> — ခွဲခြားဆက်ဆံမှု</span><span class="vocab-chip"><b>ethnic origin</b> — လူမျိုးနွယ်စုနောက်ခံ</span><span class="vocab-chip"><b>native tongue</b> — မိခင်ဘာသာစကား</span></div>
+<p class="en-line">Many schools had to be closed, some destroyed, and only a few children could continue their learning with poor facilities.</p>
+<p class="mm-line">ကျောင်းများစွာကို ပိတ်ထားရပြီး၊ အချို့ကျောင်းများမှာ ဖျက်ဆီးခံခဲ့ရကာ ကလေးအနည်းငယ်သာ မလုံလောက်သော အထောက်အကူပစ္စည်းများဖြင့် ပညာဆက်လက်သင်ယူနိုင်ခဲ့ကြပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>discrimination</b> — ခွဲခြားဆက်ဆံမှု</span><span class="vocab-chip"><b>native tongue</b> — မိခင်ဘာသာစကား</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 6 — Third Cause: Natural Disasters &amp; Climate Change</span>
+<p class="en-line">Thirdly, natural disasters and climate change cause inequality in education.</p>
+<p class="mm-line">တတိယအချက်အနေဖြင့် သဘာဝဘေးအန္တရာယ်များနှင့် ရာသီဥတုပြောင်းလဲမှုများသည် ပညာရေးမညီမျှမှုကို ဖြစ်ပေါ်စေပါသည်။</p>
+<p class="en-line">Recently, during the COVID-19 pandemic, schools were closed, and children had to rely on online learning, which affected them unequally, as not all children had the opportunities, tools, or access needed to keep learning during the pandemic.</p>
+<p class="mm-line">မကြာသေးမီက COVID-19 ကပ်ရောဂါကာလအတွင်း ကျောင်းများ ပိတ်ထားခဲ့ရပြီး ကလေးများသည် အွန်လိုင်းမှ သင်ယူမှုကို အားထားခဲ့ရပါသည်။ သို့သော် ကပ်ရောဂါကာလအတွင်း ဆက်လက်သင်ယူရန် လိုအပ်သော အခွင့်အရေး၊ ကိရိယာများ သို့မဟုတ် အသုံးပြုခွင့်များကို ကလေးအားလုံး မရရှိကြသဖြင့် ထိုအခြေအနေက ၎င်းတို့အပေါ် မညီမျှစွာ သက်ရောက်ခဲ့ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>discrimination</b> — ခွဲခြားဆက်ဆံမှု</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 7 — Fourth Cause: Race &amp; Gender Discrimination</span>
+<p class="en-line">Fourthly, discrimination based on race and gender is the underlying cause of educational inequality, especially in some areas like the Middle East, Africa, Central Asia, and Southern and Western Asia.</p>
+<p class="mm-line">စတုတ္ထအချက်အနေဖြင့် လူမျိုးနှင့် ကျား/မအပေါ် အခြေခံသည့် ခွဲခြားဆက်ဆံမှုသည် ပညာရေးမညီမျှမှု၏ အခြေခံအကြောင်းရင်းတစ်ရပ် ဖြစ်ပါသည်။ အထူးသဖြင့် အရှေ့အလယ်ပိုင်း၊ အာဖရိက၊ အလယ်ပိုင်းအာရှနှင့် တောင်အာရှ၊ အနောက်အာရှဒေသအချို့တွင် ထိုအခြေအနေကို တွေ့ရပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>poverty</b> — ဆင်းရဲနွမ်းပါးမှု</span><span class="vocab-chip"><b>unemployment</b> — အလုပ်လက်မဲ့ဖြစ်မှု</span></div>
+<p class="en-line">Educational inequality occurs when there is racial discrimination due to the ethnic origin of the children, the language they speak, and their religion.</p>
+<p class="mm-line">ကလေးများ၏ လူမျိုးနွယ်စုနောက်ခံ၊ သူတို့ပြောဆိုသော ဘာသာစကားနှင့် ဘာသာရေးတို့ကြောင့် လူမျိုးရေးခွဲခြားဆက်ဆံမှု ရှိလာသောအခါ ပညာရေးမညီမျှမှု ဖြစ်ပေါ်လာပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>infrastructure</b> — အခြေခံအဆောက်အအုံ</span><span class="vocab-chip"><b>adequate</b> — လုံလောက်သော</span></div>
+<p class="en-line">When the language of instruction is not in students’ native tongue, they learn much less and drop out of school earlier.</p>
+<p class="mm-line">သင်ကြားပို့ချသည့် ဘာသာစကားသည် ကျောင်းသားများ၏ မိခင်ဘာသာစကား မဟုတ်ပါက ၎င်းတို့သည် သင်ယူနိုင်မှု နည်းပါးလာပြီး ကျောင်းကိုလည်း ပိုမိုစောစီးစွာ ထွက်ကြပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>inequality</b> — မညီမျှမှု</span></div>
+<p class="en-line">In some areas, due to their culture and tradition, males are favoured to access education, but females have to work in the family home.</p>
+<p class="mm-line">အချို့ဒေသများတွင် ယဉ်ကျေးမှုနှင့် ရိုးရာဓလေ့များကြောင့် အမျိုးသားများကို ပညာရေးရရှိခွင့်တွင် ဦးစားပေးကြသော်လည်း အမျိုးသမီးများမှာ မိသားစုအိမ်တွင်းအလုပ်များကို လုပ်ကိုင်ကြရပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>life expectancy</b> — အသက်ရှင်နေထိုင်နိုင်မည့် ပျမ်းမျှကာလ</span><span class="vocab-chip"><b>malnutrition</b> — အာဟာရချို့တဲ့မှု</span></div>
+<p class="en-line">Thus, women face poverty and unemployment due to a lack of education.</p>
+<p class="mm-line">ထို့ကြောင့် အမျိုးသမီးများသည် ပညာရေးမရရှိမှုကြောင့် ဆင်းရဲနွမ်းပါးမှုနှင့် အလုပ်လက်မဲ့ဖြစ်မှုတို့ကို ရင်ဆိုင်ကြရပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>unemployment</b> — အလုပ်လက်မဲ့ဖြစ်မှု</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 8 — Limited Resources in Developing Countries</span>
+<p class="en-line">In developing countries, many children lack access to education and some get access to education with limited resources – poor education systems, poor infrastructure, insufficient learning materials, and shortage of well-trained teachers.</p>
+<p class="mm-line">ဖွံ့ဖြိုးဆဲနိုင်ငံများတွင် ကလေးအများအပြားသည် ပညာရေးရရှိခွင့် မရှိကြဘဲ၊ အချို့မှာလည်း အကန့်အသတ်ရှိသော အရင်းအမြစ်များဖြင့်သာ ပညာရေးကို ရရှိကြပါသည်။ ထိုအကန့်အသတ်များတွင် အားနည်းသော ပညာရေးစနစ်များ၊ မလုံလောက်သော အခြေခံအဆောက်အအုံများ၊ မလုံလောက်သော သင်ကြားရေးပစ္စည်းများနှင့် ကောင်းစွာလေ့ကျင့်သင်ကြားထားသော ဆရာ၊ ဆရာမများ ရှားပါးမှုတို့ ပါဝင်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>life expectancy</b> — အသက်ရှင်နေထိုင်နိုင်မည့် ပျမ်းမျှကာလ</span><span class="vocab-chip"><b>malnutrition</b> — အာဟာရချို့တဲ့မှု</span></div>
+<p class="en-line">They are not allowed to make their own choices in education, which results in an uncertain future.</p>
+<p class="mm-line">၎င်းတို့သည် မိမိတို့၏ ပညာရေးနှင့်ပတ်သက်၍ ကိုယ်တိုင်ရွေးချယ်ဆုံးဖြတ်ခွင့် မရကြသဖြင့် မသေချာမရေရာသော အနာဂတ်ကို ဖြစ်ပေါ်စေပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>productive</b> — အကျိုးရှိစွာ ထုတ်လုပ်ပေးနိုင်သော</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 9 — Effects of Educational Inequality</span>
+<p class="en-line">What are the effects of educational inequality?</p>
+<p class="mm-line">ပညာရေးမညီမျှမှု၏ သက်ရောက်မှုများမှာ အဘယ်နည်း။</p><div class="line-vocab"><span class="vocab-chip"><b>perspective</b> — အမြင် / ရှုမြင်ပုံ</span></div>
+<p class="en-line">When children do not get equal access to education, they can have less knowledge of the world around them.</p>
+<p class="mm-line">ကလေးများသည် ပညာရေးကို တန်းတူညီမျှ ရရှိခွင့်မရသောအခါ မိမိတို့ပတ်ဝန်းကျင်ရှိ ကမ္ဘာအကြောင်း အသိပညာ နည်းပါးလာနိုင်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>insecurity</b> — လုံခြုံမှုမရှိခြင်း</span></div>
+<p class="en-line">Not having adequate education and skills hinders youths from getting jobs.</p>
+<p class="mm-line">လုံလောက်သော ပညာရေးနှင့် ကျွမ်းကျင်မှုများ မရှိခြင်းသည် လူငယ်များ အလုပ်ရရှိရန် အဟန့်အတားဖြစ်စေပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>equal access</b> — တန်းတူညီမျှ ရရှိခွင့်</span></div>
+<p class="en-line">This results in unemployment, lower life expectancy, malnutrition, a higher chance of chronic diseases, early marriage, and crime rates.</p>
+<p class="mm-line">ထိုအခြေအနေသည် အလုပ်လက်မဲ့ဖြစ်မှု၊ အသက်ရှင်နေထိုင်နိုင်မည့် ပျမ်းမျှကာလ လျော့နည်းမှု၊ အာဟာရချို့တဲ့မှု၊ နာတာရှည်ရောဂါများ ဖြစ်ပွားနိုင်ခြေ မြင့်မားမှု၊ အရွယ်မတိုင်မီ အိမ်ထောင်ပြုမှုနှင့် ရာဇဝတ်မှုနှုန်း မြင့်တက်မှုတို့ကို ဖြစ်ပေါ်စေပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>prerequisite</b> — မဖြစ်မနေလိုအပ်သော အခြေခံအချက်</span></div>
+<p class="en-line">When these children grow up, they may contribute less to the good of the society and more to the ills.</p>
+<p class="mm-line">ထိုကလေးများ ကြီးပြင်းလာသောအခါ လူ့အဖွဲ့အစည်း၏ ကောင်းကျိုးအတွက် ပါဝင်ပံ့ပိုးမှု နည်းပါးပြီး လူ့အဖွဲ့အစည်း၏ ဆိုးကျိုးများတွင် ပိုမိုပါဝင်လာနိုင်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>language barrier</b> — ဘာသာစကားအတားအဆီး</span></div>
+<p class="en-line">If this difference in educational inequality increases over time, children tend to become less open-minded, less flexible, and unable to adapt to changing environmental conditions.</p>
+<p class="mm-line">အချိန်ကြာလာသည်နှင့်အမျှ ဤပညာရေးမညီမျှမှုကွာဟချက် ပိုမိုကြီးမားလာပါက ကလေးများသည် အမြင်ကျယ်မှု နည်းလာခြင်း၊ လိုက်လျောညီထွေပြောင်းလဲနိုင်စွမ်း နည်းလာခြင်းနှင့် ပြောင်းလဲနေသော ပတ်ဝန်းကျင်အခြေအနေများနှင့် လိုက်လျောညီထွေ မဖြစ်နိုင်ခြင်းတို့ ဖြစ်လာနိုင်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>diversity</b> — မတူကွဲပြားမှု</span><span class="vocab-chip"><b>perspective</b> — အမြင် / ရှုမြင်ပုံ</span></div>
+<p class="en-line">These negative impacts cause fear, hatred, and violence in society.</p>
+<p class="mm-line">ဤဆိုးကျိုးများသည် လူ့အဖွဲ့အစည်းအတွင်း ကြောက်ရွံ့မှု၊ မုန်းတီးမှုနှင့် အကြမ်းဖက်မှုတို့ကို ဖြစ်ပေါ်စေပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>educational equality</b> — ပညာရေးတန်းတူညီမျှမှု</span><span class="vocab-chip"><b>diversity</b> — မတူကွဲပြားမှု</span><span class="vocab-chip"><b>prerequisite</b> — မဖြစ်မနေလိုအပ်သော အခြေခံအချက်</span></div>
+<p class="en-line">Not having equal access to education is a loss of democratic values – all citizens must have the same rights and obligations without distinction.</p>
+<p class="mm-line">ပညာရေးကို တန်းတူညီမျှ ရရှိခွင့်မရှိခြင်းသည် ဒီမိုကရေစီတန်ဖိုးများ ဆုံးရှုံးခြင်းပင် ဖြစ်ပါသည်။ နိုင်ငံသားအားလုံးသည် မည်သည့်ခွဲခြားမှုမျှမရှိဘဲ တူညီသော အခွင့်အရေးများနှင့် တာဝန်ဝတ္တရားများ ရှိရမည်ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>pluralism</b> — အမြင်နှင့် မတူကွဲပြားမှုများကို လက်ခံမှု</span><span class="vocab-chip"><b>tolerance</b> — သည်းခံမှု</span></div>
+</div>
+<div class="passage-block">
+<span class="passage-label">Paragraph 10 — What Should We Do?</span>
+<p class="en-line">What should we do to have equal access to education?</p>
+<p class="mm-line">ပညာရေးကို တန်းတူညီမျှ ရရှိခွင့်ရရှိရန် ကျွန်ုပ်တို့ ဘာလုပ်သင့်သနည်း။</p><div class="line-vocab"><span class="vocab-chip"><b>equal access</b> — တန်းတူညီမျှ ရရှိခွင့်</span><span class="vocab-chip"><b>educational equality</b> — ပညာရေးတန်းတူညီမျှမှု</span></div>
+<p class="en-line">A secure environment where no war, violence, or racial or social discrimination exists is a prerequisite.</p>
+<p class="mm-line">စစ်ပွဲ၊ အကြမ်းဖက်မှု၊ လူမျိုးရေး သို့မဟုတ် လူမှုရေးခွဲခြားဆက်ဆံမှု မရှိသော လုံခြုံစိတ်ချရသည့် ပတ်ဝန်းကျင်တစ်ခု ရှိခြင်းသည် မဖြစ်မနေလိုအပ်သော အခြေခံအချက် ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>prerequisite</b> — မဖြစ်မနေလိုအပ်သော အခြေခံအချက်</span><span class="vocab-chip"><b>discrimination</b> — ခွဲခြားဆက်ဆံမှု</span></div>
+<p class="en-line">In other words, this is a place where democratic values exist.</p>
+<p class="mm-line">တစ်နည်းအားဖြင့် ဒီမိုကရေစီတန်ဖိုးများ တည်ရှိသည့် နေရာတစ်ခု ဖြစ်ရမည်ဟု ဆိုလိုပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>pluralism</b> — အမြင်နှင့် မတူကွဲပြားမှုများကို လက်ခံမှု</span></div>
+<p class="en-line">Learning process should be through children’s native language to reduce anxiety caused by the language barrier and they should be free to choose what they want to pursue.</p>
+<p class="mm-line">ဘာသာစကားအတားအဆီးကြောင့် ဖြစ်ပေါ်လာနိုင်သော စိုးရိမ်ပူပန်မှုကို လျှော့ချရန် သင်ယူမှုလုပ်ငန်းစဉ်ကို ကလေးများ၏ မိခင်ဘာသာစကားဖြင့် ဆောင်ရွက်သင့်ပြီး၊ ၎င်းတို့ စိတ်ဝင်စား၍ လိုက်စားလိုသည့် ပညာရေးလမ်းကြောင်းကို လွတ်လပ်စွာ ရွေးချယ်ခွင့် ရှိသင့်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>native tongue</b> — မိခင်ဘာသာစကား</span><span class="vocab-chip"><b>language barrier</b> — ဘာသာစကားအတားအဆီး</span></div>
+<p class="en-line">In addition, organizing campaigns that facilitate diversity and openness to different perspectives will be of great help.</p>
+<p class="mm-line">ထို့အပြင် မတူကွဲပြားမှုများကို လက်ခံနိုင်ရေးနှင့် မတူညီသော အမြင်များအပေါ် ပွင့်လင်းစွာ လက်ခံနိုင်ရေးကို အထောက်အကူပြုသည့် လှုပ်ရှားမှုများကို စီစဉ်ခြင်းသည်လည်း အလွန်အထောက်အကူဖြစ်ပါလိမ့်မည်။</p><div class="line-vocab"><span class="vocab-chip"><b>diversity</b> — မတူကွဲပြားမှု</span><span class="vocab-chip"><b>perspective</b> — အမြင် / ရှုမြင်ပုံ</span></div>
+<p class="en-line">If provided with the above favourable conditions, youths will become more productive members of society who understand democratic values such as equality, freedom, justice, pluralism, tolerance, and respect.</p>
+<p class="mm-line">အထက်ဖော်ပြပါ ကောင်းမွန်သင့်လျော်သော အခြေအနေများကို ပံ့ပိုးပေးနိုင်ပါက လူငယ်များသည် တန်းတူညီမျှမှု၊ လွတ်လပ်မှု၊ တရားမျှတမှု၊ အမြင်မျိုးစုံလက်ခံမှု၊ သည်းခံမှုနှင့် လေးစားမှုတို့ကဲ့သို့သော ဒီမိုကရေစီတန်ဖိုးများကို နားလည်သဘောပေါက်သည့် လူ့အဖွဲ့အစည်းအတွက် ပိုမိုအကျိုးရှိစွာ ပါဝင်ပံ့ပိုးနိုင်သော အဖွဲ့ဝင်များ ဖြစ်လာကြမည်ဖြစ်ပါသည်။</p><div class="line-vocab"><span class="vocab-chip"><b>productive</b> — အကျိုးရှိစွာ ထုတ်လုပ်ပေးနိုင်သော</span><span class="vocab-chip"><b>educational equality</b> — ပညာရေးတန်းတူညီမျှမှု</span><span class="vocab-chip"><b>diversity</b> — မတူကွဲပြားမှု</span><span class="vocab-chip"><b>prerequisite</b> — မဖြစ်မနေလိုအပ်သော အခြေခံအချက်</span><span class="vocab-chip"><b>pluralism</b> — အမြင်နှင့် မတူကွဲပြားမှုများကို လက်ခံမှု</span><span class="vocab-chip"><b>tolerance</b> — သည်းခံမှု</span></div>
+</div>
+</div>
+</section>
+<section class="card">
+<div class="card-head">
+<h2>🔑 Key Vocabulary</h2>
+<p>စာပိုဒ်ထဲက အရေးကြီးသော ဝေါဟာရများနှင့် မြန်မာအဓိပ္ပာယ်များ</p>
+</div>
+<div class="card-body">
+<div class="vocab-grid">
+<div class="vocab"><b>equal access</b><span class="meaning">တန်းတူညီမျှ ရရှိခွင့်</span><span class="example">equal access to education</span></div>
+<div class="vocab"><b>vital</b><span class="meaning">အလွန်အရေးကြီးသော / မရှိမဖြစ်လိုအပ်သော</span></div>
+<div class="vocab"><b>development</b><span class="meaning">ဖွံ့ဖြိုးတိုးတက်မှု</span></div>
+<div class="vocab"><b>productive</b><span class="meaning">အကျိုးရှိစွာ ထုတ်လုပ်ပေးနိုင်သော</span></div>
+<div class="vocab"><b>workforce</b><span class="meaning">အလုပ်သမားအင်အားစု</span></div>
+<div class="vocab"><b>intellectual</b><span class="meaning">ပညာရှင် / ဉာဏ်ပညာရှင်</span></div>
+<div class="vocab"><b>technician</b><span class="meaning">နည်းပညာရှင်</span></div>
+<div class="vocab"><b>educational equality</b><span class="meaning">ပညာရေးတန်းတူညီမျှမှု</span></div>
+<div class="vocab"><b>socioeconomic status</b><span class="meaning">လူမှုစီးပွားရေးအခြေအနေ</span></div>
+<div class="vocab"><b>geographic location</b><span class="meaning">ပထဝီဝင်တည်နေရာ</span></div>
+<div class="vocab"><b>disadvantaged</b><span class="meaning">အခွင့်အလမ်းနည်းပါးသော / အခက်အခဲရှိသော</span></div>
+<div class="vocab"><b>abandon</b><span class="meaning">စွန့်လွှတ်သည်</span></div>
+<div class="vocab"><b>inequality</b><span class="meaning">မညီမျှမှု</span></div>
+<div class="vocab"><b>poverty</b><span class="meaning">ဆင်းရဲနွမ်းပါးမှု</span></div>
+<div class="vocab"><b>unemployment</b><span class="meaning">အလုပ်လက်မဲ့ဖြစ်မှု</span></div>
+<div class="vocab"><b>illiteracy</b><span class="meaning">စာမတတ်မှု</span></div>
+<div class="vocab"><b>drop-out rate</b><span class="meaning">ကျောင်းထွက်နှုန်း</span></div>
+<div class="vocab"><b>political instability</b><span class="meaning">နိုင်ငံရေးမတည်ငြိမ်မှု</span></div>
+<div class="vocab"><b>internal displacement</b><span class="meaning">ပြည်တွင်းနေရပ်စွန့်ခွာနေထိုင်ရမှု</span></div>
+<div class="vocab"><b>insecurity</b><span class="meaning">လုံခြုံမှုမရှိခြင်း</span></div>
+<div class="vocab"><b>human rights violations</b><span class="meaning">လူ့အခွင့်အရေးချိုးဖောက်မှုများ</span></div>
+<div class="vocab"><b>natural disaster</b><span class="meaning">သဘာဝဘေးအန္တရာယ်</span></div>
+<div class="vocab"><b>climate change</b><span class="meaning">ရာသီဥတုပြောင်းလဲမှု</span></div>
+<div class="vocab"><b>rely on</b><span class="meaning">အားကိုးသည် / မှီခိုသည်</span></div>
+<div class="vocab"><b>discrimination</b><span class="meaning">ခွဲခြားဆက်ဆံမှု</span></div>
+<div class="vocab"><b>ethnic origin</b><span class="meaning">လူမျိုးနွယ်စုနောက်ခံ</span></div>
+<div class="vocab"><b>native tongue</b><span class="meaning">မိခင်ဘာသာစကား</span></div>
+<div class="vocab"><b>infrastructure</b><span class="meaning">အခြေခံအဆောက်အအုံ</span></div>
+<div class="vocab"><b>adequate</b><span class="meaning">လုံလောက်သော</span></div>
+<div class="vocab"><b>life expectancy</b><span class="meaning">အသက်ရှင်နေထိုင်နိုင်မည့် ပျမ်းမျှကာလ</span></div>
+<div class="vocab"><b>malnutrition</b><span class="meaning">အာဟာရချို့တဲ့မှု</span></div>
+<div class="vocab"><b>prerequisite</b><span class="meaning">မဖြစ်မနေလိုအပ်သော အခြေခံအချက်</span></div>
+<div class="vocab"><b>language barrier</b><span class="meaning">ဘာသာစကားအတားအဆီး</span></div>
+<div class="vocab"><b>diversity</b><span class="meaning">မတူကွဲပြားမှု</span></div>
+<div class="vocab"><b>perspective</b><span class="meaning">အမြင် / ရှုမြင်ပုံ</span></div>
+<div class="vocab"><b>pluralism</b><span class="meaning">အမြင်နှင့် မတူကွဲပြားမှုများကို လက်ခံမှု</span></div>
+<div class="vocab"><b>tolerance</b><span class="meaning">သည်းခံမှု</span></div>
+</div>
+</div>
+</section>
+<section class="card">
+<div class="card-head">
+<h2>💡 Key Ideas — အဓိကအချက်များ</h2>
+<p>စာပိုဒ်တစ်ခုလုံးကို မှတ်မိလွယ်အောင် အဓိကအကြောင်းအရာများကို စုစည်းထားခြင်း</p>
+</div>
+<div class="card-body">
+<div class="points">
+<div class="point"><div class="point-num">1</div><p><b>Educational equality</b> means providing children with the same resources and fair access to quality education.<span class="mm">ပညာရေးတန်းတူညီမျှမှုဆိုသည်မှာ ကလေးများအား တူညီသောအရင်းအမြစ်များနှင့် အရည်အသွေးရှိသော ပညာရေးကို တရားမျှတစွာ ရရှိခွင့်ပေးခြင်း ဖြစ်သည်။</span></p></div>
+<div class="point"><div class="point-num">2</div><p>Educational inequality is caused by <b>socioeconomic problems, political instability, natural disasters and climate change, and race/gender discrimination.</b><span class="mm">ပညာရေးမညီမျှမှု၏ အကြောင်းရင်းများမှာ လူမှုစီးပွားရေးအခက်အခဲ၊ နိုင်ငံရေးမတည်ငြိမ်မှု၊ သဘာဝဘေးနှင့် ရာသီဥတုပြောင်းလဲမှု၊ လူမျိုးနှင့် ကျား/မအပေါ် ခွဲခြားဆက်ဆံမှုတို့ ဖြစ်သည်။</span></p></div>
+<div class="point"><div class="point-num">3</div><p>Limited education can lead to <b>unemployment, poor health and nutrition, early marriage, crime, and social problems.</b><span class="mm">ပညာရေးမလုံလောက်မှုသည် အလုပ်လက်မဲ့ဖြစ်မှု၊ ကျန်းမာရေးနှင့် အာဟာရဆိုင်ရာပြဿနာများ၊ အရွယ်မတိုင်မီအိမ်ထောင်ပြုမှု၊ ရာဇဝတ်မှုနှင့် လူမှုရေးပြဿနာများကို ဖြစ်စေနိုင်သည်။</span></p></div>
+<div class="point"><div class="point-num">4</div><p>Equal access requires a <b>safe, democratic and non-discriminatory environment</b> and learning opportunities in children’s native language.<span class="mm">တန်းတူညီမျှပညာရေးရရှိရန် လုံခြုံပြီး ဒီမိုကရေစီတန်ဖိုးများရှိကာ ခွဲခြားဆက်ဆံမှုမရှိသော ပတ်ဝန်းကျင်နှင့် မိခင်ဘာသာစကားဖြင့် သင်ယူခွင့် လိုအပ်သည်။</span></p></div>
+<div class="point"><div class="point-num">5</div><p>Education can help young people become productive members who understand <b>equality, freedom, justice, pluralism, tolerance and respect.</b><span class="mm">ပညာရေးသည် လူငယ်များကို တန်းတူညီမျှမှု၊ လွတ်လပ်မှု၊ တရားမျှတမှု၊ အမြင်မျိုးစုံလက်ခံမှု၊ သည်းခံမှုနှင့် လေးစားမှုတို့ကို နားလည်သော အကျိုးရှိသည့် လူ့အဖွဲ့အစည်းဝင်များ ဖြစ်လာစေရန် ကူညီပေးနိုင်သည်။</span></p></div>
+</div>
+</div>
+</section>
+<div class="next">
+<a href="comprehension3.html">Next: Comprehension →</a>
+</div>
+</main>
+</div>
+<div class="footer">Grade-12 English Learning Hub • Unit 3 • Equal Access to Education • Learn • Include • Empower</div>
+<script>
+(function(){
+ const keys=["theme","siteTheme","g12-theme"];
+ function getTheme(){
+   const v=keys.map(k=>localStorage.getItem(k)).find(Boolean);
+   return v==="dark"?"dark":"light";
+ }
+ function applyTheme(){
+   const t=getTheme();
+   document.documentElement.setAttribute("data-theme",t);
+   const btn=document.getElementById("themeBtn");
+   if(btn) btn.textContent=t==="dark"?"🌙":"☀️";
+ }
+ applyTheme();
+ document.getElementById("themeBtn").addEventListener("click",()=>{
+   const next=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";
+   keys.forEach(k=>localStorage.setItem(k,next));
+   applyTheme();
+ });
+ window.addEventListener("storage",e=>{
+   if(keys.includes(e.key)) applyTheme();
+ });
+ const sidebar=document.getElementById("sidebar");
+ const overlay=document.getElementById("overlay");
+ const menuBtn=document.getElementById("menuBtn");
+ function closeMenu(){sidebar.classList.remove("open");overlay.classList.remove("show")}
+ menuBtn?.addEventListener("click",()=>{sidebar.classList.add("open");overlay.classList.add("show")});
+ overlay.addEventListener("click",closeMenu);
+ document.querySelectorAll(".side-link").forEach(a=>a.addEventListener("click",closeMenu));
+})();
+</script>
+
+<script>
+(() => {
+  const hero = document.querySelector('.hero');
+  const copy = document.getElementById('heroCopy');
+  const visual = document.getElementById('heroVisual');
+  if (!hero || !copy || !visual || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  let raf = 0;
+  hero.addEventListener('pointermove', (e) => {
+    const r = hero.getBoundingClientRect();
+    const x = (e.clientX-r.left)/r.width-.5;
+    const y = (e.clientY-r.top)/r.height-.5;
+    cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(()=>{
+      copy.style.setProperty('--mx', `${x*7}px`);
+      copy.style.setProperty('--my', `${y*5}px`);
+      visual.style.setProperty('--vx', `${x*-16}px`);
+      visual.style.setProperty('--vy', `${y*-12}px`);
+    });
+  });
+  hero.addEventListener('pointerleave', () => {
+    copy.style.setProperty('--mx','0px'); copy.style.setProperty('--my','0px');
+    visual.style.setProperty('--vx','0px'); visual.style.setProperty('--vy','0px');
+  });
+})();
+</script>
+</body>
+</html>

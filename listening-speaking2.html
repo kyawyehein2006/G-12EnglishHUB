@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Listening and Speaking 2 - AI & Robotics</title>
+<style>
+:root{--bg:#f3f7ff;--card:#fff;--text:#172033;--muted:#627089;--line:#dce6f3;--a:#5b5ce2;--b:#11b7a5;--soft:#eef2ff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body.dark{--bg:#07111f;--card:#0e1b2d;--text:#edf4ff;--muted:#adbad0;--line:#243650;--soft:#14233a}
+.hero{padding:55px 18px 45px;color:white;background:linear-gradient(135deg,#071a36,#123563 55%,#174b55);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:30px 30px}
+.heroIn{max-width:1100px;margin:auto;position:relative}
+.kicker{font-weight:800;letter-spacing:2px;color:#a9fff4;font-size:13px}
+h1{font-size:clamp(40px,8vw,78px);line-height:1;margin:12px 0 18px;letter-spacing:-2px}
+.hero p{max-width:800px;color:#dceaff}
+.robot{position:absolute;right:5%;top:5%;font-size:85px;opacity:.85}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{padding:6px 11px;border:1px solid #ffffff33;border-radius:20px;background:#ffffff12;font-size:13px}
+.header{position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:10px 14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:800;margin-right:auto}
+.nav a,.nav button,.menu a{padding:8px 11px;border:1px solid var(--line);border-radius:11px;background:var(--soft);color:var(--text);text-decoration:none;cursor:pointer}
+.wrap{max-width:1100px;margin:28px auto;padding:0 14px}
+.menu{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.section{margin:25px 0}
+.title{display:flex;align-items:center;gap:9px}
+.title .pill,.tag{background:var(--soft);color:var(--a);font-weight:800;border-radius:20px;padding:4px 9px;font-size:12px}
+.card,.q,.tape{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:12px}
+audio{width:100%;margin:10px 0}
+.tip{padding:13px 15px;background:var(--soft);border-left:4px solid var(--b);border-radius:10px;margin-top:13px}
+.btn,button{border:0;border-radius:11px;padding:10px 14px;font-weight:800;cursor:pointer}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--a),var(--b));color:white;text-decoration:none;margin-top:13px}
+.q .en{font-weight:700;margin-top:7px}
+.q .en span{color:var(--a);letter-spacing:2px}
+.q button{margin-top:12px;background:var(--soft);color:var(--a);border:1px solid var(--line)}
+.ans{display:none;margin-top:10px;padding:10px 13px;background:#e8faf6;border-left:4px solid var(--b);border-radius:9px}
+body.dark .ans{background:#102b29}
+.mm{color:var(--muted)}
+.speaker{padding:16px 0;border-bottom:1px dashed var(--line)}
+.speaker:last-child{border-bottom:0}
+.speaker h3{color:var(--a);margin-bottom:7px}
+.speaker p{white-space:pre-line}
+#scriptBox{display:none;margin-top:16px}
+footer{margin-top:45px;padding:25px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:650px){.robot{right:-20px;opacity:.22}.brand{width:100%}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="heroIn">
+<div class="robot">🤖</div>
+<div class="kicker">UNIT 2 • LISTENING & SPEAKING</div>
+<h1>AI & ROBOTICS</h1>
+<p>Listening, speaking and discussion practice about artificial intelligence, robots, their benefits, possible concerns, and how people use them.</p>
+<div class="tags"><span>Active Listening</span><span>AI</span><span>Robotics</span><span>Speaking</span><span>Discussion</span></div>
+</div>
+</section>
+
+<header class="header"><nav class="nav">
+<div class="brand">Grade 12 English • Unit 2</div>
+<a href="meaning2.html">Meaning</a>
+<a href="unit2.html">Reading</a>
+<a href="comprehension2.html">Comprehension</a> <a href="grammar2.html">Grammar</a>
+<button onclick="toggleTheme()">☾ Light / Dark</button>
+</nav></header>
+
+<main class="wrap">
+<div class="menu">
+<a href="#listening">🎧 Listening</a> <a href="#speaking">🗣️ Speaking</a><a href="#discussion">💬 Discussion</a>
+</div>
+
+<section id="listening" class="section">
+<div class="title"><span class="pill">2D</span><h2>Listening and Speaking</h2></div>
+<div class="card">
+<h3>🎧 A. Listen to the views of three people on the use of AI.</h3>
+<p>Complete the following sentences with the appropriate words.</p>
+<div class="tip">အသံဖိုင်ကို <b>အနည်းဆုံး ၂ ကြိမ်</b> နားထောင်ရန် အကြံပြုပါသည်။ ပထမအကြိမ်တွင် အဓိကအကြောင်းအရာ၊ ဒုတိယအကြိမ်တွင် အသေးစိတ်အချက်များကို အာရုံစိုက်ပါ။
+</div>
+<audio controls preload="metadata">
+<source src="G12 English_U 2_AI & Robotics (Listening Audio file).mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<div class="tip">🔎 <b>Listening Tip</b><br>၂ ကြိမ်နားထောင်ပြီး မရသေးသောအချက်များရှိမှသာ Tape Script ကို ဖွင့်ကြည့်ပါ။</div> 
+
+<button class="btn" onclick="showAns('AA1')">📜 Tape Script ကြည့်မည်</button>
+<div id="AA1" class="ans">
+<div class="speaker"><h3>Cherry (35 years old)</h3><p>It'll be nice to have a domestic robot at home. I wish I had one. You know, I am a mother of three kids working as an accountant at a travel agency which is far from my place. Arriving at work in time is one of the biggest challenges for me. I need to finish all the household chores before I leave home. When I get back from the office, I need to prepare dinner for the family. I am absolutely exhausted afterwards. So, I want a domestic robot that can clean the house, do the laundry and prepare meals for us. Robots would make our lives comfortable and better.</p></div> <div class="speaker"><h3>Steve (55 years old)</h3><p>Well, I know that the development of AI can make our lives easier and increase productivity. So far it has been useful for us in workplace or at home. Nowadays, in some parts of the world human workers are being replaced by AI bots because they can do what human workers can&#x27;t. We cannot predict what will happen in the future. With advanced technology, the evolution of AI bots is rapidly changing our lives. Today, they are our friends, tomorrow they may become our enemies. Who knows?</p></div><div class="speaker"><h3>Harry (15 years old)</h3><p>Oh! I am not worried about the rapid emergence of AI. For us, ChatGPT is very useful. When I have written assignments, I sometimes use GPT 4 to have some ideas about what to write. No, I don&#x27;t copy whatever it says. I just use it to get inspiration for my assignments. I don&#x27;t think they will become a threat to us. They are useful to all people - young or old, at all time. I think AI has become a “can’t-live-without” technology. Am I right? A big thank to those who created AI.</p></div></div>
+</div>
+
+
+
+</div>
+</section>
+
+<section class="section"><div class="title"><span class="pill">A</span><h2>Complete the sentences</h2></div><div class="q"><div class="tag">A1</div><div class="en">Cherry wants to have a <span>________</span> robot in her house to help her with her household chores.</div><button onclick="showAns('a1')">အဖြေကြည့်မည်</button><div id="a1" class="ans">Answer: <b>domestic</b></div></div><div class="q"><div class="tag">A2</div><div class="en">It is not easy for Cherry to arrive at her <span>________</span> in time.</div><button onclick="showAns('a2')">အဖြေကြည့်မည်</button><div id="a2" class="ans">Answer: <b>work</b></div></div><div class="q"><div class="tag">A3</div><div class="en">Cherry is too <span>________</span> to prepare dinner for her family when she gets back from work.</div><button onclick="showAns('a3')">အဖြေကြည့်မည်</button><div id="a3" class="ans">Answer: <b>exhausted</b></div></div><div class="q"><div class="tag">A4</div><div class="en">Steve believes that our lives have become <span>________</span> with advancements in AI.</div><button onclick="showAns('a4')">အဖြေကြည့်မည်</button><div id="a4" class="ans">Answer: <b>easier</b></div></div><div class="q"><div class="tag">A5</div><div class="en">According to Steve, AI bots are displacing <span>________</span> workers in some workplaces.</div><button onclick="showAns('a5')">အဖြေကြည့်မည်</button><div id="a5" class="ans">Answer: <b>human</b></div></div><div class="q"><div class="tag">A6</div><div class="en">Harry thinks AI is not a <span>________</span> to us but useful to people of all ages.</div><button onclick="showAns('a6')">အဖြေကြည့်မည်</button><div id="a6" class="ans">Answer: <b>threat</b></div></div></section>
+
+<section class="section"><div class="title"><span class="pill">B</span><h2>True or False</h2></div><div class="q"><div class="tag">B1</div><div class="en">Cherry is a busy working mother.</div><button onclick="showAns('b1')">အဖြေကြည့်မည်</button><div id="b1" class="ans">Answer: <b>True</b></div></div><div class="q"><div class="tag">B2</div><div class="en">Steve is not aware that the use of AI can increase productivity.</div><button onclick="showAns('b2')">အဖြေကြည့်မည်</button><div id="b2" class="ans">Answer: <b>False</b></div></div><div class="q"><div class="tag">B3</div><div class="en">Steve hopes that with the advanced technology, AI robots will become more useful to humans in the future.</div><button onclick="showAns('b3')">အဖြေကြည့်မည်</button><div id="b3" class="ans">Answer: <b>False</b></div></div><div class="q"><div class="tag">B4</div><div class="en">Harry thinks the emergence of AI is very helpful to us.</div><button onclick="showAns('b4')">အဖြေကြည့်မည်</button><div id="b4" class="ans">Answer: <b>True</b></div></div><div class="q"><div class="tag">B5</div><div class="en">Harry uses all the ideas Chat GPT gives when he writes his assignments.</div><button onclick="showAns('b5')">အဖြေကြည့်မည်</button><div id="b5" class="ans">Answer: <b>False</b></div></div></section>
+
+<section id="speaking" class="section">
+<div class="title"><span class="pill">C-F</span><h2>Speaking Practice</h2></div>
+<div class="card">
+<h3>C. Listen to their views again. Which view do you agree with?</h3>
+<p class="mm">၎င်းတို့၏အမြင်များကို ထပ်မံနားထောင်ပြီး မည်သည့်အမြင်ကို သင်သဘောတူသနည်း။</p>
+<h3>D. Work with a partner. Compare and discuss your ideas.</h3>
+<p class="mm">မိတ်ဖက်တစ်ဦးနှင့်အတူ သင့်အတွေးအမြင်များကို နှိုင်းယှဉ်ဆွေးနွေးပါ။</p>
+<h3>E. Interview your partner using the questions below.</h3>
+<ol>
+<li>Do you want a robot friend? Why or why not?<div class="mm">စက်ရုပ်မိတ်ဆွေတစ်ဦးကို သင်လိုချင်ပါသလား။ ဘာကြောင့်လဲ။</div></li>
+<li>Do you think robots will become our friends one day? Why or why not?<div class="mm">တစ်နေ့တွင် စက်ရုပ်များသည် ကျွန်ုပ်တို့၏မိတ်ဆွေများ ဖြစ်လာမည်ဟု သင်ထင်ပါသလား။</div></li>
+<li>What is something you want a robot to help you with? Why?<div class="mm">စက်ရုပ်က သင့်အား မည်သည့်အရာတွင် ကူညီပေးစေချင်သနည်း။ ဘာကြောင့်လဲ။</div></li>
+</ol>
+<h3>F. Tell the class about your friend's views on a robot friend.</h3>
+<p class="mm">သင့်မိတ်ဆွေ၏ စက်ရုပ်မိတ်ဆွေအပေါ် အမြင်ကို အတန်းအား ပြောပြပါ။</p>
+</div>
+</section>
+
+<section id="discussion" class="section">
+<div class="title"><span class="pill">2E</span><h2>Discussion</h2></div>
+<div class="card">
+<h3>A. Think about the following points and make some brief notes.</h3>
+<ol>
+<li>the benefits of AI <span class="mm">— AI ၏ အကျိုးကျေးဇူးများ</span></li>
+<li>some of the potential dangers of AI <span class="mm">— AI ၏ ဖြစ်နိုင်ခြေရှိသော အန္တရာယ်အချို့</span></li>
+<li>how people are currently using it <span class="mm">— လက်ရှိ လူများ AI ကို မည်သို့အသုံးပြုနေကြသနည်း</span></li>
+</ol>
+<h3>B. Work in pairs and share your notes. Ask and answer the questions. Ask for further information.</h3>
+<p class="mm">နှစ်ယောက်တစ်တွဲလုပ်ပြီး သင့်မှတ်စုများကို မျှဝေပါ။ မေးခွန်းများကို အပြန်အလှန်မေးဖြေပြီး ထပ်မံသိရှိလိုသည့် အချက်အလက်များကို မေးပါ။</p>
+</div>
+</section>
+</main>
+<footer>Grade 12 English Learning Hub • Unit 2 • AI & Robotics • Listen • Speak • Discuss</footer>
+
+<script>
+    
+function showAns(id) {
+ var x=document.getElementById(id);
+ if(x) x.style.display=(x.style.display==="block" ? "none" : "block");
+}
+function showScript() {
+ document.getElementById("scriptBox").style.display="block";
+}
+function applyTheme(t) {
+ document.body.classList.toggle("dark",t==="dark");
+ localStorage.setItem("theme",t);
+ localStorage.setItem("siteTheme",t);
+ localStorage.setItem("g12-theme",t);
+}
+function toggleTheme() {
+ applyTheme(document.body.classList.contains("dark") ? "light" : "dark");
+}
+(function(){
+ var t=localStorage.getItem("theme")||localStorage.getItem("siteTheme")||localStorage.getItem("g12-theme");
+ if(t) document.body.classList.toggle("dark",t==="dark");
+})();
+window.addEventListener("storage",function(e){
+ if((e.key==="theme"||e.key==="siteTheme"||e.key==="g12-theme")&&e.newValue)
+ document.body.classList.toggle("dark",e.newValue==="dark");
+});
+</script>
+
+</body>
+</html>

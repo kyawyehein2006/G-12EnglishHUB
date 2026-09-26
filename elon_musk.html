@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story of Elon Musk</title>
+    <!-- Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --accent-blue: #2563eb;
+            --bg-page: #f8fafc;
+            --surface-card: #ffffff;
+            --text-title: #0f172a;
+            --text-body: #334155;
+            --border-color: #e2e8f0;
+            --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', 'Padauk', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface-card);
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Article Main Title */
+        .article-header {
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .category-tag {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-size: 2.1rem;
+            color: var(--text-title);
+            font-weight: 700;
+            line-height: 1.55;
+        }
+
+        /* Header Layout: Square Image + First Section */
+        .intro-section {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        /* Professional Square Image */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px; /* Professional rounded square */
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            flex-shrink: 0;
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+        }
+
+        /* Article Subheadings */
+        .section-heading {
+            font-size: 1.3rem;
+            color: var(--text-title);
+            font-weight: 700;
+            margin: 36px 0 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-heading::before {
+            content: '';
+            width: 4px;
+            height: 22px;
+            background-color: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: var(--text-body);
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: none;
+        }
+
+        .quote-text {
+            color: #1e3a8a;
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .quote-author {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* End Profile Data Box (Quick Facts) */
+        .facts-card {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 48px;
+        }
+
+        .facts-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-title);
+            font-weight: 700;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .fact-item {
+            font-size: 0.92rem;
+        }
+
+        .fact-item span {
+            display: block;
+            color: #64748b;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .fact-item strong {
+            color: var(--text-title);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .article-container { padding: 24px 18px; }
+            .intro-section { flex-direction: column; }
+            .profile-img { width: 100%; height: 240px; }
+            .article-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <article class="article-container">
+        
+        <!-- Header -->
+        <div class="article-header">
+            <div class="category-tag">Biography & Inspiration</div>
+            <h1 class="article-title">စကြဝဠာကို ပြောင်းလဲချင်သည့် အိပ်မက်မက်သူ - အီလွန်မက်စ် (Elon Musk)</h1>
+        </div>
+
+        <!-- Intro with Square Photo -->
+        <div class="intro-section">
+            <img src="images/musk.jpg" alt="Elon Musk" class="profile-img">
+            <div class="intro-text">
+                 <p>
+                    အာဖရိကတောင်ပိုင်း ပရီတိုရီယာမြို့၏ ငယ်စဉ်ဘဝသည် အီလွန်မက်စ်အတွက် သာယာလှသည်တော့ မဟုတ်ခဲ့ပါ။ ကျောင်းတွင် အမြဲလိုလို အနိုင်ကျင့်ခံရပြီး စာအုပ်များ၊ ကွန်ပျူတာများနှင့်သာ အချိန်ကုန်ဆုံးခဲ့သည့် ထိုကောင်လေးသည် အသက် ၁၂ နှစ်အရွယ်မှာပင် ကိုယ်ပိုင်ဂိမ်းတစ်ခုကို ရေးဆွဲရောင်းချနိုင်ခဲ့သည်။ သူ၏ စိတ်ကူးထဲတွင် ကမ္ဘာမြေ၏ စည်းမျဉ်းများထက် ပိုမိုကျယ်ပြန့်သည့် အရာတစ်ခုခုကို ပြုလုပ်ချင်သည့် အိပ်မက်များ အမြဲတမ်း ကိန်းအောင်းနေခဲ့သည်။
+                </p>
+            </div>
+        </div>
+
+        <!-- Article Body -->
+       
+        <p>
+            အမေရိကန်သို့ ရောက်ရှိလာပြီး ပင်ဆယ်ဗေးနီးယားတက္ကသိုလ်မှ ဘွဲ့ရရှိခဲ့ပြီးနောက်၊ စတန်းဖို့ဒ်တက္ကသိုလ်တွင် ပါရဂူဘွဲ့ ဆက်လက်သင်ယူရန် ဝင်ခွင့်ရခဲ့သော်လည်း ၂ ရက်အကြာတွင် ကျောင်းထွက်ခဲ့သည်။ ထိုအချိန်က စတင်ခေတ်စားလာသည့် အင်တာနက်နည်းပညာဖြင့် Zip2 နှင့် PayPal တို့ကို စတင်တည်ထောင်ခဲ့ပြီး၊ ထိုကုမ္ပဏီများကို ပြန်လည်ရောင်းချရာမှ ရရှိလာသည့် သန်းပေါင်းများစွာသော ဒေါ်လာများကို သာမန်လူများကဲ့သို့ အေးဆေးအနားယူရန် မသုံးခဲ့ပေ။
+        </p>
+
+       
+        <p>
+            သူသည် ရရှိလာသည့် ပိုင်ဆိုင်မှုအားလုံးကို စွန့်စားမှုကြီးသည့် လုပ်ငန်းနှစ်ခုထဲသို့ အကုန်ပုံအောလိုက်သည်။ တစ်ခုမှာ လူသူမသေချာသည့် အာကာသခရီးသွားလာရေး (SpaceX) ဖြစ်ပြီး၊ အခြားတစ်ခုမှာ ထိုစဉ်က မဖြစ်နိုင်ဟု လူတိုင်းလှောင်ပြောင်ခဲ့ကြသည့် လျှပ်စစ်ကားထုတ်လုပ်ရေး (Tesla) ဖြစ်သည်။
+        </p>
+        <p>
+            ဒုံးပျံများ ပျက်စီးခဲ့ပြီး ကုမ္ပဏီနှစ်ခုလုံး ဒေဝါလီခံရလုနီးပါး ဆိုးရွားသည့် အခြေအနေများကို ကြုံတွေ့ခဲ့ရသော်လည်း၊ သူ၏ ဇွဲကြောင့် ပြန်လည်သုံးစွဲနိုင်သော ဒုံးပျံများကို အောင်မြင်စွာ လွှတ်တင်နိုင်ခဲ့သလို Tesla ကိုလည်း ကမ္ဘာ့တန်ဖိုးအရှိဆုံး မော်တော်ယာဉ်ကုမ္ပဏီ ဖြစ်လာစေခဲ့သည်။
+        </p>
+
+        <!-- Quote -->
+        <div class="quote-box">
+            <div class="quote-text">"တစ်ခုခုက တကယ်ကို အရေးကြီးနေတယ်ဆိုရင်၊ အောင်မြင်ဖို့ အခွင့်အလမ်းက သင့်ဘက်မှာ မရှိရင်တောင်မှ သင် အဲ့ဒါကို လုပ်ဆောင်ရမှာပဲ။"</div>
+            <div class="quote-author">— Elon Musk</div>
+        </div>
+
+       
+        <p>
+            ယနေ့တွင် အီလွန်မက်စ်သည် Tesla နှင့် SpaceX သာမက၊ လူမှုကွန်ရက် Platform တစ်ခုဖြစ်သည့် X (Twitter) ကို လွှမ်းမိုးထားပြီး၊ လူသားဦးနှောက်နှင့် ကွန်ပျူတာ ချိတ်ဆက်ပေးမည့် Neuralink ကဲ့သို့ စိတ်ကူးယဉ်ဆန်သည့် နည်းပညာများကိုလည်း လက်တွေ့အကောင်အထည်ဖော်နေသည်။ သူ၏ အဓိက ရည်မှန်းချက်မှာ လူသားများကို အင်္ဂါဂြိုဟ် (Mars) ပေါ်သို့ ပို့ဆောင်ပေးရန်နှင့် လူသားမျိုးနွယ် တစ်ခုလုံး၏ အနာဂတ်ကို ဘေးကင်းစေရန်ဖြစ်သည်။
+        </p>
+
+        <!-- Quick Facts Section at the End -->
+        <div class="facts-card">
+            <h3>📌 Facts  (အချက်အလက်များ)</h3>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <span>Full Name</span>
+                    <strong>Elon Reeve Musk</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Date of Birth</span>
+                    <strong>28 June 1971</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Birthplace</span>
+                    <strong>Pretoria, South Africa</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Education</span>
+                    <strong>University of Pennsylvania</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Key Companies</span>
+                    <strong>SpaceX, Tesla, X, Neuralink</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Key Vision</span>
+                    <strong>Multi-planetary Life (Mars)</strong>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grade-12 English Learning Hub — Unit 8 Decibel Dilemma: A Call for Change in Myanmar">
+<title>Unit 8 — Decibel Dilemma | Grade-12 English Learning Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f8;--surface:#fff;--surface2:#f7f9fa;--text:#18252c;--muted:#65747b;--primary:#d45a3a;--accent:#f0a43b;--deep:#17252a;--line:#dfe6e8;--shadow:0 18px 55px rgba(31,52,61,.13)}
+html[data-theme="dark"]{--bg:#091214;--surface:#111c20;--surface2:#17262a;--text:#eef5f3;--muted:#afc0c0;--primary:#ff7954;--accent:#ffc15c;--deep:#050c0e;--line:#2a3b3f;--shadow:0 18px 55px rgba(0,0,0,.38)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Padauk",system-ui,sans-serif;line-height:1.7}a{text-decoration:none;color:inherit}button{font:inherit}
+.header{height:72px;position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand-mark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:23px;box-shadow:0 8px 25px rgba(212,90,58,.25)}.brand em{color:var(--primary);font-style:normal}
+.header-actions{display:flex;gap:9px}.icon-btn{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--text);cursor:pointer}.menu-btn{display:none}
+.hero{position:relative;overflow:hidden;min-height:500px;color:#fff;background:linear-gradient(125deg,#080d0f 0%,#1b2b2c 45%,#744126 100%)}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 30%,rgba(255,177,75,.35),transparent 18%),radial-gradient(circle at 25% 70%,rgba(214,76,45,.25),transparent 25%),linear-gradient(90deg,rgba(0,0,0,.35),transparent 60%)}
+.soundwaves{position:absolute;right:-80px;top:-90px;width:550px;height:550px;border-radius:50%;border:1px solid rgba(255,194,105,.28);box-shadow:0 0 0 38px rgba(255,194,105,.05),0 0 0 80px rgba(255,194,105,.035),0 0 0 125px rgba(255,194,105,.025)}
+.soundwaves:after{content:"";position:absolute;inset:70px;border-radius:50%;border:1px dashed rgba(255,255,255,.25)}
+.hero-inner{max-width:1240px;margin:auto;min-height:500px;padding:65px 34px 45px;position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:25px;align-items:center}
+.eyebrow{display:inline-flex;padding:8px 15px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;font-weight:900;letter-spacing:.1em}
+.hero h1{font-size:clamp(37px,5.2vw,70px);line-height:1.02;letter-spacing:-.045em;margin:19px 0 16px}.hero h1 span{color:#ffb95d}.hero p{max-width:680px;color:#e5ecec;font-size:18px;margin:0 0 23px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);font-size:12px}
+.decibel-art{height:340px;display:grid;place-items:center;position:relative}.meter{width:260px;height:260px;border-radius:50%;border:12px solid rgba(255,255,255,.12);background:conic-gradient(from 220deg,#43d17a 0 28%,#f5c451 28% 48%,#ed7547 48% 69%,#e33e3e 69% 77%,transparent 77%);box-shadow:0 0 80px rgba(255,169,68,.18);position:relative}.meter:after{content:"dB";position:absolute;inset:36px;border-radius:50%;background:#0d181b;display:grid;place-items:center;color:#fff;font-size:50px;font-weight:900;box-shadow:inset 0 0 30px rgba(0,0,0,.5)}.needle{position:absolute;width:105px;height:4px;background:#fff;left:50%;top:50%;transform-origin:0 50%;transform:rotate(-35deg);border-radius:9px;box-shadow:0 0 12px #fff}.speaker{position:absolute;left:2%;bottom:18%;font-size:65px;filter:drop-shadow(0 0 20px rgba(255,180,80,.5))}.wave{position:absolute;right:0;top:50%;font-size:60px;opacity:.75}
+.content-wrap{max-width:1240px;margin:auto;padding:28px 24px 70px;display:grid;grid-template-columns:225px 1fr;gap:24px}.side-menu{position:sticky;top:94px;height:max-content;background:linear-gradient(160deg,#101c20,#253d40);color:#fff;border-radius:22px;padding:12px;box-shadow:var(--shadow);overflow:hidden}.menu-head{padding:12px;font-weight:900;display:flex;justify-content:space-between;align-items:center;letter-spacing:.1em}.close-menu{display:none;background:none;border:0;color:#fff;font-size:28px}.side-menu a{display:flex;gap:10px;align-items:center;padding:13px 12px;border-radius:13px;margin:4px 0;color:#dbe8e8;border:1px solid transparent}.side-menu a.active{background:linear-gradient(90deg,#d94f36,#f1a33e);color:#fff;font-weight:800;box-shadow:0 9px 25px rgba(240,164,59,.2)}
+.main{min-width:0}.read-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.read-head{padding:28px 30px;background:linear-gradient(135deg,var(--surface),var(--surface2));border-bottom:1px solid var(--line)}.kicker{color:var(--primary);font-weight:900;letter-spacing:.12em;font-size:12px}.read-head h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;line-height:1.2;margin:7px 0}.read-head p{margin:0;color:var(--muted)}
+.features{padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-bottom:1px solid var(--line)}.feature-card{display:flex;gap:12px;align-items:flex-start;background:var(--surface2);border:1px solid var(--line);border-radius:18px;padding:15px}.feature-icon{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#ffe7cf,#fff0d6);font-size:21px}.feature-card h3{margin:0 0 2px;font-size:15px}.feature-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.passages{padding:12px 26px 28px}.section-label{margin:20px 0 10px;color:var(--primary);font-weight:900;display:flex;gap:9px;align-items:center}.section-label:after{content:"";height:1px;background:var(--line);flex:1}.sentence{display:grid;grid-template-columns:40px 1fr;gap:15px;padding:19px 0;border-bottom:1px dashed var(--line)}.num{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-size:11px;font-weight:900}.en{font-size:16px;font-weight:700;line-height:1.75;margin:0 0 8px}.mm{font-family:"Padauk","Myanmar Text",sans-serif;color:var(--muted);font-size:15px;margin:0 0 11px}.vocab{display:flex;flex-wrap:wrap;gap:7px}.word{display:flex;gap:5px;align-items:center;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:11px}.word b{color:var(--primary)}.word span{color:var(--muted)}
+.focus{margin:0 26px 28px;padding:18px 20px;border-radius:18px;background:linear-gradient(120deg,#26383b,#b4552e);color:#fff;display:flex;gap:12px;flex-wrap:wrap;align-items:center}.focus strong{font-size:18px;margin-right:7px}.focus span{padding:5px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}
+@media(max-width:900px){.header{padding:0 15px}.menu-btn{display:block}.hero-inner{grid-template-columns:1fr;padding:45px 22px 35px;min-height:auto}.decibel-art{height:245px;order:-1}.meter{width:190px;height:190px}.meter:after{inset:28px;font-size:38px}.speaker{font-size:48px}.content-wrap{grid-template-columns:1fr;padding:18px 14px 55px}.side-menu{position:fixed;z-index:80;left:14px;top:85px;width:min(310px,calc(100vw - 28px));transform:translateX(-120%);transition:.28s ease;max-height:calc(100vh - 100px);overflow:auto}.side-menu.open{transform:translateX(0)}.close-menu{display:block}.features{grid-template-columns:1fr 1fr}.read-head{padding:24px 20px}.passages{padding:10px 18px 25px}}
+@media(max-width:560px){.brand span{display:none}.hero h1{font-size:38px}.hero p{font-size:15px}.decibel-art{height:215px}.meter{width:165px;height:165px}.meter:after{inset:24px;font-size:32px}.features{grid-template-columns:1fr;padding:16px}.read-head h2{font-size:30px}.sentence{grid-template-columns:32px 1fr;gap:10px}.num{width:30px;height:30px}.en{font-size:15px}.mm{font-size:14px}.word{font-size:10px}.passages{padding:7px 14px 20px}.focus{margin:0 14px 20px}}
+</style>
+</head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><span class="brand-mark">◉</span><span>Grade-12 <em>English</em></span></a>
+<div class="header-actions"><button class="icon-btn menu-btn" id="menuBtn">☰</button><button class="icon-btn" id="themeBtn">☀︎☾</button></div>
+</header>
+<section class="hero">
+<div class="soundwaves"></div>
+<div class="hero-inner">
+<div>
+<div class="eyebrow">UNIT 8 · READING PARAGRAPH</div>
+<h1><span>DECIBEL DILEMMA:</span><br>A CALL FOR CHANGE<br>IN MYANMAR</h1>
+<p>Explore the impact of excessive noise, understand decibels, and discover the passage's call for mutual respect and a quieter, better future.</p>
+<div class="chips"><span class="chip">🔊 Sound & Decibels</span><span class="chip">👂 Hearing</span><span class="chip">🏘️ Community</span><span class="chip">🤝 Mutual Respect</span></div>
+</div>
+<div class="decibel-art" aria-hidden="true"><div class="meter"><div class="needle"></div></div><div class="speaker">🔊</div><div class="wave">🇲🇲</div></div>
+</div>
+</section>
+<div class="content-wrap">
+
+<nav class="side-menu" id="sideMenu">
+  <div class="menu-head"><span>UNIT 8</span><button class="close-menu" id="closeMenu">×</button></div>
+  <a href="meaning8.html">🔤 <span>Meaning / Vocabulary</span></a>
+  <a class="active" href="unit8.html">📖 <span>Reading Paragraph</span></a>
+  <a href="comprehension8.html">📝 <span>Comprehension</span></a>
+  <a href="grammar8.html">Aᴢ <span>Grammar</span></a>
+  <a href="listening-speaking8.html">🎧 <span>Listening & Speaking</span></a>
+  <a href="writing8.html">✍️ <span>Writing</span></a>
+  <a href="beca8.html">🎯 <span>BECA Practice</span></a>
+</nav>
+
+<main class="main">
+<section class="read-card">
+<div class="read-head"><div class="kicker">Unit 8 · Decibel Dilemma</div><h2>Reading Paragraph</h2><p>English sentence → မြန်မာဘာသာပြန် → Key Vocabulary. Passage ရဲ့ အဓိကအကြောင်းအရာကို စာကြောင်းလိုက် နားလည်အောင် လေ့လာနိုင်ရန် စီစဉ်ထားပါသည်။</p></div>
+<div class="features"><div class="feature-card"><div class="feature-icon">🔊</div><div><h3>Decibel</h3><p>A unit used to measure sound intensity or loudness.</p></div></div><div class="feature-card"><div class="feature-icon">👂</div><div><h3>Hearing &amp; Noise</h3><p>The passage explains how prolonged loud noise can affect hearing.</p></div></div><div class="feature-card"><div class="feature-icon">📏</div><div><h3>Sound Levels</h3><p>Whisper ≈ 30 dB · Conversation ≈ 60 dB · Motorcycle ≈ 95 dB.</p></div></div><div class="feature-card"><div class="feature-icon">🏘️</div><div><h3>Community</h3><p>Public events and amplified sounds can affect neighbourhood life.</p></div></div><div class="feature-card"><div class="feature-icon">🤝</div><div><h3>Mutual Respect</h3><p>Freedom should be exercised without infringing on others&#x27; liberty.</p></div></div><div class="feature-card"><div class="feature-icon">🌱</div><div><h3>Call for Change</h3><p>The passage ends with a call to reduce excessive decibels for future generations.</p></div></div></div>
+<div class="passages">
+<div class="section-label">📖 Read the passage carefully</div>
+<div class="section-label">✦ Opening Scene · The Problem of Excessive Noise</div>
+    <article class="sentence">
+      <div class="num">01</div>
+      <div class="sentence-body">
+        <p class="en">Even the earth is shaking.</p>
+        <p class="mm">မြေကြီးတောင် တုန်ခါနေသည်။</p>
+        <div class="vocab"><span class="word"><b>shake</b><span>တုန်ခါသည်</span></span><span class="word"><b>earth</b><span>မြေကြီး</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">02</div>
+      <div class="sentence-body">
+        <p class="en">You can feel the vibration all over your body.</p>
+        <p class="mm">တစ်ကိုယ်လုံးတွင် တုန်ခါမှုကို ခံစားနိုင်သည်။</p>
+        <div class="vocab"><span class="word"><b>vibration</b><span>တုန်ခါမှု</span></span><span class="word"><b>all over</b><span>တစ်လျှောက်လုံး</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">03</div>
+      <div class="sentence-body">
+        <p class="en">The booming music blaring from the horns and speakers dominates the festival ground, the village itself and the entire landscape.</p>
+        <p class="mm">ဟွန်းများနှင့် စပီကာများမှ ကျယ်လောင်စွာ ထွက်ပေါ်လာသော ဂီတသံသည် ပွဲခင်း၊ ရွာတစ်ရွာလုံးနှင့် ပတ်ဝန်းကျင်ရှုခင်းတစ်ခုလုံးကို လွှမ်းမိုးနေသည်။</p>
+        <div class="vocab"><span class="word"><b>booming</b><span>ကျယ်လောင်စွာ မြည်ဟည်းသော</span></span><span class="word"><b>blare</b><span>ကျယ်လောင်စွာ ထွက်ပေါ်သည်</span></span><span class="word"><b>dominate</b><span>လွှမ်းမိုးသည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">04</div>
+      <div class="sentence-body">
+        <p class="en">This music, jarring to the ears of everyone far and near, will be played the whole day to entertain the guests.</p>
+        <p class="mm">အဝေးအနီးရှိ လူတိုင်း၏နားကို ထိခိုက်စေသော ဤဂီတသံကို ဧည့်သည်များအား ဖျော်ဖြေရန် တစ်နေ့လုံး ဖွင့်ထားမည်ဖြစ်သည်။</p>
+        <div class="vocab"><span class="word"><b>jarring</b><span>နားကို အနှောင့်အယှက်ဖြစ်စေသော</span></span><span class="word"><b>entertain</b><span>ဖျော်ဖြေသည်</span></span><span class="word"><b>guest</b><span>ဧည့်သည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">05</div>
+      <div class="sentence-body">
+        <p class="en">This is a ‘mee khoe teik’ (no one’s left behind) donation where people from all four directions will gather and enjoy free foods and drinks and ‘melodious’ entertainment.</p>
+        <p class="mm">၎င်းသည် ‘မီးခိုးတိတ်’ (မည်သူမျှ နောက်ကျန်မနေစေရန်) အလှူပွဲမျိုးဖြစ်ပြီး အရပ်လေးမျက်နှာမှ လူများစုဝေးကာ အခမဲ့အစားအစာ၊ အချိုရည်များနှင့် ‘သာယာသော’ ဖျော်ဖြေမှုကို ခံစားကြသည်။</p>
+        <div class="vocab"><span class="word"><b>donation</b><span>အလှူ</span></span><span class="word"><b>all four directions</b><span>အရပ်လေးမျက်နှာ</span></span><span class="word"><b>melodious</b><span>သာယာသောအသံရှိသော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">06</div>
+      <div class="sentence-body">
+        <p class="en">Melodious entertainment? No, it is not.</p>
+        <p class="mm">သာယာသော ဖျော်ဖြေမှုလား။ မဟုတ်ပါ။</p>
+        <div class="vocab"><span class="word"><b>melodious entertainment</b><span>သာယာသောဖျော်ဖြေမှု</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">07</div>
+      <div class="sentence-body">
+        <p class="en">It is more like punishment inflicted on innocent people who have not chosen to listen to the ear-splitting, earth-shaking, booming non-music in the first place.</p>
+        <p class="mm">အစကတည်းက နားကွဲလောက်အောင်၊ မြေကြီးတုန်လောက်အောင် ကျယ်လောင်သော ဂီတမဟုတ်သည့်အသံကို နားထောင်ရန် မရွေးချယ်ခဲ့ကြသော အပြစ်မဲ့သူများအပေါ် ချမှတ်ခံရသည့် ပြစ်ဒဏ်နှင့် ပိုတူသည်။</p>
+        <div class="vocab"><span class="word"><b>inflict</b><span>ချမှတ်သည်/ခံစားစေသည်</span></span><span class="word"><b>innocent</b><span>အပြစ်မဲ့သော</span></span><span class="word"><b>ear-splitting</b><span>နားကွဲလောက်အောင် ကျယ်လောင်သော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">08</div>
+      <div class="sentence-body">
+        <p class="en">Music starts playing at the small, unearthly hours.</p>
+        <p class="mm">လူများအိပ်စက်နေသင့်သည့် အလွန်စောသောအချိန်များတွင်ပင် ဂီတစတင်ဖွင့်သည်။</p>
+        <div class="vocab"><span class="word"><b>unearthly hours</b><span>လူများအိပ်နေသင့်သည့် အလွန်စောသောအချိန်များ</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">09</div>
+      <div class="sentence-body">
+        <p class="en">Everyone in the neighbourhood wakes up and cannot go back to sleep again.</p>
+        <p class="mm">အနီးအနားရှိ လူတိုင်း နိုးလာပြီး ပြန်အိပ်၍မရတော့ပါ။</p>
+        <div class="vocab"><span class="word"><b>neighbourhood</b><span>အနီးအနားရပ်ကွက်</span></span><span class="word"><b>go back to sleep</b><span>ပြန်အိပ်သည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">10</div>
+      <div class="sentence-body">
+        <p class="en">Thank you for the favour, donors.</p>
+        <p class="mm">ဤအကူအညီအတွက် ကျေးဇူးတင်ပါတယ် အလှူရှင်တို့။</p>
+        <div class="vocab"><span class="word"><b>favour</b><span>အကူအညီ/ကျေးဇူး</span></span></div>
+      </div>
+    </article><div class="section-label">✦ What Is a Decibel? · Understanding the Safe Zone</div>
+    <article class="sentence">
+      <div class="num">11</div>
+      <div class="sentence-body">
+        <p class="en">These high decibels are a normal fare in this beautiful nation, Myanmar.</p>
+        <p class="mm">ဤကဲ့သို့သော မြင့်မားသည့် decibel အသံများသည် လှပသော မြန်မာနိုင်ငံတွင် ပုံမှန်တွေ့ရသည့်အရာတစ်ခု ဖြစ်နေသည်။</p>
+        <div class="vocab"><span class="word"><b>decibel</b><span>အသံကျယ်မှုတိုင်းတာသည့် ယူနစ်</span></span><span class="word"><b>normal fare</b><span>ပုံမှန်တွေ့ရသောအရာ</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">12</div>
+      <div class="sentence-body">
+        <p class="en">Its people are lovely, its traditions colourful and its heart most beautiful.</p>
+        <p class="mm">၎င်း၏လူများသည် ချစ်စရာကောင်းကြပြီး၊ ရိုးရာဓလေ့များသည် အရောင်အသွေးစုံလင်ကာ စိတ်နှလုံးသည် အလွန်လှပသည်။</p>
+        <div class="vocab"><span class="word"><b>tradition</b><span>ရိုးရာဓလေ့</span></span><span class="word"><b>colourful</b><span>အရောင်အသွေးစုံလင်သော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">13</div>
+      <div class="sentence-body">
+        <p class="en">Except for its breathtakingly high decibels.</p>
+        <p class="mm">သို့သော် အလွန်အမင်းမြင့်မားသော decibel အသံများကတော့ ခြွင်းချက်ဖြစ်သည်။</p>
+        <div class="vocab"><span class="word"><b>breathtakingly</b><span>အလွန်အမင်း</span></span><span class="word"><b>except for</b><span>မှအပ</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">14</div>
+      <div class="sentence-body">
+        <p class="en">Decibel (dB) is a unit used to measure the intensity of a sound or in general a degree of loudness.</p>
+        <p class="mm">Decibel (dB) သည် အသံ၏ပြင်းအား သို့မဟုတ် ယေဘုယျအားဖြင့် အသံကျယ်မှုအဆင့်ကို တိုင်းတာရန် အသုံးပြုသည့် ယူနစ်ဖြစ်သည်။</p>
+        <div class="vocab"><span class="word"><b>intensity</b><span>ပြင်းအား</span></span><span class="word"><b>degree of loudness</b><span>အသံကျယ်မှုအဆင့်</span></span><span class="word"><b>measure</b><span>တိုင်းတာသည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">15</div>
+      <div class="sentence-body">
+        <p class="en">A whisper is about 30 dB, normal conversation is about 60 dB, and a motorcycle engine running is about 95 dB.</p>
+        <p class="mm">တိုးတိုးပြောသံသည် 30 dB ခန့်၊ ပုံမှန်စကားပြောသံသည် 60 dB ခန့်နှင့် မော်တော်ဆိုင်ကယ်အင်ဂျင် လည်ပတ်နေသည့်အသံသည် 95 dB ခန့်ရှိသည်။</p>
+        <div class="vocab"><span class="word"><b>whisper</b><span>တိုးတိုးပြောသံ</span></span><span class="word"><b>normal conversation</b><span>ပုံမှန်စကားပြောသံ</span></span><span class="word"><b>motorcycle engine</b><span>မော်တော်ဆိုင်ကယ်အင်ဂျင်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">16</div>
+      <div class="sentence-body">
+        <p class="en">Noise above 70 dB over a prolonged period of time may start to damage hearing.</p>
+        <p class="mm">70 dB ထက်ကျော်သော ဆူညံသံကို အချိန်ကြာမြင့်စွာ ထိတွေ့နေရပါက အကြားအာရုံကို စတင်ထိခိုက်စေနိုင်သည်။</p>
+        <div class="vocab"><span class="word"><b>prolonged</b><span>အချိန်ကြာမြင့်သော</span></span><span class="word"><b>damage</b><span>ထိခိုက်စေသည်</span></span><span class="word"><b>hearing</b><span>အကြားအာရုံ</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">17</div>
+      <div class="sentence-body">
+        <p class="en">Loud noise above 120 dB can cause immediate harm to your ears.</p>
+        <p class="mm">120 dB ထက်ကျော်သော ကျယ်လောင်သည့်အသံသည် နားကို ချက်ချင်းထိခိုက်စေနိုင်သည်။</p>
+        <div class="vocab"><span class="word"><b>immediate</b><span>ချက်ချင်းဖြစ်သော</span></span><span class="word"><b>harm</b><span>ထိခိုက်မှု</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">18</div>
+      <div class="sentence-body">
+        <p class="en">Loud festivals and concerts frequently exceed the safe zone of 85 decibels and below – even for people seated outside.</p>
+        <p class="mm">ကျယ်လောင်သော ပွဲတော်များနှင့် ဖျော်ဖြေပွဲများသည် အပြင်ဘက်တွင် ထိုင်နေသူများအတွက်ပင် 85 decibel နှင့် အောက်ဟူသော ဘေးကင်းသည့်အဆင့်ကို မကြာခဏ ကျော်လွန်ကြသည်။</p>
+        <div class="vocab"><span class="word"><b>frequently</b><span>မကြာခဏ</span></span><span class="word"><b>exceed</b><span>ကျော်လွန်သည်</span></span><span class="word"><b>safe zone</b><span>ဘေးကင်းသည့်အဆင့်</span></span></div>
+      </div>
+    </article><div class="section-label">✦ Noise in Our Environment</div>
+    <article class="sentence">
+      <div class="num">19</div>
+      <div class="sentence-body">
+        <p class="en">On average, these types of music events reach around 110 decibels, which can lead to either temporary or permanent hearing loss after a mere 2 minutes of exposure.</p>
+        <p class="mm">ပျမ်းမျှအားဖြင့် ဤကဲ့သို့သော ဂီတပွဲများသည် 110 decibel ခန့်အထိ ရောက်ရှိနိုင်ပြီး ထိုအသံနှင့် ၂ မိနစ်မျှသာ ထိတွေ့ပြီးနောက် ယာယီ သို့မဟုတ် အမြဲတမ်း အကြားအာရုံဆုံးရှုံးမှု ဖြစ်စေနိုင်သည်။</p>
+        <div class="vocab"><span class="word"><b>on average</b><span>ပျမ်းမျှအားဖြင့်</span></span><span class="word"><b>temporary</b><span>ယာယီ</span></span><span class="word"><b>permanent</b><span>အမြဲတမ်း</span></span><span class="word"><b>exposure</b><span>ထိတွေ့မှု</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">20</div>
+      <div class="sentence-body">
+        <p class="en">This is a frightening scenario for people in Myanmar – young and old – constantly exposed to high levels of decibels.</p>
+        <p class="mm">ဤအခြေအနေသည် မြန်မာနိုင်ငံရှိ လူကြီးလူငယ်မရွေး မြင့်မားသော decibel အသံများနှင့် အဆက်မပြတ်ထိတွေ့နေရသူများအတွက် ကြောက်စရာကောင်းသော အခြေအနေတစ်ရပ်ဖြစ်သည်။</p>
+        <div class="vocab"><span class="word"><b>frightening</b><span>ကြောက်စရာကောင်းသော</span></span><span class="word"><b>scenario</b><span>အခြေအနေ</span></span><span class="word"><b>constantly</b><span>အဆက်မပြတ်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">21</div>
+      <div class="sentence-body">
+        <p class="en">People have become increasingly tolerant to noises in the environment.</p>
+        <p class="mm">လူများသည် ပတ်ဝန်းကျင်ရှိ ဆူညံသံများကို ပိုမိုသည်းခံလာကြသည်။</p>
+        <div class="vocab"><span class="word"><b>increasingly</b><span>ပိုမို၍</span></span><span class="word"><b>tolerant</b><span>သည်းခံနိုင်သော</span></span></div>
+      </div>
+    </article><div class="section-label">✦ Human Convenience and Community Noise</div>
+    <article class="sentence">
+      <div class="num">22</div>
+      <div class="sentence-body">
+        <p class="en">Sounds from nature are soothing, calming and relaxing.</p>
+        <p class="mm">သဘာဝမှ ထွက်ပေါ်သော အသံများသည် စိတ်ကို သက်သာစေပြီး ငြိမ်သက်အေးချမ်းစေသည်။</p>
+        <div class="vocab"><span class="word"><b>soothing</b><span>စိတ်သက်သာစေသော</span></span><span class="word"><b>calming</b><span>ငြိမ်သက်စေသော</span></span><span class="word"><b>relaxing</b><span>အနားရစေသော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">23</div>
+      <div class="sentence-body">
+        <p class="en">Noises in the human environment in the urban areas and, increasingly even in the rural areas, are created by humans themselves.</p>
+        <p class="mm">မြို့ပြဒေသများနှင့် တဖြည်းဖြည်း ကျေးလက်ဒေသများတွင်ပါ လူနေမှုပတ်ဝန်းကျင်၏ ဆူညံသံများကို လူသားများကိုယ်တိုင် ဖန်တီးနေကြသည်။</p>
+        <div class="vocab"><span class="word"><b>urban area</b><span>မြို့ပြဒေသ</span></span><span class="word"><b>rural area</b><span>ကျေးလက်ဒေသ</span></span><span class="word"><b>themselves</b><span>ကိုယ်တိုင်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">24</div>
+      <div class="sentence-body">
+        <p class="en">Man has been clever creating many things for his convenience: facilities at workplace, amenities at home and elsewhere and entertainment everywhere have been created by man to make life tolerable.</p>
+        <p class="mm">လူသားသည် မိမိအဆင်ပြေစေရန် အရာများစွာကို ထက်မြက်စွာ ဖန်တီးခဲ့သည်။ အလုပ်ခွင်ရှိ အဆောက်အအုံနှင့် အထောက်အကူပစ္စည်းများ၊ အိမ်နှင့် အခြားနေရာများရှိ အဆင်ပြေစေသော ပစ္စည်းများ၊ နေရာတိုင်းရှိ ဖျော်ဖြေရေးများကို ဘဝကို ခံနိုင်ရည်ရှိစေရန် လူသားက ဖန်တီးခဲ့သည်။</p>
+        <div class="vocab"><span class="word"><b>convenience</b><span>အဆင်ပြေမှု</span></span><span class="word"><b>facility</b><span>အထောက်အကူပြုပစ္စည်း/အဆောက်အအုံ</span></span><span class="word"><b>amenity</b><span>အဆင်ပြေစေသော အရာ</span></span><span class="word"><b>tolerable</b><span>ခံနိုင်ရည်ရှိသော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">25</div>
+      <div class="sentence-body">
+        <p class="en">In doing so, the noise levels shoot up and his life has become intolerable – for decent people with a sense of what is proper and what is not proper in particular.</p>
+        <p class="mm">ထိုသို့လုပ်ဆောင်ရာတွင် ဆူညံသံအဆင့်များ မြင့်တက်လာပြီး အထူးသဖြင့် သင့်တော်သည်၊ မသင့်တော်သည်ကို နားလည်သဘောပေါက်သော ယဉ်ကျေးသိမ်မွေ့သူများအတွက် ဘဝသည် မခံနိုင်စရာဖြစ်လာသည်။</p>
+        <div class="vocab"><span class="word"><b>shoot up</b><span>အလျင်အမြန် မြင့်တက်သည်</span></span><span class="word"><b>intolerable</b><span>မခံနိုင်စရာကောင်းသော</span></span><span class="word"><b>decent</b><span>ယဉ်ကျေးသိမ်မွေ့သော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">26</div>
+      <div class="sentence-body">
+        <p class="en">Whenever there is a donation or a public event in a ward or a village, people have to hire the loudest amplifier service: the farther the music’s reach – an ear-splitting noise rather than sweet melodies – the better.</p>
+        <p class="mm">ရပ်ကွက် သို့မဟုတ် ရွာတွင် အလှူပွဲ သို့မဟုတ် အများပြည်သူပွဲတစ်ခုရှိတိုင်း လူများသည် အသံအကျယ်ဆုံး amplifier ဝန်ဆောင်မှုကို ငှားရမ်းကြရသည်။ သီချင်းသံက ပိုဝေးဝေးရောက်လေလေ—သာယာသောတေးသံထက် နားကွဲလောက်အောင် ကျယ်လောင်သောအသံဖြစ်သော်လည်း—ပိုကောင်းသည်ဟု ယူဆကြသည်။</p>
+        <div class="vocab"><span class="word"><b>whenever</b><span>တိုင်း/အခါတိုင်း</span></span><span class="word"><b>amplifier</b><span>အသံချဲ့စက်</span></span><span class="word"><b>reach</b><span>ရောက်ရှိနိုင်သည့်အကွာအဝေး</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">27</div>
+      <div class="sentence-body">
+        <p class="en">In fact, there is a competition among donors and amplifier service providers alike as to whose music can blast the farthest reaches of a town or a village.</p>
+        <p class="mm">အမှန်တကယ်တွင် မည်သူ၏ဂီတသံက မြို့ သို့မဟုတ် ရွာ၏ အဝေးဆုံးနေရာများအထိ ကျယ်လောင်စွာ ရောက်နိုင်မည်ကို အလှူရှင်များနှင့် amplifier ဝန်ဆောင်မှုပေးသူများကြား ပြိုင်ဆိုင်မှုတစ်ရပ်ပင် ရှိနေသည်။</p>
+        <div class="vocab"><span class="word"><b>in fact</b><span>အမှန်တကယ်တွင်</span></span><span class="word"><b>alike</b><span>တူညီစွာ</span></span><span class="word"><b>blast</b><span>အလွန်ကျယ်လောင်စွာ ထုတ်လွှင့်သည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">28</div>
+      <div class="sentence-body">
+        <p class="en">Booming bass sounds and ear-jarring percussions accompanied by trebles of vocals and other instruments are an insult to decency rather than entertainment pleasing public ears.</p>
+        <p class="mm">ကျယ်လောင်သော bass အသံများနှင့် နားကိုထိခိုက်စေသော percussions များ၊ အသံမြင့် vocals နှင့် အခြားတူရိယာများ ပေါင်းစပ်ထားသော အသံများသည် အများပြည်သူ၏နားကို နှစ်သက်စေသော ဖျော်ဖြေမှုထက် ယဉ်ကျေးမှုကို စော်ကားရာရောက်သည်။</p>
+        <div class="vocab"><span class="word"><b>bass</b><span>အနိမ့်အသံ</span></span><span class="word"><b>percussion</b><span>တီးခတ်တူရိယာအသံ</span></span><span class="word"><b>treble</b><span>အသံမြင့်ပိုင်း</span></span><span class="word"><b>decency</b><span>ယဉ်ကျေးသိမ်မွေ့မှု</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">29</div>
+      <div class="sentence-body">
+        <p class="en">Even worse, so-called religious gatherings often use amplifier services to produce deafening sounds of chanting [all day and night] for several days.</p>
+        <p class="mm">ထို့ထက်ဆိုးသည်မှာ ဘာသာရေးစုဝေးပွဲဟု ခေါ်ဆိုသည့်ပွဲများတွင်ပင် ရက်ပေါင်းများစွာ နေ့ရောညပါ နားမခံနိုင်အောင် ကျယ်လောင်သော ရွတ်ဖတ်သံများ ထုတ်လုပ်ရန် amplifier ဝန်ဆောင်မှုများကို မကြာခဏ အသုံးပြုကြသည်။</p>
+        <div class="vocab"><span class="word"><b>so-called</b><span>ဟုခေါ်ဆိုသော</span></span><span class="word"><b>deafening</b><span>နားမခံနိုင်အောင် ကျယ်လောင်သော</span></span><span class="word"><b>chanting</b><span>ရွတ်ဖတ်ခြင်း</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">30</div>
+      <div class="sentence-body">
+        <p class="en">Just imagine poor people in the neighbourhood sleepless for the entire length of the ‘meritorious’ deeds.</p>
+        <p class="mm">ထို ‘ကုသိုလ်ပြု’ လုပ်ရပ်များ ပြုလုပ်နေသည့်ကာလတစ်လျှောက် အနီးအနားရှိ ဆင်းရဲသောလူများ အိပ်မပျော်နိုင်ကြသည်ကိုသာ စိတ်ကူးကြည့်ပါ။</p>
+        <div class="vocab"><span class="word"><b>meritorious</b><span>ကုသိုလ်ဖြစ်သော</span></span><span class="word"><b>sleepless</b><span>အိပ်မပျော်သော</span></span><span class="word"><b>entire length</b><span>ကာလတစ်လျှောက်လုံး</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">31</div>
+      <div class="sentence-body">
+        <p class="en">It is not their choice to listen to these loud disturbances on their sense of hearing.</p>
+        <p class="mm">ထိုလူများအတွက် ဤကဲ့သို့ ကျယ်လောင်သော ဆူညံသံများကို နားထောင်ရန် ရွေးချယ်ထားခြင်းမဟုတ်ပါ။</p>
+        <div class="vocab"><span class="word"><b>disturbance</b><span>အနှောင့်အယှက်</span></span><span class="word"><b>sense of hearing</b><span>အကြားအာရုံ</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">32</div>
+      <div class="sentence-body">
+        <p class="en">They are decent people with decent families and decent jobs doing decent things for the society.</p>
+        <p class="mm">သူတို့သည် ယဉ်ကျေးသောမိသားစုများ၊ ယဉ်ကျေးသောအလုပ်အကိုင်များနှင့် လူ့အဖွဲ့အစည်းအတွက် သင့်လျော်ကောင်းမွန်သောအရာများကို လုပ်ဆောင်နေသော ယဉ်ကျေးသိမ်မွေ့သူများဖြစ်ကြသည်။</p>
+        <div class="vocab"><span class="word"><b>decent</b><span>ယဉ်ကျေးသိမ်မွေ့သော</span></span><span class="word"><b>society</b><span>လူ့အဖွဲ့အစည်း</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">33</div>
+      <div class="sentence-body">
+        <p class="en">Unfortunately, those behind the loud religious chanting believe that they are doing the community a big favour.</p>
+        <p class="mm">ကံမကောင်းစွာဖြင့် ကျယ်လောင်သော ဘာသာရေးရွတ်ဖတ်မှုများ၏ နောက်ကွယ်ရှိသူများက မိမိတို့သည် လူ့အဖွဲ့အစည်းကို ကြီးမားသောအကူအညီပေးနေသည်ဟု ယုံကြည်ကြသည်။</p>
+        <div class="vocab"><span class="word"><b>unfortunately</b><span>ကံမကောင်းစွာဖြင့်</span></span><span class="word"><b>behind</b><span>နောက်ကွယ်ရှိ</span></span><span class="word"><b>community</b><span>လူ့အဖွဲ့အစည်း</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">34</div>
+      <div class="sentence-body">
+        <p class="en">Not so in the time of Lord Buddha.</p>
+        <p class="mm">သို့သော် မြတ်စွာဘုရားရှင်၏ခေတ်တွင် ထိုသို့မဟုတ်ခဲ့ပါ။</p>
+        <div class="vocab"><span class="word"><b>in the time of</b><span>၏ခေတ်တွင်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">35</div>
+      <div class="sentence-body">
+        <p class="en">The Buddha commented repeatedly on the virtue of silence: “Live in noble silence”, “The bliss of solitude” and “Moderation in speech” are just a few of His hundreds of directives on noble silence.</p>
+        <p class="mm">မြတ်စွာဘုရားရှင်သည် တိတ်ဆိတ်ခြင်း၏ ကောင်းမြတ်မှုအကြောင်း အကြိမ်ကြိမ် မိန့်ကြားခဲ့သည်။ “မြင့်မြတ်သောတိတ်ဆိတ်မှုဖြင့် နေထိုင်ပါ”၊ “တစ်ကိုယ်တည်းနေခြင်း၏ ချမ်းသာမှု” နှင့် “စကားပြောရာတွင် အလွန်အကျွံမပြောခြင်း” တို့သည် မြင့်မြတ်သောတိတ်ဆိတ်မှုနှင့်ပတ်သက်သည့် မိန့်ကြားချက်များစွာထဲမှ အနည်းငယ်သာဖြစ်သည်။</p>
+        <div class="vocab"><span class="word"><b>virtue</b><span>ကောင်းမြတ်မှု</span></span><span class="word"><b>solitude</b><span>တစ်ကိုယ်တည်းနေခြင်း</span></span><span class="word"><b>moderation</b><span>အလယ်အလတ်ထားခြင်း</span></span><span class="word"><b>directive</b><span>လမ်းညွှန်မိန့်ကြားချက်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">36</div>
+      <div class="sentence-body">
+        <p class="en">And why are his ‘faithful believers’ not following the Buddha’s advice?</p>
+        <p class="mm">ထို့နောက် သူ၏ ‘သစ္စာရှိယုံကြည်သူများ’ က မြတ်စွာဘုရားရှင်၏ အကြံပြုချက်ကို အဘယ်ကြောင့် မလိုက်နာကြသနည်း။</p>
+        <div class="vocab"><span class="word"><b>faithful believer</b><span>သစ္စာရှိယုံကြည်သူ</span></span><span class="word"><b>follow advice</b><span>အကြံပြုချက်ကို လိုက်နာသည်</span></span></div>
+      </div>
+    </article><div class="section-label">✦ Amplifiers, Religious Gatherings and Noble Silence</div>
+    <article class="sentence">
+      <div class="num">37</div>
+      <div class="sentence-body">
+        <p class="en">It is high time we pay attention to this mismatch between words and deeds.</p>
+        <p class="mm">စကားနှင့် လုပ်ရပ်တို့ကြားရှိ ဤမကိုက်ညီမှုကို အာရုံစိုက်ရန် အချိန်တန်ပြီဖြစ်သည်။</p>
+        <div class="vocab"><span class="word"><b>high time</b><span>အချိန်တန်ပြီ</span></span><span class="word"><b>mismatch</b><span>မကိုက်ညီမှု</span></span><span class="word"><b>deed</b><span>လုပ်ရပ်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">38</div>
+      <div class="sentence-body">
+        <p class="en">A peaceful, progressive society thrives on mutual respect.</p>
+        <p class="mm">ငြိမ်းချမ်းပြီး တိုးတက်သော လူ့အဖွဲ့အစည်းသည် အပြန်အလှန်လေးစားမှုအပေါ်တွင် ရှင်သန်တိုးတက်သည်။</p>
+        <div class="vocab"><span class="word"><b>peaceful</b><span>ငြိမ်းချမ်းသော</span></span><span class="word"><b>progressive</b><span>တိုးတက်သော</span></span><span class="word"><b>mutual respect</b><span>အပြန်အလှန်လေးစားမှု</span></span><span class="word"><b>thrive</b><span>ရှင်သန်တိုးတက်သည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">39</div>
+      <div class="sentence-body">
+        <p class="en">As the saying “Your freedom ends where my nose begins” goes, we can exercise our freedom but not infringe on others’ liberty.</p>
+        <p class="mm">“သင်၏လွတ်လပ်ခွင့်သည် ကျွန်ုပ်၏နှာခေါင်းစတင်ရာနေရာတွင် အဆုံးသတ်သည်” ဟူသောစကားအတိုင်း မိမိတို့၏လွတ်လပ်ခွင့်ကို အသုံးချနိုင်သော်လည်း အခြားသူများ၏ လွတ်လပ်ခွင့်ကို မချိုးဖောက်သင့်ပါ။</p>
+        <div class="vocab"><span class="word"><b>exercise freedom</b><span>လွတ်လပ်ခွင့်ကို အသုံးချသည်</span></span><span class="word"><b>infringe on</b><span>ချိုးဖောက်သည်</span></span><span class="word"><b>liberty</b><span>လွတ်လပ်ခွင့်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">40</div>
+      <div class="sentence-body">
+        <p class="en">Our society needs some serious reduction of high decibels turning new generations into semi-deaf or stone-deaf people, not just at the physical level but also at the intellectual level: we have more or less stopped listening to sensible conversations.</p>
+        <p class="mm">ကျွန်ုပ်တို့၏လူ့အဖွဲ့အစည်းသည် မြင့်မားသော decibel အသံများကို အလေးအနက် လျှော့ချရန်လိုအပ်သည်။ မျိုးဆက်သစ်များကို ကိုယ်ခန္ဓာပိုင်းအရသာမက ဉာဏ်ရည်ပိုင်းအရပါ အကြားအာရုံအားနည်းသူများ သို့မဟုတ် နားမကြားသူများ ဖြစ်လာစေနိုင်သောကြောင့် ဖြစ်သည်။ ကျွန်ုပ်တို့သည် အဓိပ္ပာယ်ရှိသော စကားဝိုင်းများကို နားထောင်ခြင်း အနည်းနှင့်အများ ရပ်တန့်လာကြသည်။</p>
+        <div class="vocab"><span class="word"><b>reduction</b><span>လျှော့ချမှု</span></span><span class="word"><b>semi-deaf</b><span>တစ်စိတ်တစ်ပိုင်း နားမကြားသော</span></span><span class="word"><b>intellectual</b><span>ဉာဏ်ရည်ပိုင်းဆိုင်ရာ</span></span><span class="word"><b>sensible</b><span>အဓိပ္ပာယ်ရှိသော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">41</div>
+      <div class="sentence-body">
+        <p class="en">We need to listen to each other.</p>
+        <p class="mm">ကျွန်ုပ်တို့သည် တစ်ဦးနှင့်တစ်ဦး နားထောင်ရန်လိုအပ်သည်။</p>
+        <div class="vocab"><span class="word"><b>listen to each other</b><span>တစ်ဦးနှင့်တစ်ဦး နားထောင်သည်</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">42</div>
+      <div class="sentence-body">
+        <p class="en">We need to pay attention to the welfare of society.</p>
+        <p class="mm">လူ့အဖွဲ့အစည်း၏ ကောင်းကျိုးချမ်းသာကို အာရုံစိုက်ရန်လိုအပ်သည်။</p>
+        <div class="vocab"><span class="word"><b>pay attention to</b><span>အာရုံစိုက်သည်</span></span><span class="word"><b>welfare</b><span>ကောင်းကျိုးချမ်းသာ</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">43</div>
+      <div class="sentence-body">
+        <p class="en">Let us do something about the ear-splitting, deafening decibels.</p>
+        <p class="mm">နားကွဲလောက်အောင်၊ နားမခံနိုင်အောင် ကျယ်လောင်သော decibel အသံများနှင့် ပတ်သက်၍ တစ်စုံတစ်ရာ လုပ်ဆောင်ကြပါစို့။</p>
+        <div class="vocab"><span class="word"><b>ear-splitting</b><span>နားကွဲလောက်အောင် ကျယ်လောင်သော</span></span><span class="word"><b>deafening</b><span>နားမခံနိုင်အောင် ကျယ်လောင်သော</span></span></div>
+      </div>
+    </article>
+    <article class="sentence">
+      <div class="num">44</div>
+      <div class="sentence-body">
+        <p class="en">Let us leave a better future for our youths.</p>
+        <p class="mm">ကျွန်ုပ်တို့၏ လူငယ်များအတွက် ပိုမိုကောင်းမွန်သော အနာဂတ်တစ်ခုကို ချန်ထားပေးကြပါစို့။</p>
+        <div class="vocab"><span class="word"><b>leave a better future</b><span>ပိုမိုကောင်းမွန်သောအနာဂတ်ကို ချန်ထားပေးသည်</span></span><span class="word"><b>youth</b><span>လူငယ်</span></span></div>
+      </div>
+    </article><div class="section-label">✦ Mutual Respect · A Call for Change</div><div class="section-label">✦ A Better Future for Our Youths</div>
+</div>
+<div class="focus"><strong>🎯 Key Focus</strong><span>Decibel</span><span>Noise & Hearing</span><span>Community</span><span>Mutual Respect</span><span>Vocabulary</span><span>Call for Change</span></div>
+</section>
+<p class="footer">Grade-12 English Learning Hub · Unit 8 · Decibel Dilemma</p>
+</main>
+</div>
+<script>
+(function(){
+ const keys=['g12-theme','siteTheme','theme'];
+ function getTheme(){for(const k of keys){const v=localStorage.getItem(k);if(v==='dark'||v==='light')return v}return'light'}
+ function apply(v){document.documentElement.dataset.theme=v}
+ apply(getTheme());
+ document.getElementById('themeBtn').onclick=()=>{const n=document.documentElement.dataset.theme==='dark'?'light':'dark';keys.forEach(k=>localStorage.setItem(k,n));apply(n)};
+ window.addEventListener('storage',e=>{if(keys.includes(e.key)&&(e.newValue==='dark'||e.newValue==='light'))apply(e.newValue)});
+ const menu=document.getElementById('sideMenu');
+ document.getElementById('menuBtn').onclick=()=>menu.classList.add('open');
+ document.getElementById('closeMenu').onclick=()=>menu.classList.remove('open');
+ document.addEventListener('click',e=>{if(innerWidth<=900&&menu.classList.contains('open')&&!menu.contains(e.target)&&!e.target.closest('#menuBtn'))menu.classList.remove('open')});
+})();
+</script>
+</body>
+</html>

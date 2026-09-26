@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Story of Jeff Bezos</title>
+    <!-- Google Fonts Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #0f172a;
+            --accent-blue: #2563eb;
+            --bg-page: #f8fafc;
+            --surface-card: #ffffff;
+            --text-title: #0f172a;
+            --text-body: #334155;
+            --border-color: #e2e8f0;
+            --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', 'Padauk', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface-card);
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Article Main Title */
+        .article-header {
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .category-tag {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-size: 2.1rem;
+            color: var(--text-title);
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        /* Header Layout: Square Image + First Section */
+        .intro-section {
+            display: flex;
+            gap: 28px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        /* Professional Square Image */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px; /* Professional rounded square */
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            flex-shrink: 0;
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+        }
+
+        /* Article Subheadings */
+        .section-heading {
+            font-size: 1.3rem;
+            color: var(--text-title);
+            font-weight: 700;
+            margin: 36px 0 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-heading::before {
+            content: '';
+            width: 4px;
+            height: 22px;
+            background-color: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 1rem;
+            color: var(--text-body);
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--accent-blue);
+            padding: 20px 24px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+            font-style: none;
+        }
+
+        .quote-text {
+            color: #1e3a8a;
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .quote-author {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* End Profile Data Box (Quick Facts) */
+        .facts-card {
+            background-color: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 48px;
+        }
+
+        .facts-card h3 {
+            font-size: 1.15rem;
+            color: var(--text-title);
+            font-weight: 700;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .fact-item {
+            font-size: 0.92rem;
+        }
+
+        .fact-item span {
+            display: block;
+            color: #64748b;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .fact-item strong {
+            color: var(--text-title);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .article-container { padding: 24px 18px; }
+            .intro-section { flex-direction: column; }
+            .profile-img { width: 100%; height: 240px; }
+            .article-title { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <article class="article-container">
+        
+        <!-- Header -->
+        <div class="article-header">
+            <div class="category-tag">Biography & Inspiration</div>
+            <h1 class="article-title">အွန်လိုင်းစျေးကွက်၏ ဘုရင် - ဂျက်ဖ် ဘေးဇော့စ် (Jeff Bezos)</h1>
+        </div>
+
+        <!-- Intro with Square Photo -->
+        <div class="intro-section">
+            <img src="images/bezos.jpg" alt="Jeff Bezos" class="profile-img">
+            <div class="intro-text">
+            
+                <div class="section-heading" style="margin-top:0;"> စာအုပ်ဆိုင်လေးမှ စတင်ခဲ့သော ခရီးစဉ်</div>
+                <p>
+                    ၁၉၉၄ ခုနှစ်တွင် Wall Street မှ လစာကောင်းသော အလုပ်ကို စွန့်လွှတ်ကာ ဂျက်ဖ် ဘေးဇော့စ်သည် အင်တာနက် စီးပွားရေးလောကထဲသို့ သတ္တိရှိရှိ ခြေလှမ်းလှမ်းခဲ့သည်။ သူ၏ အိမ်ဂိုဒေါင်ထဲ၌ စာအုပ်များကို အွန်လိုင်းမှတစ်ဆင့် ရောင်းချသည့် Amazon ကို စတင်တည်ထောင်ခဲ့ချိန်တွင်၊ ဒါသည် ကမ္ဘာ့အကြီးဆုံး စျေးဝယ်စနစ် ဖြစ်လာလိမ့်မည်ဟု မည်သူမျှ မထင်မှတ်ခဲ့ကြပါ။
+                </p>
+            </div>
+        </div>
+
+        <!-- Article Body -->
+      <p>
+            စာအုပ်များမှတစ်ဆင့် လူသိများလာပြီးနောက် စီဒီများ၊ လျှပ်စစ်ပစ္စည်းများမှသည် လူ့အသုံးအဆောင် ပစ္စည်းမှန်သမျှ ရရှိနိုင်သော "Everything Store" အဖြစ် တဖြည်းဖြည်း ချဲ့ထွင်ခဲ့သည်။ စာသုံးသူများ၏ လိုအပ်ချက်ကို အဓိကထားသော Customer-centric မူဝါဒကြောင့် Amazon Prime၊ Kindle အီလက်ထရွန်နစ် စာအုပ်ဖတ်စက်နှင့် AWS (Amazon Web Services) Cloud စနစ်တို့ကို အောင်မြင်စွာ မိတ်ဆက်နိုင်ခဲ့သည်။
+        </p>
+
+  
+        <p>
+            Amazon ကို အောင်မြင်စွာ ပဲ့ကိုင်အပြီးတွင် ဘေးဇော့စ်သည် သူ၏ ငယ်စဉ်ကတည်းက စိတ်ကူးယဉ်ခဲ့သော အာကာသအိပ်မက်ကို အကောင်အထည်ဖော်ရန် **Blue Origin** အာကာသကုမ္ပဏီကို တည်ထောင်ခဲ့သည်။ အနာဂတ် လူသားများ အာကာသထဲတွင် အခြေချနေထိုင်နိုင်ရေးနှင့် ကမ္ဘာမြေကို ကာကွယ်စောင့်ရှောက်နိုင်ရေးအတွက် နည်းပညာများကို တီထွင်လျက်ရှိသည်။
+        </p>
+
+        <!-- Quote -->
+        <div class="quote-box">
+            <div class="quote-text">"နောင်တမရစေရေး မူဝါဒ (Regret Minimization Framework) ကို သုံးပြီး စွန့်စားပါ။ အသက် ၈၀ ရောက်တဲ့အခါ အလုပ်တစ်ခုကို စမ်းကြည့်လို့ ကျရှုံးခဲ့တာထက်၊ မစမ်းကြည့်ခဲ့ရလို့ နောင်တရတာမျိုးပဲ ဖြစ်တတ်ပါတယ်။"</div>
+            <div class="quote-author">— Jeff Bezos</div>
+        </div>
+
+        <!-- Quick Facts Section at the End -->
+        <div class="facts-card">
+            <h3>📌 Facts (အချက်အလက်များ)</h3>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <span>Full Name</span>
+                    <strong>Jeffrey Preston Bezos</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Date of Birth</span>
+                    <strong>12 January 1964</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Birthplace</span>
+                    <strong>Albuquerque, New Mexico</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Education</span>
+                    <strong>Princeton University (Computer Science & Electrical Engineering)</strong>
+                </div>
+                <div class="fact-item">
+                    <span>Key Companies</span>
+                    <strong>Amazon, Blue Origin, The Washington Post</strong>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+</body>
+</html>

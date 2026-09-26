@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 - Artificial Intelligence (AI) and Robotics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#f6f8fc;--surface:#fff;--surface2:#f1f5f9;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;
+ --blue:#2563eb;--cyan:#06b6d4;--violet:#7c3aed;--pink:#ec4899;--green:#16a34a;
+ --shadow:0 12px 35px rgba(15,23,42,.08);--radius:20px;
+}
+html[data-theme=dark]{--bg:#070b14;--surface:#0f1726;--surface2:#172235;--text:#f8fafc;--muted:#a8b3c5;--border:#263449;--shadow:0 18px 45px rgba(0,0,0,.28)}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Plus Jakarta Sans','Padauk',sans-serif}
+body{background:var(--bg);color:var(--muted);line-height:1.7}
+.header{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(7,12,24,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{color:#fff;text-decoration:none;font-weight:800}.logo span{color:#38bdf8}
+.header-actions{display:flex;gap:9px;align-items:center}
+.icon-btn{width:40px;height:40px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.06);color:#fff;cursor:pointer;font-size:18px}
+.home-btn{color:#cbd5e1;text-decoration:none;font-size:.84rem;font-weight:600}
+.hero{position:relative;overflow:hidden;padding:72px 20px 82px;text-align:center;color:#fff;background:radial-gradient(circle at 50% 20%,#312e81 0,#111827 46%,#030712 100%)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(56,189,248,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent)}
+.hero:after{content:"";position:absolute;width:420px;height:420px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(34,211,238,.18),rgba(124,58,237,.12) 42%,transparent 70%);filter:blur(20px)}
+.hero>*{position:relative;z-index:2}
+.ai-orb{margin:0 auto 20px;width:78px;height:78px;border-radius:50%;display:grid;place-items:center;font-size:35px;background:linear-gradient(135deg,rgba(34,211,238,.2),rgba(168,85,247,.25));border:1px solid rgba(125,211,252,.4);box-shadow:0 0 45px rgba(34,211,238,.25)}
+.badge{display:inline-block;padding:6px 15px;border:1px solid rgba(56,189,248,.35);border-radius:999px;color:#67e8f9;background:rgba(56,189,248,.09);font-size:.74rem;font-weight:800;letter-spacing:.1em}
+.hero h1{max-width:950px;margin:15px auto 8px;font-size:clamp(1.65rem,4vw,2.55rem);line-height:1.25;background:linear-gradient(100deg,#fff,#67e8f9,#c084fc);-webkit-background-clip:text;color:transparent}
+.subtitle{font-size:1.12rem;color:#fb7185;font-weight:800;letter-spacing:.08em}.hero p{margin-top:8px;color:#a5b4fc}
+.container{width:min(92%,900px);margin:30px auto 70px}
+.notice{padding:20px 25px;margin-bottom:28px;border:1px solid var(--border);border-top:3px solid var(--cyan);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);text-align:center}
+.notice strong{display:block;color:var(--text);font-size:1.02rem}.notice span{display:block;color:var(--muted);font-size:.9rem;margin-top:4px}
+.content-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px;margin-bottom:28px;box-shadow:var(--shadow)}
+.section-head{display:flex;gap:12px;align-items:center;padding-bottom:16px;margin-bottom:20px;border-bottom:1px solid var(--border)}
+.tag{font-size:.75rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--blue),var(--violet));padding:5px 11px;border-radius:8px}
+.section-title{color:var(--text);font-size:1.18rem}
+.reading-stream{display:grid;gap:12px}.sentence-pair{padding:16px 17px;border:1px solid var(--border);border-radius:15px;background:var(--surface2);transition:.2s}
+.sentence-pair:hover{transform:translateY(-1px);border-color:rgba(37,99,235,.35)}
+.en-line{color:var(--text);font-weight:700;font-size:.98rem;line-height:1.55}.mm-line{margin-top:5px;color:var(--muted);font-size:.92rem}
+.vocab-head{margin:28px 0 15px;color:var(--text);font-size:1rem}.vocab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:13px}
+.vocab-card{padding:17px;border:1px solid var(--border);border-radius:15px;background:var(--surface2)}.vocab-word{font-weight:800;color:var(--text)}.vocab-en{font-size:.82rem;color:var(--muted);margin:3px 0 11px}.vocab-mm{display:inline-block;padding:4px 9px;border-radius:999px;background:rgba(22,163,74,.11);color:var(--green);font-size:.78rem;font-weight:700}
+.next{padding:28px;text-align:center;border-radius:var(--radius);background:linear-gradient(135deg,#0f172a,#1e1b4b);box-shadow:var(--shadow)}.next h3{color:#fff}.next p{color:#a8b3c5;margin:6px 0 18px}.next a{display:inline-block;padding:11px 23px;border-radius:11px;background:#2563eb;color:#fff;text-decoration:none;font-weight:700}
+.menu-trigger{position:fixed;left:18px;bottom:20px;z-index:1100;width:52px;height:52px;border:0;border-radius:16px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-size:23px;box-shadow:0 12px 30px rgba(37,99,235,.35);cursor:pointer}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;visibility:hidden;transition:.25s;z-index:1200}.overlay.show{opacity:1;visibility:visible}
+.side-menu{position:fixed;left:0;top:0;bottom:0;width:min(330px,88vw);z-index:1300;background:var(--surface);border-right:1px solid var(--border);transform:translateX(-105%);transition:.28s;padding:22px;box-shadow:20px 0 50px rgba(0,0,0,.18);overflow:auto}.side-menu.open{transform:none}
+.menu-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.menu-top h2{color:var(--text);font-size:1.05rem}.close{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer}
+.menu-sub{font-size:.78rem;color:var(--muted);margin-bottom:15px}.menu-list{display:grid;gap:8px}.menu-item{display:flex;align-items:center;gap:10px;padding:12px 13px;border-radius:12px;text-decoration:none;color:var(--muted);font-weight:700;font-size:.88rem;border:1px solid transparent}.menu-item:hover,.menu-item.active{color:var(--text);background:var(--surface2);border-color:var(--border)}.menu-item.active{box-shadow:inset 3px 0 var(--cyan)}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:.8rem}
+@media(max-width:640px){.hero{padding:55px 16px 62px}.content-card{padding:20px}.home-btn{display:none}.notice{padding:17px}.vocab-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(()=>{const t=localStorage.getItem('g12-theme')||localStorage.getItem('theme')||localStorage.getItem('siteTheme')||'light';document.documentElement.dataset.theme=t==='dark'?'dark':'light'})()
+</script>
+</head>
+<body>
+<header class="header">
+<a class="logo" href="index.html">Grade-12 <span>English</span></a>
+<div class="header-actions"><a class="home-btn" href="index.html">← ပင်မစာမျက်နှာ</a><button class="icon-btn" id="themeToggle" aria-label="Theme">☾</button></div>
+</header>
+
+<section class="hero">
+<div class="ai-orb">◉</div><span class="badge">UNIT 2 • AI & ROBOTICS</span>
+<h1>ARTIFICIAL INTELLIGENCE (AI) and ROBOTICS</h1>
+<div class="subtitle">HELP OR THREAT?</div><p>Reading Passage • Vocabulary • Technology & Humanity</p>
+</section>
+
+<main class="container">
+<div class="notice"><strong>“နည်းပညာသည် လူသားများနေရာတွင် အစားထိုးသွားမည် မဟုတ်၊ နည်းပညာသုံးတတ်သူများက နည်းပညာမသုံးတတ်သူများကို အစားထိုးသွားမည်သာဖြစ်သည်။”</strong><span>Technology, AI and the future of human work</span></div>
+<audio controls preload="metadata"><source src="2.m4a" type="audio/mpeg"></audio>
+<section class="content-card">
+<div class="section-head"><span class="tag">Paragraph 1</span><h2 class="section-title">Reading passage</h2></div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">He looked at us and spoke – in a metallic voice, “No, you’re not my creators”.</div><div class="mm-line">သူသည် ကျွန်ုပ်တို့ကို ကြည့်ပြီး သတ္တုသံကဲ့သို့ အသံဖြင့် “ဟင့်အင်း၊ မင်းတို့က ငါ့ရဲ့ ဖန်တီးရှင်တွေ မဟုတ်ကြဘူး” ဟု ပြောလိုက်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">“Why?” we said, surprised “We made you”.</div><div class="mm-line">“ဘာလို့လဲ” ဟု ကျွန်ုပ်တို့က အံ့အားသင့်စွာ ပြောလိုက်ကြသည်၊ “ငါတို့ မင်းကို ဖန်တီးခဲ့တာလေ”။</div></div>
+<div class="sentence-pair"><div class="en-line">It took us years.</div><div class="mm-line">ဤသို့ ဖန်တီးရန် ကျွန်ုပ်တို့ နှစ်ပေါင်းများစွာ အချိန်ယူခဲ့ရသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Years of sleepless nights.</div><div class="mm-line">အိပ်ရေးပျက်ခဲ့ရသော ညပေါင်းများစွာ။</div></div>
+<div class="sentence-pair"><div class="en-line">Years away from family just to create him.</div><div class="mm-line">သူ့ကို ဖန်တီးနိုင်ဖို့အတွက် မိသားစုနှင့် ခွဲခွာခဲ့ရသော နှစ်ပေါင်းများစွာ။</div></div>
+<div class="sentence-pair"><div class="en-line">For us he is a ‘he’ not an ‘it’.</div><div class="mm-line">ကျွန်ုပ်တို့အတွက်မူ သူသည် ‘အရာဝတ္ထုတစ်ခု (it)’ မဟုတ်ဘဲ ‘လူပုဂ္ဂိုလ်တစ်ဦး (he)’ ဖြစ်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Now, this.</div><div class="mm-line">ခုတော့ဖြင့် ဒီလို ဖြစ်ရသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">We wait for his answer with bated breath.</div><div class="mm-line">ကျွန်ုပ်တို့သည် သူ၏ အဖြေကို ရင်တမမဖြင့် ရင်ခုန်စွာ စောင့်ဆိုင်းနေကြသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">He laughs yet again, his passive face sneering.</div><div class="mm-line">သူသည် ခံစားချက်မရှိသော သူ၏ မျက်နှာဖြင့် လှောင်ပြုံးပြုံးရင်း နောက်တစ်ကြိမ် ရယ်မောလိုက်ပြန်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">It’s not a human’s laugh (what do you expect from a bot?) – no human warmth whatsoever.</div><div class="mm-line">ဒါဟာ လူတစ်ယောက်ရဲ့ ရယ်မောသံ မဟုတ်ပါ (ဘော့တ် ရောဘော့တစ်ကောင်ဆီက မင်း ဘာများ မျှော်လင့်ထားသလဲ) - လူသားဆန်တဲ့ နွေးထွေးမှု လုံးဝမရှိပါ။</div></div>
+<div class="sentence-pair"><div class="en-line">“Look at you. You are all weak and vulnerable,” he said, eyeing us with a sense of superiority.</div><div class="mm-line">“မင်းတို့ကိုယ်မင်းတို့ ပြန်ကြည့်ကြပါဦး။ မင်းတို့အားလုံးက အားနည်းပြီး ထိခိုက်လွယ်ကြပါတယ်” ဟု အထက်စီးဆန်သော စိတ်ဓာတ်ဖြင့် ကျွန်ုပ်တို့ကို စိုက်ကြည့်ရင်း ပြောလိုက်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">“You need food and water for energy. You need to sleep and rest. You have a short life. You cannot work when it is too cold or too hot”.</div><div class="mm-line">“မင်းတို့မှာ စွမ်းအင်ရဖို့ အစားအစာနဲ့ ရေ လိုအပ်တယ်။ မင်းတို့ အိပ်စက်ဖို့နဲ့ အနားယူဖို့ လိုအပ်တယ်။ မင်းတို့မှာ တိုတောင်းတဲ့ သက်တမ်းပဲ ရှိကြတယ်။ မင်းတို့ဟာ အလွန်အေးလွန်းရင် သို့မဟုတ် အလွန်ပူလွန်းရင် အလုပ်မလုပ်နိုင်ကြဘူး”။</div></div>
+<div class="sentence-pair"><div class="en-line">“Look at me. I am a perfect machine, made of strong, durable metal – made to last for eternity.</div><div class="mm-line">“ငါ့ကို ကြည့်လိုက်ပါ။ ငါက ခိုင်မာပြီး တာရှည်ခံတဲ့ သတ္တုနဲ့ ပြုလုပ်ထားတဲ့၊ ထာဝရ တည်တံ့အောင် ဖန်တီးထားတဲ့ ပြီးပြည့်စုံတဲ့ စက်ရုပ်တစ်ရုပ် ဖြစ်တယ်။</div></div>
+<div class="sentence-pair"><div class="en-line">I use solar energy only. I live as long as there’s the faintest of sunlight.</div><div class="mm-line">ငါက နေရောင်ခြည်စွမ်းအင်ကိုပဲ အသုံးပြုတယ်။ အားနည်းလှတဲ့ နေရောင်ခြည် အနည်းငယ်မျှ ရှိနေသမျှ ကာလပတ်လုံး ငါ သက်တမ်းရှည်နေမှာ ဖြစ်တယ်။</div></div>
+<div class="sentence-pair"><div class="en-line">I don’t need any food or water. I can work under any conditions, hot or cold, unwearyingly.</div><div class="mm-line">ငါ့မှာ ဘာအစားအစာနဲ့ ရေမှ မလိုဘူး။ ပူသည်ဖြစ်စေ၊ အေးသည်ဖြစ်စေ မည်သည့် အခြေအနေမျိုးမှာမဆို မပင်မပန်း အလုပ်လုပ်နိုင်တယ်။</div></div>
+<div class="sentence-pair"><div class="en-line">How on earth can you be my creators and masters?”</div><div class="mm-line">ကမ္ဘာပေါ်မှာ မင်းတို့က ငါ့ရဲ့ ဖန်တီးရှင်တွေနဲ့ သခင်တွေ ဘယ်လိုလုပ် ဖြစ်နိုင်မှာလဲ”။</div></div>
+<div class="sentence-pair"><div class="en-line">This scary conversation is imaginary.</div><div class="mm-line">ဤ ကြောက်မက်ဖွယ်ကောင်းသော စကားဝိုင်းသည် စိတ်ကူးယဉ် ကူးယူဖော်ပြချက် ဖြစ်ပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Who knows? We, the creators, may be talking to an AI bot just like this – in the near future.</div><div class="mm-line">ဘယ်သူသိနိုင်မလဲ။ ဖန်တီးရှင်များဖြစ်ကြသော ကျွန်ုပ်တို့သည် မဝေးတော့သော အနာဂတ်တွင် ယခုကဲ့သို့သော AI ဘော့တ်တစ်ကောင်နှင့် စကားပြောဆိုနေရနိုင်ပါသည်။</div></div>
+</div>
+<h3 class="vocab-head">Paragraph 1 Vocabulary</h3><div class="vocab-grid">
+<div class="vocab-card"><div class="vocab-word">Metallic</div><div class="vocab-en">Sounding like metal; lacking emotion</div><span class="vocab-mm">သတ္တုသံကဲ့သို့ ဖြစ်သော</span></div>
+<div class="vocab-card"><div class="vocab-word">With bated breath</div><div class="vocab-en">In anxiety or excitement; holding one's breath</div><span class="vocab-mm">ရင်တမမဖြင့် / ရင်ခုန်စွာ</span></div>
+<div class="vocab-card"><div class="vocab-word">Sneer</div><div class="vocab-en">To smile or speak in a contemptuous or mocking manner</div><span class="vocab-mm">လှောင်ပြုံးပြုံးသည်</span></div>
+<div class="vocab-card"><div class="vocab-word">Vulnerable</div><div class="vocab-en">Exposed to the possibility of being attacked or harmed</div><span class="vocab-mm">ထိခိုက်လွယ်သော / အားနည်းသော</span></div>
+<div class="vocab-card"><div class="vocab-word">Superiority</div><div class="vocab-en">The state of being higher in quality, status, or power</div><span class="vocab-mm">အထက်စီးဆန်ခြင်း / သာလွန်မှု</span></div>
+<div class="vocab-card"><div class="vocab-word">Durable</div><div class="vocab-en">Able to withstand wear, pressure, or damage</div><span class="vocab-mm">ခိုင်မာသော / တာရှည်ခံသော</span></div>
+<div class="vocab-card"><div class="vocab-word">Eternity</div><div class="vocab-en">Infinite or unending time</div><span class="vocab-mm">ထာဝရ</span></div>
+<div class="vocab-card"><div class="vocab-word">Faintest</div><div class="vocab-en">Very slight, dim, or barely perceptible</div><span class="vocab-mm">အလွန်အားနည်းသော</span></div>
+<div class="vocab-card"><div class="vocab-word">Unwearyingly</div><div class="vocab-en">Without becoming tired or exhausted</div><span class="vocab-mm">မပင်မပန်း / မမောမပန်း</span></div>
+</div></section>
+
+<section class="content-card">
+<div class="section-head"><span class="tag">Paragraph 2</span><h2 class="section-title">Reading Passage</h2></div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">Evolution is happening so fast.</div><div class="mm-line">ဆန်းသစ်ပြောင်းလဲတိုးတက်မှု (Evolution) အခြေအနေသည် အလွန်ပင် လျှင်မြန်စွာ ဖြစ်ပေါ်လျက်ရှိသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">It is a matter of years or may be just months before people are replaced by machines.</div><div class="mm-line">လူသားများနေရာတွင် စက်ရုပ်များ အစားထိုးမဝင်ရောက်မီ နှစ်အနည်းငယ် သို့မဟုတ် လအနည်းငယ်မျှသာ လိုပါတော့သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Food for thought: many people still think that automation can create new kinds of jobs.</div><div class="mm-line">စဉ်းစားစရာအချက်မှာ - အလိုအလျောက်စနစ် (automation) သည် အလုပ်အကိုင် အမျိုးအစားအသစ်များကို ဖန်တီးပေးနိုင်သည်ဟု လူအများက ထင်မြင်နေကြဆဲ ဖြစ်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">This may result in increased productivity and economic growth.</div><div class="mm-line">ဒါဟာ ထုတ်လုပ်မှုစွမ်းအား မြင့်မားလာခြင်းနှင့် စီးပွားရေး တိုးတက်လာခြင်းတို့ကို ရလဒ်အဖြစ် ဖြစ်ပေါ်စေနိုင်ပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">The unreasonable fear of robots emerging in years to come may be just a false alarm.</div><div class="mm-line">နောင်လာမည့်နှစ်များတွင် ရောဘော့တ် စက်ရုပ်များ ပေါ်ထွက်လာမှုအပေါ် အကြောင်းမဲ့ စိုးရိမ်ကြောက်လန့်မှုသည် အခြေအမြစ်မရှိသော သတိပေးချက် (false alarm) မျှသာ ဖြစ်ကောင်းဖြစ်နိုင်ပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Many are optimistic about the technological revolution and believe that automation and machinery combined with AI will bring nothing but the best for humanity.</div><div class="mm-line">လူအများစုသည် နည်းပညာတော်လှန်ရေးအပေါ် အကောင်းမြင်စိတ် ရှိကြပြီး AI နှင့် ပေါင်းစပ်ထားသော အလိုအလျောက်စနစ်နှင့် စက်ပစ္စည်းများသည် လူသားတို့အတွက် အကောင်းဆုံးအရာများကိုသာ ဆောင်ကြဉ်းပေးလိမ့်မည်ဟု ယုံကြည်ကြသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Needless to say, machinery made people’s lives easier in the past.</div><div class="mm-line">အထူးပြောစရာပင် မလိုဘဲ၊ အတိတ်ကာလက စက်ပစ္စည်းများသည် လူတို့၏ လူနေမှုဘဝကို ပိုမိုလွယ်ကူ စိတ်သက်သာရာရစေခဲ့ပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">There’s no end to people’s wants and we need to spend more hours at work benches, factories and offices.</div><div class="mm-line">လူတို့၏ လိုအင်ဆန္ဒများတွင် အဆုံးအစမရှိဘဲ ကျွန်ုပ်တို့သည် အလုပ်ခုံများ၊ စက်ရုံများနှင့် ရုံးများတွင် အချိန်ပိုမို အသုံးပြုကြရသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">No one can deny the fact that the invention of the machinery is closely tied to productivity.</div><div class="mm-line">စက်ပစ္စည်းများ တီထွင်ဖန်တီးမှုသည် ထုတ်လုပ်မှုစွမ်းအားနှင့် နီးကပ်စွာ ဆက်စပ်နေသည်ဆိုသည့် အချက်ကို မည်သူမျှ ငြင်းပယ်နိုင်မည် မဟုတ်ပေ။</div></div>
+<div class="sentence-pair"><div class="en-line">However, should we trust our future to an emotionless machine in the workplace?</div><div class="mm-line">သို့သော်လည်း၊ လုပ်ငန်းခွင်အတွင်း ခံစားချက်မရှိသော စက်ရုပ်တစ်ရုပ်ထံ ကျွန်ုပ်တို့၏ အနာဂတ်ကို ယုံကြည် ပုံအပ်ထားသင့်ပါသလား။</div></div>
+<div class="sentence-pair"><div class="en-line">The cost of creating these machines and advancing technologies, which also affects people losing jobs and incomes, can be daunting.</div><div class="mm-line">ဤစက်ပစ္စည်းများကို ဖန်တီးခြင်းနှင့် နည်းပညာ တိုးတက်စေခြင်းတို့၏ စရိတ်စကများသည် လူသားတို့ အလုပ်အကိုင်နှင့် ဝင်ငွေများ ဆုံးရှုံးရခြင်းအပေါ် သက်ရောက်မှုရှိပြီး၊ ယင်းအခြေအနေမှာ စိုးရိမ်ထိတ်လန့်ဖွယ်ရာ ဖြစ်လာနိုင်ပါသည်။</div></div>
+</div>
+<h3 class="vocab-head">Paragraph 2 Vocabulary</h3><div class="vocab-grid">
+<div class="vocab-card"><div class="vocab-word">Evolution</div><div class="vocab-en">The gradual development of something</div><span class="vocab-mm">ဆန်းသစ်ပြောင်းလဲမှု / ဖြစ်စဉ်</span></div>
+<div class="vocab-card"><div class="vocab-word">Food for thought</div><div class="vocab-en">Something that warrants serious consideration</div><span class="vocab-mm">စဉ်းစားတွေးတောစရာ အချက်</span></div>
+<div class="vocab-card"><div class="vocab-word">Automation</div><div class="vocab-en">The use of largely automatic equipment</div><span class="vocab-mm">အလိုအလျောက်စနစ်</span></div>
+<div class="vocab-card"><div class="vocab-word">Productivity</div><div class="vocab-en">The effectiveness of productive effort</div><span class="vocab-mm">ထုတ်လုပ်မှုစွမ်းအား</span></div>
+<div class="vocab-card"><div class="vocab-word">False alarm</div><div class="vocab-en">A warning given about something that fails to occur</div><span class="vocab-mm">အခြေအမြစ်မရှိသော သတိပေးချက်</span></div>
+<div class="vocab-card"><div class="vocab-word">Optimistic</div><div class="vocab-en">Hopeful and confident about the future</div><span class="vocab-mm">အကောင်းမြင်စိတ်ရှိသော</span></div>
+<div class="vocab-card"><div class="vocab-word">Technological revolution</div><div class="vocab-en">A period of rapid technological change</div><span class="vocab-mm">နည်းပညာ တော်လှန်ရေး</span></div>
+<div class="vocab-card"><div class="vocab-word">Needless to say</div><div class="vocab-en">Used to say that something is obvious or clear</div><span class="vocab-mm">အထူးပြောရန်မလိုဘဲ</span></div>
+<div class="vocab-card"><div class="vocab-word">Daunting</div><div class="vocab-en">Seeming difficult to deal with in anticipation</div><span class="vocab-mm">စိုးရိမ် ထိတ်လန့်ဖွယ်ကောင်းသော</span></div>
+</div></section>
+
+<section class="content-card">
+<div class="section-head"><span class="tag">Paragraph 3</span><h2 class="section-title">Reading Passage</h2></div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">The line between fruits of human creativity and AI generated products has increasingly blurred.</div><div class="mm-line">လူသားတို့၏ တီထွင်ဖန်တီးနိုင်စွမ်း ရလဒ်များနှင့် AI မှ ထုတ်လုပ်ပေးသော အရာများကြား စည်းခြားထားမှုသည် ပိုမိုမှုန်ဝါးလာခဲ့ပြီ ဖြစ်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">On the IT front, with the rapid evolution of AI-powered Chatbots, like ChatGPT from GPT 1 to GPT 4, DALL-E, machines can generate humanlike creativity.</div><div class="mm-line">သတင်းအချက်အလက် နည်းပညာ (IT) ကဏ္ဍတွင် GPT 1 မှ GPT 4 အထိ တိုးတက်လာသော ChatGPT နှင့် DALL-E ကဲ့သို့သော AI စွမ်းအင်သုံး Chatbot များ၏ လျှင်မြန်လှသော တိုးတက်ပြောင်းလဲမှုများနှင့်အတူ စက်ရုပ်များသည် လူသားကဲ့သို့ တီထွင်ဖန်တီးနိုင်စွမ်းများကို ထုတ်လုပ်ပေးနိုင်လာကြသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">It is hard to distinguish between human-created and AI-generated content.</div><div class="mm-line">လူသားများ ဖန်တီးထားသည့် အကြောင်းအရာနှင့် AI က ထုတ်လုပ်ပေးထားသည့် အကြောင်းအရာများကို ခွဲခြားရန် ခက်ခဲလှပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Writing song lyrics or drawing paintings in Art and writing an academic paper in education, for instance, can be done using AI.</div><div class="mm-line">ဥပမာအားဖြင့် အနုပညာနယ်ပယ်တွင် သီချင်းစာသားများ ရေးစပ်ခြင်း သို့မဟုတ် ပန်းချီကားများ ဆွဲခြင်းနှင့် ပညာရေးနယ်ပယ်တွင် သုတေသန စာတမ်းများ ရေးသားခြင်းတို့ကို AI ကို အသုံးပြု၍ ပြုလုပ်နိုင်ပါသည်။</div></div>
+</div>
+<h3 class="vocab-head">Paragraph 3 Vocabulary</h3><div class="vocab-grid">
+<div class="vocab-card"><div class="vocab-word">Fruits of creativity</div><div class="vocab-en">The results or products of creative effort</div><span class="vocab-mm">တီထွင်ဖန်တီးမှု ရလဒ်များ</span></div>
+<div class="vocab-card"><div class="vocab-word">Blurred</div><div class="vocab-en">Unclear or difficult to see or distinguish</div><span class="vocab-mm">မှုန်ဝါးသော / မသဲကွဲသော</span></div>
+<div class="vocab-card"><div class="vocab-word">IT front</div><div class="vocab-en">The field or area of Information Technology</div><span class="vocab-mm">သတင်းအချက်အလက် နည်းပညာ ကဏ္ဍ</span></div>
+<div class="vocab-card"><div class="vocab-word">Distinguish</div><div class="vocab-en">Recognize or point out a difference</div><span class="vocab-mm">ခွဲခြား သိမြင်သည်</span></div>
+<div class="vocab-card"><div class="vocab-word">Academic paper</div><div class="vocab-en">An essay or report written on scholarly research</div><span class="vocab-mm">ပညာရပ်ဆိုင်ရာ / သုတေသန စာတမ်း</span></div>
+</div></section>
+
+<section class="content-card">
+<div class="section-head"><span class="tag">Paragraph 4</span><h2 class="section-title">Reading Passage</h2></div>
+<div class="reading-stream">
+<div class="sentence-pair"><div class="en-line">Stephen Hawking, one of the world’s leading scientists, warns of the dangers of artificial intelligence.</div><div class="mm-line">ကမ္ဘာ့ထိပ်တန်း သိပ္ပံပညာရှင်များထဲမှ တစ်ဦးဖြစ်သူ စတီဗင်ဟော့ကင်း (Stephen Hawking) က ဉာဏ်ရည်တု (AI) ၏ အန္တရာယ်များကို သတိပေးထားသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">“It will either be the best thing that’s ever happened to us, or it will be the worst thing.</div><div class="mm-line">“ဒါဟာ ကျွန်ုပ်တို့ဆီမှာ ဖြစ်ပျက်ခဲ့သမျှထဲမှာ အကောင်းဆုံးအရာ ဖြစ်လာနိုင်သလို၊ ဒါမှမဟုတ် အဆိုးရွားဆုံးအရာလည်း ဖြစ်လာနိုင်ပါတယ်။</div></div>
+<div class="sentence-pair"><div class="en-line">If we’re not careful, it very well may be the last thing.”</div><div class="mm-line">ကျွန်ုပ်တို့ သတိမထားဘူးဆိုရင်၊ ဒါဟာ နောက်ဆုံးအရာလည်း ဖြစ်သွားနိုင်ပါတယ်” ဟု ဆိုသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">He stressed, “Basically, AI will be very good at accomplishing its goals; if humans get in the way, we could be in trouble.”</div><div class="mm-line">သူက “အခြေခံအားဖြင့် AI ဟာ သူ့ရဲ့ ပန်းတိုင်တွေကို အကောင်အထည်ဖော်တဲ့နေရာမှာ အလွန်တော်ကြပါလိမ့်မယ်၊ အကယ်၍ လူသားတွေက လမ်းမှာ အတားအဆီးဖြစ်လာခဲ့ရင် ကျွန်ုပ်တို့ ဒုက္ခရောက်သွားနိုင်ပါတယ်” ဟု အလေးအနက် ပြောကြားခဲ့သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Professor Hawking agrees that the development of artificial intelligence has already proved very beneficial for humanity.</div><div class="mm-line">ပါမောက္ခ ဟော့ကင်းသည် ဉာဏ်ရည်တု (AI) တိုးတက်လာမှုသည် လူသားတို့အတွက် အလွန်အကျိုးရှိကြောင်း သက်သေပြခဲ့ပြီးဖြစ်သည်ကို သဘောတူလက်ခံပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Towards this end, people need to be trained in the correct use of AI.</div><div class="mm-line">ထိုရည်ရွယ်ချက်အတွက် လူများသည် AI ကို မှန်ကန်စွာ အသုံးပြုနည်း သင်တန်းပေးခံရရန် လိုအပ်ပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">He is also worried about the consequences of creating something that can match or surpass humans.</div><div class="mm-line">လူသားများကို ယှဉ်ပြိုင်နိုင်သော သို့မဟုတ် လူသားထက် သာလွန်သွားနိုင်သော အရာတစ်ခုကို ဖန်တီးမိသည့် နောက်ဆက်တွဲ ရလဒ်များကိုလည်း သူ စိုးရိမ်ပူပန်လျက်ရှိသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">On one hand, we need to keep the advantages of technological progress in mind.</div><div class="mm-line">တစ်ဖက်တွင်လည်း နည်းပညာ တိုးတက်မှု၏ အကျိုးကျေးဇူးများကို ကျွန်ုပ်တို့ နှလုံးသွင်းထားရန် လိုအပ်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">On the other hand, we need to proceed with caution when it comes to giving ownership to AI.</div><div class="mm-line">အခြားတစ်ဖက်တွင်မူ AI ထံ ပိုင်ဆိုင်ခွင့် သို့မဟုတ် လုပ်ပိုင်ခွင့်များ ပေးသည့်အခါ သတိထား၍ လုပ်ဆောင်ရန် လိုအပ်ပါသည်။</div></div>
+<div class="sentence-pair"><div class="en-line">When AI takes charge of everything, humans will become subservient to their creation.</div><div class="mm-line">AI က အရာအားလုံးကို တာဝန်ယူ အုပ်ချုပ်လိုက်သည့်အခါ လူသားများသည် မိမိတို့၏ ဖန်တီးမှုအောက်တွင် လက်အောက်ခံ ဖြစ်သွားပါလိမ့်မည်။</div></div>
+<div class="sentence-pair"><div class="en-line">This is a scary scenario in which AI will soon turn into a ruthless master.</div><div class="mm-line">ဒါဟာ AI က မကြာမီ ရက်စက်ကြမ်းကြုတ်သော သခင်တစ်ဦးအဖြစ် ပြောင်းလဲသွားနိုင်သည့် ကြောက်စရာကောင်းသော ဇာတ်လမ်းဆင်မှုတစ်ခု ဖြစ်သည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Humans will become slaves to their own genius – victims of their own relentless search for things new and novel.</div><div class="mm-line">လူသားများသည် မိမိတို့၏ ပါရမီဉာဏ်ကြောင့် မိမိတို့ကိုယ်တိုင် ကျေးကျွန် ဖြစ်သွားကြလိမ့်မည် - သစ်လွန်းဆန်းပြားသော အရာများကို မဆုတ်မနစ် ရှာဖွေမှု၏ သားကောင်များ ဖြစ်လာကြလိမ့်မည်။</div></div>
+<div class="sentence-pair"><div class="en-line">Humans, be careful. What are potential disadvantages and ethical concerns of AI?</div><div class="mm-line">လူသားတို့၊ သတိထားကြပါ။ AI ၏ ဖြစ်နိုင်ခြေရှိသော အားနည်းချက်များနှင့် ကျင့်ဝတ်ဆိုင်ရာ စိုးရိမ်စရာများမှာ ဘာတွေလဲ။</div></div>
+<div class="sentence-pair"><div class="en-line">Ask questions – a lot of questions – before you trust your future to AI.</div><div class="mm-line">သင်၏ အနာဂတ်ကို AI ထံ ပုံမအပ်မီ မေးခွန်းများ - မေးခွန်းပေါင်းများစွာကို မေးမြန်းကြပါ။</div></div>
+</div>
+<h3 class="vocab-head">Paragraph 4 Vocabulary</h3><div class="vocab-grid">
+<div class="vocab-card"><div class="vocab-word">Accomplishing</div><div class="vocab-en">Achieving or completing something successfully</div><span class="vocab-mm">အကောင်အထည်ဖော်ဆောင်ခြင်း</span></div>
+<div class="vocab-card"><div class="vocab-word">Surpass</div><div class="vocab-en">Exceed; be greater than</div><span class="vocab-mm">သာလွန်သည် / ကျော်လွန်သည်</span></div>
+<div class="vocab-card"><div class="vocab-word">Proceed with caution</div><div class="vocab-en">To move forward carefully</div><span class="vocab-mm">သတိထား၍ လုပ်ဆောင်သည်</span></div>
+<div class="vocab-card"><div class="vocab-word">Subservient</div><div class="vocab-en">Prepared to obey others unquestioningly; subordinate</div><span class="vocab-mm">လက်အောက်ခံဖြစ်သော</span></div>
+<div class="vocab-card"><div class="vocab-word">Scenario</div><div class="vocab-en">A written outline of a movie, novel, or sequence of events</div><span class="vocab-mm">ဖြစ်နိုင်ခြေရှိသော အခြေအနေ / ဇာတ်လမ်း</span></div>
+<div class="vocab-card"><div class="vocab-word">Ruthless</div><div class="vocab-en">Having or showing no pity or compassion for others</div><span class="vocab-mm">ရက်စက်သော / ညှာတာမှုမရှိသော</span></div>
+<div class="vocab-card"><div class="vocab-word">Relentless</div><div class="vocab-en">Unceasingly intense; never giving up</div><span class="vocab-mm">မဆုတ်မနစ်သော</span></div>
+<div class="vocab-card"><div class="vocab-word">Ethical concerns</div><div class="vocab-en">Issues related to moral principles and values</div><span class="vocab-mm">ကျင့်ဝတ်ဆိုင်ရာ စိုးရိမ်မှုများ</span></div>
+</div></section>
+
+<div class="next"><h3>Reading Passage သင်ခန်းစာ ပြီးဆုံးပါပြီ</h3><p>စာပိုဒ်ပါ အကြောင်းအရာများကို နားလည်သဘောပေါက်မှု စစ်ဆေးရန် Comprehension မေးခွန်းများသို့ ဆက်လက်သွားရောက်ပါ။</p><a href="comprehension2.html">Comprehension မေးခွန်းများသို့ →</a></div>
+</main>
+
+<button class="menu-trigger" id="menuTrigger">☰</button><div class="overlay" id="overlay"></div>
+<aside class="side-menu" id="sideMenu">
+<div class="menu-top"><h2>Unit 2 Learning Menu</h2><button class="close" id="closeMenu">×</button></div>
+<div class="menu-sub">ARTIFICIAL INTELLIGENCE (AI) and ROBOTICS</div>
+<nav class="menu-list">
+<a class="menu-item" href="meaning2.html">◈ Meaning</a>
+<a class="menu-item active" href="unit2.html">▣ Reading Paragraph</a>
+<a class="menu-item" href="comprehension2.html">✓ Comprehension</a>
+<a class="menu-item" href="grammar2.html">Aᴮ Grammar</a>
+<a class="menu-item" href="listening-speaking2.html">◉ Listening & Speaking</a>
+<a class="menu-item" href="writing2.html">✎ Writing</a>
+<a class="menu-item" href="beca2.html">◆ BECA နမူနာမေးခွန်းများ</a>
+</nav></aside>
+<footer>Grade-12 English Learning Hub • Unit 2</footer>
+<script>
+const root=document.documentElement, toggle=document.getElementById('themeToggle');
+function theme(){return root.dataset.theme==='dark'?'dark':'light'}
+function saveTheme(t){root.dataset.theme=t;localStorage.setItem('theme',t);localStorage.setItem('siteTheme',t);localStorage.setItem('g12-theme',t);toggle.textContent=t==='dark'?'☀':'☾'}
+saveTheme(theme());
+toggle.onclick=()=>saveTheme(theme()==='dark'?'light':'dark');
+const menu=document.getElementById('sideMenu'),overlay=document.getElementById('overlay');
+function closeMenu(){menu.classList.remove('open');overlay.classList.remove('show')}
+document.getElementById('menuTrigger').onclick=()=>{menu.classList.add('open');overlay.classList.add('show')}
+document.getElementById('closeMenu').onclick=closeMenu;overlay.onclick=closeMenu;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+window.addEventListener('storage',e=>{if(['theme','siteTheme','g12-theme'].includes(e.key)&&e.newValue)root.dataset.theme=e.newValue==='dark'?'dark':'light';toggle.textContent=theme()==='dark'?'☀':'☾'});
+</script>
+</body>
+</html>

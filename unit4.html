@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4 | Reading Paragraph - Civic Values</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7fb;--surface:#fff;--surface2:#f8fbff;--text:#142033;--muted:#64748b;
+  --line:#dbe4ef;--primary:#1677c8;--primary2:#0c5ca5;--accent:#16a394;
+  --gold:#d6a72b;--shadow:0 18px 50px rgba(15,35,60,.10);--hero1:#071b35;--hero2:#0a4f72;
+  --english:#182536;--myanmar:#566477;--tag:#eaf4ff;
+}
+html[data-theme="dark"]{
+  --bg:#0b1220;--surface:#111b2c;--surface2:#162235;--text:#edf4ff;--muted:#aab7c8;
+  --line:#26364c;--primary:#62b4ff;--primary2:#8bc7ff;--accent:#35c7b4;
+  --gold:#e8c65b;--shadow:0 18px 50px rgba(0,0,0,.28);--hero1:#061326;--hero2:#073d59;
+  --english:#eef5ff;--myanmar:#b6c3d4;--tag:#142b43;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Padauk",sans-serif;line-height:1.7}
+body,button,a{font-family:"Plus Jakarta Sans","Padauk",sans-serif}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;border:0}
+.header{position:sticky;top:0;z-index:50;height:76px;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center}
+.nav{width:min(1180px,calc(100% - 28px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:24px;font-weight:800;letter-spacing:-.7px}
+.brand span{color:var(--primary)}
+.actions{display:flex;gap:10px}
+.icon-btn{width:48px;height:48px;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--text);font-size:23px;box-shadow:0 5px 18px rgba(0,0,0,.04)}
+.hero{position:relative;overflow:hidden;color:#fff;background:
+ radial-gradient(circle at 80% 20%,rgba(34,211,238,.24),transparent 28%),
+ radial-gradient(circle at 18% 80%,rgba(22,163,148,.28),transparent 30%),
+ linear-gradient(135deg,var(--hero1),var(--hero2));}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.10);transform:rotate(30deg);border-radius:28px}
+.hero:before{width:420px;height:420px;right:-130px;top:-220px}
+.hero:after{width:360px;height:360px;left:-180px;bottom:-250px}
+.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 28px));margin:auto;padding:68px 0 58px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.5px}
+.hero h1{margin:18px 0 12px;font-size:clamp(38px,7vw,70px);line-height:1.04;letter-spacing:-2.4px;max-width:850px}
+.hero h1 .cyan{color:#72e4d1}.hero h1 .white{color:#fff}
+.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.82);font-size:17px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);font-size:14px;color:#fff}
+.wrap{width:min(1060px,calc(100% - 28px));margin:0 auto}
+.content{padding:34px 0 70px}
+.info-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);padding:24px;margin-bottom:24px}
+.info-title{font-size:22px;font-weight:800;margin:0 0 6px}
+.info-sub{color:var(--muted);margin:0}
+.note{margin-top:18px;padding:16px 18px;border-left:5px solid var(--accent);background:var(--surface2);border-radius:0 16px 16px 0;color:var(--muted)}
+.section{margin:28px 0}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.section-num{min-width:48px;height:42px;padding:0 13px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;font-weight:800}
+.section h2{margin:0;font-size:26px;letter-spacing:-.5px}
+.topic-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}
+.topic-label{display:inline-flex;padding:7px 11px;border-radius:10px;background:var(--tag);color:var(--primary2);font-size:12px;font-weight:800;margin-bottom:12px}
+.sentence{padding:18px 0;border-bottom:1px dashed var(--line)}
+.sentence:last-child{border-bottom:0;padding-bottom:0}
+.en{font-size:17px;font-weight:600;color:var(--english);line-height:1.75}
+.mm{margin-top:8px;color:var(--myanmar);font-size:16px;line-height:2.0}
+.vocab{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.word{display:inline-flex;align-items:center;gap:5px;padding:6px 9px;border-radius:10px;background:var(--surface2);border:1px solid var(--line);font-size:12px;color:var(--muted)}
+.word b{color:var(--primary2)}
+.blank{padding:16px;border:1px dashed var(--primary);background:var(--tag);border-radius:15px;color:var(--primary2);font-weight:700;margin-bottom:10px}
+.quick-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:16px}
+.quick-table th,.quick-table td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.quick-table th{background:var(--surface2);color:var(--primary2);font-size:13px}
+.quick-table tr:last-child td{border-bottom:0}
+.footer{padding:26px 0 45px;text-align:center;color:var(--muted);font-size:13px}
+.side-overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);opacity:0;visibility:hidden;transition:.25s;z-index:80}
+.side{position:fixed;top:0;right:-340px;width:min(330px,88vw);height:100%;background:var(--surface);z-index:90;transition:.3s;padding:22px;overflow:auto;box-shadow:-18px 0 45px rgba(0,0,0,.18)}
+.side.open{right:0}.side-overlay.open{opacity:1;visibility:visible}
+.side-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.side h3{margin:0;font-size:20px}.close{width:42px;height:42px;border-radius:13px;background:var(--surface2);color:var(--text);font-size:21px}
+.menu-item{display:block;padding:13px 14px;margin:6px 0;border-radius:13px;color:var(--muted);font-weight:600}
+.menu-item:hover{background:var(--surface2);color:var(--text)}
+.menu-item.active{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff}
+@media(max-width:700px){
+  .header{height:68px}.brand{font-size:20px}.icon-btn{width:44px;height:44px;border-radius:14px}
+  .hero-inner{padding:42px 0 38px}.hero h1{font-size:40px;letter-spacing:-1.5px}
+  .hero p{font-size:15px}.chip{font-size:12px;padding:8px 10px}
+  .content{padding-top:22px}.info-card,.topic-card{border-radius:19px;padding:17px}
+  .section h2{font-size:22px}.section-num{min-width:43px;height:38px}
+  .en{font-size:16px}.mm{font-size:15px;line-height:1.95}
+  .quick-table{font-size:13px}.quick-table th,.quick-table td{padding:10px}
+}
+
+/* ===== UNIT 4 PREMIUM CIVIC VALUES HERO ===== */
+.hero{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+  isolation:isolate;
+  color:#fff;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(47,224,192,.16),transparent 24%),
+    radial-gradient(circle at 82% 18%,rgba(92,175,255,.20),transparent 30%),
+    radial-gradient(circle at 12% 82%,rgba(245,190,72,.13),transparent 28%),
+    linear-gradient(135deg,#061426 0%,#092d4b 48%,#075c68 100%);
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:-30%;
+  z-index:-3;
+  background:
+    repeating-linear-gradient(120deg,transparent 0 54px,rgba(255,255,255,.035) 55px 56px),
+    repeating-linear-gradient(30deg,transparent 0 82px,rgba(115,238,220,.035) 83px 84px);
+  transform:rotate(-7deg);
+  animation:civicGrid 24s linear infinite;
+}
+.hero::after{
+  content:"";
+  position:absolute;inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.11) 0 1px,transparent 2px),
+    radial-gradient(circle at 70% 65%,rgba(255,255,255,.10) 0 1px,transparent 2px),
+    radial-gradient(circle at 45% 80%,rgba(255,255,255,.08) 0 1px,transparent 2px);
+  background-size:170px 150px,210px 190px,240px 220px;
+  animation:starsFloat 18s ease-in-out infinite alternate;
+}
+.hero-inner{position:relative;z-index:5;width:min(1180px,calc(100% - 28px));margin:auto;padding:70px 0 72px}
+.hero-copy{position:relative;z-index:8;max-width:790px}
+.hero .eyebrow{
+  position:relative;
+  display:inline-flex;align-items:center;gap:9px;
+  padding:9px 16px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(14px);
+  border-radius:999px;
+  font-size:13px;font-weight:800;letter-spacing:.7px;
+  box-shadow:0 10px 35px rgba(0,0,0,.14);
+}
+.hero .eyebrow::before{
+  content:"";
+  width:8px;height:8px;border-radius:50%;
+  background:#62f3d5;
+  box-shadow:0 0 0 5px rgba(98,243,213,.10),0 0 18px #62f3d5;
+  animation:civicPulse 2s ease-in-out infinite;
+}
+.hero h1{
+  margin:20px 0 14px;
+  font-size:clamp(48px,8vw,84px);
+  line-height:.98;
+  letter-spacing:-3.8px;
+  max-width:850px;
+  text-shadow:0 10px 40px rgba(0,0,0,.28);
+}
+.hero h1 .cyan{
+  background:linear-gradient(100deg,#8affdf,#53d9ff 55%,#8fe8ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:200% auto;
+  animation:titleShine 5s ease-in-out infinite;
+}
+.hero h1 .white{color:#fff}
+.hero p{
+  max-width:760px;margin:0;
+  color:rgba(255,255,255,.84);
+  font-size:17px;line-height:1.95;
+  text-shadow:0 3px 18px rgba(0,0,0,.18);
+}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;max-width:760px}
+.hero .chip{
+  position:relative;
+  padding:10px 14px;border-radius:14px;
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(255,255,255,.16);
+  backdrop-filter:blur(12px);
+  font-size:13px;color:#fff;
+  box-shadow:inset 0 1px rgba(255,255,255,.10),0 8px 24px rgba(0,0,0,.10);
+  transition:transform .3s ease,border-color .3s ease,background .3s ease;
+}
+.hero .chip:hover{transform:translateY(-4px);background:rgba(255,255,255,.13);border-color:rgba(113,241,216,.38)}
+
+.civic-stage{
+  position:absolute;
+  right:-10px;top:50%;
+  width:520px;height:520px;
+  transform:translateY(-46%);
+  z-index:3;
+  pointer-events:none;
+}
+.civic-glow{
+  position:absolute;inset:22%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(73,238,205,.20),rgba(49,170,255,.08) 42%,transparent 70%);
+  filter:blur(8px);
+  animation:coreGlow 4.5s ease-in-out infinite;
+}
+.civic-ring{
+  position:absolute;left:50%;top:50%;
+  width:390px;height:390px;
+  margin:-195px;
+  border:1px solid rgba(137,245,226,.20);
+  border-radius:50%;
+  box-shadow:0 0 55px rgba(45,219,194,.08),inset 0 0 50px rgba(255,255,255,.025);
+}
+.civic-ring.r1{animation:orbit 18s linear infinite}
+.civic-ring.r2{
+  width:300px;height:300px;margin:-150px;
+  border-style:dashed;border-color:rgba(255,255,255,.16);
+  animation:orbitReverse 13s linear infinite;
+}
+.civic-ring.r3{
+  width:450px;height:450px;margin:-225px;
+  border-color:rgba(92,175,255,.12);
+  animation:orbit 28s linear infinite;
+}
+.civic-core{
+  position:absolute;left:50%;top:50%;
+  width:205px;height:205px;margin:-102.5px;
+  display:grid;place-items:center;text-align:center;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 25%,rgba(255,255,255,.24),transparent 24%),
+    linear-gradient(145deg,rgba(74,230,203,.25),rgba(44,129,190,.18));
+  border:1px solid rgba(255,255,255,.26);
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 80px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.22),0 0 80px rgba(65,226,201,.14);
+  animation:coreFloat 5s ease-in-out infinite;
+}
+.civic-core::before{
+  content:"";
+  position:absolute;inset:10px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.10);
+}
+.core-icon{font-size:42px;line-height:1;margin-bottom:8px;filter:drop-shadow(0 5px 15px rgba(0,0,0,.22))}
+.core-title{font-size:20px;font-weight:800;letter-spacing:.4px}
+.core-sub{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:4px}
+
+.civic-node{
+  position:absolute;
+  width:112px;height:112px;
+  display:grid;place-items:center;text-align:center;
+  border-radius:28px;
+  background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(255,255,255,.045));
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(15px);
+  box-shadow:0 18px 42px rgba(0,0,0,.16),inset 0 1px rgba(255,255,255,.14);
+  color:#fff;
+  font-size:12px;font-weight:800;
+  letter-spacing:.3px;
+}
+.civic-node b{display:block;font-size:25px;margin-bottom:3px}
+.node-a{left:12px;top:76px;animation:nodeFloatA 5s ease-in-out infinite}
+.node-b{right:14px;top:42px;animation:nodeFloatB 6s ease-in-out infinite}
+.node-c{left:0;bottom:55px;animation:nodeFloatC 5.5s ease-in-out infinite}
+.node-d{right:0;bottom:25px;animation:nodeFloatD 6.5s ease-in-out infinite}
+.civic-line{
+  position:absolute;left:50%;top:50%;
+  height:1px;transform-origin:left center;
+  background:linear-gradient(90deg,rgba(103,244,218,.35),transparent);
+  opacity:.55;
+}
+.line-a{width:190px;transform:rotate(210deg)}
+.line-b{width:195px;transform:rotate(330deg)}
+.line-c{width:205px;transform:rotate(150deg)}
+.line-d{width:215px;transform:rotate(28deg)}
+.civic-orb{
+  position:absolute;border-radius:50%;
+  background:#79f2db;
+  box-shadow:0 0 0 5px rgba(121,242,219,.07),0 0 22px rgba(121,242,219,.9);
+  animation:orbTravel 7s linear infinite;
+}
+.orb1{width:6px;height:6px;left:50%;top:50%;--ang:210deg;--dist:180px}
+.orb2{width:5px;height:5px;left:50%;top:50%;--ang:330deg;--dist:185px;animation-delay:-2.2s}
+.orb3{width:5px;height:5px;left:50%;top:50%;--ang:150deg;--dist:195px;animation-delay:-4.1s}
+.orb4{width:4px;height:4px;left:50%;top:50%;--ang:28deg;--dist:205px;animation-delay:-5.5s}
+
+.hero-corner{
+  position:absolute;z-index:1;pointer-events:none;
+  width:260px;height:260px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+}
+.corner1{left:-130px;top:-150px}
+.corner2{right:-130px;bottom:-150px}
+.hero-scan{
+  position:absolute;z-index:2;left:-10%;top:0;width:20%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);
+  transform:skewX(-18deg);
+  animation:scan 8s ease-in-out infinite;
+}
+
+@keyframes civicGrid{from{transform:translate3d(0,0,0) rotate(-7deg)}to{transform:translate3d(80px,40px,0) rotate(-7deg)}}
+@keyframes starsFloat{from{transform:translate3d(0,0,0);opacity:.7}to{transform:translate3d(20px,-14px,0);opacity:1}}
+@keyframes civicPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 5px rgba(98,243,213,.10),0 0 18px #62f3d5}50%{transform:scale(1.22);box-shadow:0 0 0 9px rgba(98,243,213,.03),0 0 28px #62f3d5}}
+@keyframes titleShine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes orbitReverse{to{transform:rotate(-360deg)}}
+@keyframes coreFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.025)}}
+@keyframes coreGlow{0%,100%{transform:scale(.95);opacity:.65}50%{transform:scale(1.08);opacity:1}}
+@keyframes nodeFloatA{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+@keyframes nodeFloatB{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(10px) rotate(-2deg)}}
+@keyframes nodeFloatC{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-9px) rotate(-1deg)}}
+@keyframes nodeFloatD{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(11px) rotate(2deg)}}
+@keyframes orbTravel{
+  0%{transform:rotate(var(--ang)) translateX(0);opacity:0}
+  12%{opacity:1}
+  88%{opacity:1}
+  100%{transform:rotate(var(--ang)) translateX(var(--dist));opacity:0}
+}
+@keyframes scan{0%{left:-25%;opacity:0}15%{opacity:1}55%{left:110%;opacity:.55}100%{left:110%;opacity:0}}
+
+@media(max-width:950px){
+  .hero{min-height:620px}
+  .hero-copy{max-width:700px}
+  .civic-stage{right:-120px;opacity:.55;transform:translateY(-40%) scale(.82)}
+}
+@media(max-width:700px){
+  .hero{min-height:690px}
+  .hero-inner{padding:42px 0 45px}
+  .hero-copy{max-width:100%;position:relative;z-index:10}
+  .hero h1{font-size:52px;letter-spacing:-2.5px;line-height:.98}
+  .hero p{font-size:15px;line-height:1.9;max-width:100%}
+  .hero-chips{gap:8px}
+  .hero .chip{font-size:11px;padding:8px 10px}
+  .civic-stage{
+    width:390px;height:390px;
+    right:50%;top:auto;bottom:-120px;
+    transform:translateX(50%) scale(.72);
+    opacity:.62;
+  }
+  .civic-core{width:180px;height:180px;margin:-90px}
+  .civic-ring{width:290px;height:290px;margin:-145px}
+  .civic-ring.r2{width:220px;height:220px;margin:-110px}
+  .civic-ring.r3{width:340px;height:340px;margin:-170px}
+  .civic-node{width:86px;height:86px;border-radius:22px;font-size:10px}
+  .civic-node b{font-size:19px}
+  .node-a{left:0;top:55px}.node-b{right:0;top:28px}.node-c{left:0;bottom:35px}.node-d{right:0;bottom:30px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero::before,.hero::after,.hero-scan,.hero h1 .cyan,.civic-ring,.civic-core,.civic-glow,
+  .civic-node,.civic-orb,.hero .eyebrow::before{animation:none!important}
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="nav">
+    <a class="brand" href="index.html">Grade-12 <span>English</span></a>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Theme">☀️</button>
+      <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="civicHero">
+  <div class="hero-scan"></div>
+  <div class="hero-corner corner1"></div>
+  <div class="hero-corner corner2"></div>
+  
+  <div class="civic-stag aria-hidden="true">
+    <div class="civic-glow"></div>
+    <div class="civic-ring r1"></div>
+    <div class="civic-ring r2"></div>
+    <div class="civic-ring r3"></div>
+
+    <div class="civic-line line-a"></div>
+    <div class="civic-line line-b"></div>
+    <div class="civic-line line-c"></div>
+    <div class="civic-line line-d"></div>
+
+    <div class="civic-orb orb1"></div>
+    <div class="civic-orb orb2"></div>
+    <div class="civic-orb orb3"></div>
+    <div class="civic-orb orb4"></div>
+
+    <div class="civic-core">
+      <div>
+        <div class="core-icon">🤝</div>
+        <div class="core-title">CIVIC VALUES</div>
+        <div class="core-sub">Respect • Serve • Unite</div>
+      </div>
+    </div>
+    <div class="civic-node node-b"><div><b>◎</b>COMMUNITY</div></div>
+    <div class="civic-node node-c"><div><b>♡</b>RESPECT</div></div>
+    <div class="civic-node node-d"><div><b>∞</b>RESPONSIBILITY</div></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">UNIT 4 • READING PARAGRAPH</div>
+      <h1><span class="cyan">Civic</span> <span class="white">Values</span></h1>
+      <p>
+        လူမှုအသိုင်းအဝိုင်းအတွင်း တစ်ဦးနှင့်တစ်ဦး လေးစားကူညီခြင်း၊
+        ကိုယ်ကျင့်တရားနှင့် လူမှုတာဝန်ယူမှုတို့၏ အရေးပါပုံကို လေ့လာပါ။
+      </p>
+  </div>  
+  </div> 
+</section>
+
+<main class="content wrap">
+  <div class="info-card">
+    <h2 class="info-title">📖 UNIT 4 — CIVIC VALUES</h2>
+    <div class="note">
+      <b>လေ့လာနည်း —</b> အရင် English sentence ကိုဖတ်ပါ။ ပြီးမှ အောက်က မြန်မာဘာသာပြန်ကိုဖတ်ပြီး
+      အဓိပ္ပါယ်ကိုစစ်ပါ။ နောက်ဆုံး Key Vocabulary တွေကို မှတ်သားပါ။
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <h2>Opening — A Simple Act of Help</h2>
+    </div>
+    <div class="topic-card">
+      <div class="topic-label">READ THE PASSAGE</div>
+
+      <div class="sentence">
+        <div class="en">Have you ever come across an elderly lady crossing a road on unsteady legs?</div>
+        <div class="mm">လမ်းကို မတည်မငြိမ်သော ခြေလှမ်းများဖြင့် ဖြတ်ကူးနေသော သက်ကြီးရွယ်အိုအမျိုးသမီးတစ်ဦးကို သင်တွေ့ဖူးပါသလား။</div>
+        <div class="vocab"><span class="word"><b>come across</b> = မတော်တဆတွေ့သည်</span><span class="word"><b>elderly</b> = သက်ကြီးရွယ်အို</span><span class="word"><b>unsteady</b> = မတည်မငြိမ်သော</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Or an old man struggling to cross a street with heavy shopping bags?</div>
+        <div class="mm">သို့မဟုတ် လေးလံသော ဈေးဝယ်အိတ်များကို ကိုင်ဆောင်ပြီး လမ်းဖြတ်ကူးရန် ရုန်းကန်နေရသော အဘိုးအိုတစ်ဦးကိုရော တွေ့ဖူးပါသလား။</div>
+        <div class="vocab"><span class="word"><b>struggle</b> = ရုန်းကန်သည်</span><span class="word"><b>heavy</b> = လေးလံသော</span><span class="word"><b>shopping bags</b> = ဈေးဝယ်အိတ်များ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Or a lone, unaccompanied child patiently waiting at the pedestrian light?</div>
+        <div class="mm">သို့မဟုတ် လမ်းသွားလမ်းလာများအတွက် မီးပွိုင့်အနီးတွင် အဖော်မပါဘဲ တစ်ယောက်တည်း စိတ်ရှည်စွာ စောင့်နေသော ကလေးတစ်ဦးကိုရော တွေ့ဖူးပါသလား။</div>
+        <div class="vocab"><span class="word"><b>lone</b> = တစ်ယောက်တည်းဖြစ်သော</span><span class="word"><b>unaccompanied</b> = အဖော်မပါသော</span><span class="word"><b>pedestrian</b> = လမ်းသွားလမ်းလာ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">More often than not, none of the vehicles slowed down or stopped for them.</div>
+        <div class="mm">အများအားဖြင့်တော့ မည်သည့်ယာဉ်ကမျှ သူတို့အတွက် အရှိန်လျှော့ခြင်း သို့မဟုတ် ရပ်ပေးခြင်း မပြုကြပါ။</div>
+        <div class="vocab"><span class="word"><b>more often than not</b> = အများအားဖြင့်</span><span class="word"><b>vehicle</b> = ယာဉ်</span><span class="word"><b>slow down</b> = အရှိန်လျှော့သည်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Did you try to help them cross the road?</div>
+        <div class="mm">သင်က သူတို့ လမ်းဖြတ်ကူးနိုင်အောင် ကူညီပေးဖို့ ကြိုးစားခဲ့ပါသလား။</div>
+        <div class="vocab"><span class="word"><b>try to</b> = ကြိုးစားသည်</span><span class="word"><b>cross the road</b> = လမ်းဖြတ်ကူးသည်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">If you did, Congratulations!</div>
+        <div class="mm">အကယ်၍ ကူညီခဲ့တယ်ဆိုရင် ဂုဏ်ယူပါတယ်။</div>
+        <div class="vocab"><span class="word"><b>Congratulations!</b> = ဂုဏ်ယူပါတယ်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">You are an exemplary person in civic values.</div>
+        <div class="mm">သင်ဟာ လူမှုအသိုင်းအဝိုင်းဆိုင်ရာ တန်ဖိုးများ (civic values) ကို လက်တွေ့ကျင့်သုံးသူ၊ စံနမူနာယူထိုက်သူတစ်ဦး ဖြစ်ပါတယ်။</div>
+        <div class="vocab"><span class="word"><b>exemplary</b> = စံနမူနာယူထိုက်သော</span><span class="word"><b>civic values</b> = လူမှုအသိုင်းအဝိုင်းဆိုင်ရာ တန်ဖိုးများ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <h2>Paragraph 1 — What Are Civic Values?</h2>
+    </div>
+    <div class="topic-card">
+      <div class="blank">① Textbook Blank — Paragraph 1</div>
+
+      <div class="sentence">
+        <div class="en">Civic values are basic rules about how people should treat each other in a community to keep things running smoothly.</div>
+        <div class="mm">Civic values ဆိုသည်မှာ လူမှုအသိုင်းအဝိုင်းအတွင်း အရာရာကို ချောမွေ့စွာ လည်ပတ်နိုင်စေရန် လူများအချင်းချင်း မည်သို့ ဆက်ဆံသင့်သည်နှင့် ပတ်သက်သော အခြေခံစည်းမျဉ်းများ ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>basic rules</b> = အခြေခံစည်းမျဉ်းများ</span><span class="word"><b>treat</b> = ဆက်ဆံသည်</span><span class="word"><b>community</b> = လူမှုအသိုင်းအဝိုင်း</span><span class="word"><b>smoothly</b> = ချောမွေ့စွာ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Cultures may be different but civic values go beyond cultural differences and include actions like helping someone cross the street or contributing to your community’s cleanliness.</div>
+        <div class="mm">ယဉ်ကျေးမှုများသည် မတူညီနိုင်သော်လည်း civic values များသည် ယဉ်ကျေးမှုကွာခြားချက်များကို ကျော်လွန်ပြီး တစ်စုံတစ်ဦးအား လမ်းဖြတ်ကူးရန် ကူညီပေးခြင်း သို့မဟုတ် ကိုယ့်လူမှုအသိုင်းအဝိုင်း၏ သန့်ရှင်းရေးအတွက် ပါဝင်ကူညီခြင်းကဲ့သို့သော လုပ်ဆောင်ချက်များ ပါဝင်သည်။</div>
+        <div class="vocab"><span class="word"><b>go beyond</b> = ကျော်လွန်သည်</span><span class="word"><b>cultural differences</b> = ယဉ်ကျေးမှုကွာခြားချက်များ</span><span class="word"><b>contribute</b> = ပါဝင်ကူညီသည်</span><span class="word"><b>cleanliness</b> = သန့်ရှင်းမှု</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Being kind, doing service work, engaging in charity, and even starting a local library are all instances of practicing civic values.</div>
+        <div class="mm">ကြင်နာခြင်း၊ ဝန်ဆောင်မှုလုပ်ငန်းများ လုပ်ဆောင်ခြင်း၊ ပရဟိတလုပ်ငန်းများတွင် ပါဝင်ခြင်းနှင့် ဒေသတွင်းစာကြည့်တိုက်တစ်ခု စတင်တည်ထောင်ခြင်းတို့သည် civic values ကို လက်တွေ့ကျင့်သုံးခြင်း၏ ဥပမာများပင် ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>be kind</b> = ကြင်နာသည်</span><span class="word"><b>service work</b> = ဝန်ဆောင်မှုလုပ်ငန်း</span><span class="word"><b>charity</b> = ပရဟိတ</span><span class="word"><b>instance</b> = ဥပမာ/ဖြစ်ရပ်</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <h2>Paragraph 2 — Self-Respect & Mutual Respect</h2>
+    </div>
+    <div class="topic-card">
+      <div class="blank">② Textbook Blank — Paragraph 2</div>
+
+      <div class="sentence">
+        <div class="en">When it comes to the subject of help, one image we have been constantly bombarded with is that of a social media celebrity who hands out a few thousand kyats to a homeless person, takes photos with the recipient of the charity and posts these photos online to get thousands of likes.</div>
+        <div class="mm">အကူအညီပေးခြင်းနှင့် ပတ်သက်လာလျှင် ကျွန်ုပ်တို့ မကြာခဏ မြင်တွေ့နေရသည့် ပုံရိပ်တစ်ခုမှာ အိုးမဲ့အိမ်မဲ့သူတစ်ဦးအား ငွေကျပ်အနည်းငယ်ပေးပြီး ပရဟိတလက်ခံသူနှင့်အတူ ဓာတ်ပုံရိုက်ကာ Like ထောင်ပေါင်းများစွာ ရရှိရန် အွန်လိုင်းပေါ်တင်သည့် social media celebrity တစ်ဦး၏ ပုံရိပ် ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>when it comes to</b> = ...နှင့်ပတ်သက်လာလျှင်</span><span class="word"><b>constantly</b> = အမြဲတမ်း/မကြာခဏ</span><span class="word"><b>bombarded with</b> = အဆက်မပြတ် မြင်တွေ့/ကြုံတွေ့ရသည်</span><span class="word"><b>homeless</b> = အိုးမဲ့အိမ်မဲ့</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">True help is not about seeking attention nor personal gain.</div>
+        <div class="mm">စစ်မှန်သော အကူအညီပေးခြင်းသည် အာရုံစိုက်ခံရရန် သို့မဟုတ် ကိုယ်ပိုင်အကျိုးအမြတ်ရရှိရန် မဟုတ်ပါ။</div>
+        <div class="vocab"><span class="word"><b>true help</b> = စစ်မှန်သောအကူအညီ</span><span class="word"><b>seek attention</b> = အာရုံစိုက်ခံရရန် ကြိုးစားသည်</span><span class="word"><b>personal gain</b> = ကိုယ်ပိုင်အကျိုးအမြတ်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">It is selfless and without any strings attached.</div>
+        <div class="mm">၎င်းသည် ကိုယ်ကျိုးမဖက်ဘဲ မည်သည့်အကျိုးအမြတ်မျှ မမျှော်လင့်ဘဲ ပြုလုပ်ခြင်း ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>selfless</b> = ကိုယ်ကျိုးမဖက်သော</span><span class="word"><b>strings attached</b> = နောက်ကွယ်မှ မျှော်လင့်ချက်/အကျိုးအမြတ်ပါရှိခြင်း</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">As respectable members of a community, we begin with self-respect which requires a certain degree of abidance by moral values.</div>
+        <div class="mm">လေးစားထိုက်သော လူမှုအသိုင်းအဝိုင်းဝင်များအဖြစ် ကျွန်ုပ်တို့သည် မိမိကိုယ်ကို လေးစားမှု (self-respect) မှ စတင်ရမည်ဖြစ်ပြီး ထို self-respect အတွက် ကိုယ်ကျင့်တရားတန်ဖိုးများကို အတိုင်းအတာတစ်ခုအထိ လိုက်နာရန် လိုအပ်သည်။</div>
+        <div class="vocab"><span class="word"><b>respectable</b> = လေးစားထိုက်သော</span><span class="word"><b>self-respect</b> = မိမိကိုယ်ကိုလေးစားမှု</span><span class="word"><b>abidance</b> = လိုက်နာမှု</span><span class="word"><b>moral values</b> = ကိုယ်ကျင့်တရားတန်ဖိုးများ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Do what is right, what is fair and what is beneficial for the growth of a society.</div>
+        <div class="mm">မှန်ကန်သောအရာ၊ တရားမျှတသောအရာနှင့် လူမှုအသိုင်းအဝိုင်း တိုးတက်ရေးအတွက် အကျိုးရှိသောအရာတို့ကို လုပ်ဆောင်ပါ။</div>
+        <div class="vocab"><span class="word"><b>fair</b> = တရားမျှတသော</span><span class="word"><b>beneficial</b> = အကျိုးရှိသော</span><span class="word"><b>growth</b> = တိုးတက်မှု</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">To make civic values a reality, away from textbooks and talks, we need to begin with respecting ourselves.</div>
+        <div class="mm">Civic values များကို စာအုပ်များနှင့် စကားပြောဆိုမှုများထဲတွင်သာ မထားဘဲ လက်တွေ့အဖြစ် အကောင်အထည်ဖော်ရန် မိမိကိုယ်ကို လေးစားခြင်းမှ စတင်ရမည်။</div>
+        <div class="vocab"><span class="word"><b>make ... a reality</b> = လက်တွေ့အကောင်အထည်ဖော်သည်</span><span class="word"><b>away from</b> = ...မှ ခွဲထွက်၍</span><span class="word"><b>respect ourselves</b> = မိမိကိုယ်ကို လေးစားသည်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">A person with healthy self-respect seldom breaks rules or deviates from the principles he values.</div>
+        <div class="mm">မိမိကိုယ်ကို ကျန်းမာသင့်လျော်စွာ လေးစားမှုရှိသူသည် စည်းမျဉ်းများကို ချိုးဖောက်လေ့မရှိသလို မိမိတန်ဖိုးထားသည့် မူများမှလည်း သွေဖည်လေ့မရှိပါ။</div>
+        <div class="vocab"><span class="word"><b>seldom</b> = ရှားရှားပါးပါး</span><span class="word"><b>break rules</b> = စည်းမျဉ်းချိုးဖောက်သည်</span><span class="word"><b>deviate from</b> = ...မှ သွေဖည်သည်</span><span class="word"><b>principle</b> = မူ/အခြေခံသဘောတရား</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Then comes mutual respect.</div>
+        <div class="mm">ထို့နောက် အပြန်အလှန်လေးစားမှု (mutual respect) ရှိလာသည်။</div>
+        <div class="vocab"><span class="word"><b>mutual</b> = အပြန်အလှန်</span><span class="word"><b>mutual respect</b> = အပြန်အလှန်လေးစားမှု</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">In a society with people who respect their identities and who are faithful to their principles, mutual respect is not hard to come by.</div>
+        <div class="mm">မိမိတို့၏ ကိုယ်ပိုင်အမှတ်သညာများကို လေးစားပြီး မိမိတို့၏ မူများအပေါ် သစ္စာရှိသော လူများရှိသည့် လူမှုအသိုင်းအဝိုင်းတွင် အပြန်အလှန်လေးစားမှု ရရှိရန် မခက်ခဲပါ။</div>
+        <div class="vocab"><span class="word"><b>identity</b> = အမှတ်သညာ/ကိုယ်ပိုင်အမှတ်လက္ခဏာ</span><span class="word"><b>faithful to</b> = ...အပေါ် သစ္စာရှိသော</span><span class="word"><b>come by</b> = ရရှိသည်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">This mutual respect creates a harmonious society where people respect their identities and stay true to their principles.</div>
+        <div class="mm">ဤအပြန်အလှန်လေးစားမှုသည် လူများက မိမိတို့၏ အမှတ်သညာများကို လေးစားပြီး မိမိတို့၏ မူများအပေါ် သစ္စာရှိနေသော သဟဇာတဖြစ်သည့် လူမှုအသိုင်းအဝိုင်းတစ်ခုကို ဖန်တီးပေးသည်။</div>
+        <div class="vocab"><span class="word"><b>harmonious</b> = သဟဇာတဖြစ်သော</span><span class="word"><b>stay true to</b> = ...အပေါ် သစ္စာရှိနေသည်</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <h2>Paragraph 3 — Civic Values in Action</h2>
+    </div>
+    <div class="topic-card">
+      <div class="blank">③ Textbook Blank — Paragraph 3</div>
+
+      <div class="sentence">
+        <div class="en">Let’s take a 47 year-old man, a Myanmar professional working for a major international company based in Singapore, as an example.</div>
+        <div class="mm">စင်ကာပူအခြေစိုက် နိုင်ငံတကာကုမ္ပဏီကြီးတစ်ခုတွင် အလုပ်လုပ်နေသော အသက် ၄၇ နှစ်အရွယ် မြန်မာပညာရှင်တစ်ဦးကို ဥပမာအဖြစ် ယူကြည့်ကြပါစို့။</div>
+        <div class="vocab"><span class="word"><b>professional</b> = ပညာရှင်/ကျွမ်းကျင်သူ</span><span class="word"><b>major</b> = အဓိက/ကြီးမားသော</span><span class="word"><b>based in</b> = ...တွင် အခြေစိုက်သော</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">He has always adhered to moral principles and civic values all his life.</div>
+        <div class="mm">သူသည် တစ်သက်တာလုံး ကိုယ်ကျင့်တရားဆိုင်ရာ မူများနှင့် civic values များကို အမြဲတမ်း လိုက်နာခဲ့သည်။</div>
+        <div class="vocab"><span class="word"><b>adhere to</b> = တင်းတင်းကျပ်ကျပ် လိုက်နာသည်</span><span class="word"><b>moral principles</b> = ကိုယ်ကျင့်တရားဆိုင်ရာ မူများ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">He has donated his blood a total of 58 times.</div>
+        <div class="mm">သူသည် စုစုပေါင်း ၅၈ ကြိမ် သွေးလှူဒါန်းခဲ့သည်။</div>
+        <div class="vocab"><span class="word"><b>donate blood</b> = သွေးလှူသည်</span><span class="word"><b>a total of</b> = စုစုပေါင်း</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">His most remarkable achievement is his commitment to providing food for the unemployed, poor and homeless.</div>
+        <div class="mm">သူ၏ အထင်ရှားဆုံးအောင်မြင်မှုမှာ အလုပ်လက်မဲ့များ၊ ဆင်းရဲနွမ်းပါးသူများနှင့် အိုးမဲ့အိမ်မဲ့များအတွက် အစားအစာများ ပေးဝေရန် ကတိကဝတ်ပြုထားခြင်း ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>remarkable</b> = ထူးခြားထင်ရှားသော</span><span class="word"><b>achievement</b> = အောင်မြင်မှု</span><span class="word"><b>commitment</b> = ကတိကဝတ်/အလေးအနက်ထားဆောင်ရွက်မှု</span><span class="word"><b>unemployed</b> = အလုပ်လက်မဲ့</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Once a week, U Tin Tun heads for the soup kitchen and leads the efforts to cook, pack and distribute food to hundreds of people.</div>
+        <div class="mm">တစ်ပတ်လျှင်တစ်ကြိမ် U Tin Tun သည် soup kitchen သို့ သွားပြီး လူရာနှင့်ချီအတွက် အစားအစာချက်ပြုတ်ခြင်း၊ ထုပ်ပိုးခြင်းနှင့် ဖြန့်ဝေခြင်းတို့ကို ဦးဆောင်လုပ်ဆောင်သည်။</div>
+        <div class="vocab"><span class="word"><b>once a week</b> = တစ်ပတ်လျှင်တစ်ကြိမ်</span><span class="word"><b>head for</b> = ...သို့ ဦးတည်သွားသည်</span><span class="word"><b>distribute</b> = ဖြန့်ဝေသည်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">His friends ask him why he is doing these things.</div>
+        <div class="mm">သူ့သူငယ်ချင်းများက သူဘာကြောင့် ဒီအရာများကို လုပ်ဆောင်နေသည်ကို မေးကြသည်။</div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">His answer, plain and simple, is, “We need to do something good every day. Not for our sake but for community.”</div>
+        <div class="mm">သူ၏ ရိုးရှင်းသောအဖြေမှာ “ကျွန်တော်တို့ဟာ နေ့တိုင်း ကောင်းမွန်တဲ့အရာတစ်ခုခုကို လုပ်ဆောင်ဖို့ လိုအပ်တယ်။ ကိုယ့်အတွက်မဟုတ်ဘဲ လူမှုအသိုင်းအဝိုင်းအတွက်ပါ” ဟူ၍ ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>plain and simple</b> = ရိုးရှင်းစွာ</span><span class="word"><b>for our sake</b> = ကျွန်ုပ်တို့အတွက်</span><span class="word"><b>community</b> = လူမှုအသိုင်းအဝိုင်း</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">He values community well-being and social responsibility.</div>
+        <div class="mm">သူသည် လူမှုအသိုင်းအဝိုင်း၏ ကောင်းကျိုးချမ်းသာမှုနှင့် လူမှုတာဝန်ယူမှုကို တန်ဖိုးထားသည်။</div>
+        <div class="vocab"><span class="word"><b>well-being</b> = ကောင်းကျိုးချမ်းသာ/ကျန်းမာသာယာမှု</span><span class="word"><b>social responsibility</b> = လူမှုတာဝန်ယူမှု</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Similarly, Phyu Phyu, the founder of a language school, focuses on quality education and charity.</div>
+        <div class="mm">အလားတူပင် ဘာသာစကားကျောင်းတစ်ခု၏ တည်ထောင်သူ Phyu Phyu သည် အရည်အသွေးရှိသော ပညာရေးနှင့် ပရဟိတလုပ်ငန်းများကို အာရုံစိုက်သည်။</div>
+        <div class="vocab"><span class="word"><b>similarly</b> = အလားတူပင်</span><span class="word"><b>founder</b> = တည်ထောင်သူ</span><span class="word"><b>quality education</b> = အရည်အသွေးရှိသော ပညာရေး</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">She donates to orphanages, homes for the aged, and organizes charity efforts for vulnerable groups like orphans and nuns.</div>
+        <div class="mm">သူသည် မိဘမဲ့ဂေဟာများနှင့် သက်ကြီးရွယ်အိုဂေဟာများသို့ လှူဒါန်းပြီး မိဘမဲ့ကလေးများနှင့် သီလရှင်များကဲ့သို့ အကူအညီလိုအပ်သော အုပ်စုများအတွက် ပရဟိတလုပ်ငန်းများကို စီစဉ်လုပ်ဆောင်သည်။</div>
+        <div class="vocab"><span class="word"><b>orphanage</b> = မိဘမဲ့ဂေဟာ</span><span class="word"><b>home for the aged</b> = သက်ကြီးရွယ်အိုဂေဟာ</span><span class="word"><b>vulnerable</b> = ထိခိုက်လွယ်သော/အကူအညီလိုအပ်သော</span><span class="word"><b>nun</b> = သီလရှင်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Her actions show that she has a strong sense of empathy and a commitment to making a positive difference in the lives of those who are less fortunate.</div>
+        <div class="mm">သူမ၏ လုပ်ဆောင်ချက်များက အခြားသူများ၏ ခံစားချက်ကို နားလည်စာနာနိုင်စွမ်း (empathy) အားကောင်းပြီး အခွင့်အရေးနည်းပါးသူများ၏ ဘဝတွင် အပြုသဘောဆောင်သော ပြောင်းလဲမှုတစ်ရပ် ဖြစ်ပေါ်စေရန် အလေးအနက်ထားကြောင်း ပြသသည်။</div>
+        <div class="vocab"><span class="word"><b>empathy</b> = စာနာနားလည်နိုင်မှု</span><span class="word"><b>positive difference</b> = အပြုသဘောဆောင်သော ပြောင်းလဲမှု</span><span class="word"><b>less fortunate</b> = အခွင့်အရေးနည်းပါးသူ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">She embodies qualities associated with kindness, generosity, and social responsibility.</div>
+        <div class="mm">သူမသည် ကြင်နာမှု၊ ရက်ရောမှုနှင့် လူမှုတာဝန်ယူမှုတို့နှင့် ဆက်စပ်သည့် အရည်အသွေးများကို လက်တွေ့ဖော်ပြနေသူ ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>embody</b> = လက်တွေ့ဖော်ပြသည်/ကိုယ်စားပြုသည်</span><span class="word"><b>kindness</b> = ကြင်နာမှု</span><span class="word"><b>generosity</b> = ရက်ရောမှု</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Another example is Ko Sai, a 25-year-old from Bamaw, who is an independent and successful individual.</div>
+        <div class="mm">နောက်ထပ်ဥပမာတစ်ခုမှာ ဗန်းမော်မှ အသက် ၂၅ နှစ်အရွယ် လွတ်လပ်စွာ ရပ်တည်နိုင်ပြီး အောင်မြင်သော လူငယ်တစ်ဦးဖြစ်သည့် Ko Sai ဖြစ်သည်။</div>
+        <div class="vocab"><span class="word"><b>independent</b> = ကိုယ်တိုင်ရပ်တည်နိုင်သော</span><span class="word"><b>successful</b> = အောင်မြင်သော</span><span class="word"><b>individual</b> = တစ်ဦးချင်းလူပုဂ္ဂိုလ်</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Since graduating from university, he has achieved moderate success while maintaining his down-to-earth nature.</div>
+        <div class="mm">တက္ကသိုလ်မှ ဘွဲ့ရပြီးကတည်းက သူသည် အတိုင်းအတာတစ်ခုအထိ အောင်မြင်မှုရရှိခဲ့သော်လည်း ရိုးရိုးသားသားနှင့် မြေကြီးဆန်သော သဘောသဘာဝကို ဆက်လက်ထိန်းသိမ်းထားသည်။</div>
+        <div class="vocab"><span class="word"><b>graduate</b> = ဘွဲ့ရသည်</span><span class="word"><b>moderate</b> = အလယ်အလတ်</span><span class="word"><b>down-to-earth</b> = ရိုးရိုးရှင်းရှင်း/လက်တွေ့ဆန်သော</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Ko Sai’s kindness extends to practical assistance, contributing in cash and kind to the needy every day.</div>
+        <div class="mm">Ko Sai ၏ ကြင်နာမှုသည် လက်တွေ့ကျသော အကူအညီပေးမှုအထိ ရောက်ရှိပြီး အကူအညီလိုအပ်သူများအတွက် နေ့စဉ် ငွေကြေးနှင့် ပစ္စည်းများဖြင့် ပါဝင်ကူညီသည်။</div>
+        <div class="vocab"><span class="word"><b>extend to</b> = ...အထိ ရောက်ရှိသည်</span><span class="word"><b>practical assistance</b> = လက်တွေ့ကျသော အကူအညီ</span><span class="word"><b>in cash and kind</b> = ငွေကြေးနှင့် ပစ္စည်းဖြင့်</span><span class="word"><b>needy</b> = အကူအညီလိုအပ်သူ</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">He has a strong sense of compassion and generosity, dedicated to making a meaningful difference in the lives of those who require support.</div>
+        <div class="mm">သူသည် သနားကြင်နာမှုနှင့် ရက်ရောမှု အားကောင်းပြီး အကူအညီလိုအပ်သူများ၏ ဘဝတွင် အဓိပ္ပါယ်ရှိသော ပြောင်းလဲမှု ဖြစ်ပေါ်စေရန် အလေးအနက်ထား ဆောင်ရွက်သည်။</div>
+        <div class="vocab"><span class="word"><b>compassion</b> = သနားကြင်နာမှု</span><span class="word"><b>dedicated to</b> = ...အတွက် အလေးအနက်ထားဆောင်ရွက်သော</span><span class="word"><b>meaningful</b> = အဓိပ္ပါယ်ရှိသော</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">These individuals exemplify the importance of civic values in action.</div>
+        <div class="mm">ဤပုဂ္ဂိုလ်များသည် civic values များကို လက်တွေ့လုပ်ဆောင်ခြင်း၏ အရေးပါမှုကို စံနမူနာပြသနေကြသည်။</div>
+        <div class="vocab"><span class="word"><b>individual</b> = လူပုဂ္ဂိုလ်</span><span class="word"><b>exemplify</b> = စံနမူနာပြသည်</span><span class="word"><b>in action</b> = လက်တွေ့လုပ်ဆောင်နေသော</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <h2>Paragraph 4 — Building a Cohesive Society</h2>
+    </div>
+    <div class="topic-card">
+      <div class="blank">④ Textbook Blank — Paragraph 4</div>
+
+      <div class="sentence">
+        <div class="en">Today, civic values are commonly taught in schools to help students actively participate in society and build respectful communities.</div>
+        <div class="mm">ယနေ့ခေတ်တွင် ကျောင်းသားများ လူမှုအသိုင်းအဝိုင်းအတွင်း တက်ကြွစွာ ပါဝင်နိုင်ရန်နှင့် အပြန်အလှန်လေးစားမှုရှိသော လူမှုအသိုင်းအဝိုင်းများ တည်ဆောက်နိုင်ရန် civic values များကို ကျောင်းများတွင် အများအားဖြင့် သင်ကြားပေးကြသည်။</div>
+        <div class="vocab"><span class="word"><b>commonly</b> = အများအားဖြင့်</span><span class="word"><b>actively participate</b> = တက်ကြွစွာ ပါဝင်သည်</span><span class="word"><b>respectful</b> = လေးစားမှုရှိသော</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">These values, tied to morality, emphasize honesty and responsibility.</div>
+        <div class="mm">ကိုယ်ကျင့်တရားနှင့် ဆက်စပ်နေသော ဤတန်ဖိုးများသည် ရိုးသားမှုနှင့် တာဝန်ယူမှုကို အလေးပေးဖော်ပြသည်။</div>
+        <div class="vocab"><span class="word"><b>tied to</b> = ...နှင့် ဆက်စပ်သော</span><span class="word"><b>morality</b> = ကိုယ်ကျင့်တရား</span><span class="word"><b>emphasize</b> = အလေးပေးသည်</span><span class="word"><b>honesty</b> = ရိုးသားမှု</span><span class="word"><b>responsibility</b> = တာဝန်ယူမှု</span></div>
+      </div>
+
+      <div class="sentence">
+        <div class="en">Beyond contributing to the smooth functioning of daily life, civic values play a crucial role in creating a cohesive society where self-respect and mutual respect are cornerstones.</div>
+        <div class="mm">နေ့စဉ်ဘဝကို ချောမွေ့စွာ လည်ပတ်နိုင်အောင် ကူညီပေးရုံသာမက civic values များသည် မိမိကိုယ်ကိုလေးစားမှုနှင့် အပြန်အလှန်လေးစားမှုတို့ကို အခြေခံအုတ်မြစ်များအဖြစ်ထားရှိသော စည်းလုံးညီညွတ်သည့် လူမှုအသိုင်းအဝိုင်းတစ်ခု ဖန်တီးရာတွင် အလွန်အရေးကြီးသော အခန်းကဏ္ဍမှ ပါဝင်သည်။</div>
+        <div class="vocab"><span class="word"><b>beyond</b> = ...အပြင်/ကျော်လွန်၍</span><span class="word"><b>smooth functioning</b> = ချောမွေ့စွာ လည်ပတ်မှု</span><span class="word"><b>crucial role</b> = အလွန်အရေးကြီးသော အခန်းကဏ္ဍ</span><span class="word"><b>cohesive</b> = စည်းလုံးညီညွတ်သော</span><span class="word"><b>cornerstone</b> = အခြေခံအုတ်မြစ်</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="section-num">🔑</div>
+      <h2>Key Vocabulary — Quick Review</h2>
+    </div>
+    <div class="topic-card">
+      <table class="quick-table">
+        <thead><tr><th>Vocabulary</th><th>Meaning</th><th>မြန်မာအဓိပ္ပါယ်</th></tr></thead>
+        <tbody>
+          <tr><td><b>civic values</b></td><td>values for responsible community life</td><td>လူမှုအသိုင်းအဝိုင်းဆိုင်ရာ တန်ဖိုးများ</td></tr>
+          <tr><td><b>self-respect</b></td><td>respect for oneself</td><td>မိမိကိုယ်ကို လေးစားမှု</td></tr>
+          <tr><td><b>mutual respect</b></td><td>respect between people</td><td>အပြန်အလှန် လေးစားမှု</td></tr>
+          <tr><td><b>abidance</b></td><td>following rules or principles</td><td>စည်းမျဉ်း/မူများကို လိုက်နာမှု</td></tr>
+          <tr><td><b>empathy</b></td><td>understanding another person's feelings</td><td>သူတစ်ပါးခံစားချက်ကို စာနာနားလည်နိုင်မှု</td></tr>
+          <tr><td><b>generosity</b></td><td>willingness to give or help</td><td>ရက်ရောမှု</td></tr>
+          <tr><td><b>compassion</b></td><td>sympathy and concern for others</td><td>သနားကြင်နာမှု</td></tr>
+          <tr><td><b>social responsibility</b></td><td>responsibility toward society</td><td>လူမှုတာဝန်ယူမှု</td></tr>
+          <tr><td><b>cohesive</b></td><td>united and connected</td><td>စည်းလုံးညီညွတ်သော</td></tr>
+          <tr><td><b>exemplify</b></td><td>show something by example</td><td>စံနမူနာပြသည်</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="info-card">
+    <h2 class="info-title">🧠 Exam Focus</h2>
+    <p class="info-sub">
+      ဒီ Reading Passage ကို လေ့လာတဲ့အခါ <b>civic values → self-respect → mutual respect → civic values in action → cohesive society</b>
+      ဆိုတဲ့ အဓိကအကြောင်းအရာစဉ်ကို မှတ်ထားပါ။
+    </p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  Grade-12 English Learning Hub • Unit 4 — Civic Values
+</footer>
+
+<aside class="side" id="side">
+  <div class="side-top"><h3>Unit 4 Menu</h3><button class="close" id="closeBtn">×</button></div>
+  <a class="menu-item" href="meaning4.html">Meaning</a>
+  <a class="menu-item active" href="unit4.html">📖 Reading Paragraph</a>
+  <a class="menu-item" href="comprehension4.html">📝 Comprehension</a>
+  <a class="menu-item" href="grammar4.html">🔤 Grammar</a>
+  <a class="menu-item" href="listening-speaking4.html">🎧 Listening & Speaking</a>
+  <a class="menu-item" href="writing4.html">✍️ Writing</a>
+  <a class="menu-item" href="beca4.html">🎯 BECA နမူနာမေးခွန်းများ</a>
+</aside>
+<div class="side-overlay" id="overlay"></div>
+
+<script>
+(function(){
+  const root=document.documentElement;
+  const themeBtn=document.getElementById('themeBtn');
+  const saved=localStorage.getItem('theme')||localStorage.getItem('siteTheme')||localStorage.getItem('g12-theme')||'light';
+  function applyTheme(t){
+    const mode=t==='dark'?'dark':'light';
+    root.setAttribute('data-theme',mode);
+    themeBtn.textContent=mode==='dark'?'🌙':'☀️';
+  }
+  applyTheme(saved);
+  themeBtn.addEventListener('click',()=>{
+    const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    localStorage.setItem('theme',next);
+    localStorage.setItem('siteTheme',next);
+    localStorage.setItem('g12-theme',next);
+    applyTheme(next);
+  });
+  window.addEventListener('storage',(e)=>{
+    if(['theme','siteTheme','g12-theme'].includes(e.key)){
+      const v=e.newValue||'light'; applyTheme(v);
+    }
+  });
+
+  const side=document.getElementById('side'), overlay=document.getElementById('overlay');
+  function open(){side.classList.add('open');overlay.classList.add('open')}
+  function close(){side.classList.remove('open');overlay.classList.remove('open')}
+  document.getElementById('menuBtn').addEventListener('click',open);
+  document.getElementById('closeBtn').addEventListener('click',close);
+  overlay.addEventListener('click',close);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+
+  /* Premium hero micro-parallax */
+  const hero=document.getElementById('civicHero');
+  const stage=document.querySelector('.civic-stage');
+  if(hero && stage && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    hero.addEventListener('pointermove',(e)=>{
+      const r=hero.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5;
+      const y=(e.clientY-r.top)/r.height-.5;
+      stage.style.transform=`translateY(-46%) translate(${x*12}px,${y*10}px)`;
+    });
+    hero.addEventListener('pointerleave',()=>{
+      stage.style.transform='';
+    });
+  }
+})();
+</script>
+</body>
+</html>

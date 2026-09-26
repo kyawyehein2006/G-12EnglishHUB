@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<title>Poem 1 — Equality | Grade-12 English</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap');
+
+:root{
+  --bg:#f4f7fb;
+  --surface:#ffffff;
+  --surface2:#eef4fb;
+  --text:#142033;
+  --muted:#65748b;
+  --primary:#2864d7;
+  --primary2:#1746a2;
+  --cyan:#18a9b7;
+  --gold:#d7a62a;
+  --border:#dce5f0;
+  --shadow:0 18px 50px rgba(23,55,100,.10);
+  --hero1:#101d3b;
+  --hero2:#183e72;
+  --hero3:#087f88;
+  --soft:#eaf3ff;
+  --success:#138a62;
+}
+html[data-theme="dark"]{
+  --bg:#0b1220;
+  --surface:#111b2c;
+  --surface2:#18243a;
+  --text:#edf4ff;
+  --muted:#aab8cc;
+  --primary:#6ea0ff;
+  --primary2:#8ab3ff;
+  --cyan:#56d5dc;
+  --gold:#f0c85b;
+  --border:#263750;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+  --hero1:#081126;
+  --hero2:#12335d;
+  --hero3:#075d64;
+  --soft:#172a48;
+  --success:#43c99a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Plus Jakarta Sans","Padauk",sans-serif;
+  line-height:1.75;
+}
+button{font:inherit}
+a{text-decoration:none;color:inherit}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 24px;
+  background:color-mix(in srgb,var(--surface) 92%,transparent);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(16px);
+}
+.brand{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.7px;
+}
+.brand span{color:var(--primary)}
+.header-actions{display:flex;gap:10px}
+.icon-btn{
+  width:48px;height:48px;border:1px solid var(--border);
+  border-radius:15px;background:var(--surface);
+  color:var(--text);cursor:pointer;font-size:22px;
+  display:grid;place-items:center;
+}
+.container{width:min(1100px,calc(100% - 32px));margin:auto}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 85% 18%,rgba(255,255,255,.16),transparent 24%),
+    radial-gradient(circle at 12% 85%,rgba(255,255,255,.10),transparent 30%),
+    linear-gradient(135deg,var(--hero1),var(--hero2) 54%,var(--hero3));
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(255,255,255,.14);
+  transform:rotate(30deg);
+}
+.hero:before{width:420px;height:420px;right:-140px;top:-190px;border-radius:45px}
+.hero:after{width:300px;height:300px;left:-150px;bottom:-190px;border-radius:50%}
+.hero-inner{position:relative;z-index:1;padding:76px 0 70px}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:8px 14px;border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  font-size:13px;font-weight:800;letter-spacing:.5px;
+}
+.hero h1{
+  margin:18px 0 12px;
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.02;letter-spacing:-2.8px;
+}
+.hero h1 span{color:#71e1dc}
+.hero p{
+  max-width:780px;margin:0;
+  color:rgba(255,255,255,.82);
+  font-size:17px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;
+}
+.pill{
+  padding:9px 14px;border-radius:999px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.17);
+  font-size:13px;
+}
+
+.main{padding:42px 0 70px}
+.section{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:25px;
+  box-shadow:var(--shadow);
+  padding:28px;
+  margin-bottom:24px;
+}
+.section-head{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-bottom:22px;
+}
+.section-icon{
+  width:48px;height:48px;border-radius:15px;
+  display:grid;place-items:center;
+  background:var(--soft);font-size:23px;flex:0 0 auto;
+}
+.section h2{margin:0;font-size:27px;line-height:1.25}
+.section-sub{color:var(--muted);margin:5px 0 0}
+
+.intro{
+  border-left:5px solid var(--cyan);
+  background:var(--surface2);
+  border-radius:0 17px 17px 0;
+  padding:17px 18px;
+  margin:20px 0 24px;
+}
+.intro strong{color:var(--primary)}
+
+.poem-card{
+  background:linear-gradient(145deg,var(--surface2),var(--surface));
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:26px 20px;
+}
+.poem-line{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:3px;
+  padding:12px 10px;
+  border-bottom:1px solid color-mix(in srgb,var(--border) 72%,transparent);
+}
+.poem-line:last-child{border-bottom:0}
+.en{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;font-weight:600;line-height:1.55;
+}
+.mm{
+  color:var(--muted);
+  font-size:15px;
+  font-family:"Padauk","Myanmar Text",sans-serif;
+}
+.stanza{
+  margin:0 0 16px;
+  padding-bottom:8px;
+}
+.stanza:last-child{margin-bottom:0}
+.refrain{
+  margin:8px 0;
+  padding:14px 15px;
+  border-radius:15px;
+  background:color-mix(in srgb,var(--primary) 9%,var(--surface));
+  border-left:4px solid var(--gold);
+}
+.author{
+  text-align:right;
+  margin-top:18px;
+  color:var(--muted);
+  font-weight:700;
+}
+
+.vocab-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+}
+.vocab{
+  padding:15px 16px;border:1px solid var(--border);
+  border-radius:16px;background:var(--surface2);
+}
+.vocab b{color:var(--primary)}
+.vocab span{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+
+.device{
+  padding:19px;border:1px solid var(--border);
+  border-radius:18px;background:var(--surface2);
+  margin-top:12px;
+}
+.device h3{margin:0 0 5px;color:var(--primary)}
+.device p{margin:0;color:var(--muted)}
+
+.question{
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:20px;
+  margin:14px 0;
+  background:var(--surface);
+}
+.q-top{display:flex;gap:12px;align-items:flex-start}
+.q-number{
+  min-width:36px;height:36px;border-radius:11px;
+  display:grid;place-items:center;
+  background:var(--primary);color:#fff;font-weight:800;
+}
+.q-text{font-weight:700;font-size:16px;line-height:1.65}
+.options{margin:15px 0 0 48px;display:grid;gap:7px}
+.option{color:var(--muted)}
+.option b{color:var(--text)}
+.answer-area{
+  margin:15px 0 0 48px;
+  display:none;
+  padding:14px 16px;
+  border-radius:15px;
+  background:color-mix(in srgb,var(--success) 9%,var(--surface2));
+  border:1px solid color-mix(in srgb,var(--success) 30%,var(--border));
+}
+.answer-area.show{display:block}
+.answer-label{
+  color:var(--success);font-weight:800;
+  font-size:13px;letter-spacing:.4px;
+}
+.answer-text{font-weight:700;margin-top:3px}
+.answer-mm{color:var(--muted);font-size:14px;margin-top:4px}
+.answer-btn{
+  margin:15px 0 0 48px;
+  border:1px solid var(--primary);
+  background:transparent;color:var(--primary);
+  padding:9px 15px;border-radius:12px;
+  font-weight:800;cursor:pointer;
+}
+.answer-btn:hover{background:var(--primary);color:#fff}
+
+.show-all{
+  width:100%;border:0;border-radius:15px;
+  padding:13px 16px;background:var(--primary);
+  color:#fff;font-weight:800;cursor:pointer;
+  margin-top:5px;
+}
+.note{
+  color:var(--muted);font-size:14px;
+  padding:13px 15px;background:var(--surface2);
+  border-radius:14px;margin-top:15px;
+}
+.footer{text-align:center;color:var(--muted);padding:8px 0 35px;font-size:13px}
+
+@media(max-width:700px){
+  .header{height:68px;padding:0 14px}
+  .brand{font-size:18px}
+  .icon-btn{width:43px;height:43px;border-radius:13px}
+  .container{width:min(100% - 20px,1100px)}
+  .hero-inner{padding:50px 0 48px}
+  .hero h1{font-size:43px;letter-spacing:-1.8px}
+  .hero p{font-size:15px}
+  .section{padding:18px;border-radius:20px}
+  .section h2{font-size:23px}
+  .poem-card{padding:17px 10px}
+  .en{font-size:16px}
+  .mm{font-size:14px;line-height:1.85}
+  .vocab-grid{grid-template-columns:1fr}
+  .question{padding:16px}
+  .options,.answer-area,.answer-btn{margin-left:0}
+  .answer-btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <a class="brand" href="index.html">Grade-12 <span>English</span></a>
+  <div class="header-actions">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
+    <button class="icon-btn" onclick="location.href='index.html'" aria-label="Home">⌂</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="kicker">POEM 1 · EQUALITY</div>
+    <h1><span>Equality</span></h1>    
+    <p>
+      Maya Angelou ၏ <b>“Equality”</b> ကဗျာသည် လူမျိုး၊ လိင်နှင့် လူမှုရေးမညီမျှမှုများကို
+      ကျော်လွှားပြီး တန်းတူအခွင့်အရေးရရှိရေးအတွက် တောင်းဆိုသည့် အသံကို ဖော်ပြထားသော ကဗျာဖြစ်သည်။
+      ကဗျာကို တစ်ကြောင်းချင်း ဘာသာပြန်လေ့လာပြီး Literary Devices နှင့် Comprehension ကိုပါ လေ့ကျင့်နိုင်ပါသည်။
+    </p>
+    <div class="hero-meta">
+      <span class="pill">📖 Line-by-line Translation</span>
+      <span class="pill">🔑 Glossary</span>
+      <span class="pill">✨ Poetic Devices</span>
+      <span class="pill">📝 Comprehension</span>
+    </div>
+  </div>
+</section>
+
+<main class="main">
+<div class="container">
+
+<section class="section">
+  <div class="section-head">
+    <div class="section-icon">📜</div>
+    <div>
+      <h2>About the Poem</h2>
+      <p class="section-sub">ကဗျာအကြောင်း အရင်နားလည်ထားသင့်သည့် အချက်များ</p>
+    </div>
+  </div>
+  <div class="intro">
+    <strong>Equality</strong> ဆိုသည်မှာ လူတိုင်းအတွက် တန်းတူအခွင့်အရေး၊ တန်းတူဆက်ဆံမှုနှင့်
+    တန်ဖိုးထားမှု ရရှိစေရေးကို ဆိုလိုပါသည်။ ဤကဗျာတွင် speaker သည် မိမိ၏အသံကို
+    အခြားသူများ မကြားချင်သကဲ့သို့ ဖြစ်နေသော်လည်း အရှုံးမပေးဘဲ တန်းတူညီမျှမှုကို
+    ဆက်လက်တောင်းဆိုနေသည့်ပုံစံဖြင့် ဖော်ပြထားပါသည်။ “Equality, and I will be free.”
+    ဟူသော ထပ်ခါတလဲလဲအသုံးပြုထားသည့် စာကြောင်းသည် ကဗျာ၏ အဓိက message ကို
+    အလွန်ထင်ရှားစေပါသည်။
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="section-icon">⚖️</div>
+    <div>
+      <h2>Equality — တန်းတူညီမျှ</h2>
+    </div>
+  </div>
+
+  <div class="poem-card">
+
+    <div class="stanza">
+      <div class="poem-line"><div class="en">You declare you see me dimly</div><div class="mm">မင်းက ငါ့ကို မသဲမကွဲသာ မြင်ရတယ်လို့ ပြောတယ်။</div></div>
+      <div class="poem-line"><div class="en">through a glass which will not shine,</div><div class="mm">တောက်ပမနေတဲ့ မှန်တစ်ချပ်ရဲ့ အနောက်ကနေတဆင့်ပေါ့။</div></div>
+      <div class="poem-line"><div class="en">though I stand before you boldly,</div><div class="mm">ဒါပေမယ့် ငါက မင်းရှေ့မှာ ရဲရဲဝံ့ဝံ့ ရပ်နေတယ်။</div></div>
+      <div class="poem-line"><div class="en">trim in rank and marking time.</div><div class="mm">ကိုယ့်ရဲ့အဆင့်အတန်းကို ထိန်းသိမ်းထားပြီး အချိန်ကို တိတိကျကျ ဖြတ်သန်းရင်းပေါ့။</div></div>
+    </div>
+
+    <div class="stanza">
+      <div class="poem-line"><div class="en">You do own to hear me faintly</div><div class="mm">မင်းက ငါ့အသံကို အနည်းငယ်တော့ ကြားရတယ်လို့ ဝန်ခံတယ်။</div></div>
+      <div class="poem-line"><div class="en">as a whisper out of range,</div><div class="mm">ဒါပေမယ့် လက်လှမ်းမမီတဲ့နေရာက တိုးတိုးလေးပြောသံလိုပဲလို့ ထင်တယ်။</div></div>
+      <div class="poem-line"><div class="en">while my drums beat out the message</div><div class="mm">ငါ့ရဲ့ဒရမ်သံတွေကတော့ သတင်းစကားကို ထင်ရှားစွာ ထုတ်ဖော်ပြောနေတယ်။</div></div>
+      <div class="poem-line"><div class="en">and the rhythms never change.</div><div class="mm">အဲဒီစည်းချက်တွေကတော့ ဘယ်တော့မှ မပြောင်းလဲဘူး။</div></div>
+    </div>
+
+    <div class="stanza refrain">
+      <div class="poem-line"><div class="en">Equality, and I will be free.</div><div class="mm">တန်းတူညီမျှမှု ရှိလာရင် ငါ လွတ်လပ်လာမယ်။</div></div>
+      <div class="poem-line"><div class="en">Equality, and I will be free.</div><div class="mm">တန်းတူညီမျှမှု ရှိလာရင် ငါ လွတ်လပ်လာမယ်။</div></div>
+    </div>
+
+    <div class="stanza">
+      <div class="poem-line"><div class="en">You announce my ways are wanton,</div><div class="mm">မင်းက ငါ့အပြုအမူတွေဟာ အထိန်းအချုပ်မဲ့ပြီး မသင့်တော်ဘူးလို့ ပြောတယ်။</div></div>
+      <div class="poem-line"><div class="en">that I fly from man to man,</div><div class="mm">ငါက ယောက်ျားတစ်ယောက်ကနေ တစ်ယောက်ဆီ ပြောင်းလဲသွားလာတယ်လို့ ပြောတယ်။</div></div>
+      <div class="poem-line"><div class="en">but if I’m just a shadow to you,</div><div class="mm">ဒါပေမယ့် ငါက မင်းအတွက် အရိပ်တစ်ခုမျှသာဆိုရင်၊</div></div>
+      <div class="poem-line"><div class="en">could you ever understand?</div><div class="mm">မင်းက ငါ့ကို ဘယ်တော့မှ နားလည်နိုင်ပါ့မလား။</div></div>
+    </div>
+
+    <div class="stanza">
+      <div class="poem-line"><div class="en">We have lived a painful history,</div><div class="mm">နာကျင်စရာကောင်းတဲ့ သမိုင်းတစ်လျှောက်ကို ငါတို့ ဖြတ်သန်းခဲ့ကြတယ်။</div></div>
+      <div class="poem-line"><div class="en">we know the shameful past,</div><div class="mm">ရှက်စရာကောင်းတဲ့ အတိတ်ကိုလည်း ငါတို့ သိကြတယ်။</div></div>
+      <div class="poem-line"><div class="en">but I keep on marching forward,</div><div class="mm">ဒါပေမယ့် ငါက ရှေ့ကို ဆက်လက်ချီတက်နေတယ်။</div></div>
+      <div class="poem-line"><div class="en">and you keep on coming last.</div><div class="mm">မင်းကတော့ နောက်ဆုံးမှာပဲ ဆက်လက်ကျန်နေတယ်။</div></div>
+    </div>
+
+    <div class="stanza refrain">
+      <div class="poem-line"><div class="en">Equality, and I will be free.</div><div class="mm">တန်းတူညီမျှမှု ရှိလာရင် ငါ လွတ်လပ်လာမယ်။</div></div>
+      <div class="poem-line"><div class="en">Equality, and I will be free.</div><div class="mm">တန်းတူညီမျှမှု ရှိလာရင် ငါ လွတ်လပ်လာမယ်။</div></div>
+    </div>
+
+    <div class="stanza">
+      <div class="poem-line"><div class="en">Take the blinders from your vision,</div><div class="mm">မင်းရဲ့အမြင်ကို ကန့်သတ်ထားတဲ့ အရာတွေကို ဖယ်ရှားလိုက်ပါ။</div></div>
+      <div class="poem-line"><div class="en">take the padding from your ears,</div><div class="mm">မင်းရဲ့နားတွေကို ပိတ်ဆို့ထားတဲ့ အရာတွေကိုလည်း ဖယ်ရှားလိုက်ပါ။</div></div>
+      <div class="poem-line"><div class="en">and confess you’ve heard me crying,</div><div class="mm">ငါငိုကြွေးနေတဲ့အသံကို ကြားခဲ့တယ်လို့ ဝန်ခံပါ။</div></div>
+      <div class="poem-line"><div class="en">and admit you’ve seen my tears.</div><div class="mm">ငါ့မျက်ရည်တွေကို မြင်ခဲ့တယ်လို့လည်း ဝန်ခံပါ။</div></div>
+    </div>
+
+    <div class="stanza">
+      <div class="poem-line"><div class="en">Hear the tempo so compelling,</div><div class="mm">အလွန်ဆွဲဆောင်မှုရှိတဲ့ စည်းချက်ကို နားထောင်ပါ။</div></div>
+      <div class="poem-line"><div class="en">hear the blood throb in my veins.</div><div class="mm">ငါ့သွေးကြောတွေအတွင်း သွေးခုန်နှုန်း ပြင်းပြင်းထန်ထန် လှုပ်ရှားနေတာကို နားထောင်ပါ။</div></div>
+      <div class="poem-line"><div class="en">Yes, my drums are beating nightly,</div><div class="mm">ဟုတ်တယ်၊ ငါ့ရဲ့ဒရမ်တွေက ညတိုင်း ဆက်လက်တီးခတ်နေတယ်။</div></div>
+      <div class="poem-line"><div class="en">and the rhythms never change.</div><div class="mm">အဲဒီစည်းချက်တွေကတော့ ဘယ်တော့မှ မပြောင်းလဲဘူး။</div></div>
+    </div>
+
+    <div class="stanza refrain">
+      <div class="poem-line"><div class="en">Equality, and I will be free.</div><div class="mm">တန်းတူညီမျှမှု ရှိလာရင် ငါ လွတ်လပ်လာမယ်။</div></div>
+      <div class="poem-line"><div class="en">Equality, and I will be free.</div><div class="mm">တန်းတူညီမျှမှု ရှိလာရင် ငါ လွတ်လပ်လာမယ်။</div></div>
+    </div>
+
+    <div class="author">— Maya Angelou (1928–2014)</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="section-icon">🔑</div>
+    <div>
+      <h2>Glossary</h2>
+      <p class="section-sub"> အရေးကြီးသော Vocabulary များ</p>
+    </div>
+  </div>
+  <div class="vocab-grid">
+    <div class="vocab"><b>equality (n)</b><span>a state of being equal, especially in rights and opportunities — အထူးသဖြင့် အခွင့်အရေးနှင့် အခွင့်အလမ်းများတွင် တန်းတူညီမျှမှုအခြေအနေ</span></div>
+    <div class="vocab"><b>out of range (adv)</b><span>too far away to be reached or detected — လက်လှမ်းမမီ သို့မဟုတ် ရှာဖွေမတွေ့နိုင်လောက်အောင် ဝေးသော</span></div>
+    <div class="vocab"><b>beat out the message (vp)</b><span>to make the clear sound of the message — သတင်းစကားကို ရှင်းလင်းစွာ အသံဖြင့် ထုတ်ဖော်ပေးသည်</span></div>
+    <div class="vocab"><b>wanton (adj)</b><span>behaving or appearing in a very sexual way — လိင်ပိုင်းဆိုင်ရာ အလွန်လွတ်လပ်စွာ ပြုမူ/ပေါ်လွင်သော</span></div>
+    <div class="vocab"><b>blinders (n)</b><span>two flaps on a horse’s bridle to keep it from seeing objects at its sides — မြင်း၏ဘေးဘက်အရာများကို မမြင်စေရန် ခေါင်းကြိုးတွင် တပ်ထားသော အဖုံးနှစ်ခု</span></div>
+    <div class="vocab"><b>padding (n)</b><span>soft material used to cover a hard surface — မာကျောသောမျက်နှာပြင်ကို ဖုံးအုပ်ရန် အသုံးပြုသည့် နူးညံ့သောပစ္စည်း</span></div>
+    <div class="vocab"><b>tempo (n)</b><span>speed or rate at which an event happens or music is played — ဖြစ်ရပ်တစ်ခု ဖြစ်ပေါ်သည့် သို့မဟုတ် ဂီတတီးခတ်သည့် အရှိန်နှုန်း</span></div>
+    <div class="vocab"><b>throb (v)</b><span>to beat or sound with a strong regular rhythm — ပြင်းထန်ပြီး ပုံမှန်စည်းချက်ဖြင့် ခုန်ခြင်း/အသံထွက်ခြင်း</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div class="section-icon">✨</div>
+    <div>
+      <h2>Poetic Devices</h2>
+      <p class="section-sub">ကဗျာထဲတွင် အသုံးပြုထားသော Literary Devices</p>
+    </div>
+  </div>
+  <div class="device">
+    <h3>Repetition</h3>
+    <p>Repetition ဆိုသည်မှာ ကဗျာတွင် စကားလုံး၊ စကားစု၊ စာကြောင်း သို့မဟုတ် stanza တစ်ခုကို ထပ်ခါတလဲလဲ အသုံးပြုခြင်းဖြစ်သည်။ ၎င်းသည် rhyme, meter နှင့် rhythm တို့ကို ဖန်တီးရာတွင် အထောက်အကူပြုပြီး ကဗျာ၏ musical quality ကို တိုးစေသကဲ့သို့ အရေးကြီးသောအဓိပ္ပါယ်ကိုလည်း အလေးပေးဖော်ပြပေးသည်။ <b>“Equality, and I will be free.”</b> ကို ထပ်ခါတလဲလဲ အသုံးပြုထားသည်။</p>
+  </div>
+  <div class="device">
+    <h3>Metaphor</h3>
+    <p>Metaphor ဆိုသည်မှာ “like” သို့မဟုတ် “as” ကဲ့သို့ comparison ကို ပြသသော conjunction မသုံးဘဲ အရာတစ်ခုကို အခြားအရာတစ်ခုနှင့် အယူအဆ သို့မဟုတ် လက္ခဏာတစ်ရပ်အရ တူညီသကဲ့သို့ တိုက်ရိုက်နှိုင်းယှဉ်ဖော်ပြခြင်းဖြစ်သည်။ ဤကဗျာတွင် <b>“just a shadow”</b>, <b>“the blinders from your vision”</b>, <b>“the padding from your ears”</b> နှင့် <b>“my drums”</b> စသည့် metaphor များကို တွေ့ရသည်။</p>
+  </div>
+</section>
+
+<section class="section" id="comprehension">
+  <div class="section-head">
+    <div class="section-icon">📝</div>
+    <div>
+      <h2>Comprehension</h2>
+      <p class="section-sub">Read the poem and answer the following questions. </p>
+    </div>
+  </div>
+
+  <div class="intro">
+    <strong>Exam Tip:</strong> မေးခွန်းတစ်ခုချင်းစီကို အရင်ဖြေကြည့်ပြီးမှ <b>“အဖြေကြည့်ရန်”</b> Button ကိုနှိပ်ပါ။
+  </div>
+
+  <div id="questions"></div>
+
+  <button class="show-all" id="showAllBtn" onclick="toggleAllAnswers()">အဖြေအားလုံးကို ပြရန်</button>
+</section>
+
+</div>
+</main>
+
+<footer class="footer">Grade-12 English Learning Hub · Poem 1 — Equality</footer>
+
+<script>
+(function(){
+  const saved = localStorage.getItem("theme") || localStorage.getItem("siteTheme") || localStorage.getItem("g12-theme") || "light";
+  document.documentElement.setAttribute("data-theme", saved === "dark" ? "dark" : "light");
+
+  const btn = document.getElementById("themeBtn");
+  function updateIcon(){
+    btn.textContent = document.documentElement.getAttribute("data-theme")==="dark" ? "🌙" : "☀️";
+  }
+  updateIcon();
+
+  btn.addEventListener("click",()=>{
+    const next = document.documentElement.getAttribute("data-theme")==="dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme",next);
+    localStorage.setItem("theme",next);
+    localStorage.setItem("siteTheme",next);
+    localStorage.setItem("g12-theme",next);
+    updateIcon();
+  });
+
+  window.addEventListener("storage",(e)=>{
+    if(["theme","siteTheme","g12-theme"].includes(e.key)){
+      const t=e.newValue==="dark"?"dark":"light";
+      document.documentElement.setAttribute("data-theme",t);
+      updateIcon();
+    }
+  });
+})();
+
+const qs = [
+  {
+    q:"Who do you think the speaker of the poem is?",
+    options:["A. A black musician","B. A black man","C. A black woman","D. A young girl"],
+    answer:"C. A black woman",
+    mm:"အဖြေ — C. လူမည်းအမျိုးသမီး"
+  },
+  {
+    q:"Which literary device does the poet use in the lines “Equality, and I will be free. Equality, and I will be free.”?",
+    options:["A. metaphor","B. personification","C. repetition","D. simile"],
+    answer:"C. repetition",
+    mm:"အဖြေ — C. repetition (စကားလုံး/စာကြောင်း ထပ်ခါတလဲလဲ အသုံးပြုခြင်း)"
+  },
+  {
+    q:"What does the line “Equality, I will be free” mostly mean?",
+    options:[
+      "A. The black people are treated alike and they are free.",
+      "B. The black women will be free from slavery and have equal rights.",
+      "C. To have equality, one must be free.",
+      "D. To be equal in a society is to be free within it."
+    ],
+    answer:"D. To be equal in a society is to be free within it.",
+    mm:"အဖြေ — D. လူမှုအသိုင်းအဝိုင်းအတွင်း တန်းတူညီမျှမှုရှိခြင်းသည် ထိုအသိုင်းအဝိုင်းအတွင်း လွတ်လပ်မှုရှိခြင်းပင် ဖြစ်သည်။"
+  },
+  {
+    q:"What is the rhyme scheme of the first stanza?",
+    options:["A. ABAB","B. ABCB","C. ABBA","D. ABCD"],
+    answer:"B. ABCB",
+    mm:"အဖြေ — B. ABCB"
+  },
+  {
+    q:"In line 12, what does the poet compare herself to?",
+    options:["A. a bird","B. a drum","C. a glass","D. a shadow"],
+    answer:"A. a bird",
+    mm:"အဖြေ — A. a bird (ငှက်)"
+  },
+  {
+    q:"What does the metaphor “I fly from man to man” mostly mean?",
+    options:[
+      "A. The woman changes the partner quite often.",
+      "B. The woman likes to fly like a bird.",
+      "C. The woman wants to be a bird.",
+      "D. The woman loves the way the birds move."
+    ],
+    answer:"A. The woman changes the partner quite often.",
+    mm:"အဖြေ — A. အမျိုးသမီးသည် အဖော်/လက်တွဲဖော်ကို မကြာခဏ ပြောင်းလဲသည်ဟု ဆိုလိုသည်။"
+  },
+  {
+    q:"In line 13, which of the following meanings does the poet want to convey through the use of the metaphor “just a shadow”?",
+    options:[
+      "A. a very close or an inseparable companion",
+      "B. a reflected image",
+      "C. darker portion of something",
+      "D. a small degree or portion"
+    ],
+    answer:"C. darker portion of something",
+    mm:"အဖြေ — C. တစ်စုံတစ်ရာ၏ မှောင်မိုက်သော အစိတ်အပိုင်း"
+  },
+  {
+    q:"Which of the quotations from the poem best describes the idea that African Americans will never give up and go on fighting for their rights?",
+    options:[
+      "A. ‘You declare you see me dimly,’",
+      "B. ‘And confess you’ve heard me crying, / And admit you’ve seen my tears.’",
+      "C. ‘Yes, my drums are beating nightly, / And the rhythms never change.’",
+      "D. ‘You announce my ways are wanton,’"
+    ],
+    answer:"C. ‘Yes, my drums are beating nightly, And the rhythms never change.’",
+    mm:"အဖြေ — C. “Yes, my drums are beating nightly, And the rhythms never change.”"
+  },
+  {
+    q:"Why does the poet use the metaphors “the blinders from your vision” and “the padding from your ears”?",
+    options:[
+      "A. To point out vision and hearing are important",
+      "B. To urge white people to try to understand the feelings of black women clearly and truly.",
+      "C. To admit that the white people see and hear black women crying",
+      "D. To keep blinders for their eyes and paddings for their ears"
+    ],
+    answer:"B. To urge white people to try to understand the feelings of black women clearly and truly.",
+    mm:"အဖြေ — B. လူဖြူများအနေဖြင့် လူမည်းအမျိုးသမီးများ၏ ခံစားချက်များကို ရှင်းလင်းစွာနှင့် အမှန်တကယ် နားလည်ရန် တိုက်တွန်းခြင်းဖြစ်သည်။"
+  },
+  {
+    q:"In what sense is the metaphor “the drum” used in the following lines? “My drums beat out the message” / “Yes, my drums are beating nightly,”",
+    options:[
+      "A. The speaker speaks enthusiastically about a belief or idea",
+      "B. The speaker makes a sound like beating drums",
+      "C. The speaker is beating the drums every night",
+      "D. The drums sound rhythmically."
+    ],
+    answer:"A. The speaker speaks enthusiastically about a belief or idea",
+    mm:"အဖြေ — A. speaker သည် ယုံကြည်ချက် သို့မဟုတ် အယူအဆတစ်ခုကို စိတ်အားထက်သန်စွာ ထုတ်ဖော်ပြောဆိုခြင်း"
+  }
+];
+
+const wrap = document.getElementById("questions");
+
+qs.forEach((item,i)=>{
+  const box=document.createElement("article");
+  box.className="question";
+  box.innerHTML=`
+    <div class="q-top">
+      <div class="q-number">${i+1}</div>
+      <div class="q-text">${item.q}</div>
+    </div>
+    <div class="options">${item.options.map(x=>`<div class="option">${x}</div>`).join("")}</div>
+    <button class="answer-btn" onclick="toggleAnswer(${i})" id="answerBtn${i}">အဖြေကြည့်ရန်</button>
+    <div class="answer-area" id="answer${i}">
+      <div class="answer-label">ANSWER</div>
+      <div class="answer-text">${item.answer}</div>
+      <div class="answer-mm">${item.mm}</div>
+    </div>
+  `;
+  wrap.appendChild(box);
+});
+
+function toggleAnswer(i){
+  const area=document.getElementById("answer"+i);
+  const btn=document.getElementById("answerBtn"+i);
+  area.classList.toggle("show");
+  btn.textContent=area.classList.contains("show") ? "အဖြေဖျောက်ရန်" : "အဖြေကြည့်ရန်";
+}
+
+function toggleAllAnswers(){
+  const areas=[...document.querySelectorAll(".answer-area")];
+  const show=areas.some(a=>!a.classList.contains("show"));
+  areas.forEach((a,i)=>{
+    a.classList.toggle("show",show);
+    document.getElementById("answerBtn"+i).textContent=show ? "အဖြေဖျောက်ရန်" : "အဖြေကြည့်ရန်";
+  });
+  document.getElementById("showAllBtn").textContent=show ? "အဖြေအားလုံးကို ဖျောက်ရန်" : "အဖြေအားလုံးကို ပြရန်";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Writing 2 • Living in Two Worlds : With and Without AI</title>
+<style>
+:root {
+ --bg:#f3f7ff;--card:#fff;--text:#172033;--muted:#65728a;--line:#dbe6f3;
+ --primary:#5b5ce2;--secondary:#11b7a5;--soft:#eef2ff;--shadow:0 16px 42px rgba(35,58,105,.11)
+}
+body.dark {
+ --bg:#07111f;--card:#0e1b2d;--text:#edf4ff;--muted:#adbad0;--line:#233650;
+ --primary:#9b9df7;--secondary:#27d1bd;--soft:#14233a;--shadow:0 16px 42px rgba(0,0,0,.3)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Segoe UI",sans-serif;line-height:1.68}
+.hero{position:relative;overflow:hidden;padding:58px 18px 48px;color:#fff;background:
+radial-gradient(circle at 12% 15%,rgba(17,183,165,.28),transparent 30%),
+radial-gradient(circle at 88% 20%,rgba(91,92,226,.34),transparent 32%),
+linear-gradient(135deg,#071a36,#123563 52%,#174b55)}
+.hero:before{content:"";position:absolute;inset:0;background-image:
+linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
+.hero-in{position:relative;max-width:1120px;margin:auto}
+.kicker{font-size:13px;font-weight:900;letter-spacing:2px;color:#a9fff4}
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:1;letter-spacing:-2px;margin:12px 0 18px;text-shadow:0 10px 35px #0005}
+.hero p{max-width:850px;color:#dceaff;margin:0}
+.icon{position:absolute;right:5%;top:0;font-size:90px;opacity:.8}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.tags span{padding:6px 11px;border:1px solid #ffffff2e;border-radius:999px;background:#ffffff12;font-size:13px}
+.header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+body.dark .header{background:rgba(14,27,45,.93)}
+.nav{max-width:1120px;margin:auto;padding:10px 14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.brand{font-weight:900;margin-right:auto}
+.nav a,.nav button,.menu a{padding:8px 11px;border:1px solid var(--line);border-radius:11px;background:var(--soft);color:var(--text);text-decoration:none;cursor:pointer}
+.wrap{max-width:1120px;margin:28px auto;padding:0 14px}
+.menu{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.section{margin:25px 0}
+.title{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.pill{font-size:12px;font-weight:900;color:var(--primary);background:var(--soft);padding:5px 10px;border-radius:999px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:21px}
+.note{padding:13px 15px;background:var(--soft);border-left:4px solid var(--secondary);border-radius:10px;margin:12px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.table-wrap{overflow:auto} th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--soft);color:var(--primary)} tbody th{background:rgba(127,127,127,.035)} tr:last-child th,tr:last-child td{border-bottom:0}
+.pair{padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--card);margin:7px 0}
+.en{font-weight:700;color:var(--text)}
+.mm{margin-top:3px;color:var(--muted);font-size:.97rem}
+.num{display:inline-grid;place-items:center;width:25px;height:25px;margin-right:8px;border-radius:50%;background:var(--soft);color:var(--primary);font-size:12px;font-weight:900}
+.starter{background:var(--soft);border-left:4px solid var(--primary)}
+.model{border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.model-head{padding:17px 20px;color:#fff;background:linear-gradient(135deg,var(--primary),var(--secondary))}
+.model-head h2{margin:0 0 2px}
+.model-body{padding:18px;background:var(--card)}
+.section-label{font-size:.78rem;letter-spacing:.08em;font-weight:900;color:var(--primary);margin:4px 0 8px}
+.explain{display:grid;gap:9px}
+.explain div{padding:14px;border:1px solid var(--line);border-radius:13px;background:var(--card)}
+.explain b{color:var(--primary)}
+.vocab{display:flex;flex-wrap:wrap;gap:7px}
+.vocab span{padding:6px 9px;background:var(--soft);border:1px solid var(--line);border-radius:999px;font-size:.88rem}
+.check li{margin:5px 0}
+footer{margin-top:45px;padding:26px 14px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:700px){.icon{right:-18px;opacity:.2}.hero h1{font-size:2.75rem}.brand{width:100%;margin-right:0}table{min-width:680px}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="hero-in">
+<div class="icon">✍️</div>
+<div class="kicker">UNIT 2 • WRITING</div>
+<h1>LIVING IN TWO WORLDS</h1>
+<p>With and Without AI — T-chart ကနေ 250-word paragraph အထိ အဆင့်လိုက်လေ့လာပြီး ကိုယ်တိုင်ရေးနိုင်အောင် ပြုလုပ်ထားသော Writing Practice.</p>
+<div class="tags"><span>2F Writing</span><span>Paragraph Writing</span><span>Comparison</span><span>AI & Robotics</span><span>Premium Practice</span></div>
+</div>
+</section>
+
+<header class="header"><nav class="nav">
+<div class="brand">Grade 12 English • Unit 2 Writing</div>
+<a href="unit2.html">Unit 2</a>
+<a href="comprehension2.html">Comprehension</a>
+<a href="listening-speaking2.html">Listening & Speaking</a>
+<button onclick="toggleTheme()">☾ Light / Dark</button>
+</nav></header>
+
+<main class="wrap">
+
+<div class="menu">
+<a href="#task">📝 Writing Task</a>
+<a href="#chart">📊 T-Chart</a>
+<a href="#starter">✏️ Starter</a>
+<a href="#model">⭐ Model Answer</a>
+<a href="#guide">📚 ရေးနည်း</a>
+<a href="#vocab">📖 Vocabulary</a>
+</div>
+
+<section id="task" class="section">
+<div class="title"><span class="pill">2F</span><h2>Writing</h2></div>
+<div class="card">
+<p><b>A.</b> Work in groups. Make notes on life without AI and life with AI using the points given in the T-chart. Some notes have been given.</p>
+<p class="mm">အဖွဲ့လိုက်လုပ်ပြီး T-chart တွင်ပေးထားသော အချက်များကို အသုံးပြု၍ AI မရှိသည့်ဘဝနှင့် AI ရှိသည့်ဘဝအကြောင်း မှတ်စုတိုများ ရေးပါ။ အချို့သောမှတ်စုများကို ကြိုတင်ပေးထားသည်။</p>
+<p><b>B.</b> Write a paragraph of 250 words on “Living in Two Worlds: With and Without AI”. You can start the paragraph as follows.</p>
+<p class="mm">“Living in Two Worlds: With and Without AI” ခေါင်းစဉ်ဖြင့် စကားလုံး ၂၅၀ ပါသော paragraph တစ်ပိုဒ် ရေးပါ။ အောက်တွင်ပေးထားသော စာကြောင်းဖြင့် စတင်နိုင်သည်။</p>
+</div>
+</section>
+
+<section id="chart" class="section">
+<div class="title"><span class="pill">A</span><h2>T-Chart • အကြောင်းအရာမှတ်စု</h2></div>
+<div class="card">
+<div class="table-wrap"><table>
+<thead><tr><th>Point / အချက်</th><th>Life without AI<br>AI မရှိသည့်ဘဝ</th><th>Life with AI<br>AI ရှိသည့်ဘဝ</th></tr></thead>
+<tbody><tr><th>Entertainment</th><td>traditional dances, physical games, handmade toys</td><td>virtual shows</td></tr><tr><th>Education</th><td>chalk, board</td><td>AI-supported learning</td></tr><tr><th>Agriculture</th><td>manual / traditional farming</td><td>farming with AI-based machines</td></tr><tr><th>Food and drink</th><td>manual food products</td><td>technology-supported production</td></tr><tr><th>Life style</th><td>more time with family</td><td>AI-supported daily activities</td></tr></tbody>
+</table></div>
+<div class="note"><b>ရေးနည်း:</b> ဇယားထဲက စကားလုံးတိုင်းကို တိုက်ရိုက်ကူးမရေးဘဲ complete sentence အဖြစ် ပြောင်းရေးပါ။ ပြီးလျှင် <b>while, whereas, however, in contrast, therefore</b> စတဲ့ linking words တွေသုံးပြီး အတွေးတွေကို ချိတ်ဆက်ပါ။</div>
+</div>
+</section>
+
+<section id="starter" class="section">
+<div class="title"><span class="pill">B</span><h2>Given Starter • တစ်ကြောင်းချင်း လေ့လာရန်</h2></div>
+<div class="card">
+<p class="mm">စာအုပ်မှာပေးထားတဲ့ အစပိုင်းကို English တစ်ကြောင်းပြီးတိုင်း အောက်မှာ မြန်မာအဓိပ္ပါယ်ကို ချက်ချင်းထည့်ပေးထားပါတယ်။</p>
+<div class="pair starter"><div class="en">Life without AI and life with AI differ in many ways.</div><div class="mm">AI မရှိသည့်ဘဝနှင့် AI ရှိသည့်ဘဝတို့သည် နည်းလမ်းများစွာဖြင့် ကွာခြားကြသည်။</div></div><div class="pair starter"><div class="en">On the subject of entertainment, in the past, when there was no AI, recreational activities included enjoying traditional dances in the open air, taking part in various physical games and playing with handmade toys.</div><div class="mm">ဖျော်ဖြေရေးအပိုင်းတွင် ယခင်က AI မရှိသေးချိန်၌ လေဟာပြင်တွင် ရိုးရာအကများကို ခံစားကြည့်ရှုခြင်း၊ ကိုယ်လက်လှုပ်ရှားကစားနည်းများတွင် ပါဝင်ခြင်းနှင့် လက်လုပ်ကစားစရာများဖြင့် ကစားခြင်းတို့ ပါဝင်ခဲ့သည်။</div></div><div class="pair starter"><div class="en">In the AI age, …</div><div class="mm">AI ခေတ်တွင် …</div></div>
+</div>
+</section>
+
+<section id="model" class="section">
+<div class="title"><span class="pill">MODEL</span><h2>⭐ 250-Word Model Answer</h2></div>
+<div class="model">
+<div class="model-head"><h2>Living in Two Worlds: With and Without AI</h2><div>English → Myanmar • Sentence by Sentence</div></div>
+<div class="model-body">
+<p class="note"><b>မှတ်ချက်:</b> အောက်က English စာကြောင်းတစ်ကြောင်းပြီးတိုင်း ၎င်းစာကြောင်းရဲ့ မြန်မာအဓိပ္ပါယ်ကို ချက်ချင်းအောက်မှာ ထည့်ထားပါတယ်။ ဒါကြောင့် စာကြောင်းတစ်ကြောင်းချင်း အဓိပ္ပါယ်နားလည်ပြီး ကိုယ်တိုင်ပြန်ရေးလေ့ကျင့်နိုင်ပါတယ်။</p>
+
+    <div class="pair">
+      <div class="en"><span class="num">1</span>Life without AI and life with AI differ in many ways.</div>
+      <div class="mm">AI မရှိသည့်ဘဝနှင့် AI ရှိသည့်ဘဝတို့သည် နည်းလမ်းများစွာဖြင့် ကွာခြားကြသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">2</span>On the subject of entertainment, in the past, when there was no AI, recreational activities included enjoying traditional dances in the open air, taking part in various physical games and playing with handmade toys.</div>
+      <div class="mm">ဖျော်ဖြေရေးအပိုင်းတွင် ယခင်က AI မရှိသေးချိန်၌ လေဟာပြင်တွင် ရိုးရာအကများကို ခံစားကြည့်ရှုခြင်း၊ ကိုယ်လက်လှုပ်ရှားကစားနည်းများတွင် ပါဝင်ခြင်းနှင့် လက်လုပ်ကစားစရာများဖြင့် ကစားခြင်းတို့ကို ပြုလုပ်ခဲ့ကြသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">3</span>In the AI age, people can enjoy virtual shows and other technology-supported forms of entertainment from many places.</div>
+      <div class="mm">AI ခေတ်တွင် လူများသည် နေရာအမျိုးမျိုးမှ virtual shows များနှင့် နည်းပညာအထောက်အကူပြု ဖျော်ဖြေရေးပုံစံများကို ခံစားနိုင်ကြသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">4</span>In education, life without AI often depended on simple tools such as chalk and boards, while the AI age provides learners with more technology-supported ways to study, practise and find information.</div>
+      <div class="mm">ပညာရေးတွင် AI မရှိသည့်ဘဝ၌ chalk နှင့် board ကဲ့သို့သော ရိုးရှင်းသည့်ကိရိယာများကို အားထားခဲ့ကြသော်လည်း AI ခေတ်တွင် သင်ယူသူများအနေဖြင့် လေ့လာရန်၊ လေ့ကျင့်ရန်နှင့် အချက်အလက်ရှာဖွေရန် နည်းပညာအထောက်အကူပြု နည်းလမ်းများကို ပိုမိုအသုံးပြုနိုင်ကြသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">5</span>Agriculture also shows a difference between the two worlds.</div>
+      <div class="mm">စိုက်ပျိုးရေးတွင်လည်း ဤဘဝနှစ်မျိုးအကြား ထင်ရှားသော ကွာခြားချက်ကို တွေ့ရသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">6</span>In the past, many farming activities were done manually, whereas today AI-based machines can support farmers in different tasks.</div>
+      <div class="mm">ယခင်က လယ်ယာလုပ်ငန်းများစွာကို လက်ဖြင့် ကိုယ်တိုင်လုပ်ဆောင်ခဲ့ကြသော်လည်း ယနေ့တွင် AI-based machines များက လယ်သမားများကို လုပ်ငန်းအမျိုးမျိုးတွင် ကူညီပေးနိုင်ကြသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">7</span>Food and drink have changed as well because manual food products can now be supported by modern technology and more efficient production methods.</div>
+      <div class="mm">အစားအစာနှင့် သောက်စရာများ၏ ထုတ်လုပ်ပုံလည်း ပြောင်းလဲလာသည်၊ အဘယ်ကြောင့်ဆိုသော် manual food products များ ထုတ်လုပ်ရာတွင် ယနေ့ခေတ်နည်းပညာနှင့် ပိုမိုထိရောက်သော ထုတ်လုပ်နည်းများက အထောက်အကူပြုနိုင်သောကြောင့် ဖြစ်သည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">8</span>Lifestyle is another important area to consider.</div>
+      <div class="mm">လူနေမှုပုံစံသည်လည်း ထည့်သွင်းစဉ်းစားသင့်သော အရေးကြီးသည့်ကဏ္ဍတစ်ခု ဖြစ်သည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">9</span>Without AI, people may have more time with family because daily life was less dependent on technology, while AI can save time by helping with some routine activities.</div>
+      <div class="mm">AI မရှိသည့်ဘဝတွင် နေ့စဉ်ဘဝသည် နည်းပညာအပေါ် မှီခိုမှုနည်းသောကြောင့် မိသားစုနှင့် အချိန်ပိုမိုပေးနိုင်ကြသည်၊ သို့သော် AI သည် နေ့စဉ်လုပ်ငန်းအချို့ကို ကူညီပေးခြင်းဖြင့် အချိန်ကို သက်သာစေနိုင်သည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">10</span>As a result, both worlds have their own features and benefits.</div>
+      <div class="mm">ထို့ကြောင့် ဘဝပုံစံနှစ်မျိုးစလုံးတွင် ကိုယ်ပိုင်လက္ခဏာများနှင့် အကျိုးကျေးဇူးများ ရှိကြသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">11</span>Life without AI reminds us of traditional activities, simple tools and family time, while life with AI offers convenience, technology and new possibilities.</div>
+      <div class="mm">AI မရှိသည့်ဘဝက ရိုးရာလုပ်ဆောင်မှုများ၊ ရိုးရှင်းသည့်ကိရိယာများနှင့် မိသားစုအတွက် အချိန်ပေးနိုင်ခြင်းတို့ကို သတိရစေပြီး AI ရှိသည့်ဘဝက အဆင်ပြေမှု၊ နည်းပညာနှင့် ဖြစ်နိုင်ခြေအသစ်များကို ပေးစွမ်းသည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">12</span>However, responsible use of AI can provide support without replacing human judgment, creativity, care and meaningful relationships in daily life.</div>
+      <div class="mm">သို့သော် AI ကို တာဝန်ရှိစွာအသုံးပြုခြင်းဖြင့် နေ့စဉ်ဘဝတွင် လူသားတို့၏ ဆုံးဖြတ်နိုင်စွမ်း၊ ဖန်တီးနိုင်စွမ်း၊ ဂရုစိုက်မှုနှင့် အဓိပ္ပာယ်ရှိသော ဆက်ဆံရေးများကို အစားမထိုးဘဲ အထောက်အကူရရှိနိုင်သည်။</div>
+    </div>
+    <div class="pair">
+      <div class="en"><span class="num">13</span>What matters most is using technology wisely while keeping valuable human relationships, creativity and traditional values.</div>
+      <div class="mm">အရေးကြီးဆုံးမှာ တန်ဖိုးရှိသော လူသားဆက်ဆံရေးများ၊ ဖန်တီးနိုင်စွမ်းနှင့် ရိုးရာတန်ဖိုးများကို ထိန်းသိမ်းထားရင်း နည်းပညာကို ပညာရှိစွာ အသုံးပြုရန် ဖြစ်သည်။</div>
+    </div>
+<p class="note"><b>Word count:</b> 250 words — စာအုပ်က တောင်းထားတဲ့ 250 words ပြည့်အောင် စစ်ဆေးထားပါတယ်။</p>
+</div>
+</div>
+</section>
+
+<section id="guide" class="section">
+<div class="title"><span class="pill">GUIDE</span><h2>📚 ဒီ Paragraph ကို ဘယ်လိုရေးမလဲ?</h2></div>
+<div class="card">
+<div class="explain">
+<div><b>၁။ Introduction / အစပိုင်း</b><br>ပထမဆုံး paragraph တစ်ခုလုံးရဲ့ အဓိကအကြောင်းအရာကို ပြောပါ။<br><span class="mm">ဥပမာ — “Life without AI and life with AI differ in many ways.” ဆိုပြီး ဘဝနှစ်မျိုးကို နှိုင်းယှဉ်မယ်ဆိုတာ စတင်ပြောထားပါတယ်။</span></div>
+<div><b>၂။ Entertainment / ဖျော်ဖြေရေး</b><br>AI မရှိခင်က ဘာလုပ်ကြသလဲ၊ AI ခေတ်မှာ ဘာတွေပြောင်းလဲလာသလဲ ဆိုတာ နှိုင်းယှဉ်ပါ။<br><span class="mm">traditional dances → physical games → handmade toys → virtual shows ဆိုပြီး အတွေးစဉ်လိုက်သွားပါ။</span></div>
+<div><b>၃။ Education / ပညာရေး</b><br>chalk, board စတဲ့ ရိုးရှင်းတဲ့ကိရိယာတွေနဲ့ AI-supported learning ကို နှိုင်းယှဉ်ပါ။</div>
+<div><b>၄။ Agriculture / စိုက်ပျိုးရေး</b><br>လက်ဖြင့်လုပ်ရတဲ့ farming နဲ့ AI-based machines အသုံးပြုတဲ့ farming ကို နှိုင်းယှဉ်ပါ။</div>
+<div><b>၅။ Food and drink / အစားအစာနှင့် သောက်စရာ</b><br>manual food products နဲ့ technology-supported production ကို ဆက်ရေးပါ။</div>
+<div><b>၆။ Life style / လူနေမှုပုံစံ</b><br>AI မရှိတဲ့ဘဝမှာ family time ပိုရနိုင်တာနဲ့ AI က routine tasks တွေကို ကူညီပြီး time save လုပ်ပေးနိုင်တာကို နှိုင်းယှဉ်ပါ။</div>
+<div><b>၇။ Conclusion / နိဂုံး</b><br>နောက်ဆုံးမှာ ဘဝနှစ်မျိုးစလုံးမှာ ကိုယ်ပိုင်အကျိုးကျေးဇူးတွေရှိကြောင်း ချုပ်ပြီး AI ကို တာဝန်ရှိစွာသုံးသင့်ကြောင်း ရေးနိုင်ပါတယ်။</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="title"><span class="pill">LINKING WORDS</span><h2>🔗 အတွေးတွေကို ချိတ်ဆက်ရန်</h2></div>
+<div class="card">
+<div class="pair"><div class="en">In the past, … whereas today, …</div><div class="mm">ယခင်က … ဖြစ်သော်လည်း ယနေ့တွင်တော့ … ဖြစ်သည်။</div></div>
+<div class="pair"><div class="en">Without AI, … while with AI, …</div><div class="mm">AI မရှိလျှင် … ဖြစ်ပြီး AI ရှိလျှင် … ဖြစ်သည်။</div></div>
+<div class="pair"><div class="en">However, …</div><div class="mm">သို့သော် …</div></div>
+<div class="pair"><div class="en">In contrast, …</div><div class="mm">ဆန့်ကျင်ဘက်အနေဖြင့် …</div></div>
+<div class="pair"><div class="en">As a result, …</div><div class="mm">ထို့ကြောင့် / ရလဒ်အနေဖြင့် …</div></div>
+<div class="pair"><div class="en">What matters most is …</div><div class="mm">အရေးကြီးဆုံးမှာ … ဖြစ်သည်။</div></div>
+</div>
+</section>
+
+<section id="vocab" class="section">
+<div class="title"><span class="pill">VOCABULARY</span><h2>📖 အရေးကြီး Vocabulary</h2></div>
+<div class="card">
+<div class="vocab">
+<span>recreational activities — အပန်းဖြေလှုပ်ရှားမှုများ</span>
+<span>traditional dances — ရိုးရာအကများ</span>
+<span>handmade toys — လက်လုပ်ကစားစရာများ</span>
+<span>virtual shows — အွန်လိုင်း/virtual ဖျော်ဖြေပွဲများ</span>
+<span>AI age — AI ခေတ်</span>
+<span>AI-based machines — AI အခြေပြုစက်များ</span>
+<span>manual — လက်ဖြင့်လုပ်သော</span>
+<span>efficiency — ထိရောက်မှု</span>
+<span>routine activities — နေ့စဉ်ပုံမှန်လုပ်ငန်းများ</span>
+<span>convenience — အဆင်ပြေမှု</span>
+<span>human relationships — လူသားဆက်ဆံရေးများ</span>
+<span>traditional values — ရိုးရာတန်ဖိုးများ</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="title"><span class="pill">FINAL CHECK</span><h2>✅ မတင်ခင် စစ်ဆေးရန်</h2></div>
+<div class="card">
+<ul class="check">
+<li>☐ 250 words ပြည့်/နီးပါး ရှိပါသလား။</li>
+<li>☐ Introduction ပါပါသလား။</li>
+<li>☐ Entertainment ကို ရေးထားပါသလား။</li>
+<li>☐ Education ကို ရေးထားပါသလား။</li>
+<li>☐ Agriculture ကို ရေးထားပါသလား။</li>
+<li>☐ Food and drink ကို ရေးထားပါသလား။</li>
+<li>☐ Life style ကို ရေးထားပါသလား။</li>
+<li>☐ while / whereas / however စတဲ့ linking words တွေ သုံးထားပါသလား။</li>
+<li>☐ English sentence တွေ grammar မှန်ပါသလား။</li>
+<li>☐ နိဂုံးချုပ်စာကြောင်းက အကြောင်းအရာကို ကောင်းကောင်းပိတ်ပေးထားပါသလား။</li>
+</ul>
+</div>
+</section>
+
+</main>
+<footer>Grade 12 English Learning Hub • Unit 2 • Writing • Living in Two Worlds: With and Without AI</footer>
+
+<script>
+function applyTheme(t){
+ document.body.classList.toggle("dark",t==="dark");
+ localStorage.setItem("theme",t);
+ localStorage.setItem("siteTheme",t);
+ localStorage.setItem("g12-theme",t);
+}
+function toggleTheme(){
+ applyTheme(document.body.classList.contains("dark")?"light":"dark");
+}
+(function(){
+ var t=localStorage.getItem("theme")||localStorage.getItem("siteTheme")||localStorage.getItem("g12-theme");
+ if(t) document.body.classList.toggle("dark",t==="dark");
+})();
+window.addEventListener("storage",function(e){
+ if((e.key==="theme"||e.key==="siteTheme"||e.key==="g12-theme")&&e.newValue)
+ document.body.classList.toggle("dark",e.newValue==="dark");
+});
+</script>
+</body>
+</html>

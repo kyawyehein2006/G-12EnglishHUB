@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grade-12 English Learning Hub — Unit 7 GPS and Its Uses">
+<title>Unit 7 — GPS and Its Uses | Grade-12 English Learning Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#eef5fb;--surface:#fff;--surface2:#f4f8fc;--text:#10233f;--muted:#60738d;
+ --primary:#0869d8;--cyan:#12cbe8;--navy:#061a36;--line:#dbe7f3;
+ --shadow:0 18px 55px rgba(8,45,90,.12);--hero1:#03142d;--hero2:#0a3b70;
+}
+html[data-theme="dark"]{
+ --bg:#071321;--surface:#0d1d30;--surface2:#11263d;--text:#e9f4ff;--muted:#a9bdd4;
+ --primary:#2ea6ff;--cyan:#20d9e8;--navy:#020c19;--line:#23415d;
+ --shadow:0 18px 55px rgba(0,0,0,.35);--hero1:#020a17;--hero2:#092d52;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Padauk",system-ui,sans-serif;line-height:1.7}
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+.header{height:72px;position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+.brand-mark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--cyan));color:#fff;font-size:22px;box-shadow:0 8px 25px rgba(18,203,232,.25)}
+.brand span em{color:var(--primary);font-style:normal}
+.header-actions{display:flex;gap:9px}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);width:42px;height:42px;border-radius:12px;cursor:pointer}
+.menu-btn{display:none}
+.hero{position:relative;overflow:hidden;min-height:475px;background:linear-gradient(120deg,var(--hero1),var(--hero2) 55%,#0a718d);color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 72% 34%,rgba(32,217,232,.32),transparent 20%),
+ radial-gradient(circle at 86% 20%,rgba(255,255,255,.14),transparent 18%),
+ radial-gradient(circle at 44% 100%,rgba(22,117,255,.32),transparent 35%);}
+.stars{position:absolute;inset:0;opacity:.55;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:43px 43px}
+.hero-inner{max-width:1240px;margin:auto;min-height:475px;padding:65px 34px 42px;position:relative;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 15px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;letter-spacing:.08em}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:20px 0 15px;letter-spacing:-.045em}
+.hero h1 span{background:linear-gradient(90deg,#fff,#6eeaff);-webkit-background-clip:text;color:transparent}
+.hero p{font-size:18px;max-width:650px;color:#d7eaff;margin:0 0 23px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:8px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}
+.orbit-art{height:330px;position:relative;display:grid;place-items:center}
+.earth{width:min(310px,75vw);aspect-ratio:1;border-radius:50%;background:
+ radial-gradient(circle at 34% 32%,#3de0ff 0 5%,transparent 6%),
+ radial-gradient(circle at 62% 55%,#22b5e7 0 11%,transparent 12%),
+ radial-gradient(circle at 42% 68%,#19a9c9 0 13%,transparent 14%),
+ radial-gradient(circle at 55% 40%,#0d79b7 0 18%,#07518a 45%,#032b55 75%);
+ box-shadow:0 0 70px rgba(32,217,232,.38),inset -35px -20px 70px rgba(0,0,0,.45)}
+.orbit{position:absolute;width:360px;height:150px;border:1px solid rgba(113,236,255,.75);border-radius:50%;transform:rotate(-18deg)}
+.sat{position:absolute;top:23px;right:58px;font-size:48px;filter:drop-shadow(0 0 15px #54eaff);transform:rotate(-15deg)}
+.pin{position:absolute;font-size:29px;color:#7ff6ff;filter:drop-shadow(0 0 9px #11d9ff)}
+.p1{left:26%;top:34%}.p2{right:23%;top:42%}.p3{left:48%;bottom:19%}
+.content-wrap{max-width:1240px;margin:0 auto;padding:28px 24px 70px;display:grid;grid-template-columns:225px 1fr;gap:24px}
+.side-menu{position:sticky;top:94px;height:max-content;background:linear-gradient(160deg,#061b38,#0b3159);color:#fff;border-radius:22px;padding:12px;box-shadow:var(--shadow);overflow:hidden}
+.menu-head{padding:12px 12px 16px;font-weight:900;display:flex;justify-content:space-between;align-items:center;letter-spacing:.08em}
+.close-menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+.side-menu a{display:flex;gap:10px;align-items:center;padding:13px 12px;border-radius:13px;margin:4px 0;color:#dbeaff;border:1px solid transparent}
+.side-menu a:hover{background:rgba(255,255,255,.08)}
+.side-menu a.active{background:linear-gradient(90deg,#087cff,#13cbe5);color:#fff;box-shadow:0 9px 25px rgba(19,203,229,.18);font-weight:800}
+.main{min-width:0}
+.read-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}
+.read-head{padding:28px 30px;background:linear-gradient(135deg,var(--surface),var(--surface2));border-bottom:1px solid var(--line)}
+.kicker{color:var(--primary);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+.read-head h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;line-height:1.2;margin:7px 0}
+.read-head p{margin:0;color:var(--muted)}
+.features{padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-bottom:1px solid var(--line)}
+.feature-card{display:flex;gap:12px;align-items:flex-start;background:var(--surface2);border:1px solid var(--line);border-radius:18px;padding:15px}
+.feature-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#d9f5ff,#d8e7ff);font-size:21px}
+.feature-card h3{margin:0 0 2px;font-size:15px}.feature-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.passages{padding:12px 26px 28px}
+.section-label{margin:18px 0 10px;font-weight:900;color:var(--primary);display:flex;align-items:center;gap:9px}
+.section-label:after{content:"";height:1px;background:var(--line);flex:1}
+.sentence{display:grid;grid-template-columns:40px 1fr;gap:15px;padding:19px 0;border-bottom:1px dashed var(--line)}
+.num{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--cyan));color:#fff;font-size:11px;font-weight:900}
+.en{font-size:16px;font-weight:700;line-height:1.75;margin:0 0 8px}
+.mm{font-family:"Padauk","Myanmar Text",sans-serif;color:var(--muted);font-size:15px;margin:0 0 11px}
+.vocab{display:flex;flex-wrap:wrap;gap:7px}
+.word{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:11px}
+.word b{color:var(--primary)}.word span{color:var(--muted)}
+.focus{margin:0 26px 28px;padding:18px 20px;border-radius:18px;background:linear-gradient(120deg,#062550,#0876a6);color:#fff;display:flex;flex-wrap:wrap;gap:13px;align-items:center}
+.focus strong{font-size:18px;margin-right:8px}.focus span{padding:5px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px}
+.footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}
+@media(max-width:900px){
+ .header{padding:0 15px}.menu-btn{display:block}.hero-inner{grid-template-columns:1fr;min-height:auto;padding:48px 22px 35px}.orbit-art{height:250px;order:-1}.earth{width:235px}.orbit{width:290px}.sat{right:14%;top:5px}.content-wrap{grid-template-columns:1fr;padding:18px 14px 55px}.side-menu{position:fixed;z-index:80;left:14px;top:85px;width:min(310px,calc(100vw - 28px));transform:translateX(-120%);transition:.28s ease;max-height:calc(100vh - 100px);overflow:auto}.side-menu.open{transform:translateX(0)}.close-menu{display:block}.features{grid-template-columns:1fr 1fr}.read-head{padding:24px 20px}.passages{padding:10px 18px 25px}
+}
+@media(max-width:560px){
+ .brand span{display:none}.hero h1{font-size:42px}.hero p{font-size:15px}.hero-inner{padding-top:35px}.orbit-art{height:220px}.earth{width:195px}.orbit{width:240px;height:110px}.features{grid-template-columns:1fr;padding:16px}.read-head h2{font-size:30px}.sentence{grid-template-columns:32px 1fr;gap:10px}.num{width:30px;height:30px}.en{font-size:15px}.mm{font-size:14px}.word{font-size:10px}.passages{padding:7px 14px 20px}.focus{margin:0 14px 20px}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="index.html"><span class="brand-mark">◎</span><span>Grade-12 <em>English</em></span></a>
+  <div class="header-actions">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀︎☾</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="stars"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">UNIT 7 · READING PARAGRAPH</div>
+      <h1><span>GPS</span><br>AND ITS USES</h1>
+      <p>From finding your location to navigation, tracking, mapping and emergency support — explore how GPS connects people, places and possibilities.</p>
+      <div class="hero-chips">
+        <span class="chip">📍 Locate</span><span class="chip">🧭 Navigate</span>
+        <span class="chip">🎯 Track</span><span class="chip">🗺️ Map</span>
+        <span class="chip">🛰️ Satellite</span>
+      </div>
+    </div>
+    <div class="orbit-art" aria-hidden="true">
+    <div class="earth"></div> <div class="orbit"></div> 
+      <div class="sat">🛰️</div><div class="pin p1">📍</div><div class="pin p2">📍</div><div class="pin p3">📍</div>
+    </div>
+  </div>
+</section>
+
+<div class="content-wrap">
+  
+<nav class="side-menu" id="sideMenu">
+  <div class="menu-head"><span>UNIT 7</span><button class="close-menu" id="closeMenu">×</button></div>
+  <a class="active" href="unit7.html">📖 <span>Reading Paragraph</span></a>
+  <a href="meaning7.html">🔤 <span>Meaning / Vocabulary</span></a>
+  <a href="comprehension7.html">📝 <span>Comprehension</span></a>
+  <a href="grammar7.html">Aᴢ <span>Grammar</span></a>
+  <a href="listening-speaking7.html">🎧 <span>Listening & Speaking</span></a>
+  <a href="writing7.html">✍️ <span>Writing</span></a>
+  <a href="beca7.html">🎯 <span>BECA</span></a>
+</nav>
+
+  <main class="main">
+    <section class="read-card">
+      <div class="read-head">
+        <div class="kicker">Unit 7 · GPS and Its Uses</div>
+        <h2>Reading Paragraph</h2>
+        <p>English sentence → မြန်မာဘာသာပြန် → Key Vocabulary. စာကြောင်းတိုင်းကို အဓိပ္ပာယ်နားလည်အောင် လေ့လာနိုင်ရန် စီစဉ်ထားပါသည်။</p>
+      </div>
+      <div class="features">
+<div class="feature-card">
+  <div class="feature-icon">📍</div>
+  <div><h3>What is GPS?</h3><p>Global Positioning System — a global navigation satellite system.</p></div>
+</div>
+<div class="feature-card">
+  <div class="feature-icon">🛰️</div>
+  <div><h3>Main Parts</h3><p>Space segment • Control segment • User segment</p></div>
+</div>
+<div class="feature-card">
+  <div class="feature-icon">🎯</div>
+  <div><h3>Core Functions</h3><p>Locating • Navigating • Tracking • Mapping</p></div>
+</div>
+<div class="feature-card">
+  <div class="feature-icon">🌍</div>
+  <div><h3>GPS Types</h3><p>Personal • Commercial • Military</p></div>
+</div>
+<div class="feature-card">
+  <div class="feature-icon">📡</div>
+  <div><h3>How It Helps</h3><p>Location, accurate time, delivery, mapping and emergency support.</p></div>
+</div>
+<div class="feature-card">
+  <div class="feature-icon">⚡</div>
+  <div><h3>Key Advantage</h3><p>Works 24/7 and does not require internet, Wi‑Fi or Bluetooth radio.</p></div>
+</div></div>
+      <div class="passages">
+        <div class="section-label">📖 Read the passage carefully</div>
+        
+      <article class="sentence">
+        <div class="num">01</div>
+        <div class="sentence-body">
+          <p class="en">With a click of a button on your phone, you can find where you are in the world with near-pinpoint accuracy.</p>
+          <p class="mm">ဖုန်းပေါ်က ခလုတ်တစ်ချက်နှိပ်ရုံဖြင့် ကမ္ဘာပေါ်မှာ မိမိဘယ်နေရာရောက်နေသည်ကို အလွန်တိကျစွာ သိရှိနိုင်သည်။</p>
+          <div class="vocab"><span class="word"><b>near-pinpoint accuracy</b><span>အလွန်တိကျမှု</span></span><span class="word"><b>navigation</b><span>လမ်းညွှန်ခြင်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">02</div>
+        <div class="sentence-body">
+          <p class="en">A magic-like thing that has recently come into reality is not a miracle, but the most common system used today for navigation and much more.</p>
+          <p class="mm">မကြာသေးမီက လက်တွေ့အဖြစ် ပေါ်ပေါက်လာသည့် မှော်ဆန်သကဲ့သို့သော အရာတစ်ခုသည် အံ့ဖွယ်အရာမဟုတ်ဘဲ ယနေ့ခေတ်တွင် လမ်းညွှန်ခြင်းနှင့် အခြားလုပ်ဆောင်ချက်များစွာအတွက် အများဆုံးအသုံးပြုနေသော စနစ်ဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>come into reality</b><span>လက်တွေ့ဖြစ်လာသည်</span></span><span class="word"><b>miracle</b><span>အံ့ဖွယ်အရာ</span></span><span class="word"><b>navigation</b><span>လမ်းညွှန်ခြင်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">03</div>
+        <div class="sentence-body">
+          <p class="en">This is the Global Positioning System which is known as GPS.</p>
+          <p class="mm">၎င်းသည် GPS ဟု လူသိများသော Global Positioning System ဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>Global Positioning System</b><span>ကမ္ဘာလုံးဆိုင်ရာ တည်နေရာသတ်မှတ်စနစ်</span></span><span class="word"><b>GPS</b><span>Global Positioning System</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">04</div>
+        <div class="sentence-body">
+          <p class="en">The global positioning system (GPS) – originally known as Navstar GPS – was a project by the US Department of Defense, with its first satellite launched in 1978.</p>
+          <p class="mm">Global Positioning System (GPS) သည် မူလက Navstar GPS ဟုခေါ်ခဲ့ပြီး အမေရိကန် ကာကွယ်ရေးဝန်ကြီးဌာန၏ စီမံကိန်းတစ်ခုဖြစ်ကာ ပထမဆုံးဂြိုဟ်တုကို ၁၉၇၈ ခုနှစ်တွင် လွှတ်တင်ခဲ့သည်။</p>
+          <div class="vocab"><span class="word"><b>originally</b><span>မူလက</span></span><span class="word"><b>Department of Defense</b><span>ကာကွယ်ရေးဝန်ကြီးဌာန</span></span><span class="word"><b>satellite</b><span>ဂြိုဟ်တု</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">05</div>
+        <div class="sentence-body">
+          <p class="en">Today, GPS is still operated by the US Space Force but is free for civilian use worldwide.</p>
+          <p class="mm">ယနေ့တွင် GPS ကို အမေရိကန် Space Force က ဆက်လက်လည်ပတ်စီမံနေသော်လည်း ကမ္ဘာတစ်ဝန်း အရပ်သားများအတွက် အခမဲ့အသုံးပြုနိုင်သည်။</p>
+          <div class="vocab"><span class="word"><b>operated</b><span>လည်ပတ်စီမံသည်</span></span><span class="word"><b>civilian use</b><span>အရပ်သားအသုံးပြုမှု</span></span><span class="word"><b>worldwide</b><span>ကမ္ဘာတစ်ဝန်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">06</div>
+        <div class="sentence-body">
+          <p class="en">GPS is a global navigation satellite system (GNSS).</p>
+          <p class="mm">GPS သည် ကမ္ဘာလုံးဆိုင်ရာ လမ်းညွှန်ဂြိုဟ်တုစနစ် (GNSS) ဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>global navigation satellite system</b><span>ကမ္ဘာလုံးဆိုင်ရာ လမ်းညွှန်ဂြိုဟုစနစ်</span></span><span class="word"><b>GNSS</b><span>Global Navigation Satellite System</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">07</div>
+        <div class="sentence-body">
+          <p class="en">There are altogether four global GNSS systems developed by several countries such as US, Russia, EU, and China.</p>
+          <p class="mm">စုစုပေါင်းအားဖြင့် အမေရိကန်၊ ရုရှား၊ EU နှင့် တရုတ်နိုင်ငံတို့ကဲ့သို့သော နိုင်ငံများမှ ဖွံ့ဖြိုးတိုးတက်အောင် ပြုလုပ်ထားသည့် ကမ္ဘာလုံးဆိုင်ရာ GNSS စနစ် လေးမျိုးရှိသည်။</p>
+          <div class="vocab"><span class="word"><b>altogether</b><span>စုစုပေါင်းအားဖြင့်</span></span><span class="word"><b>developed</b><span>ဖွံ့ဖြိုးတိုးတက်အောင် ပြုလုပ်ထားသည်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">08</div>
+        <div class="sentence-body">
+          <p class="en">In addition, there are two regional systems from Japan and India.</p>
+          <p class="mm">ထို့အပြင် ဂျပန်နှင့် အိန္ဒိယနိုင်ငံတို့မှ ဒေသဆိုင်ရာစနစ် နှစ်မျိုးလည်းရှိသည်။</p>
+          <div class="vocab"><span class="word"><b>in addition</b><span>ထို့အပြင်</span></span><span class="word"><b>regional</b><span>ဒေသဆိုင်ရာ</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">09</div>
+        <div class="sentence-body">
+          <p class="en">The GPS is composed of three main parts – space segment, control segment, and user segment.</p>
+          <p class="mm">GPS ကို အဓိကအစိတ်အပိုင်း သုံးခုဖြစ်သည့် space segment၊ control segment နှင့် user segment တို့ဖြင့် ဖွဲ့စည်းထားသည်။</p>
+          <div class="vocab"><span class="word"><b>be composed of</b><span>ဖြင့် ဖွဲ့စည်းထားသည်</span></span><span class="word"><b>space segment</b><span>အာကာသပိုင်း</span></span><span class="word"><b>control segment</b><span>ထိန်းချုပ်ရေးပိုင်း</span></span><span class="word"><b>user segment</b><span>အသုံးပြုသူပိုင်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">10</div>
+        <div class="sentence-body">
+          <p class="en">The space segment comprises 31 operational satellites that send data signals to Earth.</p>
+          <p class="mm">Space segment တွင် ကမ္ဘာမြေသို့ ဒေတာအချက်ပြမှုများ ပေးပို့သော လည်ပတ်နေသည့် ဂြိုဟ်တု ၃၁ လုံး ပါဝင်သည်။</p>
+          <div class="vocab"><span class="word"><b>comprise</b><span>ပါဝင်ဖွဲ့စည်းသည်</span></span><span class="word"><b>operational</b><span>လည်ပတ်နေသော</span></span><span class="word"><b>data signal</b><span>ဒေတာအချက်ပြမှု</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">11</div>
+        <div class="sentence-body">
+          <p class="en">The control segment includes the people and computers in all the continents that monitor and control the satellites.</p>
+          <p class="mm">Control segment တွင် တိုက်ကြီးများအားလုံးရှိ ဂြိုဟ်တုများကို စောင့်ကြည့်ထိန်းချုပ်သော လူများနှင့် ကွန်ပျူတာများ ပါဝင်သည်။</p>
+          <div class="vocab"><span class="word"><b>monitor</b><span>စောင့်ကြည့်သည်</span></span><span class="word"><b>control</b><span>ထိန်းချုပ်သည်</span></span><span class="word"><b>continent</b><span>တိုက်ကြီး</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">12</div>
+        <div class="sentence-body">
+          <p class="en">The user segment is the GPS receiver on Earth.</p>
+          <p class="mm">User segment သည် ကမ္ဘာမြေပေါ်ရှိ GPS receiver ဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>receiver</b><span>လက်ခံကိရိယာ</span></span><span class="word"><b>on Earth</b><span>ကမ္ဘာမြေပေါ်တွင်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">13</div>
+        <div class="sentence-body">
+          <p class="en">Basically, most receivers contain three components – an antenna that receives the signal and, in some cases, has anti-jamming potential, a receiver-processor unit that converts the radio signal to a functional navigation solution, and a control/display unit that displays the positioning information.</p>
+          <p class="mm">အခြေခံအားဖြင့် receiver အများစုတွင် အချက်ပြမှုကို လက်ခံပြီး အချို့အခြေအနေများတွင် signal အနှောင့်အယှက်ကို တားဆီးနိုင်စွမ်းရှိသော antenna၊ radio signal ကို အသုံးပြုနိုင်သော navigation solution အဖြစ် ပြောင်းလဲပေးသော receiver-processor unit နှင့် တည်နေရာအချက်အလက်ကို ပြသပေးသော control/display unit ဟူ၍ အစိတ်အပိုင်း သုံးခုပါဝင်သည်။</p>
+          <div class="vocab"><span class="word"><b>antenna</b><span>အင်တင်နာ</span></span><span class="word"><b>anti-jamming</b><span>အနှောင့်အယှက်တားဆီးမှု</span></span><span class="word"><b>positioning information</b><span>တည်နေရာအချက်အလက်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">14</div>
+        <div class="sentence-body">
+          <p class="en">Some GPS receivers are accurate enough to pinpoint their location within one centimeter (0.4 inches).</p>
+          <p class="mm">GPS receiver အချို့သည် မိမိတို့၏တည်နေရာကို စင်တီမီတာ တစ်ခုအတွင်း (၀.၄ လက်မ)အထိ တိကျစွာ သတ်မှတ်နိုင်လောက်အောင် တိကျသည်။</p>
+          <div class="vocab"><span class="word"><b>accurate</b><span>တိကျသော</span></span><span class="word"><b>pinpoint</b><span>တိကျစွာ သတ်မှတ်သည်</span></span><span class="word"><b>centimeter</b><span>စင်တီမီတာ</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">15</div>
+        <div class="sentence-body">
+          <p class="en">GPS receivers provide location in latitude, longitude, and altitude.</p>
+          <p class="mm">GPS receiver များသည် latitude၊ longitude နှင့် altitude တို့ဖြင့် တည်နေရာကို ဖော်ပြပေးသည်။</p>
+          <div class="vocab"><span class="word"><b>latitude</b><span>လတ္တီကျု</span></span><span class="word"><b>longitude</b><span>လောင်ဂျီကျု</span></span><span class="word"><b>altitude</b><span>အမြင့်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">16</div>
+        <div class="sentence-body">
+          <p class="en">They provide accurate time as well.</p>
+          <p class="mm">၎င်းတို့သည် တိကျသောအချိန်ကိုလည်း ပေးစွမ်းသည်။</p>
+          <div class="vocab"><span class="word"><b>accurate time</b><span>တိကျသောအချိန်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">17</div>
+        <div class="sentence-body">
+          <p class="en">As of 2022, a series of 31 GPS satellites fly in circular orbits at an altitude of 10,900 nautical miles (20,200 km) and with a period of 12 hours for a full orbit of Earth, constantly sending out radio signals.</p>
+          <p class="mm">၂၀၂၂ ခုနှစ်အထိ GPS ဂြိုဟ်တု ၃၁ လုံးသည် ကမ္ဘာမြေကို တစ်ပတ်ပြည့် လှည့်ပတ်ရန် ၁၂ နာရီကြာသည့် စက်ဝိုင်းပတ်လမ်းများအတွင်း ပင်လယ်မိုင် ၁၀,၉၀၀ (၂၀,၂၀၀ km) အမြင့်တွင် လှည့်ပတ်နေပြီး radio signal များကို အဆက်မပြတ် ပေးပို့နေသည်။</p>
+          <div class="vocab"><span class="word"><b>circular orbit</b><span>စက်ဝိုင်းပတ်လမ်း</span></span><span class="word"><b>nautical mile</b><span>ပင်လယ်မိုင်</span></span><span class="word"><b>constantly</b><span>အဆက်မပြတ်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">18</div>
+        <div class="sentence-body">
+          <p class="en">The orbits are slanted to the earth’s equator by 55 degrees to ensure coverage of Polar Regions.</p>
+          <p class="mm">Polar Regions များကိုပါ လွှမ်းခြုံနိုင်ရန် ထိုပတ်လမ်းများသည် ကမ္ဘာ့အီကွေတာမှ ၅၅ ဒီဂရီ စောင်းနေသည်။</p>
+          <div class="vocab"><span class="word"><b>slanted</b><span>စောင်းထားသော</span></span><span class="word"><b>equator</b><span>အီကွေတာ</span></span><span class="word"><b>ensure coverage</b><span>လွှမ်းခြုံမှုကို သေချာစေသည်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">19</div>
+        <div class="sentence-body">
+          <p class="en">With its main functions of locating, navigating, tracking and mapping, GPS is categorized into three, depending on users and purpose: personal, commercial and military.</p>
+          <p class="mm">တည်နေရာရှာဖွေခြင်း၊ လမ်းညွှန်ခြင်း၊ ခြေရာခံခြင်းနှင့် မြေပုံရေးဆွဲခြင်းတို့ကို အဓိကလုပ်ဆောင်ချက်များအဖြစ် အသုံးပြုသော GPS ကို အသုံးပြုသူနှင့် ရည်ရွယ်ချက်အပေါ်မူတည်၍ personal, commercial နှင့် military ဟူ၍ သုံးမျိုးခွဲခြားထားသည်။</p>
+          <div class="vocab"><span class="word"><b>locating</b><span>တည်နေရာရှာဖွေခြင်း</span></span><span class="word"><b>tracking</b><span>ခြေရာခံခြင်း</span></span><span class="word"><b>categorized</b><span>အမျိုးအစားခွဲထားသည်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">20</div>
+        <div class="sentence-body">
+          <p class="en">The personal GPS is the most common type of receiver used around the world.</p>
+          <p class="mm">Personal GPS သည် ကမ္ဘာတစ်ဝန်းတွင် အသုံးအများဆုံး receiver အမျိုးအစားဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>personal</b><span>ပုဂ္ဂိုလ်ရေး</span></span><span class="word"><b>common</b><span>အများဆုံးတွေ့ရသော</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">21</div>
+        <div class="sentence-body">
+          <p class="en">It eases and simplifies our daily routines, for example, finding paths or a nearest shop, tracking a stolen phone, etc.</p>
+          <p class="mm">၎င်းသည် နေ့စဉ်လုပ်ငန်းများကို ပိုမိုလွယ်ကူရိုးရှင်းစေသည်။ ဥပမာ လမ်းရှာခြင်း၊ အနီးဆုံးဆိုင်ရှာခြင်း၊ ခိုးယူခံရသောဖုန်းကို ခြေရာခံခြင်း စသည်တို့ဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>ease</b><span>လွယ်ကူစေသည်</span></span><span class="word"><b>daily routine</b><span>နေ့စဉ်လုပ်ငန်းစဉ်</span></span><span class="word"><b>stolen</b><span>ခိုးယူခံရသော</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">22</div>
+        <div class="sentence-body">
+          <p class="en">Surveyors, scientists, weather forecasters, pilots, drivers, boat captains, and those who work in mining and agriculture, are just some of the people who use GPS on a daily basis.</p>
+          <p class="mm">မြေတိုင်းတာသူများ၊ သိပ္ပံပညာရှင်များ၊ မိုးလေဝသခန့်မှန်းသူများ၊ လေယာဉ်မှူးများ၊ ယာဉ်မောင်းများ၊ လှေ/သင်္ဘောမောင်းနှင်သူများနှင့် သတ္တုတူးဖော်ရေး၊ စိုက်ပျိုးရေးလုပ်ငန်းများတွင် အလုပ်လုပ်သူများသည် နေ့စဉ် GPS အသုံးပြုသူများထဲမှ အချို့ဖြစ်သည်။</p>
+          <div class="vocab"><span class="word"><b>surveyor</b><span>မြေတိုင်းတာသူ</span></span><span class="word"><b>weather forecaster</b><span>မိုးလေဝသခန့်မှန်းသူ</span></span><span class="word"><b>mining</b><span>သတ္တုတူးဖော်ရေး</span></span><span class="word"><b>agriculture</b><span>စိုက်ပျိုးရေး</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">23</div>
+        <div class="sentence-body">
+          <p class="en">The commercial GPS is used by companies and businesses, especially delivery companies.</p>
+          <p class="mm">Commercial GPS ကို ကုမ္ပဏီများနှင့် စီးပွားရေးလုပ်ငန်းများ၊ အထူးသဖြင့် ပို့ဆောင်ရေးကုမ္ပဏီများက အသုံးပြုကြသည်။</p>
+          <div class="vocab"><span class="word"><b>commercial</b><span>စီးပွားရေးသုံး</span></span><span class="word"><b>delivery company</b><span>ပို့ဆောင်ရေးကုမ္ပဏီ</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">24</div>
+        <div class="sentence-body">
+          <p class="en">GPS tracking enables businesses to offer better customer service by providing accurate delivery or service (ETA or estimated time of arrival), ensuring timely responses to customer needs, and improving their overall service quality.</p>
+          <p class="mm">GPS tracking သည် တိကျသောပို့ဆောင်ချိန် သို့မဟုတ် ဝန်ဆောင်မှုပေးရောက်မည့်အချိန် (ETA = estimated time of arrival) ကို ပေးခြင်း၊ ဖောက်သည်လိုအပ်ချက်များကို အချိန်မီတုံ့ပြန်နိုင်စေရန် သေချာစေခြင်းနှင့် စုစုပေါင်းဝန်ဆောင်မှုအရည်အသွေးကို မြှင့်တင်ခြင်းတို့ဖြင့် စီးပွားရေးလုပ်ငန်းများအား ပိုမိုကောင်းမွန်သော customer service ပေးနိုင်စေသည်။</p>
+          <div class="vocab"><span class="word"><b>enable</b><span>လုပ်ဆောင်နိုင်စေသည်</span></span><span class="word"><b>ETA</b><span>ရောက်ရှိမည့် ခန့်မှန်းအချိန်</span></span><span class="word"><b>overall</b><span>စုစုပေါင်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">25</div>
+        <div class="sentence-body">
+          <p class="en">The military GPS navigates, guides, tracks and monitors forces, enemy troops, military assets, and missiles.</p>
+          <p class="mm">Military GPS သည် စစ်တပ်အင်အားများ၊ ရန်သူတပ်ဖွဲ့များ၊ စစ်ဘက်ဆိုင်ရာပစ္စည်းများနှင့် ဒုံးကျည်များကို လမ်းညွှန်၊ ခြေရာခံနှင့် စောင့်ကြည့်ပေးသည်။</p>
+          <div class="vocab"><span class="word"><b>military asset</b><span>စစ်ဘက်ဆိုင်ရာပစ္စည်း/အရင်းအမြစ်</span></span><span class="word"><b>troop</b><span>တပ်ဖွဲ့</span></span><span class="word"><b>missile</b><span>ဒုံးကျည်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">26</div>
+        <div class="sentence-body">
+          <p class="en">The military GPS usually helps the army to pinpoint locations for air raids and military operations.</p>
+          <p class="mm">Military GPS သည် လေကြောင်းတိုက်ခိုက်မှုများနှင့် စစ်ဆင်ရေးများအတွက် တည်နေရာများကို တိကျစွာ သတ်မှတ်နိုင်ရန် စစ်တပ်ကို အများအားဖြင့် ကူညီပေးသည်။</p>
+          <div class="vocab"><span class="word"><b>air raid</b><span>လေကြောင်းတိုက်ခိုက်မှု</span></span><span class="word"><b>military operation</b><span>စစ်ဆင်ရေး</span></span><span class="word"><b>pinpoint location</b><span>တည်နေရာကို တိကျစွာ သတ်မှတ်သည်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">27</div>
+        <div class="sentence-body">
+          <p class="en">As a geographical tool, GPS is used for mapping, physical geography and human geography by accurately locating and illustrating the Earth’s physical features, and changes and patterns in the Earth’s environment.</p>
+          <p class="mm">ပထဝီဝင်ဆိုင်ရာကိရိယာတစ်ခုအဖြစ် GPS ကို မြေပုံရေးဆွဲခြင်း၊ physical geography နှင့် human geography တို့တွင် ကမ္ဘာမြေ၏ ရုပ်ပိုင်းဆိုင်ရာသွင်ပြင်များနှင့် ပတ်ဝန်းကျင်၏ ပြောင်းလဲမှုများ၊ ပုံစံများကို တိကျစွာ တည်နေရာသတ်မှတ်ပြီး ဖော်ပြရန် အသုံးပြုသည်။</p>
+          <div class="vocab"><span class="word"><b>geographical tool</b><span>ပထဝီဝင်ဆိုင်ရာကိရိယာ</span></span><span class="word"><b>physical feature</b><span>ရုပ်ပိုင်းဆိုင်ရာသွင်ပြင်</span></span><span class="word"><b>environment</b><span>ပတ်ဝန်းကျင်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">28</div>
+        <div class="sentence-body">
+          <p class="en">Moreover, it is valuable for emergency cases to track the emergency personnel and to get timely aid during tough periods, and in disaster relief efforts as early warning for earthquakes.</p>
+          <p class="mm">ထို့အပြင် အရေးပေါ်အခြေအနေများတွင် အရေးပေါ်ဝန်ထမ်းများကို ခြေရာခံရန်၊ ခက်ခဲသောအချိန်များတွင် အချိန်မီအကူအညီရရှိရန်နှင့် ငလျင်များအတွက် ကြိုတင်သတိပေးချက်အဖြစ် ဘေးအန္တရာယ်ကယ်ဆယ်ရေးလုပ်ငန်းများတွင်လည်း GPS သည် အရေးပါသည်။</p>
+          <div class="vocab"><span class="word"><b>emergency personnel</b><span>အရေးပေါ်ဝန်ထမ်းများ</span></span><span class="word"><b>timely aid</b><span>အချိန်မီအကူအညီ</span></span><span class="word"><b>disaster relief</b><span>ဘေးအန္တရာယ်ကယ်ဆယ်ရေး</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">29</div>
+        <div class="sentence-body">
+          <p class="en">Concerning health and fitness, wearable technology like smart watches tracks your physical activity like running.</p>
+          <p class="mm">ကျန်းမာရေးနှင့် ကိုယ်ကာယကြံ့ခိုင်မှုအတွက် smart watch ကဲ့သို့သော ဝတ်ဆင်အသုံးပြုနိုင်သည့် နည်းပညာများသည် ပြေးခြင်းကဲ့သို့ ကိုယ်လက်လှုပ်ရှားမှုများကို ခြေရာခံပေးသည်။</p>
+          <div class="vocab"><span class="word"><b>health and fitness</b><span>ကျန်းမာရေးနှင့် ကိုယ်ကာယကြံ့ခိုင်မှု</span></span><span class="word"><b>wearable technology</b><span>ဝတ်ဆင်အသုံးပြုနိုင်သော နည်းပညာ</span></span><span class="word"><b>physical activity</b><span>ကိုယ်လက်လှုပ်ရှားမှု</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">30</div>
+        <div class="sentence-body">
+          <p class="en">Similarly, GPS tracking is useful in live games such as Pokémon Go.</p>
+          <p class="mm">ထို့အတူ Pokémon Go ကဲ့သို့သော live games များတွင်လည်း GPS tracking သည် အသုံးဝင်သည်။</p>
+          <div class="vocab"><span class="word"><b>similarly</b><span>ထို့အတူ</span></span><span class="word"><b>live game</b><span>တိုက်ရိုက်ကစားသည့်ဂိမ်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">31</div>
+        <div class="sentence-body">
+          <p class="en">Though there are occasional obstacles – namely gravity, Earth’s atmosphere, trees, buildings, and other structures to getting a clear GPS signal, technologies have improved anti-jamming capabilities and reduced attenuation, too.</p>
+          <p class="mm">GPS signal ကို ကြည်လင်စွာရရှိရန် gravity၊ ကမ္ဘာ့လေထု၊ သစ်ပင်များ၊ အဆောက်အအုံများနှင့် အခြားအဆောက်အအုံပုံစံများကဲ့သို့သော အခါအားလျော်စွာ တွေ့ရသည့် အတားအဆီးများရှိသော်လည်း နည်းပညာများသည် anti-jamming စွမ်းရည်များကို မြှင့်တင်ပြီး signal attenuation ကိုလည်း လျှော့ချလာခဲ့သည်။</p>
+          <div class="vocab"><span class="word"><b>obstacle</b><span>အတားအဆီး</span></span><span class="word"><b>anti-jamming capability</b><span>အနှောင့်အယှက်တားဆီးနိုင်စွမ်း</span></span><span class="word"><b>attenuation</b><span>အချက်ပြအား လျော့ကျခြင်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">32</div>
+        <div class="sentence-body">
+          <p class="en">GPS also needs no connection to the internet, cellular data, Wi-Fi, or Bluetooth radio.</p>
+          <p class="mm">GPS သည် internet၊ cellular data၊ Wi-Fi သို့မဟုတ် Bluetooth radio တို့နှင့် ချိတ်ဆက်ထားရန်လည်း မလိုအပ်ပါ။</p>
+          <div class="vocab"><span class="word"><b>connection</b><span>ချိတ်ဆက်မှု</span></span><span class="word"><b>cellular data</b><span>မိုဘိုင်းဒေတာ</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">33</div>
+        <div class="sentence-body">
+          <p class="en">This applies to both Android and iOS devices.</p>
+          <p class="mm">၎င်းသည် Android နှင့် iOS စက်ပစ္စည်းနှစ်မျိုးလုံးတွင် အကျုံးဝင်သည်။</p>
+          <div class="vocab"><span class="word"><b>apply to</b><span>အကျုံးဝင်သည်</span></span><span class="word"><b>device</b><span>စက်ပစ္စည်း</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">34</div>
+        <div class="sentence-body">
+          <p class="en">Some types of GPS tracker are with/without SIM cards.</p>
+          <p class="mm">GPS tracker အမျိုးအစားအချို့သည် SIM card ပါရှိနိုင်သလို SIM card မပါဘဲလည်း အသုံးပြုနိုင်သည်။</p>
+          <div class="vocab"><span class="word"><b>GPS tracker</b><span>GPS ခြေရာခံကိရိယာ</span></span><span class="word"><b>SIM card</b><span>SIM ကတ်</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">35</div>
+        <div class="sentence-body">
+          <p class="en">Due to its versatility, GPS is more and more popular around the world; it works 24/7 regardless of weather and location, and without subscription fees or setup charges except the need to replace batteries frequently.</p>
+          <p class="mm">၎င်း၏ အသုံးချနိုင်မှုမျိုးစုံကြောင့် GPS သည် ကမ္ဘာတစ်ဝန်း ပိုမိုလူကြိုက်များလာသည်။ ရာသီဥတုနှင့် တည်နေရာမည်သို့ပင်ဖြစ်စေ ၂၄/၇ အလုပ်လုပ်နိုင်ပြီး subscription fee သို့မဟုတ် setup charge မလိုအပ်ဘဲ ဘက်ထရီများကို မကြာခဏ လဲလှယ်ရန်သာ လိုအပ်သည်။</p>
+          <div class="vocab"><span class="word"><b>versatility</b><span>အသုံးချနိုင်မှုမျိုးစုံ</span></span><span class="word"><b>regardless of</b><span>မည်သို့ပင်ဖြစ်စေ</span></span><span class="word"><b>subscription fee</b><span>စာရင်းသွင်းခ</span></span></div>
+        </div>
+      </article>
+      <article class="sentence">
+        <div class="num">36</div>
+        <div class="sentence-body">
+          <p class="en">As a result, GPS has become an essential tool for a wide range of applications for our increasingly connected world, and the prospect of it appears to be virtually infinite; with thriving technological fantasies.</p>
+          <p class="mm">ထို့ကြောင့် GPS သည် ပိုမိုချိတ်ဆက်လာသော ကျွန်ုပ်တို့၏ကမ္ဘာတွင် အသုံးချမှုနယ်ပယ်ကျယ်ပြန့်သော မရှိမဖြစ်ကိရိယာတစ်ခု ဖြစ်လာပြီး ၎င်း၏အနာဂတ်အသုံးချနိုင်မည့် အလားအလာမှာ နည်းပညာဖန်တီးမှုများ တိုးတက်ရှင်သန်နေသည့်အတွက် အကန့်အသတ်မရှိသလောက် ဖြစ်ပုံရသည်။</p>
+          <div class="vocab"><span class="word"><b>essential</b><span>မရှိမဖြစ်</span></span><span class="word"><b>wide range of applications</b><span>အသုံးချမှုနယ်ပယ်ကျယ်ပြန့်မှု</span></span><span class="word"><b>prospect</b><span>အလားအလာ</span></span><span class="word"><b>virtually infinite</b><span>အကန့်အသတ်မရှိသလောက်</span></span></div>
+        </div>
+      </article>
+      </div>
+      <div class="focus">
+        <strong>🎯 Key Focus</strong>
+        <span>Main Ideas</span><span>GPS Parts</span><span>GPS Types</span><span>Uses & Applications</span><span>Advantages</span><span>Key Vocabulary</span>
+      </div>
+    </section>
+    <p class="footer">Grade-12 English Learning Hub · Unit 7 · GPS and Its Uses</p>
+  </main>
+</div>
+<script>
+(function(){
+  const keys=['g12-theme','siteTheme','theme'];
+  function getTheme(){
+    for(const k of keys){const v=localStorage.getItem(k); if(v==='dark'||v==='light') return v;}
+    return 'light';
+  }
+  function applyTheme(v){document.documentElement.dataset.theme=v;}
+  applyTheme(getTheme());
+  document.getElementById('themeBtn').addEventListener('click',()=>{
+    const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+    keys.forEach(k=>localStorage.setItem(k,next)); applyTheme(next);
+  });
+  window.addEventListener('storage',e=>{
+    if(keys.includes(e.key) && (e.newValue==='dark'||e.newValue==='light')) applyTheme(e.newValue);
+  });
+  const menu=document.getElementById('sideMenu');
+  document.getElementById('menuBtn').addEventListener('click',()=>menu.classList.add('open'));
+  document.getElementById('closeMenu').addEventListener('click',()=>menu.classList.remove('open'));
+  document.addEventListener('click',e=>{
+    if(window.innerWidth<=900 && menu.classList.contains('open') && !menu.contains(e.target) && !e.target.closest('#menuBtn')) menu.classList.remove('open');
+  });
+})();
+</script>
+</body>
+</html>

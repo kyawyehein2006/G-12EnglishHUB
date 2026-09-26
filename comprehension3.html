@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 3 | Comprehension, Vocabulary & Grammar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f8fc;--surface:#fff;--surface2:#eef5ff;--text:#172033;
+  --muted:#667085;--border:#dbe4ef;--primary:#2563eb;--primary2:#1d4ed8;
+  --green:#16a34a;--green-bg:#ecfdf3;--green-text:#166534;
+  --accent:#14b8a6;--gold:#f59e0b;--shadow:0 12px 35px rgba(15,23,42,.08)
+}
+html[data-theme="dark"]{
+  --bg:#0b1220;--surface:#111b2e;--surface2:#17243a;--text:#edf4ff;
+  --muted:#a9b7ca;--border:#293951;--primary:#60a5fa;--primary2:#3b82f6;
+  --green:#4ade80;--green-bg:#10271a;--green-text:#a7f3c0;
+  --accent:#32c8b7;--gold:#fbbf24;--shadow:0 14px 38px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Plus Jakarta Sans","Padauk",sans-serif;line-height:1.75;
+  overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.my,.translation,.why{font-family:"Padauk","Plus Jakarta Sans",sans-serif}
+
+/* Header — same compact position as Comprehension 2 */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--surface) 94%,transparent);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border)
+}
+.nav{
+  width:min(1100px,calc(100% - 30px));height:68px;margin:auto;
+  display:flex;align-items:center;justify-content:space-between
+}
+.brand{font-weight:800;font-size:18px;color:var(--text)}
+.brand span{color:var(--primary)}
+.nav-actions{display:flex;gap:8px}
+.icon-btn,.menu-btn{
+  border:1px solid var(--border);background:var(--surface);color:var(--text);
+  border-radius:12px;width:42px;height:42px;cursor:pointer;font-size:18px
+}
+
+/* Compact topic header — not the oversized mobile hero */
+.hero{
+  width:min(1100px,calc(100% - 30px));margin:auto;
+  padding:35px 0 25px
+}
+.hero-inner{padding:0}
+.eyebrow{
+  display:inline-flex;padding:5px 11px;border-radius:999px;
+  background:var(--surface2);color:var(--primary);font-size:13px;font-weight:700
+}
+.hero h1{
+  font-size:clamp(30px,5vw,50px);line-height:1.15;
+  margin:16px 0 10px;letter-spacing:-.8px
+}
+.hero h1 span{color:var(--primary)}
+.hero p{color:var(--muted);margin:0;max-width:900px}
+.hero-meta{display:none}
+
+/* Main layout — matches Comprehension 2 */
+.layout{
+  width:min(1100px,calc(100% - 30px));margin:auto;
+  padding:0 0 45px;
+  display:grid;grid-template-columns:250px 1fr;gap:22px;align-items:start
+}
+.sidebar{
+  position:sticky;top:88px;height:max-content;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:18px;padding:12px;box-shadow:var(--shadow)
+}
+.side-title{
+  padding:8px 10px 12px;font-weight:800;font-size:14px
+}
+.side-link{
+  display:flex;align-items:center;gap:8px;padding:10px 11px;
+  border-radius:11px;text-decoration:none;color:var(--muted);
+  margin:3px 0;font-size:14px
+}
+.side-link:hover{background:var(--surface2);color:var(--text)}
+.side-link.active{background:var(--primary);color:#fff;font-weight:700}
+
+main{min-width:0}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:20px;box-shadow:var(--shadow);
+  margin-bottom:20px;overflow:hidden
+}
+.card-head{
+  padding:24px 24px 18px;border-bottom:1px solid var(--border);
+  background:var(--surface)
+}
+.card-head h2{margin:0;font-size:25px;line-height:1.3}
+.card-head p{margin:6px 0 0;color:var(--muted);font-size:14px}
+.card-body{padding:24px}
+
+.instructions{
+  background:var(--surface2);border-left:4px solid var(--primary);
+  padding:11px 14px;border-radius:10px;margin:14px 0 18px;font-weight:600
+}
+.instructions b{color:var(--primary)}
+
+.exercise{
+  border:1px solid var(--border);border-radius:15px;
+  margin:12px 0;overflow:hidden;background:var(--surface)
+}
+.ex-head{
+  padding:15px 17px;background:var(--surface2);
+  border-bottom:1px solid var(--border);line-height:1.65
+}
+.ex-head b{color:var(--primary)}
+.ex-body{padding:17px}
+.q{
+  margin:0 0 17px;padding-bottom:15px;
+  border-bottom:1px dashed var(--border)
+}
+.q:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.qtext{font-weight:600}
+.my{color:var(--muted);margin-top:5px}
+.answer-btn,.btn-reveal{
+  margin-top:9px;border:1px solid var(--primary);background:transparent;
+  color:var(--primary);padding:7px 12px;border-radius:9px;
+  cursor:pointer;font-family:"Padauk","Plus Jakarta Sans",sans-serif
+}
+.answer{
+  display:none;margin-top:11px;padding:13px 15px;
+  background:var(--green-bg);border:1px solid color-mix(in srgb,var(--green) 25%,transparent);
+  border-left:4px solid var(--green);border-radius:10px;color:var(--green-text)
+}
+.answer.show{display:block}
+.answer strong{font-weight:800}
+.why{display:block;margin-top:5px;color:var(--muted)}
+.options{
+  margin:9px 0;padding:11px 14px;background:var(--bg);
+  border-radius:10px
+}
+.options li{margin:3px 0}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:620px}
+th,td{padding:12px;border-bottom:1px solid var(--border);text-align:left}
+th{background:var(--surface2)}
+tr:last-child td{border-bottom:0}
+.vocab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.next{
+  display:flex;justify-content:flex-end;padding:5px 0 15px
+}
+.next a{
+  display:inline-block;background:var(--primary);color:#fff;
+  padding:11px 18px;border-radius:12px;font-weight:700
+}
+.footer{text-align:center;color:var(--muted);padding:25px 15px}
+
+/* Mobile menu */
+.overlay{
+  display:none;position:fixed;inset:0;z-index:70;
+  background:rgba(0,0,0,.45)
+}
+.overlay.show{display:block}
+.menu-btn{display:none}
+@media(max-width:850px){
+  .nav{width:calc(100% - 30px)}
+  .hero{
+    width:calc(100% - 30px);
+    padding:30px 0 20px
+  }
+  .hero h1{font-size:32px;letter-spacing:-.5px}
+  .hero p{font-size:14px}
+  .layout{
+    width:calc(100% - 30px);
+    grid-template-columns:1fr;
+    padding:0 0 35px
+  }
+  .sidebar{
+    display:none;position:fixed;left:-290px;top:0;bottom:0;
+    width:275px;z-index:80;border-radius:0;
+    overflow:auto;transition:left .25s;padding:18px
+  }
+  .sidebar.open{display:block;left:0}
+  .menu-btn{display:block}
+  .card{border-radius:18px}
+  .card-head{padding:20px 18px 16px}
+  .card-head h2{font-size:22px}
+  .card-body{padding:18px}
+  .exercise{border-radius:14px}
+  .ex-head{padding:14px 15px}
+  .ex-body{padding:15px}
+  .vocab-grid{grid-template-columns:1fr}
+}
+@media(min-width:851px){.menu-btn{display:none}}
+</style>
+</head>
+<body>
+<header class="header"><nav class="nav"><a class="brand" href="Grade-12-English-Learning-Hub-1.html">Grade-12 <span>English</span></a><div class="nav-actions"><button class="icon-btn menu-btn" id="menuBtn">☰</button><button class="icon-btn" id="themeBtn">☀️</button></div></nav></header>
+
+<section class="hero"><div class="hero-inner">
+<span class="eyebrow">UNIT 3 • EQUAL ACCESS TO EDUCATION</span>
+<h1><span>Comprehension</span>, Vocabulary & Grammar</h1>
+<p>Equal Access to Education စာပိုဒ်ကို အခြေခံပြီး Comprehension၊ Compound Words နှင့် Relative Adverbs လေ့ကျင့်ခန်းများကို English + မြန်မာဘာသာပြန် + အဖြေအပြည့်အစုံဖြင့် လေ့လာနိုင်ပါသည်။</p>
+</div></section>
+<div class="overlay" id="overlay"></div>
+
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+<div class="side-title">UNIT 3 • LESSON MENU</div>
+<a class="side-link" href="meaning3.html">📘 Meaning</a>
+<a class="side-link" href="unit3.html">📖 Reading Paragraph</a>
+<a class="side-link active" href="comprehension3.html">📝 Comprehension</a>
+<a class="side-link" href="grammar3.html">🔤 Additional Grammar Exercises</a>
+<a class="side-link" href="listening-speaking3.html">🎧 Listening & Speaking</a>
+<a class="side-link" href="writing3.html">✍️ Writing</a>
+<a class="side-link" href="beca3.html">🎯 BECA Practice</a>
+</aside>
+
+<main>
+<section class="card"><div class="card-head"><h2>📝 Comprehension</h2><p>Reading passage ကို နားလည်မှု စစ်ဆေးရန် မေးခွန်းများ</p></div><div class="card-body">
+<div class="instructions"><b>လေ့လာရန် —</b> မေးခွန်းကို အရင်စဉ်းစားဖြေဆိုပြီးနောက် “အဖြေကြည့်မည်” ကိုနှိပ်၍ Answer Key နှင့် မြန်မာရှင်းလင်းချက်ကို စစ်ဆေးပါ။</div>
+
+<div class="exercise"><div class="ex-head"><b>A. According to the passage, how many factors affect child education? What are they? How do you know?</b><br><span class="translation">စာပိုဒ်အရ ကလေးများ၏ ပညာရေးအပေါ် သက်ရောက်မှုရှိသော အကြောင်းရင်း မည်မျှရှိသနည်း။ မည်သည့်အကြောင်းရင်းများ ဖြစ်သနည်း။ မည်သို့သိနိုင်သနည်း။</span> <br>
+<button class="answer-btn" data-target="a1">အဖြေကြည့်မည်</button><div class="answer" id="a1"><strong>Answer: 4</strong><span class="why">အဖြေ — အကြောင်းရင်း ၄ ခု ရှိပါသည်။</span><br><strong>(1) poor socioeconomic status<br>(2) political instability<br>(3) natural and climate change and <br>(4) race and gender.</strong><span class="why">(၁) လူမှုစီးပွားရေးအခြေအနေ ဆင်းရဲနိမ့်ကျမှု၊<br> (၂) နိုင်ငံရေးမတည်ငြိမ်မှု၊ <br>(၃) သဘာဝဘေးအန္တရာယ်နှင့် ရာသီဥတုပြောင်းလဲမှု၊ <br>(၄) လူမျိုးနှင့် ကျား/မအပေါ် ခွဲခြားဆက်ဆံမှုတို့ ဖြစ်ပါသည်။</span><br><strong>We know this through the discourse markers “The main cause, the second important factor, Thirdly, and Fourthly”.</strong><span class="why">“The main cause”, “the second important factor”, “Thirdly”, “Fourthly” ဟူသော အကြောင်းအရာအစပြုဖော်ပြသည့် စကားလုံးများကို အသုံးပြုထားသောကြောင့် အကြောင်းရင်း ၄ ခုဖြစ်ကြောင်း သိနိုင်ပါသည်။</span></div></div>
+</div></div>
+<div class="exercise"><div class="ex-head"><b>B. Find the words in the passage that are similar in meaning to the following.</b><br><span class="translation">အောက်ပါအဓိပ္ပာယ်များနှင့် အဓိပ္ပာယ်တူသော စကားလုံးများကို Reading passage ထဲမှ ရှာပါ။</span></div><div class="ex-body">
+<div class="q"><div class="qtext">1. right to have or use something</div><div class="my">တစ်စုံတစ်ရာကို ပိုင်ဆိုင်ရန် သို့မဟုတ် အသုံးပြုရန် ရပိုင်ခွင့်</div><button class="answer-btn" data-target="b1">အဖြေကြည့်မည်</button><div class="answer" id="b1"><strong>access</strong><span class="why">ရရှိခွင့် / အသုံးပြုခွင့်</span></div></div>
+<div class="q"><div class="qtext">2. persons who are well-educated and can think rightly about things</div><div class="my">ပညာကောင်းစွာတတ်မြောက်ပြီး အရာများကို မှန်ကန်စွာ စဉ်းစားနိုင်သူများ</div><button class="answer-btn" data-target="b2">အဖြေကြည့်မည်</button><div class="answer" id="b2"><strong>intellectuals</strong><span class="why">ပညာရှင်များ / ဉာဏ်ပညာရှင်များ</span></div></div>
+<div class="q"><div class="qtext">3. the quality of a situation in which things are likely to change or fail suddenly</div><div class="my">အခြေအနေများ ရုတ်တရက် ပြောင်းလဲခြင်း သို့မဟုတ် ပျက်စီးသွားနိုင်ခြေရှိသော အခြေအနေ၏ သဘောသဘာဝ</div><button class="answer-btn" data-target="b3">အဖြေကြည့်မည်</button><div class="answer" id="b3"><strong>instability</strong><span class="why">မတည်ငြိမ်မှု</span></div></div>
+<div class="q"><div class="qtext">4. leave a thing or place, especially because it is impossible to stay</div><div class="my">အထူးသဖြင့် ဆက်လက်နေရန် မဖြစ်နိုင်သောကြောင့် အရာတစ်ခု သို့မဟုတ် နေရာတစ်ခုကို စွန့်ခွာသည်</div><button class="answer-btn" data-target="b4">အဖြေကြည့်မည်</button><div class="answer" id="b4"><strong>abandon</strong><span class="why">စွန့်လွှတ်သည် / စွန့်ခွာသည်</span></div></div>
+<div class="q"><div class="qtext">5. the practice of treating somebody or a particular group in society less fairly than others</div><div class="my">တစ်စုံတစ်ဦး သို့မဟုတ် လူမှုအဖွဲ့အစည်းရှိ အုပ်စုတစ်ခုကို အခြားသူများထက် မမျှတစွာ ဆက်ဆံခြင်း</div><button class="answer-btn" data-target="b5">အဖြေကြည့်မည်</button><div class="answer" id="b5"><strong>discrimination</strong><span class="why">ခွဲခြားဆက်ဆံမှု</span></div></div>
+<div class="q"><div class="qtext">6. going against or refusing to obey a law</div><div class="my">ဥပဒေကို ဆန့်ကျင်ခြင်း သို့မဟုတ် လိုက်နာရန် ငြင်းဆန်ခြင်း</div><button class="answer-btn" data-target="b6">အဖြေကြည့်မည်</button><div class="answer" id="b6"><strong>violation</strong><span class="why">ချိုးဖောက်မှု</span></div></div>
+<div class="q"><div class="qtext">7. something that must exist</div><div class="my">မဖြစ်မနေ ရှိရမည့်အရာ</div><button class="answer-btn" data-target="b7">အဖြေကြည့်မည်</button><div class="answer" id="b7"><strong>prerequisite</strong><span class="why">မဖြစ်မနေလိုအပ်သော အခြေခံအချက်</span></div></div>
+</div></div>
+
+<div class="exercise"><div class="ex-head"><b>C. Choose the best answer.</b><br><span class="translation">အကောင်းဆုံးအဖြေကို ရွေးချယ်ပါ။</span></div><div class="ex-body">
+<script type="text/plain">
+</script>
+<div class="q"><div class="qtext">1. In order to have access to equal education, children must ________.</div><div class="my">တန်းတူညီမျှသော ပညာရေးကို ရရှိခွင့်ရရန် ကလေးများသည် ________ ရှိရမည်။</div><ol class="options" type="a"><li>acquire a high-quality education.</li><li>have same socio-economic status.</li><li>have the same advantage to access education.</li><li>receive same resources.</li></ol><button class="answer-btn" data-target="c1">အဖြေကြည့်မည်</button><div class="answer" id="c1"><strong>Answer: d. receive same resources.</strong><span class="why">တူညီသော အရင်းအမြစ်များကို ရရှိရမည်။</span></div></div>
+<div class="q"><div class="qtext">2. In line 2, the word “portion” mostly means ________.</div><div class="my">Line 2 တွင် “portion” ဆိုသော စကားလုံး၏ အဓိကအဓိပ္ပာယ်မှာ ________ ဖြစ်သည်။</div><ol class="options" type="a"><li>a part of something that is shared with other people.</li><li>an amount of food that is large enough for each person.</li><li>dividing something into parts.</li><li>one part of something larger.</li></ol><button class="answer-btn" data-target="c2">အဖြေကြည့်မည်</button><div class="answer" id="c2"><strong>Answer: d. one part of something larger.</strong><span class="why">ပိုကြီးမားသော အရာတစ်ခု၏ အစိတ်အပိုင်းတစ်ခု။</span></div></div>
+<div class="q"><div class="qtext">3. In paragraph 7, the word “favoured” means ________.</div><div class="my">Paragraph 7 တွင် “favoured” ဆိုသည်မှာ ________ ဟု အဓိပ္ပာယ်ရသည်။</div><ol class="options" type="a"><li>helped.</li><li>supported.</li><li>preferred.</li><li>treated better.</li></ol><button class="answer-btn" data-target="c3">အဖြေကြည့်မည်</button><div class="answer" id="c3"><strong>Answer: d. treated better.</strong><span class="why">ပိုမိုကောင်းမွန်စွာ ဆက်ဆံခံရသည်။</span></div></div>
+<div class="q"><div class="qtext">4. According to the passage, we will be open-minded, flexible, and able to adapt to changing environmental conditions if we ________.</div><div class="my">စာပိုဒ်အရ ကျွန်ုပ်တို့သည် ပွင့်လင်းသောအမြင်ရှိ၊ လိုက်လျောညီထွေပြောင်းလဲနိုင်ပြီး ပြောင်းလဲနေသော ပတ်ဝန်းကျင်အခြေအနေများနှင့် လိုက်လျောညီထွေ နေနိုင်မည်မှာ ________ ဖြစ်ပါက ဖြစ်သည်။</div><ol class="options" type="a"><li>contribute to society.</li><li>have educational equality.</li><li>have opportunity to learn without any pressure.</li><li>know democratic values.</li></ol><button class="answer-btn" data-target="c4">အဖြေကြည့်မည်</button><div class="answer" id="c4"><strong>Answer: d. know democratic values.</strong><span class="why">ဒီမိုကရေစီတန်ဖိုးများကို သိရှိနားလည်ခြင်း။</span></div></div>
+<div class="q"><div class="qtext">5. In paragraph 6, child education during the Covid 19 pandemic is the example of ________ that cause educational inequality.</div><div class="my">Paragraph 6 တွင် COVID-19 ကပ်ရောဂါကာလအတွင်း ကလေးများ၏ ပညာရေးသည် ပညာရေးမညီမျှမှုကို ဖြစ်စေသော ________ ၏ ဥပမာဖြစ်သည်။</div><ol class="options" type="a"><li>health issues</li><li>human rights violations</li><li>natural disasters</li><li>violence and conflicts</li></ol><button class="answer-btn" data-target="c5">အဖြေကြည့်မည်</button><div class="answer" id="c5"><strong>Answer: c. natural disasters.</strong><span class="why">သဘာဝဘေးအန္တရာယ်များ။</span></div></div>
+<div class="q"><div class="qtext">6. If the language of instruction is different from children’s mother tongue, _______.</div><div class="my">သင်ကြားပို့ချသည့် ဘာသာစကားသည် ကလေးများ၏ မိခင်ဘာသာစကားနှင့် မတူပါက ________။</div><ol class="options" type="a"><li>the language barrier may affect their learning process.</li><li>the language they speak will not be developed.</li><li>they cannot choose what they want to pursue.</li><li>they will be forced to learn in non-native language.</li></ol><button class="answer-btn" data-target="c6">အဖြေကြည့်မည်</button><div class="answer" id="c6"><strong>Answer: a. the language barrier may affect their learning process.</strong><span class="why">ဘာသာစကားအတားအဆီးသည် ၎င်းတို့၏ သင်ယူမှုလုပ်ငန်းစဉ်ကို ထိခိုက်စေနိုင်သည်။</span></div></div>
+<div class="q"><div class="qtext">7. Not paying respect to the ethnic origin of people, the language they speak, and their religion can cause ________.</div><div class="my">လူများ၏ လူမျိုးနွယ်စုနောက်ခံ၊ သူတို့ပြောသော ဘာသာစကားနှင့် ဘာသာရေးကို လေးစားမှုမရှိခြင်းသည် ________ ကို ဖြစ်စေနိုင်သည်။</div><ol class="options" type="a"><li>gender discrimination.</li><li>racial discrimination.</li><li>educational inequality.</li><li>poverty and unemployment.</li></ol><button class="answer-btn" data-target="c7">အဖြေကြည့်မည်</button><div class="answer" id="c7"><strong>Answer: b. racial discrimination.</strong><span class="why">လူမျိုးရေးခွဲခြားဆက်ဆံမှု။</span></div></div>
+<div class="q"><div class="qtext">8. Some regions still have gender inequality, that is, women are less ________.</div><div class="my">အချို့ဒေသများတွင် ကျား/မ မညီမျှမှု ရှိနေဆဲဖြစ်သည်။ ဆိုလိုသည်မှာ အမျိုးသမီးများသည် ပိုမိုနည်းပါးစွာ ________။</div><ol class="options" type="a"><li>cultural.</li><li>educated.</li><li>favoured.</li><li>traditional.</li></ol><button class="answer-btn" data-target="c8">အဖြေကြည့်မည်</button><div class="answer" id="c8"><strong>Answer: c. favoured.</strong><span class="why">ဦးစားပေးခံရမှု နည်းပါးသည်။</span></div></div>
+<div class="q"><div class="qtext">9. According to the passage, productive members of society are _________.</div><div class="my">စာပိုဒ်အရ လူ့အဖွဲ့အစည်းအတွက် အကျိုးရှိသော အဖွဲ့ဝင်များဆိုသည်မှာ ________ ဖြစ်သည်။</div><ol class="options" type="a"><li>those who are educated.</li><li>those who can contribute to the society.</li><li>those who have same rights and obligations.</li><li>those who understand democratic values.</li></ol><button class="answer-btn" data-target="c9">အဖြေကြည့်မည်</button><div class="answer" id="c9"><strong>Answer: b. those who can contribute to the society.</strong><span class="why">လူ့အဖွဲ့အစည်းအတွက် ပါဝင်ပံ့ပိုးနိုင်သူများ။</span></div></div>
+<div class="q"><div class="qtext">10. The main focus of the passage is _________.</div><div class="my">စာပိုဒ်၏ အဓိကအာရုံစိုက်ထားသည့် အကြောင်းအရာမှာ ________ ဖြစ်သည်။</div><ol class="options" type="a"><li>why children are important.</li><li>why equal access to education is important.</li><li>why democratic values are important.</li><li>why people’s socio-economic status is important.</li></ol><button class="answer-btn" data-target="c10">အဖြေကြည့်မည်</button><div class="answer" id="c10"><strong>Answer: b. why equal access to education is important.</strong><span class="why">ပညာရေးကို တန်းတူညီမျှ ရရှိခွင့်သည် အဘယ်ကြောင့် အရေးကြီးသည်ကို ရှင်းပြထားခြင်း။</span></div></div>
+</div></div>
+</div></section>
+
+<section class="card"><div class="card-head"><h2>🔑 3B. Vocabulary — Compound Words</h2><p>Compound words = စကားလုံးနှစ်ခု သို့မဟုတ် ထို့ထက်ပိုသော word elements များ ပေါင်းစပ်ထားသည့် စကားလုံးများ</p></div><div class="card-body">
+<div class="grammar-note"><b>Example:</b> “socioeconomic” is a compound adjective. It combines “socio-” with “economic”.<br><span class="translation">ဥပမာ — “socioeconomic” သည် compound adjective ဖြစ်ပြီး “socio-” နှင့် “economic” တို့ကို ပေါင်းစပ်ထားခြင်း ဖြစ်သည်။</span></div>
+<div class="exercise"><div class="ex-head"><b>A. Match Column A with Column B.</b><br><span class="translation">Column A ရှိ compound words များကို Column B ရှိ သက်ဆိုင်ရာ အဓိပ္ပာယ်များနှင့် ကိုက်ညီအောင် တွဲပါ။</span></div><div class="ex-body">
+<div class="table-wrap"><table class="match-table"><tr><th>Column A</th><th>Column B — Definitions</th></tr>
+<tr><td>1. biodiversity<br><span class="translation">ဇီဝမျိုးစုံမျိုးကွဲ</span></td><td>A. the study of the influence of geography on international politics and international relations<br><span class="translation">ပထဝီဝင်အခြေအနေက နိုင်ငံတကာနိုင်ငံရေးနှင့် နိုင်ငံတကာဆက်ဆံရေးအပေါ် သက်ရောက်မှုကို လေ့လာခြင်း</span></td></tr>
+<tr><td>2. biotechnology<br><span class="translation">ဇီဝနည်းပညာ</span></td><td>B. the study of microscopic organisms, such as bacteria, viruses, and fungi<br><span class="translation">ဘက်တီးရီးယား၊ ဗိုင်းရပ်စ်နှင့် မှိုကဲ့သို့ အဏုဇီဝသက်ရှိများကို လေ့လာခြင်း</span></td></tr>
+<tr><td>3. ecofriendly<br><span class="translation">ပတ်ဝန်းကျင်နှင့် သဟဇာတဖြစ်သော</span></td><td>C. the transmission of information over long distances using electronic means<br><span class="translation">အီလက်ထရောနစ်နည်းလမ်းများဖြင့် အကွာအဝေးဝေးသို့ သတင်းအချက်အလက် ပေးပို့ခြင်း</span></td></tr>
+<tr><td>4. geopolitics<br><span class="translation">ပထဝီနိုင်ငံရေး</span></td><td>D. relating to or concerned with the interaction of social and economic factors<br><span class="translation">လူမှုရေးနှင့် စီးပွားရေးအကြောင်းရင်းများ အပြန်အလှန်သက်ရောက်မှုနှင့် သက်ဆိုင်သော</span></td></tr>
+<tr><td>5. hydroelectric<br><span class="translation">ရေအားလျှပ်စစ်နှင့် သက်ဆိုင်သော</span></td><td>E. the variety of plant and animal life in a particular habitat<br><span class="translation">သတ်မှတ်ထားသော နေထိုင်ရာဒေသတစ်ခုရှိ အပင်နှင့် တိရစ္ဆာန်မျိုးစုံမျိုးကွဲများ</span></td></tr>
+<tr><td>6. microbiology<br><span class="translation">အဏုဇီဝဗေဒ</span></td><td>F. not harmful to the environment<br><span class="translation">ပတ်ဝန်းကျင်ကို မထိခိုက်စေသော</span></td></tr>
+<tr><td>7. neuroscience<br><span class="translation">အာရုံကြောသိပ္ပံ</span></td><td>G. the scientific study of the nervous system, including the brain and spinal cord<br><span class="translation">ဦးနှောက်နှင့် ကျောရိုးအာရုံကြောအပါအဝင် အာရုံကြောစနစ်ကို သိပ္ပံနည်းကျ လေ့လာခြင်း</span></td></tr>
+<tr><td>8. physiotherapy<br><span class="translation">ကိုယ်ကာယကုထုံး</span></td><td>H. relating to the generation of electricity from the energy of flowing water<br><span class="translation">စီးဆင်းနေသောရေ၏ စွမ်းအင်မှ လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်ခြင်းနှင့် သက်ဆိုင်သော</span></td></tr>
+<tr><td>9. socioeconomic<br><span class="translation">လူမှုစီးပွားရေးနှင့် သက်ဆိုင်သော</span></td><td>I. the use of living organisms or their systems to create useful products<br><span class="translation">အသုံးဝင်သော ထုတ်ကုန်များဖန်တီးရန် သက်ရှိများ သို့မဟုတ် ၎င်းတို့၏ စနစ်များကို အသုံးပြုခြင်း</span></td></tr>
+<tr><td>10. telecommunication<br><span class="translation">ဆက်သွယ်ရေးနည်းပညာ</span></td><td>J. a branch of rehabilitative healthcare that uses physical methods to promote healing and well-being<br><span class="translation">ရုပ်ပိုင်းဆိုင်ရာနည်းလမ်းများဖြင့် ကျန်းမာရေးပြန်လည်ကောင်းမွန်ရေးနှင့် ခန္ဓာကိုယ်ကျန်းမာချမ်းသာရေးကို မြှင့်တင်ပေးသော ပြန်လည်ထူထောင်ရေးကျန်းမာရေးစောင့်ရှောက်မှု ဘာသာရပ်</span></td></tr>
+</table></div>
+<button class="answer-btn" data-target="va">အဖြေကြည့်မည်</button><div class="answer" id="va"><strong>Answers: 1-E<br> 2-I<br> 3-F<br> 4-A<br> 5-H<br> 6-B<br> 7-G<br> 8-J<br> 9-D<br> 10-C</strong>
+</div></div>
+<div class="exercise"><div class="ex-head"><b>B. Fill in the blanks.</b><br><span class="translation">Exercise A မှ compound words များကို အသုံးပြု၍ ကွက်လပ်များကို ဖြည့်ပါ။</span></div><div class="ex-body">
+<div class="q"><div class="qtext">1. Students who specialize in _________ study the behavior of bacteria under various conditions.</div><div class="my">_________ ကို အထူးပြုလေ့လာသော ကျောင်းသားများသည် အခြေအနေအမျိုးမျိုးအောက်တွင် ဘက်တီးရီးယားများ၏ အပြုအမူကို လေ့လာကြသည်။</div><button class="answer-btn" data-target="vb1">အဖြေကြည့်မည်</button><div class="answer" id="vb1"><strong>Microbiology</strong><span class="why">အဏုဇီဝဗေဒ</span></div></div>
+<div class="q"><div class="qtext">2. Conservation efforts aim to protect the _________ of fragile ecosystems.</div><div class="my">ထိခိုက်လွယ်သော ecosystem များ၏ _________ ကို ကာကွယ်ရန် ထိန်းသိမ်းရေးလုပ်ငန်းများက ရည်ရွယ်သည်။</div><button class="answer-btn" data-target="vb2">အဖြေကြည့်မည်</button><div class="answer" id="vb2"><strong>biodiversity</strong><span class="why">ဇီဝမျိုးစုံမျိုးကွဲ</span></div></div>
+<div class="q"><div class="qtext">3. Our understanding of brain function has greatly advanced thanks to the scientists’ findings on _________.</div><div class="my">ဦးနှောက်၏ လုပ်ဆောင်ပုံကို ကျွန်ုပ်တို့နားလည်မှုသည် သိပ္ပံပညာရှင်များ၏ _________ ဆိုင်ရာ တွေ့ရှိချက်များကြောင့် များစွာတိုးတက်လာသည်။</div><button class="answer-btn" data-target="vb3">အဖြေကြည့်မည်</button><div class="answer" id="vb3"><strong>neuroscience</strong><span class="why">အာရုံကြောသိပ္ပံ</span></div></div>
+<div class="q"><div class="qtext">4. The _________ dam generates electricity by harnessing the power of waterfalls.</div><div class="my">_________ ရေကာတာသည် ရေတံခွန်များ၏ စွမ်းအင်ကို အသုံးချ၍ လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်သည်။</div><button class="answer-btn" data-target="vb4">အဖြေကြည့်မည်</button><div class="answer" id="vb4"><strong>hydroelectric</strong><span class="why">ရေအားလျှပ်စစ်နှင့် သက်ဆိုင်သော</span></div></div>
+<div class="q"><div class="qtext">5. _________ has revolutionized the medical field, leading to the development of new treatments and therapies.</div><div class="my">_________ သည် ဆေးဘက်ဆိုင်ရာနယ်ပယ်ကို တိုးတက်ပြောင်းလဲစေပြီး ကုသမှုအသစ်များနှင့် therapy အသစ်များ ဖွံ့ဖြိုးလာစေသည်။</div><button class="answer-btn" data-target="vb5">အဖြေကြည့်မည်</button><div class="answer" id="vb5"><strong>Biotechnology</strong><span class="why">ဇီဝနည်းပညာ</span></div></div>
+<div class="q"><div class="qtext">6. After his knee surgery, Uncle Htun underwent _________ to regain strength and mobility.</div><div class="my">ဒူးခွဲစိတ်ကုသမှုခံယူပြီးနောက် ဦးထွန်းသည် အားအင်နှင့် လှုပ်ရှားနိုင်စွမ်း ပြန်လည်ရရှိရန် _________ ခံယူခဲ့သည်။</div><button class="answer-btn" data-target="vb6">အဖြေကြည့်မည်</button><div class="answer" id="vb6"><strong>physiotherapy</strong><span class="why">ကိုယ်ကာယကုထုံး</span></div></div>
+<div class="q"><div class="qtext">7. _________ plays a significant role in international conflicts and alliances.</div><div class="my">_________ သည် နိုင်ငံတကာ ပဋိပက္ခများနှင့် မဟာမိတ်ဖွဲ့မှုများတွင် အရေးပါသော အခန်းကဏ္ဍမှ ပါဝင်သည်။</div><button class="answer-btn" data-target="vb7">အဖြေကြည့်မည်</button><div class="answer" id="vb7"><strong>Geopolitics</strong><span class="why">ပထဝီနိုင်ငံရေး</span></div></div>
+<div class="q"><div class="qtext">8. I decided to buy an _________ car that runs on electricity to reduce my carbon footprint and help protect the environment.</div><div class="my">ကာဗွန်ထုတ်လွှတ်မှုကို လျှော့ချပြီး ပတ်ဝန်းကျင်ကို ကာကွယ်ရန် လျှပ်စစ်ဖြင့် မောင်းနှင်သော _________ ကားကို ဝယ်ရန် ဆုံးဖြတ်ခဲ့သည်။</div><button class="answer-btn" data-target="vb8">အဖြေကြည့်မည်</button><div class="answer" id="vb8"><strong>ecofriendly</strong><span class="why">ပတ်ဝန်းကျင်နှင့် သဟဇာတဖြစ်သော</span></div></div>
+<div class="q"><div class="qtext">9. _________ factors play a significant role in determining access to education and healthcare.</div><div class="my">ပညာရေးနှင့် ကျန်းမာရေးစောင့်ရှောက်မှု ရရှိခွင့်ကို သတ်မှတ်ရာတွင် _________ အကြောင်းရင်းများသည် အရေးပါသော အခန်းကဏ္ဍမှ ပါဝင်သည်။</div><button class="answer-btn" data-target="vb9">အဖြေကြည့်မည်</button><div class="answer" id="vb9"><strong>Socioeconomic</strong><span class="why">လူမှုစီးပွားရေးနှင့် သက်ဆိုင်သော</span></div></div>
+<div class="q"><div class="qtext">10. The _________ industry has rapidly evolved with the advent of the internet and mobile technology.</div><div class="my">Internet နှင့် mobile technology ပေါ်ပေါက်လာခြင်းနှင့်အတူ _________ လုပ်ငန်းနယ်ပယ်သည် လျင်မြန်စွာ ဖွံ့ဖြိုးတိုးတက်လာသည်။</div><button class="answer-btn" data-target="vb10">အဖြေကြည့်မည်</button><div class="answer" id="vb10"><strong>telecommunication</strong><span class="why">ဆက်သွယ်ရေးနည်းပညာ</span></div></div>
+</div></div>
+</div></section>
+
+<section class="card"><div class="card-head"><h2>🔤3C. Grammar — Relative Adverbs</h2><p>‘where’, ‘when’, ‘why’ စသော Relative Adverbs များ</p></div><div class="card-body">
+<div class="grammar-note"><b>Definition:</b> A relative adverb is an adverb that heads an adjective clause.<br><span class="translation">Relative adverb ဆိုသည်မှာ adjective clause တစ်ခုကို စတင်ပေးသော adverb ဖြစ်သည်။</span></div> </div>
+<div class="instructions">
+<b>💠Where</b><br>‘Where’ is used to introduce a relative clause describing a place.</b><br>နေရာကို ဖော်ပြသည့် relative clause ကို စတင်ရန် အသုံးပြုသည်။ </div>
+<div class="exercise"><div class="ex-head">
+ဥပမာ —<br>1.This is a place where democratic values exist.<br>ဒီနေရာသည် ဒီမိုကရေစီတန်ဖိုးများ တည်ရှိသော နေရာဖြစ်သည်။<br>
+<br>2.I’ve never been to the office where my dad works.<br>ကျွန်တော်/မ အဖေအလုပ်လုပ်သည့်ရုံးခန်းသို့ဘယ်တုန်းကမှမရောက်ဖူးပါ။<br>
+<br>3.Is that the shop where you bought your dress?<br>ဒါက မင်းရဲ့ဝတ်စုံကိုဝယ်ခဲ့တဲ့ဈေးဆိုင်လား။<br>
+<br>4.Tell me about the gym where you go.<br>
+မင်းသွားတဲ့ဂျင်မ်(အားကစားရုံ)အကြောင်းငါ့ကိုပြောပြပါ။</div> </div>
+<div class="instructions"><b>💠When</b><br>
+‘When” is used to introduce a relative clause relating to time.<br>အချိန်ကို ဆက်စပ်ဖော်ပြသည့် relative clause ကို စတင်ရန် အသုံးပြုသည်။<br></div>
+<div class="exercise"><div class="ex-head">
+ဥပမာ — <br>
+1.The 1970s is the decade when heavy rock music dominated.<br>1970ပြည့်လွန်နှစ်များသည် heavy rockဂီတ လွှမ်းမိုးခဲ့သော ဆယ်စုနှစ်ဖြစ်သည်။<br>
+<br>2.I love the class activities when we get the chance to share our ideas.<br>
+ကျွန်တော်/မတို့၏ စိတ်ကူးများကိုမျှဝေခွင့်ရသော အတန်းလှုပ်ရှားမှုများကို နှစ်သက်ပါသည်။<br>
+<br>3.Min Min never forgets the day when he left his native village.<br>Min Min သည် မိမိမွေးရပ်ဇာတိရွာမှ ထွက်ခွာခဲ့သောနေ့ကို ဘယ်တော့မှ မမေ့ပါ။
+</div>
+<div class="instructions"><b>💠Why</b><br> ‘Why” is used to introduce a relative clause describing a reason.<br>အကြောင်းပြချက်ကို ဖော်ပြသည့် relative clause ကို စတင်ရန် အသုံးပြုသည်။<br> </div>
+<div class="exercise"><div class="ex-head"> ဥပမာ —<br>1.I don’t know the reason why he left the party early.<br>သူဘာကြောင့် ပါတီမှ စောစောထွက်သွားသည်ကို ကျွန်တော် မသိပါ။<br>
+<br>2.Please tell me the reason why you choose that particular topic for the presentation.<br>
+Presentationအတွက် ထိုသီးခြားခေါင်းစဉ်ရွေးချယ်ရသည့်အကြောင်းပြချက်ကို ကျေးဇူးပြု၍ ကျွန်တော့်ကိုပြောပြပါ</div> </div>
+<div class="exercise"><div class="ex-head"><b>A. Complete each sentence.</b><br><span class="translation">Box ထဲမှ သင့်လျော်သော relative adverb ကို အသုံးပြု၍ ဝါကျတစ်ကြောင်းစီကို ပြည့်စုံအောင် ဖြည့်ပါ။</span></div><div class="ex-body">
+ <div class="table-wrap"><table><tr><th>· when I won the first prize in the essay competition</th></tr>
+<tr><th>· where we usually have breakfast</th></tr>
+<tr><th>· where we usually have breakfast</th></tr> <tr><th>· when we enjoyed the air-ballooning festival</th></tr>
+<tr><th>· when we can be together again</th></tr>
+<tr><th>· where I can find a wide variety of books</th></tr>
+<tr><th>· where she was staying</th></tr>
+<tr><th>· where we usually swim and fish</th></tr>
+<tr><th>· why she has been avoiding me</th></tr>
+ </table>
+</div>
+<div class="q"><div class="qtext">1. The restaurant _______ is now being renovated.</div><div class="my">__________ စားသောက်ဆိုင်ကို ယခု ပြန်လည်ပြုပြင်နေသည်။</div><button class="answer-btn" data-target="ga1">အဖြေကြည့်မည်</button><div class="answer" id="ga1"><strong>where we usually have breakfast</strong><span class="why">ကျွန်ုပ်တို့ မနက်စာစားလေ့ရှိသော စားသောက်ဆိုင်ကို ယခု ပြန်လည်ပြုပြင်နေသည်။</span></div></div>
+<div class="q"><div class="qtext">2. I like Knowledge Zone, the bookstore _______.</div><div class="my">__________ Knowledge Zone စာအုပ်ဆိုင်ကို ကျွန်တော်/ကျွန်မ နှစ်သက်သည်။</div><button class="answer-btn" data-target="ga2">အဖြေကြည့်မည်</button><div class="answer" id="ga2"><strong>where I can find a wide variety of books</strong><span class="why">စာအုပ်အမျိုးအစားစုံလင်စွာ ရှာတွေ့နိုင်သော နေရာဖြစ်သည်။</span></div></div>
+<div class="q"><div class="qtext">3. The villager found his lost cow near the stream _______.</div><div class="my">ရွာသားသည် ပျောက်ဆုံးနေသော နွားကို __________ ချောင်းအနီးတွင် တွေ့ခဲ့သည်။</div><button class="answer-btn" data-target="ga3">အဖြေကြည့်မည်</button><div class="answer" id="ga3"><strong>where we usually swim and fish</strong><span class="why">ကျွန်ုပ်တို့ ရေကူးပြီး ငါးဖမ်းလေ့ရှိသောနေရာ။</span></div></div>
+<div class="q"><div class="qtext">4. I’m hoping for the time _______.</div><div class="my">__________ အချိန်ကို ကျွန်တော်/ကျွန်မ မျှော်လင့်နေသည်။</div><button class="answer-btn" data-target="ga4">အဖြေကြည့်မည်</button><div class="answer" id="ga4"><strong>when we can be together again</strong><span class="why">ကျွန်ုပ်တို့ ပြန်လည်အတူတကွ ရှိနိုင်မည့်အချိန်။</span></div></div>
+<div class="q"><div class="qtext">5. Cho Mar’s friends came to see her at the hotel _______.</div><div class="my">Cho Mar ၏ သူငယ်ချင်းများသည် သူမ __________ ဟိုတယ်သို့ လာတွေ့ကြသည်။</div><button class="answer-btn" data-target="ga5">အဖြေကြည့်မည်</button><div class="answer" id="ga5"><strong>where she was staying</strong><span class="why">သူမ တည်းခိုနေသော ဟိုတယ်။</span></div></div>
+<div class="q"><div class="qtext">6. The day _______ is the happiest day for me.</div><div class="my">__________ နေ့သည် ကျွန်တော်/ကျွန်မအတွက် အပျော်ရွှင်ဆုံးနေ့ ဖြစ်သည်။</div><button class="answer-btn" data-target="ga6">အဖြေကြည့်မည်</button><div class="answer" id="ga6"><strong>when I won the first prize in the essay competition</strong><span class="why">စာစီစာကုံးပြိုင်ပွဲတွင် ပထမဆုရရှိခဲ့သောနေ့။</span></div></div>
+<div class="q"><div class="qtext">7. I like to know the reason _______.</div><div class="my">__________ အကြောင်းရင်းကို သိချင်ပါသည်။</div><button class="answer-btn" data-target="ga7">အဖြေကြည့်မည်</button><div class="answer" id="ga7"><strong>why she has been avoiding me</strong><span class="why">သူမသည် ကျွန်တော်/ကျွန်မကို ရှောင်နေခဲ့သည့် အကြောင်းရင်း။</span></div></div>
+<div class="q"><div class="qtext">8. We often talk about the time _______.</div><div class="my">__________ အချိန်အကြောင်းကို ကျွန်ုပ်တို့ မကြာခဏ ပြောဆိုကြသည်။</div><button class="answer-btn" data-target="ga8">အဖြေကြည့်မည်</button><div class="answer" id="ga8"><strong>when we enjoyed the air-ballooning festival</strong><span class="why">ကျွန်ုပ်တို့ air-ballooning festival ကို ပျော်ရွှင်ခံစားခဲ့သည့်အချိန်။</span></div></div>
+</div></div>
+
+<div class="exercise"><div class="ex-head"><b>B. Combine each pair of sentences.</b><br><span class="translation">ဝါကျနှစ်ကြောင်းစီကို ‘where’, ‘when’ သို့မဟုတ် ‘why’ အသုံးပြု၍ ဝါကျတစ်ကြောင်းအဖြစ် ပေါင်းစပ်ပါ။</span></div><div class="ex-body">
+<div class="grammar-note"><b>Example:</b> I love the countryside. I can enjoy the beauty of nature there. → <b>I love the countryside where I can enjoy the beauty of nature.</b><br><span class="translation">ကျွန်တော်/ကျွန်မ ကျေးလက်ဒေသကို နှစ်သက်သည်။ ထိုနေရာတွင် သဘာဝအလှကို ခံစားနိုင်သည်။ → သဘာဝအလှကို ခံစားနိုင်သော ကျေးလက်ဒေသကို ကျွန်တော်/ကျွန်မ နှစ်သက်သည်။</span></div>
+<div class="q"><div class="qtext">1. The police arrived at the place. The accident happened there.</div><div class="my">ရဲများသည် ထိုနေရာသို့ ရောက်လာသည်။ မတော်တဆမှုသည် ထိုနေရာတွင် ဖြစ်ခဲ့သည်။</div><button class="answer-btn" data-target="gb1">အဖြေကြည့်မည်</button><div class="answer" id="gb1"><strong>The police arrived at the place where the accident happened.</strong><span class="why">မတော်တဆမှု ဖြစ်ခဲ့သောနေရာသို့ ရဲများရောက်လာသည်။</span></div></div>
+<div class="q"><div class="qtext">2. Do you remember the coffee house? We met there for the first time.</div><div class="my">ကော်ဖီဆိုင်ကို မှတ်မိသလား။ ကျွန်ုပ်တို့ ပထမဆုံးတွေ့ခဲ့တာ ထိုနေရာမှာပါ။</div><button class="answer-btn" data-target="gb2">အဖြေကြည့်မည်</button><div class="answer" id="gb2"><strong>Do you remember the coffee house where we met for the first time?</strong><span class="why">ကျွန်ုပ်တို့ ပထမဆုံးတွေ့ခဲ့သော ကော်ဖီဆိုင်ကို မှတ်မိသလား။</span></div></div>
+<div class="q"><div class="qtext">3. Nat Mauk is a town in Magway Region. Bo Gyoke Aung San was born in that town.</div><div class="my">Nat Mauk သည် မကွေးတိုင်းဒေသကြီးရှိ မြို့တစ်မြို့ဖြစ်သည်။ ဗိုလ်ချုပ်အောင်ဆန်းသည် ထိုမြို့တွင် မွေးဖွားခဲ့သည်။</div><button class="answer-btn" data-target="gb3">အဖြေကြည့်မည်</button><div class="answer" id="gb3"><strong>Nat Mauk, where Bo Gyoke Aung San was born, is a town in Magwe Region.</strong><span class="why">ဗိုလ်ချုပ်အောင်ဆန်း မွေးဖွားခဲ့သော Nat Mauk သည် မကွေးတိုင်းဒေသကြီးရှိ မြို့တစ်မြို့ဖြစ်သည်။</span></div></div>
+<div class="q"><div class="qtext">4. I can remember a time. I could eat four hamburgers at that time.</div><div class="my">အချိန်တစ်ခုကို မှတ်မိနိုင်သည်။ ထိုအချိန်တွင် ဟမ်ဘာဂါလေးလုံး စားနိုင်ခဲ့သည်။</div><button class="answer-btn" data-target="gb4">အဖြေကြည့်မည်</button><div class="answer" id="gb4"><strong>I can remember a time when I could eat four hamburgers.</strong><span class="why">ဟမ်ဘာဂါလေးလုံး စားနိုင်ခဲ့သောအချိန်တစ်ခုကို မှတ်မိသည်။</span></div></div>
+<div class="q"><div class="qtext">5. I do not know the reason. She is always posting selfies on social media.</div><div class="my">အကြောင်းရင်းကို မသိပါ။ သူမသည် social media ပေါ်တွင် selfie များကို အမြဲတင်နေသည်။</div><button class="answer-btn" data-target="gb5">အဖြေကြည့်မည်</button><div class="answer" id="gb5"><strong>I do not know the reason why she is always posting selfies on social media.</strong><span class="why">သူမက social media ပေါ်တွင် selfie များကို အမြဲတင်နေသည့် အကြောင်းရင်းကို မသိပါ။</span></div></div>
+<div class="q"><div class="qtext">6. We parked near the wood. We caught the rabbit there.</div><div class="my">ကျွန်ုပ်တို့ တောအနီးတွင် ကားရပ်ခဲ့သည်။ ထိုနေရာတွင် ယုန်ကို ဖမ်းခဲ့သည်။</div><button class="answer-btn" data-target="gb6">အဖြေကြည့်မည်</button><div class="answer" id="gb6"><strong>We parked near the wood where we caught the rabbit.</strong><span class="why">ကျွန်ုပ်တို့ ယုန်ဖမ်းခဲ့သော တောအနီးတွင် ကားရပ်ခဲ့သည်။</span></div></div>
+<div class="q"><div class="qtext">7. I remember the era. Teachers could give students the cane then.</div><div class="my">ခေတ်တစ်ခေတ်ကို မှတ်မိသည်။ ထိုအချိန်က ဆရာများသည် ကျောင်းသားများကို ကြိမ်ဖြင့် ရိုက်နိုင်ခဲ့သည်။</div><button class="answer-btn" data-target="gb7">အဖြေကြည့်မည်</button><div class="answer" id="gb7"><strong>I remember the era when teachers could give students the cane.</strong><span class="why">ဆရာများက ကျောင်းသားများကို ကြိမ်ဖြင့် ရိုက်နိုင်ခဲ့သော ခေတ်ကို မှတ်မိသည်။</span></div></div>
+<div class="q"><div class="qtext">8. I really don’t understand the reason. Nobody is smiling in the group selfie.</div><div class="my">အကြောင်းရင်းကို တကယ်နားမလည်ပါ။ Group selfie ထဲတွင် ဘယ်သူမှ မပြုံးကြပါ။</div><button class="answer-btn" data-target="gb8">အဖြေကြည့်မည်</button><div class="answer" id="gb8"><strong>I really don’t understand the reason why nobody is smiling in the group selfie.</strong><span class="why">Group selfie ထဲမှာ ဘယ်သူမှ မပြုံးကြတဲ့ အကြောင်းရင်းကို တကယ်နားမလည်ပါ။</span></div></div>
+<div class="q"><div class="qtext">9. The centre of the village is very beautiful. You’ll find the church and the gardens there.</div><div class="my">ရွာအလယ်ပိုင်းသည် အလွန်လှပသည်။ ထိုနေရာတွင် ဘုရားကျောင်းနှင့် ဥယျာဉ်များကို တွေ့ရမည်။</div><button class="answer-btn" data-target="gb9">အဖြေကြည့်မည်</button><div class="answer" id="gb9"><strong>The centre of the village where you’ll find the church and the gardens is very beautiful.</strong><span class="why">ဘုရားကျောင်းနှင့် ဥယျာဉ်များကို တွေ့ရမည့် ရွာအလယ်ပိုင်းသည် အလွန်လှပသည်။</span></div></div>
+<div class="q"><div class="qtext">10. Sunset is always my favourite time of the day. I can see beautiful clouds in various colours at that time.</div><div class="my">နေဝင်ချိန်သည် တစ်နေ့တာတွင် ကျွန်တော်/ကျွန်မ အကြိုက်ဆုံးအချိန် ဖြစ်သည်။ ထိုအချိန်တွင် အရောင်မျိုးစုံဖြင့် လှပသော တိမ်များကို မြင်နိုင်သည်။</div><button class="answer-btn" data-target="gb10">အဖြေကြည့်မည်</button><div class="answer" id="gb10"><strong>Twilight is always my favourite time of the day when I can see beautiful clouds in various colours.</strong><span class="why">အရောင်မျိုးစုံဖြင့် လှပသော တိမ်များကို မြင်နိုင်သော ဆည်းဆာအချိန်သည် တစ်နေ့တာတွင် ကျွန်တော်/ကျွန်မ အကြိုက်ဆုံးအချိန် ဖြစ်သည်။</span></div></div>
+</div></div>
+</div></section>
+
+<div class="next"><a href="grammar3.html">Additional Grammar →</a></div>
+</main></div>
+<div class="footer">Grade-12 English Learning Hub • Unit 3 • Comprehension & Grammar</div>
+
+<script>
+(function(){
+ const keys=["theme","siteTheme","g12-theme"];
+ const getTheme=()=>keys.map(k=>localStorage.getItem(k)).find(Boolean)==="dark"?"dark":"light";
+ function apply(){const t=getTheme();document.documentElement.setAttribute("data-theme",t);document.getElementById("themeBtn").textContent=t==="dark"?"🌙":"☀️";}
+ apply();
+ document.getElementById("themeBtn").onclick=()=>{const n=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";keys.forEach(k=>localStorage.setItem(k,n));apply();};
+ window.addEventListener("storage",e=>{if(keys.includes(e.key))apply();});
+ document.querySelectorAll(".answer-btn").forEach(btn=>btn.addEventListener("click",()=>{
+   const el=document.getElementById(btn.dataset.target);el.classList.toggle("show");btn.textContent=el.classList.contains("show")?"အဖြေဖျောက်မည်":"အဖြေကြည့်မည်";
+ }));
+ const sidebar=document.getElementById("sidebar"),overlay=document.getElementById("overlay"),menu=document.getElementById("menuBtn");
+ function close(){sidebar.classList.remove("open");overlay.classList.remove("show")}
+ menu?.addEventListener("click",()=>{sidebar.classList.add("open");overlay.classList.add("show")});
+ overlay.addEventListener("click",close);document.querySelectorAll(".side-link").forEach(a=>a.addEventListener("click",close));
+})();
+</script>
+</body></html>

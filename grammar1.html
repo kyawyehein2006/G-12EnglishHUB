@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="my"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Additional Grammar Exercises | Grade-12 English Learning Hub</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><style>
+:root{
+  --primary-slate:#0f172a;
+  --secondary-slate:#1e293b;
+  --accent-blue:#2563eb;
+  --accent-indigo:#4f46e5;
+  --accent-cyan:#06b6d4;
+  --accent-purple:#7c3aed;
+  --accent-green:#16a34a;
+  --bg-page:#f8fafc;
+  --surface-card:#ffffff;
+  --surface-soft:#f1f5f9;
+  --text-primary:#0f172a;
+  --text-secondary:#475569;
+  --text-muted:#64748b;
+  --border-subtle:#e2e8f0;
+  --answer-bg:#f0fdf4;
+  --answer-border:#16a34a;
+  --answer-text:#14532d;
+  --shadow-sm:0 4px 14px rgba(15,23,42,.06);
+  --shadow-md:0 14px 35px rgba(15,23,42,.10);
+  --shadow-lg:0 25px 60px rgba(15,23,42,.16);
+  --radius-main:18px;
+  --radius-item:13px;
+  --header-bg:rgba(15,23,42,.94);
+  --hero-bg:linear-gradient(135deg,#0f172a 0%,#1e3a8a 52%,#2563eb 100%);
+}
+
+html[data-theme="dark"]{
+  --bg-page:#080d18;
+  --surface-card:#101827;
+  --surface-soft:#172235;
+  --text-primary:#f8fafc;
+  --text-secondary:#cbd5e1;
+  --text-muted:#94a3b8;
+  --border-subtle:#263449;
+  --answer-bg:#0d2418;
+  --answer-border:#22c55e;
+  --answer-text:#bbf7d0;
+  --shadow-sm:0 4px 18px rgba(0,0,0,.22);
+  --shadow-md:0 16px 40px rgba(0,0,0,.30);
+  --shadow-lg:0 28px 70px rgba(0,0,0,.42);
+  --header-bg:rgba(8,13,24,.94);
+  --hero-bg:linear-gradient(135deg,#070b14 0%,#172554 52%,#1d4ed8 100%);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg-page);
+  color:var(--text-primary);
+  font-family:"Plus Jakarta Sans","Padauk",sans-serif;
+  line-height:1.6;
+  transition:background .3s ease,color .3s ease;
+}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+
+.burmese,.option-mm,.question-text-mm,.answer-mm,.footer,
+.menu-label,.menu-small,.menu-section-label,.premium-note p{
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+}
+
+/* HEADER */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--header-bg);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(148,163,184,.16);
+}
+.header-inner{
+  max-width:1180px;
+  min-height:68px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+}
+.logo{
+  color:#fff;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:-.4px;
+}
+.logo span{color:#38bdf8}
+.header-actions{display:flex;gap:9px;align-items:center}
+.header-btn{
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:12px;
+  background:rgba(255,255,255,.07);
+  color:#fff;
+  cursor:pointer;
+  transition:.28s ease;
+}
+.header-btn:hover{background:rgba(255,255,255,.14)}
+.back-btn{
+  width:auto;
+  padding:0 14px;
+  font-size:13px;
+  font-weight:700;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:52px 20px 66px;
+  color:#fff;
+  background:var(--hero-bg);
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  opacity:.14;
+  pointer-events:none;
+}
+.hero:before{
+  width:310px;height:310px;
+  right:-110px;top:-150px;
+  background:#38bdf8;
+}
+.hero:after{
+  width:250px;height:250px;
+  left:-110px;bottom:-160px;
+  background:#a78bfa;
+}
+.hero-content{
+  max-width:860px;
+  margin:auto;
+  position:relative;
+  z-index:1;
+}
+.badge{
+  display:inline-flex;
+  padding:7px 12px;
+  border:1px solid rgba(255,255,255,.20);
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.6px;
+}
+.hero h1{
+  margin:16px 0 8px;
+  font-size:clamp(30px,6vw,50px);
+  line-height:1.08;
+  letter-spacing:-1.5px;
+}
+.hero-subtitle{
+  margin:0;
+  color:#dbeafe;
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:15px;
+}
+
+/* CONTENT */
+.page-wrap{
+  max-width:900px;
+  margin:-26px auto 55px;
+  padding:0 18px;
+  position:relative;
+  z-index:2;
+}
+.content-card{
+  padding:28px;
+  margin-bottom:22px;
+  background:var(--surface-card);
+  border:1px solid var(--border-subtle);
+  border-radius:var(--radius-main);
+  box-shadow:var(--shadow-sm);
+  transition:.28s ease;
+}
+.content-card:hover{box-shadow:var(--shadow-md)}
+
+.section-header{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  margin-bottom:22px;
+  padding-bottom:16px;
+  border-bottom:1px solid var(--border-subtle);
+}
+.section-badge{
+  width:43px;
+  height:43px;
+  flex:0 0 43px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  color:#fff;
+  font-weight:800;
+  font-size:14px;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  box-shadow:0 8px 20px rgba(37,99,235,.22);
+}
+.section-title{
+  margin:0;
+  font-size:20px;
+  line-height:1.55;
+  letter-spacing:-.3px;
+}
+.section-description{
+  margin:5px 0 0;
+  color:var(--text-muted);
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+}
+
+/* OPTIONS */
+.options-grid{
+  display:grid;
+  gap:10px;
+  margin-bottom:22px;
+}
+.options-box{
+  padding:16px 17px;
+  border:1px solid var(--border-subtle);
+  border-radius:13px;
+  background:var(--surface-soft);
+  transition:.25s ease;
+}
+.options-box:hover{
+  border-color:rgba(37,99,235,.28);
+  transform:translateY(-1px);
+}
+.option-item{
+  color:var(--text-primary);
+  font-size:14px;
+  line-height:1.8;
+}
+.option-item strong{color:var(--accent-blue)}
+.option-mm{
+  margin-top:5px;
+  color:var(--text-secondary);
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* QUESTIONS */
+.question-card{
+  margin-bottom:14px;
+  padding:17px;
+  border:1px solid var(--border-subtle);
+  border-radius:13px;
+  background:var(--surface-card);
+}
+.question-number{
+  display:inline-flex;
+  width:27px;height:27px;
+  margin-right:7px;
+  align-items:center;
+  justify-content:center;
+  border-radius:8px;
+  color:var(--accent-blue);
+  background:rgba(37,99,235,.10);
+  font-size:12px;
+  font-weight:800;
+}
+.question-text{
+  color:var(--text-primary);
+  font-size:14px;
+  font-weight:700;
+  line-height:1.8;
+}
+.question-text-mm{
+  margin-top:5px;
+  color:var(--text-secondary);
+  font-size:13px;
+  line-height:1.85;
+}
+
+/* REVEAL */
+.btn-reveal{
+  margin-top:13px;
+  padding:10px 17px;
+  border:0;
+  border-radius:10px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),#1d4ed8);
+  box-shadow:0 7px 16px rgba(37,99,235,.20);
+  cursor:pointer;
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  font-weight:700;
+  transition:.22s ease;
+}
+.btn-reveal:hover{transform:translateY(-1px)}
+.btn-reveal.active{
+  background:linear-gradient(135deg,#475569,#334155);
+}
+.answer-drawer{
+  display:none;
+  margin-top:13px;
+  padding:15px;
+  border:1px solid rgba(22,163,74,.20);
+  border-left:4px solid var(--answer-border);
+  border-radius:10px;
+  color:var(--answer-text);
+  background:var(--answer-bg);
+  font-size:13px;
+  line-height:1.85;
+  animation:fadeIn .25s ease;
+}
+.answer-drawer.show{display:block}
+.answer-label{
+  margin-bottom:4px;
+  font-weight:800;
+}
+.answer-mm{margin-top:5px}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(-5px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* VOCAB */
+.intro-note{
+  margin-bottom:18px;
+  color:var(--text-secondary);
+  font-family:"Padauk","Plus Jakarta Sans",sans-serif;
+  font-size:13px;
+  line-height:1.85;
+}
+.vocab-answer{font-weight:800;color:var(--accent-blue)}
+
+/* NEXT */
+.next-card{
+  color:#fff;
+  border:0;
+  background:linear-gradient(135deg,#0f172a,#1e3a8a 55%,#2563eb);
+}
+.next-card h2{
+  margin:0 0 6px;
+  font-size:22px;
+}
+.next-card p{
+  margin:0;
+  color:#dbeafe;
+  font-family:"Padauk";
+  font-size:13px;
+  line-height:1.8;
+}
+.next-btn{
+  display:inline-flex;
+  margin-top:17px;
+  padding:11px 16px;
+  border-radius:11px;
+  color:#0f172a;
+  background:#fff;
+  font-size:13px;
+  font-weight:800;
+  transition:.25s ease;
+}
+.next-btn:hover{transform:translateY(-2px)}
+
+.footer{
+  max-width:900px;
+  margin:auto;
+  padding:0 18px 35px;
+  color:var(--text-muted);
+  text-align:center;
+  font-size:12px;
+}
+
+/* SIDE MENU */
+.menu-trigger{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:1100;
+  width:52px;height:52px;
+  border:0;
+  border-radius:16px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+  box-shadow:0 12px 30px rgba(37,99,235,.32);
+  cursor:pointer;
+  font-size:21px;
+  transition:.28s ease;
+}
+.menu-trigger:hover{transform:translateY(-50%) scale(1.05)}
+
+.menu-overlay{
+  position:fixed;
+  inset:0;
+  z-index:1200;
+  opacity:0;
+  visibility:hidden;
+  background:rgba(2,6,23,.52);
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
+  transition:.3s ease;
+}
+.menu-overlay.open{opacity:1;visibility:visible}
+
+.side-menu{
+  position:fixed;
+  top:0;right:0;
+  width:min(380px,92vw);
+  height:100dvh;
+  z-index:1300;
+  padding:24px 18px;
+  overflow-y:auto;
+  background:var(--surface-card);
+  border-left:1px solid var(--border-subtle);
+  box-shadow:-20px 0 60px rgba(0,0,0,.18);
+  transform:translateX(105%);
+  transition:transform .34s cubic-bezier(.2,.8,.2,1);
+}
+.side-menu.open{transform:translateX(0)}
+.menu-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:2px 4px 18px;
+  border-bottom:1px solid var(--border-subtle);
+}
+.menu-eyebrow{
+  color:var(--accent-blue);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.menu-title{margin-top:3px;font-size:21px;font-weight:800}
+.close-menu{
+  width:40px;height:40px;
+  border:1px solid var(--border-subtle);
+  border-radius:11px;
+  background:var(--surface-soft);
+  color:var(--text-primary);
+  cursor:pointer;
+  font-size:19px;
+}
+.menu-section{margin-top:19px}
+.menu-section-label{
+  margin:0 5px 9px;
+  color:var(--text-muted);
+  font-size:12px;
+  font-weight:700;
+}
+.menu-list{display:flex;flex-direction:column;gap:7px}
+.menu-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 12px;
+  border:1px solid transparent;
+  border-radius:13px;
+  color:var(--text-primary);
+  transition:.25s ease;
+}
+.menu-item:hover{
+  background:var(--surface-soft);
+  border-color:var(--border-subtle);
+  transform:translateX(-2px);
+}
+.menu-item.active{
+  background:linear-gradient(135deg,rgba(37,99,235,.11),rgba(79,70,229,.09));
+  border-color:rgba(37,99,235,.22);
+}
+.menu-icon{
+  width:39px;height:39px;
+  flex:0 0 39px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:var(--surface-soft);
+  font-size:16px;
+  font-weight:800;
+}
+.menu-item.active .menu-icon{
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent-blue),var(--accent-indigo));
+}
+.menu-label{display:block;font-size:14px;font-weight:700}
+.menu-small{display:block;margin-top:1px;color:var(--text-muted);font-size:11px}
+.menu-arrow{margin-left:auto;color:var(--text-muted);font-size:17px}
+.premium-note{
+  margin-top:20px;
+  padding:15px;
+  border:1px solid rgba(124,58,237,.20);
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(124,58,237,.11),rgba(37,99,235,.09));
+}
+.premium-note strong{font-size:13px}
+.premium-note p{
+  margin:5px 0 0;
+  color:var(--text-secondary);
+  font-size:12px;
+  line-height:1.8;
+}
+
+@media(max-width:700px){
+  .header-inner{min-height:62px;padding:0 14px}
+  .logo{font-size:15px}
+  .back-btn{display:none}
+  .hero{padding:43px 18px 57px}
+  .page-wrap{padding:0 12px;margin-top:-21px}
+  .content-card{padding:20px;border-radius:15px}
+  .menu-trigger{
+    width:48px;height:48px;
+    right:14px;bottom:18px;top:auto;
+    transform:none;border-radius:15px;
+  }
+  .menu-trigger:hover{transform:scale(1.04)}
+}
+@media(max-width:430px){
+  .content-card{padding:16px}
+  .section-title{font-size:18px}
+  .option-item{font-size:13px}
+}
+
+.hero{background:linear-gradient(135deg,#0f172a 0%,#312e81 48%,#2563eb 100%);overflow:hidden}
+.hero:before,.hero:after{animation:floatGlow 8s ease-in-out infinite alternate}
+.hero:after{animation-delay:-3s}
+@keyframes floatGlow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(18px,-14px,0) scale(1.08)}}
+.hero-grid{position:absolute;inset:0;opacity:.10;background-image:linear-gradient(90deg,rgba(255,255,255,.24) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.24) 1px,transparent 1px);background-size:42px 42px;transform:perspective(600px) rotateX(55deg) scale(1.5);transform-origin:center bottom;animation:gridMove 16s linear infinite}
+@keyframes gridMove{to{background-position:42px 42px}}
+.hero h1 span{background:linear-gradient(90deg,#fff,#93c5fd,#67e8f9,#fff);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:titleShine 6s linear infinite}
+@keyframes titleShine{to{background-position:220% center}}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.hero-tag{padding:7px 11px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.08);font-size:11px;color:#e0f2fe}
+.grammar-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.grammar-card{padding:18px;border:1px solid var(--border-subtle);border-radius:15px;background:var(--surface-soft);transition:.25s ease}.grammar-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}.grammar-card h3{margin:0 0 7px;color:var(--accent-blue);font-size:16px}.grammar-card p{margin:0;color:var(--text-secondary);font-family:"Padauk";font-size:12.5px;line-height:1.85}.grammar-rule{margin-top:9px;padding:8px 10px;border-radius:9px;background:rgba(37,99,235,.07);font-size:12px;font-weight:800}
+.lesson-box{margin-bottom:14px;padding:20px;border:1px solid var(--border-subtle);border-radius:15px;background:linear-gradient(135deg,var(--surface-soft),var(--surface-card))}.lesson-box h3{margin:0 0 7px;color:var(--accent-blue);font-size:19px}.lesson-box h4{margin:16px 0 5px;color:var(--accent-indigo);font-size:13px}.lesson-box p{margin:5px 0;color:var(--text-primary);font-size:13.5px;line-height:1.9}.example{margin-top:9px!important;padding:10px 12px;border-left:3px solid var(--accent-cyan);border-radius:8px;background:rgba(6,182,212,.07)}.example-mm{color:var(--text-secondary)!important;font-family:"Padauk"!important}
+.tip-box{padding:15px;border:1px solid rgba(124,58,237,.20);border-radius:13px;background:linear-gradient(135deg,rgba(124,58,237,.09),rgba(37,99,235,.07))}.tip-box p{margin:6px 0;font-family:"Padauk";font-size:13px;line-height:1.9}.tip-box strong{color:var(--accent-purple)}
+.options-grid{display:grid;gap:7px;margin-top:12px}.option{padding:8px 10px;border-radius:9px;background:var(--surface-soft);color:var(--text-secondary);font-size:12.5px;line-height:1.8}.option strong{color:var(--accent-blue)}
+@media(max-width:760px){.grammar-overview{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style><script>(function(){{const saved=localStorage.getItem("theme")||localStorage.getItem("siteTheme")||localStorage.getItem("g12-theme")||"light";document.documentElement.setAttribute("data-theme",saved==="dark"?"dark":"light");}})();</script></head><body>
+<header class="header"><div class="header-inner"><a class="logo" href="index.html">Grade-12 <span>English</span></a><div class="header-actions"><a class="header-btn back-btn" href="comprehension1.html">← Comprehension</a><button aria-label="Toggle theme" class="header-btn" id="themeToggle"><span id="themeIcon">☀️</span></button></div></div></header>
+<section class="hero"><div class="hero-grid"></div><div class="hero-content"><span class="badge">UNIT 1 • GRAMMAR</span><h1>Additional <span>Grammar Exercises</span></h1><p class="hero-subtitle">Used to • Be used to • Get used to — ရှင်းလင်းစွာလေ့လာ၊ ဥပမာများဖြင့်နားလည်၊ လေ့ကျင့်ခန်း ၃၀ ခုဖြင့် ကိုယ်တိုင်စမ်းသပ်ပါ။</p><div class="hero-tags"><span class="hero-tag">Past Habits</span><span class="hero-tag">Familiarity</span><span class="hero-tag">Becoming Familiar</span><span class="hero-tag">30 Exercises</span></div></div></section>
+<button aria-label="Open learning menu" class="menu-trigger" id="menuTrigger">☰</button><div class="menu-overlay" id="menuOverlay"></div><aside class="side-menu" id="sideMenu"><div class="menu-top"><div><div class="menu-eyebrow">UNIT 1 LEARNING HUB</div><div class="menu-title">Learning Menu</div></div><button aria-label="Close menu" class="close-menu" id="closeMenu">×</button></div><div class="menu-section"><div class="menu-section-label">UNIT 1 LESSONS</div><nav class="menu-list"><a class="menu-item" href="meaning1.html"><span class="menu-icon">Aa</span><span><span class="menu-label">Meaning</span><span class="menu-small">Vocabulary &amp; meanings</span></span><span class="menu-arrow">›</span></a><a class="menu-item" href="unit1.html"><span class="menu-icon">📖</span><span><span class="menu-label">Reading Paragraph</span><span class="menu-small">Chasing Dreams</span></span><span class="menu-arrow">›</span></a><a class="menu-item" href="comprehension1.html"><span class="menu-icon">✓</span><span><span class="menu-label">Comprehension</span><span class="menu-small">Reading questions</span></span><span class="menu-arrow">›</span></a><a class="menu-item active" href="Additional Grammar Exercises.html"><span class="menu-icon">G</span><span><span class="menu-label">Grammar</span><span class="menu-small">Used to • Be used to • Get used to</span></span><span class="menu-arrow">›</span></a><a class="menu-item" href="listening-speaking1.html"><span class="menu-icon">🎧</span><span><span class="menu-label">Listening &amp; Speaking</span><span class="menu-small">Interview practice</span></span><span class="menu-arrow">›</span></a><a class="menu-item" href="writing1.html"><span class="menu-icon">✎</span><span><span class="menu-label">Writing</span><span class="menu-small">Descriptive essay</span></span><span class="menu-arrow">›</span></a><a class="menu-item" href="beca1.html"><span class="menu-icon">◆</span><span><span class="menu-label">BECA Practice</span><span class="menu-small">နမူနာမေးခွန်းများ လေ့ကျင့်ရန်</span></span><span class="menu-arrow">›</span></a></nav></div><div class="premium-note"><strong>Grammar Focus</strong><p>Used to, Be used to နဲ့ Get used to တို့ကို ပုံစံမရောထွေးအောင် ဥပမာများနှင့် လေ့ကျင့်ခန်းများကို တစ်နေရာတည်းတွင် စုစည်းထားပါသည်။</p></div></aside>
+<main class="page-wrap">
+<section class="content-card"><div class="section-header"><div class="section-badge">G</div><div><h2 class="section-title">Additional Grammar Exercises</h2><p class="section-description">Used to • Be used to • Get used to — Intermediate practice with context, meaning and form.</p></div></div><p class="grammar-note">ဒီစာမျက်နှာသည် Unit 1 Grammar တွင်ပါဝင်သော <strong>Used to</strong>, <strong>Be used to</strong> နှင့် <strong>Get used to</strong> တို့ကို အဓိပ္ပာယ်၊ ပုံစံ၊ အသုံးပြုပုံနှင့် ဥပမာများဖြင့် စနစ်တကျ ရှင်းပြထားပြီး လေ့ကျင့်ခန်း ၃၀ ခုကို ထည့်သွင်းထားပါသည်။ မေးခွန်းတစ်ခုချင်းစီအောက်ရှိ <strong>“အဖြေကြည့်မည်”</strong> ကိုနှိပ်၍ အဖြေကို ချက်ချင်းစစ်ဆေးနိုင်ပါသည်။</p><div class="grammar-overview"><div class="grammar-card"><h3>Used to</h3><p>ယခင်က မှန်ကန်ခဲ့ပြီး ယခု မမှန်တော့သော အခြေအနေ သို့မဟုတ် အလေ့အထကို ပြောရန်။</p><div class="grammar-rule">used to + infinitive</div></div><div class="grammar-card"><h3>Be used to</h3><p>တစ်စုံတစ်ရာနှင့် ရင်းနှီးကျွမ်းဝင်နေခြင်း၊ အသားကျနေခြင်းကို ပြောရန်။</p><div class="grammar-rule">be used to + noun / pronoun / V-ing</div></div><div class="grammar-card"><h3>Get used to</h3><p>တစ်စုံတစ်ရာနှင့် တဖြည်းဖြည်း ရင်းနှီးကျွမ်းဝင်လာသည့် လုပ်ငန်းစဉ်ကို ပြောရန်။</p><div class="grammar-rule">get used to + noun / pronoun / V-ing</div></div></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">01</div><div><h2 class="section-title">Used to — အတိတ်က အလေ့အထ / အခြေအနေ</h2><p class="section-description">A past situation or repeated action that is no longer true.</p></div></div><div class="lesson-box"><h3>ဘယ်အချိန်မှာ သုံးမလဲ?</h3><p>“Used to + infinitive” ကို အတိတ်ကာလတွင် ဖြစ်လေ့ရှိခဲ့သော အခြေအနေ သို့မဟုတ် ထပ်ခါတလဲလဲ လုပ်လေ့ရှိခဲ့သော အလုပ်တစ်ခုသည် ယခုအခါ ပြောင်းလဲသွားပြီဖြစ်ကြောင်း ဖော်ပြရန် အသုံးပြုသည်။</p><p class="example"><strong>She used to be a quiet person when she was younger.</strong></p><p class="example example-mm">သူမ ငယ်စဉ်က တိတ်ဆိတ်ငြိမ်သက်သောသူတစ်ယောက် ဖြစ်ခဲ့သည်။</p><p class="example"><strong>I didn’t use to eat vegetables, but now I know the benefits of eating vegetables.</strong></p><p class="example example-mm">အရင်က ကျွန်ုပ်သည် ဟင်းသီးဟင်းရွက်များကို မစားလေ့ရှိခဲ့သော်လည်း ယခုအခါ စားသုံးခြင်း၏ အကျိုးကျေးဇူးများကို သိရှိလာပြီ။</p><p class="example"><strong>Did you use to play here as a child?</strong></p><p class="example example-mm">သင်ကလေးဘဝတုန်းက ဒီမှာ ကစားလေ့ရှိပါသလား။</p><h4>မှတ်ရန်</h4><p>အငြင်းပယ်ဝါကျတွင် <strong>didn’t use to + infinitive</strong>၊ မေးခွန်းတွင် <strong>Did + subject + use to + infinitive?</strong> ဟု သုံးသည်။</p></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">02</div><div><h2 class="section-title">Be used to — အသားကျနေခြင်း / ရင်းနှီးကျွမ်းဝင်နေခြင်း</h2><p class="section-description">Be familiar with or be accustomed to something.</p></div></div><div class="lesson-box"><h3>ဘယ်အချိန်မှာ သုံးမလဲ?</h3><p>“Be used to” သည် တစ်စုံတစ်ရာနှင့် ရင်းနှီးကျွမ်းဝင်နေခြင်း သို့မဟုတ် အသားကျနေခြင်းကို ဖော်ပြသည်။ ၎င်းသည် အတိတ်၊ ပစ္စုပ္ပန် သို့မဟုတ် အနာဂတ်အကြောင်းကို အခြေအနေအလိုက် ဖော်ပြနိုင်သည်။</p><p class="example"><strong>My younger sister is used to doing challenging tasks.</strong></p><p class="example example-mm">ကျွန်ုပ်၏ညီမငယ်သည် ခက်ခဲသောတာဝန်များကို လုပ်ဆောင်ရသည်မှာ အသားကျနေသည်။</p><p class="example"><strong>He wasn’t used to walking so much and his legs hurt after the hike.</strong></p><p class="example example-mm">သူသည် ဤမျှလောက် လမ်းလျှောက်ရသည်မှာ အသားမကျသေးသောကြောင့် တောင်တက်ပြီးနောက် ခြေထောက်များ နာကျင်ခဲ့သည်။</p><p class="example"><strong>I live with my grandparents so I’m used to caring for older people.</strong></p><p class="example example-mm">ကျွန်ုပ်သည် အဘိုးအဘွားများနှင့် အတူနေသောကြောင့် အသက်ကြီးသူများကို ပြုစုစောင့်ရှောက်ရသည်မှာ အသားကျနေသည်။</p><h4>အရေးကြီးသော ပုံစံ</h4><p><strong>be used to + noun / pronoun / V-ing</strong> ဖြစ်သည်။ “to” သည် infinitive marker မဟုတ်ဘဲ preposition ဖြစ်သောကြောင့် verb လိုက်ပါက <strong>-ing form</strong> သုံးရသည်။</p></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">03</div><div><h2 class="section-title">Get used to — တဖြည်းဖြည်း အသားကျလာခြင်း</h2><p class="section-description">The process of becoming familiar with something.</p></div></div><div class="lesson-box"><h3>ဘယ်အချိန်မှာ သုံးမလဲ?</h3><p>“Get used to” ကို တစ်စုံတစ်ရာနှင့် မရင်းနှီးသေးရာမှ တဖြည်းဖြည်း ရင်းနှီးကျွမ်းဝင်လာခြင်း၊ အသားကျလာခြင်း၏ <strong>process</strong> ကို ဖော်ပြရန် အသုံးပြုသည်။</p><p class="example"><strong>I found learning French hard at first but now I’m getting used to it.</strong></p><p class="example example-mm">အစပိုင်းတွင် ပြင်သစ်ဘာသာစကားကို လေ့လာရသည်မှာ ခက်ခဲသော်လည်း ယခုအခါ ၎င်းနှင့် တဖြည်းဖြည်း အသားကျလာပြီ။</p><p class="example"><strong>It took my mother years to get used to living in this city.</strong></p><p class="example example-mm">ကျွန်ုပ်၏မိခင်သည် ဤမြို့တွင် နေထိုင်ရသည်နှင့် အသားကျရန် နှစ်များစွာ ကြာခဲ့သည်။</p><p class="example"><strong>I’m getting used to the noise now.</strong></p><p class="example example-mm">ယခုအခါ ထိုဆူညံသံနှင့် တဖြည်းဖြည်း အသားကျလာနေပြီ။</p><h4>အရေးကြီးသော ပုံစံ</h4><p><strong>get used to + noun / pronoun / V-ing</strong> ဖြစ်သည်။ အနာဂတ်တွင်လည်း <strong>will get used to</strong> ကဲ့သို့ အသုံးပြုနိုင်သည်။</p></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">04</div><div><h2 class="section-title">လွယ်လွယ်မှတ်ရန် — သုံးခုကို မရောထွေးစေဖို့</h2><p class="section-description">A quick comparison before the exercises.</p></div></div><div class="tip-box"><p><strong>USED TO</strong> → “အရင်က ဒီလိုလုပ်လေ့ရှိတယ် / ဒီလိုဖြစ်ခဲ့တယ်” ဆိုပြီး <strong>အခုတော့ ပြောင်းသွားပြီ</strong> ကို အလေးပေး။</p><p><strong>BE USED TO</strong> → “အခု ဒီအရာနဲ့ <strong>အသားကျနေပြီ</strong>” ကို အလေးပေး။</p><p><strong>GET USED TO</strong> → “ဒီအရာနဲ့ <strong>အသားကျလာနေတယ် / အသားကျလာမယ်</strong>” ဆိုတဲ့ process ကို အလေးပေး။</p><p>မှတ်ရန် — <strong>used to + infinitive</strong> ဖြစ်သော်လည်း <strong>be/get used to + noun / pronoun / V-ing</strong> ဖြစ်သည်။</p></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">A</div><div><h2 class="section-title">Exercise A — Used to</h2><p class="section-description">Questions 1–10 • Choose the best answer.</p></div></div><div class="question-card"><span class="question-text"><span class="question-number">1</span>When I was at university, I _____ spend hours in the library, but these days I prefer studying at home.</span><div class="question-text-mm">တက္ကသိုလ်တက်စဉ်က ကျွန်ုပ်သည် စာကြည့်တိုက်တွင် နာရီပေါင်းများစွာ စာလေ့လာလေ့ရှိခဲ့သော်လည်း ယခုအခါ အိမ်တွင် စာလေ့လာရခြင်းကို ပိုနှစ်သက်သည်။</div><div class="options-box"><div class="option-item">a. used to</div><div class="option-item">b. was used to</div><div class="option-item">c. got used to</div><div class="option-item">d. am used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans1',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans1"><div class="answer-label">Answer: <strong>a. used to</strong></div><div class="answer-mm">အတိတ်က ထပ်ခါတလဲလဲ လုပ်လေ့ရှိခဲ့ပြီး ယခုအခါ မလုပ်တော့သော အလေ့အထဖြစ်သောကြောင့် &lt;strong&gt;used to + infinitive&lt;/strong&gt; ကို သုံးသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">2</span>Our old office _____ have only six computers, so employees often had to share them.</span><div class="question-text-mm">ကျွန်ုပ်တို့၏ ရုံးဟောင်းတွင် ကွန်ပျူတာခြောက်လုံးသာ ရှိလေ့ရှိသောကြောင့် ဝန်ထမ်းများသည် မကြာခဏ အတူတူမျှဝေသုံးစွဲခဲ့ရသည်။</div><div class="options-box"><div class="option-item">a. was used to</div><div class="option-item">b. used to</div><div class="option-item">c. got used to</div><div class="option-item">d. is used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans2',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans2"><div class="answer-label">Answer: <strong>b. used to</strong></div><div class="answer-mm">ယခင်အခြေအနေတစ်ခုသည် ယခုအခါ ပြောင်းလဲသွားပြီဖြစ်သောကြောင့် &lt;strong&gt;used to + infinitive&lt;/strong&gt; ကို သုံးသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">3</span>I didn’t _____ enjoy public speaking, but my job has forced me to become more confident.</span><div class="question-text-mm">ကျွန်ုပ်သည် ယခင်က လူအများရှေ့ စကားပြောရခြင်းကို မနှစ်သက်လေ့ရှိခဲ့သော်လည်း အလုပ်ကြောင့် ယုံကြည်မှုပိုရှိလာရန် လိုအပ်လာခဲ့သည်။</div><div class="options-box"><div class="option-item">a. used to</div><div class="option-item">b. use to</div><div class="option-item">c. be used to</div><div class="option-item">d. get used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans3',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans3"><div class="answer-label">Answer: <strong>b. use to</strong></div><div class="answer-mm">&lt;strong&gt;didn’t&lt;/strong&gt; နောက်တွင် &lt;strong&gt;use to + infinitive&lt;/strong&gt; ကို သုံးရသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">4</span>_____ you _____ to living in a crowded city before you moved to Yangon?</span><div class="question-text-mm">ရန်ကုန်သို့ မပြောင်းရွှေ့မီ လူစည်ကားသောမြို့တွင် နေထိုင်ရခြင်းနှင့် သင် ယခင်က အသားကျခဲ့ပါသလား။</div><div class="options-box"><div class="option-item">a. Did / use</div><div class="option-item">b. Were / used</div><div class="option-item">c. Did / used</div><div class="option-item">d. Are / use</div></div><button class="btn-reveal" onclick="toggleAnswer('ans4',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans4"><div class="answer-label">Answer: <strong>b. Were / used</strong></div><div class="answer-mm">ဤဝါကျတွင် &lt;strong&gt;be used to + noun / V-ing&lt;/strong&gt; ဖြင့် ယခင်အခြေအနေတွင် အသားကျနေမှုကို မေးထားသောကြောင့် &lt;strong&gt;Were / used&lt;/strong&gt; ဖြစ်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">5</span>My father _____ drive to work every morning, but he now takes the train because of the traffic.</span><div class="question-text-mm">ကျွန်ုပ်၏ဖခင်သည် ယခင်က မနက်တိုင်း အလုပ်သို့ ကားမောင်းသွားလေ့ရှိခဲ့သော်လည်း ယခုအခါ ယာဉ်ကြောပိတ်ဆို့မှုကြောင့် ရထားစီးသည်။</div><div class="options-box"><div class="option-item">a. was used to</div><div class="option-item">b. used to</div><div class="option-item">c. got used to</div><div class="option-item">d. is getting used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans5',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans5"><div class="answer-label">Answer: <strong>b. used to</strong></div><div class="answer-mm">ယခင်က ပုံမှန်လုပ်လေ့ရှိပြီး ယခု မလုပ်တော့သော အလေ့အထကို &lt;strong&gt;used to + infinitive&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">6</span>Did your brother _____ collect stamps when he was at school?</span><div class="question-text-mm">သင့်အစ်ကို/ညီသည် ကျောင်းတက်စဉ်က တံဆိပ်ခေါင်းများ စုဆောင်းလေ့ရှိခဲ့ပါသလား။</div><div class="options-box"><div class="option-item">a. used to</div><div class="option-item">b. use to</div><div class="option-item">c. be used to</div><div class="option-item">d. got used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans6',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans6"><div class="answer-label">Answer: <strong>b. use to</strong></div><div class="answer-mm">&lt;strong&gt;Did&lt;/strong&gt; ပါသော မေးခွန်းတွင် &lt;strong&gt;use to + infinitive&lt;/strong&gt; ကို သုံးရသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">7</span>There _____ be a small market here, but it was replaced by a shopping centre last year.</span><div class="question-text-mm">ဒီနေရာတွင် ယခင်က ဈေးငယ်တစ်ခု ရှိခဲ့သော်လည်း ယမန်နှစ်က ဈေးဝယ်စင်တာတစ်ခုဖြင့် အစားထိုးလိုက်သည်။</div><div class="options-box"><div class="option-item">a. is used to</div><div class="option-item">b. used to</div><div class="option-item">c. gets used to</div><div class="option-item">d. was used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans7',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans7"><div class="answer-label">Answer: <strong>b. used to</strong></div><div class="answer-mm">ယခင်က ရှိခဲ့သော်လည်း ယခုမရှိတော့သော အခြေအနေကို &lt;strong&gt;used to + infinitive&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">8</span>Which sentence correctly describes a past habit that has changed?</span><div class="question-text-mm">ပြောင်းလဲသွားပြီဖြစ်သော အတိတ်က အလေ့အထကို မှန်ကန်စွာ ဖော်ပြထားသော ဝါကျမှာ မည်သည့်ဝါကျဖြစ်သနည်း။</div><div class="options-box"><div class="option-item">a. I am used to walk to school.</div><div class="option-item">b. I used to walk to school.</div><div class="option-item">c. I got used to walk to school.</div><div class="option-item">d. I was used to walk to school.</div></div><button class="btn-reveal" onclick="toggleAnswer('ans8',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans8"><div class="answer-label">Answer: <strong>b. I used to walk to school.</strong></div><div class="answer-mm">ပြောင်းလဲသွားပြီဖြစ်သော အတိတ်က အလေ့အထကို &lt;strong&gt;used to + infinitive&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">9</span>We _____ not have reliable internet at home, so online learning was difficult for us.</span><div class="question-text-mm">ကျွန်ုပ်တို့အိမ်တွင် ယခင်က ယုံကြည်စိတ်ချရသော အင်တာနက်မရှိခဲ့သောကြောင့် အွန်လိုင်းမှ သင်ယူခြင်းသည် ကျွန်ုပ်တို့အတွက် ခက်ခဲခဲ့သည်။</div><div class="options-box"><div class="option-item">a. didn't use to</div><div class="option-item">b. weren't used to</div><div class="option-item">c. didn't used to</div><div class="option-item">d. didn't get used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans9',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans9"><div class="answer-label">Answer: <strong>a. didn't use to</strong></div><div class="answer-mm">အတိတ်က အခြေအနေမရှိခဲ့ကြောင်း ဖော်ပြရာတွင် &lt;strong&gt;didn't use to + infinitive&lt;/strong&gt; ကို သုံးရသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">10</span>After the company introduced flexible working hours, employees no longer _____ arrive before 7 a.m.</span><div class="question-text-mm">ကုမ္ပဏီက အလုပ်ချိန်ပြောင်းလွယ်ပြင်လွယ်စနစ်ကို စတင်ပြီးနောက် ဝန်ထမ်းများသည် မနက် ၇ နာရီမတိုင်မီ အလုပ်သို့ ရောက်လာလေ့မရှိတော့ပါ။</div><div class="options-box"><div class="option-item">a. used to</div><div class="option-item">b. were used to</div><div class="option-item">c. got used to</div><div class="option-item">d. are used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans10',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans10"><div class="answer-label">Answer: <strong>a. used to</strong></div><div class="answer-mm">ယခင်က ပုံမှန်ဖြစ်ခဲ့သော လုပ်ဆောင်ချက်ကို ရည်ညွှန်းထားပြီး ယခု မဖြစ်တော့သည့်အတွက် &lt;strong&gt;used to&lt;/strong&gt; ကို သုံးရသည်။</div></div></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">B</div><div><h2 class="section-title">Exercise B — Be used to</h2><p class="section-description">Questions 11–20 • Choose the best answer.</p></div></div><div class="question-card"><span class="question-text"><span class="question-number">11</span>After working night shifts for several months, the nurses are used to _____ during the day.</span><div class="question-text-mm">လပေါင်းများစွာ ညပိုင်းအလုပ်ချိန်များ လုပ်ပြီးနောက် သူနာပြုများသည် နေ့ဘက်တွင် အိပ်ရခြင်းနှင့် အသားကျနေကြပြီ။</div><div class="options-box"><div class="option-item">a. sleep</div><div class="option-item">b. sleeping</div><div class="option-item">c. slept</div><div class="option-item">d. to sleep</div></div><button class="btn-reveal" onclick="toggleAnswer('ans11',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans11"><div class="answer-label">Answer: <strong>b. sleeping</strong></div><div class="answer-mm">&lt;strong&gt;be used to&lt;/strong&gt; နောက်တွင် လုပ်ရပ်ကို အရာတစ်ခုအဖြစ် ရည်ညွှန်းသော &lt;strong&gt;V-ing&lt;/strong&gt; ပုံစံ လိုက်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">12</span>I have lived near the airport for years, so I’m used to _____ aircraft overhead.</span><div class="question-text-mm">ကျွန်ုပ်သည် လေဆိပ်အနီးတွင် နှစ်ပေါင်းများစွာ နေထိုင်ခဲ့သောကြောင့် အပေါ်ဘက်မှ လေယာဉ်များ ပျံသန်းသွားသံကို ကြားရခြင်းနှင့် အသားကျနေပြီ။</div><div class="options-box"><div class="option-item">a. hear</div><div class="option-item">b. hearing</div><div class="option-item">c. heard</div><div class="option-item">d. to hear</div></div><button class="btn-reveal" onclick="toggleAnswer('ans12',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans12"><div class="answer-label">Answer: <strong>b. hearing</strong></div><div class="answer-mm">လက်ရှိ အသားကျနေမှုကို ဖော်ပြသော &lt;strong&gt;am used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;V-ing&lt;/strong&gt; လိုက်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">13</span>Our new manager wasn’t used to _____ such a large team, so the first few weeks were challenging.</span><div class="question-text-mm">ကျွန်ုပ်တို့၏ မန်နေဂျာအသစ်သည် ထိုမျှကြီးမားသောအဖွဲ့ကို စီမံခန့်ခွဲရခြင်းနှင့် အသားမကျသေးသောကြောင့် ပထမအပတ်အနည်းငယ်မှာ စိန်ခေါ်မှုများခဲ့သည်။</div><div class="options-box"><div class="option-item">a. manage</div><div class="option-item">b. managing</div><div class="option-item">c. managed</div><div class="option-item">d. to manage</div></div><button class="btn-reveal" onclick="toggleAnswer('ans13',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans13"><div class="answer-label">Answer: <strong>b. managing</strong></div><div class="answer-mm">&lt;strong&gt;wasn’t used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;managing&lt;/strong&gt; ကဲ့သို့ V-ing ပုံစံ လိုက်ရသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">14</span>Are you used to _____ formal reports in English, or do you still need practice?</span><div class="question-text-mm">အင်္ဂလိပ်ဘာသာဖြင့် တရားဝင်အစီရင်ခံစာများ ရေးသားရခြင်းနှင့် သင် အသားကျနေပြီလား၊ သို့မဟုတ် လေ့ကျင့်ရန် လိုသေးပါသလား။</div><div class="options-box"><div class="option-item">a. write</div><div class="option-item">b. writing</div><div class="option-item">c. wrote</div><div class="option-item">d. to write</div></div><button class="btn-reveal" onclick="toggleAnswer('ans14',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans14"><div class="answer-label">Answer: <strong>b. writing</strong></div><div class="answer-mm">မေးခွန်းဖြစ်သော်လည်း &lt;strong&gt;are used to + V-ing&lt;/strong&gt; ပုံစံကို မပြောင်းလဲဘဲ သုံးရသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">15</span>By the end of the first month, she was already used to _____ with customers from different countries.</span><div class="question-text-mm">ပထမလအကုန်တွင် သူမသည် နိုင်ငံအသီးသီးမှ ဖောက်သည်များနှင့် ဆက်သွယ်အလုပ်လုပ်ရခြင်းကို အသားကျနေပြီဖြစ်သည်။</div><div class="options-box"><div class="option-item">a. deal</div><div class="option-item">b. dealing</div><div class="option-item">c. dealt</div><div class="option-item">d. to deal</div></div><button class="btn-reveal" onclick="toggleAnswer('ans15',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans15"><div class="answer-label">Answer: <strong>b. dealing</strong></div><div class="answer-mm">&lt;strong&gt;was used to&lt;/strong&gt; သည် အသားကျနေသော အခြေအနေကို ဖော်ပြပြီး နောက်တွင် &lt;strong&gt;V-ing&lt;/strong&gt; လိုက်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">16</span>He wasn’t used to _____ responsibility for an entire project when he first became a team leader.</span><div class="question-text-mm">သူသည် အဖွဲ့ခေါင်းဆောင်အသစ်ဖြစ်စတွင် စီမံကိန်းတစ်ခုလုံးအတွက် တာဝန်ယူရခြင်းနှင့် အသားမကျသေးပါ။</div><div class="options-box"><div class="option-item">a. take</div><div class="option-item">b. taking</div><div class="option-item">c. took</div><div class="option-item">d. to take</div></div><button class="btn-reveal" onclick="toggleAnswer('ans16',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans16"><div class="answer-label">Answer: <strong>b. taking</strong></div><div class="answer-mm">&lt;strong&gt;wasn’t used to + V-ing&lt;/strong&gt; သည် အတိတ်တွင် အသားမကျသေးသော အခြေအနေကို ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">17</span>Living with three roommates means I’m used to _____ my belongings with other people.</span><div class="question-text-mm">အခန်းဖော်သုံးယောက်နှင့် အတူနေခြင်းကြောင့် ကျွန်ုပ်၏ပစ္စည်းများကို အခြားသူများနှင့် မျှဝေသုံးစွဲရခြင်းနှင့် အသားကျနေပြီ။</div><div class="options-box"><div class="option-item">a. share</div><div class="option-item">b. sharing</div><div class="option-item">c. shared</div><div class="option-item">d. to share</div></div><button class="btn-reveal" onclick="toggleAnswer('ans17',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans17"><div class="answer-label">Answer: <strong>b. sharing</strong></div><div class="answer-mm">&lt;strong&gt;am used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;sharing&lt;/strong&gt; ကဲ့သို့ V-ing form သုံးသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">18</span>She has worked in customer service for years, so she is used to _____ difficult complaints calmly.</span><div class="question-text-mm">သူမသည် ဖောက်သည်ဝန်ဆောင်မှုလုပ်ငန်းတွင် နှစ်ပေါင်းများစွာ အလုပ်လုပ်ခဲ့သောကြောင့် ခက်ခဲသော တိုင်ကြားချက်များကို တည်ငြိမ်စွာ ကိုင်တွယ်ရခြင်းနှင့် အသားကျနေပြီ။</div><div class="options-box"><div class="option-item">a. handle</div><div class="option-item">b. handling</div><div class="option-item">c. handled</div><div class="option-item">d. to handle</div></div><button class="btn-reveal" onclick="toggleAnswer('ans18',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans18"><div class="answer-label">Answer: <strong>b. handling</strong></div><div class="answer-mm">ရင်းနှီးကျွမ်းဝင်နေမှုကို ဖော်ပြသော &lt;strong&gt;is used to + V-ing&lt;/strong&gt; ဖြစ်သောကြောင့် &lt;strong&gt;handling&lt;/strong&gt; မှန်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">19</span>I’m not used to _____ decisions without discussing them with my colleagues first.</span><div class="question-text-mm">ကျွန်ုပ်သည် လုပ်ဖော်ကိုင်ဖက်များနှင့် အရင်မဆွေးနွေးဘဲ ဆုံးဖြတ်ချက်များကို ကိုယ်တိုင်ချရခြင်းနှင့် အသားမကျသေးပါ။</div><div class="options-box"><div class="option-item">a. make</div><div class="option-item">b. making</div><div class="option-item">c. made</div><div class="option-item">d. to make</div></div><button class="btn-reveal" onclick="toggleAnswer('ans19',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans19"><div class="answer-label">Answer: <strong>b. making</strong></div><div class="answer-mm">&lt;strong&gt;not used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;V-ing&lt;/strong&gt; လိုက်သောကြောင့် &lt;strong&gt;making&lt;/strong&gt; မှန်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">20</span>Even after six months in the city, he still isn’t used to _____ through heavy traffic every morning.</span><div class="question-text-mm">မြို့တွင် ခြောက်လကြာနေထိုင်ပြီးသည့်တိုင် သူသည် မနက်တိုင်း ယာဉ်ကြောပိတ်ဆို့မှုထဲတွင် မောင်းနှင်သွားလာရခြင်းနှင့် မအသားကျသေးပါ။</div><div class="options-box"><div class="option-item">a. drive</div><div class="option-item">b. driving</div><div class="option-item">c. drove</div><div class="option-item">d. to drive</div></div><button class="btn-reveal" onclick="toggleAnswer('ans20',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans20"><div class="answer-label">Answer: <strong>b. driving</strong></div><div class="answer-mm">&lt;strong&gt;isn’t used to&lt;/strong&gt; နောက်တွင် လုပ်ရပ်ကို ရည်ညွှန်းသည့် &lt;strong&gt;driving&lt;/strong&gt; ကို သုံးရသည်။</div></div></div></section>
+<section class="content-card"><div class="section-header"><div class="section-badge">C</div><div><h2 class="section-title">Exercise C — Get used to &amp; Mixed Review</h2><p class="section-description">Used to • Be used to • Get used to — Intermediate practice with context, meaning and form.</p></div></div><div class="question-card"><span class="question-text"><span class="question-number">21</span>When I first moved to the village, I found the quiet nights strange, but I’m gradually getting used to _____.</span><div class="question-text-mm">ကျွန်ုပ် ရွာသို့ ပထမဆုံးပြောင်းရွှေ့စဉ် ညများတိတ်ဆိတ်နေခြင်းကို ထူးဆန်းသည်ဟု ခံစားခဲ့ရသော်လည်း ယခု တဖြည်းဖြည်း အသားကျလာနေပြီ။</div><div class="options-box"><div class="option-item">a. it</div><div class="option-item">b. use it</div><div class="option-item">c. used it</div><div class="option-item">d. to it</div></div><button class="btn-reveal" onclick="toggleAnswer('ans21',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans21"><div class="answer-label">Answer: <strong>a. it</strong></div><div class="answer-mm">&lt;strong&gt;get used to&lt;/strong&gt; နောက်တွင် noun/pronoun လိုက်နိုင်သောကြောင့် ဤနေရာတွင် &lt;strong&gt;it&lt;/strong&gt; မှန်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">22</span>The students found the new timetable confusing at first, but they are slowly getting used to _____.</span><div class="question-text-mm">ကျောင်းသားများသည် အချိန်ဇယားအသစ်ကို အစပိုင်းတွင် ရှုပ်ထွေးသည်ဟု ခံစားခဲ့ကြသော်လည်း ယခု တဖြည်းဖြည်း အသားကျလာကြသည်။</div><div class="options-box"><div class="option-item">a. it</div><div class="option-item">b. use it</div><div class="option-item">c. used it</div><div class="option-item">d. to it</div></div><button class="btn-reveal" onclick="toggleAnswer('ans22',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans22"><div class="answer-label">Answer: <strong>a. it</strong></div><div class="answer-mm">&lt;strong&gt;getting used to&lt;/strong&gt; နောက်တွင် အရာတစ်ခုကို ရည်ညွှန်းသည့် pronoun &lt;strong&gt;it&lt;/strong&gt; လိုက်နိုင်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">23</span>It took my sister several weeks to get used to _____ in front of a large audience.</span><div class="question-text-mm">ကျွန်ုပ်၏ညီမ/အစ်မသည် လူပရိသတ်အများအပြားရှေ့တွင် စကားပြောရခြင်းနှင့် အသားကျရန် ရက်သတ္တပတ်များစွာ ကြာခဲ့သည်။</div><div class="options-box"><div class="option-item">a. speak</div><div class="option-item">b. speaking</div><div class="option-item">c. spoke</div><div class="option-item">d. to speak</div></div><button class="btn-reveal" onclick="toggleAnswer('ans23',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans23"><div class="answer-label">Answer: <strong>b. speaking</strong></div><div class="answer-mm">အသားကျလာသည့် လုပ်ငန်းစဉ်ကို ဖော်ပြသော &lt;strong&gt;get used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;V-ing&lt;/strong&gt; လိုက်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">24</span>Our team will need some time to get used to _____ the new software system.</span><div class="question-text-mm">ကျွန်ုပ်တို့အဖွဲ့သည် ဆော့ဖ်ဝဲစနစ်အသစ်ကို အသုံးပြုရခြင်းနှင့် အသားကျရန် အချိန်အနည်းငယ် လိုအပ်မည်။</div><div class="options-box"><div class="option-item">a. operate</div><div class="option-item">b. operating</div><div class="option-item">c. operated</div><div class="option-item">d. to operate</div></div><button class="btn-reveal" onclick="toggleAnswer('ans24',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans24"><div class="answer-label">Answer: <strong>b. operating</strong></div><div class="answer-mm">&lt;strong&gt;get used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;operating&lt;/strong&gt; ကဲ့သို့ V-ing form သုံးရသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">25</span>At first, the child refused to sleep alone, but she eventually got used to _____.</span><div class="question-text-mm">အစပိုင်းတွင် ကလေးသည် တစ်ယောက်တည်း အိပ်ရန် ငြင်းဆန်ခဲ့သော်လည်း နောက်ဆုံးတွင် တစ်ယောက်တည်း အိပ်ရခြင်းနှင့် အသားကျသွားသည်။</div><div class="options-box"><div class="option-item">a. it</div><div class="option-item">b. use it</div><div class="option-item">c. used it</div><div class="option-item">d. to it</div></div><button class="btn-reveal" onclick="toggleAnswer('ans25',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans25"><div class="answer-label">Answer: <strong>a. it</strong></div><div class="answer-mm">ယခင်က မရင်းနှီးသေးသည့် အခြေအနေတစ်ခုနှင့် နောက်ဆုံး အသားကျသွားခြင်းကို &lt;strong&gt;got used to it&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">26</span>I’m sure you’ll get used to _____ the early bus once you establish a regular routine.</span><div class="question-text-mm">ပုံမှန်လုပ်ရိုးလုပ်စဉ်တစ်ခု ချမှတ်ပြီးသွားလျှင် သင် မနက်အစောပိုင်းဘတ်စ်ကား စီးရခြင်းနှင့် အသားကျလာမည်မှာ သေချာသည်။</div><div class="options-box"><div class="option-item">a. catch</div><div class="option-item">b. catching</div><div class="option-item">c. caught</div><div class="option-item">d. to catch</div></div><button class="btn-reveal" onclick="toggleAnswer('ans26',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans26"><div class="answer-label">Answer: <strong>b. catching</strong></div><div class="answer-mm">အနာဂတ်တွင် အသားကျလာမည့် process ကို &lt;strong&gt;get used to + V-ing&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">27</span>Although the job was stressful at first, she eventually got used to _____ under pressure.</span><div class="question-text-mm">အလုပ်သည် အစပိုင်းတွင် စိတ်ဖိစီးစရာကောင်းသော်လည်း နောက်ဆုံးတွင် သူမသည် ဖိအားအောက်တွင် အလုပ်လုပ်ရခြင်းနှင့် အသားကျသွားသည်။</div><div class="options-box"><div class="option-item">a. work</div><div class="option-item">b. working</div><div class="option-item">c. worked</div><div class="option-item">d. to work</div></div><button class="btn-reveal" onclick="toggleAnswer('ans27',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans27"><div class="answer-label">Answer: <strong>b. working</strong></div><div class="answer-mm">&lt;strong&gt;got used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;working&lt;/strong&gt; လိုက်သောကြောင့် မှန်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">28</span>After moving from a quiet village, my cousins are still getting used to _____ so many people around them.</span><div class="question-text-mm">တိတ်ဆိတ်သောရွာမှ ပြောင်းရွှေ့လာပြီးနောက် ကျွန်ုပ်၏ဆွေမျိုးများသည် သူတို့ပတ်ဝန်းကျင်တွင် လူအများအပြား ရှိနေခြင်းနှင့် ယခုထိ အသားကျလာဆဲဖြစ်သည်။</div><div class="options-box"><div class="option-item">a. have</div><div class="option-item">b. having</div><div class="option-item">c. had</div><div class="option-item">d. to have</div></div><button class="btn-reveal" onclick="toggleAnswer('ans28',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans28"><div class="answer-label">Answer: <strong>b. having</strong></div><div class="answer-mm">လက်ရှိ ဖြစ်ပေါ်နေဆဲ အသားကျလာမှုကို &lt;strong&gt;are getting used to + V-ing&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">29</span>Which sentence is grammatically correct?</span><div class="question-text-mm">အောက်ပါဝါကျများအနက် သဒ္ဒါအရ မှန်ကန်သော ဝါကျကို ရွေးပါ။</div><div class="options-box"><div class="option-item">a. I am used to work late on Fridays.</div><div class="option-item">b. I used to working late on Fridays.</div><div class="option-item">c. I am getting used to working late on Fridays.</div><div class="option-item">d. I got used to work late on Fridays.</div></div><button class="btn-reveal" onclick="toggleAnswer('ans29',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans29"><div class="answer-label">Answer: <strong>c. I am getting used to working late on Fridays.</strong></div><div class="answer-mm">&lt;strong&gt;be/get used to&lt;/strong&gt; နောက်တွင် &lt;strong&gt;V-ing&lt;/strong&gt; လိုက်ရသောကြောင့် &lt;strong&gt;am getting used to working&lt;/strong&gt; သည် မှန်ကန်သည်။</div></div></div><div class="question-card"><span class="question-text"><span class="question-number">30</span>She used to hate speaking English, but after joining the debate club, she _____ expressing her ideas in front of others.</span><div class="question-text-mm">သူမသည် ယခင်က အင်္ဂလိပ်စကားပြောရခြင်းကို မနှစ်သက်ခဲ့သော်လည်း Debate Club ဝင်ပြီးနောက် အခြားသူများရှေ့တွင် မိမိအတွေးအမြင်များကို ဖော်ပြရခြင်းနှင့် အသားကျလာခဲ့သည်။</div><div class="options-box"><div class="option-item">a. is used to</div><div class="option-item">b. got used to</div><div class="option-item">c. used to</div><div class="option-item">d. was used to</div></div><button class="btn-reveal" onclick="toggleAnswer('ans30',this)">အဖြေကြည့်မည်</button><div class="answer-drawer" id="ans30"><div class="answer-label">Answer: <strong>b. got used to</strong></div><div class="answer-mm">အတိတ်က မရင်းနှီးသေးရာမှ တဖြည်းဖြည်း အသားကျလာပြီး အဆုံးတွင် အသားကျသွားခြင်းကို &lt;strong&gt;got used to + V-ing&lt;/strong&gt; ဖြင့် ဖော်ပြသည်။</div></div></div></section>
+<section class="content-card next-card"><h2>Grammar Practice ပြီးဆုံးပါပြီ ✦</h2><p>မေးခွန်း ၃၀ ခုကို လေ့ကျင့်ပြီးနောက် Comprehension သို့ ပြန်သွားကာ Unit 1 Learning Menu မှ အခြားအပိုင်းများကို ဆက်လက်လေ့လာနိုင်ပါတယ်။</p><a class="next-btn" href="comprehension1.html">← Comprehension သို့ ပြန်သွားမည်</a></section>
+</main><footer class="footer">Grade-12 English Learning Hub • Unit 1 • Additional Grammar Exercises • Used to • Be used to • Get used to</footer>
+<script>
+(function(){const root=document.documentElement,toggle=document.getElementById('themeToggle'),icon=document.getElementById('themeIcon');function cur(){return root.getAttribute('data-theme')==='dark'?'dark':'light'}function render(){const d=cur()==='dark';icon.textContent=d?'🌙':'☀️';toggle.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode')}render();toggle.addEventListener('click',function(){const n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);localStorage.setItem('theme',n);localStorage.setItem('siteTheme',n);localStorage.setItem('g12-theme',n);render()});window.addEventListener('storage',function(e){if(['theme','siteTheme','g12-theme'].includes(e.key)&&e.newValue){root.setAttribute('data-theme',e.newValue==='dark'?'dark':'light');render()}})})();
+(function(){const trigger=document.getElementById('menuTrigger'),menu=document.getElementById('sideMenu'),overlay=document.getElementById('menuOverlay'),close=document.getElementById('closeMenu');function o(){menu.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden'}function c(){menu.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow=''}trigger.addEventListener('click',o);close.addEventListener('click',c);overlay.addEventListener('click',c);document.addEventListener('keydown',e=>{if(e.key==='Escape')c()});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',c))})();
+function toggleAnswer(id,button){const box=document.getElementById(id),show=!box.classList.contains('show');box.classList.toggle('show',show);button.classList.toggle('active',show);button.textContent=show?'အဖြေဖျောက်မည်':'အဖြေကြည့်မည်'}
+</script></body></html>

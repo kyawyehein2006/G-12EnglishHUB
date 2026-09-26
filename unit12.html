@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Grade-12 English Learning Hub — Unit 12 Embracing Sustainability">
+<title>Unit 12 — Embracing Sustainability | Grade-12 English Learning Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf7f1;--surface:#fff;--surface2:#f3faf6;--text:#10291e;--muted:#5c7669;--primary:#159447;--mint:#62e6a0;--deep:#063a28;--line:#d8e9df;--shadow:0 20px 60px rgba(12,75,43,.13);--hero1:#031c14;--hero2:#087347;--gold:#d7f66c}
+html[data-theme="dark"]{--bg:#06140f;--surface:#0c2118;--surface2:#102c20;--text:#e8f8ef;--muted:#a5c1b2;--primary:#4fe18b;--mint:#73f2b0;--deep:#02140d;--line:#244838;--shadow:0 20px 60px rgba(0,0,0,.38);--hero1:#020d09;--hero2:#075033;--gold:#e2ff73}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Padauk",system-ui,sans-serif;line-height:1.7}button,a{font:inherit}a{text-decoration:none;color:inherit}
+.header{height:72px;position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}.brand-mark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--mint));color:#fff;font-size:22px;box-shadow:0 8px 25px rgba(21,148,71,.25)}.brand span em{color:var(--primary);font-style:normal}.header-actions{display:flex;gap:9px}.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);width:42px;height:42px;border-radius:12px;cursor:pointer}.menu-btn{display:none}
+.hero{position:relative;overflow:hidden;min-height:500px;background:linear-gradient(125deg,var(--hero1),var(--hero2) 60%,#1c8f59);color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 74% 30%,rgba(111,255,181,.28),transparent 20%),radial-gradient(circle at 87% 15%,rgba(226,255,115,.2),transparent 16%),radial-gradient(circle at 42% 100%,rgba(55,220,132,.25),transparent 38%)}
+.leaf-pattern{position:absolute;inset:0;opacity:.15;background-image:radial-gradient(circle at 15% 25%,#fff 0 1px,transparent 2px),radial-gradient(circle at 80% 70%,#fff 0 1px,transparent 2px);background-size:38px 38px,53px 53px}
+.hero-inner{max-width:1240px;margin:auto;min-height:500px;padding:65px 34px 42px;position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 15px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(255,255,255,.08);font-weight:800;letter-spacing:.08em}
+.hero h1{font-size:clamp(40px,5.7vw,72px);line-height:1.04;margin:20px 0 15px;letter-spacing:-.045em}.hero h1 span{background:linear-gradient(90deg,#fff,#b8ffca,#e9ff8a);-webkit-background-clip:text;color:transparent}.hero p{font-size:18px;max-width:670px;color:#dcf6e7;margin:0 0 23px}.hero-chips{display:flex;flex-wrap:wrap;gap:10px}.chip{padding:8px 13px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}
+.eco-art{height:350px;position:relative;display:grid;place-items:center}.sun{width:240px;height:240px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#dfff8c 0 5%,transparent 6%),radial-gradient(circle at 65% 65%,#65e89c 0 14%,transparent 15%),linear-gradient(145deg,#7ff2ad,#0c7950 62%,#06422f);box-shadow:0 0 80px rgba(105,247,166,.38),inset -25px -30px 55px rgba(0,0,0,.3);position:relative;overflow:hidden}
+.sun:after{content:"";position:absolute;width:340px;height:125px;border:1px solid rgba(205,255,224,.7);border-radius:50%;transform:rotate(-22deg);left:-48px;top:54px}.tree{position:absolute;bottom:45px;font-size:74px;filter:drop-shadow(0 0 15px rgba(119,255,180,.35))}.eco-orbit{position:absolute;width:340px;height:280px;border:1px dashed rgba(190,255,211,.55);border-radius:50%;transform:rotate(18deg)}.spark{position:absolute;color:#dfff87;font-size:25px}.s1{left:15%;top:18%}.s2{right:12%;top:34%}.s3{left:22%;bottom:15%}
+.content-wrap{max-width:1240px;margin:0 auto;padding:28px 24px 70px;display:grid;grid-template-columns:225px 1fr;gap:24px}.side-menu{position:sticky;top:94px;height:max-content;background:linear-gradient(160deg,#063522,#0a6b43);color:#fff;border-radius:22px;padding:12px;box-shadow:var(--shadow);overflow:hidden}.menu-head{padding:12px 12px 16px;font-weight:900;display:flex;justify-content:space-between;align-items:center;letter-spacing:.08em}.close-menu{display:none;background:none;border:0;color:#fff;font-size:28px}.side-menu a{display:flex;gap:10px;align-items:center;padding:13px 12px;border-radius:13px;margin:4px 0;color:#e0f7ea;border:1px solid transparent}.side-menu a:hover{background:rgba(255,255,255,.08)}.side-menu a.active{background:linear-gradient(90deg,#19a857,#6fe98d);color:#07351f;box-shadow:0 9px 25px rgba(81,235,137,.18);font-weight:800}
+.main{min-width:0}.read-card{background:var(--surface);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.read-head{padding:28px 30px;background:linear-gradient(135deg,var(--surface),var(--surface2));border-bottom:1px solid var(--line)}.kicker{color:var(--primary);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.read-head h2{font-family:Georgia,"Times New Roman",serif;font-size:38px;line-height:1.2;margin:7px 0}.read-head p{margin:0;color:var(--muted)}
+.features{padding:22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-bottom:1px solid var(--line)}.feature-card{display:flex;gap:12px;align-items:flex-start;background:var(--surface2);border:1px solid var(--line);border-radius:18px;padding:15px}.feature-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#ddf8e7,#eaffbd);font-size:21px}.feature-card h3{margin:0 0 2px;font-size:15px}.feature-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.passages{padding:12px 26px 28px}.section-label{margin:18px 0 10px;font-weight:900;color:var(--primary);display:flex;align-items:center;gap:9px}.section-label:after{content:"";height:1px;background:var(--line);flex:1}.paragraph-title{margin:28px 0 4px;color:var(--primary);font-size:13px;letter-spacing:.1em;font-weight:900;text-transform:uppercase}
+.sentence{display:grid;grid-template-columns:40px 1fr;gap:15px;padding:19px 0;border-bottom:1px dashed var(--line)}.num{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--mint));color:#06331f;font-size:11px;font-weight:900}.en{font-size:16px;font-weight:700;line-height:1.75;margin:0 0 8px}.mm{font-family:"Padauk","Myanmar Text",sans-serif;color:var(--muted);font-size:15px;margin:0 0 11px}.vocab{display:flex;flex-wrap:wrap;gap:7px}.word{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:11px}.word b{color:var(--primary)}.word span{color:var(--muted)}
+.focus{margin:0 26px 28px;padding:18px 20px;border-radius:18px;background:linear-gradient(120deg,#063b28,#15945a);color:#fff;display:flex;flex-wrap:wrap;gap:13px;align-items:center}.focus strong{font-size:18px;margin-right:8px}.focus span{padding:5px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;font-size:12px}.footer{text-align:center;color:var(--muted);font-size:12px;padding:25px}
+@media(max-width:900px){.header{padding:0 15px}.menu-btn{display:block}.hero-inner{grid-template-columns:1fr;min-height:auto;padding:48px 22px 35px}.eco-art{height:260px;order:-1}.sun{width:205px;height:205px}.eco-orbit{width:290px;height:220px}.content-wrap{grid-template-columns:1fr;padding:18px 14px 55px}.side-menu{position:fixed;z-index:80;left:14px;top:85px;width:min(310px,calc(100vw - 28px));transform:translateX(-120%);transition:.28s ease;max-height:calc(100vh - 100px);overflow:auto}.side-menu.open{transform:translateX(0)}.close-menu{display:block}.features{grid-template-columns:1fr 1fr}.read-head{padding:24px 20px}.passages{padding:10px 18px 25px}}
+@media(max-width:560px){.brand span{display:none}.hero h1{font-size:40px}.hero p{font-size:15px}.hero-inner{padding-top:35px}.eco-art{height:225px}.sun{width:175px;height:175px}.eco-orbit{width:245px;height:190px}.features{grid-template-columns:1fr;padding:16px}.read-head h2{font-size:30px}.sentence{grid-template-columns:32px 1fr;gap:10px}.num{width:30px;height:30px}.en{font-size:15px}.mm{font-size:14px}.word{font-size:10px}.passages{padding:7px 14px 20px}.focus{margin:0 14px 20px}}
+</style>
+</head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><span class="brand-mark">🌱</span><span>Grade-12 <em>English</em></span></a>
+<div class="header-actions"><button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀︎☾</button></div>
+</header>
+
+<section class="hero">
+<div class="leaf-pattern"></div>
+<div class="hero-inner">
+<div>
+<div class="eyebrow">UNIT 12 · READING PARAGRAPH</div>
+<h1><span>Embracing</span><br>SUSTAINABILITY</h1>
+<p>A path to a greener future — explore how sustainable choices, responsible resource use, and collective action can protect our planet and improve life for generations to come.</p>
+<div class="hero-chips"><span class="chip">🌍 Planet</span><span class="chip">♻️ 3Rs</span><span class="chip">🌱 Sustainability</span><span class="chip">☀️ Renewable</span><span class="chip">💧 Resources</span></div>
+</div>
+<div class="eco-art" aria-hidden="true"><div class="sun"></div><div class="eco-orbit"></div><div class="tree">🌳</div><div class="spark s1">✦</div><div class="spark s2">✧</div><div class="spark s3">✦</div></div>
+</div>
+</section>
+
+<div class="content-wrap">
+<nav class="side-menu" id="sideMenu">
+<div class="menu-head"><span>UNIT 12</span><button class="close-menu" id="closeMenu">×</button></div>
+<a class="active" href="unit12.html">📖 <span>Reading Paragraph</span></a>
+<a href="meaning12.html">🔤 <span>Meaning / Vocabulary</span></a>
+<a href="comprehension12.html">📝 <span>Comprehension</span></a>
+<a href="grammar12.html">Aᴢ <span>Grammar</span></a>
+<a href="listening-speaking12.html">🎧 <span>Listening & Speaking</span></a>
+<a href="writing12.html">✍️ <span>Writing</span></a>
+<a href="beca12.html">🎯 <span>BECA Practice</span></a>
+</nav>
+
+<main class="main">
+<section class="read-card">
+<div class="read-head">
+<div class="kicker">
+    <audio controls preload="metadata"><source src="nn.mp3" type="audio/mpeg"></audio>
+<h3><p>The planet can survive without you<br>
+ကမ္ဘာမြေကြီးက မင်းမရှိဘဲလည်း ရှင်သန်နိုင်ပေမယ့်<br>
+You cannot survive without the planet.<br>
+မင်းကတော့ ကမ္ဘာမြေကြီးမရှိဘဲ ရှင်သန်လို့မရပါဘူး
+</b></p></h3>
+</div> </div>
+<div class="features">
+<div class="feature-card"><div class="feature-icon">🌍</div><div><h3>Planet & Sustainability</h3><p>Protecting the Earth while meeting present and future needs.</p></div></div>
+<div class="feature-card"><div class="feature-icon">♻️</div><div><h3>The Three Rs</h3><p>Reducing, reusing, recycling and responsible waste management.</p></div></div>
+<div class="feature-card"><div class="feature-icon">🌱</div><div><h3>Greener Choices</h3><p>Renewables, eco-friendly practices and lower environmental impact.</p></div></div>
+<div class="feature-card"><div class="feature-icon">💧</div><div><h3>Natural Resources</h3><p>Using essential resources efficiently and responsibly.</p></div></div>
+<div class="feature-card"><div class="feature-icon">🤝</div><div><h3>Collective Action</h3><p>Individuals, communities, businesses and governments all have roles.</p></div></div>
+<div class="feature-card"><div class="feature-icon">✨</div><div><h3>Future Benefits</h3><p>Healthier environments, innovation, jobs and stronger communities.</p></div></div>
+</div><br>
+<audio controls preload="metadata"><source src="12.m4a" type="audio/mpeg"></audio>
+<div class="passages">
+<div class="section-label">📖 Read the passage carefully</div>
+<div class="paragraph-title">Paragraph 1 · Sustainability & Our Planet</div>
+
+<article class="sentence">
+  <div class="num">01</div>
+  <div class="sentence-body">
+    <p class="en">The health of our planet is fundamentally tied to the principle of sustainability. It is essential for humanity to exist in harmony with our environment, ensuring that we do not inflict damage upon it.</p>
+    <p class="mm">ကျွန်ုပ်တို့၏ကမ္ဘာမြေ၏ ကျန်းမာရေးသည် ရေရှည်တည်တံ့ခိုင်မြဲမှု (sustainability) ၏ အခြေခံသဘောတရားနှင့် နက်ရှိုင်းစွာ ဆက်နွှယ်နေသည်။ လူသားများအနေဖြင့် မိမိတို့၏ပတ်ဝန်းကျင်နှင့် သဟဇာတဖြစ်စွာ နေထိုင်ရန်နှင့် ထိုပတ်ဝန်းကျင်ကို ထိခိုက်ပျက်စီးမှု မဖြစ်စေရန်မှာ မရှိမဖြစ်လိုအပ်သည်။</p>
+    <div class="vocab"><span class="word"><b>fundamentally tied to</b><span>အခြေခံအားဖြင့် ဆက်နွှယ်နေသော</span></span><span class="word"><b>sustainability</b><span>ရေရှည်တည်တံ့ခိုင်မြဲမှု</span></span><span class="word"><b>in harmony with</b><span>နှင့် သဟဇာတဖြစ်စွာ</span></span><span class="word"><b>inflict damage</b><span>ထိခိုက်ပျက်စီးစေသည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">02</div>
+  <div class="sentence-body">
+    <p class="en">Sustainability plays a pivotal role to “meet the needs of the present without compromising the ability of future generations to meet their own needs.”</p>
+    <p class="mm">ရေရှည်တည်တံ့ခိုင်မြဲမှုသည် “အနာဂတ်မျိုးဆက်များ၏ မိမိတို့လိုအပ်ချက်များကို ဖြည့်ဆည်းနိုင်စွမ်းကို မထိခိုက်စေဘဲ လက်ရှိမျိုးဆက်၏ လိုအပ်ချက်များကို ဖြည့်ဆည်းပေးရန်” အရေးပါသော အခန်းကဏ္ဍမှ ပါဝင်သည်။</p>
+    <div class="vocab"><span class="word"><b>pivotal role</b><span>အရေးပါသော အခန်းကဏ္ဍ</span></span><span class="word"><b>meet the needs</b><span>လိုအပ်ချက်များကို ဖြည့်ဆည်းသည်</span></span><span class="word"><b>compromise</b><span>ထိခိုက်စေသည်</span></span><span class="word"><b>future generations</b><span>အနာဂတ်မျိုးဆက်များ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">03</div>
+  <div class="sentence-body">
+    <p class="en">The term “needs” encompasses essential resources such as clean and fresh air, safe and uncontaminated water, an ample food supply, and secure housing, which remain inaccessible to billions of individuals worldwide.</p>
+    <p class="mm">“လိုအပ်ချက်” ဟူသော ဝေါဟာရတွင် သန့်ရှင်းလတ်ဆတ်သောလေ၊ ဘေးကင်းပြီး ညစ်ညမ်းမှုမရှိသောရေ၊ လုံလောက်သောအစားအစာနှင့် လုံခြုံသောနေအိမ်ကဲ့သို့သော မရှိမဖြစ်အရင်းအမြစ်များ ပါဝင်ပြီး ထိုအရာများကို ကမ္ဘာတစ်ဝန်းရှိ လူသန်းပေါင်းများစွာက ယနေ့တိုင် လက်လှမ်းမမီသေးပေ။</p>
+    <div class="vocab"><span class="word"><b>encompass</b><span>အတွင်းတွင် ပါဝင်သည်</span></span><span class="word"><b>essential resources</b><span>မရှိမဖြစ်အရင်းအမြစ်များ</span></span><span class="word"><b>uncontaminated</b><span>ညစ်ညမ်းမှုမရှိသော</span></span><span class="word"><b>ample</b><span>လုံလောက်သော</span></span><span class="word"><b>inaccessible</b><span>လက်လှမ်းမမီသော</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">04</div>
+  <div class="sentence-body">
+    <p class="en">Neglecting the health of our planet, its climate, and its ecosystems will lead to severe consequences for our society: the functioning of societies will be jeopardized, life will become increasingly difficult, and our overall well-being will be adversely impacted.</p>
+    <p class="mm">ကျွန်ုပ်တို့၏ကမ္ဘာမြေ၊ ၎င်း၏ရာသီဥတုနှင့် ဂေဟစနစ်များ၏ ကျန်းမာရေးကို လျစ်လျူရှုပါက လူ့အဖွဲ့အစည်းအတွက် ပြင်းထန်သောအကျိုးဆက်များ ဖြစ်ပေါ်လာမည်။ လူ့အဖွဲ့အစည်းများ၏ လည်ပတ်လုပ်ဆောင်မှုသည် အန္တရာယ်ကျရောက်မည်၊ ဘဝနေထိုင်မှု ပိုမိုခက်ခဲလာမည်နှင့် ကျွန်ုပ်တို့၏ အလုံးစုံကောင်းကျိုးသည် ဆိုးကျိုးသက်ရောက်မှုခံရမည်။</p>
+    <div class="vocab"><span class="word"><b>neglect</b><span>လျစ်လျူရှုသည်</span></span><span class="word"><b>ecosystem</b><span>ဂေဟစနစ်</span></span><span class="word"><b>severe consequences</b><span>ပြင်းထန်သောအကျိုးဆက်များ</span></span><span class="word"><b>jeopardize</b><span>အန္တရာယ်ကျရောက်စေသည်</span></span><span class="word"><b>well-being</b><span>ကောင်းကျိုးချမ်းသာမှု</span></span></div>
+  </div>
+</article>
+<div class="paragraph-title">Paragraph 2 · Overpopulation & Resources</div>
+
+<article class="sentence">
+  <div class="num">05</div>
+  <div class="sentence-body">
+    <p class="en">The primary factor influencing the stability of our planet is overpopulation.</p>
+    <p class="mm">ကျွန်ုပ်တို့၏ကမ္ဘာမြေ၏ တည်ငြိမ်မှုကို အဓိကသက်ရောက်စေသောအချက်မှာ လူဦးရေထူထပ်လွန်းခြင်း (overpopulation) ဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>primary factor</b><span>အဓိကအချက်</span></span><span class="word"><b>influence</b><span>သက်ရောက်စေသည်</span></span><span class="word"><b>stability</b><span>တည်ငြိမ်မှု</span></span><span class="word"><b>overpopulation</b><span>လူဦးရေထူထပ်လွန်းခြင်း</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">06</div>
+  <div class="sentence-body">
+    <p class="en">According to demographic studies, the global population reached seven billion by the end of 2011, with forecast indicating that it could rise to ten billion by the end of the century, despite the Earth’s constant size.</p>
+    <p class="mm">လူဦးရေဆိုင်ရာလေ့လာချက်များအရ ကမ္ဘာ့လူဦးရေသည် ၂၀၁၁ ခုနှစ်အကုန်တွင် လူခုနစ်ဘီလီယံအထိ ရောက်ရှိခဲ့ပြီး၊ ကမ္ဘာမြေ၏အရွယ်အစားမှာ မပြောင်းလဲသော်လည်း ရာစုနှစ်ကုန်တွင် လူဆယ်ဘီလီယံအထိ တိုးလာနိုင်ကြောင်း ခန့်မှန်းထားသည်။</p>
+    <div class="vocab"><span class="word"><b>demographic studies</b><span>လူဦးရေဆိုင်ရာလေ့လာချက်များ</span></span><span class="word"><b>global population</b><span>ကမ္ဘာ့လူဦးရေ</span></span><span class="word"><b>forecast</b><span>ခန့်မှန်းချက်</span></span><span class="word"><b>rise to</b><span>အထိ တိုးလာသည်</span></span><span class="word"><b>constant size</b><span>မပြောင်းလဲသောအရွယ်အစား</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">07</div>
+  <div class="sentence-body">
+    <p class="en">A rapid increase in population levels poses significant threats to the natural environment, as it results in a scarcity of space to accommodate the growing populace.</p>
+    <p class="mm">လူဦးရေပမာဏ လျင်မြန်စွာတိုးလာခြင်းသည် သဘာဝပတ်ဝန်းကျင်အတွက် သိသာထင်ရှားသော အန္တရာယ်များ ဖြစ်စေသည်၊ အကြောင်းမှာ တိုးပွားလာသော လူဦးရေကို နေရာချပေးရန် နေရာရှားပါးလာစေသောကြောင့် ဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>rapid increase</b><span>လျင်မြန်စွာတိုးလာခြင်း</span></span><span class="word"><b>pose threats</b><span>အန္တရာယ်ဖြစ်စေသည်</span></span><span class="word"><b>scarcity</b><span>ရှားပါးမှု</span></span><span class="word"><b>accommodate</b><span>နေရာချပေးသည်</span></span><span class="word"><b>populace</b><span>လူဦးရေ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">08</div>
+  <div class="sentence-body">
+    <p class="en">Additionally, it can lead to the depletion of the earth’s limited resources for sustaining such growth.</p>
+    <p class="mm">ထို့အပြင် ထိုသို့သောတိုးတက်မှုကို ဆက်လက်ထိန်းသိမ်းရန် ကမ္ဘာမြေ၏ ကန့်သတ်ထားသောအရင်းအမြစ်များ ကုန်ခမ်းသွားစေနိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>additionally</b><span>ထို့အပြင်</span></span><span class="word"><b>depletion</b><span>ကုန်ခမ်းခြင်း</span></span><span class="word"><b>limited resources</b><span>ကန့်သတ်ထားသောအရင်းအမြစ်များ</span></span><span class="word"><b>sustain</b><span>ဆက်လက်ထိန်းသိမ်းသည်</span></span></div>
+  </div>
+</article>
+<div class="paragraph-title">Paragraph 3 · Taking Responsibility</div>
+
+<article class="sentence">
+  <div class="num">09</div>
+  <div class="sentence-body">
+    <p class="en">Consequences are endless: the consumption of natural resources, including forests and marine ecosystems, escalates; the level of carbon emissions from human activities heightens; and the Earth’s ecological balance is disrupted.</p>
+    <p class="mm">အကျိုးဆက်များမှာ အဆုံးမရှိပေ။ သစ်တောများနှင့် ပင်လယ်ဂေဟစနစ်များအပါအဝင် သဘာဝအရင်းအမြစ်များ သုံးစွဲမှုမြင့်တက်လာသည်၊ လူသားတို့၏လုပ်ဆောင်မှုများမှ ကာဗွန်ထုတ်လွှတ်မှုအဆင့် မြင့်တက်လာသည်နှင့် ကမ္ဘာမြေ၏ ဂေဟဗေဒဟန်ချက်ညီမှု ပျက်ယွင်းလာသည်။</p>
+    <div class="vocab"><span class="word"><b>escalate</b><span>မြင့်တက်လာသည်</span></span><span class="word"><b>carbon emissions</b><span>ကာဗွန်ထုတ်လွှတ်မှု</span></span><span class="word"><b>ecological balance</b><span>ဂေဟဗေဒဟန်ချက်ညီမှု</span></span><span class="word"><b>disrupt</b><span>ပျက်ယွင်းစေသည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">10</div>
+  <div class="sentence-body">
+    <p class="en">Mitigating population growth and utilizing natural resources judiciously are essential strategies for minimizing our impact on the planet.</p>
+    <p class="mm">လူဦးရေတိုးပွားမှုကို လျှော့ချထိန်းညှိခြင်းနှင့် သဘာဝအရင်းအမြစ်များကို ဆင်ခြင်တုံတရားဖြင့် အသုံးချခြင်းတို့သည် ကမ္ဘာမြေပေါ် ကျွန်ုပ်တို့၏သက်ရောက်မှုကို အနည်းဆုံးဖြစ်စေရန် မရှိမဖြစ်လိုအပ်သော မဟာဗျူဟာများဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>mitigate</b><span>လျှော့ချထိန်းညှိသည်</span></span><span class="word"><b>utilize</b><span>အသုံးချသည်</span></span><span class="word"><b>judiciously</b><span>ဆင်ခြင်တုံတရားဖြင့်</span></span><span class="word"><b>minimize</b><span>အနည်းဆုံးဖြစ်စေသည်</span></span><span class="word"><b>impact</b><span>သက်ရောက်မှု</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">11</div>
+  <div class="sentence-body">
+    <p class="en">We possess the ability to initiate change by educating people extensively on global warming and by stepping into a leadership role as an advocate for environmental issues.</p>
+    <p class="mm">ကမ္ဘာကြီးပူနွေးလာမှုအကြောင်း လူများကို ကျယ်ကျယ်ပြန့်ပြန့် ပညာပေးခြင်းနှင့် ပတ်ဝန်းကျင်ဆိုင်ရာကိစ္စရပ်များအတွက် ထောက်ခံအားပေးသူအဖြစ် ခေါင်းဆောင်မှုအခန်းကဏ္ဍတွင် ပါဝင်ခြင်းတို့ဖြင့် အပြောင်းအလဲကို စတင်ဖန်တီးနိုင်စွမ်း ကျွန်ုပ်တို့တွင် ရှိသည်။</p>
+    <div class="vocab"><span class="word"><b>initiate change</b><span>အပြောင်းအလဲကို စတင်ဖန်တီးသည်</span></span><span class="word"><b>extensively</b><span>ကျယ်ကျယ်ပြန့်ပြန့်</span></span><span class="word"><b>global warming</b><span>ကမ္ဘာကြီးပူနွေးလာမှု</span></span><span class="word"><b>leadership role</b><span>ခေါင်းဆောင်မှုအခန်းကဏ္ဍ</span></span><span class="word"><b>advocate</b><span>ထောက်ခံအားပေးသူ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">12</div>
+  <div class="sentence-body">
+    <p class="en">Indeed, it is high time for us to make a radical change to preserve our world.</p>
+    <p class="mm">အမှန်တကယ်ပင် ကျွန်ုပ်တို့၏ကမ္ဘာကို ထိန်းသိမ်းရန် အခြေခံကျသော အပြောင်းအလဲတစ်ရပ်ကို ပြုလုပ်ရန် အချိန်ကျရောက်နေပြီဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>indeed</b><span>အမှန်တကယ်ပင်</span></span><span class="word"><b>high time</b><span>အချိန်ကျရောက်ပြီ</span></span><span class="word"><b>radical change</b><span>အခြေခံကျသောအပြောင်းအလဲ</span></span><span class="word"><b>preserve</b><span>ထိန်းသိမ်းသည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">13</div>
+  <div class="sentence-body">
+    <p class="en">It is responsible for not just a particular group or community or country, but each and every individual from all walks of life on earth as a whole – starting from individuals up to businesses, nonprofit institutions and finally governments.</p>
+    <p class="mm">၎င်းသည် သီးခြားအဖွဲ့၊ အသိုင်းအဝိုင်း သို့မဟုတ် နိုင်ငံတစ်နိုင်ငံတည်း၏ တာဝန်မဟုတ်ဘဲ ကမ္ဘာပေါ်ရှိ လူနေမှုဘဝအလွှာအသီးသီးမှ တစ်ဦးချင်းစီတိုင်း၏ တာဝန်ဖြစ်သည်။ တစ်ဦးချင်းစီမှ စတင်၍ စီးပွားရေးလုပ်ငန်းများ၊ အကျိုးအမြတ်မယူသောအဖွဲ့အစည်းများနှင့် နောက်ဆုံးတွင် အစိုးရများအထိ ဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>particular</b><span>သီးခြားသော</span></span><span class="word"><b>as a whole</b><span>တစ်ခုလုံးအနေဖြင့်</span></span><span class="word"><b>all walks of life</b><span>လူနေမှုဘဝအလွှာအသီးသီး</span></span><span class="word"><b>nonprofit institutions</b><span>အကျိုးအမြတ်မယူသောအဖွဲ့အစည်းများ</span></span></div>
+  </div>
+</article>
+<div class="paragraph-title">Paragraph 4 · Practical Sustainable Actions</div>
+
+<article class="sentence">
+  <div class="num">14</div>
+  <div class="sentence-body">
+    <p class="en">To accomplish all inclusive measurement is a big deal because it is difficult to change old habits or to turn a blind eye to emerging issues.</p>
+    <p class="mm">အားလုံးပါဝင်သော အတိုင်းအတာတစ်ရပ်ကို အကောင်အထည်ဖော်ရန်မှာ အရေးကြီးသောကိစ္စဖြစ်သည်၊ အကြောင်းမှာ အလေ့အကျင့်ဟောင်းများကို ပြောင်းလဲရန် သို့မဟုတ် ပေါ်ပေါက်လာသောကိစ္စရပ်များကို မသိချင်ယောင်ဆောင်ရန်မှာ ခက်ခဲသောကြောင့် ဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>all-inclusive</b><span>အားလုံးပါဝင်သော</span></span><span class="word"><b>accomplish</b><span>အကောင်အထည်ဖော်သည်</span></span><span class="word"><b>old habits</b><span>အလေ့အကျင့်ဟောင်းများ</span></span><span class="word"><b>turn a blind eye</b><span>မသိချင်ယောင်ဆောင်သည်</span></span><span class="word"><b>emerging issues</b><span>ပေါ်ပေါက်လာသောကိစ္စရပ်များ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">15</div>
+  <div class="sentence-body">
+    <p class="en">To start, we need to reduce our ‘carbon footprint’.</p>
+    <p class="mm">အစပြုရန် ကျွန်ုပ်တို့၏ ‘carbon footprint’ ကို လျှော့ချရန် လိုအပ်သည်။</p>
+    <div class="vocab"><span class="word"><b>carbon footprint</b><span>ကာဗွန်ခြေရာ/ကာဗွန်ထုတ်လွှတ်မှု၏ သက်ရောက်မှု</span></span><span class="word"><b>reduce</b><span>လျှော့ချသည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">16</div>
+  <div class="sentence-body">
+    <p class="en">This can be done by installing solar panels, using an electric car, riding a bike or using other practices that minimize our economic footprint.</p>
+    <p class="mm">၎င်းကို solar panel များတပ်ဆင်ခြင်း၊ လျှပ်စစ်ကားအသုံးပြုခြင်း၊ စက်ဘီးစီးခြင်း သို့မဟုတ် ကျွန်ုပ်တို့၏ economic footprint ကို အနည်းဆုံးဖြစ်စေသော အခြားအလေ့အကျင့်များကို အသုံးပြုခြင်းဖြင့် လုပ်ဆောင်နိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>install</b><span>တပ်ဆင်သည်</span></span><span class="word"><b>solar panel</b><span>နေရောင်ခြည်စွမ်းအင်သုံးပြား</span></span><span class="word"><b>electric car</b><span>လျှပ်စစ်ကား</span></span><span class="word"><b>economic footprint</b><span>စီးပွားရေးဆိုင်ရာသက်ရောက်မှု</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">17</div>
+  <div class="sentence-body">
+    <p class="en">Drawbacks may still exist; for instance, these can be costly.</p>
+    <p class="mm">သို့သော် အားနည်းချက်များ ရှိနေနိုင်သေးသည်။ ဥပမာအားဖြင့် ဤအရာများသည် ကုန်ကျစရိတ်ကြီးမားနိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>drawback</b><span>အားနည်းချက်</span></span><span class="word"><b>for instance</b><span>ဥပမာအားဖြင့်</span></span><span class="word"><b>costly</b><span>ကုန်ကျစရိတ်ကြီးမားသော</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">18</div>
+  <div class="sentence-body">
+    <p class="en">Another effective way is launching awareness campaigns to tackle environmental problems.</p>
+    <p class="mm">အခြားထိရောက်သောနည်းလမ်းတစ်ခုမှာ ပတ်ဝန်းကျင်ဆိုင်ရာပြဿနာများကို ဖြေရှင်းရန် အသိပညာပေးလှုပ်ရှားမှုများ စတင်ပြုလုပ်ခြင်းဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>effective</b><span>ထိရောက်သော</span></span><span class="word"><b>awareness campaign</b><span>အသိပညာပေးလှုပ်ရှားမှု</span></span><span class="word"><b>tackle</b><span>ဖြေရှင်းရန် ကိုင်တွယ်သည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">19</div>
+  <div class="sentence-body">
+    <p class="en">Nowadays, many activists, including celebrities, are highlighting this important issue of sustainability to our attention and urging us to take action.</p>
+    <p class="mm">ယနေ့ခေတ်တွင် နာမည်ကျော်သူများအပါအဝင် တက်ကြွလှုပ်ရှားသူများစွာသည် ဤအရေးကြီးသော sustainability ကိစ္စကို ကျွန်ုပ်တို့၏အာရုံစိုက်မှုရရှိစေရန် မီးမောင်းထိုးပြပြီး အရေးယူဆောင်ရွက်ရန် တိုက်တွန်းနေကြသည်။</p>
+    <div class="vocab"><span class="word"><b>activist</b><span>တက်ကြွလှုပ်ရှားသူ</span></span><span class="word"><b>highlight</b><span>မီးမောင်းထိုးပြသည်</span></span><span class="word"><b>urge</b><span>တိုက်တွန်းသည်</span></span><span class="word"><b>take action</b><span>အရေးယူဆောင်ရွက်သည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">20</div>
+  <div class="sentence-body">
+    <p class="en">A prominent example is the ‘Meatless Monday’ initiative, which encourages people to refrain from eating meat one day a week.</p>
+    <p class="mm">ထင်ရှားသောဥပမာတစ်ခုမှာ တစ်ပတ်လျှင် တစ်ရက် အသားမစားရန် လူများကို အားပေးသည့် ‘Meatless Monday’ လှုပ်ရှားမှုဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>prominent example</b><span>ထင်ရှားသောဥပမာ</span></span><span class="word"><b>initiative</b><span>အစပြုလှုပ်ရှားမှု</span></span><span class="word"><b>encourage</b><span>အားပေးသည်</span></span><span class="word"><b>refrain from</b><span>ရှောင်ကြဉ်သည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">21</div>
+  <div class="sentence-body">
+    <p class="en">The aim of this campaign is not only to improve personal health but also to support environmental sustainability by lowering meat consumption.</p>
+    <p class="mm">ဤလှုပ်ရှားမှု၏ ရည်ရွယ်ချက်မှာ ကိုယ်ပိုင်ကျန်းမာရေးကို တိုးတက်ကောင်းမွန်စေရုံသာမက အသားစားသုံးမှုကို လျှော့ချခြင်းဖြင့် ပတ်ဝန်းကျင်ရေရှည်တည်တံ့ခိုင်မြဲရေးကိုလည်း အထောက်အကူပြုရန် ဖြစ်သည်။</p>
+    <div class="vocab"><span class="word"><b>aim</b><span>ရည်ရွယ်ချက်</span></span><span class="word"><b>personal health</b><span>ကိုယ်ပိုင်ကျန်းမာရေး</span></span><span class="word"><b>meat consumption</b><span>အသားစားသုံးမှု</span></span><span class="word"><b>support</b><span>အထောက်အကူပြုသည်</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">22</div>
+  <div class="sentence-body">
+    <p class="en">Additionally, many countries have introduced programs to encourage plastic-free shopping practices.</p>
+    <p class="mm">ထို့အပြင် နိုင်ငံများစွာသည် ပလတ်စတစ်ကင်းစင်သော ဈေးဝယ်မှုအလေ့အကျင့်များကို အားပေးရန် အစီအစဉ်များကို မိတ်ဆက်ထားကြသည်။</p>
+    <div class="vocab"><span class="word"><b>introduce</b><span>မိတ်ဆက်သည်</span></span><span class="word"><b>plastic-free</b><span>ပလတ်စတစ်ကင်းစင်သော</span></span><span class="word"><b>shopping practices</b><span>ဈေးဝယ်မှုအလေ့အကျင့်များ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">23</div>
+  <div class="sentence-body">
+    <p class="en">Effective garbage management systems play a crucial role in safeguarding the environment.</p>
+    <p class="mm">ထိရောက်သော အမှိုက်စီမံခန့်ခွဲမှုစနစ်များသည် ပတ်ဝန်းကျင်ကို ကာကွယ်စောင့်ရှောက်ရာတွင် အလွန်အရေးပါသော အခန်းကဏ္ဍမှ ပါဝင်သည်။</p>
+    <div class="vocab"><span class="word"><b>garbage management</b><span>အမှိုက်စီမံခန့်ခွဲမှု</span></span><span class="word"><b>crucial role</b><span>အလွန်အရေးပါသောအခန်းကဏ္ဍ</span></span><span class="word"><b>safeguard</b><span>ကာကွယ်စောင့်ရှောက်သည်</span></span></div>
+  </div>
+</article>
+<div class="paragraph-title">Paragraph 5 · Benefits of Sustainability</div>
+
+<article class="sentence">
+  <div class="num">24</div>
+  <div class="sentence-body">
+    <p class="en">This encompasses the principles of the three Rs: reducing, reusing, and recycling, along with organized waste disposal techniques such as landfilling and composting.</p>
+    <p class="mm">၎င်းတွင် Three Rs ၏ အခြေခံမူများဖြစ်သော လျှော့ချခြင်း၊ ပြန်လည်အသုံးပြုခြင်းနှင့် ပြန်လည်စက်ဝန်းလည်အသုံးချခြင်းတို့အပြင် မြေမြှုပ်စွန့်ပစ်ခြင်းနှင့် မြေဆွေးပြုလုပ်ခြင်းကဲ့သို့ စနစ်တကျအမှိုက်စွန့်ပစ်နည်းများ ပါဝင်သည်။</p>
+    <div class="vocab"><span class="word"><b>encompass</b><span>အတွင်းတွင် ပါဝင်သည်</span></span><span class="word"><b>reduce</b><span>လျှော့ချသည်</span></span><span class="word"><b>reuse</b><span>ပြန်လည်အသုံးပြုသည်</span></span><span class="word"><b>recycle</b><span>ပြန်လည်စက်ဝန်းလည်အသုံးချသည်</span></span><span class="word"><b>landfilling</b><span>မြေမြှုပ်စွန့်ပစ်ခြင်း</span></span><span class="word"><b>composting</b><span>မြေဆွေးပြုလုပ်ခြင်း</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">25</div>
+  <div class="sentence-body">
+    <p class="en">Attaining environmental sustainability can bring benefits to human beings and the planet they live.</p>
+    <p class="mm">ပတ်ဝန်းကျင်ရေရှည်တည်တံ့ခိုင်မြဲရေးကို ရရှိအောင်မြင်ခြင်းသည် လူသားများနှင့် ၎င်းတို့နေထိုင်ရာ ကမ္ဘာမြေအတွက် အကျိုးကျေးဇူးများ ဆောင်ကြဉ်းပေးနိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>attain</b><span>ရရှိအောင်မြင်သည်</span></span><span class="word"><b>environmental sustainability</b><span>ပတ်ဝန်းကျင်ရေရှည်တည်တံ့ခိုင်မြဲရေး</span></span><span class="word"><b>benefit</b><span>အကျိုးကျေးဇူး</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">26</div>
+  <div class="sentence-body">
+    <p class="en">By safeguarding habitats and reducing pollution, biodiversity flourishes, which not only secures the existence of numerous species but also enhances the resilience of natural environments to climate change effects.</p>
+    <p class="mm">နေထိုင်ရာသဘာဝပတ်ဝန်းကျင်များကို ကာကွယ်ပြီး ညစ်ညမ်းမှုကို လျှော့ချခြင်းဖြင့် ဇီဝမျိုးစုံမျိုးကွဲများ ရှင်သန်တိုးပွားလာသည်။ ထိုသို့ဖြစ်ခြင်းသည် မျိုးစိတ်များစွာ၏ တည်ရှိမှုကို အာမခံပေးရုံသာမက သဘာဝပတ်ဝန်းကျင်များ၏ ရာသီဥတုပြောင်းလဲမှုဒဏ်ခံနိုင်ရည်ကိုလည်း မြှင့်တင်ပေးသည်။</p>
+    <div class="vocab"><span class="word"><b>habitat</b><span>သက်ရှိများနေထိုင်ရာပတ်ဝန်းကျင်</span></span><span class="word"><b>biodiversity</b><span>ဇီဝမျိုးစုံမျိုးကွဲ</span></span><span class="word"><b>flourish</b><span>ရှင်သန်တိုးပွားသည်</span></span><span class="word"><b>resilience</b><span>ဒဏ်ခံနိုင်ရည်</span></span><span class="word"><b>climate change effects</b><span>ရာသီဥတုပြောင်းလဲမှု၏သက်ရောက်မှုများ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">27</div>
+  <div class="sentence-body">
+    <p class="en">This will guarantee the availability of natural resources for future generations.</p>
+    <p class="mm">၎င်းသည် အနာဂတ်မျိုးဆက်များအတွက် သဘာဝအရင်းအမြစ်များ ရရှိနိုင်မှုကို အာမခံပေးမည်။</p>
+    <div class="vocab"><span class="word"><b>guarantee</b><span>အာမခံသည်</span></span><span class="word"><b>availability</b><span>ရရှိနိုင်မှု</span></span><span class="word"><b>future generations</b><span>အနာဂတ်မျိုးဆက်များ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">28</div>
+  <div class="sentence-body">
+    <p class="en">By using resources efficiently and responsibly, we secure a planet abundant in essential materials for the survival and advancement of upcoming populations.</p>
+    <p class="mm">အရင်းအမြစ်များကို ထိရောက်စွာနှင့် တာဝန်ယူစွာ အသုံးပြုခြင်းဖြင့် အနာဂတ်လူဦးရေများ ရှင်သန်ရေးနှင့် တိုးတက်ရေးအတွက် မရှိမဖြစ်ပစ္စည်းများ ပေါကြွယ်ဝသော ကမ္ဘာမြေကို ထိန်းသိမ်းနိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>efficiently</b><span>ထိရောက်စွာ</span></span><span class="word"><b>responsibly</b><span>တာဝန်ယူစွာ</span></span><span class="word"><b>abundant</b><span>ပေါကြွယ်ဝသော</span></span><span class="word"><b>survival</b><span>ရှင်သန်ရေး</span></span><span class="word"><b>advancement</b><span>တိုးတက်ရေး</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">29</div>
+  <div class="sentence-body">
+    <p class="en">By embracing sustainable practices, we experience improvements in air and water quality, along with decreased exposure to harmful substances.</p>
+    <p class="mm">ရေရှည်တည်တံ့ခိုင်မြဲသော အလေ့အကျင့်များကို လက်ခံကျင့်သုံးခြင်းဖြင့် လေနှင့်ရေအရည်အသွေး တိုးတက်ကောင်းမွန်လာခြင်းနှင့် အန္တရာယ်ရှိသောပစ္စည်းများနှင့် ထိတွေ့မှု လျော့ကျလာခြင်းတို့ကို ခံစားရမည်။</p>
+    <div class="vocab"><span class="word"><b>embrace</b><span>လက်ခံကျင့်သုံးသည်</span></span><span class="word"><b>sustainable practices</b><span>ရေရှည်တည်တံ့ခိုင်မြဲသောအလေ့အကျင့်များ</span></span><span class="word"><b>exposure</b><span>ထိတွေ့မှု</span></span><span class="word"><b>harmful substances</b><span>အန္တရာယ်ရှိသောပစ္စည်းများ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">30</div>
+  <div class="sentence-body">
+    <p class="en">This leads to a reduction in health problems, lower healthcare costs, and an enhanced overall quality of life.</p>
+    <p class="mm">၎င်းကြောင့် ကျန်းမာရေးပြဿနာများ လျော့နည်းလာခြင်း၊ ကျန်းမာရေးစောင့်ရှောက်မှုကုန်ကျစရိတ်များ လျော့ကျခြင်းနှင့် အလုံးစုံဘဝအရည်အသွေး တိုးတက်ကောင်းမွန်ခြင်းတို့ ဖြစ်ပေါ်လာသည်။</p>
+    <div class="vocab"><span class="word"><b>reduction</b><span>လျော့နည်းမှု</span></span><span class="word"><b>healthcare costs</b><span>ကျန်းမာရေးစောင့်ရှောက်မှုကုန်ကျစရိတ်</span></span><span class="word"><b>quality of life</b><span>ဘဝအရည်အသွေး</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">31</div>
+  <div class="sentence-body">
+    <p class="en">A commitment to sustainability encourages both businesses and communities to innovate, leading to development of eco-friendly technologies, products, and services.</p>
+    <p class="mm">ရေရှည်တည်တံ့ခိုင်မြဲရေးအပေါ် ကတိကဝတ်ပြုမှုသည် စီးပွားရေးလုပ်ငန်းများနှင့် လူမှုအသိုင်းအဝိုင်းများကို ဆန်းသစ်တီထွင်ရန် အားပေးပြီး ပတ်ဝန်းကျင်နှင့်သဟဇာတဖြစ်သော နည်းပညာများ၊ ထုတ်ကုန်များနှင့် ဝန်ဆောင်မှုများ ဖွံ့ဖြိုးတိုးတက်လာစေသည်။</p>
+    <div class="vocab"><span class="word"><b>commitment</b><span>ကတိကဝတ်ပြုမှု</span></span><span class="word"><b>innovate</b><span>ဆန်းသစ်တီထွင်သည်</span></span><span class="word"><b>eco-friendly</b><span>ပတ်ဝန်းကျင်နှင့်သဟဇာတဖြစ်သော</span></span><span class="word"><b>development</b><span>ဖွံ့ဖြိုးတိုးတက်မှု</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">32</div>
+  <div class="sentence-body">
+    <p class="en">Furthermore, green industries create new job opportunities, and sustainable economies attract steady investments.</p>
+    <p class="mm">ထို့အပြင် အစိမ်းရောင်စက်မှုလုပ်ငန်းများသည် အလုပ်အကိုင်အခွင့်အလမ်းအသစ်များ ဖန်တီးပေးပြီး ရေရှည်တည်တံ့ခိုင်မြဲသော စီးပွားရေးများသည် တည်ငြိမ်သော ရင်းနှီးမြှုပ်နှံမှုများကို ဆွဲဆောင်သည်။</p>
+    <div class="vocab"><span class="word"><b>green industries</b><span>အစိမ်းရောင်စက်မှုလုပ်ငန်းများ</span></span><span class="word"><b>job opportunities</b><span>အလုပ်အကိုင်အခွင့်အလမ်းများ</span></span><span class="word"><b>sustainable economies</b><span>ရေရှည်တည်တံ့ခိုင်မြဲသောစီးပွားရေးများ</span></span><span class="word"><b>steady investments</b><span>တည်ငြိမ်သောရင်းနှီးမြှုပ်နှံမှုများ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">33</div>
+  <div class="sentence-body">
+    <p class="en">Consequently, by collaborating towards shared sustainable goals, we can strengthen social ties within the community and minimize conflicts.</p>
+    <p class="mm">ထို့ကြောင့် တူညီသောရေရှည်တည်တံ့ခိုင်မြဲရေး ရည်မှန်းချက်များအတွက် ပူးပေါင်းဆောင်ရွက်ခြင်းဖြင့် လူမှုအသိုင်းအဝိုင်းအတွင်း လူမှုဆက်ဆံရေးများကို ခိုင်မာစေပြီး ပဋိပက္ခများကို အနည်းဆုံးဖြစ်စေနိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>consequently</b><span>ထို့ကြောင့်</span></span><span class="word"><b>collaborate</b><span>ပူးပေါင်းဆောင်ရွက်သည်</span></span><span class="word"><b>shared goals</b><span>တူညီသောရည်မှန်းချက်များ</span></span><span class="word"><b>social ties</b><span>လူမှုဆက်ဆံရေးများ</span></span><span class="word"><b>minimize conflicts</b><span>ပဋိပက္ခများကို အနည်းဆုံးဖြစ်စေသည်</span></span></div>
+  </div>
+</article>
+<div class="paragraph-title">Paragraph 6 · Conclusion</div>
+
+<article class="sentence">
+  <div class="num">34</div>
+  <div class="sentence-body">
+    <p class="en">In conclusion, achieving environmental sustainability is crucial for the well-being of our planet and future generations.</p>
+    <p class="mm">နိဂုံးချုပ်အားဖြင့် ပတ်ဝန်းကျင်ရေရှည်တည်တံ့ခိုင်မြဲရေးကို ရရှိအောင်မြင်ခြင်းသည် ကျွန်ုပ်တို့၏ကမ္ဘာမြေနှင့် အနာဂတ်မျိုးဆက်များ၏ ကောင်းကျိုးချမ်းသာအတွက် အလွန်အရေးကြီးသည်။</p>
+    <div class="vocab"><span class="word"><b>in conclusion</b><span>နိဂုံးချုပ်အားဖြင့်</span></span><span class="word"><b>crucial</b><span>အလွန်အရေးကြီးသော</span></span><span class="word"><b>well-being</b><span>ကောင်းကျိုးချမ်းသာမှု</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">35</div>
+  <div class="sentence-body">
+    <p class="en">It requires a collective effort from individuals, communities, and governments to adopt eco-friendly practices and policies.</p>
+    <p class="mm">ပတ်ဝန်းကျင်နှင့်သဟဇာတဖြစ်သော အလေ့အကျင့်များနှင့် မူဝါဒများကို လက်ခံကျင့်သုံးရန် တစ်ဦးချင်းစီ၊ လူမှုအသိုင်းအဝိုင်းများနှင့် အစိုးရများထံမှ စုပေါင်းကြိုးပမ်းအားထုတ်မှု လိုအပ်သည်။</p>
+    <div class="vocab"><span class="word"><b>collective effort</b><span>စုပေါင်းကြိုးပမ်းအားထုတ်မှု</span></span><span class="word"><b>adopt</b><span>လက်ခံကျင့်သုံးသည်</span></span><span class="word"><b>eco-friendly practices</b><span>ပတ်ဝန်းကျင်နှင့်သဟဇာတဖြစ်သောအလေ့အကျင့်များ</span></span><span class="word"><b>policies</b><span>မူဝါဒများ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">36</div>
+  <div class="sentence-body">
+    <p class="en">By prioritizing renewable resources, reducing waste, and protecting natural habitats, we can create a healthier environment.</p>
+    <p class="mm">ပြန်လည်ပြည့်ဖြိုးနိုင်သော အရင်းအမြစ်များကို ဦးစားပေးခြင်း၊ အမှိုက်များကို လျှော့ချခြင်းနှင့် သဘာဝနေထိုင်ရာပတ်ဝန်းကျင်များကို ကာကွယ်ခြင်းဖြင့် ပိုမိုကျန်းမာသော ပတ်ဝန်းကျင်ကို ဖန်တီးနိုင်သည်။</p>
+    <div class="vocab"><span class="word"><b>prioritize</b><span>ဦးစားပေးသည်</span></span><span class="word"><b>renewable resources</b><span>ပြန်လည်ပြည့်ဖြိုးနိုင်သောအရင်းအမြစ်များ</span></span><span class="word"><b>waste</b><span>အမှိုက်</span></span><span class="word"><b>natural habitats</b><span>သဘာဝနေထိုင်ရာပတ်ဝန်းကျင်များ</span></span></div>
+  </div>
+</article>
+<article class="sentence">
+  <div class="num">37</div>
+  <div class="sentence-body">
+    <p class="en">Ultimately, embracing sustainability not only benefits nature but also enhances our quality of life, ensuring a balanced coexistence with the Earth.</p>
+    <p class="mm">အဆုံးစွန်အားဖြင့် ရေရှည်တည်တံ့ခိုင်မြဲမှုကို လက်ခံကျင့်သုံးခြင်းသည် သဘာဝအတွက်သာ အကျိုးရှိစေရုံမက ကျွန်ုပ်တို့၏ဘဝအရည်အသွေးကိုလည်း မြှင့်တင်ပေးပြီး ကမ္ဘာမြေနှင့် ဟန်ချက်ညီညီ အတူယှဉ်တွဲနေထိုင်နိုင်မှုကို အာမခံပေးသည်။</p>
+    <div class="vocab"><span class="word"><b>ultimately</b><span>အဆုံးစွန်အားဖြင့်</span></span><span class="word"><b>enhance</b><span>မြှင့်တင်သည်</span></span><span class="word"><b>quality of life</b><span>ဘဝအရည်အသွေး</span></span><span class="word"><b>balanced coexistence</b><span>ဟန်ချက်ညီသော အတူယှဉ်တွဲနေထိုင်မှု</span></span></div>
+  </div>
+</article>
+</div>
+<div class="focus"><strong>🎯 Key Focus</strong><span>Sustainability</span><span>Overpopulation</span><span>Carbon Footprint</span><span>Three Rs</span><span>Environmental Benefits</span><span>Key Vocabulary</span></div>
+</section>
+<p class="footer">Grade-12 English Learning Hub · Unit 12 · Embracing Sustainability: A Path to a Greener Future</p>
+</main>
+</div>
+
+<script>
+(function(){
+const keys=['g12-theme','siteTheme','theme'];
+function getTheme(){for(const k of keys){const v=localStorage.getItem(k);if(v==='dark'||v==='light')return v;}return 'light';}
+function applyTheme(v){document.documentElement.dataset.theme=v;}
+applyTheme(getTheme());
+document.getElementById('themeBtn').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';keys.forEach(k=>localStorage.setItem(k,next));applyTheme(next);});
+window.addEventListener('storage',e=>{if(keys.includes(e.key)&&(e.newValue==='dark'||e.newValue==='light'))applyTheme(e.newValue);});
+const menu=document.getElementById('sideMenu');
+document.getElementById('menuBtn').addEventListener('click',()=>menu.classList.add('open'));
+document.getElementById('closeMenu').addEventListener('click',()=>menu.classList.remove('open'));
+document.addEventListener('click',e=>{if(window.innerWidth<=900&&menu.classList.contains('open')&&!menu.contains(e.target)&&!e.target.closest('#menuBtn'))menu.classList.remove('open');});
+})();
+</script>
+</body>
+</html>

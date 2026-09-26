@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4 | Civic Values | Comprehension</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg:#f5f8fc;--surface:#fff;--surface2:#eef5ff;--text:#172033;--muted:#667085;
+ --border:#dbe4ef;--primary:#2563eb;--primary2:#1d4ed8;--accent:#14b8a6;
+ --green:#16a34a;--green-bg:#ecfdf3;--green-text:#166534;
+ --gold:#f59e0b;--shadow:0 12px 35px rgba(15,23,42,.08)
+}
+html[data-theme="dark"]{
+ --bg:#0b1220;--surface:#111b2e;--surface2:#17243a;--text:#edf4ff;--muted:#a9b7ca;
+ --border:#293951;--primary:#60a5fa;--primary2:#3b82f6;--accent:#32c8b7;
+ --green:#4ade80;--green-bg:#10271a;--green-text:#a7f3c0;
+ --gold:#fbbf24;--shadow:0 14px 38px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:var(--bg);color:var(--text);
+ font-family:"Plus Jakarta Sans","Padauk",sans-serif;line-height:1.75;overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.my,.translation,.why,.answer,.note{font-family:"Padauk","Plus Jakarta Sans",sans-serif}
+
+/* Header */
+.header{
+ position:sticky;top:0;z-index:50;background:var(--surface);
+ border-bottom:1px solid var(--border);backdrop-filter:blur(14px)
+}
+.nav{
+ width:min(1100px,calc(100% - 30px));height:68px;margin:auto;
+ display:flex;align-items:center;justify-content:space-between
+}
+.brand{font-weight:800;font-size:18px;color:var(--text)}
+.brand span{color:var(--primary)}
+.nav-actions{display:flex;gap:8px}
+.icon-btn,.menu-btn{
+ width:42px;height:42px;border:1px solid var(--border);border-radius:12px;
+ background:var(--surface);color:var(--text);cursor:pointer
+}
+.menu-btn{display:none;font-size:21px}
+
+/* Civic Values topic header */
+.hero{
+ position:relative;overflow:hidden;background:linear-gradient(135deg,#075985,#0f766e);
+ color:#fff
+}
+.hero:before,.hero:after{
+ content:"";position:absolute;border:1px solid rgba(255,255,255,.14);
+ transform:rotate(35deg);width:180px;height:180px;border-radius:24px
+}
+.hero:before{right:-30px;top:-80px}
+.hero:after{left:-60px;bottom:-110px}
+.hero-inner{
+ position:relative;z-index:1;width:min(1100px,calc(100% - 30px));margin:auto;
+ padding:34px 0 28px
+}
+.eyebrow{
+ display:inline-flex;padding:5px 11px;border-radius:999px;
+ background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+ font-size:12px;font-weight:800;letter-spacing:.3px
+}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:14px 0 9px;letter-spacing:-.7px}
+.hero h1 span{color:#8ff1dc}
+.hero p{margin:0;max-width:880px;color:rgba(255,255,255,.88);font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+.hero-tags span{
+ padding:7px 11px;border-radius:10px;background:rgba(255,255,255,.09);
+ border:1px solid rgba(255,255,255,.15);font-size:12px
+}
+
+/* Main layout */
+.layout{
+ width:min(1100px,calc(100% - 30px));margin:auto;padding:22px 0 45px;
+ display:grid;grid-template-columns:250px 1fr;gap:22px;align-items:start
+}
+.sidebar{
+ position:sticky;top:88px;height:max-content;background:var(--surface);
+ border:1px solid var(--border);border-radius:18px;padding:12px;box-shadow:var(--shadow)
+}
+.side-title{padding:8px 10px 12px;font-weight:800;font-size:14px}
+.side-link{
+ display:flex;align-items:center;gap:8px;padding:10px 11px;border-radius:11px;
+ color:var(--muted);margin:3px 0;font-size:14px
+}
+.side-link:hover{background:var(--surface2);color:var(--text)}
+.side-link.active{background:var(--primary);color:#fff;font-weight:700}
+
+main{min-width:0}
+.card{
+ background:var(--surface);border:1px solid var(--border);border-radius:20px;
+ box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden
+}
+.card-head{padding:22px 24px 17px;border-bottom:1px solid var(--border)}
+.card-head h2{margin:0;font-size:24px;line-height:1.3}
+.card-head p{margin:5px 0 0;color:var(--muted);font-size:14px}
+.card-body{padding:23px}
+
+.instructions{
+ background:var(--surface2);border-left:4px solid var(--primary);
+ padding:11px 14px;border-radius:10px;margin:14px 0 18px;font-weight:600
+}
+.instructions b{color:var(--primary)}
+.exercise{
+ border:1px solid var(--border);border-radius:15px;margin:12px 0;overflow:hidden
+}
+.ex-head{
+ padding:14px 16px;background:var(--surface2);border-bottom:1px solid var(--border)
+}
+.ex-head b{color:var(--primary)}
+.ex-body{padding:16px}
+.q{margin:0 0 17px;padding-bottom:15px;border-bottom:1px dashed var(--border)}
+.q:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.qtext{font-weight:600}
+.translation{color:var(--muted);margin-top:5px}
+.options{margin:9px 0;padding:10px 14px;background:var(--bg);border-radius:10px}
+.options div{margin:3px 0}
+.answer-btn{
+ margin-top:9px;border:1px solid var(--primary);background:transparent;color:var(--primary);
+ padding:7px 12px;border-radius:9px;cursor:pointer
+}
+.answer{
+ display:none;margin-top:10px;padding:12px 14px;background:var(--green-bg);
+ border:1px solid rgba(22,163,74,.25);border-left:4px solid var(--green);
+ border-radius:10px;color:var(--green-text)
+}
+.answer.show{display:block}
+.answer strong{font-weight:800}
+.why{display:block;margin-top:5px;color:var(--muted)}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:650px}
+th,td{padding:11px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{background:var(--surface2)}
+tr:last-child td{border-bottom:0}
+
+.word-box{
+ padding:16px;border-radius:14px;background:var(--surface2);
+ border:1px solid var(--border);margin-bottom:16px
+}
+.word-list{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.word{
+ padding:7px 8px;background:var(--surface);border:1px solid var(--border);
+ border-radius:9px;text-align:center;font-size:13px;font-weight:600
+}
+
+/* Civic-values diagram */
+.diagram{
+ position:relative;max-width:620px;margin:20px auto 8px;
+ aspect-ratio:1/1;padding:10px
+}
+.diagram:before{
+ content:"";position:absolute;left:50%;top:50%;width:30%;height:4px;
+ background:#4f91d9;transform:translate(-50%,-50%);box-shadow:
+ 0 -145px 0 -1px transparent
+}
+.center{
+ position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+ width:150px;height:150px;border:4px solid #78a951;border-radius:50%;
+ background:var(--surface);display:flex;align-items:center;justify-content:center;
+ text-align:center;font-weight:700;z-index:2;padding:18px
+}
+.node{
+ position:absolute;width:118px;height:118px;border:3px solid #78a951;border-radius:50%;
+ background:var(--surface);display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:12px;font-weight:700;font-size:14px;z-index:2
+}
+.line{position:absolute;left:50%;top:50%;width:4px;height:145px;background:#4f91d9;transform-origin:50% 0;z-index:1}
+.l1{transform:translate(-50%,-100%) rotate(0deg)}
+.l2{transform:translate(-50%,-100%) rotate(45deg)}
+.l3{transform:translate(-50%,-100%) rotate(90deg)}
+.l4{transform:translate(-50%,-100%) rotate(135deg)}
+.l5{transform:translate(-50%,-100%) rotate(180deg)}
+.l6{transform:translate(-50%,-100%) rotate(225deg)}
+.l7{transform:translate(-50%,-100%) rotate(270deg)}
+.l8{transform:translate(-50%,-100%) rotate(315deg)}
+.n1{left:calc(50% - 59px);top:0}
+.n2{right:9%;top:10%}
+.n3{right:0;top:calc(50% - 59px)}
+.n4{right:9%;bottom:10%}
+.n5{left:calc(50% - 59px);bottom:0}
+.n6{left:9%;bottom:10%}
+.n7{left:0;top:calc(50% - 59px)}
+.n8{left:9%;top:10%}
+
+.note{
+ padding:11px 14px;background:var(--surface2);border-left:4px solid var(--accent);
+ border-radius:10px;color:var(--muted);margin:12px 0
+}
+
+.next{display:flex;justify-content:flex-end;padding:3px 0 15px}
+.next a{background:var(--primary);color:#fff;padding:11px 18px;border-radius:12px;font-weight:700}
+.footer{text-align:center;color:var(--muted);padding:25px 15px}
+
+/* Mobile */
+.overlay{display:none;position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.45)}
+.overlay.show{display:block}
+@media(max-width:850px){
+ .nav{width:calc(100% - 30px)}
+ .menu-btn{display:block}
+ .hero-inner{width:calc(100% - 30px);padding:28px 0 24px}
+ .hero h1{font-size:31px}
+ .hero p{font-size:13px}
+ .hero-tags span{font-size:11px;padding:6px 9px}
+ .layout{width:calc(100% - 30px);grid-template-columns:1fr;padding-top:17px}
+ .sidebar{
+  display:block;position:fixed;left:-290px;top:0;bottom:0;width:275px;
+  z-index:80;border-radius:0;overflow:auto;transition:left .25s;padding:18px
+ }
+ .sidebar.open{left:0}
+ .card{border-radius:17px}
+ .card-head{padding:19px 17px 15px}
+ .card-head h2{font-size:21px}
+ .card-body{padding:17px}
+ .ex-head{padding:13px 14px}
+ .ex-body{padding:14px}
+ .word-list{grid-template-columns:repeat(2,1fr)}
+ .diagram{max-width:440px;min-width:0}
+ .node{width:82px;height:82px;font-size:11px;border-width:2px}
+ .center{width:110px;height:110px;font-size:12px;border-width:3px}
+ .line{height:105px;width:3px}
+ .n1{left:calc(50% - 41px);top:0}
+ .n2{right:4%;top:10%}
+ .n3{right:0;top:calc(50% - 41px)}
+ .n4{right:4%;bottom:10%}
+ .n5{left:calc(50% - 41px);bottom:0}
+ .n6{left:4%;bottom:10%}
+ .n7{left:0;top:calc(50% - 41px)}
+ .n8{left:4%;top:10%}
+ .l1,.l2,.l3,.l4,.l5,.l6,.l7,.l8{transform:translate(-50%,-100%) rotate(var(--r))}
+}
+@media(max-width:430px){
+ .hero h1{font-size:28px}
+ .layout{width:calc(100% - 22px)}
+ .hero-inner{width:calc(100% - 22px)}
+ .nav{width:calc(100% - 22px)}
+ .word-list{gap:6px}
+ .word{font-size:12px;padding:6px 5px}
+ .diagram{max-width:340px}
+ .node{width:66px;height:66px;font-size:9px;padding:7px}
+ .center{width:92px;height:92px;font-size:10px;padding:10px}
+ .line{height:82px}
+ .n1{left:calc(50% - 33px)}
+ .n5{left:calc(50% - 33px)}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+<nav class="nav">
+<a class="brand" href="index.html">Grade-12 <span>English</span></a>
+<div class="nav-actions">
+<button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+<span class="eyebrow">UNIT 4 • CIVIC VALUES</span>
+<h1><span>Civic Values</span> — Comprehension & Practice</h1>
+<p>Comprehension၊ 4B Vocabulary နှင့် 4C Gerund Phrases Vs. Participle Phrases ကို English + မြန်မာဘာသာပြန် + အဖြေအပြည့်အစုံဖြင့် လေ့လာလေ့ကျင့်နိုင်ပါသည်။</p>
+<div class="hero-tags">
+<span>📝 Comprehension</span><span>📚 Vocabulary</span><span>🔤 Grammar</span><span>🇲🇲 Myanmar Support</span>
+</div>
+</div>
+</section>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+<div class="side-title">UNIT 4 • CIVIC VALUES</div>
+<a class="side-link" href="meaning4.html">📖 Meaning & Key Vocabulary</a>
+<a class="side-link" href="unit4.html">📘 Reading Paragraph</a>
+<a class="side-link active" href="comprehension4.html">📝 Comprehension</a>
+<a class="side-link" href="grammar4.html">🔤 Additional Grammar Exercises</a>
+<a class="side-link" href="listening-speaking4.html">🎧 Listening & Speaking</a>
+<a class="side-link" href="writing4.html">✍️ Writing</a>
+<a class="side-link" href="beca4.html">🎯 BECA နမူနာမေးခွန်းများ</a>
+</aside>
+
+<main>
+
+<!-- PART 1 -->
+<section class="card">
+<div class="card-head">
+<h2>📝 PART 1 — Comprehension</h2>
+<p>Unit 4 Civic Values reading passage ကို အခြေခံ၍ မေးခွန်းများကို ဖြေဆိုပါ။</p>
+</div>
+<div class="card-body">
+
+<div class="exercise">
+<div class="ex-head"><b>A.</b> Choose the appropriate topic for each paragraph. Match the paragraphs (1–4) with the topics (a–d).</div>
+<div class="ex-body">
+<div class="translation">စာပိုဒ်တစ်ပိုဒ်ချင်းစီအတွက် သင့်လျော်သော ခေါင်းစဉ်ကို ရွေးပြီး Paragraph (1–4) နှင့် Topic (a–d) ကို တွဲပါ။</div>
+<div class="options">
+<div><b>a.</b> Exemplars of Civic Values — Civic Values ကို လက်တွေ့ကျင့်သုံးပြသူများ၏ နမူနာများ</div>
+<div><b>b.</b> The Role of Civic Values — Civic Values ၏ အခန်းကဏ္ဍ</div>
+<div><b>c.</b> What are Civic Values? — Civic Values ဆိုတာဘာလဲ</div>
+<div><b>d.</b> Essence of Civic Values — Civic Values ၏ အနှစ်သာရ</div>
+</div>
+<div class="q"><b>Paragraph 1</b><button class="answer-btn" onclick="toggleAnswer('a1')">အဖြေကြည့်ရန်</button><div class="answer" id="a1"><strong>Answer: c. What are Civic Values?</strong><span class="why">Paragraph 1 သည် Civic Values ၏ အဓိပ္ပါယ်နှင့် အဓိကအချက်များကို ရှင်းပြထားသောကြောင့် ဖြစ်ပါသည်။</span></div></div>
+<div class="q"><b>Paragraph 2</b><button class="answer-btn" onclick="toggleAnswer('a2')">အဖြေကြည့်ရန်</button><div class="answer" id="a2"><strong>Answer: d. Essence of Civic Values</strong><span class="why">Paragraph 2 သည် Civic Values ၏ အနှစ်သာရနှင့် လူမှုဆက်ဆံရေးအတွက် အရေးပါမှုကို ဖော်ပြထားပါသည်။</span></div></div>
+<div class="q"><b>Paragraph 3</b><button class="answer-btn" onclick="toggleAnswer('a3')">အဖြေကြည့်ရန်</button><div class="answer" id="a3"><strong>Answer: a. Exemplars of Civic Values</strong><span class="why">Paragraph 3 တွင် Civic Values ကို လက်တွေ့ကျင့်သုံးပြသူများ၏ နမူနာများ ပါဝင်ပါသည်။</span></div></div>
+<div class="q"><b>Paragraph 4</b><button class="answer-btn" onclick="toggleAnswer('a4')">အဖြေကြည့်ရန်</button><div class="answer" id="a4"><strong>Answer: b. The Role of Civic Values</strong><span class="why">Paragraph 4 သည် လူ့အဖွဲ့အစည်းတွင် Civic Values ၏ အခန်းကဏ္ဍကို အဓိကထားဖော်ပြပါသည်။</span></div></div>
+</div>
+</div>
+
+<div class="exercise">
+<div class="ex-head"><b>B.</b> Who did the actions below? Write the actions in the correct place in the table.</div>
+<div class="ex-body">
+<div class="translation">အောက်ပါလုပ်ဆောင်ချက်များကို မည်သူက လုပ်ဆောင်ခဲ့သည်ကို U Tin Tun၊ Phyu Phyu နှင့် Ko Sai အောက်တွင် မှန်ကန်စွာ ခွဲရေးပါ။</div>
+<div class="options"><div>a. establishing a language centre </div><div>
+b. sustaining his humble character</div><div>
+c. blood donation </div><div>
+d. supplying meals for the jobless </div><div>
+e. support for orphanages </div><div>
+f. bringing about significant change for the needy </div><div>
+g. charitable contribution to nuns </div><div>
+h. offering financial and material assistance </div><div>
+i. helping at the local food service centre
+</div></div>
+<button class="answer-btn" onclick="toggleAnswer('S1')">အဖြေကြည့်ရန်</button>
+<div class="answer" id="S1"><strong>Answer Key</strong>
+<div class="table-wrap">
+<table>
+<thead><tr><th>U Tin Tun</th><th>Phyu Phyu</th><th>Ko Sai</th></tr></thead>
+<tbody>
+<tr>
+<td>1. blood donation<br>2. supplying meals for the jobless<br>3. helping at the local food service centre</td>
+<td>1. establishing a language centre<br>2. support for orphanages<br>3. charitable contribution to nuns</td>
+<td>1. sustaining his humble character<br>2. bringing about significant change for the needy<br>3. offering financial and material assistance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="exercise">
+<div class="ex-head"><b>C.</b> Choose the best answer for each question.</div>
+<div class="ex-body">
+
+<div class="q"><div class="qtext">1. Which of the following is NOT an example of practicing civic values?</div>
+<div class="translation">အောက်ပါအရာများထဲမှ Civic Values ကို လက်တွေ့ကျင့်သုံးခြင်း၏ နမူနာ မဟုတ်သည်မှာ မည်သည်နည်း။</div>
+<div class="options"><div>a. speeding through pedestrian crossing</div><div>b. being kind</div><div>c. engaging in charity</div><div>d. contributing in cash and kind to the needy</div></div>
+<button class="answer-btn" onclick="toggleAnswer('c1')">အဖြေကြည့်ရန်</button><div class="answer" id="c1"><strong>Answer: a. speeding through pedestrian crossing</strong></div></div>
+
+<div class="q"><div class="qtext">2. What does the author suggest we do to make civic values a reality ______ talks?</div>
+<div class="translation">Civic Values များကို လက်တွေ့အကောင်အထည်ဖော်ရန် စကားပြောခြင်းသာမက မည်သို့စတင်သင့်သည်ဟု စာရေးသူက အကြံပြုထားသနည်း။</div>
+<div class="options"><div>a. doing what is right and fair</div><div>b. contributing to the growth of society</div><div>c. starting with respecting oneself</div><div>d. beginning with mutual respect</div></div>
+<button class="answer-btn" onclick="toggleAnswer('c2')">အဖြေကြည့်ရန်</button><div class="answer" id="c2"><strong>Answer: c. starting with respecting oneself</strong></div></div>
+
+<div class="q"><div class="qtext">3. What has U Tin Tun consistently followed throughout his life?</div>
+<div class="translation">U Tin Tun သည် သူ၏ဘဝတစ်လျှောက်လုံး မည်သည့်အရာကို တစိုက်မတ်မတ် လိုက်နာခဲ့သနည်း။</div>
+<div class="options"><div>a. commitment to providing food</div><div>b. moral principles</div><div>c. remarkable achievement</div><div>d. generosity</div></div>
+<button class="answer-btn" onclick="toggleAnswer('c3')">အဖြေကြည့်ရန်</button><div class="answer" id="c3"><strong>Answer: b. moral principles</strong></div></div>
+
+<div class="q"><div class="qtext">4. Where do you see helpless and homeless elderly people?</div>
+<div class="translation">အကူအညီမဲ့ပြီး အိမ်မဲ့ဖြစ်နေသော သက်ကြီးရွယ်အိုများကို မည်သည့်နေရာတွင် တွေ့နိုင်သနည်း။</div>
+<div class="options"><div>a. orphanages</div><div>b. companies</div><div>c. language schools</div><div>d. homes for the aged</div></div>
+<button class="answer-btn" onclick="toggleAnswer('c4')">အဖြေကြည့်ရန်</button><div class="answer" id="c4"><strong>Answer: d. homes for the aged</strong></div></div>
+
+<div class="q"><div class="qtext">5. What does Phyu Phyu specialize in providing as the founder of the language school?</div>
+<div class="translation">Phyu Phyu သည် ဘာသာစကားကျောင်းကို တည်ထောင်သူအဖြစ် မည်သည့်အရာကို အထူးအလေးထား ပံ့ပိုးပေးသနည်း။</div>
+<div class="options"><div>a. nuns</div><div>b. quality education</div><div>c. orphans</div><div>d. elderly people</div></div>
+<button class="answer-btn" onclick="toggleAnswer('c5')">အဖြေကြည့်ရန်</button><div class="answer" id="c5"><strong>Answer: b. quality education</strong></div></div>
+
+</div>
+</div>
+
+<div class="exercise">
+<div class="ex-head"><b>D.</b> Read the passage again. What does the passage say about the following?</div>
+<div class="ex-body">
+<div class="translation">စာပိုဒ်ကို ထပ်မံဖတ်ပြီး ပေးထားသော prompt များကို အသုံးပြု၍ ပြည့်စုံသော sentence များ ရေးပါ။</div>
+
+<div class="q"><div class="qtext">1. Examples of practising civic values are …</div><button class="answer-btn" onclick="toggleAnswer('d1')">အဖြေကြည့်ရန်</button><div class="answer" id="d1">Examples of practising civic values are <strong>being kind, doing service work, engaging in charity, and even starting a local library.</strong><span class="why">Civic Values ကို နေ့စဉ်ဘဝတွင် ကောင်းမွန်သောအပြုအမူများနှင့် ဝန်ဆောင်မှုများဖြင့် လက်တွေ့ဖော်ပြနိုင်သည်ဟု ဆိုလိုပါသည်။</span></div></div>
+<div class="q"><div class="qtext">2. True help is …</div><button class="answer-btn" onclick="toggleAnswer('d2')">အဖြေကြည့်ရန်</button><div class="answer" id="d2">True help is <strong>selfless and without any strings attached.</strong></div></div>
+<div class="q"><div class="qtext">3. The characteristics associated with a person with healthy self-respect are (that) …</div><button class="answer-btn" onclick="toggleAnswer('d3')">အဖြေကြည့်ရန်</button><div class="answer" id="d3">The characteristics associated with a person with healthy self-respect are that <strong>he/she seldom breaks rules or deviates from the principles he/she values.</strong></div></div>
+<div class="q"><div class="qtext">4. We can achieve mutual respect by …</div><button class="answer-btn" onclick="toggleAnswer('d4')">အဖြေကြည့်ရန်</button><div class="answer" id="d4">We can achieve mutual respect by <strong>respecting individuals' identities.</strong></div></div>
+<div class="q"><div class="qtext">5. A society with mutual respect is a society where …</div><button class="answer-btn" onclick="toggleAnswer('d5')">အဖြေကြည့်ရန်</button><div class="answer" id="d5">A society with mutual respect is a society where <strong>people respect their identities and stay true to their principles.</strong></div></div>
+<div class="q"><div class="qtext">6. U Tin Tun’s most remarkable achievement is …</div><button class="answer-btn" onclick="toggleAnswer('d6')">အဖြေကြည့်ရန်</button><div class="answer" id="d6">U Tin Tun's most remarkable achievement is <strong>his commitment to providing food for the unemployed, poor and homeless.</strong></div></div>
+<div class="q"><div class="qtext">7. In addition to providing quality education and doing charities, Phyu Phyu’s actions are …</div><button class="answer-btn" onclick="toggleAnswer('d7')">အဖြေကြည့်ရန်</button><div class="answer" id="d7">In addition to quality education and charity, the qualities that shape Phyu Phyu's character are <strong>empathy, commitment, kindness, generosity, and social responsibility.</strong></div></div>
+<div class="q"><div class="qtext">8. Despite moderate success, Ko Sai’s nature is …</div><button class="answer-btn" onclick="toggleAnswer('d8')">အဖြေကြည့်ရန်</button><div class="answer" id="d8">Despite moderate success, Ko Sai's nature is <strong>down-to-earth.</strong></div></div>
+<div class="q"><div class="qtext">9. The common theme U Tin Tun, Phyu Phyu, and Ko Sai exemplify is …</div><button class="answer-btn" onclick="toggleAnswer('d9')">အဖြေကြည့်ရန်</button><div class="answer" id="d9">The common theme U Tin Tun, Phyu Phyu, and Ko Sai exemplify is <strong>the importance of civic values in action.</strong></div></div>
+<div class="q"><div class="qtext">10. The requirements to create a cohesive national society are …</div><button class="answer-btn" onclick="toggleAnswer('d10')">အဖြေကြည့်ရန်</button><div class="answer" id="d10">The requirements to create a cohesive national society are <strong>self-respect and mutual respect.</strong></div></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 4B -->
+<section class="card">
+<div class="card-head">
+<h2>📚 4B — Vocabulary</h2>
+<p>Qualities of people with civic values</p>
+</div>
+<div class="card-body">
+
+<div class="exercise">
+<div class="ex-head"><b>A.</b> Choose the qualities of people with civic values from the box and complete the diagram.</div>
+<div class="ex-body">
+<div class="translation">အောက်ပါ word box ထဲမှ Civic Values ရှိသူများ၏ အရည်အသွေးများကို ရွေးပြီး diagram တွင် ဖြည့်ပါ။</div>
+
+<div class="word-box">
+<div class="word-list">
+<div class="word">abidance</div><div class="word">achievement</div><div class="word">community</div><div class="word">compassion</div>
+<div class="word">empathy</div><div class="word">generosity</div><div class="word">honesty</div><div class="word">identity</div>
+<div class="word">kindness</div><div class="word">morality</div><div class="word">respect</div><div class="word">responsibility</div>
+</div>
+</div>
+
+<div class="diagram" aria-label="Qualities related to civic values"> 
+<div class="line l1" style="--r:0deg"></div><div class="line l2" style="--r:45deg"></div>
+<div class="line l3" style="--r:90deg"></div><div class="line l4" style="--r:135deg"></div>
+<div class="line l5" style="--r:180deg"></div><div class="line l6" style="--r:225deg"></div>
+<div class="line l7" style="--r:270deg"></div><div class="line l8" style="--r:315deg"></div>
+<div class="center">Qualities<br>related to<br>civic values</div>
+<div class="node n1">generosity</div><div class="node n2">respect</div>
+<div class="node n3">morality</div><div class="node n4">kindness</div>
+<div class="node n5">responsibility</div><div class="node n6">honesty</div>
+<div class="node n7">compassion</div><div class="node n8">empathy</div>
+</div>
+</div>
+</div>
+
+<div class="exercise">
+<div class="ex-head"><b>B.</b> Complete the following sentences using the answers from Exercise A.</div>
+<div class="ex-body">
+<div class="translation">Exercise A မှာ ရွေးထားသော vocabulary များကို အသုံးပြုပြီး အောက်ပါဝါကျများကို ဖြည့်ပါ။</div>
+
+<div class="q"><div class="qtext">1. With genuine ----------, he listened to stories of his friend’s struggles during tough times and offered a helping hand.</div><button class="answer-btn" onclick="toggleAnswer('vb1')">အဖြေကြည့်ရန်</button><div class="answer" id="vb1"><strong>Answer: empathy</strong><span class="why">empathy = အခြားသူ၏ခံစားချက်ကို နားလည်ခံစားပေးနိုင်ခြင်း</span></div></div>
+<div class="q"><div class="qtext">2. She showed her ---------- by volunteering at home for the aged in her town, helping elderly people there.</div><button class="answer-btn" onclick="toggleAnswer('vb2')">အဖြေကြည့်ရန်</button><div class="answer" id="vb2"><strong>Answer: compassion</strong><span class="why">compassion = ဒုက္ခရောက်နေသူများအပေါ် ကိုယ်ချင်းစာပြီး ကူညီလိုစိတ်</span></div></div>
+<div class="q"><div class="qtext">3. My next door neighbor regularly donates to charities. Her ---------- is remarkable.</div><button class="answer-btn" onclick="toggleAnswer('vb3')">အဖြေကြည့်ရန်</button><div class="answer" id="vb3"><strong>Answer: generosity</strong><span class="why">generosity = ရက်ရောပေးကမ်းတတ်ခြင်း</span></div></div>
+<div class="q"><div class="qtext">4. Small acts of ---------- such as holding the door open for someone can brighten their day.</div><button class="answer-btn" onclick="toggleAnswer('vb4')">အဖြေကြည့်ရန်</button><div class="answer" id="vb4"><strong>Answer: kindness</strong><span class="why">kindness = ကြင်နာမှု</span></div></div>
+<div class="q"><div class="qtext">5. In social interactions, ---------- promotes trust and fosters healthy relationships.</div><button class="answer-btn" onclick="toggleAnswer('vb5')">အဖြေကြည့်ရန်</button><div class="answer" id="vb5"><strong>Answer: honesty</strong><span class="why">honesty = ရိုးသားမှု</span></div></div>
+<div class="q"><div class="qtext">6. To build a harmonious society, we should teach children the importance of ---------- for other's opinions.</div><button class="answer-btn" onclick="toggleAnswer('vb6')">အဖြေကြည့်ရန်</button><div class="answer" id="vb6"><strong>Answer: respect</strong><span class="why">respect = လေးစားမှု</span></div></div>
+<div class="q"><div class="qtext">7. He committed many crimes against humanity. He had to take ---------- for his actions.</div><button class="answer-btn" onclick="toggleAnswer('vb7')">အဖြေကြည့်ရန်</button><div class="answer" id="vb7"><strong>Answer: responsibility</strong><span class="why">responsibility = တာဝန်ယူမှု</span></div></div>
+<div class="q"><div class="qtext">8. Charity and pure ---------- are foundations for success in meditation practice.</div><button class="answer-btn" onclick="toggleAnswer('vb8')">အဖြေကြည့်ရန်</button><div class="answer" id="vb8"><strong>Answer: morality</strong><span class="why">morality = ကိုယ်ကျင့်တရား / မှန်ကန်ကောင်းမွန်သော ကျင့်ဝတ်</span></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 4C -->
+<section class="card">
+<div class="card-head">
+<h2>🔤 4C — Grammar</h2>
+<p>Gerund Phrases Vs. Participle Phrases</p>
+</div>
+<div class="card-body">
+
+<div class="instructions"><b>မှတ်ရန်:</b> Gerund = -ing form that works as a <strong>noun</strong>. Participle = verb form that can work as an <strong>adjective</strong> or a <strong>verb</strong>.</div>
+
+<div class="exercise">
+<div class="ex-head"><b>A.</b> Study the examples of Gerund and Participle and complete the table.</div>
+<div class="ex-body">
+<div class="table-wrap">
+<table>
+<thead><tr><th>Difference</th><th>Gerund</th><th>Participle</th></tr></thead>
+<tbody>
+<tr><th>Definition</th><td>A gerund is a progressive form (-ing) of a verb that works as a <strong>noun</strong> in a sentence.</td><td>A participle is a verb form that works either as an <strong>adjective</strong> or as a <strong>verb</strong> in a sentence.</td></tr>
+<tr><th>Types</th><td>1. The subject<br>2. The object of a verb<br>3. The object of a preposition<br>4. The object of a possessive pronoun<br>5. The subject complement</td><td>1. Present participle<br>2. Past participle</td></tr>
+<tr><th>Functions</th><td>A gerund functions only as a <strong>noun</strong>.</td><td>A participle can function either as an <strong>adjective</strong> or a <strong>verb</strong>.</td></tr>
+<tr><th>Positions</th><td>
+1. Before the main verb (as the subject)<br>
+2. After an action verb (transitive) — object of a verb<br>
+3. After a linking verb — subject complement<br>
+4. After a preposition — object of a preposition<br>
+5. After a possessive adjective — object of a possessive pronoun
+</td><td>
+1. Just before a noun<br>
+2. Just after a noun<br>
+3. After a linking verb (main verb)
+</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><strong>Examples:</strong> <b>Gardening </b>is fun. / I love<b> travelling</b>. → Gerund (noun).<br>
+The boy <b>playing</b> football in the rain is my nephew. / We are <b>living</b> in a <b>developing</b> country. → Participle.</div>
+</div>
+</div>
+
+<div class="exercise">
+<div class="ex-head"><b>B.</b> Decide if the underlined word group is a gerund phrase or a participial phrase. Write G or P.</div>
+<div class="ex-body">
+<div class="translation">အောက်မျဉ်းတားထားသော word group သည် Gerund Phrase (G) လား Participle Phrase (P) လား ခွဲခြားပါ။</div>
+
+<div class="q"><div class="qtext">1. I saw him <u>sitting at the café</u>.</div><button class="answer-btn" onclick="toggleAnswer('gb1')">အဖြေကြည့်ရန်</button><div class="answer" id="gb1"><strong>Answer: P — Participial phrase</strong></div></div>
+<div class="q"><div class="qtext">2. <u>Pointing at the puppy</u>, she said she really wanted to get one.</div><button class="answer-btn" onclick="toggleAnswer('gb2')">အဖြေကြည့်ရန်</button><div class="answer" id="gb2"><strong>Answer: P — Participial phrase</strong></div></div>
+<div class="q"><div class="qtext">3. <u>Smiling proudly</u>, my little niece showed off her new toys.</div><button class="answer-btn" onclick="toggleAnswer('gb3')">အဖြေကြည့်ရန်</button><div class="answer" id="gb3"><strong>Answer: P — Participial phrase</strong></div></div>
+<div class="q"><div class="qtext">4. <u>Going to the beach this summer</u> will be a lot of fun.</div><button class="answer-btn" onclick="toggleAnswer('gb4')">အဖြေကြည့်ရန်</button><div class="answer" id="gb4"><strong>Answer: G — Gerund phrase</strong></div></div>
+<div class="q"><div class="qtext">5. My pet dog, <u>wagging its tail wildly</u>, bounded out to meet us.</div><button class="answer-btn" onclick="toggleAnswer('gb5')">အဖြေကြည့်ရန်</button><div class="answer" id="gb5"><strong>Answer: P — Participial phrase</strong></div></div>
+<div class="q"><div class="qtext">6. She believes in <u>giving her whole heart</u>.</div><button class="answer-btn" onclick="toggleAnswer('gb6')">အဖြေကြည့်ရန်</button><div class="answer" id="gb6"><strong>Answer: G — Gerund phrase</strong></div></div>
+<div class="q"><div class="qtext">7. <u>Choosing the right specialisation</u> is a tough job for a lot of students.</div><button class="answer-btn" onclick="toggleAnswer('gb7')">အဖြေကြည့်ရန်</button><div class="answer" id="gb7"><strong>Answer: G — Gerund phrase</strong></div></div>
+<div class="q"><div class="qtext">8. I do not enjoy <u>spending a lot of time on social media</u>.</div><button class="answer-btn" onclick="toggleAnswer('gb8')">အဖြေကြည့်ရန်</button><div class="answer" id="gb8"><strong>Answer: G — Gerund phrase</strong></div></div>
+<div class="q"><div class="qtext">9. I have always been against <u>spending too much money on celebrations</u>.</div><button class="answer-btn" onclick="toggleAnswer('gb9')">အဖြေကြည့်ရန်</button><div class="answer" id="gb9"><strong>Answer: G — Gerund phrase</strong></div></div>
+<div class="q"><div class="qtext">10. Please help the old man <u>struggling to cross a street with heavy shopping bags</u>.</div><button class="answer-btn" onclick="toggleAnswer('gb10')">အဖြေကြည့်ရန်</button><div class="answer" id="gb10"><strong>Answer: P — Participial phrase</strong></div></div>
+</div>
+</div>
+
+<div class="exercise">
+<div class="ex-head"><b>C.</b> Identify the verbal as a participle or gerund. If participle, write the noun it modifies. If gerund, write its function.</div>
+<div class="ex-body">
+<div class="translation">Verbal phrase သည် Participle သို့မဟုတ် Gerund ဖြစ်ကြောင်း ခွဲခြားပါ။ Participle ဖြစ်လျှင် modify လုပ်သော noun ကိုရေးပါ။ Gerund ဖြစ်လျှင် subject, direct object, object of preposition, subjective complement စသည့် function ကိုရေးပါ။</div>
+
+<div class="q"><div class="qtext">1. Bill’s idea of fun is <u>watching cartoons every Saturday morning</u>.</div><button class="answer-btn" onclick="toggleAnswer('gc1')">အဖြေကြည့်ရန်</button><div class="answer" id="gc1"><strong>Gerund phrase — subjective complement.</strong></div></div>
+<div class="q"><div class="qtext">2. We enjoyed <u>visiting the museums</u> when we were in London.</div><button class="answer-btn" onclick="toggleAnswer('gc2')">အဖြေကြည့်ရန်</button><div class="answer" id="gc2"><strong>Gerund phrase — direct object.</strong></div></div>
+<div class="q"><div class="qtext">3. He had a valid excuse for <u>coming to the seminar late</u>.</div><button class="answer-btn" onclick="toggleAnswer('gc3')">အဖြေကြည့်ရန်</button><div class="answer" id="gc3"><strong>Gerund phrase — object of preposition (for).</strong></div></div>
+<div class="q"><div class="qtext">4. Marlar’s downfall is <u>eating snacks between meals</u>.</div><button class="answer-btn" onclick="toggleAnswer('gc4')">အဖြေကြည့်ရန်</button><div class="answer" id="gc4"><strong>Gerund phrase — subjective complement.</strong></div></div>
+<div class="q"><div class="qtext">5. The judges, <u>talking at length among themselves</u>, finally awarded the first prize to the outstanding student in our class.</div><button class="answer-btn" onclick="toggleAnswer('gc5')">အဖြေကြည့်ရန်</button><div class="answer" id="gc5"><strong>Participial phrase — modifies judges.</strong></div></div>
+<div class="q"><div class="qtext">6. <u>Clearing his throat</u>, the student representing Yangon Region began his impromptu talk.</div><button class="answer-btn" onclick="toggleAnswer('gc6')">အဖြေကြည့်ရန်</button><div class="answer" id="gc6"><strong>Participial phrase — modifies the student.</strong></div></div>
+<div class="q"><div class="qtext">7. I love <u>visiting a forest</u> which has real health benefits, both mental and physical.</div><button class="answer-btn" onclick="toggleAnswer('gc7')">အဖြေကြည့်ရန်</button><div class="answer" id="gc7"><strong>Gerund phrase — direct object.</strong></div></div>
+<div class="q"><div class="qtext">8. <u>Living in the rural area</u> provides fewer job opportunities.</div><button class="answer-btn" onclick="toggleAnswer('gc8')">အဖြေကြည့်ရန်</button><div class="answer" id="gc8"><strong>Gerund phrase — subject.</strong></div></div>
+<div class="q"><div class="qtext">9. The candidate <u>getting the most votes</u> wins the election.</div><button class="answer-btn" onclick="toggleAnswer('gc9')">အဖြေကြည့်ရန်</button><div class="answer" id="gc9"><strong>Participial phrase — modifies candidate.</strong></div></div>
+<div class="q"><div class="qtext">10. Have you ever come across an elderly lady <u>crossing a road on unsteady legs</u>?</div><button class="answer-btn" onclick="toggleAnswer('gc10')">အဖြေကြည့်ရန်</button><div class="answer" id="gc10"><strong>Participial phrase — modifies an elderly lady.</strong></div></div>
+
+
+</div>
+</div>
+
+</div>
+</section>
+
+<div class="next"><a href="grammar4.html">Additional Grammar</a></div>
+</main>
+</div>
+
+<footer class="footer">Grade-12 English Learning Hub • Unit 4 — Civic Values</footer>
+
+<script>
+(function(){
+ const root=document.documentElement;
+ const saved=localStorage.getItem("theme")||localStorage.getItem("siteTheme")||localStorage.getItem("g12-theme")||"light";
+ root.setAttribute("data-theme",saved==="dark"?"dark":"light");
+
+ const themeBtn=document.getElementById("themeBtn");
+ function syncIcon(){
+   themeBtn.textContent=root.getAttribute("data-theme")==="dark"?"🌙":"☀️";
+ }
+ syncIcon();
+
+ themeBtn.addEventListener("click",()=>{
+   const next=root.getAttribute("data-theme")==="dark"?"light":"dark";
+   root.setAttribute("data-theme",next);
+   localStorage.setItem("theme",next);
+   localStorage.setItem("siteTheme",next);
+   localStorage.setItem("g12-theme",next);
+   syncIcon();
+ });
+
+ window.addEventListener("storage",e=>{
+   if(["theme","siteTheme","g12-theme"].includes(e.key)){
+     const v=e.newValue==="dark"?"dark":"light";
+     root.setAttribute("data-theme",v); syncIcon();
+   }
+ });
+
+ const sidebar=document.getElementById("sidebar");
+ const overlay=document.getElementById("overlay");
+ const menuBtn=document.getElementById("menuBtn");
+
+ function closeMenu(){sidebar.classList.remove("open");overlay.classList.remove("show")}
+ menuBtn.addEventListener("click",()=>{sidebar.classList.add("open");overlay.classList.add("show")});
+ overlay.addEventListener("click",closeMenu);
+ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+ sidebar.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+})();
+
+function toggleAnswer(id){
+ const el=document.getElementById(id);
+ if(el) el.classList.toggle("show");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review 1 | Grade-12 English Learning Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7fb;--surface:#fff;--surface2:#eef5ff;--text:#172033;--muted:#667085;
+  --primary:#2463d4;--primary2:#1748a4;--line:#dce5f2;--shadow:0 16px 45px rgba(23,32,51,.09);
+  --green:#0c9b77;--orange:#e9822b;--purple:#7656d6;--danger:#d14b61;
+}
+html[data-theme="dark"]{
+  --bg:#0c1220;--surface:#131c2d;--surface2:#19263b;--text:#f4f7ff;--muted:#aab6c8;
+  --primary:#68a0ff;--primary2:#8db8ff;--line:#2b3a51;--shadow:0 18px 48px rgba(0,0,0,.28);
+  --green:#4dd7b0;--orange:#ffad65;--purple:#ad94ff;--danger:#ff8799;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Padauk",sans-serif;line-height:1.75}
+button,a{font:inherit}
+a{text-decoration:none;color:inherit}
+.header{
+ position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--surface) 92%,transparent);
+ backdrop-filter:blur(18px);border-bottom:1px solid var(--line)
+}
+.nav{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-size:23px;font-weight:800;letter-spacing:-.8px}.brand span{color:var(--primary)}
+.nav-actions{display:flex;gap:10px}
+.icon-btn{width:52px;height:52px;border:1px solid var(--line);border-radius:17px;background:var(--surface);color:var(--text);cursor:pointer;font-size:24px;box-shadow:0 6px 18px rgba(20,40,80,.06)}
+.hero{
+ position:relative;overflow:hidden;color:white;
+ background:linear-gradient(135deg,#132b68 0%,#1469a9 48%,#078b83 100%);
+ padding:74px 20px 78px;
+}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.14);transform:rotate(32deg)}
+.hero:before{width:420px;height:420px;right:-100px;top:-170px;box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 140px rgba(255,255,255,.02)}
+.hero:after{width:330px;height:330px;left:-130px;bottom:-190px}
+.hero-inner{max-width:1100px;margin:auto;position:relative;z-index:2}
+.eyebrow{display:inline-flex;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);font-weight:700;font-size:13px;letter-spacing:.8px}
+.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.03;margin:18px 0 18px;letter-spacing:-2.5px}
+.hero h1 span{color:#8ff0df}
+.hero p{max-width:760px;font-size:16px;color:rgba(255,255,255,.88);margin:0}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{padding:10px 14px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:13px}
+.wrap{max-width:1050px;margin:0 auto;padding:42px 18px 80px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}
+.card-head{padding:25px 25px 20px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--surface2),var(--surface))}
+.card-head h2{margin:0;font-size:25px;letter-spacing:-.6px}
+.card-head p{margin:5px 0 0;color:var(--muted);font-size:14px}
+.card-body{padding:25px}
+.section-title{display:flex;align-items:center;gap:10px;margin:0 0 18px;font-size:20px;color:var(--primary)}
+.q{border:1px solid var(--line);border-radius:20px;padding:18px;margin:13px 0;background:var(--surface)}
+.qnum{font-weight:800;color:var(--primary);margin-right:6px}
+.question{font-weight:650}
+.options{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+.options li{margin:4px 0}
+.answer{margin-top:13px;padding:14px 16px;border-radius:15px;background:rgba(36,99,212,.08);border-left:4px solid var(--primary);display:none}
+.answer.show{display:block}
+.answer strong{color:var(--primary)}
+.answer .mm{display:block;margin-top:5px;color:var(--muted);font-family:"Padauk","Plus Jakarta Sans",sans-serif}
+.reveal{margin-top:12px;border:1px solid var(--primary);color:var(--primary);background:transparent;border-radius:12px;padding:9px 13px;cursor:pointer;font-weight:700}
+.prompt{padding:15px 17px;border-radius:17px;background:var(--surface2);border-left:4px solid var(--primary);margin-bottom:15px}
+.fill{margin:12px 0;padding:16px;border:1px solid var(--line);border-radius:17px}
+.fill .sentence{font-weight:600}
+.answer-list{margin:0;padding-left:22px}
+.answer-list li{margin:9px 0}
+.note{padding:16px;border-radius:17px;background:rgba(12,155,119,.09);border-left:4px solid var(--green);color:var(--text)}
+.mini-table{width:100%;border-collapse:collapse;margin-top:12px;overflow:hidden;border-radius:15px}
+.mini-table th,.mini-table td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}
+.mini-table th{background:var(--surface2)}
+.navbar-bottom{display:flex;justify-content:space-between;gap:12px;margin-top:30px}
+.bottom-btn{display:inline-flex;align-items:center;gap:8px;padding:13px 17px;border-radius:15px;background:var(--surface);border:1px solid var(--line);font-weight:700}
+.side-overlay{position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:80;display:none}
+.side-overlay.open{display:block}
+.side{position:fixed;right:0;top:0;height:100%;width:min(360px,88vw);background:var(--surface);z-index:90;transform:translateX(100%);transition:.28s;box-shadow:-15px 0 45px rgba(0,0,0,.18);padding:22px;overflow:auto}
+.side.open{transform:translateX(0)}
+.side-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.side h3{margin:0}
+.close{border:0;background:var(--surface2);color:var(--text);width:42px;height:42px;border-radius:13px;cursor:pointer;font-size:20px}
+.menu-link{display:block;padding:13px 14px;border-radius:14px;margin:6px 0;color:var(--muted);font-weight:600}
+.menu-link:hover{background:var(--surface2);color:var(--primary)}
+.menu-link.active{background:rgba(36,99,212,.11);color:var(--primary);font-weight:800}
+footer{text-align:center;color:var(--muted);padding:10px 18px 35px;font-size:13px}
+@media(max-width:600px){
+ .nav{padding:11px 14px}.brand{font-size:19px}.icon-btn{width:46px;height:46px;border-radius:15px}
+ .hero{padding:52px 18px 58px}.hero h1{font-size:42px;letter-spacing:-1.7px}.hero p{font-size:14px}
+ .wrap{padding:26px 11px 60px}.card{border-radius:22px}.card-head{padding:21px 18px 16px}.card-head h2{font-size:21px}.card-body{padding:16px}
+ .q{padding:15px;border-radius:17px}.question{font-size:14px}.options{font-size:13px;padding-left:19px}
+ .answer{font-size:14px}.mini-table{font-size:13px}
+ .navbar-bottom{flex-direction:column}.bottom-btn{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="nav">
+    <a class="brand" href="index.html">Grade-12 <span>English</span></a>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button>
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">GRADE 12 • REVISION</span>
+    <h1>Review <span>1</span></h1>
+    <p>Units 1–3 Revision • Idioms • Used to / Be used to / Get used to • Phrasal Verbs • Relative Adverbs • Compound Words</p>
+    <div class="hero-chips">
+      <span class="chip">📝 Part A — Expressions</span>
+      <span class="chip">✏️ Part B — Grammar & Phrasal Verbs</span>
+      <span class="chip">📚 Unit 3 Vocabulary</span>
+      <span class="chip">🇲🇲 မြန်မာဘာသာဖြင့် ရှင်းလင်းချက်</span>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+<section class="card">
+ <div class="card-head">
+   <h2>📝 Part A — Complete the Sentences</h2>
+   <p>Choose the correct expression from the brackets.</p>
+ </div>
+ <div class="card-body">
+   <div class="prompt"><b>Instruction:</b> Complete each sentence with the correct expression given in brackets.</div>
+   <div id="partA">
+    <div class="q"><div class="question"><span class="qnum">1.</span>You need to ______ to deal with this unusual problem.</div><div class="options"><li>go out on a limb</li><li>think outside the box</li></div><div class="answer"><strong>Answer: think outside the box</strong><span class="mm">အဖြေ — ပုံမှန်စဉ်းစားနည်းထက် ကျော်လွန်ပြီး နည်းလမ်းအသစ်ဖြင့် စဉ်းစားသည်။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">2.</span>She always tries her best in the class so that she can stay ______.</div><div class="options"><li>ahead of the pack</li><li>the bottom line</li></div><div class="answer"><strong>Answer: ahead of the pack</strong><span class="mm">အဖြေ — အခြားသူများထက် ရှေ့တွင်ရှိသည်။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">3.</span>Try to understand and use idioms. They are ______. They are interesting to learn.</div><div class="options"><li>no-holds-barred</li><li>not rocket science</li></div><div class="answer"><strong>Answer: not rocket science</strong><span class="mm">အဖြေ — အလွန်ခက်ခဲနားမလည်နိုင်လောက်တဲ့ အရာမဟုတ်ပါ။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">4.</span>As the kittens have lost their mother, they look very ______.</div><div class="options"><li>ruthless</li><li>vulnerable</li></div><div class="answer"><strong>Answer: vulnerable</strong><span class="mm">အဖြေ — အကာအကွယ်မဲ့ပြီး အန္တရာယ်ကျရောက်လွယ်သော။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">5.</span>It is a bit ______ process to change career.</div><div class="options"><li>hard</li><li>daunting</li></div><div class="answer"><strong>Answer: daunting</strong><span class="mm">အဖြေ — ကြောက်ရွံ့စိုးရိမ်စရာကောင်းပြီး ခက်ခဲပုံရသော။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">6.</span>She is rather conservative or not ______ enough to accept the social change though it may be harmless.</div><div class="options"><li>optimistic</li><li>false</li></div><div class="answer"><strong>Answer: optimistic</strong><span class="mm">အဖြေ — အကောင်းမြင်သော။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">7.</span>By means of ______, scientists insert genes from one organism into another, creating new traits.</div><div class="options"><li>biodiversity</li><li>biotechnology</li></div><div class="answer"><strong>Answer: biotechnology</strong><span class="mm">အဖြေ — သက်ရှိများ/ဇီဝစနစ်များကို အသုံးပြု၍ အသုံးဝင်သော ထုတ်ကုန်များဖန်တီးသည့် နည်းပညာ။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">8.</span>By using ______ products, we can reduce the harmful impact on the environment.</div><div class="options"><li>socioeconomic</li><li>eco-friendly</li></div><div class="answer"><strong>Answer: eco-friendly</strong><span class="mm">အဖြေ — ပတ်ဝန်းကျင်ကို မထိခိုက်စေသော။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">9.</span>______ power uses the natural flow of moving water to generate electricity.</div><div class="options"><li>Socioeconomic</li><li>Hydroelectric</li></div><div class="answer"><strong>Answer: Hydroelectric</strong><span class="mm">အဖြေ — ရေစီးဆင်းမှုကို အသုံးပြု၍ လျှပ်စစ်ထုတ်လုပ်သော။</span></div></div>
+    <div class="q"><div class="question"><span class="qnum">10.</span>______ enables us to have easy access to the people we would like to contact regardless of the places they live.</div><div class="options"><li>Telecommunication</li><li>Neuroscience</li></div><div class="answer"><strong>Answer: Telecommunication</strong><span class="mm">အဖြေ — အဝေးမှ သတင်းအချက်အလက်/ဆက်သွယ်မှုများ ပြုလုပ်နိုင်စေသော ဆက်သွယ်ရေးနည်းပညာ။</span></div></div>
+   </div>
+   <button class="reveal" onclick="toggleAnswers('partA',this)">အဖြေများ ပြရန်</button>
+ </div>
+</section>
+
+<section class="card">
+ <div class="card-head">
+   <h2>✏️ Part B — Grammar & Phrasal Verbs</h2>
+   <p>Used to • Be used to • Get used to • Phrasal Verbs • Relative Adverbs</p>
+ </div>
+ <div class="card-body">
+   <h3 class="section-title">B1. Used to / Be used to / Get used to</h3>
+   <div id="b1">
+    <div class="fill"><div class="sentence">1. I ______ swim in the Ayeyarwaddy river in my childhood.</div><div class="options">used to / was used to / got used to</div><div class="answer"><strong>Answer: used to</strong><span class="mm">အတိတ်ကာလမှာ ပုံမှန်လုပ်ခဲ့ဖူးသော အလေ့အထကို ဖော်ပြသောကြောင့် <b>used to + V1</b> ဖြစ်သည်။</span></div></div>
+    <div class="fill"><div class="sentence">2. It took me a while to ______ my new i-phone.</div><div class="options">be used to / being used to / get used to</div><div class="answer"><strong>Answer: get used to</strong><span class="mm">အသစ်တစ်ခုနှင့် အကျွမ်းဝင်လာသည့် လုပ်ငန်းစဉ်ကို ဖော်ပြသောကြောင့် <b>get used to + noun/V-ing</b> ဖြစ်သည်။</span></div></div>
+    <div class="fill"><div class="sentence">3. I ______ spicy food now because of my room-mate who always have spicy food.</div><div class="options">used to / am used to / am getting used to</div><div class="answer"><strong>Answer: am getting used to</strong><span class="mm">လက်ရှိအချိန်တွင် တဖြည်းဖြည်း အကျွမ်းဝင်လာနေခြင်းကို ဖော်ပြသည်။</span></div></div>
+    <div class="fill"><div class="sentence">4. I ______ the new job as it is very demanding. But I will try my best.</div><div class="options">did not use to / am not used to / can't get used to</div><div class="answer"><strong>Answer: can't get used to</strong><span class="mm">အလုပ်အသစ်နှင့် အကျွမ်းမဝင်နိုင်သေးခြင်းကို ဖော်ပြသည်။</span></div></div>
+   </div>
+   <button class="reveal" onclick="toggleAnswers('b1',this)">အဖြေများ ပြရန်</button>
+
+   <h3 class="section-title" style="margin-top:30px">B2. Phrasal Verbs</h3>
+   <div id="b2">
+    <div class="fill"><div class="sentence">5. In the play, the son and the daughter of the two enemies ______ lovers.</div><div class="options">result in / turn into</div><div class="answer"><strong>Answer: turn into</strong><span class="mm">တစ်စုံတစ်ရာအဖြစ် ပြောင်းလဲသွားသည်ဟု အဓိပ္ပါယ်ရသည်။</span></div></div>
+    <div class="fill"><div class="sentence">6. Don't ______ the weakness of others.</div><div class="options">look at / sneer at</div><div class="answer"><strong>Answer: sneer at</strong><span class="mm">တစ်စုံတစ်ဦးကို မထီမဲ့မြင်/အထင်သေးစွာ ပြောဆိုကြည့်ရှုသည်။</span></div></div>
+    <div class="fill"><div class="sentence">7. When her boss is away on business, she ______ the company.</div><div class="options">takes charge of / keeps in mind</div><div class="answer"><strong>Answer: takes charge of</strong><span class="mm">တာဝန်ယူပြီး ထိန်းချုပ်စီမံသည်ဟု အဓိပ္ပါယ်ရသည်။</span></div></div>
+   </div>
+   <button class="reveal" onclick="toggleAnswers('b2',this)">အဖြေများ ပြရန်</button>
+
+   <h3 class="section-title" style="margin-top:30px">B3. Relative Adverbs — where / when / why</h3>
+   <div id="b3">
+    <div class="fill"><div class="sentence">8. I feel quite nostalgic for the town. I grew up there.</div><div class="answer"><strong>Answer: I feel quite nostalgic for the town where I grew up.</strong><span class="mm"><b>where</b> ကို နေရာကို ရည်ညွှန်းရာတွင် အသုံးပြုသည်။</span></div></div>
+    <div class="fill"><div class="sentence">9. I want to go back to my childhood. I had no worries and no stress then.</div><div class="answer"><strong>Answer: I want to go back to my childhood when I had no worries and no stress.</strong><span class="mm"><b>when</b> ကို အချိန်/ကာလကို ရည်ညွှန်းရာတွင် အသုံးပြုသည်။</span></div></div>
+    <div class="fill"><div class="sentence">10. I can't understand the reason. Some people show off too much on social media.</div><div class="answer"><strong>Answer: I can't understand the reason why some people show off too much on social media.</strong><span class="mm"><b>why</b> ကို အကြောင်းရင်းကို ရည်ညွှန်းရာတွင် အသုံးပြုသည်။</span></div></div>
+   </div>
+   <button class="reveal" onclick="toggleAnswers('b3',this)">အဖြေများ ပြရန်</button>
+ </div>
+</section>
+
+<section class="card">
+ <div class="card-head">
+   <h2>📚 Quick Review — Key Vocabulary</h2>
+   <p>Review 1 မှာ ပါဝင်တဲ့ အရေးကြီးသော expressions နှင့် vocabulary များ</p>
+ </div>
+ <div class="card-body">
+  <table class="mini-table">
+   <thead><tr><th>Word / Expression</th><th>Meaning</th></tr></thead>
+   <tbody>
+    <tr><td>think outside the box</td><td>ပုံမှန်နည်းလမ်းထက် ကျော်လွန်ပြီး နည်းလမ်းသစ်ဖြင့် စဉ်းစားသည်</td></tr>
+    <tr><td>ahead of the pack</td><td>အခြားသူများထက် ရှေ့တွင်ရှိသည်</td></tr>
+    <tr><td>not rocket science</td><td>အလွန်ခက်ခဲသောအရာ မဟုတ်</td></tr>
+    <tr><td>vulnerable</td><td>အန္တရာယ်ကျရောက်လွယ်သော / အကာအကွယ်မဲ့သော</td></tr>
+    <tr><td>daunting</td><td>ကြောက်စရာ/ခက်ခဲပုံရသော</td></tr>
+    <tr><td>optimistic</td><td>အကောင်းမြင်သော</td></tr>
+    <tr><td>biotechnology</td><td>ဇီဝနည်းပညာ</td></tr>
+    <tr><td>eco-friendly</td><td>ပတ်ဝန်းကျင်နှင့် သဟဇာတဖြစ်သော</td></tr>
+    <tr><td>hydroelectric</td><td>ရေအားလျှပ်စစ်နှင့်ဆိုင်သော</td></tr>
+    <tr><td>telecommunication</td><td>ဆက်သွယ်ရေးနည်းပညာ</td></tr>
+   </tbody>
+  </table>
+ </div>
+</section>
+
+<div class="note">
+  <b>📌 Exam Tip</b><br>
+  <span style="font-family:'Padauk','Plus Jakarta Sans',sans-serif">Review 1 မှာ <b>used to / be used to / get used to</b> တို့ရဲ့ နောက်မှာ ဘာလိုက်ရမလဲ၊ <b>where / when / why</b> ကို ဘယ်အခြေအနေမှာ သုံးရမလဲ၊ phrasal verbs တွေရဲ့ meaning ကို သေချာခွဲခြားမှတ်သားပါ။</span>
+</div>
+
+<div class="navbar-bottom">
+ <a class="bottom-btn" href="unit3.html">← Unit 3</a>
+ <a class="bottom-btn" href="poem1.html">Next: Poem 1 →</a>
+</div>
+</main>
+
+<footer>Grade-12 English Learning Hub • Review 1</footer>
+
+<div class="side-overlay" id="overlay"></div>
+<aside class="side" id="side">
+ <div class="side-top"><h3>📚 Review 1 Menu</h3><button class="close" id="closeBtn">×</button></div>
+ <a class="menu-link" href="index.html">🏠 Home</a>
+ <a class="menu-link" href="unit1.html">Unit 1 — Chasing Dreams</a>
+ <a class="menu-link" href="unit2.html">Unit 2 — AI & Robotics</a>
+ <a class="menu-link" href="unit3.html">Unit 3 — Equal Access to Education</a>
+ <a class="menu-link active" href="review1.html">Review 1</a>
+ <a class="menu-link" href="poem1.html">Poem 1 — Equality</a>
+ <a class="menu-link" href="unit4.html">Unit 4 — Civic Values</a>
+ <a class="menu-link" href="unit5.html">Unit 5 — Self-Awareness</a>
+ <a class="menu-link" href="unit6.html">Unit 6 — Small Steps, Giant Leaps</a>
+</aside>
+
+<script>
+(function(){
+ const html=document.documentElement;
+ const saved=localStorage.getItem("theme")||localStorage.getItem("siteTheme")||localStorage.getItem("g12-theme")||"light";
+ html.setAttribute("data-theme",saved==="dark"?"dark":"light");
+ const themeBtn=document.getElementById("themeBtn");
+ function updateIcon(){themeBtn.textContent=html.getAttribute("data-theme")==="dark"?"🌙":"☀️";}
+ updateIcon();
+ themeBtn.addEventListener("click",()=>{
+   const next=html.getAttribute("data-theme")==="dark"?"light":"dark";
+   html.setAttribute("data-theme",next);
+   localStorage.setItem("theme",next);localStorage.setItem("siteTheme",next);localStorage.setItem("g12-theme",next);
+   updateIcon();
+ });
+ window.addEventListener("storage",(e)=>{
+   if(["theme","siteTheme","g12-theme"].includes(e.key)){
+     const v=e.newValue==="dark"?"dark":"light";html.setAttribute("data-theme",v);updateIcon();
+   }
+ });
+ const side=document.getElementById("side"),overlay=document.getElementById("overlay");
+ document.getElementById("menuBtn").onclick=()=>{side.classList.add("open");overlay.classList.add("open")};
+ document.getElementById("closeBtn").onclick=closeMenu;overlay.onclick=closeMenu;
+ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
+ function closeMenu(){side.classList.remove("open");overlay.classList.remove("open")}
+})();
+function toggleAnswers(id,btn){
+ const box=document.getElementById(id);
+ const answers=box.querySelectorAll(".answer");
+ const show=!answers[0]?.classList.contains("show");
+ answers.forEach(a=>a.classList.toggle("show",show));
+ btn.textContent=show?"အဖြေများ ဖျောက်ရန်":"အဖြေများ ပြရန်";
+}
+</script>
+</body>
+</html>
