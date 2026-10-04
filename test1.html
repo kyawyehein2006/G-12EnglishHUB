@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/><title>Grade 12 English Practice Test 1 — Updated</title><style>
+:root{--navy:#102a43;--navy2:#163d5c;--gold:#d7a83f;--ink:#1c2733;--line:#d9e0e7;--good:#137333;--bad:#b3261e}
+*{box-sizing:border-box}body{margin:0;background:#eef2f5;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+.top{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,var(--navy),var(--navy2));color:white;padding:14px 18px;box-shadow:0 3px 16px #0002}
+.topin{max-width:1240px;margin:auto;display:flex;gap:18px;align-items:center;justify-content:space-between}.brand{font-weight:800}.brand small{display:block;font-weight:500;opacity:.78}
+.progress{height:7px;background:#ffffff2a;border-radius:9px;overflow:hidden;margin-top:10px}.bar{height:100%;width:0;background:var(--gold);transition:.25s}
+.wrap{max-width:1240px;margin:24px auto;padding:0 14px}.paper{background:white;border:1px solid #dbe2e8;border-radius:18px;box-shadow:0 10px 30px #102a4312;overflow:hidden}
+.hero{padding:30px 34px;background:linear-gradient(180deg,#fff,#f8fafc);border-bottom:1px solid var(--line)}
+h1{margin:0 0 6px;font-size:clamp(25px,4vw,38px);color:var(--navy)}h2{color:var(--navy);font-size:24px;margin:0 0 16px}h3{color:var(--navy);margin-top:28px}.meta{display:flex;gap:10px;flex-wrap:wrap}.pill{border:1px solid #d9c17a;background:#fff9e9;color:#6e5310;border-radius:999px;padding:5px 10px;font-size:13px;font-weight:700}
+.section{padding:32px 34px;border-bottom:1px solid var(--line)}.section:last-child{border-bottom:0}.sectionhead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.marks{font-weight:800;color:#6e5310;background:#fff7dc;border:1px solid #e8d39a;border-radius:10px;padding:5px 9px;white-space:nowrap}
+.passage{background:#fbfcfd;border-left:4px solid var(--gold);padding:20px 22px;border-radius:10px;margin:18px 0;font-family:Georgia,serif}.passage p{margin:0 0 15px}.passage p:last-child{margin-bottom:0}
+.question{border:1px solid var(--line);border-radius:13px;padding:16px 17px;margin:13px 0;background:#fff}.qtext{font-weight:650;margin-bottom:10px}.opt{display:flex;gap:9px;align-items:flex-start;padding:8px 10px;border-radius:9px;cursor:pointer}.opt:hover{background:#f4f7fa}.opt input{margin-top:5px;accent-color:var(--navy)}
+select{width:100%;padding:11px;border:1px solid #cbd5df;border-radius:9px;background:white;font:inherit}.feedback{display:none;margin-top:9px;padding:9px 11px;border-radius:8px;font-size:14px}.feedback.show{display:block}.correct{background:#eaf7ee;color:var(--good)}.wrong{background:#fff0ef;color:var(--bad)}
+.letterbox{background:#fafbfd;border:1px solid var(--line);border-radius:12px;padding:18px;margin:15px 0}
+.actions{position:sticky;bottom:0;background:#ffffffee;backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:14px 18px;z-index:15}.actionin{max-width:1240px;margin:auto;display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:11px 16px;font-weight:800;cursor:pointer}.primary{background:var(--navy);color:#fff}.secondary{background:#edf2f7;color:var(--navy)}
+#result{display:none;max-width:1240px;margin:18px auto;padding:0 14px}.resultbox{background:white;border:2px solid var(--gold);border-radius:16px;padding:22px;box-shadow:0 8px 25px #0001}.score{font-size:34px;font-weight:900;color:var(--navy)}
+.notice{padding:12px 14px;border-radius:10px;background:#eef6ff;border:1px solid #cfe1f4;margin:14px 0}.warn{background:#fff8e7;border-color:#ead49b}
+.audio-wrap{background:#f7fafc;border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}.audio-wrap audio{width:100%}.script-hidden{display:none}.scriptbox{margin-top:16px}
+@media(max-width:700px){.wrap{padding:0 6px;margin:8px auto}.hero,.section{padding:20px 13px}.top{padding:11px}.question{padding:14px}}
+@media print{.top,.actions{display:none!important}.wrap{max-width:none;margin:0}.paper{box-shadow:none;border:0}.section{break-inside:auto}}
+.profile-img{width:45px;height:45px;object-fit:cover;border-radius:38px;vertical-align:middle}
+
+.qnumber{
+  font-size:18px;
+  font-weight:900;
+  color:var(--navy);
+  margin-bottom:7px;
+  letter-spacing:.2px;
+}
+.selectans{
+  appearance:auto;
+  min-height:50px;
+  padding:12px 44px 12px 14px;
+  font-size:16px;
+  border:1.5px solid #cbd5df;
+  border-radius:12px;
+  background:#fff;
+  color:var(--ink);
+  cursor:pointer;
+}
+.selectans:focus{
+  outline:3px solid #d7a83f55;
+  border-color:var(--gold);
+}
+.v-select-wrap{
+  margin-top:10px;
+}
+.v-select-label{
+  display:block;
+  font-size:13px;
+  font-weight:800;
+  color:#6e5310;
+  margin-bottom:6px;
+}
+.listening-statement{
+  font-weight:650;
+  line-height:1.6;
+}
+</style></head>
+<body><header class="top"><div class="topin"><div class="brand">ENGLISH TEST <small>Practice Test 1</small></div><div class="progressText">0 / 0 answered</div></div><div class="progress"><div class="bar"></div></div></header>
+<main class="wrap"><div class="paper"><div class="hero"><h1><b>English Practice Test 1</b></h1><p><b>Answer all questions. (100 Marks)</b></p><div class="notice warn"><b>Rule:</b> ကိုယ်ပိုင်စွမ်းရည်၊ ကိုယ်ပိုင်ဉာဏ်ဖြင့် မိမိ၏အင်္ဂလိပ်ဘာသာ အရည်အချင်းကို စစ်ဆေးဖြေဆိုပါ။ ဤမေးခွန်းသည် မိမိ၏အင်္ဂလိပ်ဘာသာအရည်အချင်းကို လေ့ကျင့်စစ်ဆေးနိုင်ရန် ရည်ရွယ်ပါသည်။</div></div>
+<section class="section"><div class="sectionhead"><div><h2>I. Read the passage.</h2></div><span class="marks">1 × 10 = 10 marks</span></div><div class="passage"><p><b>Steve Jobs</b></p>
+<p>Steve Jobs, an American businessman who founded Apple Inc. and NeXT Inc., was born in San Fransisco, California, U.S. in 1955. Jobs was only 19 when he started his invention – the Apple I, which he called the logic board. You might be amazed to know where and how he invented it. Jobs and his former high school friend Stephen Wozniak designed it in his family garage with the money obtained by selling Jobs’s Volkswagen minibus and Wozniak’s programmable calculator. The personal computer, the Apple, appealed to a broad audience and gradually, Jobs became one of the first entrepreneurs. With Jobs’s encouragement, Wozniak designed an improved model, the Apple II, complete with a keyboard, and they arranged to have a sleek, molded plastic case manufactured to enclose the unit.</p>
+<p><b>Jeff Bezos</b></p>
+<p>Nowadays, people all over the world are getting used to shopping online and most of them are familiar with the name Amazon.com., an online shopping website. Its founder is Jeff Bezos, an American entrepreneur, and he was born in New Mexico in 1964. In 1995, at the age of 31, Bezos began developing the software for the site, working out of his garage with a handful of employees. Under his guidance, Amazon became the largest retailer on the World Wide Web and the model for Internet sales. Named after the South American River, Amazon sold its first book. Amazon.com is an online merchant of books and later of a wide variety of products. It is a vast Internet-based enterprise that sells books, music, movies, housewares, electronics, toys, and many other goods. With the attractive motto <i>Spend less, Smile more!</i> Amazon stays ahead of the pack and is one of the best online shopping websites.</p></div><h3>Choose the best answer to complete each sentence.</h3><article class="question" data-answer="B" data-explain="The passage shows Jobs was 19, worked with Wozniak, used a family garage, and financed the early project by selling possessions." data-points="1" data-q="I_1">
+<div class="qnumber">1.</div><div class="qtext">Steve Jobs’s early success can best be understood as the result of ________.</div>
+<label class="opt"><input name="I_1" type="radio" value="A"/> <span><b>A.</b> had access to a large company before becoming an entrepreneur.</span></label>
+<label class="opt"><input name="I_1" type="radio" value="B"/> <span><b>B.</b> combined youthful initiative with practical collaboration and limited resources.</span></label>
+<label class="opt"><input name="I_1" type="radio" value="C"/> <span><b>C.</b> received financial support from established computer manufacturers.</span></label>
+<label class="opt"><input name="I_1" type="radio" value="D"/> <span><b>D.</b> developed the Apple II before he and Wozniak built the Apple I.</span></label>
+<div class="feedback" id="fb-I_1"></div></article><article class="question" data-answer="C" data-explain="They sold personal possessions to obtain money for the project." data-points="1" data-q="I_2">
+<div class="qnumber">2.</div><div class="qtext">The detail about selling the Volkswagen minibus and calculator mainly shows that ________.</div>
+<label class="opt"><input name="I_2" type="radio" value="A"/> <span><b>A.</b> the two inventors were interested in collecting valuable equipment.</span></label>
+<label class="opt"><input name="I_2" type="radio" value="B"/> <span><b>B.</b> their first project depended on profits from an existing computer company.</span></label>
+<label class="opt"><input name="I_2" type="radio" value="C"/> <span><b>C.</b> they found a practical way to finance an early experiment themselves.</span></label>
+<label class="opt"><input name="I_2" type="radio" value="D"/> <span><b>D.</b> Wozniak was more financially successful than Jobs at the beginning.</span></label>
+<div class="feedback" id="fb-I_2"></div></article><article class="question" data-answer="A" data-explain="The passage calls it an improved model and notes its keyboard and molded plastic case." data-points="1" data-q="I_3">
+<div class="qnumber">3.</div><div class="qtext">The Apple II can be regarded as an important development because it ________.</div>
+<label class="opt"><input name="I_3" type="radio" value="A"/> <span><b>A.</b> was a more usable version that included features designed for wider use.</span></label>
+<label class="opt"><input name="I_3" type="radio" value="B"/> <span><b>B.</b> was invented by Bezos after Amazon had become successful.</span></label>
+<label class="opt"><input name="I_3" type="radio" value="C"/> <span><b>C.</b> replaced the need for Jobs and Wozniak to work together.</span></label>
+<label class="opt"><input name="I_3" type="radio" value="D"/> <span><b>D.</b> was produced before the Apple I attracted public interest.</span></label>
+<div class="feedback" id="fb-I_3"></div></article><article class="question" data-answer="D" data-explain="Bezos began developing the software for the site in 1995." data-points="1" data-q="I_4">
+<div class="qnumber">4.</div><div class="qtext">Amazon was first developed by Bezos as ________.</div>
+<label class="opt"><input name="I_4" type="radio" value="A"/> <span><b>A.</b> a physical department store.</span></label>
+<label class="opt"><input name="I_4" type="radio" value="B"/> <span><b>B.</b> a satellite communication company.</span></label>
+<label class="opt"><input name="I_4" type="radio" value="C"/> <span><b>C.</b> a manufacturer of household electronics.</span></label>
+<label class="opt"><input name="I_4" type="radio" value="D"/> <span><b>D.</b> a software project for an online shopping site.</span></label>
+<div class="feedback" id="fb-I_4"></div></article><article class="question" data-answer="C" data-explain="In context, the phrase indicates continuing to perform competitively." data-points="1" data-q="I_5">
+<div class="qnumber">5.</div><div class="qtext">The phrase “stays ahead of the pack” suggests that Amazon ________.</div>
+<label class="opt"><input name="I_5" type="radio" value="A"/> <span><b>A.</b> avoids selling products online.</span></label>
+<label class="opt"><input name="I_5" type="radio" value="B"/> <span><b>B.</b> was named after a European river.</span></label>
+<label class="opt"><input name="I_5" type="radio" value="C"/> <span><b>C.</b> remains competitive and successful.</span></label>
+<label class="opt"><input name="I_5" type="radio" value="D"/> <span><b>D.</b> has only a small number of customers.</span></label>
+<div class="feedback" id="fb-I_5"></div></article><article class="question" data-answer="A" data-explain="The passage explicitly says they designed it in his family garage." data-points="1" data-q="I_6">
+<div class="qnumber">6.</div><div class="qtext">The Apple I was developed by Jobs and Wozniak ________.</div>
+<label class="opt"><input name="I_6" type="radio" value="A"/> <span><b>A.</b> in a family garage.</span></label>
+<label class="opt"><input name="I_6" type="radio" value="B"/> <span><b>B.</b> in a large factory.</span></label>
+<label class="opt"><input name="I_6" type="radio" value="C"/> <span><b>C.</b> at a university laboratory.</span></label>
+<label class="opt"><input name="I_6" type="radio" value="D"/> <span><b>D.</b> inside Amazon’s offices.</span></label>
+<div class="feedback" id="fb-I_6"></div></article><article class="question" data-answer="C" data-explain="The passage states that in 1995, at age 31, Bezos began developing the software." data-points="1" data-q="I_7">
+<div class="qnumber">7.</div><div class="qtext">Bezos began developing the software for Amazon when he was ________.</div>
+<label class="opt"><input name="I_7" type="radio" value="A"/> <span><b>A.</b> 19</span></label>
+<label class="opt"><input name="I_7" type="radio" value="B"/> <span><b>B.</b> 25</span></label>
+<label class="opt"><input name="I_7" type="radio" value="C"/> <span><b>C.</b> 31</span></label>
+<label class="opt"><input name="I_7" type="radio" value="D"/> <span><b>D.</b> 40</span></label>
+<div class="feedback" id="fb-I_7"></div></article><article class="question" data-answer="B" data-explain="A handful means a small number." data-points="1" data-q="I_8">
+<div class="qnumber">8.</div><div class="qtext">The phrase “a handful of employees” means ________.</div>
+<label class="opt"><input name="I_8" type="radio" value="A"/> <span><b>A.</b> a very large workforce.</span></label>
+<label class="opt"><input name="I_8" type="radio" value="B"/> <span><b>B.</b> a small number of employees.</span></label>
+<label class="opt"><input name="I_8" type="radio" value="C"/> <span><b>C.</b> employees who worked only with their hands.</span></label>
+<label class="opt"><input name="I_8" type="radio" value="D"/> <span><b>D.</b> workers from several countries.</span></label>
+<div class="feedback" id="fb-I_8"></div></article><article class="question" data-answer="C" data-explain="Both accounts describe young entrepreneurs developing ideas through practical work, collaboration and persistence." data-points="1" data-q="I_9">
+<div class="qnumber">9.</div><div class="qtext">The two biographies support the conclusion that ________.</div>
+<label class="opt"><input name="I_9" type="radio" value="A"/> <span><b>A.</b> success always begins with large amounts of money.</span></label>
+<label class="opt"><input name="I_9" type="radio" value="B"/> <span><b>B.</b> young entrepreneurs rarely need other people.</span></label>
+<label class="opt"><input name="I_9" type="radio" value="C"/> <span><b>C.</b> innovative ideas can develop through experimentation, collaboration and persistence.</span></label>
+<label class="opt"><input name="I_9" type="radio" value="D"/> <span><b>D.</b> online businesses are more successful than technology companies.</span></label>
+<div class="feedback" id="fb-I_9"></div></article><article class="question" data-answer="B" data-explain="The passages briefly trace how Jobs and Bezos started and developed their ventures." data-points="1" data-q="I_10">
+<div class="qnumber">10.</div><div class="qtext">The overall purpose of the two short biographies is to ________.</div>
+<label class="opt"><input name="I_10" type="radio" value="A"/> <span><b>A.</b> compare two identical business models in detail.</span></label>
+<label class="opt"><input name="I_10" type="radio" value="B"/> <span><b>B.</b> illustrate how two entrepreneurs began and developed influential ventures.</span></label>
+<label class="opt"><input name="I_10" type="radio" value="C"/> <span><b>C.</b> argue that online shopping is better than personal computers.</span></label>
+<label class="opt"><input name="I_10" type="radio" value="D"/> <span><b>D.</b> explain the complete history of Apple and Amazon.</span></label>
+<div class="feedback" id="fb-I_10"></div></article></section><section class="section"><div class="sectionhead"><div><h2>II. Vocabulary &amp; Poems</h2></div><span class="marks">1 × 15 = 15 marks</span></div><h3>Choose the best answer to complete each sentence.</h3><article class="question" data-answer="D" data-explain="Think outside the box means use creative or unconventional ideas." data-points="1" data-q="II_1">
+<div class="qnumber">1.</div><div class="qtext">In the field of business, you need to ________ and challenge the old ways of working.</div>
+<label class="opt"><input name="II_1" type="radio" value="A"/> <span><b>A.</b> go out on a limb</span></label>
+<label class="opt"><input name="II_1" type="radio" value="B"/> <span><b>B.</b> stay ahead of the pack</span></label>
+<label class="opt"><input name="II_1" type="radio" value="C"/> <span><b>C.</b> hit the bottom line</span></label>
+<label class="opt"><input name="II_1" type="radio" value="D"/> <span><b>D.</b> think outside the box</span></label>
+<div class="feedback" id="fb-II_1"></div></article><article class="question" data-answer="C" data-explain="The phrase that fits the career-development context is developing qualities and skills." data-points="1" data-q="II_2">
+<div class="qnumber">2.</div><div class="qtext">Ko Htamin aimed at ________ in digital marketing after earning his master’s degree.</div>
+<label class="opt"><input name="II_2" type="radio" value="A"/> <span><b>A.</b> asserting one’s own identity</span></label>
+<label class="opt"><input name="II_2" type="radio" value="B"/> <span><b>B.</b> following one’s own conscience</span></label>
+<label class="opt"><input name="II_2" type="radio" value="C"/> <span><b>C.</b> developing qualities and skills</span></label>
+<label class="opt"><input name="II_2" type="radio" value="D"/> <span><b>D.</b> inspiring confidence and trust</span></label>
+<div class="feedback" id="fb-II_2"></div></article><article class="question" data-answer="C" data-explain="Founded an army means established an organized group of soldiers." data-points="1" data-q="II_3">
+<div class="qnumber">3.</div><div class="qtext">A brave young hero gathered a group of warriors and ________ to battle the invaders.</div>
+<label class="opt"><input name="II_3" type="radio" value="A"/> <span><b>A.</b> developed qualities and skills</span></label>
+<label class="opt"><input name="II_3" type="radio" value="B"/> <span><b>B.</b> had a discussion</span></label>
+<label class="opt"><input name="II_3" type="radio" value="C"/> <span><b>C.</b> founded an army</span></label>
+<label class="opt"><input name="II_3" type="radio" value="D"/> <span><b>D.</b> made the right decision</span></label>
+<div class="feedback" id="fb-II_3"></div></article><article class="question" data-answer="B" data-explain="Sneer at means mock or show contempt toward someone." data-points="1" data-q="II_4">
+<div class="qnumber">4.</div><div class="qtext">It is not a good idea to ________ others’ weaknesses.</div>
+<label class="opt"><input name="II_4" type="radio" value="A"/> <span><b>A.</b> look at</span></label>
+<label class="opt"><input name="II_4" type="radio" value="B"/> <span><b>B.</b> sneer at</span></label>
+<label class="opt"><input name="II_4" type="radio" value="C"/> <span><b>C.</b> wait for</span></label>
+<label class="opt"><input name="II_4" type="radio" value="D"/> <span><b>D.</b> warm up</span></label>
+<div class="feedback" id="fb-II_4"></div></article><article class="question" data-answer="D" data-explain="Vulnerable people are easily harmed or in need of protection." data-points="1" data-q="II_5">
+<div class="qnumber">5.</div><div class="qtext">There should be humanitarian aid for the most ________ people, especially those who are in a conflict zone.</div>
+<label class="opt"><input name="II_5" type="radio" value="A"/> <span><b>A.</b> beneficial</span></label>
+<label class="opt"><input name="II_5" type="radio" value="B"/> <span><b>B.</b> optimistic</span></label>
+<label class="opt"><input name="II_5" type="radio" value="C"/> <span><b>C.</b> ruthless</span></label>
+<label class="opt"><input name="II_5" type="radio" value="D"/> <span><b>D.</b> vulnerable</span></label>
+<div class="feedback" id="fb-II_5"></div></article><article class="question" data-answer="A" data-explain="Optimistic means hopeful and positive about the future." data-points="1" data-q="II_6">
+<div class="qnumber">6.</div><div class="qtext">He is such an energetic and self-confident person that he is always ________ about his future.</div>
+<label class="opt"><input name="II_6" type="radio" value="A"/> <span><b>A.</b> optimistic</span></label>
+<label class="opt"><input name="II_6" type="radio" value="B"/> <span><b>B.</b> blur</span></label>
+<label class="opt"><input name="II_6" type="radio" value="C"/> <span><b>C.</b> daunting</span></label>
+<label class="opt"><input name="II_6" type="radio" value="D"/> <span><b>D.</b> hard</span></label>
+<div class="feedback" id="fb-II_6"></div></article><article class="question" data-answer="D" data-explain="Solar-powered lights can be useful during power outages." data-points="1" data-q="II_7">
+<div class="qnumber">7.</div><div class="qtext">Nowadays, ________ lights are becoming more popular due to frequent power outages.</div>
+<label class="opt"><input name="II_7" type="radio" value="A"/> <span><b>A.</b> battery-powered</span></label>
+<label class="opt"><input name="II_7" type="radio" value="B"/> <span><b>B.</b> electric-powered</span></label>
+<label class="opt"><input name="II_7" type="radio" value="C"/> <span><b>C.</b> hand-powered</span></label>
+<label class="opt"><input name="II_7" type="radio" value="D"/> <span><b>D.</b> solar-powered</span></label>
+<div class="feedback" id="fb-II_7"></div></article><article class="question" data-answer="B" data-explain="Magic-like is the expression that appropriately describes the music." data-points="1" data-q="II_8">
+<div class="qnumber">8.</div><div class="qtext">The music Sheku created on the cello was ________.</div>
+<label class="opt"><input name="II_8" type="radio" value="A"/> <span><b>A.</b> anti-jamming</span></label>
+<label class="opt"><input name="II_8" type="radio" value="B"/> <span><b>B.</b> magic-like</span></label>
+<label class="opt"><input name="II_8" type="radio" value="C"/> <span><b>C.</b> near-pinpoint</span></label>
+<label class="opt"><input name="II_8" type="radio" value="D"/> <span><b>D.</b> satellite-guided</span></label>
+<div class="feedback" id="fb-II_8"></div></article><article class="question" data-answer="C" data-explain="Keep in mind means remember or consider." data-points="1" data-q="II_9">
+<div class="qnumber">9.</div><div class="qtext">There are a couple of things you need to ________ when you are going to take a listening test.</div>
+<label class="opt"><input name="II_9" type="radio" value="A"/> <span><b>A.</b> come across</span></label>
+<label class="opt"><input name="II_9" type="radio" value="B"/> <span><b>B.</b> look at</span></label>
+<label class="opt"><input name="II_9" type="radio" value="C"/> <span><b>C.</b> keep in mind</span></label>
+<label class="opt"><input name="II_9" type="radio" value="D"/> <span><b>D.</b> wait for</span></label>
+<div class="feedback" id="fb-II_9"></div></article><article class="question" data-answer="C" data-explain="Ear-splitting means extremely loud or harsh." data-points="1" data-q="II_10">
+<div class="qnumber">10.</div><div class="qtext">Every day we jump out of bed with the ________ ring of the alarm clock, swallow a quick breakfast and then rush to catch the school bus.</div>
+<label class="opt"><input name="II_10" type="radio" value="A"/> <span><b>A.</b> booming</span></label>
+<label class="opt"><input name="II_10" type="radio" value="B"/> <span><b>B.</b> chanting</span></label>
+<label class="opt"><input name="II_10" type="radio" value="C"/> <span><b>C.</b> ear-splitting</span></label>
+<label class="opt"><input name="II_10" type="radio" value="D"/> <span><b>D.</b> soothing</span></label>
+<div class="feedback" id="fb-II_10"></div></article><article class="question" data-answer="B" data-explain="The repetition emphasizes the poem’s connection between equality and freedom." data-points="1" data-q="II_11">
+<div class="qnumber">11.</div><div class="qtext">Why is the line "Equality, and I will be free" repeated throughout the poem?</div>
+<label class="opt"><input name="II_11" type="radio" value="A"/> <span><b>A.</b> To fill empty spaces in the stanza</span></label>
+<label class="opt"><input name="II_11" type="radio" value="B"/> <span><b>B.</b> To emphasize that freedom is impossible without true equality</span></label>
+<label class="opt"><input name="II_11" type="radio" value="C"/> <span><b>C.</b> To explain how to write a song</span></label>
+<label class="opt"><input name="II_11" type="radio" value="D"/> <span><b>D.</b> To show the poet's love for rhyming words</span></label>
+<div class="feedback" id="fb-II_11"></div></article><article class="question" data-answer="A" data-explain="Explosion and Birmingham do not rhyme, while wild and child rhyme: ABCB." data-points="1" data-q="II_12">
+<div class="qnumber">12.</div><div class="qtext">What is the rhyme scheme of the stanza in the poem, Ballad of Birmingham?<br/><i>“For when she heard the explosion,<br/>Her eyes grew wet and wild.<br/>She raced through the streets of Birmingham<br/>Calling for her child"</i></div>
+<label class="opt"><input name="II_12" type="radio" value="A"/> <span><b>A.</b> ABCB</span></label>
+<label class="opt"><input name="II_12" type="radio" value="B"/> <span><b>B.</b> ABAC</span></label>
+<label class="opt"><input name="II_12" type="radio" value="C"/> <span><b>C.</b> AABB</span></label>
+<label class="opt"><input name="II_12" type="radio" value="D"/> <span><b>D.</b> ABCA</span></label>
+<div class="feedback" id="fb-II_12"></div></article><article class="question" data-answer="D" data-explain="The white clothing suggests innocence, purity and peacefulness." data-points="1" data-q="II_13">
+<div class="qnumber">13.</div><div class="qtext">What does the "white shoes/ white gloves" symbolize in the poem, Ballad of Birmingham?</div>
+<label class="opt"><input name="II_13" type="radio" value="A"/> <span><b>A.</b> Wealth and riches</span></label>
+<label class="opt"><input name="II_13" type="radio" value="B"/> <span><b>B.</b> Fear and cowardice</span></label>
+<label class="opt"><input name="II_13" type="radio" value="C"/> <span><b>C.</b> Political power</span></label>
+<label class="opt"><input name="II_13" type="radio" value="D"/> <span><b>D.</b> Innocence, purity, and peace</span></label>
+<div class="feedback" id="fb-II_13"></div></article><article class="question" data-answer="B" data-explain="The singer’s voice fills the deep valley." data-points="1" data-q="II_14">
+<div class="qnumber">14.</div><div class="qtext">In the poem, The Solitary Reaper, what does the poet mean by "the Vale profound is overflowing with the sound"?</div>
+<label class="opt"><input name="II_14" type="radio" value="A"/> <span><b>A.</b> Rainwater is flooding the entire valley.</span></label>
+<label class="opt"><input name="II_14" type="radio" value="B"/> <span><b>B.</b> The deep valley is completely filled with her beautiful singing voice.</span></label>
+<label class="opt"><input name="II_14" type="radio" value="C"/> <span><b>C.</b> The people in the valley are shouting loudly.</span></label>
+<label class="opt"><input name="II_14" type="radio" value="D"/> <span><b>D.</b> Birds are making noises together.</span></label>
+<div class="feedback" id="fb-II_14"></div></article><article class="question" data-answer="A" data-explain="The explicit comparison signaled by “As” is the simile choice." data-points="1" data-q="II_15">
+<div class="qnumber">15.</div><div class="qtext">In the poem, Democracy, the use of simile can be seen in the line__________</div>
+<label class="opt"><input name="II_15" type="radio" value="A"/> <span><b>A.</b> As the other fellow has</span></label>
+<label class="opt"><input name="II_15" type="radio" value="B"/> <span><b>B.</b> I cannot live on tomorrow’s bread</span></label>
+<label class="opt"><input name="II_15" type="radio" value="C"/> <span><b>C.</b> Let things take their course</span></label>
+<label class="opt"><input name="II_15" type="radio" value="D"/> <span><b>D.</b> Tomorrow is another day</span></label>
+<div class="feedback" id="fb-II_15"></div></article></section><section class="section"><div class="sectionhead"><div><h2>III. Read the passage.</h2></div><span class="marks">Total Marks = 15 marks</span></div><div class="passage"><p>A small community library can become more than a place where books are stored. When students have a quiet place to read, research and exchange ideas, they often develop habits that support independent learning. A successful library does not need expensive technology to be useful. Clear organization, suitable books and a welcoming atmosphere can make a significant difference. Volunteers can also help younger learners choose books and practise reading.</p>
+<p>However, a library needs regular care. Books should be checked, damaged materials repaired and outdated information replaced. The community can contribute by donating suitable books or helping with simple maintenance. Most importantly, the library should remain open to different interests and abilities. A reading space that welcomes everyone can encourage cooperation and make learning a shared community activity.</p></div><h3>A. Match the words in Column A with their meanings in Column B. (1×5 = 5 marks)</h3><article class="question" data-answer="E" data-explain="The selected definition matches the meaning of the vocabulary word." data-points="1" data-q="III_A_1">
+<div class="qnumber">1.</div><div class="qtext">Choose the meaning of “remarkable”.</div><select class="selectans" name="III_A_1"><option value="">Select answer</option>
+<option value="A">A. help to produce or achieve something</option>
+<option value="B">B. easily harmed or affected</option>
+<option value="C">C. able to continue without exhausting resources</option>
+<option value="D">D. an explanation that makes something clearer</option>
+<option value="E">E. worthy of notice</option>
+</select><div class="feedback" id="fb-III_A_1"></div></article><article class="question" data-answer="A" data-explain="The selected definition matches the meaning of the vocabulary word." data-points="1" data-q="III_A_2">
+<div class="qnumber">2.</div><div class="qtext">Choose the meaning of “contribute”.</div><select class="selectans" name="III_A_2"><option value="">Select answer</option>
+<option value="A">A. help to produce or achieve something</option>
+<option value="B">B. easily harmed or affected</option>
+<option value="C">C. able to continue without exhausting resources</option>
+<option value="D">D. an explanation that makes something clearer</option>
+<option value="E">E. worthy of notice</option>
+</select><div class="feedback" id="fb-III_A_2"></div></article><article class="question" data-answer="C" data-explain="The selected definition matches the meaning of the vocabulary word." data-points="1" data-q="III_A_3">
+<div class="qnumber">3.</div><div class="qtext">Choose the meaning of “sustainable”.</div><select class="selectans" name="III_A_3"><option value="">Select answer</option>
+<option value="A">A. help to produce or achieve something</option>
+<option value="B">B. easily harmed or affected</option>
+<option value="C">C. able to continue without exhausting resources</option>
+<option value="D">D. an explanation that makes something clearer</option>
+<option value="E">E. worthy of notice</option>
+</select><div class="feedback" id="fb-III_A_3"></div></article><article class="question" data-answer="B" data-explain="The selected definition matches the meaning of the vocabulary word." data-points="1" data-q="III_A_4">
+<div class="qnumber">4.</div><div class="qtext">Choose the meaning of “vulnerable”.</div><select class="selectans" name="III_A_4"><option value="">Select answer</option>
+<option value="A">A. help to produce or achieve something</option>
+<option value="B">B. easily harmed or affected</option>
+<option value="C">C. able to continue without exhausting resources</option>
+<option value="D">D. an explanation that makes something clearer</option>
+<option value="E">E. worthy of notice</option>
+</select><div class="feedback" id="fb-III_A_4"></div></article><article class="question" data-answer="D" data-explain="The selected definition matches the meaning of the vocabulary word." data-points="1" data-q="III_A_5">
+<div class="qnumber">5.</div><div class="qtext">Choose the meaning of “clarification”.</div><select class="selectans" name="III_A_5"><option value="">Select answer</option>
+<option value="A">A. help to produce or achieve something</option>
+<option value="B">B. easily harmed or affected</option>
+<option value="C">C. able to continue without exhausting resources</option>
+<option value="D">D. an explanation that makes something clearer</option>
+<option value="E">E. worthy of notice</option>
+</select><div class="feedback" id="fb-III_A_5"></div></article><h3>B. Choose the best answer. (2×5 = 10 marks)</h3><article class="question" data-answer="A" data-explain="The supplied question is answered by the stated community, learning and sustainability principles." data-points="2" data-q="III_B_1">
+<div class="qnumber">6.</div><div class="qtext">What is one practical benefit of learning in an environment that supports different perspectives?</div>
+<label class="opt"><input name="III_B_1" type="radio" value="A"/> <span><b>A.</b> It can help learners become more open-minded and adaptable.</span></label>
+<label class="opt"><input name="III_B_1" type="radio" value="B"/> <span><b>B.</b> It prevents students from working together.</span></label>
+<label class="opt"><input name="III_B_1" type="radio" value="C"/> <span><b>C.</b> It removes the need for teachers.</span></label>
+<label class="opt"><input name="III_B_1" type="radio" value="D"/> <span><b>D.</b> It guarantees identical opinions.</span></label>
+<div class="feedback" id="fb-III_B_1"></div></article><article class="question" data-answer="A" data-explain="The supplied question is answered by the stated community, learning and sustainability principles." data-points="2" data-q="III_B_2">
+<div class="qnumber">7.</div><div class="qtext">Why can excessive noise be a community problem?</div>
+<label class="opt"><input name="III_B_2" type="radio" value="A"/> <span><b>A.</b> It can disturb people and affect their well-being.</span></label>
+<label class="opt"><input name="III_B_2" type="radio" value="B"/> <span><b>B.</b> It always improves concentration.</span></label>
+<label class="opt"><input name="III_B_2" type="radio" value="C"/> <span><b>C.</b> It makes every public event quieter.</span></label>
+<label class="opt"><input name="III_B_2" type="radio" value="D"/> <span><b>D.</b> It has no effect beyond entertainment.</span></label>
+<div class="feedback" id="fb-III_B_2"></div></article><article class="question" data-answer="A" data-explain="The supplied question is answered by the stated community, learning and sustainability principles." data-points="2" data-q="III_B_3">
+<div class="qnumber">8.</div><div class="qtext">Why are small acts of civic kindness important?</div>
+<label class="opt"><input name="III_B_3" type="radio" value="A"/> <span><b>A.</b> They can strengthen respect and cooperation within a community.</span></label>
+<label class="opt"><input name="III_B_3" type="radio" value="B"/> <span><b>B.</b> They make rules unnecessary.</span></label>
+<label class="opt"><input name="III_B_3" type="radio" value="C"/> <span><b>C.</b> They are useful only for publicity.</span></label>
+<label class="opt"><input name="III_B_3" type="radio" value="D"/> <span><b>D.</b> They prevent people from helping one another.</span></label>
+<div class="feedback" id="fb-III_B_3"></div></article><article class="question" data-answer="A" data-explain="The supplied question is answered by the stated community, learning and sustainability principles." data-points="2" data-q="III_B_4">
+<div class="qnumber">9.</div><div class="qtext">Why is learning how to manage stress useful for students?</div>
+<label class="opt"><input name="III_B_4" type="radio" value="A"/> <span><b>A.</b> It can help them respond to pressure in healthier and more organized ways.</span></label>
+<label class="opt"><input name="III_B_4" type="radio" value="B"/> <span><b>B.</b> It guarantees that they will never feel pressure.</span></label>
+<label class="opt"><input name="III_B_4" type="radio" value="C"/> <span><b>C.</b> It removes the need for sleep.</span></label>
+<label class="opt"><input name="III_B_4" type="radio" value="D"/> <span><b>D.</b> It makes every task effortless.</span></label>
+<div class="feedback" id="fb-III_B_4"></div></article><article class="question" data-answer="A" data-explain="The supplied question is answered by the stated community, learning and sustainability principles." data-points="2" data-q="III_B_5">
+<div class="qnumber">10.</div><div class="qtext">Why can sustainability be described as a collective responsibility?</div>
+<label class="opt"><input name="III_B_5" type="radio" value="A"/> <span><b>A.</b> Individual and community actions together affect the future of the environment.</span></label>
+<label class="opt"><input name="III_B_5" type="radio" value="B"/> <span><b>B.</b> Only governments can affect the environment.</span></label>
+<label class="opt"><input name="III_B_5" type="radio" value="C"/> <span><b>C.</b> Environmental choices have no social effects.</span></label>
+<label class="opt"><input name="III_B_5" type="radio" value="D"/> <span><b>D.</b> Sustainability concerns only factories.</span></label>
+<div class="feedback" id="fb-III_B_5"></div></article></section><section class="section"><div class="sectionhead"><div><h2>IV. Choose the best answer.</h2></div><span class="marks">1 × 15 = 15 marks</span></div><article class="question" data-answer="A" data-explain="Used to + base verb describes a past habit." data-points="1" data-q="IV_1">
+<div class="qnumber">1.</div><div class="qtext">The entrepreneur ________ work late when the company was new.</div>
+<label class="opt"><input name="IV_1" type="radio" value="A"/> <span><b>A.</b> used to</span></label>
+<label class="opt"><input name="IV_1" type="radio" value="B"/> <span><b>B.</b> use to</span></label>
+<label class="opt"><input name="IV_1" type="radio" value="C"/> <span><b>C.</b> was used to</span></label>
+<label class="opt"><input name="IV_1" type="radio" value="D"/> <span><b>D.</b> get used to</span></label>
+<div class="feedback" id="fb-IV_1"></div></article><article class="question" data-answer="A" data-explain="Get used to + -ing describes becoming accustomed to something." data-points="1" data-q="IV_2">
+<div class="qnumber">2.</div><div class="qtext">After several months, she ________ working with the new software.</div>
+<label class="opt"><input name="IV_2" type="radio" value="A"/> <span><b>A.</b> got used to</span></label>
+<label class="opt"><input name="IV_2" type="radio" value="B"/> <span><b>B.</b> used to</span></label>
+<label class="opt"><input name="IV_2" type="radio" value="C"/> <span><b>C.</b> use to</span></label>
+<label class="opt"><input name="IV_2" type="radio" value="D"/> <span><b>D.</b> was use to</span></label>
+<div class="feedback" id="fb-IV_2"></div></article><article class="question" data-answer="A" data-explain="Past perfect fits the reported past context." data-points="1" data-q="IV_3">
+<div class="qnumber">3.</div><div class="qtext">The teacher said that the students ________ the online materials carefully.</div>
+<label class="opt"><input name="IV_3" type="radio" value="A"/> <span><b>A.</b> had checked</span></label>
+<label class="opt"><input name="IV_3" type="radio" value="B"/> <span><b>B.</b> have checked</span></label>
+<label class="opt"><input name="IV_3" type="radio" value="C"/> <span><b>C.</b> check</span></label>
+<label class="opt"><input name="IV_3" type="radio" value="D"/> <span><b>D.</b> are checking</span></label>
+<div class="feedback" id="fb-IV_3"></div></article><article class="question" data-answer="A" data-explain="Past perfect indicates an earlier past experience." data-points="1" data-q="IV_4">
+<div class="qnumber">4.</div><div class="qtext">He asked whether I ________ the problem before.</div>
+<label class="opt"><input name="IV_4" type="radio" value="A"/> <span><b>A.</b> had noticed</span></label>
+<label class="opt"><input name="IV_4" type="radio" value="B"/> <span><b>B.</b> notice</span></label>
+<label class="opt"><input name="IV_4" type="radio" value="C"/> <span><b>C.</b> am noticing</span></label>
+<label class="opt"><input name="IV_4" type="radio" value="D"/> <span><b>D.</b> will notice</span></label>
+<div class="feedback" id="fb-IV_4"></div></article><article class="question" data-answer="A" data-explain="Where refers to a place." data-points="1" data-q="IV_5">
+<div class="qnumber">5.</div><div class="qtext">The library is a place ________ students can read quietly.</div>
+<label class="opt"><input name="IV_5" type="radio" value="A"/> <span><b>A.</b> where</span></label>
+<label class="opt"><input name="IV_5" type="radio" value="B"/> <span><b>B.</b> when</span></label>
+<label class="opt"><input name="IV_5" type="radio" value="C"/> <span><b>C.</b> why</span></label>
+<label class="opt"><input name="IV_5" type="radio" value="D"/> <span><b>D.</b> which</span></label>
+<div class="feedback" id="fb-IV_5"></div></article><article class="question" data-answer="A" data-explain="When refers to a time/day." data-points="1" data-q="IV_6">
+<div class="qnumber">6.</div><div class="qtext">Monday is the day ________ our new study club meets.</div>
+<label class="opt"><input name="IV_6" type="radio" value="A"/> <span><b>A.</b> when</span></label>
+<label class="opt"><input name="IV_6" type="radio" value="B"/> <span><b>B.</b> where</span></label>
+<label class="opt"><input name="IV_6" type="radio" value="C"/> <span><b>C.</b> why</span></label>
+<label class="opt"><input name="IV_6" type="radio" value="D"/> <span><b>D.</b> whose</span></label>
+<div class="feedback" id="fb-IV_6"></div></article><article class="question" data-answer="A" data-explain="Why introduces a reason clause." data-points="1" data-q="IV_7">
+<div class="qnumber">7.</div><div class="qtext">She explained the reason ________ she changed her plan.</div>
+<label class="opt"><input name="IV_7" type="radio" value="A"/> <span><b>A.</b> why</span></label>
+<label class="opt"><input name="IV_7" type="radio" value="B"/> <span><b>B.</b> where</span></label>
+<label class="opt"><input name="IV_7" type="radio" value="C"/> <span><b>C.</b> when</span></label>
+<label class="opt"><input name="IV_7" type="radio" value="D"/> <span><b>D.</b> who</span></label>
+<div class="feedback" id="fb-IV_7"></div></article><article class="question" data-answer="A" data-explain="Frightened describes the child’s state." data-points="1" data-q="IV_8">
+<div class="qnumber">8.</div><div class="qtext">______ by the sudden noise, the child looked around.</div>
+<label class="opt"><input name="IV_8" type="radio" value="A"/> <span><b>A.</b> Frightened</span></label>
+<label class="opt"><input name="IV_8" type="radio" value="B"/> <span><b>B.</b> Frightening</span></label>
+<label class="opt"><input name="IV_8" type="radio" value="C"/> <span><b>C.</b> Having frighten</span></label>
+<label class="opt"><input name="IV_8" type="radio" value="D"/> <span><b>D.</b> Frighten</span></label>
+<div class="feedback" id="fb-IV_8"></div></article><article class="question" data-answer="A" data-explain="Walking forms a participial phrase describing the subject." data-points="1" data-q="IV_9">
+<div class="qnumber">9.</div><div class="qtext">______ through the park, we noticed a new community garden.</div>
+<label class="opt"><input name="IV_9" type="radio" value="A"/> <span><b>A.</b> Walking</span></label>
+<label class="opt"><input name="IV_9" type="radio" value="B"/> <span><b>B.</b> Walked</span></label>
+<label class="opt"><input name="IV_9" type="radio" value="C"/> <span><b>C.</b> To walking</span></label>
+<label class="opt"><input name="IV_9" type="radio" value="D"/> <span><b>D.</b> Have walk</span></label>
+<div class="feedback" id="fb-IV_9"></div></article><article class="question" data-answer="A" data-explain="Reading is a gerund functioning as the subject." data-points="1" data-q="IV_10">
+<div class="qnumber">10.</div><div class="qtext">______ regularly can improve concentration.</div>
+<label class="opt"><input name="IV_10" type="radio" value="A"/> <span><b>A.</b> Reading</span></label>
+<label class="opt"><input name="IV_10" type="radio" value="B"/> <span><b>B.</b> Read</span></label>
+<label class="opt"><input name="IV_10" type="radio" value="C"/> <span><b>C.</b> To readed</span></label>
+<label class="opt"><input name="IV_10" type="radio" value="D"/> <span><b>D.</b> Reads</span></label>
+<div class="feedback" id="fb-IV_10"></div></article><article class="question" data-answer="A" data-explain="Second conditional: if + past, would + base verb." data-points="1" data-q="IV_11">
+<div class="qnumber">11.</div><div class="qtext">If I had more time, I ________ another language.</div>
+<label class="opt"><input name="IV_11" type="radio" value="A"/> <span><b>A.</b> would learn</span></label>
+<label class="opt"><input name="IV_11" type="radio" value="B"/> <span><b>B.</b> will learn</span></label>
+<label class="opt"><input name="IV_11" type="radio" value="C"/> <span><b>C.</b> learned</span></label>
+<label class="opt"><input name="IV_11" type="radio" value="D"/> <span><b>D.</b> am learning</span></label>
+<div class="feedback" id="fb-IV_11"></div></article><article class="question" data-answer="A" data-explain="May feel expresses a possible result of planning." data-points="1" data-q="IV_12">
+<div class="qnumber">12.</div><div class="qtext">If students plan their tasks, they ________ less stressed.</div>
+<label class="opt"><input name="IV_12" type="radio" value="A"/> <span><b>A.</b> may feel</span></label>
+<label class="opt"><input name="IV_12" type="radio" value="B"/> <span><b>B.</b> felt</span></label>
+<label class="opt"><input name="IV_12" type="radio" value="C"/> <span><b>C.</b> would felt</span></label>
+<label class="opt"><input name="IV_12" type="radio" value="D"/> <span><b>D.</b> have feel</span></label>
+<div class="feedback" id="fb-IV_12"></div></article><article class="question" data-answer="A" data-explain="The experiment receives the action, so past passive is required." data-points="1" data-q="IV_13">
+<div class="qnumber">13.</div><div class="qtext">The experiment ________ by the students yesterday.</div>
+<label class="opt"><input name="IV_13" type="radio" value="A"/> <span><b>A.</b> was recorded</span></label>
+<label class="opt"><input name="IV_13" type="radio" value="B"/> <span><b>B.</b> recorded</span></label>
+<label class="opt"><input name="IV_13" type="radio" value="C"/> <span><b>C.</b> is recording</span></label>
+<label class="opt"><input name="IV_13" type="radio" value="D"/> <span><b>D.</b> has record</span></label>
+<div class="feedback" id="fb-IV_13"></div></article><article class="question" data-answer="A" data-explain="Future passive: will be + past participle." data-points="1" data-q="IV_14">
+<div class="qnumber">14.</div><div class="qtext">The community project ________ next month.</div>
+<label class="opt"><input name="IV_14" type="radio" value="A"/> <span><b>A.</b> will be organised</span></label>
+<label class="opt"><input name="IV_14" type="radio" value="B"/> <span><b>B.</b> will organise</span></label>
+<label class="opt"><input name="IV_14" type="radio" value="C"/> <span><b>C.</b> organised</span></label>
+<label class="opt"><input name="IV_14" type="radio" value="D"/> <span><b>D.</b> is organise</span></label>
+<div class="feedback" id="fb-IV_14"></div></article><article class="question" data-answer="A" data-explain="As if introduces an apparent or unreal manner." data-points="1" data-q="IV_15">
+<div class="qnumber">15.</div><div class="qtext">She spoke ________ she were already familiar with the topic.</div>
+<label class="opt"><input name="IV_15" type="radio" value="A"/> <span><b>A.</b> as if</span></label>
+<label class="opt"><input name="IV_15" type="radio" value="B"/> <span><b>B.</b> because</span></label>
+<label class="opt"><input name="IV_15" type="radio" value="C"/> <span><b>C.</b> although</span></label>
+<label class="opt"><input name="IV_15" type="radio" value="D"/> <span><b>D.</b> unless</span></label>
+<div class="feedback" id="fb-IV_15"></div></article></section><section class="section"><div class="sectionhead"><div><h2>V. Choose the best expression to complete each conversation.</h2></div><span class="marks">2 × 5 = 10 marks</span></div><article class="question" data-answer="A" data-explain="1" data-points="2" data-q="V_1">
+<div class="qnumber">1.</div><div class="qtext">Su Su: Our class is planning a small community reading project. Would you like to join us?<br/><br/>Ko Htet: (1) __________<br/><br/>Su Su: We are thinking of collecting used storybooks and setting up a reading corner for younger children.</div>
+
+
+
+
+
+<div class="v-select-wrap"><label class="v-select-label">Choose the most appropriate response:</label><select class="selectans" name="V_1"><option value="">Select the best response</option><option value="A">A. I agree that a reading corner could make the books more useful than simply storing them in boxes.</option><option value="B">B. That seems reasonable. Let me know once you have confirmed the room and the starting time.</option><option value="C">C. Yes, I’d be interested. What exactly is the project intended to achieve?</option><option value="D">D. That sounds worthwhile. I could help sort the books because I have some free time after school.</option><option value="E">E. Before we fix the date, could you clarify whether the younger students will also choose the books themselves?</option></select></div><div class="feedback" id="fb-V_1"></div></article><article class="question" data-answer="A" data-explain="1" data-points="2" data-q="V_2">
+<div class="qnumber">2.</div><div class="qtext">Su Su: We are thinking of collecting used storybooks and setting up a reading corner for younger children.<br/><br/>Ko Htet: (2) __________<br/><br/>Su Su: We will probably need volunteers to sort the books and organise the activities.</div>
+
+
+
+
+
+<div class="v-select-wrap"><label class="v-select-label">Choose the most appropriate response:</label><select class="selectans" name="V_2"><option value="">Select the best response</option><option value="A">A. I agree that a reading corner could make the books more useful than simply storing them in boxes.</option><option value="B">B. That seems reasonable. Let me know once you have confirmed the room and the starting time.</option><option value="C">C. Yes, I’d be interested. What exactly is the project intended to achieve?</option><option value="D">D. That sounds worthwhile. I could help sort the books because I have some free time after school.</option><option value="E">E. Before we fix the date, could you clarify whether the younger students will also choose the books themselves?</option></select></div><div class="feedback" id="fb-V_2"></div></article><article class="question" data-answer="B" data-explain="1" data-points="2" data-q="V_3">
+<div class="qnumber">3.</div><div class="qtext">Su Su: We will probably need volunteers to sort the books and organise the activities.<br/><br/>Ko Htet: (3) __________<br/><br/>Su Su: We hope to begin next Saturday, if the library agrees to let us use the small meeting room.</div>
+
+
+
+
+
+<div class="v-select-wrap"><label class="v-select-label">Choose the most appropriate response:</label><select class="selectans" name="V_3"><option value="">Select the best response</option><option value="A">A. I agree that a reading corner could make the books more useful than simply storing them in boxes.</option><option value="B">B. That seems reasonable. Let me know once you have confirmed the room and the starting time.</option><option value="C">C. Yes, I’d be interested. What exactly is the project intended to achieve?</option><option value="D">D. That sounds worthwhile. I could help sort the books because I have some free time after school.</option><option value="E">E. Before we fix the date, could you clarify whether the younger students will also choose the books themselves?</option></select></div><div class="feedback" id="fb-V_3"></div></article><article class="question" data-answer="E" data-explain="1" data-points="2" data-q="V_4">
+<div class="qnumber">4.</div><div class="qtext">Su Su: We hope to begin next Saturday, if the library agrees to let us use the small meeting room.<br/><br/>Ko Htet: (4) __________<br/><br/>Su Su: I’ll check with the librarian tomorrow and send the details to the group.</div>
+
+
+
+
+
+<div class="v-select-wrap"><label class="v-select-label">Choose the most appropriate response:</label><select class="selectans" name="V_4"><option value="">Select the best response</option><option value="A">A. I agree that a reading corner could make the books more useful than simply storing them in boxes.</option><option value="B">B. That seems reasonable. Let me know once you have confirmed the room and the starting time.</option><option value="C">C. Yes, I’d be interested. What exactly is the project intended to achieve?</option><option value="D">D. That sounds worthwhile. I could help sort the books because I have some free time after school.</option><option value="E">E. Before we fix the date, could you clarify whether the younger students will also choose the books themselves?</option></select></div><div class="feedback" id="fb-V_4"></div></article><article class="question" data-answer="D" data-explain="1" data-points="2" data-q="V_5">
+<div class="qnumber">5.</div><div class="qtext">Su Su: I’ll check with the librarian tomorrow and send the details to the group.<br/><br/>Ko Htet: (5) __________</div>
+
+
+
+
+
+<div class="v-select-wrap"><label class="v-select-label">Choose the most appropriate response:</label><select class="selectans" name="V_5"><option value="">Select the best response</option><option value="A">A. I agree that a reading corner could make the books more useful than simply storing them in boxes.</option><option value="B">B. That seems reasonable. Let me know once you have confirmed the room and the starting time.</option><option value="C">C. Yes, I’d be interested. What exactly is the project intended to achieve?</option><option value="D">D. That sounds worthwhile. I could help sort the books because I have some free time after school.</option><option value="E">E. Before we fix the date, could you clarify whether the younger students will also choose the books themselves?</option></select></div><div class="feedback" id="fb-V_5"></div></article></section><section class="section"><div class="sectionhead"><div><h2>VI. Listening — True / False</h2></div><span class="marks">2 × 5 = 10 marks</span></div>
+<div class="notice"><b>Listening instruction:</b> အသံဖိုင်ကို အာရုံစိုက်နားထောင်ပြီး အောက်ပါ မေးခွန်းစာသားများကို True / False ဖြေပါ။ Listening Script ကို Test Submit ပြီးမှသာ ပြသပေးပါမည်။</div>
+<div class="audio-wrap"><h3 style="margin-top:0">🎧 Listening Audio</h3><audio controls preload="metadata"><source src="InShot_20261004_121557938.m4a" type="audio/mp4">Your browser does not support the audio element.</audio></div><article class="question" data-answer="B" data-explain="He says Physics is challenging, so the statement is false." data-points="2" data-q="VI_1">
+<div class="qnumber">1.</div><div class="qtext"><div class="listening-statement">Kaung Htet says that he finds Physics easy and not challenging.</div></div>
+<label class="opt"><input name="VI_1" type="radio" value="A"/> <span><b>A.</b> True</span></label>
+<label class="opt"><input name="VI_1" type="radio" value="B"/> <span><b>B.</b> False</span></label>
+<div class="feedback" id="fb-VI_1"></div></article><article class="question" data-answer="A" data-explain="She says handwritten summary notes helped her understand the formulas." data-points="2" data-q="VI_2">
+<div class="qnumber">2.</div><div class="qtext"><div class="listening-statement">Su Mon says that making brief handwritten summary notes helped her understand the formulas better.</div></div>
+<label class="opt"><input name="VI_2" type="radio" value="A"/> <span><b>A.</b> True</span></label>
+<label class="opt"><input name="VI_2" type="radio" value="B"/> <span><b>B.</b> False</span></label>
+<div class="feedback" id="fb-VI_2"></div></article><article class="question" data-answer="B" data-explain="She prefers early morning study sessions." data-points="2" data-q="VI_3">
+<div class="qnumber">3.</div><div class="qtext"><div class="listening-statement">Su Mon prefers studying late at night rather than early in the morning.</div></div>
+<label class="opt"><input name="VI_3" type="radio" value="A"/> <span><b>A.</b> True</span></label>
+<label class="opt"><input name="VI_3" type="radio" value="B"/> <span><b>B.</b> False</span></label>
+<div class="feedback" id="fb-VI_3"></div></article><article class="question" data-answer="A" data-explain="He says he tends to stay up until midnight." data-points="2" data-q="VI_4">
+<div class="qnumber">4.</div><div class="qtext"><div class="listening-statement">Kaung Htet says that he tends to stay up until midnight.</div></div>
+<label class="opt"><input name="VI_4" type="radio" value="A"/> <span><b>A.</b> True</span></label>
+<label class="opt"><input name="VI_4" type="radio" value="B"/> <span><b>B.</b> False</span></label>
+<div class="feedback" id="fb-VI_4"></div></article><article class="question" data-answer="A" data-explain="They plan to focus on solving past exam papers together." data-points="2" data-q="VI_5">
+<div class="qnumber">5.</div><div class="qtext"><div class="listening-statement">Kaung Htet and Su Mon plan to focus on solving past exam papers together.</div></div>
+<label class="opt"><input name="VI_5" type="radio" value="A"/> <span><b>A.</b> True</span></label>
+<label class="opt"><input name="VI_5" type="radio" value="B"/> <span><b>B.</b> False</span></label>
+<div class="feedback" id="fb-VI_5"></div></article><div class="script-hidden scriptbox" id="listeningScript"><h3>Listening Script — Revealed After Submission</h3><div class="passage"><p>Context: Two high school classmates, Kaung Htet and Su Mon, are discussing their preparation and strategy for the upcoming final exams.<br/><br/>Kaung Htet: Hi, Su Mon! How is your revision for the Grade 12 final exam going? I'm finding Physics quite challenging.<br/>Su Mon: Hi, Kaung Htet! It's going okay, but I was struggling with Physics too until last week. I started making brief handwritten summary notes for each chapter, and it really helped me understand the formulas better.<br/>Kaung Htet: That sounds like a good idea. I usually just read the textbook over and over, but I get tired easily. Do you study late at night or early in the morning?<br/>Su Mon: I personally prefer early morning study sessions. My mind is fresh around 5:00 AM, and there are no digital distractions or household noise. Studying late at night only makes me exhausted the next day.<br/>Kaung Htet: I see. I tend to stay up until midnight, which is probably why I feel sluggish during class. Maybe I should adjust my sleep schedule. Are you joining the group study session at the school library this Friday?<br/>Su Mon: Yes, I am! Group discussions are great for clearing up doubts, especially in complex subjects. We plan to focus on solving past exam papers together.</p></div></div></section><section class="section"><div class="sectionhead"><div><h2>VII. Letter</h2></div><span class="marks">2 × 5 = 10 marks</span></div><div class="letterbox"><p><b>March 10th, 2026</b></p><p>Dear Min Thant,</p>
+<p>How are things going with your exam preparation? (1) __________. It sounds like a great opportunity to revise our lessons together. However, (2) __________. My parents and I are leaving early on Friday morning, so (3) __________.</p>
+<p>I know how important this study session is for our upcoming BECA test. (4) __________ once I get back so we can review the biology chapters together. (5) __________ if you are free. Please convey my regards to the rest of the group and wish everyone good luck with their preparation!</p>
+<p>Warm regards,<br/>Aung Aung</p></div><p><b>Choose the correct clause for each blank (1–5).</b></p><article class="question" data-answer="C" data-explain="The clause is selected according to the grammar, meaning and sequence of the letter." data-points="2" data-q="VII_1">
+<div class="qnumber">1.</div><div class="qtext">Blank (1)</div><select class="selectans" name="VII_1"><option value="">Select answer</option>
+<option value="A">A. I am really sorry that I won't be able to make it</option>
+<option value="B">B. I promise to bring the study guide with me</option>
+<option value="C">C. Thank you so much for sending me the study group invitation</option>
+<option value="D">D. I would love to catch up with everyone next weekend instead</option>
+<option value="E">E. I have to attend a mandatory family gathering in Naypyidaw</option>
+</select><div class="feedback" id="fb-VII_1"></div></article><article class="question" data-answer="E" data-explain="The clause is selected according to the grammar, meaning and sequence of the letter." data-points="2" data-q="VII_2">
+<div class="qnumber">2.</div><div class="qtext">Blank (2)</div><select class="selectans" name="VII_2"><option value="">Select answer</option>
+<option value="A">A. I am really sorry that I won't be able to make it</option>
+<option value="B">B. I promise to bring the study guide with me</option>
+<option value="C">C. Thank you so much for sending me the study group invitation</option>
+<option value="D">D. I would love to catch up with everyone next weekend instead</option>
+<option value="E">E. I have to attend a mandatory family gathering in Naypyidaw</option>
+</select><div class="feedback" id="fb-VII_2"></div></article><article class="question" data-answer="A" data-explain="The clause is selected according to the grammar, meaning and sequence of the letter." data-points="2" data-q="VII_3">
+<div class="qnumber">3.</div><div class="qtext">Blank (3)</div><select class="selectans" name="VII_3"><option value="">Select answer</option>
+<option value="A">A. I am really sorry that I won't be able to make it</option>
+<option value="B">B. I promise to bring the study guide with me</option>
+<option value="C">C. Thank you so much for sending me the study group invitation</option>
+<option value="D">D. I would love to catch up with everyone next weekend instead</option>
+<option value="E">E. I have to attend a mandatory family gathering in Naypyidaw</option>
+</select><div class="feedback" id="fb-VII_3"></div></article><article class="question" data-answer="B" data-explain="The clause is selected according to the grammar, meaning and sequence of the letter." data-points="2" data-q="VII_4">
+<div class="qnumber">4.</div><div class="qtext">Blank (4)</div><select class="selectans" name="VII_4"><option value="">Select answer</option>
+<option value="A">A. I am really sorry that I won't be able to make it</option>
+<option value="B">B. I promise to bring the study guide with me</option>
+<option value="C">C. Thank you so much for sending me the study group invitation</option>
+<option value="D">D. I would love to catch up with everyone next weekend instead</option>
+<option value="E">E. I have to attend a mandatory family gathering in Naypyidaw</option>
+</select><div class="feedback" id="fb-VII_4"></div></article><article class="question" data-answer="D" data-explain="The clause is selected according to the grammar, meaning and sequence of the letter." data-points="2" data-q="VII_5">
+<div class="qnumber">5.</div><div class="qtext">Blank (5)</div><select class="selectans" name="VII_5"><option value="">Select answer</option>
+<option value="A">A. I am really sorry that I won't be able to make it</option>
+<option value="B">B. I promise to bring the study guide with me</option>
+<option value="C">C. Thank you so much for sending me the study group invitation</option>
+<option value="D">D. I would love to catch up with everyone next weekend instead</option>
+<option value="E">E. I have to attend a mandatory family gathering in Naypyidaw</option>
+</select><div class="feedback" id="fb-VII_5"></div></article></section><section class="section"><div class="sectionhead"><div><h2>VIII. Essay</h2></div><span class="marks">Total Marks = 15 marks</span></div><div class="passage"><p><b>A.</b> (1) __________, traveling by public transport like trains and buses is far more advantageous than relying on private vehicles. While some commuters prefer driving their own cars, I find that taking public transit is more relaxing and environmentally friendly.</p>
+<p><b>B.</b> Driving a personal vehicle during peak hours often involves dealing with heavy traffic jams and long delays. Searching for parking spaces can also be frustrating and expensive. (2) __________, riding on a train or bus allows passengers to read, listen to music, or relax while someone else drives.</p>
+<p><b>C.</b> Public transportation is also significantly cheaper than owning a vehicle when you consider fuel costs, maintenance, and insurance. (3) __________, using public buses and trains reduces overall carbon emissions, making it a greener choice. (4) __________, taking public transit saves both money and the environment.</p>
+<p><b>D.</b> While owning a car offers personal freedom, I personally favor using public transport. (5) __________ is my desire to lower my daily travel stress and avoid the hassles of city traffic. Public transit turns daily commute time into productive relaxation time.</p></div><h3>A. Choose the best answer to complete each blank (1–5). (1×5 = 5 marks)</h3><article class="question" data-answer="C" data-explain="The connector fits the logical relationship and grammar of the paragraph." data-points="1" data-q="VIII_A_1">
+<div class="qnumber">1.</div><div class="qtext">Blank (1)</div><select class="selectans" name="VIII_A_1"><option value="">Select answer</option>
+<option value="A">A. In short</option>
+<option value="B">B. In contrast</option>
+<option value="C">C. Personally</option>
+<option value="D">D. Additionally</option>
+<option value="E">E. One reason for this</option>
+</select><div class="feedback" id="fb-VIII_A_1"></div></article><article class="question" data-answer="B" data-explain="The connector fits the logical relationship and grammar of the paragraph." data-points="1" data-q="VIII_A_2">
+<div class="qnumber">2.</div><div class="qtext">Blank (2)</div><select class="selectans" name="VIII_A_2"><option value="">Select answer</option>
+<option value="A">A. In short</option>
+<option value="B">B. In contrast</option>
+<option value="C">C. Personally</option>
+<option value="D">D. Additionally</option>
+<option value="E">E. One reason for this</option>
+</select><div class="feedback" id="fb-VIII_A_2"></div></article><article class="question" data-answer="D" data-explain="The connector fits the logical relationship and grammar of the paragraph." data-points="1" data-q="VIII_A_3">
+<div class="qnumber">3.</div><div class="qtext">Blank (3)</div><select class="selectans" name="VIII_A_3"><option value="">Select answer</option>
+<option value="A">A. In short</option>
+<option value="B">B. In contrast</option>
+<option value="C">C. Personally</option>
+<option value="D">D. Additionally</option>
+<option value="E">E. One reason for this</option>
+</select><div class="feedback" id="fb-VIII_A_3"></div></article><article class="question" data-answer="A" data-explain="The connector fits the logical relationship and grammar of the paragraph." data-points="1" data-q="VIII_A_4">
+<div class="qnumber">4.</div><div class="qtext">Blank (4)</div><select class="selectans" name="VIII_A_4"><option value="">Select answer</option>
+<option value="A">A. In short</option>
+<option value="B">B. In contrast</option>
+<option value="C">C. Personally</option>
+<option value="D">D. Additionally</option>
+<option value="E">E. One reason for this</option>
+</select><div class="feedback" id="fb-VIII_A_4"></div></article><article class="question" data-answer="E" data-explain="The connector fits the logical relationship and grammar of the paragraph." data-points="1" data-q="VIII_A_5">
+<div class="qnumber">5.</div><div class="qtext">Blank (5)</div><select class="selectans" name="VIII_A_5"><option value="">Select answer</option>
+<option value="A">A. In short</option>
+<option value="B">B. In contrast</option>
+<option value="C">C. Personally</option>
+<option value="D">D. Additionally</option>
+<option value="E">E. One reason for this</option>
+</select><div class="feedback" id="fb-VIII_A_5"></div></article><h3>B. The given paragraphs (A–D) are not in the right order. Choose the best order to form the paragraphs into a logical essay. (5×1 = 5 marks)</h3><article class="question" data-answer="A" data-explain="A introduces the position, B gives a contrast and practical benefit, C adds cost and environmental reasons, and D concludes with the writer’s preference." data-points="5" data-q="VIII_B_1">
+<div class="qnumber">6.</div><div class="qtext">Choose the best logical order.</div>
+<label class="opt"><input name="VIII_B_1" type="radio" value="A"/> <span><b>A.</b> A-B-C-D</span></label>
+<label class="opt"><input name="VIII_B_1" type="radio" value="B"/> <span><b>B.</b> D-A-B-C</span></label>
+<label class="opt"><input name="VIII_B_1" type="radio" value="C"/> <span><b>C.</b> A-C-B-D</span></label>
+<label class="opt"><input name="VIII_B_1" type="radio" value="D"/> <span><b>D.</b> C-B-D-A</span></label>
+<label class="opt"><input name="VIII_B_1" type="radio" value="E"/> <span><b>E.</b> B-D-A-C</span></label>
+<div class="feedback" id="fb-VIII_B_1"></div></article><h3>C. Choose the best title for the above essay. (2×1 = 2 marks)</h3><article class="question" data-answer="B" data-explain="The essay explains reasons for preferring public transportation." data-points="2" data-q="VIII_C_1">
+<div class="qnumber">7.</div><div class="qtext">Choose the best title.</div>
+<label class="opt"><input name="VIII_C_1" type="radio" value="A"/> <span><b>A.</b> How to Drive Safely in Heavy Traffic</span></label>
+<label class="opt"><input name="VIII_C_1" type="radio" value="B"/> <span><b>B.</b> The Benefits of Using Public Transport</span></label>
+<label class="opt"><input name="VIII_C_1" type="radio" value="C"/> <span><b>C.</b> Why Private Cars are Essential for Travel</span></label>
+<label class="opt"><input name="VIII_C_1" type="radio" value="D"/> <span><b>D.</b> The Cost of Vehicle Maintenance</span></label>
+<div class="feedback" id="fb-VIII_C_1"></div></article><h3>D. Choose the best answer. (3×1 = 3 marks)</h3><article class="question" data-answer="B" data-explain="The writer explicitly says they favor public transport and gives reasons." data-points="3" data-q="VIII_D_1">
+<div class="qnumber">8.</div><div class="qtext">The writer of the essay is mainly ________.</div>
+<label class="opt"><input name="VIII_D_1" type="radio" value="A"/> <span><b>A.</b> advising people to buy fuel-efficient cars</span></label>
+<label class="opt"><input name="VIII_D_1" type="radio" value="B"/> <span><b>B.</b> explaining why he prefers public transit over driving</span></label>
+<label class="opt"><input name="VIII_D_1" type="radio" value="C"/> <span><b>C.</b> complaining about the price of bus tickets</span></label>
+<label class="opt"><input name="VIII_D_1" type="radio" value="D"/> <span><b>D.</b> comparing different types of public trains</span></label>
+<div class="feedback" id="fb-VIII_D_1"></div></article></section></div></main>
+<div id="result"><div class="resultbox"><h2>Test Result</h2><div class="score">0 / 100</div><div class="percent">0%</div><p><b>Congratulations.</b> You have submitted the complete test. The answer key is now unlocked.</p><div class="notice" id="answerNote" style="display:none">✓ Answer key and explanations are now shown under every question.</div></div></div>
+<div class="actions"><div class="actionin"><button class="btn primary" id="submitBtn" type="button">Submit Complete Test</button><button class="btn secondary" id="answersBtn" style="display:none" type="button">Show All Answers</button><button class="btn secondary" id="printBtn" type="button">Print / Save PDF</button></div></div>
+<script>
+const questions=[...document.querySelectorAll('.question')];
+const submitBtn=document.getElementById('submitBtn'),answersBtn=document.getElementById('answersBtn'),result=document.getElementById('result');
+let submitted=false;
+function selected(q){const r=q.querySelector('input[type=radio]:checked');if(r)return r.value;const s=q.querySelector('select');return s?s.value:''}
+function totalPoints(){return questions.reduce((a,q)=>a+Number(q.dataset.points||0),0)}
+function answeredCount(){return questions.filter(q=>selected(q)).length}
+function updateProgress(){document.querySelector('.bar').style.width=Math.round(answeredCount()/questions.length*100)+'%';document.querySelector('.progressText').textContent=`${answeredCount()} / ${questions.length} answered`}
+function submitTest(){
+ if(submitted)return;
+ const missing=questions.filter(q=>!selected(q));
+ if(missing.length){alert(`မေးခွန်းအားလုံး မဖြေရသေးပါ။ ${missing.length} ခု ကျန်နေပါသေးသည်။`);missing[0].scrollIntoView({behavior:'smooth',block:'center'});return}
+ let score=0;questions.forEach(q=>{if(selected(q)===q.dataset.answer)score+=Number(q.dataset.points||0)});
+ submitted=true;
+ document.querySelectorAll('input,select').forEach(x=>x.disabled=true);
+ result.style.display='block';
+ result.querySelector('.score').textContent=`${score} / ${totalPoints()}`;
+ result.querySelector('.percent').textContent=`${Math.round(score/totalPoints()*100)}%`;
+ answersBtn.style.display='inline-block';
+ const script=document.getElementById('listeningScript'); if(script)script.style.display='block';
+ result.scrollIntoView({behavior:'smooth',block:'start'});updateProgress();
+}
+function showAnswers(){
+ if(!submitted){alert('Submit the completed test first.');return}
+ questions.forEach(q=>{
+  const fb=q.querySelector('.feedback');if(!fb)return;
+  const ok=selected(q)===q.dataset.answer;
+  fb.innerHTML=(ok?'✓ Correct. ':'✗ Correct answer: <b>'+q.dataset.answer+'</b>. ')+(q.dataset.explain||'');
+  fb.classList.add('show',ok?'correct':'wrong');
+ });
+ answersBtn.disabled=true;answersBtn.textContent='Answers Revealed';
+ document.getElementById('answerNote').style.display='block';
+}
+document.querySelectorAll('input,select').forEach(x=>x.addEventListener('change',updateProgress));
+submitBtn.addEventListener('click',submitTest);
+answersBtn.addEventListener('click',showAnswers);
+document.getElementById('printBtn').addEventListener('click',()=>window.print());
+updateProgress();
+</script></body></html>
