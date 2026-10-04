@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade-12 English | Learning Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#3155e7;--primary-dark:#2442c4;--primary-light:#eef2ff;--cyan:#06b6d4;--green:#10b981;--orange:#f59e0b;--purple:#8b5cf6;--red:#ef4444;--dark:#111827;--dark-2:#1e293b;--background:#f6f8fc;--card:#fff;--text:#172033;--text-light:#667085;--border:#e5eaf1;--shadow:0 10px 30px rgba(15,23,42,.06);--shadow-hover:0 20px 45px rgba(15,23,42,.12);--radius:20px}
+body.dark{--background:#0b1220;--card:#151f32;--text:#f8fafc;--text-light:#9aa8bd;--border:#26344b;--primary-light:#202d5f;--shadow:0 10px 30px rgba(0,0,0,.2);--shadow-hover:0 20px 45px rgba(0,0,0,.3)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:"Plus Jakarta Sans","Padauk",sans-serif;background:var(--background);color:var(--text);line-height:1.7;transition:.3s}button,input{font-family:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:1000;height:64px;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}body.dark header{background:rgba(11,18,32,.9)}
+.header-container{width:min(1180px,92%);height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px}.logo{display:flex;align-items:center;gap:11px;font-size:16px;font-weight:800;white-space:nowrap}.logo-icon{width:40px;height:40px;display:grid;place-items:center;color:#fff;border-radius:12px;background:linear-gradient(135deg,#3b00ff,#7187ff);box-shadow:0 7px 18px rgba(49,85,231,.25)}.logo span{color:var(--primary)}
+.navigation{display:flex;align-items:center;gap:4px}.navigation a{padding:8px 12px;border-radius:9px;color:var(--text-light);font-size:11px;font-weight:700}.navigation a:hover{color:var(--primary);background:var(--primary-light)}
+.header-actions{display:flex;align-items:center;gap:7px}.icon-button{width:38px;height:38px;display:grid;place-items:center;color:var(--text-light);background:var(--card);border:1px solid var(--border);border-radius:10px}.icon-button:hover{color:var(--primary);border-color:var(--primary)}
+.pro-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 14px;color:#fff;border:0;border-radius:11px;background:linear-gradient(135deg,#f6b73c,#e88908);font-size:10px;font-weight:800;box-shadow:0 6px 18px rgba(245,158,11,.22)}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(125deg,#10182f 0%,#1b2e5b 100%)}.hero-grid{position:absolute;inset:0;opacity:.055;background-image:linear-gradient(rgba(255,255,255,.8) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.8) 1px,transparent 1px);background-size:45px 45px}.hero-container{position:relative;width:min(1180px,92%);margin:auto;padding:78px 0 105px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}.hero-content{max-width:650px}.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;margin-bottom:22px;color:#bdcaff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:30px;font-size:9px;font-weight:800;letter-spacing:.08em}.online-dot{width:7px;height:7px;border-radius:50%;background:#55e5bd;box-shadow:0 0 0 5px rgba(85,229,189,.08)}.hero h1{font-size:clamp(32px,4.5vw,55px);line-height:1.2;letter-spacing:-.045em;font-weight:800;margin-bottom:20px}.hero h1 span{color:#91a8ff}.hero-description{max-width:570px;color:#b9c5dc;font-size:13px;line-height:1.9}.hero-buttons{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}.primary-button,.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:11px;font-size:11px;font-weight:800}.primary-button{color:#fff;background:var(--primary);box-shadow:0 7px 20px rgba(49,85,231,.25)}.secondary-button{color:#fff;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+.hero-visual{position:relative;display:grid;place-items:center;min-height:280px}.hero-glow{position:absolute;width:240px;height:240px;border-radius:50%;background:#3155e7;filter:blur(90px);opacity:.28}.learning-card{position:relative;width:min(100%,340px);padding:17px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);box-shadow:0 25px 70px rgba(0,0,0,.18);animation:floating 5s ease-in-out infinite}@keyframes floating{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}.learning-top{display:flex;justify-content:space-between;color:#bdc8de;font-size:8px;font-weight:800;letter-spacing:.05em}.learning-icon{width:58px;height:58px;display:grid;place-items:center;margin:24px 0 15px;color:#fff;background:linear-gradient(135deg,#3155e7,#6178ff);border-radius:17px}.learning-card h3{color:#fff;font-size:19px;margin-bottom:3px}.learning-card p{color:#b9c5dc;font-size:10px}.hero-progress{height:7px;margin:20px 0 8px;overflow:hidden;border-radius:20px;background:rgba(255,255,255,.12)}.hero-progress div{width:10%;height:100%;border-radius:inherit;background:#68e2bc}.hero-progress-info{display:flex;justify-content:space-between;color:#bbc7dc;font-size:10px}
+.main{width:min(1180px,92%);margin:auto}.quote-card{position:relative;z-index:5;display:flex;align-items:center;gap:20px;margin-top:-48px;padding:25px 30px;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}.quote-icon{width:48px;height:48px;flex-shrink:0;display:grid;place-items:center;color:var(--primary);background:var(--primary-light);border-radius:14px;font-size:24px;font-weight:800}.quote-card p{color:var(--text-light);font-size:11px;line-height:1.9}.quote-card strong{color:var(--text)}
+.lessons-section{padding:65px 0 90px}.section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px}.section-label{color:var(--primary);font-size:9px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.section-header h2{margin-top:5px;font-size:27px;line-height:1.3;letter-spacing:-.035em}.section-header p{margin-top:7px;color:var(--text-light);font-size:11px}
+.progress-card{display:flex;align-items:center;gap:22px;padding:21px;margin-bottom:28px;background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}.progress-circle{position:relative;width:68px;height:68px;flex-shrink:0;display:grid;place-items:center;border-radius:50%;background:conic-gradient(var(--primary) 10%,var(--primary-light) 0)}.progress-circle::after{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--card)}.progress-circle span{position:relative;z-index:2;font-size:12px;font-weight:800}.progress-content{flex:1}.progress-content h3{font-size:13px}.progress-content p{color:var(--text-light);font-size:10px;margin:2px 0 10px}.progress-track{height:7px;overflow:hidden;border-radius:20px;background:var(--primary-light)}.progress-track div{width:20%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#3155e7,#8297ff)}.progress-number{text-align:right;color:var(--text-light);font-size:9px}.progress-number strong{display:block;color:var(--text);font-size:21px}
+.filter-area{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:23px}.filter-buttons{display:flex;flex-wrap:wrap;gap:7px}.filter-button{padding:8px 12px;color:var(--text-light);background:var(--card);border:1px solid var(--border);border-radius:9px;font-size:10px;font-weight:700}.filter-button:hover,.filter-button.active{color:var(--primary);background:var(--primary-light);border-color:var(--primary)}.search-box{width:245px;display:flex;align-items:center;gap:8px;padding:0 13px;background:var(--card);border:1px solid var(--border);border-radius:11px;color:var(--text-light)}.search-box input{width:100%;padding:10px 0;color:var(--text);background:transparent;border:0;outline:0;font-size:10px}
+.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.lesson-card{position:relative;display:flex;flex-direction:column;overflow:hidden;min-width:0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);transition:.25s}.lesson-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}.card-line{height:5px;background:var(--primary)}.card-line.orange{background:var(--orange)}.card-line.purple{background:var(--purple)}.card-line.green{background:var(--green)}.card-content{display:flex;flex-direction:column;flex:1;padding:23px}.card-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:17px}.tag{padding:5px 9px;color:var(--primary);background:var(--primary-light);border-radius:7px;font-size:8px;font-weight:800;text-transform:uppercase}.tag.orange{color:#b45309;background:#fff7e6}.tag.purple{color:#7c3aed;background:#f3edff}.tag.green{color:#047857;background:#ecfdf5}.lock-tag{color:#b91c1c;background:#fef2f2}.card-icon{width:48px;height:48px;display:grid;place-items:center;margin-bottom:17px;color:var(--primary);background:var(--primary-light);border-radius:14px}.card-icon.orange{color:#d97706;background:#fff7e6}.card-icon.purple{color:#7c3aed;background:#f3edff}.card-icon.green{color:#059669;background:#ecfdf5}.lesson-card h3{color:var(--text);font-size:15px;line-height:1.5;margin-bottom:7px;font-weight:800}.lesson-card p{color:var(--text-light);font-size:10px;line-height:1.8;flex:1}.lesson-button{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;margin-top:21px;padding:11px 15px;border:0;border-radius:10px;color:#fff;background:var(--primary);font-size:10px;font-weight:800}.lesson-button.orange{background:var(--orange)}.lesson-button.purple{background:var(--purple)}.lesson-button.locked{color:#475569;background:#e8edf4}body.dark .lesson-button.locked{color:#cbd5e1;background:#26344b}.locked-card{background:linear-gradient(145deg,var(--card),rgba(148,163,184,.06))}.lock-overlay{position:absolute;top:14px;right:14px;width:28px;height:28px;display:grid;place-items:center;color:#64748b;background:rgba(148,163,184,.12);border-radius:8px;font-size:12px}
+.premium-banner{position:relative;overflow:hidden;margin-top:34px;padding:28px 30px;border-radius:20px;color:#fff;background:linear-gradient(120deg,#111827,#1e3a8a);box-shadow:0 20px 45px rgba(15,23,42,.15)}.premium-content{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px}.premium-label{color:#fbbf24;font-size:8px;font-weight:800;letter-spacing:.13em;margin-bottom:5px}.premium-title{font-size:17px;font-weight:800;margin-bottom:3px}.premium-text{color:#aab7ce;font-size:10px}.premium-button{flex-shrink:0;padding:11px 17px;border:0;border-radius:10px;color:#451a03;background:linear-gradient(135deg,#fbbf24,#f59e0b);font-size:9px;font-weight:800}
+footer{background:#101827;color:#94a3b8;padding:40px 0 22px}.footer-container{width:min(1180px,92%);margin:auto}.footer-top{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:23px;border-bottom:1px solid rgba(255,255,255,.08)}.footer-brand{color:#fff;font-size:15px;font-weight:800}.footer-brand span{color:#6f89ff}.footer-description{color:#64748b;font-size:9px;margin-top:3px}.footer-links{display:flex;gap:18px}.footer-links a{color:#94a3b8;font-size:9px}.footer-bottom{text-align:center;padding-top:20px;color:#475569;font-size:8px}
+.modal-overlay{position:fixed;inset:0;z-index:5000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(15,23,42,.72);backdrop-filter:blur(8px)}.modal-overlay.show{display:flex}.modal-box{width:min(100%,410px);padding:28px;background:var(--card);border:1px solid var(--border);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.25)}.modal-top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:18px}.modal-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:13px;color:#b45309;background:#fff7df;font-size:21px}.modal-box h2{margin-top:11px;font-size:20px;color:var(--text)}.modal-box>p{color:var(--text-light);font-size:10px}.close-modal{width:32px;height:32px;border:0;border-radius:50%;color:var(--text-light);background:var(--primary-light);font-size:18px}.payment-box{padding:15px;margin:18px 0;background:var(--background);border:1px solid var(--border);border-radius:13px}.payment-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:5px 0;color:var(--text-light);font-size:10px}.payment-row strong{color:var(--text)}.input-key{width:100%;padding:12px;border:1.5px solid var(--border);border-radius:10px;outline:0;text-align:center;color:var(--text);background:var(--card);font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}.submit-button{width:100%;padding:12px;margin-top:10px;border:0;border-radius:10px;color:#fff;background:var(--primary);font-size:10px;font-weight:800}.cancel-button{width:100%;padding:9px;border:0;background:transparent;color:var(--text-light);font-size:9px;font-weight:700}.toast{position:fixed;z-index:9999;left:50%;bottom:22px;transform:translate(-50%,100px);opacity:0;padding:11px 16px;color:#fff;background:#111827;border-radius:10px;box-shadow:0 15px 35px rgba(0,0,0,.2);font-size:9px;font-weight:700;transition:.3s}.toast.show{transform:translate(-50%,0);opacity:1}.no-results{display:none;grid-column:1/-1;padding:55px 20px;text-align:center;color:var(--text-light);background:var(--card);border:1px dashed var(--border);border-radius:18px;font-size:11px}
+@media(max-width:950px){.hero-container{grid-template-columns:1fr;text-align:center;gap:35px}.hero-content{margin:auto}.hero-description{margin:auto}.hero-buttons{justify-content:center}.lesson-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){header{height:60px}.header-container{width:calc(100% - 24px)}.navigation{display:none}.logo{font-size:13px}.logo-icon{width:35px;height:35px}.icon-button{width:35px;height:35px}.hero-container{padding:60px 0 90px}.hero h1{font-size:34px}.quote-card{align-items:flex-start;padding:21px}.progress-card{flex-wrap:wrap}.filter-area{align-items:stretch;flex-direction:column}.search-box{width:100%}.premium-content{align-items:flex-start;flex-direction:column}.premium-button{width:100%}.footer-top{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.lesson-grid{grid-template-columns:1fr}.main,.hero-container{width:calc(100% - 26px)}.hero h1{font-size:30px}.hero-buttons{flex-direction:column}.primary-button,.secondary-button{width:100%}.quote-card{margin-top:-35px}.section-header h2{font-size:23px}.modal-box{padding:22px}}
+  /* Professional Square Image */
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            object-fit: flex;
+            border-radius: 38px; 
+               }  
+</style>
+</head>
+<body>
+<header>
+    <div class="header-container">
+<a href="#home" class="logo"> <img src="images/logo.jpg" alt="Learn" class="profile-img"> Grade-12 <span>English</span></a>
+<nav class="navigation"><a href="#home">ပင်မ</a><a href="#lessons">သင်ခန်းစာများ</a><a href="#premium">Premium</a></nav>
+<div class="header-actions"><button class="icon-button" id="themeButton" onclick="toggleDarkMode()">☾</button><button class="pro-button" onclick="openPremiumModal()">👑 <span id="proText">PRO</span></button></div>
+</div></header>
+
+<section class="hero" id="home"><div class="hero-grid"></div><div class="hero-container">
+<div class="hero-content">
+<div class="hero-badge"><span class="online-dot"></span> GRADE-12 ENGLISH LEARNING HUB</div>
+<h1>Learn English.<br><span>Build Your Future.</span></h1>
+<p class="hero-description">Grade-12 English ဘာသာရပ်အတွက် Textbook Units၊ Grammar၊ Vocabulary၊ Reading နှင့် Exercises များကို တစ်နေရာတည်းမှာ စနစ်တကျ လေ့လာနိုင်ပါသည်။</p>
+<div class="hero-buttons"><a href="#lessons" class="primary-button">📚 သင်ခန်းစာများ စတင်လေ့လာမည်</a><button class="secondary-button" onclick="openPremiumModal()">👑 Premium Access</button></div>
+</div>
+<div class="hero-visual"><div class="hero-glow"></div><div class="learning-card">
+<div class="learning-top"><span>YOUR LEARNING</span><span>GRADE 12</span></div>
+<div class="learning-icon">📚</div><h3>English Learning</h3><p>Reading • Grammar • Vocabulary</p>
+<div class="hero-progress"><div></div></div><div class="hero-progress-info"><span>Learning Progress</span><strong>10%</strong></div>
+</div></div>
+</div></section>
+
+<main class="main">
+<div class="quote-card"><div class="quote-icon">“</div><p><strong>ပညာသင်ယူခြင်းသည် ပြိုင်ပွဲတစ်ခုမဟုတ်ပါ။</strong><br>မိမိ၏အရှိန်အဟုန်ဖြင့် တစ်ဆင့်ချင်းစီ လေ့လာပြီး မိမိ၏အနာဂတ်ကို တည်ဆောက်သွားပါ။</p></div>
+
+<section class="lessons-section" id="lessons">
+<div class="section-header"><div><div class="section-label">Learning Materials</div><h2>သင်ခန်းစာများ</h2><p>Unit 1 မှ Unit 12 အထိ၊ Reviews 1–4 နှင့် Poems 1–4 ကို စနစ်တကျ လေ့လာပါ။</p></div></div>
+
+<div class="progress-card"><div class="progress-circle"><span>10%</span></div><div class="progress-content"><h3>Your Learning Progress</h3><p>Free lessons 2 ခု ရရှိနိုင်ပါသည်။</p><div class="progress-track"><div></div></div></div><div class="progress-number"><strong>2</strong>Free Lessons</div></div>
+
+<div class="filter-area"><div class="filter-buttons">
+<button class="filter-button active" onclick="filterLessons('all',this)">All</button>
+<button class="filter-button" onclick="filterLessons('unit',this)">Units</button>
+<button class="filter-button" onclick="filterLessons('review',this)">Reviews</button>
+<button class="filter-button" onclick="filterLessons('poem',this)">Poems</button>
+<button class="filter-button" onclick="filterLessons('free',this)">Free</button>
+<button class="filter-button" onclick="filterLessons('premium',this)">Premium</button>
+</div><div class="search-box">🔎<input type="search" id="searchInput" placeholder="Search lessons..." oninput="searchLessons()"></div></div>
+
+<div class="lesson-grid" id="lessonGrid">
+
+<!-- UNIT 1 -->
+<article class="lesson-card" data-type="unit free" data-title="unit 1 chasing dreams"><div class="card-line"></div><div class="card-content"><div class="card-meta"><span class="tag">Unit 1</span><span class="tag green">FREE</span></div><div class="card-icon">📚</div><h3>CHASING DREAMS</h3><p>Successful entrepreneurs အကြောင်း Reading၊ Vocabulary နှင့် Structural Language Exercises များ။</p><a href="unit1.html" class="lesson-button">စတင်လေ့လာမည် →</a></div></article>
+
+<!-- UNIT 2 -->
+<article class="lesson-card" data-type="unit free" data-title="unit 2 artificial intelligence ai robotics help threat"><div class="card-line"></div><div class="card-content"><div class="card-meta"><span class="tag">Unit 2</span><span class="tag green">FREE</span></div><div class="card-icon">🤖</div><h3>ARTIFICIAL INTELLIGENCE & ROBOTICS</h3><p>AI နှင့် Robotics အကြောင်း Reading၊ Vocabulary နှင့် Language Exercises များ။</p><a href="unit2.html" class="lesson-button">စတင်လေ့လာမည် →</a></div></article>
+
+<!-- UNIT 3 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 3 equal access education"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 3</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon">🎓</div><h3>EQUAL ACCESS TO EDUCATION</h3><p>Education equality နှင့် equal access to education အကြောင်း လေ့လာနိုင်သော Unit 3။</p><button class="lesson-button locked" onclick="handlePremium('unit3.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- REVIEW 1 -->
+<article class="lesson-card locked-card" data-type="review premium" data-title="review 1"><div class="card-line orange"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag orange">Review</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon orange">📝</div><h3>REVIEW 1</h3><p>Unit 1 မှ Unit 3 အထိ လေ့လာခဲ့သော အကြောင်းအရာများကို ပြန်လည်လေ့ကျင့်ရန်။</p><button class="lesson-button orange locked" onclick="handlePremium('review1.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- POEM 1 -->
+<article class="lesson-card locked-card" data-type="poem premium" data-title="poem 1 equality"><div class="card-line purple"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag purple">Poem</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon purple">📖</div><h3>EQUALITY</h3><p>Equality ကဗျာအတွက် Reading၊ Meaning နှင့် Literary Analysis လေ့လာစရာများ။</p><button class="lesson-button purple locked" onclick="handlePremium('poem1.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 4 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 4 civic values"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 4</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon">🏛️</div><h3>CIVIC VALUES</h3><p>Civic Values နှင့် လူမှုအသိုင်းအဝိုင်းအတွက် တာဝန်ယူမှုများအကြောင်း။</p><button class="lesson-button locked" onclick="handlePremium('unit4.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 5 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 5 self awareness manage stress"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 5</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon green">🧠</div><h3>SELF-AWARENESS: TO MANAGE STRESS</h3><p>Self-awareness နှင့် stress management အကြောင်း လေ့လာနိုင်သော Unit 5။</p><button class="lesson-button locked" onclick="handlePremium('unit5.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 6 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 6 small steps giant leaps"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 6</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon">🚀</div><h3>SMALL STEPS, GIANT LEAPS</h3><p>ရည်မှန်းချက်များကို တစ်ဆင့်ချင်း အကောင်အထည်ဖော်ခြင်းအကြောင်း လေ့လာနိုင်သော Unit 6။</p><button class="lesson-button locked" onclick="handlePremium('unit6.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- REVIEW 2 -->
+<article class="lesson-card locked-card" data-type="review premium" data-title="review 2"><div class="card-line orange"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag orange">Review</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon orange">📋</div><h3>REVIEW 2</h3><p>နောက်ပိုင်း Units များမှ အကြောင်းအရာများကို ပြန်လည်လေ့ကျင့်နိုင်ရန်။</p><button class="lesson-button orange locked" onclick="handlePremium('review2.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- POEM 2 -->
+<article class="lesson-card locked-card" data-type="poem premium" data-title="poem 2 ballad birmingham"><div class="card-line purple"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag purple">Poem</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon purple">📜</div><h3>BALLAD OF BIRMINGHAM</h3><p>Ballad of Birmingham ကဗျာအတွက် Reading နှင့် Analysis လေ့လာစရာများ။</p><button class="lesson-button purple locked" onclick="handlePremium('poem2.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 7 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 7 gps uses"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 7</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon">📍</div><h3>GPS AND ITS USES</h3><p>GPS technology နှင့် ၎င်း၏ နေ့စဉ်ဘဝအသုံးပြုမှုများအကြောင်း။</p><button class="lesson-button locked" onclick="handlePremium('unit7.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+
+<!-- UNIT 8 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 8 decibel dilemma call for change in myanmar"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 8</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon orange">🔊</div><h3>DECIBEL DILEMMA: A CALL FOR CHANGE IN MYANMAR</h3><p>Noise pollution၊ Decibel နှင့် မြန်မာနိုင်ငံတွင် ပြောင်းလဲမှုအတွက် လိုအပ်ချက်များအကြောင်း လေ့လာနိုင်သော Unit 8။</p><button class="lesson-button orange locked" onclick="handlePremium('unit8.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 9 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 9 serve to lead or lead to serve"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 9</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon">🤝</div><h3>SERVE TO LEAD, OR LEAD TO SERVE?</h3><p>Leadership၊ Service နှင့် ခေါင်းဆောင်မှု၏ အဓိပ္ပာယ်များကို လေ့လာနိုင်သော Unit 9။</p><button class="lesson-button locked" onclick="handlePremium('unit9.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- REVIEW 3 -->
+<article class="lesson-card locked-card" data-type="review premium" data-title="review 3"><div class="card-line orange"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag orange">Review</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon orange">📝</div><h3>REVIEW 3</h3><p>Unit 7 မှ Unit 9 အထိ လေ့လာခဲ့သော အကြောင်းအရာများကို ပြန်လည်လေ့ကျင့်ရန်။</p><button class="lesson-button orange locked" onclick="handlePremium('review3.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- POEM 3 -->
+<article class="lesson-card locked-card" data-type="poem premium" data-title="poem 3 the solitary reaper"><div class="card-line purple"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag purple">Poem</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon purple">🌾</div><h3>THE SOLITARY REAPER</h3><p>William Wordsworth ၏ The Solitary Reaper ကဗျာအတွက် Reading နှင့် Literary Analysis လေ့လာစရာများ။</p><button class="lesson-button purple locked" onclick="handlePremium('poem3.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 10 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 10 redoing history"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 10</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon">🏺</div><h3>REDOING HISTORY</h3><p>History ကို ပြန်လည်ကြည့်ရှုခြင်း၊ အတိတ်မှ သင်ခန်းစာများနှင့် သမိုင်း၏အမြင်များအကြောင်း လေ့လာနိုင်သော Unit 10။</p><button class="lesson-button locked" onclick="handlePremium('unit10.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 11 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 11 exploring a shabby hat"><div class="card-line"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag">Unit 11</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon green">🎩</div><h3>EXPLORING A SHABBY HAT</h3><p>Exploring A Shabby Hat အကြောင်း Reading၊ Vocabulary နှင့် Language Activities များကို လေ့လာနိုင်သော Unit 11။</p><button class="lesson-button locked" onclick="handlePremium('unit11.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- UNIT 12 -->
+<article class="lesson-card locked-card" data-type="unit premium" data-title="unit 12 embracing sustainability path greener future"><div class="card-line green"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag green">Unit 12</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon green">🌱</div><h3>EMBRACING SUSTAINABILITY: A PATH TO A GREENER FUTURE</h3><p>Sustainability၊ Environmental awareness နှင့် ပိုမိုစိမ်းလန်းသောအနာဂတ်အတွက် လမ်းကြောင်းများအကြောင်း။</p><button class="lesson-button locked" onclick="handlePremium('unit12.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- REVIEW 4 -->
+<article class="lesson-card locked-card" data-type="review premium" data-title="review 4"><div class="card-line orange"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag orange">Review</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon orange">📋</div><h3>REVIEW 4</h3><p>Unit 10 မှ Unit 12 အထိ လေ့လာခဲ့သော အကြောင်းအရာများကို ပြန်လည်လေ့ကျင့်နိုင်ရန်။</p><button class="lesson-button orange locked" onclick="handlePremium('review4.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<!-- POEM 4 -->
+<article class="lesson-card locked-card" data-type="poem premium" data-title="poem 4 democracy"><div class="card-line purple"></div><div class="lock-overlay">🔒</div><div class="card-content"><div class="card-meta"><span class="tag purple">Poem</span><span class="tag lock-tag">LOCKED</span></div><div class="card-icon purple">🕊️</div><h3>DEMOCRACY</h3><p>Democracy ကဗျာအတွက် Reading၊ Meaning နှင့် Literary Analysis လေ့လာစရာများ။</p><button class="lesson-button purple locked" onclick="handlePremium('poem4.html')">🔒 Premium ဖြင့် ဖွင့်မည်</button></div></article>
+
+<div class="no-results" id="noResults">🔎<br><br>သင်ရှာဖွေထားသော သင်ခန်းစာကို မတွေ့ပါ။</div>
+</div>
+
+<div class="premium-banner" id="premium"><div class="premium-content"><div><div class="premium-label">PREMIUM ACCESS</div><div class="premium-title">Full Grade-12 English Learning</div><p class="premium-text">Locked Units၊ Reviews နှင့် Poems များကို Premium Access ဖြင့် ဆက်လက်လေ့လာနိုင်ပါသည်။</p></div><button class="premium-button" onclick="openPremiumModal()">👑 GET PRO ACCESS</button></div></div>
+</section>
+</main>
+
+<footer><div class="footer-container"><div class="footer-top"><div><div class="footer-brand">Grade-12 <span>English</span></div><div class="footer-description">Learn • Practice • Improve</div></div><div class="footer-links"><a href="#home">Home</a><a href="#lessons">Lessons</a><a href="#premium">Premium</a></div></div><div class="footer-bottom">© 2026 Grade-12 English Learning Hub. All rights reserved.</div></div></footer>
+
+<div class="modal-overlay" id="premiumModal" onclick="closeOutside(event)"><div class="modal-box"><div class="modal-top"><div><div class="modal-icon">👑</div><h2>Premium Access ဝယ်ယူပါ</h2><p>Premium Key ထည့်သွင်းပြီး Locked Lessons များကို ဖွင့်ပါ။</p></div><button class="close-modal" onclick="closePremiumModal()">×</button></div><div class="payment-box">
+    <div class="payment-box">        
+    <div class="payment-row"><span><b>• Kpay/Wave</b></span><strong>09975401348</strong></div><div class="payment-row"><span><b>• နာမည်</b></span><strong>Kyaw Swar</strong></div><div class="payment-row"><span><b>• ကျသင့်ငွေ</b></span><strong>10000ကျပ်</strong></div></div>
+    <p style="font-size:0.82rem; color:#475569;">ငွေလွှဲပြီးပါက Telegram/Viber သို့ ပြေစာပို့၍ Activation Key တောင်းယူပါ:</p>
+            <a href="https://t.me/Ray200626" target="_blank" style="color:#2563eb; font-weight:700; text-decoration:none; display:inline-block; margin:8px 0;">👉 Telegram သို့ သွားရန် နှိပ်ပါ</a>            
+            
+    <input type="text" id="premiumKey" class="input-key" placeholder="ENTER PREMIUM KEY" autocomplete="off">
+<button class="submit-button" onclick="activatePremium()">🔓 Activate Premium</button><button class="cancel-button" onclick="closePremiumModal()">Cancel</button></div></div>
+
+<div class="toast" id="toast"></div>
+
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+  import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+  import {
+    getFirestore, doc, runTransaction, getDoc
+  } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+  // ==============================
+  // 1. PUT YOUR FIREBASE CONFIG HERE
+  // Firebase Console → Project settings → Your apps → Web app
+  // ==============================
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT.firebasestorage.app",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  const firebaseConfigReady =
+    firebaseConfig.apiKey !== "YOUR_API_KEY" &&
+    firebaseConfig.authDomain !== "YOUR_PROJECT.firebaseapp.com" &&
+    firebaseConfig.projectId !== "YOUR_PROJECT_ID" &&
+    firebaseConfig.appId !== "YOUR_APP_ID";
+
+  window.firebaseReady = false;
+  window.firebaseUser = null;
+  window.firebaseConfigReady = firebaseConfigReady;
+
+  if (firebaseConfigReady && location.protocol !== "file:") {
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    signInAnonymously(auth).catch(err => {
+      // Do not spam the browser console.
+      window.firebaseReady = false;
+    });
+
+    onAuthStateChanged(auth, user => {
+      window.firebaseUser = user || null;
+      window.firebaseReady = !!user;
+      updatePremiumUI();
+    });
+
+    window.activatePremiumSecure = async function(rawKey) {
+      const key = String(rawKey || "").trim().toUpperCase();
+      if (!key) return { ok:false, message:"⚠️ Premium Key ထည့်ပေးပါ။" };
+      if (!window.firebaseUser) {
+        return { ok:false, message:"⚠️ Website ကို online hosting ပေါ်မှာဖွင့်ပြီး Firebase ကို ချိတ်ဆက်ထားရပါမယ်။" };
+      }
+
+      const uid = window.firebaseUser.uid;
+      const keyRef = doc(db, "premiumKeys", key);
+
+      try {
+        await runTransaction(db, async transaction => {
+          const snap = await transaction.get(keyRef);
+          if (!snap.exists()) throw new Error("INVALID_KEY");
+
+          const data = snap.data();
+          if (data.active !== true) throw new Error("INACTIVE_KEY");
+          if (data.boundUid === uid) {
+            transaction.update(keyRef, { lastUsedAt: new Date() });
+            return;
+          }
+          if (data.boundUid) throw new Error("KEY_ALREADY_USED");
+
+          transaction.update(keyRef, {
+            boundUid: uid,
+            activatedAt: new Date(),
+            lastUsedAt: new Date()
+          });
+        });
+
+        localStorage.setItem("g12_premium","true");
+        localStorage.setItem("g12_premium_uid",uid);
+        localStorage.setItem("g12_premium_key",key);
+        return { ok:true, message:"🎉 Premium Access ဖွင့်ပြီးပါပြီ။" };
+      } catch (err) {
+        if (err.message === "INVALID_KEY") return {ok:false,message:"❌ Premium Key မမှန်ပါ။"};
+        if (err.message === "INACTIVE_KEY") return {ok:false,message:"❌ ဒီ Premium Key ကို ပိတ်ထားပါတယ်။"};
+        if (err.message === "KEY_ALREADY_USED") return {ok:false,message:"❌ ဒီ Premium Key ကို အခြားဖုန်းမှာ Activate လုပ်ပြီးသားပါ။"};
+        return {ok:false,message:"⚠️ Activation မအောင်မြင်ပါ။"};
+      }
+    };
+
+    window.verifyPremiumSecure = async function() {
+      const uid = window.firebaseUser?.uid;
+      const key = localStorage.getItem("g12_premium_key");
+      if (!uid || !key) return false;
+      try {
+        const snap = await getDoc(doc(db, "premiumKeys", key));
+        if (!snap.exists()) return false;
+        const data = snap.data();
+        const valid = data.active === true && data.boundUid === uid;
+        if (!valid) {
+          localStorage.removeItem("g12_premium");
+          localStorage.removeItem("g12_premium_key");
+          localStorage.removeItem("g12_premium_uid");
+        }
+        return valid;
+      } catch(e) {
+        return false;
+      }
+    };
+  } else {
+    window.activatePremiumSecure = async function() {
+      if (location.protocol === "file:") {
+        return {ok:false,message:"🌐 ဒီဖိုင်ကို တိုက်ရိုက်မဖွင့်ဘဲ Web Hosting ပေါ်တင်ပြီးမှ Premium Activate လုပ်ပါ။"};
+      }
+      return {ok:false,message:"⚙️ Firebase Config မထည့်ရသေးပါ။"};
+    };
+    window.verifyPremiumSecure = async function(){ return false; };
+  }
+
+  // Verify the local premium flag against Firebase.
+  window.verifyPremiumSecure = async function() {
+    const uid = window.firebaseUser?.uid;
+    const key = localStorage.getItem("g12_premium_key");
+
+    if (!uid || !key) return false;
+
+    try {
+      const snap = await getDoc(doc(db, "premiumKeys", key));
+      if (!snap.exists()) return false;
+
+      const data = snap.data();
+      const valid = data.active === true && data.boundUid === uid;
+
+      if (!valid) {
+        localStorage.removeItem("g12_premium");
+        localStorage.removeItem("g12_premium_key");
+        localStorage.removeItem("g12_premium_uid");
+      }
+      return valid;
+    } catch (e) {
+      console.error(e);
+      return false;
+    }
+  };
+</script>
+
+<script>
+function toggleDarkMode(){document.body.classList.toggle("dark");localStorage.setItem("g12_dark_mode",document.body.classList.contains("dark")?"true":"false");updateThemeIcon()}
+function updateThemeIcon(){document.getElementById("themeButton").textContent=document.body.classList.contains("dark")?"☀":"☾"}
+if(localStorage.getItem("g12_dark_mode")==="true")document.body.classList.add("dark");
+updateThemeIcon();
+function openPremiumModal(){document.getElementById("premiumModal").classList.add("show");document.body.style.overflow="hidden";setTimeout(()=>document.getElementById("premiumKey").focus(),100)}
+function closePremiumModal(){document.getElementById("premiumModal").classList.remove("show");document.body.style.overflow=""}
+function closeOutside(e){if(e.target.id==="premiumModal")closePremiumModal()}
+function isPremium(){return localStorage.getItem("g12_premium")==="true" && !!localStorage.getItem("g12_premium_key")}
+async function activatePremium(){
+const input=document.getElementById("premiumKey"),key=input.value.trim().toUpperCase();
+if(!key){showToast("⚠️ Premium Key ထည့်ပေးပါ။");return}
+if(typeof window.activatePremiumSecure !== "function"){
+showToast("⚠️ Secure service မပြင်ဆင်ရသေးပါ။");
+return;
+}
+input.disabled=true;
+const result=await window.activatePremiumSecure(key);
+input.disabled=false;
+showToast(result.message);
+if(result.ok){
+  closePremiumModal();
+  setTimeout(()=>location.reload(),700);
+}
+}
+function updatePremiumUI(){if(isPremium())document.getElementById("proText").textContent="PRO ACTIVE"}
+function handlePremium(page){if(isPremium())location.href=page;else openPremiumModal()}
+let currentFilter="all";
+function filterLessons(filter,button){currentFilter=filter;document.querySelectorAll(".filter-button").forEach(b=>b.classList.remove("active"));button.classList.add("active");applyFilters()}
+function searchLessons(){applyFilters()}
+function applyFilters(){
+const search=document.getElementById("searchInput").value.toLowerCase().trim();
+const cards=document.querySelectorAll(".lesson-card");let visible=0;
+cards.forEach(card=>{
+const type=card.dataset.type.toLowerCase(),title=card.dataset.title.toLowerCase();
+const filterMatch=currentFilter==="all"||type.includes(currentFilter),searchMatch=!search||title.includes(search);
+if(filterMatch&&searchMatch){card.style.display="flex";visible++}else card.style.display="none";
+});
+document.getElementById("noResults").style.display=visible===0?"block":"none";
+}
+let toastTimer;
+function showToast(message){const toast=document.getElementById("toast");toast.textContent=message;toast.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove("show"),3000)}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closePremiumModal()});
+document.addEventListener("DOMContentLoaded",async()=>{
+  updatePremiumUI();
+  if(window.firebaseReady && typeof window.verifyPremiumSecure==="function"){
+    const valid=await window.verifyPremiumSecure();
+    if(!valid){
+      localStorage.removeItem("g12_premium");
+      updatePremiumUI();
+    }
+  }
+});
+</script>
+</body>
+</html>
