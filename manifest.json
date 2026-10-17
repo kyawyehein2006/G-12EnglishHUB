@@ -9,9 +9,8 @@
   "start_url": "/",
   "theme_color": "#1f11ce",
   "icons": [
-    {
-      "src": "https://g12english-hub.netlify.app/favicon.ico",
-      "type": "image/x-icon",
+    { "src": "images/logo.png",
+"type": "image/png",
       "isSquare": false,
       "isPng": false,
       "isWebp": false,
