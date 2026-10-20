@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#10172d">
+<title>Writing 4 • Community Activity</title>
+<style>
+
+:root{--bg:#f4f6fc;--card:#fff;--text:#182238;--muted:#64718a;--line:#dce3f0;--primary:#5b5ee8;--secondary:#11a99a;--soft:#eff0ff;--shadow:0 18px 50px #1c2c5012;--gold:#c18a35;--radius:22px}
+body.dark{--bg:#080f1d;--card:#101b2d;--text:#edf3ff;--muted:#a9b8ce;--line:#26364f;--primary:#a9aaff;--secondary:#42d9c5;--soft:#1b2943;--shadow:0 18px 50px #0005;--gold:#f0c779}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 Inter,"Segoe UI",Arial,sans-serif;transition:background .25s,color .25s}
+a{color:inherit}button,textarea,select{font:inherit}
+.hero{position:relative;overflow:hidden;padding:58px 18px 76px;color:#fff;background:radial-gradient(circle at 12% 20%,#12b9a544,transparent 28%),radial-gradient(circle at 85% 12%,#8785ff55,transparent 32%),linear-gradient(130deg,#0a1630,#242b63 56%,#075e62)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:30px 30px}
+.hero-in,.nav-in,.wrap{position:relative;max-width:1120px;margin:auto}.kicker{font-size:12px;font-weight:900;letter-spacing:2.5px;color:#8ff8e8}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.02;letter-spacing:-2px;max-width:900px;margin:14px 0 18px}.hero p{max-width:780px;color:#e0eaff;margin:0}.hero-orb{position:absolute;right:5%;top:5px;font-size:clamp(70px,12vw,130px);opacity:.23;filter:drop-shadow(0 12px 30px #0005)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}.tags span{border:1px solid #ffffff30;background:#ffffff12;border-radius:999px;padding:5px 11px;font-size:12px}
+.header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-in{display:flex;align-items:center;gap:10px;min-height:64px;padding:8px 16px}.brand{font-weight:900;letter-spacing:.2px;margin-right:auto}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:1.5px}.nav-btn,.theme-btn{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:9px 12px;cursor:pointer;text-decoration:none;font-weight:750}.nav-btn:hover,.theme-btn:hover{border-color:var(--primary);transform:translateY(-1px)}
+.wrap{padding:0 16px 40px;margin-top:-28px}.section{margin:24px 0 30px;scroll-margin-top:90px}.section-heading{display:flex;align-items:center;gap:11px;margin:0 0 13px}.section-heading h2{font-size:clamp(21px,3vw,28px);line-height:1.25;margin:0;letter-spacing:-.5px}.eyebrow{display:inline-grid;place-items:center;min-width:38px;height:36px;padding:0 9px;border-radius:12px;background:var(--soft);color:var(--primary);font-size:12px;font-weight:950;letter-spacing:.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(17px,3vw,27px);box-shadow:var(--shadow)}.muted{color:var(--muted)}.note{background:var(--soft);border-left:4px solid var(--secondary);border-radius:12px;padding:13px 16px;margin:14px 0}.note strong{color:var(--primary)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.mini-card{border:1px solid var(--line);border-radius:17px;padding:16px;background:var(--card)}.mini-card h3{margin:0 0 5px;font-size:16px}.mini-card p{margin:4px 0}.en{font-weight:750}.mm{color:var(--muted);font-size:.94rem;margin-top:4px}.pill{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;background:var(--soft);color:var(--primary);padding:4px 9px;margin-bottom:8px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;min-width:530px;background:var(--card)}th,td{text-align:left;vertical-align:top;padding:13px 15px;border-bottom:1px solid var(--line)}th{background:var(--soft);font-size:13px;color:var(--primary)}tr:last-child td{border-bottom:0}td strong{display:block}
+.model{overflow:hidden;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.model-head{padding:20px 22px;color:#fff;background:linear-gradient(120deg,#565be6,#0eaa9b)}.model-head h3{font-size:24px;line-height:1.3;margin:0 0 5px}.model-head p{margin:0;color:#e6fffc}.model-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.action{border:1px solid var(--line);background:var(--card);color:var(--text);padding:9px 13px;border-radius:11px;cursor:pointer;font-weight:750}.action.primary{background:var(--primary);color:white;border-color:transparent}.model-body{padding:clamp(15px,3vw,25px);background:var(--card)}.essay-text{font-size:16px;line-height:1.95}.essay-text p{margin:0 0 15px}.translation{border-top:1px solid var(--line);padding-top:15px;margin-top:17px}.translation h4{margin:0 0 8px;color:var(--primary)}.translation p{margin:0 0 12px;color:var(--muted);line-height:1.9}.hidden{display:none!important}
+.steps{counter-reset:step;display:grid;gap:11px}.step{position:relative;padding:15px 15px 15px 55px;border:1px solid var(--line);border-radius:15px}.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:14px;top:15px;display:grid;place-items:center;width:29px;height:29px;border-radius:10px;background:var(--soft);color:var(--primary);font-size:11px;font-weight:950}.step h3{font-size:16px;margin:0 0 3px}.step p{margin:0}
+.vocab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.vocab{padding:12px;border:1px solid var(--line);border-radius:13px}.vocab b{display:block;color:var(--primary)}.vocab span{font-size:13px;color:var(--muted)}
+.pattern{padding:14px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.pattern code{font-family:inherit;color:var(--primary);font-weight:850;background:var(--soft);padding:3px 6px;border-radius:6px}
+.practice-area{width:100%;min-height:210px;resize:vertical;border:1px solid var(--line);border-radius:15px;background:var(--bg);color:var(--text);padding:15px;line-height:1.8;outline:none}.practice-area:focus{border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 16%,transparent)}.practice-toolbar{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:10px 0}.count{font-weight:850;color:var(--primary)}.feedback{margin-top:12px;padding:13px 15px;border-radius:12px;background:var(--soft);color:var(--text)}.quiz-q{padding:15px 0;border-bottom:1px solid var(--line)}.quiz-q:last-child{border-bottom:0}.quiz-q p{font-weight:800;margin:0 0 8px}.quiz-q label{display:block;padding:6px 0;color:var(--muted);cursor:pointer}.quiz-q input{accent-color:var(--primary);margin-right:8px}
+.checklist{list-style:none;padding:0;margin:0}.checklist li{padding:9px 0;border-bottom:1px solid var(--line)}.checklist li:last-child{border:0}.checklist input{accent-color:var(--primary);margin-right:9px;transform:scale(1.1)}
+footer{text-align:center;padding:28px 15px 38px;color:var(--muted);border-top:1px solid var(--line);font-size:13px}
+.menu-trigger{position:fixed;right:20px;bottom:22px;z-index:80;width:56px;height:56px;border:0;border-radius:18px;color:#fff;background:linear-gradient(135deg,#6265f1,#0eaa9b);box-shadow:0 12px 35px #303d9b55;font-size:23px;cursor:pointer}.menu-overlay{position:fixed;inset:0;z-index:90;background:#0206179c;backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.25s}.menu-overlay.open{opacity:1;visibility:visible}.side-menu{position:fixed;top:0;right:0;z-index:100;width:min(390px,92vw);height:100dvh;overflow-y:auto;padding:22px 18px;background:var(--card);border-left:1px solid var(--line);box-shadow:-20px 0 65px #0002;transform:translateX(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}.side-menu.open{transform:translateX(0)}.menu-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px}.menu-eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:950;color:var(--primary)}.menu-title{font-size:22px;font-weight:900}.close-menu{width:40px;height:40px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--text);font-size:22px;cursor:pointer}.menu-section{margin-top:20px}.menu-label-head{font-size:11px;letter-spacing:1px;font-weight:900;color:var(--muted);margin:0 4px 9px}.menu-list{display:grid;gap:7px}.menu-item{display:flex;align-items:center;gap:11px;text-decoration:none;border:1px solid var(--line);border-radius:14px;padding:11px;color:var(--text);transition:.2s}.menu-item:hover,.menu-item.active{background:var(--soft);border-color:color-mix(in srgb,var(--primary) 35%,var(--line));transform:translateX(-2px)}.menu-icon{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:12px;background:var(--soft);color:var(--primary);font-weight:900}.menu-item.active .menu-icon{background:linear-gradient(135deg,#6265f1,#0eaa9b);color:#fff}.menu-label{display:block;font-size:14px;font-weight:850}.menu-small{display:block;font-size:11px;color:var(--muted)}.menu-arrow{margin-left:auto;color:var(--muted);font-size:20px}.menu-note{margin-top:17px;border-radius:15px;padding:14px;background:linear-gradient(130deg,#6468f019,#0eaa9b19);border:1px solid var(--line);font-size:12px;color:var(--muted)}.menu-note strong{color:var(--primary)}
+@media(max-width:700px){.hero{padding:43px 17px 60px}.hero-orb{right:-10px;top:35px;opacity:.15}.nav-in{min-height:58px}.brand small{display:none}.grid2,.vocab-grid{grid-template-columns:1fr}.wrap{padding:0 12px 30px}.section{margin:20px 0 25px}.menu-trigger{right:14px;bottom:16px;width:51px;height:51px}.card{border-radius:17px}.hero h1{letter-spacing:-1.4px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-orb" aria-hidden="true">✦</div>
+    <div class="kicker">GRADE 12 • ENGLISH • UNIT 4</div>
+    <h1>Writing About a<br>Community Activity</h1>
+    <p>ကိုယ်နေထိုင်ရာ လူမှုအသိုင်းအဝိုင်းအတွက် အကျိုးပြုလုပ်ဆောင်ခဲ့ဖူးသော လုပ်ငန်းတစ်ခုအကြောင်းကို အစီအစဉ်တကျ ရေးသားလေ့လာကြမယ်။ Model essay၊ မြန်မာဘာသာပြန်၊ အသုံးဝင်စကားစုများနှင့် ကိုယ်တိုင်လေ့ကျင့်နိုင်သော အပိုင်းများ ပါဝင်ပါတယ်။</p>
+    <div class="tags"><span>4E • Writing</span><span>Community Service</span><span>Model Essay</span><span>English + Myanmar</span><span>Interactive Practice</span></div>
+  </div>
+</section>
+<header class="header"><div class="nav-in">
+  <div class="brand">✦ WRITING LAB <small>UNIT 04 · PREMIUM LEARNING</small></div>
+  <a class="nav-btn" href="index.html" aria-label="Go to home page">⌂ Home</a>
+  <a class="nav-btn" href="writing3.html" aria-label="Go to writing lesson 3">Writing 3</a>
+  <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle light and dark mode">☾ Dark</button>
+</div></header>
+<button class="menu-trigger" id="menuTrigger" aria-label="Open learning menu" aria-expanded="false">☰</button>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="side-menu" id="sideMenu" aria-label="Learning navigation" aria-hidden="true">
+  <div class="menu-top"><div><div class="menu-eyebrow">UNIT 4 LEARNING HUB</div><div class="menu-title">Learning Menu</div></div><button class="close-menu" id="closeMenu" aria-label="Close menu">×</button></div>
+  <div class="menu-section"><div class="menu-label-head">QUICK NAVIGATION</div><nav class="menu-list">
+    <a class="menu-item" href="index.html"><span class="menu-icon">⌂</span><span><span class="menu-label">Home</span><span class="menu-small">မူလစာမျက်နှာသို့ ပြန်သွားရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item active" href="#lesson"><span class="menu-icon">✎</span><span><span class="menu-label">Writing Task</span><span class="menu-small">Understand the outline</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#plan"><span class="menu-icon">▦</span><span><span class="menu-label">Planning Outline</span><span class="menu-small">အချက်အလက် စုစည်းရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#model"><span class="menu-icon">Aa</span><span><span class="menu-label">Model Writing</span><span class="menu-small">နမူနာစာစီစာကုံးနှင့် ဘာသာပြန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#guide"><span class="menu-icon">✧</span><span><span class="menu-label">Writing Guide</span><span class="menu-small">အဆင့်ဆင့် ရေးသားနည်း</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#vocab"><span class="menu-icon">文</span><span><span class="menu-label">Useful Language</span><span class="menu-small">အသုံးဝင်သော စကားစုများ</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#practice"><span class="menu-icon">✍</span><span><span class="menu-label">Writing Practice</span><span class="menu-small">ကိုယ်တိုင် ရေးသားလေ့ကျင့်ရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#quiz"><span class="menu-icon">✓</span><span><span class="menu-label">Quick Check</span><span class="menu-small">နားလည်မှု စမ်းသပ်ရန်</span></span><span class="menu-arrow">›</span></a>
+  </nav></div>
+  <div class="menu-note"><strong>✦ Study smarter</strong><br>အရင်ဆုံး outline အချက် ၄ ချက်ကို မှတ်စုတိုရေးပါ။ ပြီးမှ အပိုဒ်တစ်ပိုဒ်စီအဖြစ် ချဲ့ရေးပါ။</div>
+</aside>
+
+<main class="wrap">
+<section class="section" id="lesson">
+  <div class="section-heading"><span class="eyebrow">4E</span><h2>Writing Task ကို နားလည်ရအောင်</h2></div>
+  <div class="card">
+    <span class="pill">Writing · Descriptive / Narrative Paragraphs</span>
+    <p class="en">A. Write about an activity that you have been engaged in for the betterment of the community you are in. Follow the given outlines.</p>
+    <p class="mm">သင်နေထိုင်ရာ လူမှုအသိုင်းအဝိုင်း ပိုမိုကောင်းမွန်လာစေရန် ပါဝင်လုပ်ဆောင်ခဲ့ဖူးသော လုပ်ငန်းတစ်ခုအကြောင်းကို အောက်ပါအချက်များအတိုင်း ရေးသားပါ။</p>
+    <div class="note"><strong>ဒီမေးခွန်းမှာ ဘာရေးရမလဲ?</strong> ကိုယ်တကယ်ပါဝင်ခဲ့ဖူးတဲ့ လူမှုအကျိုးပြုလုပ်ငန်းတစ်ခုကို ရွေးပြီး ဘာလုပ်ခဲ့သလဲ၊ ဘယ်အချိန်ကလဲ၊ ဘယ်နေရာမှာလဲ၊ ရပ်ရွာအပေါ် ဘယ်လိုအကျိုးသက်ရောက်ခဲ့သလဲ ဆိုတာတွေကို ရှင်းပြပါ။ နမူနာအက်ဆေးမှာ ရပ်ရွာသန့်ရှင်းရေးလုပ်ငန်းကို ဥပမာအဖြစ် အသုံးပြုထားပါတယ်။ ကိုယ့်အတွေ့အကြုံနဲ့ ကိုက်ညီအောင် ပြောင်းရေးနိုင်ပါတယ်။</div>
+    <ul>
+      <li><strong>Description of the activity</strong> — လုပ်ငန်းအကြောင်းနှင့် ကိုယ်လုပ်ခဲ့သည့်အရာများ</li>
+      <li><strong>When it happened</strong> — ဘယ်နေ့၊ ဘယ်လ၊ ဘယ်အချိန်က ဖြစ်ခဲ့သလဲ</li>
+      <li><strong>Where it happened</strong> — ဘယ်နေရာမှာ လုပ်ဆောင်ခဲ့သလဲ</li>
+      <li><strong>Impact on the community</strong> — ရပ်ရွာအတွက် ဘယ်လိုအကျိုးရှိခဲ့သလဲ</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="plan">
+  <div class="section-heading"><span class="eyebrow">PLAN</span><h2>Planning Outline — အချက်အလက် စုစည်းပါ</h2></div>
+  <div class="card">
+    <p class="muted">စာမရေးခင် အောက်ပါဇယားလို အချက်အလက်တိုတို စုစည်းထားရင် အက်ဆေးရေးရတာ ပိုလွယ်ပါတယ်။</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Given outline</th><th>မိမိဖြည့်စဉ်းစားရန်</th><th>Example ideas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Activity</strong>လုပ်ငန်း</td><td>ဘာလုပ်ခဲ့သလဲ။ ဘယ်သူတွေနဲ့ ပါဝင်ခဲ့သလဲ။</td><td>ရပ်ရွာလမ်းနှင့် ပန်းခြံကို သန့်ရှင်းရေးလုပ်ခြင်း၊ အမှိုက်ကောက်ခြင်း</td></tr>
+        <tr><td><strong>When</strong>အချိန်</td><td>ဘယ်နေ့၊ ဘယ်လ၊ ဘယ်အချိန်ကလဲ။</td><td>ပြီးခဲ့တဲ့ တနင်္ဂနွေနေ့မနက်၊ ကျောင်းပိတ်ရက်တစ်ရက်</td></tr>
+        <tr><td><strong>Where</strong>နေရာ</td><td>ဘယ်နေရာမှာ လုပ်ခဲ့သလဲ။</td><td>ရပ်ကွက်ပန်းခြံ၊ လမ်းတစ်လျှောက်၊ ရပ်ရွာခန်းမအနီး</td></tr>
+        <tr><td><strong>Impact</strong>အကျိုးသက်ရောက်မှု</td><td>အရင်နဲ့ ဘာကွာသွားသလဲ။ လူတွေ ဘယ်လိုအကျိုးရသလဲ။</td><td>နေရာသန့်ရှင်းလာခြင်း၊ အမှိုက်လျော့နည်းခြင်း၊ အိမ်နီးချင်းများ ပူးပေါင်းဆောင်ရွက်လာခြင်း</td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><strong>ရေးသားပုံစံ:</strong> Activity → Time → Place → What I did → Impact → Personal feeling. ဒီအစီအစဉ်အတိုင်းရေးရင် ဖတ်ရလွယ်ပြီး အချက်အလက်လည်း မကျန်ခဲ့ပါဘူး။</div>
+  </div>
+</section>
+
+<section class="section" id="model">
+  <div class="section-heading"><span class="eyebrow">MODEL</span><h2>Premium Model Writing</h2></div>
+  <div class="model">
+    <div class="model-head"><h3>A Community Clean-up Activity</h3><p>English model • Myanmar translation • Four required outlines</p>
+      <div class="model-tools"><button class="action" id="translationToggle" type="button">မြန်မာဘာသာပြန် ပြ/ဖျောက်</button><button class="action" id="copyEssay" type="button">စာစီစာကုံး Copy ကူးရန်</button></div>
+    </div>
+    <div class="model-body">
+      <div class="essay-text" id="essayText">
+        <p>Last month, I took part in a community clean-up activity to make the place where I live cleaner and more pleasant. I joined some of my neighbours and friends because we wanted to do something useful for our community.</p>
+        <p>The activity took place on a Sunday morning. We met at the entrance of our neighbourhood park at about seven o’clock. Before we started, an adult volunteer explained what we should do and reminded us to be careful while collecting rubbish.</p>
+        <p>We worked together to pick up litter, separate recyclable items and sweep the paths around the park. Some volunteers put the rubbish into bags, while others cleaned the benches and the areas near the trees. Although the work was tiring, everyone encouraged one another and did their best.</p>
+        <p>By the end of the activity, the park looked much cleaner and more welcoming. People could walk and relax there in a more pleasant environment. The activity also reminded residents not to throw rubbish carelessly. Most importantly, we learned that small actions can make a real difference when people work together.</p>
+        <p>I felt proud to be part of this activity because it helped improve our neighbourhood. I hope to join similar community projects in the future. This experience taught me that everyone, including young people, can contribute to making their community a better place.</p>
+      </div>
+      <div class="translation" id="essayTranslation">
+        <h4>မြန်မာဘာသာပြန် — အပိုဒ်လိုက်</h4>
+        <p><b>အပိုဒ် ၁ — လုပ်ငန်းအကြောင်း:</b> ပြီးခဲ့တဲ့လက ကျွန်ုပ်နေထိုင်ရာနေရာကို ပိုမိုသန့်ရှင်းပြီး သာယာစေရန် ရည်ရွယ်သော ရပ်ရွာသန့်ရှင်းရေးလုပ်ငန်းတွင် ပါဝင်ခဲ့သည်။ ရပ်ရွာအတွက် အသုံးဝင်သည့်အရာတစ်ခု လုပ်ဆောင်လိုသောကြောင့် အိမ်နီးချင်းများနှင့် သူငယ်ချင်းအချို့နှင့်အတူ ပါဝင်ခဲ့သည်။</p>
+        <p><b>အပိုဒ် ၂ — အချိန်နှင့်နေရာ:</b> ထိုလုပ်ငန်းကို တနင်္ဂနွေနေ့ မနက်ပိုင်းတွင် ပြုလုပ်ခဲ့သည်။ မနက် ၇ နာရီခန့်တွင် ရပ်ကွက်ပန်းခြံဝင်ပေါက်၌ တွေ့ဆုံခဲ့ကြသည်။ မစတင်မီ လူကြီးစေတနာ့ဝန်ထမ်းတစ်ဦးက လုပ်ဆောင်ရမည့်အရာများကို ရှင်းပြပြီး အမှိုက်ကောက်ရာတွင် သတိထားရန် ပြောခဲ့သည်။</p>
+        <p><b>အပိုဒ် ၃ — လုပ်ဆောင်ခဲ့သည့်အရာများ:</b> ကျွန်ုပ်တို့သည် အမှိုက်များကို ကောက်ယူခြင်း၊ ပြန်လည်အသုံးပြုနိုင်သည့်ပစ္စည်းများကို ခွဲခြားခြင်းနှင့် ပန်းခြံပတ်လမ်းများကို တံမြက်စည်းလှည်းခြင်းတို့ကို အတူတကွ လုပ်ဆောင်ခဲ့ကြသည်။ အချို့က အမှိုက်များကို အိတ်ထဲထည့်ကြပြီး အခြားသူများက ခုံတန်းများနှင့် သစ်ပင်များအနီးကို သန့်ရှင်းရေးလုပ်ကြသည်။ ပင်ပန်းသော်လည်း တစ်ဦးနှင့်တစ်ဦး အားပေးခဲ့ကြသည်။</p>
+        <p><b>အပိုဒ် ၄ — လူမှုအသိုင်းအဝိုင်းအပေါ် အကျိုးသက်ရောက်မှု:</b> လုပ်ငန်းပြီးဆုံးချိန်တွင် ပန်းခြံသည် ပိုမိုသန့်ရှင်းပြီး သွားလာအနားယူရန် သာယာသောနေရာဖြစ်လာခဲ့သည်။ ထို့အပြင် အမှိုက်များကို စည်းကမ်းမဲ့စွာ မပစ်ရန် ရပ်ရွာနေသူများကိုလည်း သတိပေးသကဲ့သို့ ဖြစ်ခဲ့သည်။ အရေးကြီးဆုံးမှာ လူများ ပူးပေါင်းလုပ်ဆောင်လျှင် သေးငယ်သောလုပ်ရပ်များကပင် အမှန်တကယ် ပြောင်းလဲမှုဖြစ်စေနိုင်ကြောင်း သိရှိခဲ့ရသည်။</p>
+        <p><b>အပိုဒ် ၅ — ကိုယ်ပိုင်ခံစားချက်နှင့် နိဂုံး:</b> ရပ်ကွက်ကို ပိုမိုကောင်းမွန်စေရန် ကူညီနိုင်ခဲ့သောကြောင့် ဤလုပ်ငန်းတွင် ပါဝင်ခဲ့ရသည့်အတွက် ဂုဏ်ယူမိသည်။ အနာဂတ်တွင်လည်း အလားတူ လူမှုအကျိုးပြုလုပ်ငန်းများတွင် ပါဝင်လိုပါသည်။ ဤအတွေ့အကြုံက လူငယ်များအပါအဝင် လူတိုင်းသည် မိမိတို့ရပ်ရွာကို ပိုမိုကောင်းမွန်သောနေရာဖြစ်အောင် ကူညီနိုင်ကြောင်း သင်ပေးခဲ့သည်။</p>
+      </div>
+      <div class="note"><strong>Model tip:</strong> ဒီစာစီစာကုံးက ဥပမာအဖြေဖြစ်ပါတယ်။ ကိုယ်တကယ်လုပ်ခဲ့တဲ့ လုပ်ငန်း၊ အချိန်၊ နေရာနဲ့ အကျိုးသက်ရောက်မှုတွေကို အစားထိုးရေးပါ။ မိမိမကြုံတွေ့ဖူးတဲ့ အတွေ့အကြုံကို ကိုယ့်အတွေ့အကြုံအဖြစ် မတင်ပြပါနဲ့။</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="section-heading"><span class="eyebrow">GUIDE</span><h2>စာစီစာကုံး ရေးသားနည်း အဆင့်ဆင့်</h2></div>
+  <div class="card"><div class="steps">
+    <div class="step"><h3>01 · Introduce the activity — လုပ်ငန်းကို မိတ်ဆက်ပါ</h3><p class="en">Last month, I took part in a community clean-up activity.</p><p class="mm">ဘယ်လုပ်ငန်းမှာ ပါဝင်ခဲ့သလဲဆိုတာကို ပထမဆုံးဝါကျမှာ ဖော်ပြပါ။</p></div>
+    <div class="step"><h3>02 · Explain when and where — အချိန်နှင့်နေရာ</h3><p class="en">It took place on a Sunday morning at our neighbourhood park.</p><p class="mm">အချိန်နှင့်နေရာကို တိတိကျကျ ရေးပါ။ မသေချာရင် ကိုယ်သိထားတဲ့ အမှန်အချက်အလက်ကိုသာ သုံးပါ။</p></div>
+    <div class="step"><h3>03 · Describe what you did — လုပ်ဆောင်ချက်များ</h3><p class="en">We collected rubbish, swept the paths and worked as a team.</p><p class="mm">ကိုယ်တိုင်လုပ်ခဲ့သည့်အရာ ၂–၃ ခုကို past tense ဖြင့် ဖော်ပြပါ။</p></div>
+    <div class="step"><h3>04 · Explain the impact — အကျိုးသက်ရောက်မှု</h3><p class="en">As a result, the park became cleaner and safer for everyone.</p><p class="mm">လူမှုအသိုင်းအဝိုင်းအတွက် ဘာကောင်းကျိုးရခဲ့သလဲ၊ ဘာတွေပြောင်းလဲခဲ့သလဲဆိုတာ ရှင်းပြပါ။</p></div>
+    <div class="step"><h3>05 · End with your feelings — ကိုယ်ပိုင်ခံစားချက်</h3><p class="en">I felt proud because even a small action can help the community.</p><p class="mm">နောက်ဆုံးမှာ ကိုယ်ဘယ်လိုခံစားရသလဲ၊ ဘာသင်ခန်းစာရခဲ့သလဲကို ရေးပါ။</p></div>
+  </div>
+  <div class="note"><strong>Grammar tip:</strong> အတိတ်က ပြီးဆုံးခဲ့တဲ့ လုပ်ငန်းကို ရေးတဲ့အခါ past tense ကို အဓိကသုံးပါ — joined, took part, collected, cleaned, helped, became, learned.</div>
+  </div>
+</section>
+
+<section class="section" id="vocab">
+  <div class="section-heading"><span class="eyebrow">Aa</span><h2>Useful Language — အသုံးဝင်သော စကားစုများ</h2></div>
+  <div class="card">
+    <h3>Topic Vocabulary</h3>
+    <div class="vocab-grid">
+      <div class="vocab"><b>community</b><span>လူမှုအသိုင်းအဝိုင်း၊ ရပ်ရွာ</span></div>
+      <div class="vocab"><b>take part in</b><span>တစ်ခုခုတွင် ပါဝင်သည်</span></div>
+      <div class="vocab"><b>community service</b><span>လူမှုအကျိုးပြုလုပ်ငန်း</span></div>
+      <div class="vocab"><b>volunteer</b><span>စေတနာ့ဝန်ထမ်း</span></div>
+      <div class="vocab"><b>clean-up activity</b><span>သန့်ရှင်းရေးလုပ်ငန်း</span></div>
+      <div class="vocab"><b>collect rubbish</b><span>အမှိုက်ကောက်သည်</span></div>
+      <div class="vocab"><b>work together</b><span>အတူတကွ ပူးပေါင်းလုပ်ဆောင်သည်</span></div>
+      <div class="vocab"><b>make a difference</b><span>အပြုသဘောဆောင်သော ပြောင်းလဲမှု ဖြစ်စေသည်</span></div>
+      <div class="vocab"><b>improve the neighbourhood</b><span>ရပ်ကွက်ကို ပိုမိုကောင်းမွန်စေသည်</span></div>
+      <div class="vocab"><b>as a result</b><span>ရလဒ်အနေဖြင့်</span></div>
+      <div class="vocab"><b>feel proud</b><span>ဂုဏ်ယူမိသည်</span></div>
+      <div class="vocab"><b>contribute to</b><span>တစ်ခုခုအတွက် ပါဝင်ကူညီသည်</span></div>
+    </div>
+    <h3 style="margin-top:24px">Useful Sentence Patterns</h3>
+    <div class="pattern"><code>I took part in ...</code><div class="mm">ကျွန်ုပ်သည် … တွင် ပါဝင်ခဲ့သည်။ (လုပ်ငန်းမိတ်ဆက်ရန်)</div></div>
+    <div class="pattern"><code>The activity took place on ... at ...</code><div class="mm">ထိုလုပ်ငန်းကို … နေ့တွင် … ၌ ပြုလုပ်ခဲ့သည်။ (အချိန်နှင့်နေရာ)</div></div>
+    <div class="pattern"><code>We worked together to ...</code><div class="mm">ကျွန်ုပ်တို့သည် … ရန် အတူတကွ လုပ်ဆောင်ခဲ့ကြသည်။ (လုပ်ဆောင်ချက်)</div></div>
+    <div class="pattern"><code>As a result, ... / Because of this, ...</code><div class="mm">ရလဒ်အနေဖြင့် … / ဤအကြောင်းကြောင့် … (အကျိုးသက်ရောက်မှု)</div></div>
+    <div class="pattern"><code>This activity taught me that ...</code><div class="mm">ဤလုပ်ငန်းက ကျွန်ုပ်အား … ဆိုသည်ကို သင်ပေးခဲ့သည်။ (သင်ခန်းစာ)</div></div>
+    <div class="pattern"><code>I hope to take part in similar activities in the future.</code><div class="mm">အနာဂတ်တွင်လည်း အလားတူလုပ်ငန်းများ၌ ပါဝင်ရန် မျှော်လင့်ပါသည်။</div></div>
+  </div>
+</section>
+
+<section class="section" id="practice">
+  <div class="section-heading"><span class="eyebrow">✍</span><h2>Your Turn — ကိုယ်တိုင် ရေးသားလေ့ကျင့်ပါ</h2></div>
+  <div class="card">
+    <p>ကိုယ်တကယ်ပါဝင်ခဲ့ဖူးသော လူမှုအကျိုးပြုလုပ်ငန်းတစ်ခုကို ရွေးပါ။ မေးခွန်းထဲက အချက် ၄ ချက်ဖြစ်တဲ့ activity, when, where, impact အားလုံးကို ထည့်ရေးပါ။ ဒီနေရာမှာ ရေးထားတဲ့စာကို word count ဖြင့် စစ်ဆေးနိုင်ပါတယ်။</p>
+    <textarea class="practice-area" id="draft" placeholder="I took part in a community activity last..."></textarea>
+    <div class="practice-toolbar"><span class="count"><span id="wordCount">0</span> words</span><span class="muted">Tip: Write in clear paragraphs.</span><div><button class="action" id="clearDraft" type="button">Clear</button> <button class="action primary" id="checkDraft" type="button">Check my writing</button></div></div>
+    <div class="feedback" id="draftFeedback" aria-live="polite">စရေးလိုက်ပါ။ စာလုံးရေတင်မကဘဲ အချက် ၄ ချက်လုံး ပါဝင်သလားဆိုတာလည်း စစ်ဆေးပါ။</div>
+    <h3 style="margin-top:23px">Final checklist — မတင်ခင် စစ်ဆေးရန်</h3>
+    <ul class="checklist">
+      <li><label><input type="checkbox"> လုပ်ငန်းအကြောင်းကို ရှင်းလင်းစွာ ဖော်ပြထားတယ်။</label></li>
+      <li><label><input type="checkbox"> ဘယ်အချိန်က ဖြစ်ခဲ့သလဲဆိုတာ ပါတယ်။</label></li>
+      <li><label><input type="checkbox"> ဘယ်နေရာမှာ လုပ်ခဲ့သလဲဆိုတာ ပါတယ်။</label></li>
+      <li><label><input type="checkbox"> ရပ်ရွာအပေါ် အကျိုးသက်ရောက်မှုကို ရှင်းပြထားတယ်။</label></li>
+      <li><label><input type="checkbox"> Past tense နဲ့ spelling, punctuation ကို ပြန်စစ်ထားတယ်။</label></li>
+      <li><label><input type="checkbox"> ကိုယ်တိုင်ကြုံတွေ့ခဲ့တဲ့ အချက်အလက်တွေကိုသာ အသုံးပြုထားတယ်။</label></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="quiz">
+  <div class="section-heading"><span class="eyebrow">✓</span><h2>Quick Check — နားလည်မှု စမ်းသပ်ရန်</h2></div>
+  <div class="card">
+    <p class="muted">မေးခွန်း ၄ ခုကို ဖြေပြီး အဖြေစစ်ပါ။</p>
+    <form id="quizForm">
+      <div class="quiz-q"><p>1. What should you describe first?</p><label><input type="radio" name="q1" value="a"> Your favourite film</label><label><input type="radio" name="q1" value="b"> The community activity you joined</label><label><input type="radio" name="q1" value="c"> A fictional character</label></div>
+      <div class="quiz-q"><p>2. Which phrase tells the reader when it happened?</p><label><input type="radio" name="q2" value="a"> Last Sunday morning, ...</label><label><input type="radio" name="q2" value="b"> As a result, ...</label><label><input type="radio" name="q2" value="c"> I felt proud, ...</label></div>
+      <div class="quiz-q"><p>3. Which sentence explains the impact on the community?</p><label><input type="radio" name="q3" value="a"> I met my friend.</label><label><input type="radio" name="q3" value="b"> We started at seven o’clock.</label><label><input type="radio" name="q3" value="c"> The park became cleaner and more pleasant.</label></div>
+      <div class="quiz-q"><p>4. Which tense is usually used for a completed past activity?</p><label><input type="radio" name="q4" value="a"> Past tense</label><label><input type="radio" name="q4" value="b"> Future tense only</label><label><input type="radio" name="q4" value="c"> Present continuous only</label></div>
+      <div class="practice-toolbar"><button class="action primary" type="submit">Check answers</button><button class="action" type="reset" id="resetQuiz">Try again</button></div>
+    </form>
+    <div class="feedback hidden" id="quizFeedback" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+<footer>GRADE 12 ENGLISH LEARNING HUB · UNIT 4 · WRITING 4<br>Small actions. Stronger communities. Better writing.</footer>
+<script>
+(function(){
+ const body=document.body, themeBtn=document.getElementById('themeToggle');
+ const themeKeys=['theme','siteTheme','g12-theme'];
+ function setTheme(theme,save){
+   body.classList.toggle('dark',theme==='dark');
+   themeBtn.textContent=theme==='dark'?'☀ Light':'☾ Dark';
+   themeBtn.setAttribute('aria-pressed',theme==='dark'?'true':'false');
+   if(save){try{themeKeys.forEach(k=>localStorage.setItem(k,theme));}catch(e){}}
+ }
+ let initial='light';
+ try{for(const key of themeKeys){const t=localStorage.getItem(key);if(t==='dark'||t==='light'){initial=t;break;}}}catch(e){}
+ setTheme(initial,false);
+ themeBtn.addEventListener('click',()=>setTheme(body.classList.contains('dark')?'light':'dark',true));
+ window.addEventListener('storage',e=>{if(themeKeys.includes(e.key)&&e.newValue)setTheme(e.newValue,false);});
+ const trigger=document.getElementById('menuTrigger'),menu=document.getElementById('sideMenu'),overlay=document.getElementById('menuOverlay'),close=document.getElementById('closeMenu');
+ function openMenu(){menu.classList.add('open');overlay.classList.add('open');menu.setAttribute('aria-hidden','false');trigger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';close.focus();}
+ function closeMenu(){menu.classList.remove('open');overlay.classList.remove('open');menu.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+ trigger.addEventListener('click',openMenu);close.addEventListener('click',closeMenu);overlay.addEventListener('click',closeMenu);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ const translation=document.getElementById('essayTranslation');
+ document.getElementById('translationToggle').addEventListener('click',()=>translation.classList.toggle('hidden'));
+ const essayPlain=Array.from(document.querySelectorAll('#essayText p')).map(p=>p.textContent).join('\n\n');
+ document.getElementById('copyEssay').addEventListener('click',async()=>{
+   const btn=document.getElementById('copyEssay');
+   try{await navigator.clipboard.writeText(essayPlain);btn.textContent='Copied ✓';}
+   catch(e){const ta=document.createElement('textarea');ta.value=essayPlain;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');btn.textContent='Copied ✓';}catch(err){btn.textContent='Select and copy';}ta.remove();}
+ });
+ const draft=document.getElementById('draft'),wordCount=document.getElementById('wordCount'),feedback=document.getElementById('draftFeedback');
+ function countWords(s){const t=s.trim();return t?t.split(/\s+/).filter(Boolean).length:0;}
+ function updateCount(){wordCount.textContent=countWords(draft.value);}
+ draft.addEventListener('input',updateCount);
+ document.getElementById('clearDraft').addEventListener('click',()=>{draft.value='';updateCount();feedback.textContent='စာသားရှင်းပြီးပါပြီ။ ပြန်စရေးနိုင်ပါတယ်။';draft.focus();});
+ document.getElementById('checkDraft').addEventListener('click',()=>{
+   const n=countWords(draft.value);
+   if(n===0)feedback.textContent='အရင်ဆုံး စာပိုဒ်တစ်ခု ရေးထည့်ပါ။';
+   else if(n<80)feedback.textContent=`${n} words ရှိပါတယ်။ လုပ်ငန်းအကြောင်း၊ အချိန်၊ နေရာနဲ့ အကျိုးသက်ရောက်မှုတွေကို ထပ်ဖြည့်ရေးကြည့်ပါ။`;
+   else if(n<=300)feedback.textContent=`${n} words ရှိပါတယ်။ အခုတော့ outline ၄ ချက်လုံး ပါဝင်သလား၊ grammar နဲ့ spelling မှန်သလား ပြန်စစ်ပါ။`;
+   else feedback.textContent=`${n} words ရှိပါတယ်။ မလိုအပ်ဘဲ ထပ်နေတဲ့အချက်တွေကို အတိုချုံးပြီး အဓိက outline ၄ ချက်ကို ထင်ရှားအောင်ထားပါ။`;
+ });
+ document.getElementById('quizForm').addEventListener('submit',e=>{
+   e.preventDefault();const answers={q1:'b',q2:'a',q3:'c',q4:'a'};let score=0;
+   for(const [q,a] of Object.entries(answers)){const selected=document.querySelector(`input[name="${q}"]:checked`);if(selected&&selected.value===a)score++;}
+   const qf=document.getElementById('quizFeedback');qf.classList.remove('hidden');
+   qf.textContent=`Your score: ${score}/4. ${score===4?'Excellent! အားလုံးမှန်ပါတယ်။':'Outline နဲ့ Useful Language အပိုင်းကို ပြန်လေ့လာပြီး ထပ်ကြိုးစားပါ။'} Correct answers: 1-B, 2-A, 3-C, 4-A.`;
+ });
+ document.getElementById('resetQuiz').addEventListener('click',()=>{const qf=document.getElementById('quizFeedback');qf.classList.add('hidden');qf.textContent='';});
+})();
+</script>
+</body>
+</html>

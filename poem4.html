@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="my"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17214b"><title>Poem 4 — Democracy | Grade-12 English</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap');
+
+:root{
+  --bg:#f4f7fb;
+  --surface:#ffffff;
+  --surface2:#eef4fb;
+  --text:#142033;
+  --muted:#65748b;
+  --primary:#2864d7;
+  --primary2:#1746a2;
+  --cyan:#18a9b7;
+  --gold:#d7a62a;
+  --border:#dce5f0;
+  --shadow:0 18px 50px rgba(23,55,100,.10);
+  --hero1:#101d3b;
+  --hero2:#183e72;
+  --hero3:#087f88;
+  --soft:#eaf3ff;
+  --success:#138a62;
+}
+html[data-theme="dark"]{
+  --bg:#0b1220;
+  --surface:#111b2c;
+  --surface2:#18243a;
+  --text:#edf4ff;
+  --muted:#aab8cc;
+  --primary:#6ea0ff;
+  --primary2:#8ab3ff;
+  --cyan:#56d5dc;
+  --gold:#f0c85b;
+  --border:#263750;
+  --shadow:0 18px 50px rgba(0,0,0,.28);
+  --hero1:#081126;
+  --hero2:#12335d;
+  --hero3:#075d64;
+  --soft:#172a48;
+  --success:#43c99a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Plus Jakarta Sans","Padauk",sans-serif;
+  line-height:1.75;
+}
+button{font:inherit}
+a{text-decoration:none;color:inherit}
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 24px;
+  background:color-mix(in srgb,var(--surface) 92%,transparent);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(16px);
+}
+.brand{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:-.7px;
+}
+.brand span{color:var(--primary)}
+.header-actions{display:flex;gap:10px}
+.icon-btn{
+  width:48px;height:48px;border:1px solid var(--border);
+  border-radius:15px;background:var(--surface);
+  color:var(--text);cursor:pointer;font-size:22px;
+  display:grid;place-items:center;
+}
+.container{width:min(1100px,calc(100% - 32px));margin:auto}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 85% 18%,rgba(255,255,255,.16),transparent 24%),
+    radial-gradient(circle at 12% 85%,rgba(255,255,255,.10),transparent 30%),
+    linear-gradient(135deg,var(--hero1),var(--hero2) 54%,var(--hero3));
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(255,255,255,.14);
+  transform:rotate(30deg);
+}
+.hero:before{width:420px;height:420px;right:-140px;top:-190px;border-radius:45px}
+.hero:after{width:300px;height:300px;left:-150px;bottom:-190px;border-radius:50%}
+.hero-inner{position:relative;z-index:1;padding:76px 0 70px}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:8px 14px;border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  font-size:13px;font-weight:800;letter-spacing:.5px;
+}
+.hero h1{
+  margin:18px 0 12px;
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.02;letter-spacing:-2.8px;
+}
+.hero h1 span{color:#71e1dc}
+.hero p{
+  max-width:780px;margin:0;
+  color:rgba(255,255,255,.82);
+  font-size:17px;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;
+}
+.pill{
+  padding:9px 14px;border-radius:999px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.17);
+  font-size:13px;
+}
+
+.main{padding:42px 0 70px}
+.section{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:25px;
+  box-shadow:var(--shadow);
+  padding:28px;
+  margin-bottom:24px;
+}
+.section-head{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-bottom:22px;
+}
+.section-icon{
+  width:48px;height:48px;border-radius:15px;
+  display:grid;place-items:center;
+  background:var(--soft);font-size:23px;flex:0 0 auto;
+}
+.section h2{margin:0;font-size:27px;line-height:1.25}
+.section-sub{color:var(--muted);margin:5px 0 0}
+
+.intro{
+  border-left:5px solid var(--cyan);
+  background:var(--surface2);
+  border-radius:0 17px 17px 0;
+  padding:17px 18px;
+  margin:20px 0 24px;
+}
+.intro strong{color:var(--primary)}
+
+.poem-card{
+  background:linear-gradient(145deg,var(--surface2),var(--surface));
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:26px 20px;
+}
+.poem-line{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:3px;
+  padding:12px 10px;
+  border-bottom:1px solid color-mix(in srgb,var(--border) 72%,transparent);
+}
+.poem-line:last-child{border-bottom:0}
+.en{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:18px;font-weight:600;line-height:1.55;
+}
+.mm{
+  color:var(--muted);
+  font-size:15px;
+  font-family:"Padauk","Myanmar Text",sans-serif;
+}
+.stanza{
+  margin:0 0 16px;
+  padding-bottom:8px;
+}
+.stanza:last-child{margin-bottom:0}
+.refrain{
+  margin:8px 0;
+  padding:14px 15px;
+  border-radius:15px;
+  background:color-mix(in srgb,var(--primary) 9%,var(--surface));
+  border-left:4px solid var(--gold);
+}
+.author{
+  text-align:right;
+  margin-top:18px;
+  color:var(--muted);
+  font-weight:700;
+}
+
+.vocab-grid{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+}
+.vocab{
+  padding:15px 16px;border:1px solid var(--border);
+  border-radius:16px;background:var(--surface2);
+}
+.vocab b{color:var(--primary)}
+.vocab span{display:block;color:var(--muted);font-size:14px;margin-top:3px}
+
+.device{
+  padding:19px;border:1px solid var(--border);
+  border-radius:18px;background:var(--surface2);
+  margin-top:12px;
+}
+.device h3{margin:0 0 5px;color:var(--primary)}
+.device p{margin:0;color:var(--muted)}
+
+.question{
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:20px;
+  margin:14px 0;
+  background:var(--surface);
+}
+.q-top{display:flex;gap:12px;align-items:flex-start}
+.q-number{
+  min-width:36px;height:36px;border-radius:11px;
+  display:grid;place-items:center;
+  background:var(--primary);color:#fff;font-weight:800;
+}
+.q-text{font-weight:700;font-size:16px;line-height:1.65}
+.options{margin:15px 0 0 48px;display:grid;gap:7px}
+.option{color:var(--muted)}
+.option b{color:var(--text)}
+.answer-area{
+  margin:15px 0 0 48px;
+  display:none;
+  padding:14px 16px;
+  border-radius:15px;
+  background:color-mix(in srgb,var(--success) 9%,var(--surface2));
+  border:1px solid color-mix(in srgb,var(--success) 30%,var(--border));
+}
+.answer-area.show{display:block}
+.answer-label{
+  color:var(--success);font-weight:800;
+  font-size:13px;letter-spacing:.4px;
+}
+.answer-text{font-weight:700;margin-top:3px}
+.answer-mm{color:var(--muted);font-size:14px;margin-top:4px}
+.answer-btn{
+  margin:15px 0 0 48px;
+  border:1px solid var(--primary);
+  background:transparent;color:var(--primary);
+  padding:9px 15px;border-radius:12px;
+  font-weight:800;cursor:pointer;
+}
+.answer-btn:hover{background:var(--primary);color:#fff}
+
+.show-all{
+  width:100%;border:0;border-radius:15px;
+  padding:13px 16px;background:var(--primary);
+  color:#fff;font-weight:800;cursor:pointer;
+  margin-top:5px;
+}
+.note{
+  color:var(--muted);font-size:14px;
+  padding:13px 15px;background:var(--surface2);
+  border-radius:14px;margin-top:15px;
+}
+.footer{text-align:center;color:var(--muted);padding:8px 0 35px;font-size:13px}
+
+@media(max-width:700px){
+  .header{height:68px;padding:0 14px}
+  .brand{font-size:18px}
+  .icon-btn{width:43px;height:43px;border-radius:13px}
+  .container{width:min(100% - 20px,1100px)}
+  .hero-inner{padding:50px 0 48px}
+  .hero h1{font-size:43px;letter-spacing:-1.8px}
+  .hero p{font-size:15px}
+  .section{padding:18px;border-radius:20px}
+  .section h2{font-size:23px}
+  .poem-card{padding:17px 10px}
+  .en{font-size:16px}
+  .mm{font-size:14px;line-height:1.85}
+  .vocab-grid{grid-template-columns:1fr}
+  .question{padding:16px}
+  .options,.answer-area,.answer-btn{margin-left:0}
+  .answer-btn{width:100%}
+}
+
+/* Poem 3: soft botanical accents */
+.hero{background:radial-gradient(circle at 80% 12%,rgba(245,232,168,.19),transparent 27%),linear-gradient(135deg,#12263c,#22515a 54%,#37715f)}
+html[data-theme="dark"] .hero{background:radial-gradient(circle at 80% 12%,rgba(245,232,168,.09),transparent 27%),linear-gradient(135deg,#071422,#12323c 54%,#204a42)}
+.hero h1 span{color:#bceac4}
+html[data-theme="dark"] .hero h1 span{color:#a7e8c1}
+
+:root{--hero1:#17214b;--hero2:#354a92;--hero3:#8c568e;--primary:#4d5fbd;--soft:#eef0ff}
+html[data-theme="dark"]{--hero1:#10142b;--hero2:#242f63;--hero3:#59335d;--primary:#9caaff;--soft:#25294c}
+.hero h1 span{color:#f7d38b}.stanza-label{font-size:12px;font-weight:800;color:var(--primary);letter-spacing:1px;margin:10px}.section-nav{display:flex;gap:8px;overflow-x:auto;padding:14px 0}.section-nav a{white-space:nowrap;border:1px solid var(--border);background:var(--surface);border-radius:99px;padding:7px 13px;font-size:13px;font-weight:700}.q-mm{font-size:14px;color:var(--muted);margin:6px 0 0 48px}.option{padding:4px 0}.option .translation{display:block;font-size:13px;opacity:.85;margin-left:22px}.device p{color:var(--text)}@media(max-width:700px){.q-mm{margin-left:0}}
+
+   .pic-img {
+            width: 310px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;}
+        
+</style></head><body><header class="header"><a class="brand" href="index.html">Grade-12 <span>English</span></a><div class="header-actions"><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☀️</button><button class="icon-btn" onclick="location.href='index.html'" aria-label="Home">⌂</button></div></header><section class="hero"><div class="container hero-inner"><div class="kicker">POEM 4 · LANGSTON HUGHES</div><h1><span>Democracy 🕊️</span></h1><p>လွတ်လပ်မှု၊ တန်းတူအခွင့်အရေးနှင့် လူမျိုးရေးတရားမျှတမှုအတွက် မနက်ဖြန်အထိ မစောင့်နိုင်ကြောင်း ဖော်ပြသည့် ကဗျာ။ စာကြောင်းချင်းဘာသာပြန်၊ ရှင်းလင်းချက်နှင့် လေ့ကျင့်ခန်းများကို တစ်နေရာတည်းတွင် လေ့လာပါ။</p><div class="hero-meta"><span class="pill">📖 21 Lines</span><span class="pill">🌐 မြန်မာဘာသာပြန်</span><span class="pill">✨ Poetic Devices</span><span class="pill">📝 10 MCQs</span></div></div></section><main class="main"><div class="container"><nav class="section-nav" aria-label="Sections"><a href="#about">နောက်ခံ</a><a href="#pre">Pre-reading</a><a href="#poem">ကဗျာ</a><a href="#glossary">Glossary</a><a href="#devices">Devices</a><a href="#exercises">Exercises</a></nav><section class="section" id="about"><div class="section-head"><div class="section-icon">📜</div><div><h2>About the Poem</h2><p class="section-sub">သမိုင်းနောက်ခံနှင့် အဓိကအယူအဆ</p></div></div><div class="intro"><strong>Langston Hughes (1902–1967)</strong> သည် အာဖရိကန်-အမေရိကန် ကဗျာဆရာဖြစ်ပြီး “Democracy” ကို ၁၉၄၉ ခုနှစ်တွင် ရေးသားခဲ့သည်။ ဒုတိယကမ္ဘာစစ်အတွင်း အမေရိကန်ဒီမိုကရေစီအတွက် တာဝန်ထမ်းဆောင်ခဲ့ကြသော်လည်း လူမည်းအမေရိကန်များမှာ မဲပေးခွင့်နှင့် တန်းတူအခွင့်အရေးအတွက် ဆက်လက်ရုန်းကန်နေရဆဲ ဖြစ်သည်။</div><div class="device"><h3>Central Message · အဓိကသတင်းစကား</h3><p>“အခွင့်အရေးနှင့် လွတ်လပ်မှုကို နောင်တစ်နေ့မှ ရမည်ဟု စောင့်မနေသင့်” ဟူသော အရေးတကြီးတောင်းဆိုချက်ကို ဖော်ပြထားသည်။</p></div></section><section class="section" id="pre"><div class="section-head"><div class="section-icon">💭</div><div><h2>Pre-reading</h2><p class="section-sub">မေးခွန်းများ၊ ဘာသာပြန်နှင့် နမူနာအဖြေများ</p></div></div>
+<img src="images/poem4-1.jpg" alt="Democracy" class="pic-img">
+<img src="images/poem4-2.jpg" alt="Democracy" class="pic-img">
+<img src="images/poem4-3.jpg" alt="Democracy" class="pic-img">
+<article class="question"><div class="q-top"><div class="q-number">1</div><div class="q-text">In the first picture, what do you see and what do you think it implies? And in the second picture how many words do you see, and what are their meanings in the Myanmar language?</div></div><div class="q-mm">ပထမပုံတွင် ဘာတွေမြင်ရသလဲ၊ ဘာကို ဆိုလိုသလဲ။ ဒုတိယပုံတွင် စကားလုံးဘယ်နှလုံး တွေ့ရသလဲ၊ မြန်မာလို ဘာအဓိပ္ပါယ်ရှိသလဲ။</div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">SAMPLE ANSWER</div><div class="answer-text">Try Yourself. All possible answers will be acceptable.</div><div class="answer-mm"> မိမိမြင်ရသည့်ပုံအတိုင်း ဖြေပါ။</div></div></article><article class="question"><div class="q-top"><div class="q-number">2</div><div class="q-text">Langston Hughes wrote the poem “Democracy” in 1949. In your country which poets or writers were famous in the post-independence period, and what were their famous works?</div></div><div class="q-mm">၁၉၄၉ ခုနှစ်နောက်ပိုင်း မြန်မာနိုင်ငံ လွတ်လပ်ရေးရပြီးကာလတွင် ထင်ရှားသော စာရေးဆရာ၊ ကဗျာဆရာများနှင့် သူတို့၏ လက်ရာများကို ဖော်ပြပါ။</div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">SAMPLE ANSWER</div><div class="answer-text">In Myanmar, writers such as Min Thu Wun and Zawgyi are well known. Min Thu Wun is known for his poems and children’s literature, including the poem “Thabyay Nyo.”</div><div class="answer-mm">မြန်မာနိုင်ငံတွင် မင်းသုဝဏ်နှင့် ဇော်ဂျီတို့သည် ထင်ရှားသော စာပေပညာရှင်များ ဖြစ်ကြသည်။ မင်းသုဝဏ်၏ “သပြေညို” ကဗျာသည် လူသိများသော လက်ရာတစ်ခုဖြစ်သည်။ (ဥပမာဖြေဆိုချက်)</div></div></article><article class="question"><div class="q-top"><div class="q-number">3</div><div class="q-text">Why do you think democracy is of great importance in the world of human beings, and do you accept that justice delayed is justice denied?</div></div><div class="q-mm">ဒီမိုကရေစီက လူသားများအတွက် ဘာကြောင့် အရေးကြီးသလဲ။ “တရားမျှတမှု နောက်ကျခြင်းသည် တရားမျှတမှု ငြင်းပယ်ခြင်းပင်ဖြစ်သည်” ဟူသော စကားကို သဘောတူသလား။</div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">SAMPLE ANSWER</div><div class="answer-text">Democracy matters because people should have a voice in government and equal rights. I agree that delayed justice can cause lasting harm, so fairness should not be postponed.</div><div class="answer-mm">ဒီမိုကရေစီသည် ပြည်သူများ၏အသံကို အုပ်ချုပ်ရေးတွင် ထင်ဟပ်စေပြီး တန်းတူအခွင့်အရေးကို အားပေးသောကြောင့် အရေးကြီးသည်။ တရားမျှတမှု နောက်ကျလျှင် ထိခိုက်နစ်နာမှု ဆက်လက်ဖြစ်ပေါ်နိုင်သဖြင့် ထိုစကားကို သဘောတူသည်။</div></div></article></section><section class="section" id="poem"><div class="section-head"><div class="section-icon">🕊️</div><div><h2>Democracy — ဒီမိုကရေစီ</h2><p class="section-sub">English + Myanmar · Line by line</p></div></div><div class="poem-card"><div class="stanza"><div class="stanza-label">STANZA 1</div><div class="poem-line"><div class="en">Democracy will not come</div><div class="mm">ဒီမိုကရေစီသည် ရောက်ရှိလာမည် မဟုတ်ပေ။</div></div><div class="poem-line"><div class="en">Today, this year</div><div class="mm">ယနေ့လည်း မဟုတ်၊ ယခုနှစ်အတွင်းလည်း မဟုတ်၊</div></div><div class="poem-line"><div class="en">Nor ever</div><div class="mm">ဘယ်သောအခါမျှလည်း မဟုတ်၊</div></div><div class="poem-line"><div class="en">Through compromise and fear.</div><div class="mm">အလျှော့ပေးမှုနှင့် ကြောက်ရွံ့မှုတို့မှတစ်ဆင့် ရောက်လာမည် မဟုတ်ပေ။</div></div></div><div class="stanza"><div class="stanza-label">STANZA 2</div><div class="poem-line"><div class="en">I have as much right</div><div class="mm">ငါ့မှာလည်း တန်းတူအခွင့်အရေး ရှိတယ်၊</div></div><div class="poem-line"><div class="en">As the other fellow has</div><div class="mm">အခြားသူတစ်ယောက်မှာ ရှိသလောက်ပဲ။</div></div><div class="poem-line"><div class="en">To stand</div><div class="mm">မိမိကိုယ်တိုင် ရပ်တည်ဖို့၊</div></div><div class="poem-line"><div class="en">On my two feet</div><div class="mm">ကိုယ့်ခြေထောက်နှစ်ချောင်းပေါ်မှာ၊</div></div><div class="poem-line"><div class="en">And own the land.</div><div class="mm">မြေယာကို ပိုင်ဆိုင်ဖို့ အခွင့်အရေး ရှိတယ်။</div></div></div><div class="stanza"><div class="stanza-label">STANZA 3</div><div class="poem-line"><div class="en">I tire so of hearing people say,</div><div class="mm">လူတွေ ဒီလိုပြောတာ ကြားရတာ ငါ အလွန်ပင်ပန်းငြီးငွေ့နေပြီ၊</div></div><div class="poem-line"><div class="en">Let things take their course.</div><div class="mm">အရာရာကို သူ့အလိုလို ဖြစ်သွားပါစေတဲ့။</div></div><div class="poem-line"><div class="en">Tomorrow is another day.</div><div class="mm">မနက်ဖြန်ဆိုတာ နောက်ထပ်နေ့တစ်နေ့ ရှိသေးတယ်တဲ့။</div></div><div class="poem-line"><div class="en">I do not need my freedom when I’m dead.</div><div class="mm">ငါသေပြီးမှ ရမယ့် လွတ်လပ်မှုကို ငါ မလိုချင်ဘူး။</div></div><div class="poem-line"><div class="en">I cannot live on tomorrow’s bread.</div><div class="mm">မနက်ဖြန်ရမယ့် ပေါင်မုန့်နဲ့ ဒီနေ့ ငါ အသက်မရှင်နိုင်ဘူး။</div></div></div><div class="stanza"><div class="stanza-label">STANZA 4</div><div class="poem-line"><div class="en">Freedom</div><div class="mm">လွတ်လပ်မှုဆိုတာ</div></div><div class="poem-line"><div class="en">Is a strong seed</div><div class="mm">သန်မာတဲ့ မျိုးစေ့တစ်စေ့ပဲ၊</div></div><div class="poem-line"><div class="en">Planted</div><div class="mm">စိုက်ပျိုးထားတဲ့၊</div></div><div class="poem-line"><div class="en">In a great need.</div><div class="mm">အလွန်အမင်း လိုအပ်ချက်ထဲမှာ။</div></div></div><div class="stanza"><div class="stanza-label">STANZA 5</div><div class="poem-line"><div class="en">I live here, too.</div><div class="mm">ငါလည်း ဒီနေရာမှာ နေထိုင်တယ်။</div></div><div class="poem-line"><div class="en">I want freedom</div><div class="mm">ငါလည်း လွတ်လပ်မှုကို လိုချင်တယ်၊</div></div><div class="poem-line"><div class="en">Just as you.</div><div class="mm">မင်းလိုပဲ။</div></div></div><div class="author">— Langston Hughes (1902–1967)</div></div></section><section class="section"><div class="section-head"><div class="section-icon">🔎</div><div><h2>Stanza-by-Stanza Explanation</h2><p class="section-sub">ကဗျာပိုဒ်အလိုက် အဓိပ္ပါယ်</p></div></div><div class="device"><h3>Stanza 1 · No more fear</h3><p>ကြောက်ရွံ့မှုနှင့် အလျှော့ပေးမှုတို့ကိုသာ အားကိုးနေလျှင် ဒီမိုကရေစီ မရနိုင်ကြောင်း သတိပေးသည်။</p></div><div class="device"><h3>Stanza 2 · Equal rights</h3><p>ပြောသူသည် အခြားသူများကဲ့သို့ပင် ရပ်တည်ပိုင်ခွင့်နှင့် မြေယာပိုင်ဆိုင်ခွင့် ရှိကြောင်း အခိုင်အမာ ပြောဆိုသည်။</p></div><div class="device"><h3>Stanza 3 · Freedom cannot wait</h3><p>“မနက်ဖြန်” ဟူသော ကတိများကို ငြီးငွေ့နေပြီး အသက်ရှင်စဉ်မှာပင် လွတ်လပ်မှုလိုအပ်ကြောင်း ပြောသည်။</p></div><div class="device"><h3>Stanza 4 · Seed of freedom</h3><p>လွတ်လပ်မှုကို ကြီးထွားလာနိုင်သည့် မျိုးစေ့တစ်စေ့အဖြစ် တင်စားသည်။</p></div><div class="device"><h3>Stanza 5 · I live here, too</h3><p>ပြောသူလည်း ဤနိုင်ငံ၏ အဖွဲ့ဝင်ဖြစ်သောကြောင့် အခြားသူများနည်းတူ လွတ်လပ်ခွင့် ရသင့်သည်ဟု တောင်းဆိုသည်။</p></div></section><section class="section" id="glossary"><div class="section-head"><div class="section-icon">🔑</div><div><h2>Glossary</h2><p class="section-sub">စာအုပ်ပါ ဝေါဟာရများနှင့် အပိုဆောင်းစကားလုံးများ</p></div></div><div class="vocab-grid"><div class="vocab"><b>Democracy (n)</b><span>a system of government by the people or elected representatives — ပြည်သူများ သို့မဟုတ် ရွေးကောက်ခံကိုယ်စားလှယ်များမှ အုပ်ချုပ်သည့်စနစ်</span></div><div class="vocab"><b>compromise (n)</b><span>an agreement reached by concessions from both sides — နှစ်ဖက်အလျှော့ပေး၍ ရရှိသော သဘောတူညီချက်</span></div><div class="vocab"><b>take their course (phrase)</b><span>to happen naturally without interference — ဝင်ရောက်မထိန်းချုပ်ဘဲ သူ့အလိုလို ဖြစ်ပေါ်စေခြင်း</span></div><div class="vocab"><b>freedom (n)</b><span>liberty; the state of being free — လွတ်လပ်မှု</span></div><div class="vocab"><b>equal rights (n)</b><span>the same rights for everyone — လူတိုင်းအတွက် တန်းတူအခွင့်အရေး</span></div><div class="vocab"><b>seed (n)</b><span>a part of a plant that can grow into a new plant — မျိုးစေ့; ကဗျာတွင် မျှော်လင့်ချက်နှင့် အစပြုမှုကို တင်စားသည်</span></div></div></section><section class="section" id="devices"><div class="section-head"><div class="section-icon">✨</div><div><h2>Poetic Devices</h2><p class="section-sub">အဓိပ္ပါယ်၊ ဥပမာနှင့် ကဗျာအတွင်း အသုံးချမှု</p></div></div><div class="device"><h3>Metaphor · တင်စားချက်</h3><p>မတူသောအရာနှစ်ခုကို “like/as” မသုံးဘဲ တိုက်ရိုက်နှိုင်းယှဉ်ခြင်း။ “Freedom / Is a strong seed” တွင် လွတ်လပ်မှုကို မျိုးစေ့နှင့် တင်စားထားသည်။ “tomorrow’s bread” သည် နောင်အနာဂတ်က ကတိကို ပုံဆောင်သည်။</p></div><div class="device"><h3>Repetition · ထပ်ကျော့အသုံးပြုခြင်း</h3><p>စကားလုံး သို့မဟုတ် စာကြောင်းကို ထပ်သုံး၍ အဓိပ္ပါယ်ကို အလေးပေးခြင်း။ “freedom” နှင့် “tomorrow” တို့ကို ထပ်သုံးထားခြင်းက အရေးတကြီးလိုအပ်ချက်ကို ထင်ရှားစေသည်။</p></div><div class="device"><h3>Alliteration · အစဗျည်းသံထပ်ခြင်း</h3><p>အနီးကပ်စကားလုံးများ၏ အစဗျည်းသံတူညီခြင်း။ “strong seed” တွင် /s/ အသံ ထပ်နေသည်။</p></div><div class="device"><h3>Free verse and rhyme</h3><p>ကဗျာတစ်ပုဒ်လုံးတွင် ပုံမှန်တစ်သမတ်တည်း ကာရန်ပုံစံ မရှိသော်လည်း year/fear, say/day, dead/bread, too/you ကဲ့သို့ ကာရန်သံများ တွေ့နိုင်သည်။</p></div></section><section class="section" id="exercises"><div class="section-head"><div class="section-icon">📝</div><div><h2>Comprehension · 10 MCQs</h2><p class="section-sub">မေးခွန်း၊ ရွေးချယ်စရာ၊ အဖြေမှန်နှင့် မြန်မာရှင်းလင်းချက်</p></div></div><div class="intro"><strong>Exam Tip:</strong> အဖြေမကြည့်မီ မိမိဘာသာ ရွေးချယ်ဖြေဆိုကြည့်ပါ။</div><article class="question"><div class="q-top"><div class="q-number">1</div><div class="q-text">The themes of the poem “Democracy” are _______.</div></div><div class="q-mm">“Democracy” ကဗျာ၏ အဓိကအကြောင်းအရာများမှာ ______ ဖြစ်သည်။</div><div class="options"><div class="option"><b>A.</b> democracy, freedom, equal rights, and racial justice</div><div class="option"><b>B.</b> democracy, gender equality, and violence</div><div class="option"><b>C.</b> democracy, colonialism, and equality</div><div class="option"><b>D.</b> democracy, violence, and rules of law</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">A. democracy, freedom, equal rights, and racial justice</div><div class="answer-mm">ဒီမိုကရေစီ၊ လွတ်လပ်မှု၊ တန်းတူအခွင့်အရေးနှင့် လူမျိုးရေးတရားမျှတမှုတို့ကို အဓိကထားသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">2</div><div class="q-text">The poem has _______.</div></div><div class="q-mm">ကဗျာ၏ ကာရန်စနစ်မှာ ______ ဖြစ်သည်။</div><div class="options"><div class="option"><b>A.</b> a regular rhyme scheme</div><div class="option"><b>B.</b> no regular rhyme scheme, but some rhymes within the poem</div><div class="option"><b>C.</b> no regular rhyme scheme, or no rhyme at all</div><div class="option"><b>D.</b> a regular rhyme scheme, and same stanzaic form</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">B. no regular rhyme scheme, but some rhymes within the poem</div><div class="answer-mm">ပုံမှန်တစ်သမတ်တည်း ကာရန်ပုံစံမရှိသော်လည်း fear/year နှင့် day/say ကဲ့သို့ ကာရန်များ ရှိသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">3</div><div class="q-text">The use of alliteration can be seen in the line ________.</div></div><div class="q-mm">အစဗျည်းသံထပ်ခြင်း (alliteration) ကို ဘယ်စာကြောင်းတွင် တွေ့ရသလဲ။</div><div class="options"><div class="option"><b>A.</b> ‘As the other fellow has’</div><div class="option"><b>B.</b> ‘And own the land’</div><div class="option"><b>C.</b> ‘Tomorrow is another day’</div><div class="option"><b>D.</b> ‘Is a strong seed’</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">D. ‘Is a strong seed’</div><div class="answer-mm">strong seed တွင် /s/ အသံ ထပ်နေသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">4</div><div class="q-text">In the poem, which of the following is metaphor?</div></div><div class="q-mm">အောက်ပါတို့အနက် metaphor ဖြစ်သည့် စာကြောင်းမှာ ဘယ်ဟာလဲ။</div><div class="options"><div class="option"><b>A.</b> ‘Through compromise and fear’</div><div class="option"><b>B.</b> ‘And own the land’</div><div class="option"><b>C.</b> ‘Tomorrow is another day’</div><div class="option"><b>D.</b> ‘I cannot live on tomorrow’s bread’</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">D. ‘I cannot live on tomorrow’s bread’</div><div class="answer-mm">“tomorrow’s bread” သည် နောင်အနာဂတ်က ကတိများဖြင့် ယနေ့လိုအပ်ချက်ကို မဖြည့်ဆည်းနိုင်ခြင်းကို ပုံဆောင်ဖော်ပြသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">5</div><div class="q-text">Which literary device is used in the lines “Freedom Is a strong seed”?</div></div><div class="q-mm">“Freedom / Is a strong seed” တွင် ဘယ်ကဗျာအလင်္ကာကို သုံးထားသလဲ။</div><div class="options"><div class="option"><b>A.</b> metaphor</div><div class="option"><b>B.</b> repetition</div><div class="option"><b>C.</b> hyperbole</div><div class="option"><b>D.</b> simile</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">A. metaphor</div><div class="answer-mm">လွတ်လပ်မှုကို မျိုးစေ့နှင့် “like/as” မသုံးဘဲ တိုက်ရိုက်တင်စားထားသောကြောင့် metaphor ဖြစ်သည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">6</div><div class="q-text">According to the first stanza, people can only gain democracy if they _______.</div></div><div class="q-mm">ပထမပိုဒ်အရ ဒီမိုကရေစီရရှိရန် လူများသည် ______ လုပ်ရမည်။</div><div class="options"><div class="option"><b>A.</b> are afraid to be in activist movement</div><div class="option"><b>B.</b> are united to demand democracy</div><div class="option"><b>C.</b> compromise without courage</div><div class="option"><b>D.</b> join a courageous and uncompromising civil rights movement</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">D. join a courageous and uncompromising civil rights movement</div><div class="answer-mm">ကြောက်ရွံ့ခြင်းနှင့် အလျှော့ပေးခြင်းသာဖြင့် ဒီမိုကရေစီမရနိုင်ဟု ဆိုထားသဖြင့် ရဲရင့်စွာ အခွင့်အရေးတောင်းဆိုရန် လိုအပ်သည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">7</div><div class="q-text">Which stanza indicates that everyone deserves equal rights to the land, as well as the freedom and power to pursue their interests?</div></div><div class="q-mm">လူတိုင်း မြေယာနှင့် မိမိဘဝကို စီမံပိုင်ခွင့် တန်းတူရှိကြောင်း ဘယ်အပိုဒ်က ဖော်ပြသလဲ။</div><div class="options"><div class="option"><b>A.</b> The first stanza</div><div class="option"><b>B.</b> The second stanza</div><div class="option"><b>C.</b> The third stanza</div><div class="option"><b>D.</b> The fourth stanza</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">B. The second stanza</div><div class="answer-mm">ဒုတိယပိုဒ်တွင် “I have as much right / As the other fellow has” ဟု တန်းတူအခွင့်အရေးကို ဖော်ပြသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">8</div><div class="q-text">According to the third stanza, the speaker in the poem _______.</div></div><div class="q-mm">တတိယပိုဒ်အရ ကဗျာထဲမှ ပြောသူသည် ______။</div><div class="options"><div class="option"><b>A.</b> wants to wait till democracy arrives without trying to get it</div><div class="option"><b>B.</b> does not want to wait till democracy develops without trying to gain it</div><div class="option"><b>C.</b> wants others to allow things to happen without trying to control them</div><div class="option"><b>D.</b> does not want others to demand democracy urgently</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">B. does not want to wait till democracy develops without trying to gain it</div><div class="answer-mm">လွတ်လပ်မှုကို အနာဂတ်အထိ စောင့်မနေဘဲ ယခုလိုချင်ကြောင်း ဖော်ပြထားသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">9</div><div class="q-text">The repetition of the word ‘tomorrow’ in the third stanza implies that _______.</div></div><div class="q-mm">တတိယပိုဒ်တွင် “tomorrow” ထပ်သုံးခြင်းက ဘာကို ဆိုလိုသလဲ။</div><div class="options"><div class="option"><b>A.</b> he can enjoy democracy very soon</div><div class="option"><b>B.</b> he cannot wait to enjoy food till tomorrow</div><div class="option"><b>C.</b> as future is uncertain, he cannot wait, but needs the urgent change for democracy</div><div class="option"><b>D.</b> he can wait till tomorrow to enjoy the change for democracy</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">C. as future is uncertain, he cannot wait, but needs the urgent change for democracy</div><div class="answer-mm">အနာဂတ်မသေချာသောကြောင့် ဒီမိုကရေစီနှင့် တန်းတူအခွင့်အရေးကို ယခုချက်ချင်း လိုအပ်ကြောင်း အလေးပေးသည်။</div></div></article><article class="question"><div class="q-top"><div class="q-number">10</div><div class="q-text">The word ‘freedom’ is used three times in the poem _______.</div></div><div class="q-mm">“freedom” ကို သုံးကြိမ် အသုံးပြုထားခြင်း၏ ရည်ရွယ်ချက်မှာ ______ ဖြစ်သည်။</div><div class="options"><div class="option"><b>A.</b> to emphasize the poet’s strong desire for freedom</div><div class="option"><b>B.</b> to point out the importance of freedom</div><div class="option"><b>C.</b> to describe that freedom is like a strong seed</div><div class="option"><b>D.</b> to show how difficult it is to get freedom</div></div><button class="answer-btn" onclick="toggleAnswer(this)" aria-expanded="false">အဖြေကြည့်ရန်</button><div class="answer-area"><div class="answer-label">CORRECT ANSWER</div><div class="answer-text">A. to emphasize the poet’s strong desire for freedom</div><div class="answer-mm">လွတ်လပ်မှုကို ပြင်းပြင်းထန်ထန် တောင့်တနေမှုကို အလေးပေးဖော်ပြသည်။</div></div></article><button class="show-all" id="showAllBtn" onclick="toggleAllAnswers()">အဖြေအားလုံးကို ပြရန်</button></section></div></main><footer class="footer">Grade-12 English Learning Hub · Poem 4 — Democracy</footer><script>(function(){try{let t=localStorage.getItem('theme')||localStorage.getItem('siteTheme')||localStorage.getItem('g12-theme')||'light';document.documentElement.dataset.theme=t==='dark'?'dark':'light'}catch(e){}})();
+
+(function(){const btn=document.getElementById('themeBtn');function updateIcon(){btn.textContent=document.documentElement.dataset.theme==='dark'?'🌙':'☀️'}updateIcon();btn.addEventListener('click',()=>{let next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;try{['theme','siteTheme','g12-theme'].forEach(k=>localStorage.setItem(k,next))}catch(e){}updateIcon()});window.addEventListener('storage',e=>{if(['theme','siteTheme','g12-theme'].includes(e.key)){document.documentElement.dataset.theme=e.newValue==='dark'?'dark':'light';updateIcon()}});window.addEventListener('pageshow',()=>{try{let t=localStorage.getItem('theme')||localStorage.getItem('siteTheme')||localStorage.getItem('g12-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}updateIcon()}) })();
+function toggleAnswer(btn){let area=btn.nextElementSibling;let show=!area.classList.contains('show');area.classList.toggle('show',show);btn.textContent=show?'အဖြေဖျောက်ရန်':'အဖြေကြည့်ရန်';btn.setAttribute('aria-expanded',String(show))}
+function toggleAllAnswers(){let scope=document.getElementById('exercises');let buttons=[...scope.querySelectorAll('.answer-btn')];let show=buttons.some(b=>!b.nextElementSibling.classList.contains('show'));buttons.forEach(b=>{b.nextElementSibling.classList.toggle('show',show);b.textContent=show?'အဖြေဖျောက်ရန်':'အဖြေကြည့်ရန်';b.setAttribute('aria-expanded',String(show))});document.getElementById('showAllBtn').textContent=show?'အဖြေအားလုံးကို ဖျောက်ရန်':'အဖြေအားလုံးကို ပြရန်'}
+</script></body></html>

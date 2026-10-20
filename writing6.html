@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#10172d">
+<title>Writing 6 • Travel Brochure</title>
+<style>
+
+
+
+:root{--bg:#f4f6fc;--card:#fff;--text:#182238;--muted:#64718a;--line:#dce3f0;--primary:#5b5ee8;--secondary:#11a99a;--soft:#eff0ff;--shadow:0 18px 50px #1c2c5012;--gold:#c18a35;--radius:22px}
+body.dark{--bg:#080f1d;--card:#101b2d;--text:#edf3ff;--muted:#a9b8ce;--line:#26364f;--primary:#a9aaff;--secondary:#42d9c5;--soft:#1b2943;--shadow:0 18px 50px #0005;--gold:#f0c779}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 Inter,"Segoe UI",Arial,sans-serif;transition:background .25s,color .25s}
+a{color:inherit}button,textarea,select{font:inherit}
+.hero{position:relative;overflow:hidden;padding:58px 18px 76px;color:#fff;background:radial-gradient(circle at 12% 20%,#12b9a544,transparent 28%),radial-gradient(circle at 85% 12%,#8785ff55,transparent 32%),linear-gradient(130deg,#0a1630,#242b63 56%,#075e62)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:30px 30px}
+.hero-in,.nav-in,.wrap{position:relative;max-width:1120px;margin:auto}.kicker{font-size:12px;font-weight:900;letter-spacing:2.5px;color:#8ff8e8}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.02;letter-spacing:-2px;max-width:900px;margin:14px 0 18px}.hero p{max-width:780px;color:#e0eaff;margin:0}.hero-orb{position:absolute;right:5%;top:5px;font-size:clamp(70px,12vw,130px);opacity:.23;filter:drop-shadow(0 12px 30px #0005)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}.tags span{border:1px solid #ffffff30;background:#ffffff12;border-radius:999px;padding:5px 11px;font-size:12px}
+.header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-in{display:flex;align-items:center;gap:10px;min-height:64px;padding:8px 16px}.brand{font-weight:900;letter-spacing:.2px;margin-right:auto}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:1.5px}.nav-btn,.theme-btn{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:9px 12px;cursor:pointer;text-decoration:none;font-weight:750}.nav-btn:hover,.theme-btn:hover{border-color:var(--primary);transform:translateY(-1px)}
+.wrap{padding:0 16px 40px;margin-top:-28px}.section{margin:24px 0 30px;scroll-margin-top:90px}.section-heading{display:flex;align-items:center;gap:11px;margin:0 0 13px}.section-heading h2{font-size:clamp(21px,3vw,28px);line-height:1.25;margin:0;letter-spacing:-.5px}.eyebrow{display:inline-grid;place-items:center;min-width:38px;height:36px;padding:0 9px;border-radius:12px;background:var(--soft);color:var(--primary);font-size:12px;font-weight:950;letter-spacing:.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(17px,3vw,27px);box-shadow:var(--shadow)}.muted{color:var(--muted)}.note{background:var(--soft);border-left:4px solid var(--secondary);border-radius:12px;padding:13px 16px;margin:14px 0}.note strong{color:var(--primary)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.mini-card{border:1px solid var(--line);border-radius:17px;padding:16px;background:var(--card)}.mini-card h3{margin:0 0 5px;font-size:16px}.mini-card p{margin:4px 0}.en{font-weight:750}.mm{color:var(--muted);font-size:.94rem;margin-top:4px}.pill{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;background:var(--soft);color:var(--primary);padding:4px 9px;margin-bottom:8px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;min-width:530px;background:var(--card)}th,td{text-align:left;vertical-align:top;padding:13px 15px;border-bottom:1px solid var(--line)}th{background:var(--soft);font-size:13px;color:var(--primary)}tr:last-child td{border-bottom:0}td strong{display:block}
+.model{overflow:hidden;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.model-head{padding:20px 22px;color:#fff;background:linear-gradient(120deg,#565be6,#0eaa9b)}.model-head h3{font-size:24px;line-height:1.3;margin:0 0 5px}.model-head p{margin:0;color:#e6fffc}.model-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.action{border:1px solid var(--line);background:var(--card);color:var(--text);padding:9px 13px;border-radius:11px;cursor:pointer;font-weight:750}.action.primary{background:var(--primary);color:white;border-color:transparent}.model-body{padding:clamp(15px,3vw,25px);background:var(--card)}.essay-text{font-size:16px;line-height:1.95}.essay-text p{margin:0 0 15px}.translation{border-top:1px solid var(--line);padding-top:15px;margin-top:17px}.translation h4{margin:0 0 8px;color:var(--primary)}.translation p{margin:0 0 12px;color:var(--muted);line-height:1.9}.hidden{display:none!important}
+.steps{counter-reset:step;display:grid;gap:11px}.step{position:relative;padding:15px 15px 15px 55px;border:1px solid var(--line);border-radius:15px}.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:14px;top:15px;display:grid;place-items:center;width:29px;height:29px;border-radius:10px;background:var(--soft);color:var(--primary);font-size:11px;font-weight:950}.step h3{font-size:16px;margin:0 0 3px}.step p{margin:0}
+.vocab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.vocab{padding:12px;border:1px solid var(--line);border-radius:13px}.vocab b{display:block;color:var(--primary)}.vocab span{font-size:13px;color:var(--muted)}
+.pattern{padding:14px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.pattern code{font-family:inherit;color:var(--primary);font-weight:850;background:var(--soft);padding:3px 6px;border-radius:6px}
+.practice-area{width:100%;min-height:210px;resize:vertical;border:1px solid var(--line);border-radius:15px;background:var(--bg);color:var(--text);padding:15px;line-height:1.8;outline:none}.practice-area:focus{border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 16%,transparent)}.practice-toolbar{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:10px 0}.count{font-weight:850;color:var(--primary)}.feedback{margin-top:12px;padding:13px 15px;border-radius:12px;background:var(--soft);color:var(--text)}.quiz-q{padding:15px 0;border-bottom:1px solid var(--line)}.quiz-q:last-child{border-bottom:0}.quiz-q p{font-weight:800;margin:0 0 8px}.quiz-q label{display:block;padding:6px 0;color:var(--muted);cursor:pointer}.quiz-q input{accent-color:var(--primary);margin-right:8px}
+.checklist{list-style:none;padding:0;margin:0}.checklist li{padding:9px 0;border-bottom:1px solid var(--line)}.checklist li:last-child{border:0}.checklist input{accent-color:var(--primary);margin-right:9px;transform:scale(1.1)}
+footer{text-align:center;padding:28px 15px 38px;color:var(--muted);border-top:1px solid var(--line);font-size:13px}
+.menu-trigger{position:fixed;right:20px;bottom:22px;z-index:80;width:56px;height:56px;border:0;border-radius:18px;color:#fff;background:linear-gradient(135deg,#6265f1,#0eaa9b);box-shadow:0 12px 35px #303d9b55;font-size:23px;cursor:pointer}.menu-overlay{position:fixed;inset:0;z-index:90;background:#0206179c;backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.25s}.menu-overlay.open{opacity:1;visibility:visible}.side-menu{position:fixed;top:0;right:0;z-index:100;width:min(390px,92vw);height:100dvh;overflow-y:auto;padding:22px 18px;background:var(--card);border-left:1px solid var(--line);box-shadow:-20px 0 65px #0002;transform:translateX(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}.side-menu.open{transform:translateX(0)}.menu-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px}.menu-eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:950;color:var(--primary)}.menu-title{font-size:22px;font-weight:900}.close-menu{width:40px;height:40px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--text);font-size:22px;cursor:pointer}.menu-section{margin-top:20px}.menu-label-head{font-size:11px;letter-spacing:1px;font-weight:900;color:var(--muted);margin:0 4px 9px}.menu-list{display:grid;gap:7px}.menu-item{display:flex;align-items:center;gap:11px;text-decoration:none;border:1px solid var(--line);border-radius:14px;padding:11px;color:var(--text);transition:.2s}.menu-item:hover,.menu-item.active{background:var(--soft);border-color:color-mix(in srgb,var(--primary) 35%,var(--line));transform:translateX(-2px)}.menu-icon{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:12px;background:var(--soft);color:var(--primary);font-weight:900}.menu-item.active .menu-icon{background:linear-gradient(135deg,#6265f1,#0eaa9b);color:#fff}.menu-label{display:block;font-size:14px;font-weight:850}.menu-small{display:block;font-size:11px;color:var(--muted)}.menu-arrow{margin-left:auto;color:var(--muted);font-size:20px}.menu-note{margin-top:17px;border-radius:15px;padding:14px;background:linear-gradient(130deg,#6468f019,#0eaa9b19);border:1px solid var(--line);font-size:12px;color:var(--muted)}.menu-note strong{color:var(--primary)}
+@media(max-width:700px){.hero{padding:43px 17px 60px}.hero-orb{right:-10px;top:35px;opacity:.15}.nav-in{min-height:58px}.brand small{display:none}.grid2,.vocab-grid{grid-template-columns:1fr}.wrap{padding:0 12px 30px}.section{margin:20px 0 25px}.menu-trigger{right:14px;bottom:16px;width:51px;height:51px}.card{border-radius:17px}.hero h1{letter-spacing:-1.4px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+
+
+/* Travel brochure additions */
+.brochure-preview{border-radius:22px;overflow:hidden;border:1px solid var(--border);background:var(--card);margin-top:18px}
+.brochure-cover{padding:32px 26px;min-height:250px;background:linear-gradient(135deg,#0f766e,#164e63 52%,#1e3a8a);color:#fff;position:relative;isolation:isolate}
+.brochure-cover:after{content:"✦";position:absolute;right:20px;top:0;font-size:110px;opacity:.16;z-index:-1}
+.brochure-cover .cover-label{font-size:.75rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase;opacity:.85}
+.brochure-cover h3{font-size:clamp(2rem,5vw,3.5rem);line-height:1.03;margin:15px 0 12px;color:#fff}
+.brochure-cover p{max-width:620px;color:#eefdfb;font-size:1.05rem}
+.cover-stats{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.cover-stats span{border:1px solid #ffffff6b;background:#ffffff1c;border-radius:99px;padding:6px 11px;font-size:.8rem}
+.brochure-content{padding:22px}
+.brochure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin:17px 0}
+.brochure-tile{padding:16px;border:1px solid var(--border);border-radius:15px;background:var(--surface)}
+.brochure-tile .tile-icon{font-size:1.5rem}
+.brochure-tile h4{margin:8px 0 6px}
+.brochure-tile p{margin:0;color:var(--muted);font-size:.92rem}
+.price-strip{border-radius:14px;padding:16px;background:var(--surface);border:1px dashed var(--border);display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.price-strip strong{font-size:1.2rem}
+.brochure-controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+.brochure-controls select{padding:10px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--text);font:inherit}
+@media print{.header,.menu-trigger,.side-menu,.menu-overlay,.brochure-controls,footer{display:none!important}.hero{padding:20px}.section{break-inside:avoid}.brochure-preview{border:1px solid #bbb}.brochure-cover{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-orb" aria-hidden="true">✦</div>
+    <div class="kicker">GRADE 12 • ENGLISH • UNIT 6</div>
+    <h1>Writing a<br>Travel Brochure</h1>
+    <p>ခရီးသွားနေရာတစ်ခုကို လူစိတ်ဝင်စားလာအောင် ဆွဲဆောင်မှုရှိတဲ့ Travel Brochure တစ်ခု ဘယ်လိုရေးဆွဲမလဲဆိုတာ လေ့လာကြမယ်။ Structure၊ Useful Language၊ နမူနာ Brochure နဲ့ ကိုယ်တိုင်ဖန်တီးနိုင်တဲ့ Builder ပါဝင်ပါတယ်။</p>
+    <div class="tags"><span>6E • Writing</span><span>Travel Brochure</span><span>Creative Writing</span><span>English + Myanmar</span><span>Interactive Builder</span></div>
+  </div>
+</section>
+<header class="header"><div class="nav-in">
+  <div class="brand">✦ WRITING LAB <small>UNIT 06 · PREMIUM LEARNING</small></div>
+  <a class="nav-btn" href="index.html" aria-label="Go to home page">⌂ Home</a>
+  <a class="nav-btn" href="writing5.html" aria-label="Go to writing lesson 5">Writing 5</a>
+  <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle light and dark mode">☾ Dark</button>
+</div></header>
+<button class="menu-trigger" id="menuTrigger" aria-label="Open learning menu" aria-expanded="false">☰</button>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="side-menu" id="sideMenu" aria-label="Learning navigation" aria-hidden="true">
+  <div class="menu-top"><div><div class="menu-eyebrow">UNIT 6 LEARNING HUB</div><div class="menu-title">Learning Menu</div></div><button class="close-menu" id="closeMenu" aria-label="Close menu">×</button></div>
+  <div class="menu-section"><div class="menu-label-head">QUICK NAVIGATION</div><nav class="menu-list">
+    <a class="menu-item" href="index.html"><span class="menu-icon">⌂</span><span><span class="menu-label">Home</span><span class="menu-small">မူလစာမျက်နှာသို့ ပြန်သွားရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item active" href="#lesson"><span class="menu-icon">✎</span><span><span class="menu-label">Writing Task</span><span class="menu-small">What is a travel brochure?</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#tips"><span class="menu-icon">✦</span><span><span class="menu-label">Seven Key Tips</span><span class="menu-small">ထိရောက်တဲ့ brochure ရေးနည်း</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#model"><span class="menu-icon">▣</span><span><span class="menu-label">Sample Brochure</span><span class="menu-small">နမူနာဒီဇိုင်းနှင့် စာသား</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#guide"><span class="menu-icon">Aa</span><span><span class="menu-label">Useful Language</span><span class="menu-small">စကားစုများနှင့် vocabulary</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#builder"><span class="menu-icon">✍</span><span><span class="menu-label">Brochure Builder</span><span class="menu-small">ကိုယ်တိုင် brochure ဖန်တီးရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#quiz"><span class="menu-icon">✓</span><span><span class="menu-label">Quick Check</span><span class="menu-small">နားလည်မှု စမ်းသပ်ရန်</span></span><span class="menu-arrow">›</span></a>
+  </nav></div>
+  <div class="menu-note"><strong>✦ Design principle</strong><br>ခေါင်းစဉ်က ဆွဲဆောင်မှုရှိရမယ်၊ စာသားက ဖတ်ရလွယ်ရမယ်၊ အချက်အလက်တွေကလည်း မှန်ကန်ပြီး အသုံးဝင်ရမယ်။</div>
+</aside>
+
+<main class="wrap">
+<section class="section" id="lesson">
+  <div class="section-heading"><span class="eyebrow">6E</span><h2>What is a Travel Brochure?</h2></div>
+  <div class="card">
+    <span class="pill">Writing · Informative and persuasive text</span>
+    <p class="en">A travel brochure is a small magazine or book containing pictures and information about something or advertising something. A creative and well-designed travel brochure can attract readers and potential clients to visit a certain place.</p>
+    <p class="mm">Travel Brochure ဆိုသည်မှာ နေရာတစ်ခုအကြောင်း ဓာတ်ပုံများနှင့် အချက်အလက်များ ပါဝင်သော စာအုပ်ငယ် သို့မဟုတ် မဂ္ဂဇင်းငယ်တစ်ခုဖြစ်ပြီး ထိုနေရာသို့ လာရောက်လည်ပတ်ရန် ကြော်ငြာပေးနိုင်ပါတယ်။ ဖန်တီးမှုရှိပြီး ဒီဇိုင်းကောင်းတဲ့ brochure က စာဖတ်သူနဲ့ ခရီးသွားဖို့ စိတ်ဝင်စားသူတွေကို ဆွဲဆောင်နိုင်ပါတယ်။</p>
+    <div class="note"><strong>အဓိကရည်ရွယ်ချက်:</strong> ခရီးသွားနေရာတစ်ခုအကြောင်း အတိုချုံး၊ စိတ်ဝင်စားဖွယ်၊ အသုံးဝင်တဲ့ အချက်အလက်တွေကို စုစည်းပြီး စာဖတ်သူကို သွားရောက်လည်ပတ်ချင်လာအောင် ဆွဲဆောင်ရေးသားခြင်းဖြစ်ပါတယ်။</div>
+    <h3>Travel Brochure မှာ ပါဝင်သင့်တဲ့အရာများ</h3>
+    <ul>
+      <li>စိတ်ဝင်စားဖွယ် ခေါင်းစဉ် (Captivating title)</li>
+      <li>စာဖတ်သူကို ဆွဲဆောင်တဲ့ အဖွင့်ဝါကျ (Hook)</li>
+      <li>နေရာရဲ့ ထူးခြားချက်များနှင့် သွားလည်သင့်သည့်အကြောင်းရင်း</li>
+      <li>စားသောက်ဆိုင်၊ ဆိုင်များ၊ သန့်စင်ခန်းနှင့် ဖျော်ဖြေရေးနေရာများလို Facilities</li>
+      <li>တည်းခိုနေထိုင်မှုအကြောင်း သက်ဆိုင်ရာ အချက်အလက်များ</li>
+      <li>ခရီးစဉ်အစီအစဉ်နှင့် စျေးနှုန်း (သတ်မှတ်ထားပါက)</li>
+      <li>မျက်စိဖမ်းစားနိုင်တဲ့ ဓာတ်ပုံများနှင့် ရှင်းလင်းတဲ့ layout</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="tips">
+  <div class="section-heading"><span class="eyebrow">7 TIPS</span><h2>Tips to Write an Effective Travel Brochure</h2></div>
+  <div class="card">
+    <p class="muted">စာအုပ်ထဲက အချက်တွေကို အစဉ်လိုက် လေ့လာပြီး ဘာကြောင့်အရေးကြီးသလဲဆိုတာ နားလည်အောင် ဖော်ပြထားပါတယ်။</p>
+    <div class="steps">
+      <div class="step"><h3>01 · Choose your audience and destination</h3><p class="en">Choose the destination of your potential clients.</p><p class="mm">သင့် brochure ကို ဖတ်မယ့်သူတွေ ဘယ်လိုခရီးသွားမျိုးလဲ စဉ်းစားပြီး သင့်တော်တဲ့ destination ကို ရွေးချယ်ပါ။ ဥပမာ—မိသားစု၊ သဘာဝချစ်သူ၊ သမိုင်းစိတ်ဝင်စားသူများ။</p></div>
+      <div class="step"><h3>02 · Explore the local facilities</h3><p class="en">Explore and locate the facilities of the location. These include restaurants, shops, bathrooms, movie theaters, etc.</p><p class="mm">စားသောက်ဆိုင်၊ ဆိုင်များ၊ သန့်စင်ခန်း၊ ရုပ်ရှင်ရုံနှင့် အခြားလိုအပ်တဲ့ ဝန်ဆောင်မှုနေရာတွေကို စုံစမ်းပြီး တည်နေရာနဲ့တကွ ဖော်ပြပါ။ မသေချာတဲ့အချက်တွေကို မခန့်မှန်းပါနဲ့။</p></div>
+      <div class="step"><h3>03 · Find out about accommodation</h3><p class="en">Find out what the residents are saying, if your destination has residential accommodations.</p><p class="mm">တည်းခိုနေထိုင်နိုင်တဲ့ နေရာတွေရှိပါက ဒေသခံများ သို့မဟုတ် ယုံကြည်စိတ်ချရတဲ့ အချက်အလက်တွေကနေ တည်းခိုမှုအကြောင်း သိရှိအောင် လေ့လာပါ။</p></div>
+      <div class="step"><h3>04 · Decide the package price</h3><p class="en">Determine the price of your travel package.</p><p class="mm">ခရီးစဉ် package ပါဝင်ပစ္စည်းတွေ—သယ်ယူပို့ဆောင်ရေး၊ တည်းခိုခ၊ အစားအသောက်၊ ဝင်ကြေး—ကို စဉ်းစားပြီး စျေးနှုန်းကို ရှင်းလင်းစွာ သတ်မှတ်ပါ။</p></div>
+      <div class="step"><h3>05 · Create a captivating title</h3><p class="en">Think of a captivating title. Adjectives such as adventurous, pulsating, mind-boggling, fanciful and breathtaking can be used.</p><p class="mm">စိတ်ဝင်စားစေမယ့် ခေါင်းစဉ်တစ်ခု ရွေးပါ။ “Breathtaking”, “Adventurous”, “Unforgettable” စတဲ့ အဓိပ္ပာယ်ပြည့်ဝတဲ့ adjective တွေကို သင့်တော်သလို သုံးနိုင်ပါတယ်။</p></div>
+      <div class="step"><h3>06 · Hook your audience</h3><p class="en">Hook your audience with the opening sentence.</p><p class="mm">ပထမဆုံးဝါကျမှာ မေးခွန်းတစ်ခု၊ ထူးခြားတဲ့အချက်တစ်ခု သို့မဟုတ် စိတ်ကူးပုံဖော်စေတဲ့ ဖော်ပြချက်တစ်ခုနဲ့ စာဖတ်သူရဲ့ အာရုံကို ဖမ်းစားပါ။</p></div>
+      <div class="step"><h3>07 · Add eye-catching photos</h3><p class="en">Include eye-catching photos.</p><p class="mm">နေရာကို ထင်ဟပ်စေတဲ့ ကြည်လင်လှပတဲ့ ဓာတ်ပုံတွေကို အသုံးပြုပြီး ပုံနဲ့စာသား အချိုးညီအောင် စီစဉ်ပါ။ ကိုယ်ပိုင်ဓာတ်ပုံ သို့မဟုတ် အသုံးပြုခွင့်ရှိတဲ့ပုံကို ဦးစားပေးပါ။</p></div>
+    </div>
+    <div class="note"><strong>Golden rule:</strong> ဆွဲဆောင်မှုရှိဖို့ အရေးကြီးသလို အချက်အလက်မှန်ကန်ဖို့လည်း အရေးကြီးပါတယ်။ အမှန်မဟုတ်တဲ့ စျေးနှုန်း၊ ဖွင့်ချိန်၊ facility ရှိ/မရှိ စတာတွေကို မဖန်တီးရေးသားပါနဲ့။</div>
+  </div>
+</section>
+
+<section class="section" id="model">
+  <div class="section-heading"><span class="eyebrow">SAMPLE</span><h2>Sample Travel Brochure</h2></div>
+  <div class="card">
+    <p class="muted">အောက်ပါ brochure က စာရေးပုံနဲ့ layout ကို ပြသဖို့ ဖန်တီးထားတဲ့ နမူနာဖြစ်ပါတယ်။ နေရာနဲ့ စျေးနှုန်းဆိုင်ရာအချက်အလက်တွေက ဥပမာသာဖြစ်ပြီး အမှန်တကယ် ခရီးစဉ်မကြော်ငြာမီ စစ်ဆေးအတည်ပြုဖို့ လိုပါတယ်။</p>
+    <div class="brochure-preview">
+      <div class="brochure-cover">
+        <div class="cover-label">Discover • Explore • Enjoy</div>
+        <h3>Find Your<br>Mountain Escape</h3>
+        <p>Fresh air, peaceful views and memorable moments are waiting. Take a break from busy days and explore the beauty of nature!</p>
+        <div class="cover-stats"><span>🌿 Nature</span><span>📸 Scenic Views</span><span>🥾 Gentle Adventure</span></div>
+      </div>
+      <div class="brochure-content">
+        <h3>Make Every Moment Count</h3>
+        <p>Imagine walking along quiet paths, enjoying cool breezes and taking photographs of beautiful landscapes. A mountain getaway can be a wonderful chance to relax, explore and spend time with family or friends.</p>
+        <div class="brochure-grid">
+          <div class="brochure-tile"><div class="tile-icon">🌄</div><h4>Beautiful Scenery</h4><p>Enjoy wide views, green hills and peaceful natural surroundings.</p></div>
+          <div class="brochure-tile"><div class="tile-icon">🍲</div><h4>Local Food</h4><p>Discover local dishes and ask residents about well-loved places to eat.</p></div>
+          <div class="brochure-tile"><div class="tile-icon">🏡</div><h4>Stay Comfortably</h4><p>Research available guesthouses or hotels and check facilities before booking.</p></div>
+          <div class="brochure-tile"><div class="tile-icon">🗺️</div><h4>Plan Your Day</h4><p>Check transport, weather, opening hours and any entry requirements in advance.</p></div>
+        </div>
+        <div class="price-strip"><div><strong>Plan your perfect trip</strong><br><span class="muted">Compare transport, food and accommodation costs before you go.</span></div><span class="pill">Check current prices</span></div>
+        <h3 style="margin-top:22px">Ready for a New Adventure?</h3>
+        <p>Choose your destination, plan thoughtfully and travel responsibly. Respect local customs, keep the environment clean and support local businesses along the way.</p>
+      </div>
+    </div>
+    <div class="brochure-controls">
+      <button class="action primary" id="printBrochure" type="button">Print / Save as PDF</button>
+      <button class="action" id="copySample" type="button">Copy sample text</button>
+    </div>
+    <div class="feedback hidden" id="copyFeedback" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="section-heading"><span class="eyebrow">Aa</span><h2>Useful Language — အသုံးဝင်သော စကားစုများ</h2></div>
+  <div class="card">
+    <h3>Captivating Adjectives</h3>
+    <div class="vocab-grid">
+      <div class="vocab"><b>breathtaking</b><span>အသက်ရှူမှားလောက်အောင် လှပသော</span></div>
+      <div class="vocab"><b>adventurous</b><span>စွန့်စားခန်းဆန်သော</span></div>
+      <div class="vocab"><b>pulsating</b><span>စည်ကားလှုပ်ရှားနေသော</span></div>
+      <div class="vocab"><b>mind-boggling</b><span>အံ့ဩစရာကောင်းလောက်သော</span></div>
+      <div class="vocab"><b>fanciful</b><span>စိတ်ကူးယဉ်ဆန်သော</span></div>
+      <div class="vocab"><b>unforgettable</b><span>မမေ့နိုင်သော</span></div>
+      <div class="vocab"><b>peaceful</b><span>အေးချမ်းသော</span></div>
+      <div class="vocab"><b>vibrant</b><span>စည်ကားတက်ကြွသော</span></div>
+    </div>
+    <h3 style="margin-top:24px">Useful Sentence Patterns</h3>
+    <div class="pattern"><code>Are you ready to discover ...?</code><div class="mm">… ကို ရှာဖွေတွေ့ရှိဖို့ အဆင်သင့်ဖြစ်ပြီလား။ (Hook)</div></div>
+    <div class="pattern"><code>Discover the breathtaking beauty of ...</code><div class="mm">… ရဲ့ အံ့မခန်းလှပမှုကို ရှာဖွေခံစားလိုက်ပါ။ (ဆွဲဆောင်ရန်)</div></div>
+    <div class="pattern"><code>Visitors can enjoy ...</code><div class="mm">လာရောက်လည်ပတ်သူများ … ကို ခံစားနိုင်ပါတယ်။ (လုပ်ဆောင်စရာများ)</div></div>
+    <div class="pattern"><code>Facilities include ...</code><div class="mm">ရရှိနိုင်တဲ့ ဝန်ဆောင်မှုများမှာ … ပါဝင်ပါတယ်။ (အမှန်တကယ်ရှိမှ သုံးပါ)</div></div>
+    <div class="pattern"><code>Travel packages start from ...</code><div class="mm">ခရီးစဉ် package စျေးနှုန်းများ … မှ စတင်ပါတယ်။ (စျေးနှုန်းမှန်ကန်ကြောင်း အတည်ပြုပြီးမှ သုံးပါ)</div></div>
+    <div class="pattern"><code>Plan your visit today and create unforgettable memories!</code><div class="mm">ဒီနေ့ပဲ ခရီးစဉ်စီစဉ်ပြီး မမေ့နိုင်တဲ့ အမှတ်တရတွေ ဖန်တီးလိုက်ပါ။ (Call to action)</div></div>
+    <h3 style="margin-top:24px">Suggested Brochure Structure</h3>
+    <ol>
+      <li><strong>Front cover:</strong> destination name, catchy title, hook and a main photo.</li>
+      <li><strong>Inside:</strong> highlights, activities, facilities, accommodation and local tips.</li>
+      <li><strong>Price and practical details:</strong> package cost, transport, opening times and contact details if available.</li>
+      <li><strong>Back cover:</strong> call to action, safety reminder and any verified contact information.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="builder">
+  <div class="section-heading"><span class="eyebrow">✍</span><h2>Brochure Builder — ကိုယ်တိုင်ဖန်တီးပါ</h2></div>
+  <div class="card">
+    <p>အောက်ပါအကွက်တွေကို ဖြည့်ပါ။ သင့်အချက်အလက်တွေနဲ့ brochure preview ကို အောက်မှာ အလိုအလျောက် ပြောင်းလဲပြပေးပါမယ်။</p>
+    <div class="builder-grid">
+      <div class="form-field"><label for="destTitle">Destination / ခရီးသွားနေရာ</label><input id="destTitle" value="Inle Lake" placeholder="e.g. Inle Lake"></div>
+      <div class="form-field"><label for="catchTitle">Captivating title / ခေါင်းစဉ်</label><input id="catchTitle" value="Discover a Breathtaking Escape" placeholder="A Breathtaking Journey"></div>
+      <div class="form-field full"><label for="hookText">Opening hook / အဖွင့်ဝါကျ</label><textarea id="hookText" rows="2" placeholder="What makes this place special?">Ready to explore peaceful waters, local culture and unforgettable scenery?</textarea></div>
+      <div class="form-field"><label for="highlightText">Main attractions / ထူးခြားချက်များ</label><textarea id="highlightText" rows="3" placeholder="List attractions">Scenic views, local markets and cultural experiences</textarea></div>
+      <div class="form-field"><label for="facilityText">Facilities / ဝန်ဆောင်မှုများ</label><textarea id="facilityText" rows="3" placeholder="Only list verified facilities">Restaurants, local shops and accommodation options (check availability)</textarea></div>
+      <div class="form-field"><label for="priceText">Price / စျေးနှုန်း</label><input id="priceText" value="Check current prices" placeholder="e.g. Price on request"></div>
+      <div class="form-field"><label for="callText">Call to action / နိဂုံးဆွဲဆောင်ချက်</label><input id="callText" value="Plan your visit and make memories!" placeholder="Plan your trip today!"></div>
+    </div>
+    <div class="brochure-controls"><button class="action primary" id="updateBrochure" type="button">Update preview</button><button class="action" id="resetBuilder" type="button">Reset sample</button><button class="action" id="printCustom" type="button">Print / Save as PDF</button></div>
+    <div class="brochure-preview" id="customBrochure">
+      <div class="brochure-cover"><div class="cover-label">Your Travel Guide</div><h3 id="previewTitle">Discover a Breathtaking Escape</h3><p id="previewHook">Ready to explore peaceful waters, local culture and unforgettable scenery?</p><div class="cover-stats"><span>✦ Explore</span><span>✦ Discover</span><span>✦ Enjoy</span></div></div>
+      <div class="brochure-content"><h3 id="previewDest">Inle Lake</h3><div class="brochure-grid"><div class="brochure-tile"><div class="tile-icon">📍</div><h4>Highlights</h4><p id="previewHighlights">Scenic views, local markets and cultural experiences</p></div><div class="brochure-tile"><div class="tile-icon">🏨</div><h4>Facilities</h4><p id="previewFacilities">Restaurants, local shops and accommodation options (check availability)</p></div></div><div class="price-strip"><strong>Plan your trip</strong><span id="previewPrice" class="pill">Check current prices</span></div><h3 style="margin-top:20px" id="previewCall">Plan your visit and make memories!</h3></div>
+    </div>
+    <div class="note"><strong>အရေးကြီး:</strong> ဒီ builder က စာသားနဲ့ layout ကို preview ပြတာဖြစ်ပြီး ဓာတ်ပုံအလိုအလျောက် ထည့်ပေးတာမဟုတ်ပါ။ တကယ့် brochure ထုတ်ဝေတဲ့အခါ သက်ဆိုင်ရာ ဓာတ်ပုံ၊ စျေးနှုန်း၊ facilities၊ လိပ်စာနဲ့ ဖွင့်ချိန်တွေကို အတည်ပြုထားတဲ့ အချက်အလက်နဲ့ ဖြည့်ပါ။</div>
+  </div>
+</section>
+
+<section class="section" id="quiz">
+  <div class="section-heading"><span class="eyebrow">✓</span><h2>Quick Check — နားလည်မှု စမ်းသပ်ရန်</h2></div>
+  <div class="card">
+    <p class="muted">မေးခွန်း ၅ ခုကို ဖြေပြီး အဖြေစစ်ပါ။</p>
+    <form id="quizForm">
+      <div class="quiz-q"><p>1. What is the main purpose of a travel brochure?</p><label><input type="radio" name="q1" value="a"> To hide information about a destination</label><label><input type="radio" name="q1" value="b"> To provide useful information and attract visitors</label><label><input type="radio" name="q1" value="c"> To list unrelated stories</label></div>
+      <div class="quiz-q"><p>2. What should you research before listing facilities?</p><label><input type="radio" name="q2" value="a"> Whether the facilities really exist and where they are</label><label><input type="radio" name="q2" value="b"> Only their colour</label><label><input type="radio" name="q2" value="c"> Nothing; guessing is enough</label></div>
+      <div class="quiz-q"><p>3. Which is an example of a captivating adjective from the lesson?</p><label><input type="radio" name="q3" value="a"> Ordinary</label><label><input type="radio" name="q3" value="b"> Boring</label><label><input type="radio" name="q3" value="c"> Breathtaking</label></div>
+      <div class="quiz-q"><p>4. What is a “hook” in a brochure?</p><label><input type="radio" name="q4" value="a"> A dull final sentence</label><label><input type="radio" name="q4" value="b"> An opening line that grabs the reader’s attention</label><label><input type="radio" name="q4" value="c"> A list of spelling mistakes</label></div>
+      <div class="quiz-q"><p>5. What should you do before advertising a package price?</p><label><input type="radio" name="q5" value="a"> Make up a low price</label><label><input type="radio" name="q5" value="b"> Leave out what is included</label><label><input type="radio" name="q5" value="c"> Calculate and verify the price and inclusions</label></div>
+      <div class="practice-toolbar"><button class="action primary" type="submit">Check answers</button><button class="action" type="reset" id="resetQuiz">Try again</button></div>
+    </form>
+    <div class="feedback hidden" id="quizFeedback" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+<footer>GRADE 12 ENGLISH LEARNING HUB · UNIT 6 · WRITING 6<br>Catch their attention. Share useful details. Inspire a journey.</footer>
+<script>
+(function(){
+ const body=document.body, themeBtn=document.getElementById('themeToggle');
+ const themeKeys=['theme','siteTheme','g12-theme'];
+ function setTheme(theme,save){
+   body.classList.toggle('dark',theme==='dark');
+   themeBtn.textContent=theme==='dark'?'☀ Light':'☾ Dark';
+   themeBtn.setAttribute('aria-pressed',theme==='dark'?'true':'false');
+   if(save){try{themeKeys.forEach(k=>localStorage.setItem(k,theme));}catch(e){}}
+ }
+ let initial='light';
+ try{for(const key of themeKeys){const t=localStorage.getItem(key);if(t==='dark'||t==='light'){initial=t;break;}}}catch(e){}
+ setTheme(initial,false);
+ themeBtn.addEventListener('click',()=>setTheme(body.classList.contains('dark')?'light':'dark',true));
+ window.addEventListener('storage',e=>{if(themeKeys.includes(e.key)&&e.newValue)setTheme(e.newValue,false);});
+ const trigger=document.getElementById('menuTrigger'),menu=document.getElementById('sideMenu'),overlay=document.getElementById('menuOverlay'),close=document.getElementById('closeMenu');
+ function openMenu(){menu.classList.add('open');overlay.classList.add('open');menu.setAttribute('aria-hidden','false');trigger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';close.focus();}
+ function closeMenu(){menu.classList.remove('open');overlay.classList.remove('open');menu.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+ trigger.addEventListener('click',openMenu);close.addEventListener('click',closeMenu);overlay.addEventListener('click',closeMenu);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ document.getElementById('printBrochure').addEventListener('click',()=>window.print());
+ document.getElementById('printCustom').addEventListener('click',()=>window.print());
+ const sampleText=()=>Array.from(document.querySelectorAll('#model .brochure-content p, #model .brochure-cover h3, #model .brochure-content h3')).map(e=>e.textContent.trim()).filter(Boolean).join('\n\n');
+ document.getElementById('copySample').addEventListener('click',async()=>{
+   const fb=document.getElementById('copyFeedback');
+   try{await navigator.clipboard.writeText(sampleText());fb.classList.remove('hidden');fb.textContent='Sample brochure text copied.';}
+   catch(e){fb.classList.remove('hidden');fb.textContent='Copy may be blocked by this browser. Select the sample text and copy it manually.';}
+ });
+ const fields={destTitle:'previewDest',catchTitle:'previewTitle',hookText:'previewHook',highlightText:'previewHighlights',facilityText:'previewFacilities',priceText:'previewPrice',callText:'previewCall'};
+ function updatePreview(){for(const [field,target] of Object.entries(fields)){const input=document.getElementById(field),output=document.getElementById(target);const value=input.value.trim();output.textContent=value||'Add your information here';}}
+ document.getElementById('updateBrochure').addEventListener('click',updatePreview);
+ document.getElementById('resetBuilder').addEventListener('click',()=>{
+   document.getElementById('destTitle').value='Inle Lake';
+   document.getElementById('catchTitle').value='Discover a Breathtaking Escape';
+   document.getElementById('hookText').value='Ready to explore peaceful waters, local culture and unforgettable scenery?';
+   document.getElementById('highlightText').value='Scenic views, local markets and cultural experiences';
+   document.getElementById('facilityText').value='Restaurants, local shops and accommodation options (check availability)';
+   document.getElementById('priceText').value='Check current prices';
+   document.getElementById('callText').value='Plan your visit and make memories!';
+   updatePreview();
+ });
+ document.getElementById('quizForm').addEventListener('submit',e=>{
+   e.preventDefault();const answers={q1:'b',q2:'a',q3:'c',q4:'b',q5:'c'};let score=0;
+   for(const [q,a] of Object.entries(answers)){const selected=document.querySelector(`input[name="${q}"]:checked`);if(selected&&selected.value===a)score++;}
+   const qf=document.getElementById('quizFeedback');qf.classList.remove('hidden');
+   qf.textContent=`Your score: ${score}/5. ${score===5?'Excellent! အားလုံးမှန်ပါတယ်။':'Tips နဲ့ Useful Language အပိုင်းကို ပြန်လေ့လာပြီး ထပ်ကြိုးစားပါ။'} Correct answers: 1-B, 2-A, 3-C, 4-B, 5-C.`;
+ });
+ document.getElementById('resetQuiz').addEventListener('click',()=>{const qf=document.getElementById('quizFeedback');qf.classList.add('hidden');qf.textContent='';});
+})();
+</script>
+</body>
+</html>
