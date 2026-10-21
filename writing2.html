@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#10172d">
+<title>Writing 2 • Living in Two Worlds: With and Without AI</title>
+<style>
+:root{--bg:#f4f6fc;--card:#fff;--text:#182238;--muted:#64718a;--line:#dce3f0;--primary:#5b5ee8;--secondary:#11a99a;--soft:#eff0ff;--shadow:0 18px 50px #1c2c5012;--gold:#c18a35;--radius:22px}
+body.dark{--bg:#080f1d;--card:#101b2d;--text:#edf3ff;--muted:#a9b8ce;--line:#26364f;--primary:#a9aaff;--secondary:#42d9c5;--soft:#1b2943;--shadow:0 18px 50px #0005;--gold:#f0c779}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 Inter,"Segoe UI",Arial,sans-serif;transition:background .25s,color .25s}
+a{color:inherit}button,textarea,select{font:inherit}
+.hero{position:relative;overflow:hidden;padding:58px 18px 76px;color:#fff;background:radial-gradient(circle at 12% 20%,#12b9a544,transparent 28%),radial-gradient(circle at 85% 12%,#8785ff55,transparent 32%),linear-gradient(130deg,#0a1630,#242b63 56%,#075e62)}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:30px 30px}
+.hero-in,.nav-in,.wrap{position:relative;max-width:1120px;margin:auto}.kicker{font-size:12px;font-weight:900;letter-spacing:2.5px;color:#8ff8e8}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.02;letter-spacing:-2px;max-width:900px;margin:14px 0 18px}.hero p{max-width:780px;color:#e0eaff;margin:0}.hero-orb{position:absolute;right:5%;top:5px;font-size:clamp(70px,12vw,130px);opacity:.23;filter:drop-shadow(0 12px 30px #0005)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}.tags span{border:1px solid #ffffff30;background:#ffffff12;border-radius:999px;padding:5px 11px;font-size:12px}
+.header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-in{display:flex;align-items:center;gap:10px;min-height:64px;padding:8px 16px}.brand{font-weight:900;letter-spacing:.2px;margin-right:auto}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:1.5px}.nav-btn,.theme-btn{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:9px 12px;cursor:pointer;text-decoration:none;font-weight:750}.nav-btn:hover,.theme-btn:hover{border-color:var(--primary);transform:translateY(-1px)}
+.wrap{padding:0 16px 40px;margin-top:-28px}.section{margin:24px 0 30px;scroll-margin-top:90px}.section-heading{display:flex;align-items:center;gap:11px;margin:0 0 13px}.section-heading h2{font-size:clamp(21px,3vw,28px);line-height:1.25;margin:0;letter-spacing:-.5px}.eyebrow{display:inline-grid;place-items:center;min-width:38px;height:36px;padding:0 9px;border-radius:12px;background:var(--soft);color:var(--primary);font-size:12px;font-weight:950;letter-spacing:.5px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(17px,3vw,27px);box-shadow:var(--shadow)}.muted{color:var(--muted)}.note{background:var(--soft);border-left:4px solid var(--secondary);border-radius:12px;padding:13px 16px;margin:14px 0}.note strong{color:var(--primary)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.mini-card{border:1px solid var(--line);border-radius:17px;padding:16px;background:var(--card)}.mini-card h3{margin:0 0 5px;font-size:16px}.mini-card p{margin:4px 0}.en{font-weight:750}.mm{color:var(--muted);font-size:.94rem;margin-top:4px}.pill{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;background:var(--soft);color:var(--primary);padding:4px 9px;margin-bottom:8px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;min-width:530px;background:var(--card)}th,td{text-align:left;vertical-align:top;padding:13px 15px;border-bottom:1px solid var(--line)}th{background:var(--soft);font-size:13px;color:var(--primary)}tr:last-child td{border-bottom:0}td strong{display:block}
+.model{overflow:hidden;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.model-head{padding:20px 22px;color:#fff;background:linear-gradient(120deg,#565be6,#0eaa9b)}.model-head h3{font-size:24px;line-height:1.3;margin:0 0 5px}.model-head p{margin:0;color:#e6fffc}.model-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.action{border:1px solid var(--line);background:var(--card);color:var(--text);padding:9px 13px;border-radius:11px;cursor:pointer;font-weight:750}.action.primary{background:var(--primary);color:white;border-color:transparent}.model-body{padding:clamp(15px,3vw,25px);background:var(--card)}.essay-text{font-size:16px;line-height:1.95}.essay-text p{margin:0 0 15px}.translation{border-top:1px solid var(--line);padding-top:15px;margin-top:17px}.translation h4{margin:0 0 8px;color:var(--primary)}.translation p{margin:0 0 12px;color:var(--muted);line-height:1.9}.hidden{display:none!important}
+.steps{counter-reset:step;display:grid;gap:11px}.step{position:relative;padding:15px 15px 15px 55px;border:1px solid var(--line);border-radius:15px}.step:before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:14px;top:15px;display:grid;place-items:center;width:29px;height:29px;border-radius:10px;background:var(--soft);color:var(--primary);font-size:11px;font-weight:950}.step h3{font-size:16px;margin:0 0 3px}.step p{margin:0}
+.vocab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.vocab{padding:12px;border:1px solid var(--line);border-radius:13px}.vocab b{display:block;color:var(--primary)}.vocab span{font-size:13px;color:var(--muted)}
+.pattern{padding:14px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.pattern code{font-family:inherit;color:var(--primary);font-weight:850;background:var(--soft);padding:3px 6px;border-radius:6px}
+.practice-area{width:100%;min-height:210px;resize:vertical;border:1px solid var(--line);border-radius:15px;background:var(--bg);color:var(--text);padding:15px;line-height:1.8;outline:none}.practice-area:focus{border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 16%,transparent)}.practice-toolbar{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:10px 0}.count{font-weight:850;color:var(--primary)}.feedback{margin-top:12px;padding:13px 15px;border-radius:12px;background:var(--soft);color:var(--text)}.quiz-q{padding:15px 0;border-bottom:1px solid var(--line)}.quiz-q:last-child{border-bottom:0}.quiz-q p{font-weight:800;margin:0 0 8px}.quiz-q label{display:block;padding:6px 0;color:var(--muted);cursor:pointer}.quiz-q input{accent-color:var(--primary);margin-right:8px}
+.checklist{list-style:none;padding:0;margin:0}.checklist li{padding:9px 0;border-bottom:1px solid var(--line)}.checklist li:last-child{border:0}.checklist input{accent-color:var(--primary);margin-right:9px;transform:scale(1.1)}
+footer{text-align:center;padding:28px 15px 38px;color:var(--muted);border-top:1px solid var(--line);font-size:13px}
+.menu-trigger{position:fixed;right:20px;bottom:22px;z-index:80;width:56px;height:56px;border:0;border-radius:18px;color:#fff;background:linear-gradient(135deg,#6265f1,#0eaa9b);box-shadow:0 12px 35px #303d9b55;font-size:23px;cursor:pointer}.menu-overlay{position:fixed;inset:0;z-index:90;background:#0206179c;backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.25s}.menu-overlay.open{opacity:1;visibility:visible}.side-menu{position:fixed;top:0;right:0;z-index:100;width:min(390px,92vw);height:100dvh;overflow-y:auto;padding:22px 18px;background:var(--card);border-left:1px solid var(--line);box-shadow:-20px 0 65px #0002;transform:translateX(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}.side-menu.open{transform:translateX(0)}.menu-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px}.menu-eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:950;color:var(--primary)}.menu-title{font-size:22px;font-weight:900}.close-menu{width:40px;height:40px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--text);font-size:22px;cursor:pointer}.menu-section{margin-top:20px}.menu-label-head{font-size:11px;letter-spacing:1px;font-weight:900;color:var(--muted);margin:0 4px 9px}.menu-list{display:grid;gap:7px}.menu-item{display:flex;align-items:center;gap:11px;text-decoration:none;border:1px solid var(--line);border-radius:14px;padding:11px;color:var(--text);transition:.2s}.menu-item:hover,.menu-item.active{background:var(--soft);border-color:color-mix(in srgb,var(--primary) 35%,var(--line));transform:translateX(-2px)}.menu-icon{width:39px;height:39px;flex:0 0 39px;display:grid;place-items:center;border-radius:12px;background:var(--soft);color:var(--primary);font-weight:900}.menu-item.active .menu-icon{background:linear-gradient(135deg,#6265f1,#0eaa9b);color:#fff}.menu-label{display:block;font-size:14px;font-weight:850}.menu-small{display:block;font-size:11px;color:var(--muted)}.menu-arrow{margin-left:auto;color:var(--muted);font-size:20px}.menu-note{margin-top:17px;border-radius:15px;padding:14px;background:linear-gradient(130deg,#6468f019,#0eaa9b19);border:1px solid var(--line);font-size:12px;color:var(--muted)}.menu-note strong{color:var(--primary)}
+@media(max-width:700px){.hero{padding:43px 17px 60px}.hero-orb{right:-10px;top:35px;opacity:.15}.nav-in{min-height:58px}.brand small{display:none}.grid2,.vocab-grid{grid-template-columns:1fr}.wrap{padding:0 12px 30px}.section{margin:20px 0 25px}.menu-trigger{right:14px;bottom:16px;width:51px;height:51px}.card{border-radius:17px}.hero h1{letter-spacing:-1.4px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-orb" aria-hidden="true">✦</div>
+    <div class="kicker">GRADE 12 • ENGLISH • UNIT 2</div>
+    <h1>Living in Two Worlds:<br>With and Without AI</h1>
+    <p>Think clearly. Compare confidently. Write with purpose. ဒီသင်ခန်းစာမှာ AI မရှိတဲ့ဘဝနဲ့ AI ပါဝင်လာတဲ့ဘဝကို နှိုင်းယှဉ်လေ့လာပြီး စာလုံးရေ ၂၅၀ ဝန်းကျင်ရှိတဲ့ paragraph ကို ကိုယ်တိုင်ရေးသားလေ့ကျင့်နိုင်ပါတယ်။</p>
+    <div class="tags"><span>2F • Writing</span><span>T-chart Notes</span><span>250-word Model</span><span>English + Myanmar</span><span>Interactive Practice</span></div>
+  </div>
+</section>
+<header class="header"><div class="nav-in">
+  <div class="brand">✦ WRITING LAB <small>UNIT 02 · PREMIUM LEARNING</small></div>
+  <a class="nav-btn" href="index.html" aria-label="Go to home page">⌂ Home</a>
+  <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle light and dark mode">☾ Dark</button>
+</div></header>
+<button class="menu-trigger" id="menuTrigger" aria-label="Open learning menu" aria-expanded="false">☰</button>
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="side-menu" id="sideMenu" aria-label="Learning navigation" aria-hidden="true">
+  <div class="menu-top"><div><div class="menu-eyebrow">UNIT 2 LEARNING HUB</div><div class="menu-title">Learning Menu</div></div><button class="close-menu" id="closeMenu" aria-label="Close menu">×</button></div>
+  <div class="menu-section"><div class="menu-label-head">QUICK NAVIGATION</div><nav class="menu-list">
+    <a class="menu-item" href="index.html"><span class="menu-icon">⌂</span><span><span class="menu-label">Home</span><span class="menu-small">မူလစာမျက်နှာသို့ ပြန်သွားရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item active" href="#lesson"><span class="menu-icon">✎</span><span><span class="menu-label">Writing Task</span><span class="menu-small">Exercise A & B</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#chart"><span class="menu-icon">▦</span><span><span class="menu-label">T-chart Notes</span><span class="menu-small">With AI / Without AI</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#model"><span class="menu-icon">Aa</span><span><span class="menu-label">Model Paragraph</span><span class="menu-small">နမူနာစာပိုဒ်နှင့် ဘာသာပြန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#guide"><span class="menu-icon">✧</span><span><span class="menu-label">Writing Guide</span><span class="menu-small">အဆင့်ဆင့် ရေးသားနည်း</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#vocab"><span class="menu-icon">文</span><span><span class="menu-label">Vocabulary</span><span class="menu-small">အရေးကြီး စကားလုံးများ</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#practice"><span class="menu-icon">✍</span><span><span class="menu-label">Writing Practice</span><span class="menu-small">ရေးသားပြီး word count စစ်ရန်</span></span><span class="menu-arrow">›</span></a>
+    <a class="menu-item" href="#quiz"><span class="menu-icon">✓</span><span><span class="menu-label">Quick Check</span><span class="menu-small">နားလည်မှု စမ်းသပ်ရန်</span></span><span class="menu-arrow">›</span></a>
+  </nav></div>
+  <div class="menu-note"><strong>✦ Study smarter</strong><br>အရင်ဆုံး T-chart မှတ်စုတွေကို နားလည်ပါ။ ပြီးရင် နမူနာစာပိုဒ်ကို လေ့လာပြီး ကိုယ်ပိုင်စကားလုံးတွေနဲ့ ပြန်ရေးကြည့်ပါ။</div>
+</aside>
+
+<main class="wrap">
+<section class="section" id="lesson">
+  <div class="section-heading"><span class="eyebrow">2F</span><h2>Writing Task ကို နားလည်ရအောင်</h2></div>
+  <div class="card">
+    <span class="pill">Exercise A · Work in groups</span>
+    <p class="en">Make notes on life without AI and life with AI using the points given in the T-chart. Some notes have been given.</p>
+    <p class="mm">ပေးထားတဲ့ T-chart ကို အသုံးပြုပြီး AI မရှိတဲ့ဘဝနဲ့ AI ပါဝင်တဲ့ဘဝအကြောင်း အုပ်စုလိုက် မှတ်စုရေးပါ။ မှတ်စုအချို့ကို စာအုပ်မှာ ကြိုတင်ပေးထားပါတယ်။</p>
+    <div class="note"><strong>ဘာလုပ်ရမလဲ?</strong> ခေါင်းစဉ်တစ်ခုစီအတွက် အရင်က ဘယ်လိုလုပ်ခဲ့ကြသလဲ၊ AI ပါလာတဲ့အခါ ဘယ်လိုပြောင်းလဲလာသလဲဆိုတာကို နှိုင်းယှဉ်ပြီး အတိုချုံးမှတ်စုရေးပါ။</div>
+    <span class="pill">Exercise B · Paragraph writing</span>
+    <p class="en">Write a paragraph of 250 words on “Living in Two Worlds: With and Without AI”.</p>
+    <p class="mm">“AI ပါဝင်သောဘဝနှင့် AI မပါဝင်သောဘဝ — ကမ္ဘာနှစ်ခုတွင် နေထိုင်ခြင်း” ဆိုတဲ့ ခေါင်းစဉ်နဲ့ စာလုံးရေ ၂၅၀ ဝန်းကျင်ရှိတဲ့ စာပိုဒ်တစ်ပိုဒ် ရေးပါ။</p>
+    <p class="muted">The textbook gives this opening: “Life without AI and life with AI differ in many ways. On the subject of entertainment, in the past, when there was no AI, recreational activities included enjoying traditional dances in the open air, taking part in various physical games and playing with handmade toys. In the AI age,.....”</p>
+    <p class="mm">စာအုပ်မှာ အစပိုင်းကို အထက်ပါအတိုင်း စတင်ပေးထားပါတယ်။ နမူနာအဖြေမှာလည်း အဲဒီအစပိုင်းအတွေးကို ဆက်လက်အသုံးပြုပြီး အခြားအချက်တွေကို ချိတ်ဆက်ရေးသားထားပါတယ်။</p>
+  </div>
+</section>
+
+<section class="section" id="chart">
+  <div class="section-heading"><span class="eyebrow">A</span><h2>T-chart Notes — နှိုင်းယှဉ်မှတ်စုများ</h2></div>
+  <div class="card">
+    <p class="muted">စာအုပ်ထဲက ပေးထားတဲ့ အချက်တွေကို အခြေခံပြီး စာပိုဒ်ရေးရာမှာ အသုံးဝင်မယ့် နှိုင်းယှဉ်မှတ်စုတွေ ဖြည့်စွက်ထားပါတယ်။ ဖြည့်စွက်ထားတဲ့ ဥပမာတွေဟာ လေ့ကျင့်ရေးအတွက် ဖြစ်ပါတယ်။</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Point / ခေါင်းစဉ်</th><th>Life without AI<br>AI မရှိသောဘဝ</th><th>Life with AI<br>AI ပါဝင်သောဘဝ</th></tr></thead>
+      <tbody>
+      <tr><td><strong>Entertainment</strong>ဖျော်ဖြေရေး</td><td>Traditional dances, physical games, handmade toys.<div class="mm">ရိုးရာအကများ၊ ကိုယ်လက်လှုပ်ရှားကစားနည်းများ၊ လက်လုပ်ကစားစရာများ။</div></td><td>Virtual shows, digital games, AI-assisted creative videos.<div class="mm">အွန်လိုင်းပွဲများ၊ ဒစ်ဂျစ်တယ်ဂိမ်းများ၊ AI အကူအညီဖြင့် ဖန်တီးသော ဗီဒီယိုများ။</div></td></tr>
+      <tr><td><strong>Education</strong>ပညာရေး</td><td>Chalk, blackboard, printed books, face-to-face teaching.<div class="mm">မြေဖြူ၊ သင်ပုန်း၊ ပုံနှိပ်စာအုပ်၊ မျက်နှာချင်းဆိုင်သင်ကြားမှု။</div></td><td>AI learning tools, instant explanations, translation and feedback.<div class="mm">AI သင်ယူရေးကိရိယာများ၊ ချက်ချင်းရှင်းပြချက်၊ ဘာသာပြန်နှင့် တုံ့ပြန်ချက်။</div></td></tr>
+      <tr><td><strong>Agriculture</strong>စိုက်ပျိုးရေး</td><td>Manual labour, traditional tools, farmers’ experience.<div class="mm">လက်လုပ်လက်စားအလုပ်၊ ရိုးရာကိရိယာများ၊ လယ်သမားတို့၏ အတွေ့အကြုံ။</div></td><td>Farming with AI-based machines, crop monitoring, smarter resource use.<div class="mm">AI စနစ်သုံးစက်များဖြင့် စိုက်ပျိုးခြင်း၊ သီးနှံစောင့်ကြည့်ခြင်း၊ အရင်းအမြစ်ကို ထိရောက်စွာသုံးခြင်း။</div></td></tr>
+      <tr><td><strong>Food and drink</strong>အစားအသောက်နှင့် သောက်စရာ</td><td>Manual food products and preparation by people.<div class="mm">လူတို့က ကိုယ်တိုင်ပြုလုပ်ပြင်ဆင်သော အစားအသောက်များ။</div></td><td>Smart machines help with production, measuring and quality checks.<div class="mm">ထုတ်လုပ်မှု၊ အချိုးအစားတိုင်းတာမှုနှင့် အရည်အသွေးစစ်ဆေးမှုတို့တွင် စမတ်စက်များက ကူညီပေးခြင်း။</div></td></tr>
+      <tr><td><strong>Lifestyle</strong>လူနေမှုပုံစံ</td><td>Some tasks take longer; more face-to-face routines.<div class="mm">အလုပ်အချို့ အချိန်ပိုကြာပြီး လူချင်းတွေ့ဆုံလုပ်ဆောင်မှုများ။</div></td><td>AI can save time and leave more time for family.<div class="mm">AI က အချိန်ကုန်သက်သာစေပြီး မိသားစုအတွက် အချိန်ပိုရစေနိုင်ခြင်း။</div></td></tr>
+      </tbody>
+    </table></div>
+    <div class="note"><strong>သတိပြုရန်:</strong> AI ရှိတာနဲ့ အရာအားလုံး အလိုအလျောက်ကောင်းသွားတာ မဟုတ်ပါ။ AI က အချိန်ကုန်သက်သာစေနိုင်ပေမယ့် လူ့ဆုံးဖြတ်နိုင်စွမ်း၊ လုံခြုံရေးနဲ့ ကိုယ်တိုင်စဉ်းစားမှုလည်း လိုအပ်ပါတယ်။</div>
+  </div>
+</section>
+
+<section class="section" id="model">
+  <div class="section-heading"><span class="eyebrow">B</span><h2>Premium Model Paragraph</h2></div>
+  <div class="model">
+    <div class="model-head"><h3>Living in Two Worlds: With and Without AI</h3><p>English model • Myanmar translation • Paragraph structure</p>
+      <div class="model-tools"><button class="action" id="translationToggle" type="button">မြန်မာဘာသာပြန် ပြ/ဖျောက်</button><button class="action" id="copyEssay" type="button">စာပိုဒ် Copy ကူးရန်</button></div>
+    </div>
+    <div class="model-body">
+      <div class="essay-text" id="essayText">
+        <p>Life without AI and life with AI differ in many ways. On the subject of entertainment, in the past, when there was no AI, recreational activities included enjoying traditional dances in the open air, taking part in various physical games and playing with handmade toys. In the AI age, people can enjoy virtual shows, personalised music, digital games and creative videos made with the help of intelligent tools.</p>
+        <p>In education, students once depended mainly on teachers, chalk, blackboards and printed books. Today, AI-powered learning tools can explain difficult ideas, translate words, suggest practice activities and give quick feedback. However, students still need teachers, reliable sources and their own critical thinking.</p>
+        <p>Agriculture has also changed. In the past, farmers often relied on experience, manual labour and traditional tools. With AI-based machines, they can monitor crops, identify some plant diseases and use water or fertiliser more efficiently.</p>
+        <p>Food and drink production provides another example. Without AI, many products were prepared manually by farmers, cooks and workers. Today, smart machines can help measure ingredients, monitor food quality and manage production.</p>
+        <p>Finally, lifestyle has changed. AI can make routine tasks easier and give people more time to spend with family. Nevertheless, overdependence on technology may reduce personal interaction. In conclusion, life without AI was more traditional, while life with AI can be faster and more convenient. We should use AI wisely, protect our privacy and remember that human creativity, judgement and kindness are still important.</p>
+      </div>
+      <div class="translation" id="essayTranslation">
+        <h4>မြန်မာဘာသာပြန် — အပိုဒ်လိုက်</h4>
+        <p><b>အပိုဒ် ၁ — ဖျော်ဖြေရေး:</b> AI မရှိသောဘဝနှင့် AI ပါဝင်သောဘဝသည် နည်းလမ်းများစွာဖြင့် ကွာခြားသည်။ ဖျော်ဖြေရေးနှင့်ပတ်သက်၍ ယခင်က AI မရှိစဉ် လူများသည် လေဟာပြင်တွင် ရိုးရာအကများကို ကြည့်ရှုခြင်း၊ ကိုယ်လက်လှုပ်ရှားကစားနည်းများတွင် ပါဝင်ခြင်းနှင့် လက်လုပ်ကစားစရာများဖြင့် ကစားခြင်းတို့ကို ပြုလုပ်ခဲ့ကြသည်။ AI ခေတ်တွင် လူများသည် အွန်လိုင်းမှ ဖျော်ဖြေပွဲများ၊ မိမိနှစ်သက်မှုနှင့်ကိုက်ညီသော တေးဂီတများ၊ ဒစ်ဂျစ်တယ်ဂိမ်းများနှင့် ဉာဏ်ရည်မြင့်ကိရိယာများ၏ အကူအညီဖြင့် ဖန်တီးထားသော ဗီဒီယိုများကို ခံစားနိုင်ကြသည်။</p>
+        <p><b>အပိုဒ် ၂ — ပညာရေး:</b> ယခင်က ကျောင်းသားများသည် ဆရာ၊ ဆရာမများ၊ မြေဖြူ၊ သင်ပုန်းနှင့် ပုံနှိပ်စာအုပ်များကို အဓိကအားထားခဲ့ကြသည်။ သူတို့သည် အတန်းထဲတွင် နားထောင်ခြင်း၊ မှတ်စုရေးခြင်းနှင့် မေးခွန်းမေးခြင်းတို့ဖြင့် သင်ယူခဲ့ကြသည်။ ယနေ့တွင် AI အသုံးပြုသော သင်ယူရေးကိရိယာများက ခက်ခဲသောအကြောင်းအရာများကို ရှင်းပြခြင်း၊ စကားလုံးများကို ဘာသာပြန်ခြင်း၊ လေ့ကျင့်ခန်းများ အကြံပြုခြင်းနှင့် ချက်ချင်းတုံ့ပြန်ချက်ပေးခြင်းတို့ကို ကူညီနိုင်သည်။ သို့သော် ကျောင်းသားများသည် ဆရာ၊ ဆရာမများ၊ ယုံကြည်စိတ်ချရသော အရင်းအမြစ်များနှင့် ကိုယ်တိုင်ဝေဖန်စဉ်းစားနိုင်စွမ်းတို့ကို ဆက်လက်လိုအပ်နေဆဲဖြစ်သည်။</p>
+        <p><b>အပိုဒ် ၃ — စိုက်ပျိုးရေး:</b> စိုက်ပျိုးရေးလည်း ပြောင်းလဲလာခဲ့သည်။ ယခင်က လယ်သမားများသည် အတွေ့အကြုံ၊ လက်လုပ်လက်စားအလုပ်နှင့် ရိုးရာကိရိယာများကို အားထားခဲ့ကြသည်။ AI စနစ်သုံးစက်များဖြင့် သီးနှံများကို စောင့်ကြည့်ခြင်း၊ အပင်ရောဂါအချို့ကို ခွဲခြားသိရှိခြင်းနှင့် ရေ သို့မဟုတ် မြေဩဇာကို ပိုမိုထိရောက်စွာ အသုံးပြုခြင်းတို့ ပြုလုပ်နိုင်သည်။ ထိုကိရိယာများက အချိန်ကုန်သက်သာစေနိုင်သော်လည်း ဈေးကြီးနိုင်ပြီး ပုံမှန်ထိန်းသိမ်းမှုလည်း လိုအပ်သည်။</p>
+        <p><b>အပိုဒ် ၄ — အစားအသောက်:</b> အစားအသောက်နှင့် သောက်စရာထုတ်လုပ်မှုသည် နောက်ထပ်ဥပမာတစ်ခုဖြစ်သည်။ AI မရှိစဉ် အစားအသောက်အများအပြားကို လယ်သမားများ၊ စားဖိုမှူးများနှင့် အလုပ်သမားများက ကိုယ်တိုင်ပြင်ဆင်ထုတ်လုပ်ခဲ့ကြသည်။ ယနေ့တွင် စမတ်စက်များက ပါဝင်ပစ္စည်းများကို တိုင်းတာခြင်း၊ အစားအသောက်အရည်အသွေးကို စောင့်ကြည့်ခြင်းနှင့် ထုတ်လုပ်မှုကို စီမံခြင်းတို့တွင် ကူညီနိုင်သည်။ သို့သော် လူသားတို့၏ ဂရုစိုက်မှုနှင့် အစားအသောက်ကို ဘေးကင်းစွာ ကိုင်တွယ်ပြင်ဆင်မှုတို့သည် မရှိမဖြစ်လိုအပ်နေဆဲဖြစ်သည်။</p>
+        <p><b>အပိုဒ် ၅ — လူနေမှုပုံစံနှင့် နိဂုံး:</b> နောက်ဆုံးအနေဖြင့် လူနေမှုပုံစံလည်း ပြောင်းလဲလာသည်။ ယခင်က နေ့စဉ်လုပ်ငန်းအချို့အတွက် အချိန်ပိုကြာခဲ့သော်လည်း လူများသည် မျက်နှာချင်းဆိုင်စကားပြောခြင်းနှင့် အချင်းချင်းကူညီခြင်းတို့အတွက် အချိန်ပေးခဲ့ကြသည်။ AI က နေ့စဉ်လုပ်ငန်းများကို ပိုမိုလွယ်ကူစေပြီး မိသားစုနှင့်အတူနေရန် အချိန်ပိုရစေနိုင်သည်။ သို့သော် နည်းပညာအပေါ် အလွန်အမင်းမှီခိုခြင်းက လူချင်းဆက်ဆံမှုကို လျော့နည်းစေနိုင်သည်။ နိဂုံးချုပ်ရလျှင် AI မရှိသောဘဝသည် ရိုးရာဆန်ပြီး AI ပါဝင်သောဘဝသည် ပိုမိုမြန်ဆန်အဆင်ပြေနိုင်သည်။ AI ကို ပညာရှိစွာအသုံးပြုကာ ကိုယ်ရေးအချက်အလက်များကို ကာကွယ်ပြီး လူသားတို့၏ ဖန်တီးနိုင်စွမ်း၊ ဆုံးဖြတ်နိုင်စွမ်းနှင့် ကြင်နာမှုတို့သည် အရေးကြီးနေဆဲဖြစ်ကြောင်း သတိရသင့်သည်။</p>
+      </div>
+      <div class="note"><strong>Model word count: approximately 244 words (close to the 250-word target).</strong> စာအုပ်က 250 words လို့ သတ်မှတ်ထားတဲ့အတွက် ဒီနမူနာကို ပိုမိုအသေးစိတ်ရှင်းပြထားပါတယ်။ စာမေးပွဲအတွက်ဆိုရင် အဓိကအချက်တွေကို ရွေးပြီး 250 words ဝန်းကျင်အထိ အတိုချုံးနိုင်ပါတယ်။</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="guide">
+  <div class="section-heading"><span class="eyebrow">GUIDE</span><h2>Paragraph ကို အဆင့်ဆင့်ရေးသားနည်း</h2></div>
+  <div class="card"><div class="steps">
+    <div class="step"><h3>Introduction — အကြောင်းအရာမိတ်ဆက်</h3><p class="en">Life without AI and life with AI differ in many ways.</p><p class="mm">AI မရှိသောဘဝနှင့် AI ပါဝင်သောဘဝတို့ ကွာခြားကြောင်း အစမှာ မိတ်ဆက်ပါ။</p></div>
+    <div class="step"><h3>Entertainment — ဖျော်ဖြေရေး</h3><p>အတိတ်က ဖျော်ဖြေရေးနည်းလမ်းများနှင့် ယနေ့ AI ခေတ်က နည်းလမ်းများကို နှိုင်းယှဉ်ပါ။</p></div>
+    <div class="step"><h3>Education — ပညာရေး</h3><p>Chalk and board ကို AI learning tools နှင့် နှိုင်းယှဉ်ပြီး အကျိုးကျေးဇူးနှင့် ကန့်သတ်ချက်ကို ထည့်ရေးပါ။</p></div>
+    <div class="step"><h3>Agriculture — စိုက်ပျိုးရေး</h3><p>ရိုးရာကိရိယာများနှင့် AI-based machines တို့က အလုပ်လုပ်ပုံကို ဖော်ပြပါ။</p></div>
+    <div class="step"><h3>Food and drink — အစားအသောက်</h3><p>လက်ဖြင့်ပြုလုပ်ထုတ်လုပ်ခြင်းနှင့် စမတ်စက်များက ကူညီပေးခြင်းကို နှိုင်းယှဉ်ပါ။</p></div>
+    <div class="step"><h3>Lifestyle + Conclusion — လူနေမှုပုံစံနှင့် နိဂုံး</h3><p>မိသားစုအတွက် အချိန်၊ လူချင်းဆက်ဆံမှု၊ AI ကို တာဝန်ရှိစွာ အသုံးပြုရေးတို့ဖြင့် အဆုံးသတ်ပါ။</p></div>
+  </div>
+  <div class="note"><strong>ချိတ်ဆက်စကားလုံးများ:</strong> In the past (ယခင်က), Today (ယနေ့တွင်), However (သို့သော်), In addition (ထို့အပြင်), For example (ဥပမာအားဖြင့်), Finally (နောက်ဆုံးတွင်), In conclusion (နိဂုံးချုပ်ရလျှင်)။</div>
+  </div>
+</section>
+
+<section class="section" id="vocab">
+  <div class="section-heading"><span class="eyebrow">Aa</span><h2>Essential Vocabulary & Sentence Patterns</h2></div>
+  <div class="card">
+    <h3>အရေးကြီး Vocabulary</h3>
+    <div class="vocab-grid">
+      <div class="vocab"><b>artificial intelligence (AI)</b><span>ဉာဏ်ရည်တုနည်းပညာ</span></div>
+      <div class="vocab"><b>recreational activities</b><span>အပန်းဖြေလှုပ်ရှားမှုများ</span></div>
+      <div class="vocab"><b>virtual shows</b><span>အွန်လိုင်း / အတုအယောင်ပတ်ဝန်းကျင်မှ ဖျော်ဖြေပွဲများ</span></div>
+      <div class="vocab"><b>AI-powered</b><span>AI နည်းပညာဖြင့် လုပ်ဆောင်သော</span></div>
+      <div class="vocab"><b>depend on</b><span>… ကို အားထားသည် / မှီခိုသည်</span></div>
+      <div class="vocab"><b>manual labour</b><span>လက်လုပ်လက်စား အလုပ်</span></div>
+      <div class="vocab"><b>monitor crops</b><span>သီးနှံများကို စောင့်ကြည့်စစ်ဆေးသည်</span></div>
+      <div class="vocab"><b>efficiently</b><span>ထိရောက်စွာ</span></div>
+      <div class="vocab"><b>maintenance</b><span>ထိန်းသိမ်းပြုပြင်မှု</span></div>
+      <div class="vocab"><b>production</b><span>ထုတ်လုပ်မှု</span></div>
+      <div class="vocab"><b>overdependence</b><span>အလွန်အမင်း မှီခိုခြင်း</span></div>
+      <div class="vocab"><b>critical thinking</b><span>ဝေဖန်ဆန်းစစ် စဉ်းစားနိုင်စွမ်း</span></div>
+      <div class="vocab"><b>privacy</b><span>ကိုယ်ရေးကိုယ်တာ လုံခြုံမှု</span></div>
+      <div class="vocab"><b>convenient</b><span>အဆင်ပြေသော</span></div>
+    </div>
+    <h3 style="margin-top:24px">ကိုယ်တိုင်ရေးရာမှာ အသုံးချနိုင်တဲ့ Sentence Patterns</h3>
+    <div class="pattern"><code>In the past, people used to ...</code><div class="mm">ယခင်က လူများသည် … လုပ်လေ့ရှိကြသည်။</div></div>
+    <div class="pattern"><code>Today, AI helps people to ...</code><div class="mm">ယနေ့တွင် AI က လူများကို … လုပ်နိုင်ရန် ကူညီပေးသည်။</div></div>
+    <div class="pattern"><code>Compared with the past, ...</code><div class="mm">အတိတ်နှင့် နှိုင်းယှဉ်လျှင် …</div></div>
+    <div class="pattern"><code>Although AI is useful, ...</code><div class="mm">AI သည် အသုံးဝင်သော်လည်း …</div></div>
+    <div class="pattern"><code>AI can save time and help people to ...</code><div class="mm">AI သည် အချိန်ကုန်သက်သာစေပြီး လူများကို … လုပ်နိုင်ရန် ကူညီပေးနိုင်သည်။</div></div>
+    <div class="pattern"><code>In conclusion, we should use AI wisely.</code><div class="mm">နိဂုံးချုပ်ရလျှင် AI ကို ပညာရှိစွာ အသုံးပြုသင့်သည်။</div></div>
+  </div>
+</section>
+
+<section class="section" id="practice">
+  <div class="section-heading"><span class="eyebrow">✍</span><h2>Your Turn — ကိုယ်တိုင်ရေးသားလေ့ကျင့်ပါ</h2></div>
+  <div class="card">
+    <p>နမူနာကို ကြည့်ပြီး ကူးရေးရုံမဟုတ်ဘဲ ကိုယ့်စကားလုံးနဲ့ စာပိုဒ်ရေးကြည့်ပါ။ အောက်က box ထဲမှာ ရေးလျှင် word count ကို အလိုအလျောက်တွက်ပေးပါမယ်။ စာသားကို ဒီစာမျက်နှာပေါ်မှာပဲ စစ်ဆေးနိုင်ပြီး ဘယ်နေရာကိုမှ မပို့ပါ။</p>
+    <textarea class="practice-area" id="draft" placeholder="Life without AI and life with AI differ in many ways..."></textarea>
+    <div class="practice-toolbar"><span class="count"><span id="wordCount">0</span> words</span><span class="muted">Target: 250 words</span><div><button class="action" id="clearDraft" type="button">Clear</button> <button class="action primary" id="checkDraft" type="button">Check my writing</button></div></div>
+    <div class="feedback" id="draftFeedback" aria-live="polite">စရေးလိုက်ပါ။ 250 words ဝန်းကျင်ရောက်ဖို့ word count ကို ကြည့်ပါ။</div>
+    <h3 style="margin-top:23px">Final checklist — မတင်ခင် စစ်ဆေးရန်</h3>
+    <ul class="checklist">
+      <li><label><input type="checkbox"> Introduction မှာ ခေါင်းစဉ်ကို ရှင်းလင်းစွာ မိတ်ဆက်ထားတယ်။</label></li>
+      <li><label><input type="checkbox"> Entertainment, Education, Agriculture, Food and drink, Lifestyle အချက်တွေ ပါတယ်။</label></li>
+      <li><label><input type="checkbox"> Without AI နဲ့ With AI ကို နှိုင်းယှဉ်ထားတယ်။</label></li>
+      <li><label><input type="checkbox"> However, Today, Finally စတဲ့ linking words တွေ သင့်တော်စွာ သုံးထားတယ်။</label></li>
+      <li><label><input type="checkbox"> Grammar, spelling, punctuation နဲ့ word count ကို ပြန်စစ်ထားတယ်။</label></li>
+      <li><label><input type="checkbox"> AI ရဲ့ အကျိုးကျေးဇူးသာမက သတိထားရမယ့်အချက်ကိုလည်း ဖော်ပြထားတယ်။</label></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="quiz">
+  <div class="section-heading"><span class="eyebrow">✓</span><h2>Quick Check — ကိုယ်တိုင်စမ်းသပ်ပါ</h2></div>
+  <div class="card">
+    <p class="muted">မေးခွန်း ၄ ခုကို ဖြေပြီး အဖြေစစ်ပါ။</p>
+    <form id="quizForm">
+      <div class="quiz-q"><p>1. What does “manual labour” mean?</p><label><input type="radio" name="q1" value="a"> Work done mainly by hand</label><label><input type="radio" name="q1" value="b"> Work done only by AI</label><label><input type="radio" name="q1" value="c"> Online entertainment</label></div>
+      <div class="quiz-q"><p>2. Which phrase introduces a contrast?</p><label><input type="radio" name="q2" value="a"> For example</label><label><input type="radio" name="q2" value="b"> However</label><label><input type="radio" name="q2" value="c"> In conclusion</label></div>
+      <div class="quiz-q"><p>3. Which point is given in the textbook for lifestyle?</p><label><input type="radio" name="q3" value="a"> More time with family</label><label><input type="radio" name="q3" value="b"> Chalk and board</label><label><input type="radio" name="q3" value="c"> Virtual shows</label></div>
+      <div class="quiz-q"><p>4. What is a balanced conclusion about AI?</p><label><input type="radio" name="q4" value="a"> AI should replace all human decisions.</label><label><input type="radio" name="q4" value="b"> AI has no useful purpose.</label><label><input type="radio" name="q4" value="c"> Use AI wisely while keeping human judgement important.</label></div>
+      <div class="practice-toolbar"><button class="action primary" type="submit">Check answers</button><button class="action" type="reset" id="resetQuiz">Try again</button></div>
+    </form>
+    <div class="feedback hidden" id="quizFeedback" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+<footer>GRADE 12 ENGLISH LEARNING HUB · UNIT 2 · WRITING 2<br>Learn with curiosity. Write with confidence. Use AI wisely.</footer>
+<script>
+(function(){
+ const body=document.body, themeBtn=document.getElementById('themeToggle');
+ const themeKeys=['theme','siteTheme','g12-theme'];
+ function setTheme(theme,save){
+   body.classList.toggle('dark',theme==='dark');
+   themeBtn.textContent=theme==='dark'?'☀ Light':'☾ Dark';
+   themeBtn.setAttribute('aria-pressed',theme==='dark'?'true':'false');
+   if(save){try{themeKeys.forEach(k=>localStorage.setItem(k,theme));}catch(e){}}
+ }
+ let initial='light';
+ try{for(const key of themeKeys){const t=localStorage.getItem(key);if(t==='dark'||t==='light'){initial=t;break;}}}catch(e){}
+ setTheme(initial,false);
+ themeBtn.addEventListener('click',()=>setTheme(body.classList.contains('dark')?'light':'dark',true));
+ window.addEventListener('storage',e=>{if(themeKeys.includes(e.key)&&e.newValue)setTheme(e.newValue,false);});
+ const trigger=document.getElementById('menuTrigger'),menu=document.getElementById('sideMenu'),overlay=document.getElementById('menuOverlay'),close=document.getElementById('closeMenu');
+ function openMenu(){menu.classList.add('open');overlay.classList.add('open');menu.setAttribute('aria-hidden','false');trigger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';close.focus();}
+ function closeMenu(){menu.classList.remove('open');overlay.classList.remove('open');menu.setAttribute('aria-hidden','true');trigger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+ trigger.addEventListener('click',openMenu);close.addEventListener('click',closeMenu);overlay.addEventListener('click',closeMenu);
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ const translation=document.getElementById('essayTranslation');
+ document.getElementById('translationToggle').addEventListener('click',()=>translation.classList.toggle('hidden'));
+ const essayPlain=Array.from(document.querySelectorAll('#essayText p')).map(p=>p.textContent).join('\\n\\n');
+ document.getElementById('copyEssay').addEventListener('click',async()=>{
+   try{await navigator.clipboard.writeText(essayPlain);document.getElementById('copyEssay').textContent='Copied ✓';}
+   catch(e){const ta=document.createElement('textarea');ta.value=essayPlain;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');document.getElementById('copyEssay').textContent='Copied ✓';}catch(err){document.getElementById('copyEssay').textContent='Select and copy';}ta.remove();}
+ });
+ const draft=document.getElementById('draft'),wordCount=document.getElementById('wordCount'),feedback=document.getElementById('draftFeedback');
+ function countWords(s){const t=s.trim();return t?t.split(/\\s+/).filter(Boolean).length:0;}
+ function updateCount(){wordCount.textContent=countWords(draft.value);}
+ draft.addEventListener('input',updateCount);
+ document.getElementById('clearDraft').addEventListener('click',()=>{draft.value='';updateCount();feedback.textContent='စာသားရှင်းပြီးပါပြီ။ ပြန်စရေးနိုင်ပါတယ်။';draft.focus();});
+ document.getElementById('checkDraft').addEventListener('click',()=>{
+   const n=countWords(draft.value);
+   if(n===0)feedback.textContent='အရင်ဆုံး စာပိုဒ်တစ်ခု ရေးထည့်ပါ။';
+   else if(n<200)feedback.textContent=`${n} words ရှိပါတယ်။ 250 words ရည်မှန်းချက်အတွက် အဓိကအချက်တွေ ထပ်ဖြည့်စဉ်းစားပါ။`;
+   else if(n<=280)feedback.textContent=`${n} words ရှိပါတယ်။ 250 words ရည်မှန်းချက်နဲ့ နီးစပ်ပါတယ်။ Grammar နဲ့ အချက်အလက်ပြည့်စုံမှုကိုလည်း ပြန်စစ်ပါ။`;
+   else feedback.textContent=`${n} words ရှိပါတယ်။ 250 words ဝန်းကျင်ရောက်ဖို့ ထပ်နေတဲ့အကြောင်းအရာတွေကို အတိုချုံးနိုင်ပါတယ်။`;
+ });
+ document.getElementById('quizForm').addEventListener('submit',e=>{
+   e.preventDefault();const answers={q1:'a',q2:'b',q3:'a',q4:'c'};let score=0;
+   for(const [q,a] of Object.entries(answers)){const selected=document.querySelector(`input[name="${q}"]:checked`);if(selected&&selected.value===a)score++;}
+   const qf=document.getElementById('quizFeedback');qf.classList.remove('hidden');
+   qf.textContent=`Your score: ${score}/4. ${score===4?'Excellent! အားလုံးမှန်ပါတယ်။':'အဖြေတွေကို T-chart နဲ့ Vocabulary အပိုင်းကို ပြန်လေ့လာပြီး ထပ်ကြိုးစားပါ။'} Correct answers: 1-A, 2-B, 3-A, 4-C.`;
+ });
+ document.getElementById('resetQuiz').addEventListener('click',()=>{const qf=document.getElementById('quizFeedback');qf.classList.add('hidden');qf.textContent='';});
+})();
+</script>
+</body>
+</html>
